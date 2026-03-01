@@ -500,11 +500,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer__brand {
-  font-size: clamp(4rem, 15vw, 12rem);
-  font-weight: 900;
+  font-family: var(--font-logo);
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.02em;
-  line-height: 0.85;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  display: block;
+  width: 100%;
   margin-bottom: var(--space-2xl);
 }
 
@@ -526,10 +530,6 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     gap: var(--space-md);
     text-align: center;
-  }
-
-  .footer__brand {
-    font-size: clamp(2.5rem, 12vw, 6rem);
   }
 }
 

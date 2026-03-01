@@ -1,5 +1,24 @@
 // Off Piste Studio - Main JavaScript
 
+// Resize footer brand to fill full container width
+function resizeFooterBrand() {
+  const brand = document.querySelector('.footer__brand');
+  if (!brand) return;
+
+  const container = brand.parentElement;
+  const containerWidth = container.clientWidth;
+
+  // Start with a base size
+  brand.style.fontSize = '100px';
+
+  // Calculate the scale needed
+  const textWidth = brand.scrollWidth;
+  const scale = containerWidth / textWidth;
+
+  // Apply the calculated font size
+  brand.style.fontSize = (100 * scale) + 'px';
+}
+
 // Mobile menu toggle
 function initMobileMenu() {
   const toggle = document.querySelector('.header__menu-toggle');
@@ -30,4 +49,8 @@ function setActiveNavLink() {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   setActiveNavLink();
+  resizeFooterBrand();
 });
+
+// Resize footer brand on window resize
+window.addEventListener('resize', resizeFooterBrand);
