@@ -1,22 +1,38 @@
 // Off Piste Studio - Main JavaScript
 
-// Resize footer brand to fill full container width
-function resizeFooterBrand() {
+// Scale footer brand to fill container width
+function scaleFooterBrand() {
   const brand = document.querySelector('.footer__brand');
   if (!brand) return;
 
-  const container = brand.parentElement;
-  const containerWidth = container.clientWidth;
+  // Get the container (the .container div inside footer)
+  const container = brand.closest('.container');
+  if (!container) return;
 
-  // Start with a base size
+  // Get computed padding to calculate actual content width
+  const styles = getComputedStyle(container);
+  const paddingLeft = parseFloat(styles.paddingLeft);
+  const paddingRight = parseFloat(styles.paddingRight);
+  const contentWidth = container.clientWidth - paddingLeft - paddingRight;
+
+  // Reset to base size and inline-block to measure actual text width
   brand.style.fontSize = '100px';
+  brand.style.display = 'inline-block';
+  brand.style.width = 'auto';
 
-  // Calculate the scale needed
+  // Force reflow to get accurate measurement
+  brand.offsetHeight;
+
+  // Get the natural width of the text at 100px
   const textWidth = brand.scrollWidth;
-  const scale = containerWidth / textWidth;
 
-  // Apply the calculated font size
-  brand.style.fontSize = (100 * scale) + 'px';
+  // Calculate the font size needed to fill content area
+  const newFontSize = (100 * contentWidth) / textWidth;
+
+  // Apply the new font size and restore display
+  brand.style.fontSize = newFontSize + 'px';
+  brand.style.display = 'block';
+  brand.style.width = '';
 }
 
 // Mobile menu toggle
@@ -49,8 +65,14 @@ function setActiveNavLink() {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   setActiveNavLink();
-  resizeFooterBrand();
+
+  // Scale footer brand after fonts load
+  if (document.fonts) {
+    document.fonts.ready.then(scaleFooterBrand);
+  } else {
+    scaleFooterBrand();
+  }
 });
 
-// Resize footer brand on window resize
-window.addEventListener('resize', resizeFooterBrand);
+// Rescale on window resize
+window.addEventListener('resize', scaleFooterBrand);
