@@ -2,6 +2,21 @@
    Off Piste Studio - Design System & Base Styles
    ========================================================================== */
 
+/* Font Faces */
+@font-face {
+  font-family: 'Alfabet';
+  src: url('/public/fonts/fonnts.com-Alfabet_Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Alfabet';
+  src: url('/public/fonts/fonnts.com-Alfabet_Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
 /* CSS Variables */
 :root {
   /* Colors */
@@ -16,6 +31,7 @@
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-display: 'Avenir', 'Avenir Next', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-alfabet: 'Alfabet', sans-serif;
   --font-logo: 'Bebas Neue', sans-serif;
 
   /* Spacing */
@@ -140,16 +156,46 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
   z-index: 100;
-  height: 40px;
+  height: 65px;
   display: flex;
   align-items: center;
-  background-color: var(--color-bg);
+  padding: 0 var(--space-md);
 }
 
 .header__inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  width: 100%;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 0 var(--space-sm);
+  position: relative;
+}
+
+.header__nav {
+  display: flex;
+  gap: var(--space-md);
+  position: absolute;
+  left: var(--space-md);
+}
+
+.header__nav-link {
+  font-family: var(--font-alfabet);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+}
+
+.header__nav-link:hover,
+.header__nav-link.active {
+  color: var(--color-accent);
 }
 
 .header__logo {
@@ -160,22 +206,28 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
 }
 
-.header__nav {
-  display: flex;
-  gap: var(--space-md);
-}
-
-.header__nav-link {
-  font-size: 0.875rem;
-  font-weight: 500;
+.header__cta {
+  position: absolute;
+  right: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 1rem;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: var(--font-alfabet);
+  font-size: 0.75rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: -0.05em;
-  transition: color var(--transition-fast);
+  letter-spacing: 0.02em;
+  border-radius: 50px;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
-.header__nav-link:hover,
-.header__nav-link.active {
-  color: var(--color-accent);
+.header__cta:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Mobile nav toggle */
@@ -196,6 +248,8 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   .header__menu-toggle {
     display: flex;
+    position: absolute;
+    left: var(--space-sm);
   }
 
   .header__nav {
@@ -206,7 +260,8 @@ h1, h2, h3, h4, h5, h6 {
     right: 0;
     flex-direction: column;
     padding: var(--space-lg);
-    background-color: var(--color-bg);
+    background: rgba(18, 18, 18, 0.95);
+    backdrop-filter: blur(12px);
     border-top: 1px solid var(--color-border);
   }
 
@@ -294,10 +349,11 @@ h1, h2, h3, h4, h5, h6 {
   height: 25px;
   background-color: #000000;
   color: #ffffff;
-  font-size: 0.625rem;
-  font-weight: 600;
+  font-family: var(--font-alfabet);
+  font-size: 0.75rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   border-radius: 2rem;
   transition: background-color var(--transition-fast), color var(--transition-fast);
 }
