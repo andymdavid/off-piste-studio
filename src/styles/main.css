@@ -513,7 +513,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .client-bar {
-  padding: var(--space-lg) 0;
+  padding: var(--space-sm) 0;
   background-color: var(--color-bg);
   overflow: hidden;
 }
@@ -521,8 +521,6 @@ h1, h2, h3, h4, h5, h6 {
 .client-bar__inner {
   display: flex;
   align-items: center;
-  gap: var(--space-2xl);
-  padding: 0 var(--space-lg);
 }
 
 .client-bar__text {
@@ -533,17 +531,29 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.02em;
   white-space: nowrap;
   flex-shrink: 0;
+  padding-left: var(--space-lg);
+  padding-right: var(--space-xl);
+  position: relative;
+  z-index: 2;
+}
+
+.client-bar__track {
+  flex: 1;
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 40px), transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 40px), transparent);
 }
 
 .client-bar__logos {
   display: flex;
   align-items: center;
-  gap: var(--space-2xl);
-  animation: marquee 40s linear infinite;
+  gap: 4rem;
+  animation: marquee 30s linear infinite;
+  width: max-content;
 }
 
 .client-bar__logo {
-  height: 18px;
+  height: 22px;
   width: auto;
   opacity: 0.9;
   flex-shrink: 0;
