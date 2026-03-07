@@ -255,13 +255,19 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1;
 }
 
+.hero-intro__icon {
+  width: 45px;
+  height: 45px;
+  margin: 0 auto 8px;
+}
+
 .hero-intro__title {
   font-family: var(--font-serif);
   font-size: clamp(1.75rem, 4.5vw, 4rem);
   font-weight: 400;
   letter-spacing: -0.05em;
   line-height: 1.1;
-  margin-bottom: var(--space-lg);
+  margin-bottom: 15px;
   white-space: nowrap;
 }
 
@@ -277,7 +283,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.03em;
   line-height: 1.6;
   max-width: 700px;
-  margin: 0 auto var(--space-xl);
+  margin: 0 auto 10px;
 }
 
 .hero-intro__button {
@@ -286,20 +292,19 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   width: 110px;
   height: 25px;
-  background-color: var(--color-text);
-  color: var(--color-bg);
+  background-color: #000000;
+  color: #ffffff;
   font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: 2rem;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
 }
 
 .hero-intro__button:hover {
-  background-color: var(--color-accent);
-  color: var(--color-text);
-  transform: translateY(-2px);
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* ==========================================================================
