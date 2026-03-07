@@ -159,7 +159,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 65px;
   display: flex;
   align-items: center;
-  padding: 0 var(--space-md);
+  padding: 0 calc(var(--space-md) * 3);
 }
 
 .header__inner {
@@ -186,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__nav-link {
   font-family: var(--font-alfabet);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #000000;
   color: #ffffff;
   font-family: var(--font-alfabet);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.02em;
@@ -350,7 +350,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #000000;
   color: #ffffff;
   font-family: var(--font-alfabet);
-  font-size: 0.75rem;
+  font-size: 0.625rem;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.02em;
