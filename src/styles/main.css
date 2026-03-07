@@ -21,7 +21,7 @@
 :root {
   /* Colors */
   --color-bg: #121212;
-  --color-bg-dark: #0a0a0a;
+  --color-bg-dark: #0f0e0d;
   --color-text: #ffffff;
   --color-text-muted: #a0a0a0;
   --color-accent: #d4622a;
@@ -437,6 +437,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   justify-content: center;
   padding-top: 80px;
+  background-color: var(--color-bg-dark);
 }
 
 .hero__content {
@@ -514,7 +515,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .client-bar {
   padding: 0.5rem 0;
-  background-color: var(--color-bg);
+  background-color: var(--color-bg-dark);
   overflow: hidden;
 }
 
@@ -574,6 +575,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .case-studies {
   padding: var(--space-2xl) 0;
+  background-color: var(--color-bg-dark);
 }
 
 .case-studies__grid {
@@ -659,6 +661,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: var(--space-lg) 0;
   border-top: 1px solid var(--color-border);
   overflow: hidden;
+  background-color: var(--color-bg-dark);
 }
 
 .footer__top {
