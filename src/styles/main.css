@@ -190,9 +190,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  transition: color var(--transition-fast), border-color var(--transition-fast);
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
+  transition: color var(--transition-fast), text-decoration-color var(--transition-fast);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 0.5px;
 }
 
 .header__nav:hover .header__nav-link {
@@ -201,7 +203,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .header__nav:hover .header__nav-link:hover {
   color: #ffffff;
-  border-bottom-color: #ffffff;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
 }
 
 .header__logo {
@@ -211,7 +213,32 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: -0.02em;
   transform: translateY(1px);
+  display: inline-flex;
 }
+
+.header__logo-letter {
+  display: inline-block;
+  transition: transform var(--transition-base);
+}
+
+.header__logo-space {
+  width: 0.25em;
+}
+
+.header__logo:hover .header__logo-letter:nth-child(1)  { transform: translate(-2px, -3px) rotate(-15deg); }
+.header__logo:hover .header__logo-letter:nth-child(2)  { transform: translate(2px, 4px) rotate(22deg); }
+.header__logo:hover .header__logo-letter:nth-child(3)  { transform: translate(-1px, -2px) rotate(-8deg); }
+.header__logo:hover .header__logo-letter:nth-child(5)  { transform: translate(3px, -3px) rotate(18deg); }
+.header__logo:hover .header__logo-letter:nth-child(6)  { transform: translate(-2px, 3px) rotate(-25deg); }
+.header__logo:hover .header__logo-letter:nth-child(7)  { transform: translate(1px, -4px) rotate(12deg); }
+.header__logo:hover .header__logo-letter:nth-child(8)  { transform: translate(-3px, 2px) rotate(-20deg); }
+.header__logo:hover .header__logo-letter:nth-child(9)  { transform: translate(2px, -2px) rotate(28deg); }
+.header__logo:hover .header__logo-letter:nth-child(11) { transform: translate(-2px, 3px) rotate(-18deg); }
+.header__logo:hover .header__logo-letter:nth-child(12) { transform: translate(3px, -3px) rotate(10deg); }
+.header__logo:hover .header__logo-letter:nth-child(13) { transform: translate(-1px, 4px) rotate(-30deg); }
+.header__logo:hover .header__logo-letter:nth-child(14) { transform: translate(2px, -3px) rotate(24deg); }
+.header__logo:hover .header__logo-letter:nth-child(15) { transform: translate(-3px, 2px) rotate(-14deg); }
+.header__logo:hover .header__logo-letter:nth-child(16) { transform: translate(1px, -4px) rotate(20deg); }
 
 .header__cta {
   position: absolute;
