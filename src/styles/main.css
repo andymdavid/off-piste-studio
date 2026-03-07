@@ -513,7 +513,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .client-bar {
-  padding: var(--space-sm) 0;
+  padding: 0.5rem 0;
   background-color: var(--color-bg);
   overflow: hidden;
 }
@@ -553,7 +553,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .client-bar__logo {
-  height: 44px;
+  height: 65px;
   width: auto;
   opacity: 0.9;
   flex-shrink: 0;
