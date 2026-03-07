@@ -619,32 +619,38 @@ h1, h2, h3, h4, h5, h6 {
 
 .case-studies__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-md);
-}
-
-@media (max-width: 1024px) {
-  .case-studies__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .case-studies__grid {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: 1fr;
+  gap: var(--space-2xl);
 }
 
 .case-card {
+  display: grid;
+  grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.case-card__content {
   display: flex;
   flex-direction: column;
+  gap: var(--space-md);
+}
+
+.case-card__title {
+  font-family: var(--font-primary);
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--color-text-muted);
+  max-width: 320px;
 }
 
 .case-card__image {
   position: relative;
   aspect-ratio: 1 / 1.2;
   overflow: hidden;
-  margin-bottom: var(--space-md);
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
 }
 
 .case-card__image img {
@@ -667,29 +673,41 @@ h1, h2, h3, h4, h5, h6 {
   filter: brightness(0) invert(1);
 }
 
-.case-card__tag {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-text);
-  border-radius: 2rem;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--space-sm);
-  align-self: flex-start;
-}
-
-.case-card__category {
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--space-xs);
-}
-
 .case-card__description {
   font-size: 0.875rem;
   color: var(--color-text-muted);
   line-height: 1.6;
+  max-width: 360px;
+}
+
+.case-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.case-card__tags span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text);
+  font-family: var(--font-alfabet);
+}
+
+@media (max-width: 900px) {
+  .case-card {
+    grid-template-columns: 1fr;
+  }
+
+  .case-card__image {
+    order: -1;
+  }
 }
 
 /* ==========================================================================
