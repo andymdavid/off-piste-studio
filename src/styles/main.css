@@ -190,12 +190,18 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), border-color var(--transition-fast);
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
 }
 
-.header__nav-link:hover,
-.header__nav-link.active {
-  color: var(--color-accent);
+.header__nav:hover .header__nav-link {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.header__nav:hover .header__nav-link:hover {
+  color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 
 .header__logo {
