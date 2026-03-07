@@ -402,6 +402,31 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
 }
 
+.hero-intro__scroll {
+  position: absolute;
+  bottom: var(--space-xl);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+}
+
+.hero-intro__scroll svg {
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
 /* ==========================================================================
    Hero Section
    ========================================================================== */
@@ -489,8 +514,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .client-bar {
   padding: var(--space-lg) 0;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
+  background-color: var(--color-bg);
   overflow: hidden;
 }
 
@@ -498,57 +522,30 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   align-items: center;
   gap: var(--space-2xl);
-}
-
-.client-bar__intro {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  flex-shrink: 0;
-}
-
-.client-bar__avatars {
-  display: flex;
-}
-
-.client-bar__avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid var(--color-bg);
-  margin-left: -12px;
-  background-color: var(--color-border);
-  overflow: hidden;
-}
-
-.client-bar__avatar:first-child {
-  margin-left: 0;
-}
-
-.client-bar__avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  padding: 0 var(--space-lg);
 }
 
 .client-bar__text {
-  font-size: 0.875rem;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .client-bar__logos {
   display: flex;
   align-items: center;
   gap: var(--space-2xl);
-  animation: marquee 30s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 .client-bar__logo {
-  height: 20px;
-  opacity: 0.8;
-  filter: brightness(0) invert(1);
+  height: 18px;
+  width: auto;
+  opacity: 0.9;
   flex-shrink: 0;
 }
 
