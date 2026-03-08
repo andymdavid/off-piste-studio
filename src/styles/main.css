@@ -888,6 +888,10 @@ h1, h2, h3, h4, h5, h6 {
 .testimonial {
   display: flex;
   flex-direction: column;
+  padding: 1.5rem;
+  background: linear-gradient(145deg, rgba(40, 40, 40, 0.6) 0%, rgba(25, 25, 25, 0.4) 100%);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .testimonial__label {
