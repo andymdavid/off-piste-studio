@@ -749,7 +749,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   letter-spacing: -0.02em;
   color: var(--color-text);
-  margin-bottom: var(--space-md);
+  margin-bottom: 10px;
 }
 
 .services__text {
@@ -758,7 +758,8 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.03em;
   line-height: 1.6;
   color: var(--color-text);
-  margin-bottom: var(--space-lg);
+  max-width: 547px;
+  margin: 0 auto 10px;
 }
 
 .services__button {
