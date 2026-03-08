@@ -850,6 +850,94 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   Testimonials Section
+   ========================================================================== */
+
+.testimonials {
+  min-height: 100vh;
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.testimonials__intro {
+  max-width: 800px;
+  margin-bottom: var(--space-2xl);
+}
+
+.testimonials__heading {
+  font-family: var(--font-serif);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.testimonials__carousel {
+  overflow: hidden;
+}
+
+.testimonials__track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial__label {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  color: var(--color-text);
+  margin-bottom: var(--space-md);
+}
+
+.testimonial__quote {
+  font-family: var(--font-alfabet);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+  margin-bottom: var(--space-lg);
+}
+
+.testimonial__author {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: auto;
+}
+
+.testimonial__name {
+  font-family: var(--font-alfabet);
+  font-size: 0.875rem;
+  font-weight: 900;
+  color: var(--color-text);
+}
+
+.testimonial__role {
+  font-family: var(--font-serif);
+  font-size: 0.875rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .testimonials__track {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 
