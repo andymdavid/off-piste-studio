@@ -738,8 +738,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .services__intro {
-  max-width: 600px;
-  margin-bottom: var(--space-3xl);
+  max-width: 980px;
+  margin: 0 auto var(--space-3xl);
+  text-align: center;
 }
 
 .services__heading {
