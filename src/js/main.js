@@ -1,35 +1,35 @@
 // Off Piste Studio - Main JavaScript
 
-// Scale footer brand to fill container width
+// Scale footer brand to fill the horizontal space available to it.
 function scaleFooterBrand() {
   const brand = document.querySelector('.footer__brand');
   if (!brand) return;
 
-  // Get the container (the .container div inside footer)
+  const styles = getComputedStyle(brand);
+  const paddingLeft = parseFloat(styles.paddingLeft) || 0;
+  const paddingRight = parseFloat(styles.paddingRight) || 0;
+
+  // On pages where the brand sits inside `.container`, use that width.
+  // On the homepage it bleeds full-width, so use the element's own width.
   const container = brand.closest('.container');
-  if (!container) return;
+  const availableWidth = container
+    ? container.clientWidth - paddingLeft - paddingRight
+    : brand.clientWidth - paddingLeft - paddingRight;
 
-  // Get computed padding to calculate actual content width
-  const styles = getComputedStyle(container);
-  const paddingLeft = parseFloat(styles.paddingLeft);
-  const paddingRight = parseFloat(styles.paddingRight);
-  const contentWidth = container.clientWidth - paddingLeft - paddingRight;
+  if (availableWidth <= 0) return;
 
-  // Reset to base size and inline-block to measure actual text width
+  // Reset to a predictable base size before measuring the text width.
   brand.style.fontSize = '100px';
   brand.style.display = 'inline-block';
   brand.style.width = 'auto';
 
-  // Force reflow to get accurate measurement
   brand.offsetHeight;
 
-  // Get the natural width of the text at 100px
   const textWidth = brand.scrollWidth;
+  if (!textWidth) return;
 
-  // Calculate the font size needed to fill content area
-  const newFontSize = (100 * contentWidth) / textWidth;
+  const newFontSize = (100 * availableWidth) / textWidth;
 
-  // Apply the new font size and restore display
   brand.style.fontSize = newFontSize + 'px';
   brand.style.display = 'block';
   brand.style.width = '';
