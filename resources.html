@@ -40,99 +40,77 @@
   </header>
 
   <main>
-    <!-- Resources Hero -->
-    <section class="resources-hero">
+    <!-- Insights Hero -->
+    <section class="work-hero">
       <div class="container">
-        <h1 class="resources-hero__title">From AI to SEO, to user experience hacks, explore our latest insights to grow your business.</h1>
+        <img src="/public/images/Icon.png" alt="" class="work-hero__icon" aria-hidden="true">
+        <h1 class="work-hero__title">From AI to SEO to user experience, we share practical thinking for companies that want sharper positioning and stronger performance.</h1>
+        <div class="work-hero__filters">
+          <span class="work-hero__filter-label">Filter by</span>
+          <div class="work-hero__filter-tags">
+            <button class="work-hero__filter is-active" data-filter="all">Show All</button>
+            <button class="work-hero__filter" data-filter="SEO">SEO</button>
+            <button class="work-hero__filter" data-filter="Website Design">Website Design</button>
+            <button class="work-hero__filter" data-filter="Brand Design">Brand Design</button>
+            <button class="work-hero__filter" data-filter="AI">AI</button>
+            <button class="work-hero__filter" data-filter="User Experience">User Experience</button>
+            <button class="work-hero__filter" data-filter="Wix">Wix</button>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Category Filters -->
-    <section class="container">
-      <nav class="resources-filters">
-        <a href="#" class="resources-filters__link active">All Posts</a>
-        <a href="#" class="resources-filters__link">Website Design</a>
-        <a href="#" class="resources-filters__link">Branding</a>
-        <a href="#" class="resources-filters__link">SEO</a>
-        <a href="#" class="resources-filters__link">Design</a>
-        <a href="#" class="resources-filters__link">AI</a>
-        <a href="#" class="resources-filters__link">User Experience</a>
-        <a href="#" class="resources-filters__link">Storytelling</a>
-        <a href="#" class="resources-filters__link">Wix</a>
-      </nav>
-    </section>
-
-    <!-- Blog Grid -->
-    <section class="section">
+    <!-- Insights List -->
+    <section class="projects projects--insights">
       <div class="container">
-        <div class="blog-grid">
-          <!-- Blog Card 1 -->
-          <article class="blog-card">
-            <a href="#" class="blog-card__image">
-              <img src="/public/images/blog/accessibility-seo.jpg" alt="Website Accessibility and SEO">
-            </a>
-            <div class="blog-card__meta">
-              <div class="blog-card__avatar">
-                <img src="/public/images/avatar-andy.jpg" alt="">
-              </div>
-              <div>
-                <span class="blog-card__author">Andy - Off Piste Studio</span>
-                <span class="blog-card__read-time">8 min read</span>
-              </div>
+        <div class="projects__list">
+          <article class="insight-row">
+            <div class="insight-row__title-group">
+              <p class="insight-row__eyebrow">8 min read</p>
+              <h2 class="insight-row__title">Website Accessibility and SEO</h2>
             </div>
-            <h2 class="blog-card__title">Website Accessibility and SEO</h2>
-            <p class="blog-card__excerpt">Making websites accessible isn't just an ethical imperative...</p>
+            <p class="insight-row__description">How accessibility improvements strengthen search performance, usability, and trust without becoming a compliance-only exercise.</p>
+            <div class="insight-row__tags">
+              <span>SEO</span>
+              <span>User Experience</span>
+              <span>Website Design</span>
+            </div>
           </article>
 
-          <!-- Blog Card 2 -->
-          <article class="blog-card">
-            <a href="#" class="blog-card__image">
-              <img src="/public/images/blog/wordpress-wix.jpg" alt="WordPress to Wix Studio Migration">
-            </a>
-            <div class="blog-card__meta">
-              <div class="blog-card__avatar">
-                <img src="/public/images/avatar-andy.jpg" alt="">
-              </div>
-              <div>
-                <span class="blog-card__author">Andy - Off Piste Studio</span>
-                <span class="blog-card__read-time">6 min read</span>
-              </div>
+          <article class="insight-row">
+            <div class="insight-row__title-group">
+              <p class="insight-row__eyebrow">6 min read</p>
+              <h2 class="insight-row__title">WordPress to Wix Studio Migration: A Comprehensive Guide</h2>
             </div>
-            <h2 class="blog-card__title">WordPress to Wix Studio Migration: A Comprehensive Guide</h2>
+            <p class="insight-row__description">A practical look at when a Wix Studio migration makes sense, what to watch for technically, and how to avoid losing performance in the move.</p>
+            <div class="insight-row__tags">
+              <span>Website Design</span>
+              <span>Wix</span>
+            </div>
           </article>
 
-          <!-- Blog Card 3 -->
-          <article class="blog-card">
-            <a href="#" class="blog-card__image">
-              <img src="/public/images/blog/design-revenue.jpg" alt="How Does Design Impact Revenue?">
-            </a>
-            <div class="blog-card__meta">
-              <div class="blog-card__avatar">
-                <img src="/public/images/avatar-andy.jpg" alt="">
-              </div>
-              <div>
-                <span class="blog-card__author">Andy - Off Piste Studio</span>
-                <span class="blog-card__read-time">9 min read</span>
-              </div>
+          <article class="insight-row">
+            <div class="insight-row__title-group">
+              <p class="insight-row__eyebrow">9 min read</p>
+              <h2 class="insight-row__title">How Does Design Impact Revenue? A Comprehensive Analysis</h2>
             </div>
-            <h2 class="blog-card__title">How Does Design Impact Revenue? A Comprehensive Analysis</h2>
+            <p class="insight-row__description">A breakdown of the commercial case for better design across conversion, pricing power, retention, and the credibility signals that shape buying decisions.</p>
+            <div class="insight-row__tags">
+              <span>Brand Design</span>
+              <span>Website Design</span>
+            </div>
           </article>
 
-          <!-- Blog Card 4 -->
-          <article class="blog-card">
-            <a href="#" class="blog-card__image">
-              <img src="/public/images/blog/google-sge.jpg" alt="Google Search Generative Experience">
-            </a>
-            <div class="blog-card__meta">
-              <div class="blog-card__avatar">
-                <img src="/public/images/avatar-andy.jpg" alt="">
-              </div>
-              <div>
-                <span class="blog-card__author">Andy - Off Piste Studio</span>
-                <span class="blog-card__read-time">12 min read</span>
-              </div>
+          <article class="insight-row">
+            <div class="insight-row__title-group">
+              <p class="insight-row__eyebrow">12 min read</p>
+              <h2 class="insight-row__title">Google Search Generative Experience (SGE) and SEO: Navigating the New Search Landscape</h2>
             </div>
-            <h2 class="blog-card__title">Google Search Generative Experience (SGE) and SEO: Navigating the New...</h2>
+            <p class="insight-row__description">What AI-shaped search changes for visibility, how answer engines affect traffic expectations, and where teams should focus next.</p>
+            <div class="insight-row__tags">
+              <span>SEO</span>
+              <span>AI</span>
+            </div>
           </article>
         </div>
       </div>

@@ -142,9 +142,9 @@ function initProjectSlideshow() {
 // Work page project filter
 function initProjectFilter() {
   const filterButtons = document.querySelectorAll('.work-hero__filter');
-  const projectRows = document.querySelectorAll('.project-row');
+  const filterRows = document.querySelectorAll('.project-row, .insight-row');
 
-  if (!filterButtons.length || !projectRows.length) return;
+  if (!filterButtons.length || !filterRows.length) return;
 
   filterButtons.forEach(button => {
     button.addEventListener('click', () => {
@@ -154,14 +154,14 @@ function initProjectFilter() {
       filterButtons.forEach(btn => btn.classList.remove('is-active'));
       button.classList.add('is-active');
 
-      // Filter projects
-      projectRows.forEach(row => {
+      // Filter rows
+      filterRows.forEach(row => {
         if (filter === 'all') {
           row.style.display = '';
           return;
         }
 
-        const tags = row.querySelectorAll('.project-row__tags span');
+        const tags = row.querySelectorAll('.project-row__tags span, .insight-row__tags span');
         const tagTexts = Array.from(tags).map(tag => tag.textContent);
 
         if (tagTexts.includes(filter)) {
