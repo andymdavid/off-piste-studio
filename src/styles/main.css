@@ -1857,8 +1857,8 @@ body.lead-modal-open {
   justify-content: center;
   width: 120px;
   height: 32px;
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   font-family: var(--font-alfabet);
   font-size: 0.625rem;
   font-weight: 900;
@@ -1869,8 +1869,8 @@ body.lead-modal-open {
 }
 
 .about-hero__button:hover {
-  background-color: #ffffff;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   transform: scale(1.05);
 }
 
