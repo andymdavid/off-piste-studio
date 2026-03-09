@@ -1549,6 +1549,161 @@ body.lead-modal-open {
   background-color: var(--color-bg-dark);
 }
 
+.insight-article {
+  padding-top: 140px;
+  padding-bottom: var(--space-3xl);
+  background-color: var(--color-bg-dark);
+}
+
+.insight-article__frame {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.insight-article__hero,
+.insight-article__body,
+.insight-article__footer {
+  display: grid;
+  grid-template-columns: minmax(2rem, 80px) minmax(0, 940px) minmax(2rem, 1fr);
+}
+
+.insight-article__hero-inner,
+.insight-article__body-inner,
+.insight-article__footer-inner {
+  grid-column: 2;
+  padding-left: 1.75rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.insight-article__hero-inner {
+  padding-top: clamp(2.25rem, 6vw, 5rem);
+  padding-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.insight-article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.insight-article__meta .insight-row__tags {
+  justify-content: flex-start;
+}
+
+.insight-article__read-time {
+  font-family: var(--font-alfabet);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.insight-article__title {
+  max-width: 13ch;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-alfabet);
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.06em;
+}
+
+.insight-article__intro {
+  max-width: 42rem;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.insight-article__body-inner {
+  padding-top: clamp(2.25rem, 5vw, 4.25rem);
+  padding-bottom: clamp(2.25rem, 5vw, 4.25rem);
+}
+
+.insight-article__body-inner > * + * {
+  margin-top: 2rem;
+}
+
+.insight-article__section-title {
+  max-width: 34rem;
+  font-family: var(--font-alfabet);
+  font-size: clamp(1.25rem, 2vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+}
+
+.insight-article__body-inner p,
+.insight-article__body-inner li,
+.insight-article__quote {
+  max-width: 46rem;
+  font-size: clamp(1rem, 1.25vw, 1.12rem);
+  line-height: 1.85;
+  color: var(--color-text-muted);
+}
+
+.insight-article__body-inner ul {
+  padding-left: 1.3rem;
+}
+
+.insight-article__body-inner li + li {
+  margin-top: 0.85rem;
+}
+
+.insight-article__quote {
+  padding-left: 1.5rem;
+  border-left: 2px solid rgba(255, 255, 255, 0.18);
+  font-size: clamp(1.2rem, 2vw, 1.75rem);
+  line-height: 1.55;
+  color: var(--color-text);
+}
+
+.insight-article__footer-inner {
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.insight-article__author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--color-text);
+}
+
+.insight-article__author img {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.insight-article__author-name {
+  font-family: var(--font-alfabet);
+  font-size: 0.95rem;
+}
+
+.insight-article__author-date {
+  color: var(--color-text-muted);
+}
+
+.related-posts {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-dark);
+}
+
+.related-posts__heading {
+  margin-bottom: var(--space-xl);
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
 .insight-row {
   display: grid;
   grid-template-columns: minmax(260px, 340px) minmax(0, 1fr) auto;
@@ -1585,6 +1740,14 @@ body.lead-modal-open {
   color: var(--color-text);
 }
 
+.insight-row__link {
+  transition: color var(--transition-fast);
+}
+
+.insight-row__link:hover {
+  color: rgba(255, 255, 255, 0.72);
+}
+
 .insight-row__description {
   max-width: 34rem;
   font-size: 0.9375rem;
@@ -1615,6 +1778,20 @@ body.lead-modal-open {
 }
 
 @media (max-width: 900px) {
+  .insight-article__hero,
+  .insight-article__body,
+  .insight-article__footer {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-article__hero-inner,
+  .insight-article__body-inner,
+  .insight-article__footer-inner {
+    grid-column: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .insight-row {
     grid-template-columns: 1fr;
     gap: var(--space-md);

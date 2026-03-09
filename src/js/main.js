@@ -1,5 +1,40 @@
 // Off Piste Studio - Main JavaScript
 
+const INSIGHT_POSTS = [
+  {
+    slug: 'website-accessibility-and-seo',
+    url: '/insights/website-accessibility-and-seo.html',
+    title: 'Website Accessibility and SEO',
+    description: 'How accessibility improvements strengthen search performance, usability, and trust without becoming a compliance-only exercise.',
+    readTime: '8 min read',
+    tags: ['SEO', 'User Experience', 'Website Design']
+  },
+  {
+    slug: 'wordpress-to-wix-studio-migration',
+    url: '/insights/wordpress-to-wix-studio-migration.html',
+    title: 'WordPress to Wix Studio Migration: A Comprehensive Guide',
+    description: 'A practical look at when a Wix Studio migration makes sense, what to watch for technically, and how to avoid losing performance in the move.',
+    readTime: '6 min read',
+    tags: ['Website Design', 'Wix']
+  },
+  {
+    slug: 'how-design-impacts-revenue',
+    url: '/insights/how-design-impacts-revenue.html',
+    title: 'How Does Design Impact Revenue? A Comprehensive Analysis',
+    description: 'A breakdown of the commercial case for better design across conversion, pricing power, retention, and the credibility signals that shape buying decisions.',
+    readTime: '9 min read',
+    tags: ['Brand Design', 'Website Design']
+  },
+  {
+    slug: 'google-sge-and-seo',
+    url: '/insights/google-sge-and-seo.html',
+    title: 'Google Search Generative Experience (SGE) and SEO: Navigating the New Search Landscape',
+    description: 'What AI-shaped search changes for visibility, how answer engines affect traffic expectations, and where teams should focus next.',
+    readTime: '12 min read',
+    tags: ['SEO', 'AI']
+  }
+];
+
 // Scale footer brand to fill the horizontal space available to it.
 function scaleFooterBrand() {
   const brand = document.querySelector('.footer__brand');
@@ -174,6 +209,42 @@ function initProjectFilter() {
   });
 }
 
+function createInsightRow(post) {
+  const article = document.createElement('article');
+  article.className = 'insight-row';
+  article.innerHTML = `
+    <div class="insight-row__title-group">
+      <p class="insight-row__eyebrow">${post.readTime}</p>
+      <h3 class="insight-row__title"><a href="${post.url}" class="insight-row__link">${post.title}</a></h3>
+    </div>
+    <p class="insight-row__description">${post.description}</p>
+    <div class="insight-row__tags">
+      ${post.tags.map(tag => `<span>${tag}</span>`).join('')}
+    </div>
+  `;
+
+  return article;
+}
+
+function initRelatedPosts() {
+  const relatedPostsRoot = document.querySelector('[data-related-posts]');
+  const currentSlug = document.body.dataset.insightSlug;
+
+  if (!relatedPostsRoot || !currentSlug) return;
+
+  const availablePosts = INSIGHT_POSTS.filter(post => post.slug !== currentSlug);
+
+  if (!availablePosts.length) return;
+
+  const randomizedPosts = [...availablePosts]
+    .sort(() => Math.random() - 0.5)
+    .slice(0, 3);
+
+  randomizedPosts.forEach(post => {
+    relatedPostsRoot.appendChild(createInsightRow(post));
+  });
+}
+
 function createLeadModal() {
   const modal = document.createElement('div');
   modal.className = 'lead-modal';
@@ -279,6 +350,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initProjectSlideshow();
   initProjectFilter();
+  initRelatedPosts();
   initLeadModal();
 
   // Scale footer brand after fonts load
