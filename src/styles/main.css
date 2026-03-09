@@ -2017,7 +2017,7 @@ body.lead-modal-open {
 
 @media (max-width: 768px) {
   .about-hero {
-    min-height: auto;
+    min-height: 100vh;
     padding-top: 100px;
     padding-bottom: var(--space-xl);
   }
@@ -2047,7 +2047,7 @@ body.lead-modal-open {
   }
 
   .about__offset {
-    margin-left: 0;
+    margin-left: calc(var(--about-icon-size) + 0.6rem);
   }
 
   .about__subtext {
