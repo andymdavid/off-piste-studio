@@ -1869,6 +1869,11 @@ h1, h2, h3, h4, h5, h6 {
   object-fit: contain;
 }
 
+.project-row__logo--cloud-modular img {
+  max-height: 90px;
+  max-width: 180px;
+}
+
 .project-row__description {
   font-family: var(--font-primary);
   font-size: 0.9375rem;
