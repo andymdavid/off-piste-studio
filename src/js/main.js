@@ -184,52 +184,37 @@ function createLeadModal() {
       <button class="lead-modal__close" type="button" aria-label="Close contact modal" data-lead-close>&times;</button>
       <div class="lead-modal__grid">
         <div class="lead-modal__content">
-          <span class="lead-modal__eyebrow">Start a Project</span>
-          <h2 class="lead-modal__title" id="lead-modal-title">Let&apos;s scope what you&apos;re building.</h2>
-          <p class="lead-modal__text">Use this as the entry point for a future AI intake flow. For now, it gives leads a clear place to start the conversation and send project context.</p>
-
-          <div class="lead-modal__profile">
-            <img src="/public/images/Icon.png" alt="Off Piste Studio">
-            <div>
-              <p class="lead-modal__profile-name">Off Piste Studio</p>
-              <p class="lead-modal__profile-role">AI intake agent coming soon</p>
-            </div>
+          <div class="lead-modal__eyebrow">
+            <img src="/public/images/Icon.png" alt="" aria-hidden="true">
+            <span>Start a Project</span>
           </div>
+          <h2 class="lead-modal__title" id="lead-modal-title">Let&apos;s scope what you&apos;re building.</h2>
+          <p class="lead-modal__text">Chat with Lara, our Creative Director, or send us an email with your project details and we&apos;ll take it from there.</p>
 
           <div class="lead-modal__meta">
             <div class="lead-modal__meta-card">
               <span class="lead-modal__meta-label">Email</span>
               <p class="lead-modal__meta-value"><a href="mailto:hello@offpistestudio.com">hello@offpistestudio.com</a></p>
             </div>
-            <div class="lead-modal__meta-card">
-              <span class="lead-modal__meta-label">Typical Project Start</span>
-              <p class="lead-modal__meta-value">$10,000+</p>
-            </div>
           </div>
         </div>
 
         <div class="lead-modal__chat">
           <div class="lead-modal__chat-header">
+            <img src="/public/images/Lara.png" alt="Lara">
             <div>
-              <p class="lead-modal__chat-title">Lead Intake</p>
-              <p class="lead-modal__chat-status">Structured for a future agent conversation</p>
+              <p class="lead-modal__chat-title">Chat with Lara</p>
+              <p class="lead-modal__chat-status">Creative Director at Off Piste Studio</p>
             </div>
           </div>
 
           <div class="lead-modal__chat-body">
-            <p class="lead-modal__bubble">Tell us what you need and we&apos;ll reply with the right next step, timeline, and commercial scope.</p>
-            <ul class="lead-modal__prompt-list">
-              <li>What are you building: website, brand, deck, or a broader system?</li>
-              <li>What stage are you at, and what needs to happen next?</li>
-              <li>What timeline and budget range should we plan around?</li>
-            </ul>
+            <p class="lead-modal__bubble">Open the conversation when you&apos;re ready and send through the basics of your project, timeline, and goals.</p>
           </div>
 
           <div class="lead-modal__actions">
-            <a class="lead-modal__action lead-modal__action--primary" href="mailto:hello@offpistestudio.com?subject=New%20project%20enquiry&body=Hi%20Off%20Piste%20Studio%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project.%0A%0AProject%20type%3A%0ATimeline%3A%0ABudget%20range%3A%0AGoals%3A%0A">Start the chat</a>
-            <a class="lead-modal__action lead-modal__action--secondary" href="/contact.html">View contact page</a>
+            <a class="lead-modal__action lead-modal__action--primary" href="mailto:hello@offpistestudio.com?subject=New%20project%20enquiry&body=Hi%20Lara%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project.%0A%0AProject%20type%3A%0ATimeline%3A%0AGoals%3A%0A">Chat with Lara</a>
           </div>
-          <p class="lead-modal__footnote">When the AI agent is ready, this panel can become the live intake interface without changing the trigger pattern.</p>
         </div>
       </div>
     </div>
