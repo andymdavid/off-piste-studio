@@ -946,7 +946,6 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .footer {
-  padding: var(--space-lg) 0;
   overflow: hidden;
   background-color: var(--color-bg-dark);
 }
@@ -1011,11 +1010,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer__bottom {
   padding: var(--space-lg) 0;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer__copyright {
   font-size: 0.75rem;
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-text-muted);
