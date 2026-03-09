@@ -174,7 +174,7 @@ mkdirSync(insightsDir, { recursive: true });
 mkdirSync(generatedDir, { recursive: true });
 
 const posts = readdirSync(contentDir)
-  .filter(file => file.endsWith('.md'))
+  .filter(file => file.endsWith('.md') && file !== 'README.md')
   .map(file => {
     const { data, body } = parseFrontmatter(readFileSync(resolve(contentDir, file), 'utf8'));
     const tags = data.tags.split(',').map(tag => tag.trim()).filter(Boolean);

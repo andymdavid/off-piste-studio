@@ -28,20 +28,6 @@ export const INSIGHT_POSTS = [
     "url": "/insights/how-design-impacts-revenue.html"
   },
   {
-    "slug": "wordpress-to-wix-studio-migration",
-    "title": "WordPress to Wix Studio Migration: A Comprehensive Guide",
-    "description": "A practical look at when a Wix Studio migration makes sense, what to watch for technically, and how to avoid losing performance in the move.",
-    "intro": "A migration only makes sense if it reduces friction. Moving from WordPress to Wix Studio should simplify publishing, strengthen design control, and make the site easier to operate once the launch pressure is gone.",
-    "date": "2026-03-03",
-    "displayDate": "March 3, 2026",
-    "readTime": "6 min read",
-    "tags": [
-      "Website Design",
-      "Wix"
-    ],
-    "url": "/insights/wordpress-to-wix-studio-migration.html"
-  },
-  {
     "slug": "website-accessibility-and-seo",
     "title": "Website Accessibility and SEO",
     "description": "How accessibility improvements strengthen search performance, usability, and trust without becoming a compliance-only exercise.",
