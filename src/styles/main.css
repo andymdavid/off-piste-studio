@@ -895,7 +895,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .faq__answer {
-  max-width: 38rem;
+  max-width: 52rem;
   padding: 0 4rem 1.5rem 0;
   font-size: 0.95rem;
   line-height: 1.7;
