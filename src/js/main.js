@@ -123,12 +123,29 @@ function initFaqAccordion() {
   });
 }
 
+// Project modal slideshow - auto-rotate
+function initProjectSlideshow() {
+  const slides = document.querySelectorAll('.project-modal__slide');
+
+  if (slides.length < 2) return;
+
+  let currentIndex = 0;
+  const interval = 3500; // 3.5 seconds
+
+  setInterval(() => {
+    slides[currentIndex].classList.remove('is-active');
+    currentIndex = (currentIndex + 1) % slides.length;
+    slides[currentIndex].classList.add('is-active');
+  }, interval);
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeaderDropdowns();
   setActiveNavLink();
   initFaqAccordion();
+  initProjectSlideshow();
 
   // Scale footer brand after fonts load
   if (document.fonts) {
