@@ -2086,12 +2086,16 @@ body.lead-modal-open {
   }
 
   .about__icon {
-    left: -1.2rem;
-    transform: translateY(-6px) translateX(-0.4rem);
+    left: -1.6rem;
+    transform: translateY(-6px) translateX(-0.8rem);
   }
 
   .about__offset {
     margin-left: 0;
+  }
+
+  .about__subtext.about__offset,
+  .about__button.about__offset {
     padding-left: calc(var(--about-icon-size) + 0.6rem);
   }
 
