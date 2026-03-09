@@ -23,7 +23,12 @@
       <nav class="header__nav">
         <a href="/work.html" class="header__nav-link">Work</a>
         <a href="/about.html" class="header__nav-link">About</a>
-        <a href="/resources.html" class="header__nav-link">Resources</a>
+        <div class="header__nav-item header__nav-item--dropdown">
+          <button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button>
+          <div class="header__dropdown">
+            <a href="/resources.html" class="header__dropdown-link">Insights</a>
+          </div>
+        </div>
         <a href="/contact.html" class="header__nav-link active">Contact</a>
       </nav>
 

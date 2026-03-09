@@ -48,6 +48,42 @@ function initMobileMenu() {
   }
 }
 
+// Header dropdown toggle
+function initHeaderDropdowns() {
+  const dropdowns = document.querySelectorAll('.header__nav-item--dropdown');
+
+  if (!dropdowns.length) return;
+
+  const closeDropdowns = current => {
+    dropdowns.forEach(dropdown => {
+      if (dropdown === current) return;
+
+      dropdown.classList.remove('is-open');
+      const button = dropdown.querySelector('.header__nav-toggle');
+      if (button) {
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+  };
+
+  dropdowns.forEach(dropdown => {
+    const button = dropdown.querySelector('.header__nav-toggle');
+    if (!button) return;
+
+    button.addEventListener('click', () => {
+      const isOpen = dropdown.classList.contains('is-open');
+      closeDropdowns(dropdown);
+      dropdown.classList.toggle('is-open', !isOpen);
+      button.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+
+  document.addEventListener('click', event => {
+    if (event.target.closest('.header__nav-item--dropdown')) return;
+    closeDropdowns();
+  });
+}
+
 // Set active nav link based on current page
 function setActiveNavLink() {
   const currentPath = window.location.pathname;
@@ -64,6 +100,7 @@ function setActiveNavLink() {
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
+  initHeaderDropdowns();
   setActiveNavLink();
 
   // Scale footer brand after fonts load
