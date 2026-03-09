@@ -1751,23 +1751,24 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .work-hero {
-  min-height: 60vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-top: 120px;
   padding-bottom: var(--space-3xl);
   background-color: var(--color-bg-dark);
+  text-align: center;
 }
 
 .work-hero__title {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 8vw, 6rem);
+  font-size: clamp(1.875rem, 4.8vw, 4.25rem);
   font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1;
-  margin-bottom: var(--space-2xl);
-  max-width: 800px;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  margin-bottom: var(--space-lg);
 }
 
 .work-hero__title em {
@@ -1777,6 +1778,7 @@ h1, h2, h3, h4, h5, h6 {
 .work-hero__filters {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-md);
   flex-wrap: wrap;
 }
@@ -1838,7 +1840,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: 250px 1fr auto;
   gap: var(--space-2xl);
-  padding: var(--space-xl) 0;
+  padding: var(--space-md) 0;
   border-top: 1px solid var(--color-border);
   align-items: center;
 }
@@ -1853,9 +1855,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-row__logo img {
-  max-height: 40px;
+  max-height: 120px;
   width: auto;
-  max-width: 180px;
+  max-width: 220px;
   object-fit: contain;
 }
 
@@ -1902,7 +1904,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .project-row__logo img {
-    max-height: 32px;
+    max-height: 80px;
   }
 
   .project-row__tags {
