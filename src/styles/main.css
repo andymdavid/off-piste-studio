@@ -2078,22 +2078,33 @@ body.lead-modal-open {
   }
 
   .about__content {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    column-gap: 0.6rem;
+    row-gap: var(--space-md);
     margin-bottom: 0;
-    --about-icon-size: 52px;
-    --about-icon-gap: 0.6rem;
   }
 
   .about__headline-row {
-    padding-left: calc(var(--about-icon-size) + var(--about-icon-gap));
+    display: contents;
   }
 
   .about__icon {
-    left: 0;
-    transform: translate(-0.5rem, -6px);
+    position: static;
+    width: 52px;
+    height: 52px;
+    margin-top: 0;
+    transform: translateX(-0.65rem);
+    grid-column: 1;
+  }
+
+  .about__headline {
+    grid-column: 2;
   }
 
   .about__offset {
-    margin-left: calc(var(--about-icon-size) + var(--about-icon-gap));
+    grid-column: 2;
+    margin-left: 0;
   }
 
   .about__subtext {
