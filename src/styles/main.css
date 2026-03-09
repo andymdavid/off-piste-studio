@@ -2079,27 +2079,21 @@ body.lead-modal-open {
 
   .about__content {
     margin-bottom: 0;
-    padding-left: 0;
+    --about-icon-size: 52px;
+    --about-icon-gap: 0.6rem;
   }
 
   .about__headline-row {
-    padding-left: 0;
-    margin-left: 3.75rem;
+    padding-left: calc(var(--about-icon-size) + var(--about-icon-gap));
   }
 
   .about__icon {
-    left: -3.75rem;
-    transform: translateY(-6px);
+    left: 0;
+    transform: translate(-0.5rem, -6px);
   }
 
   .about__offset {
-    margin-left: 0;
-  }
-
-  .about__subtext.about__offset,
-  .about__button.about__offset {
-    padding-left: 0;
-    margin-left: 3.75rem;
+    margin-left: calc(var(--about-icon-size) + var(--about-icon-gap));
   }
 
   .about__subtext {
