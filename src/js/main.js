@@ -106,11 +106,29 @@ function setActiveNavLink() {
   });
 }
 
+// FAQ accordion - one open at a time
+function initFaqAccordion() {
+  const faqItems = document.querySelectorAll('.faq__item');
+
+  if (!faqItems.length) return;
+
+  faqItems.forEach(item => {
+    item.addEventListener('toggle', () => {
+      if (item.open) {
+        faqItems.forEach(other => {
+          if (other !== item) other.open = false;
+        });
+      }
+    });
+  });
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeaderDropdowns();
   setActiveNavLink();
+  initFaqAccordion();
 
   // Scale footer brand after fonts load
   if (document.fonts) {
