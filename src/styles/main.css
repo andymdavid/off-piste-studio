@@ -2079,15 +2079,16 @@ body.lead-modal-open {
 
   .about__content {
     margin-bottom: 0;
-    padding-left: calc(var(--about-icon-size) + 0.6rem);
+    padding-left: 0;
   }
 
   .about__headline-row {
     padding-left: 0;
+    margin-left: 3.75rem;
   }
 
   .about__icon {
-    left: calc(-1 * (var(--about-icon-size) + 1rem));
+    left: -3.75rem;
     transform: translateY(-6px);
   }
 
@@ -2098,6 +2099,7 @@ body.lead-modal-open {
   .about__subtext.about__offset,
   .about__button.about__offset {
     padding-left: 0;
+    margin-left: 3.75rem;
   }
 
   .about__subtext {
