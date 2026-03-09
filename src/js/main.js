@@ -1,39 +1,5 @@
 // Off Piste Studio - Main JavaScript
-
-const INSIGHT_POSTS = [
-  {
-    slug: 'website-accessibility-and-seo',
-    url: '/insights/website-accessibility-and-seo.html',
-    title: 'Website Accessibility and SEO',
-    description: 'How accessibility improvements strengthen search performance, usability, and trust without becoming a compliance-only exercise.',
-    readTime: '8 min read',
-    tags: ['SEO', 'User Experience', 'Website Design']
-  },
-  {
-    slug: 'wordpress-to-wix-studio-migration',
-    url: '/insights/wordpress-to-wix-studio-migration.html',
-    title: 'WordPress to Wix Studio Migration: A Comprehensive Guide',
-    description: 'A practical look at when a Wix Studio migration makes sense, what to watch for technically, and how to avoid losing performance in the move.',
-    readTime: '6 min read',
-    tags: ['Website Design', 'Wix']
-  },
-  {
-    slug: 'how-design-impacts-revenue',
-    url: '/insights/how-design-impacts-revenue.html',
-    title: 'How Does Design Impact Revenue? A Comprehensive Analysis',
-    description: 'A breakdown of the commercial case for better design across conversion, pricing power, retention, and the credibility signals that shape buying decisions.',
-    readTime: '9 min read',
-    tags: ['Brand Design', 'Website Design']
-  },
-  {
-    slug: 'google-sge-and-seo',
-    url: '/insights/google-sge-and-seo.html',
-    title: 'Google Search Generative Experience (SGE) and SEO: Navigating the New Search Landscape',
-    description: 'What AI-shaped search changes for visibility, how answer engines affect traffic expectations, and where teams should focus next.',
-    readTime: '12 min read',
-    tags: ['SEO', 'AI']
-  }
-];
+import { INSIGHT_POSTS } from '../generated/insights-data.js';
 
 // Scale footer brand to fill the horizontal space available to it.
 function scaleFooterBrand() {
@@ -226,6 +192,30 @@ function createInsightRow(post) {
   return article;
 }
 
+function initInsightsList() {
+  const insightsList = document.querySelector('[data-insights-list]');
+  const filtersRoot = document.querySelector('[data-insights-filters]');
+
+  if (!insightsList) return;
+
+  INSIGHT_POSTS.forEach(post => {
+    insightsList.appendChild(createInsightRow(post));
+  });
+
+  if (!filtersRoot) return;
+
+  const uniqueTags = [...new Set(INSIGHT_POSTS.flatMap(post => post.tags))].sort((a, b) => a.localeCompare(b));
+  const filters = ['all', ...uniqueTags];
+
+  filters.forEach(filter => {
+    const button = document.createElement('button');
+    button.className = `work-hero__filter${filter === 'all' ? ' is-active' : ''}`;
+    button.dataset.filter = filter;
+    button.textContent = filter === 'all' ? 'Show All' : filter;
+    filtersRoot.appendChild(button);
+  });
+}
+
 function initRelatedPosts() {
   const relatedPostsRoot = document.querySelector('[data-related-posts]');
   const currentSlug = document.body.dataset.insightSlug;
@@ -349,6 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveNavLink();
   initFaqAccordion();
   initProjectSlideshow();
+  initInsightsList();
   initProjectFilter();
   initRelatedPosts();
   initLeadModal();
