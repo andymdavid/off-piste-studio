@@ -832,6 +832,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .faq {
   background-color: var(--color-bg-dark);
+  padding: 16vh 0;
 }
 
 .faq__layout {
