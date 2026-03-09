@@ -2016,6 +2016,21 @@ body.lead-modal-open {
 }
 
 @media (max-width: 768px) {
+  .about-hero {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: var(--space-xl);
+  }
+
+  .about-hero__content {
+    margin-bottom: var(--space-lg);
+  }
+
+  .project-modal {
+    flex: none;
+    padding: 0;
+  }
+
   .about {
     min-height: auto;
     justify-content: flex-start;
