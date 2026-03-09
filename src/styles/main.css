@@ -1549,6 +1549,11 @@ body.lead-modal-open {
   background-color: var(--color-bg-dark);
 }
 
+.insights-hero__title {
+  font-size: clamp(1.5rem, 3.6vw, 2.75rem);
+  max-width: 720px;
+}
+
 .insight-row {
   display: grid;
   grid-template-columns: minmax(260px, 340px) minmax(0, 1fr) auto;
