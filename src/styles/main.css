@@ -1438,9 +1438,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .about-hero__content {
   text-align: center;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto var(--space-2xl);
-  padding-top: var(--space-3xl);
 }
 
 .about-hero__icon {
@@ -1752,15 +1751,21 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 
 .work-hero {
-  min-height: 50vh;
+  min-height: 55vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 120px;
-  padding-bottom: var(--space-3xl);
+  padding-bottom: var(--space-2xl);
   background-color: var(--color-bg-dark);
   text-align: center;
+}
+
+.work-hero__icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 8px;
 }
 
 .work-hero__title {
@@ -1769,7 +1774,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   letter-spacing: -0.05em;
   line-height: 1.1;
-  margin-bottom: var(--space-lg);
+  margin: 0 auto var(--space-lg);
+  max-width: 800px;
 }
 
 .work-hero__title em {
