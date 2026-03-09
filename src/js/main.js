@@ -139,6 +139,41 @@ function initProjectSlideshow() {
   }, interval);
 }
 
+// Work page project filter
+function initProjectFilter() {
+  const filterButtons = document.querySelectorAll('.work-hero__filter');
+  const projectRows = document.querySelectorAll('.project-row');
+
+  if (!filterButtons.length || !projectRows.length) return;
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+
+      // Update active state
+      filterButtons.forEach(btn => btn.classList.remove('is-active'));
+      button.classList.add('is-active');
+
+      // Filter projects
+      projectRows.forEach(row => {
+        if (filter === 'all') {
+          row.style.display = '';
+          return;
+        }
+
+        const tags = row.querySelectorAll('.project-row__tags span');
+        const tagTexts = Array.from(tags).map(tag => tag.textContent);
+
+        if (tagTexts.includes(filter)) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
@@ -146,6 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setActiveNavLink();
   initFaqAccordion();
   initProjectSlideshow();
+  initProjectFilter();
 
   // Scale footer brand after fonts load
   if (document.fonts) {
