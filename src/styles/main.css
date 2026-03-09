@@ -1081,14 +1081,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer__nav-link {
   font-family: var(--font-logo);
-  font-size: 0.75rem;
+  font-size: 0.9375rem;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), opacity var(--transition-fast);
 }
 
 .footer__nav-link:hover {
-  color: var(--color-accent);
+  color: rgba(255, 255, 255, 0.72);
 }
 
 .footer__cta {
