@@ -50,37 +50,46 @@ function initMobileMenu() {
 
 // Header dropdown toggle
 function initHeaderDropdowns() {
-  const dropdowns = document.querySelectorAll('.header__nav-item--dropdown');
+  const navItems = document.querySelectorAll('.header__nav-item--dropdown');
+  const dropdown = document.querySelector('.header__dropdown');
 
-  if (!dropdowns.length) return;
+  if (!navItems.length || !dropdown) return;
 
-  const closeDropdowns = current => {
-    dropdowns.forEach(dropdown => {
-      if (dropdown === current) return;
+  const positionDropdown = (button) => {
+    const rect = button.getBoundingClientRect();
+    const headerRect = button.closest('.header').getBoundingClientRect();
+    dropdown.style.left = (rect.left - headerRect.left - 12) + 'px';
+  };
 
-      dropdown.classList.remove('is-open');
-      const button = dropdown.querySelector('.header__nav-toggle');
-      if (button) {
-        button.setAttribute('aria-expanded', 'false');
-      }
+  const closeDropdown = () => {
+    dropdown.classList.remove('is-open');
+    navItems.forEach(item => {
+      item.classList.remove('is-open');
+      const btn = item.querySelector('.header__nav-toggle');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
     });
   };
 
-  dropdowns.forEach(dropdown => {
-    const button = dropdown.querySelector('.header__nav-toggle');
+  navItems.forEach(navItem => {
+    const button = navItem.querySelector('.header__nav-toggle');
     if (!button) return;
 
     button.addEventListener('click', () => {
       const isOpen = dropdown.classList.contains('is-open');
-      closeDropdowns(dropdown);
-      dropdown.classList.toggle('is-open', !isOpen);
-      button.setAttribute('aria-expanded', String(!isOpen));
+      closeDropdown();
+      if (!isOpen) {
+        positionDropdown(button);
+        dropdown.classList.add('is-open');
+        navItem.classList.add('is-open');
+        button.setAttribute('aria-expanded', 'true');
+      }
     });
   });
 
   document.addEventListener('click', event => {
     if (event.target.closest('.header__nav-item--dropdown')) return;
-    closeDropdowns();
+    if (event.target.closest('.header__dropdown')) return;
+    closeDropdown();
   });
 }
 
