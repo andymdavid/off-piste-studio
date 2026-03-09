@@ -1872,6 +1872,7 @@ h1, h2, h3, h4, h5, h6 {
 .project-row__logo--cloud-modular img {
   max-height: 90px;
   max-width: 180px;
+  margin-left: 1rem;
 }
 
 .project-row__description {
