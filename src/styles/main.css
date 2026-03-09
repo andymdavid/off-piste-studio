@@ -546,8 +546,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lead-modal__action--primary {
-  background: var(--color-accent);
-  color: #fff9f5;
+  background: #ffffff;
+  color: #000000;
+}
+
+.lead-modal__action--primary:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 body.lead-modal-open {
