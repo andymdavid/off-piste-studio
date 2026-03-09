@@ -174,6 +174,118 @@ function initProjectFilter() {
   });
 }
 
+function createLeadModal() {
+  const modal = document.createElement('div');
+  modal.className = 'lead-modal';
+  modal.setAttribute('hidden', '');
+  modal.innerHTML = `
+    <div class="lead-modal__backdrop" data-lead-close></div>
+    <div class="lead-modal__panel" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
+      <button class="lead-modal__close" type="button" aria-label="Close contact modal" data-lead-close>&times;</button>
+      <div class="lead-modal__grid">
+        <div class="lead-modal__content">
+          <span class="lead-modal__eyebrow">Start a Project</span>
+          <h2 class="lead-modal__title" id="lead-modal-title">Let&apos;s scope what you&apos;re building.</h2>
+          <p class="lead-modal__text">Use this as the entry point for a future AI intake flow. For now, it gives leads a clear place to start the conversation and send project context.</p>
+
+          <div class="lead-modal__profile">
+            <img src="/public/images/Icon.png" alt="Off Piste Studio">
+            <div>
+              <p class="lead-modal__profile-name">Off Piste Studio</p>
+              <p class="lead-modal__profile-role">AI intake agent coming soon</p>
+            </div>
+          </div>
+
+          <div class="lead-modal__meta">
+            <div class="lead-modal__meta-card">
+              <span class="lead-modal__meta-label">Email</span>
+              <p class="lead-modal__meta-value"><a href="mailto:hello@offpistestudio.com">hello@offpistestudio.com</a></p>
+            </div>
+            <div class="lead-modal__meta-card">
+              <span class="lead-modal__meta-label">Typical Project Start</span>
+              <p class="lead-modal__meta-value">$10,000+</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="lead-modal__chat">
+          <div class="lead-modal__chat-header">
+            <div>
+              <p class="lead-modal__chat-title">Lead Intake</p>
+              <p class="lead-modal__chat-status">Structured for a future agent conversation</p>
+            </div>
+          </div>
+
+          <div class="lead-modal__chat-body">
+            <p class="lead-modal__bubble">Tell us what you need and we&apos;ll reply with the right next step, timeline, and commercial scope.</p>
+            <ul class="lead-modal__prompt-list">
+              <li>What are you building: website, brand, deck, or a broader system?</li>
+              <li>What stage are you at, and what needs to happen next?</li>
+              <li>What timeline and budget range should we plan around?</li>
+            </ul>
+          </div>
+
+          <div class="lead-modal__actions">
+            <a class="lead-modal__action lead-modal__action--primary" href="mailto:hello@offpistestudio.com?subject=New%20project%20enquiry&body=Hi%20Off%20Piste%20Studio%2C%0A%0AI%27d%20like%20to%20discuss%20a%20project.%0A%0AProject%20type%3A%0ATimeline%3A%0ABudget%20range%3A%0AGoals%3A%0A">Start the chat</a>
+            <a class="lead-modal__action lead-modal__action--secondary" href="/contact.html">View contact page</a>
+          </div>
+          <p class="lead-modal__footnote">When the AI agent is ready, this panel can become the live intake interface without changing the trigger pattern.</p>
+        </div>
+      </div>
+    </div>
+  `;
+
+  return modal;
+}
+
+function initLeadModal() {
+  const triggers = document.querySelectorAll('a[href="/contact.html"]');
+
+  if (!triggers.length) return;
+
+  const modal = createLeadModal();
+  const closeControls = () => modal.querySelectorAll('[data-lead-close]');
+  const closeButton = () => modal.querySelector('.lead-modal__close');
+  let previousActiveElement = null;
+
+  const openModal = () => {
+    previousActiveElement = document.activeElement;
+    modal.hidden = false;
+    modal.classList.add('is-open');
+    document.body.classList.add('lead-modal-open');
+    closeButton().focus();
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    modal.hidden = true;
+    document.body.classList.remove('lead-modal-open');
+
+    if (previousActiveElement instanceof HTMLElement) {
+      previousActiveElement.focus();
+    }
+  };
+
+  document.body.appendChild(modal);
+
+  triggers.forEach(trigger => {
+    trigger.addEventListener('click', event => {
+      event.preventDefault();
+      openModal();
+    });
+  });
+
+  closeControls().forEach(control => {
+    control.addEventListener('click', closeModal);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
@@ -182,6 +294,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFaqAccordion();
   initProjectSlideshow();
   initProjectFilter();
+  initLeadModal();
 
   // Scale footer brand after fonts load
   if (document.fonts) {

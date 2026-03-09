@@ -337,6 +337,261 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
 }
 
+.lead-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: none;
+}
+
+.lead-modal.is-open {
+  display: block;
+}
+
+.lead-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 6, 6, 0.78);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.lead-modal__panel {
+  position: relative;
+  z-index: 1;
+  width: min(960px, calc(100vw - 2rem));
+  margin: clamp(1rem, 6vh, 4rem) auto;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top left, rgba(212, 98, 42, 0.16), transparent 34%),
+    linear-gradient(160deg, rgba(18, 18, 18, 0.98), rgba(10, 10, 10, 0.96));
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.45);
+}
+
+.lead-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  color: var(--color-text);
+  font-size: 1.5rem;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.06);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.lead-modal__close:hover {
+  background: rgba(255, 255, 255, 0.12);
+  transform: scale(1.04);
+}
+
+.lead-modal__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  gap: clamp(1.25rem, 3vw, 2rem);
+}
+
+.lead-modal__eyebrow {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-alfabet);
+  font-size: 0.6875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.lead-modal__title {
+  max-width: 10ch;
+  margin-bottom: 0.9rem;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 0.98;
+  letter-spacing: -0.05em;
+}
+
+.lead-modal__text {
+  max-width: 34ch;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-muted);
+}
+
+.lead-modal__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.lead-modal__profile img {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.lead-modal__profile-name {
+  font-family: var(--font-alfabet);
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.lead-modal__profile-role {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+}
+
+.lead-modal__meta {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.lead-modal__meta-card {
+  padding: 0.95rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.lead-modal__meta-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.lead-modal__meta-value {
+  color: var(--color-text);
+}
+
+.lead-modal__meta-value a {
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.lead-modal__chat {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 1rem;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03)),
+    rgba(14, 14, 14, 0.86);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.lead-modal__chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.lead-modal__chat-title {
+  font-family: var(--font-alfabet);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.lead-modal__chat-status {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.lead-modal__chat-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.25rem 0;
+}
+
+.lead-modal__bubble {
+  max-width: 34ch;
+  padding: 1rem 1.1rem;
+  border-radius: 18px 18px 18px 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text);
+}
+
+.lead-modal__prompt-list {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.lead-modal__prompt-list li {
+  padding: 0.8rem 0.9rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-muted);
+}
+
+.lead-modal__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.lead-modal__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.85rem;
+  padding: 0 1.15rem;
+  border-radius: 999px;
+  font-family: var(--font-alfabet);
+  font-size: 0.6875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: transform var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.lead-modal__action:hover {
+  transform: translateY(-1px);
+}
+
+.lead-modal__action--primary {
+  background: var(--color-accent);
+  color: #fff9f5;
+}
+
+.lead-modal__action--secondary {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text);
+}
+
+.lead-modal__footnote {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.54);
+}
+
+body.lead-modal-open {
+  overflow: hidden;
+}
+
 /* Mobile nav toggle */
 .header__menu-toggle {
   display: none;
@@ -405,6 +660,23 @@ h1, h2, h3, h4, h5, h6 {
 
   .header__logo {
     font-size: 1rem;
+  }
+
+  .lead-modal__panel {
+    width: min(960px, calc(100vw - 1rem));
+    margin: 0.5rem auto;
+    min-height: calc(100vh - 1rem);
+    border-radius: 24px;
+  }
+
+  .lead-modal__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lead-modal__title,
+  .lead-modal__text,
+  .lead-modal__bubble {
+    max-width: none;
   }
 }
 
