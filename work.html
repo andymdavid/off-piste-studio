@@ -3,9 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="View our portfolio of work - websites, branding, and digital experiences for ambitious companies.">
-  <title>Work | Off Piste Studio</title>
+  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <meta name="description" content="See the websites, brands, and landing pages we've built for small businesses. Real projects, real results.">
+  <title>Our Work | Small Business Website Design Portfolio</title>
+  <link rel="canonical" href="https://offpistestudio.com/work">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Work | Small Business Website Design Portfolio">
+  <meta property="og:description" content="See the websites, brands, and landing pages we've built for small businesses. Real projects, real results.">
+  <meta property="og:url" content="https://offpistestudio.com/work">
+  <meta property="og:site_name" content="Off Piste Studio">
+  <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Work | Small Business Website Design Portfolio">
+  <meta name="twitter:description" content="See the websites, brands, and landing pages we've built for small businesses. Real projects, real results.">
+  <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Our Work — Small Business Website Design Portfolio",
+    "description": "See the websites, brands, and landing pages we've built for small businesses. Real projects, real results.",
+    "url": "https://offpistestudio.com/work",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Off Piste Studio",
+      "url": "https://offpistestudio.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://offpistestudio.com/work" }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="/src/styles/main.css">
+  <!-- Font preloads -->
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,8 +61,8 @@
       </button>
 
       <nav class="header__nav">
-        <a href="/work.html" class="header__nav-link active">Work</a>
-        <a href="/about.html" class="header__nav-link">About</a>
+        <a href="/work" class="header__nav-link active">Work</a>
+        <a href="/about" class="header__nav-link">About</a>
         <div class="header__nav-item header__nav-item--dropdown">
           <button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button>
         </div>
@@ -32,10 +72,10 @@
         <span class="header__logo-letter">O</span><span class="header__logo-letter">f</span><span class="header__logo-letter">f</span><span class="header__logo-space"> </span><span class="header__logo-letter">P</span><span class="header__logo-letter">i</span><span class="header__logo-letter">s</span><span class="header__logo-letter">t</span><span class="header__logo-letter">e</span><span class="header__logo-space"> </span><span class="header__logo-letter">S</span><span class="header__logo-letter">t</span><span class="header__logo-letter">u</span><span class="header__logo-letter">d</span><span class="header__logo-letter">i</span><span class="header__logo-letter">o</span>
       </a>
 
-      <a href="/contact.html" class="header__cta">Let's Chat</a>
+      <a href="/contact" class="header__cta">Let's Chat</a>
     </div>
     <div class="header__dropdown">
-      <a href="/resources.html" class="header__dropdown-link">Insights</a>
+      <a href="/resources" class="header__dropdown-link">Insights</a><a href="/tools" class="header__dropdown-link">Tools</a>
     </div>
   </header>
 
@@ -43,8 +83,8 @@
     <!-- Work Hero -->
     <section class="work-hero">
       <div class="container">
-        <img src="/public/images/Icon.png" alt="" class="work-hero__icon" aria-hidden="true">
-        <h1 class="work-hero__title">We lean into new technology, we're data-driven, selective, and <em>relentlessly focused</em> on performance.</h1>
+        <img src="/public/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
+        <h1 class="work-hero__title">Websites and brands we've built for growing businesses</h1>
         <div class="work-hero__filters">
           <span class="work-hero__filter-label">Filter by</span>
           <div class="work-hero__filter-tags">
@@ -65,7 +105,7 @@
         <div class="projects__list">
           <article class="project-row">
             <div class="project-row__logo">
-              <img src="/public/images/logos/FDY Logo Light.png" alt="Flow Dynamics">
+              <img src="/public/images/logos/FDY Logo Light.webp" alt="Flow Dynamics">
             </div>
             <p class="project-row__description">Built Flow Dynamics' brand and web presence from the ground up for their innovative indoor air quality solutions.</p>
             <div class="project-row__tags">
@@ -77,7 +117,7 @@
 
           <article class="project-row">
             <div class="project-row__logo">
-              <img src="/public/images/logos/PLE Logo Light.png" alt="Pleiades">
+              <img src="/public/images/logos/PLE Logo Light.webp" alt="Pleiades" loading="lazy">
             </div>
             <p class="project-row__description">Positioned Pleiades for capital raising with strategic web design and investor-ready collateral for their net zero tracking platform.</p>
             <div class="project-row__tags">
@@ -89,7 +129,7 @@
 
           <article class="project-row">
             <div class="project-row__logo">
-              <img src="/public/images/logos/DE Logo Light.png" alt="Decarbonology">
+              <img src="/public/images/logos/DE Logo Light.webp" alt="Decarbonology" loading="lazy">
             </div>
             <p class="project-row__description">Launched Decarbonology's digital presence to accelerate enterprise climate action with a modern website and marketing collateral.</p>
             <div class="project-row__tags">
@@ -100,7 +140,7 @@
 
           <article class="project-row">
             <div class="project-row__logo project-row__logo--cloud-modular">
-              <img src="/public/images/logos/CM_Logo.png" alt="Cloud Modular">
+              <img src="/public/images/logos/CM_Logo.webp" alt="Cloud Modular" loading="lazy">
             </div>
             <p class="project-row__description">Delivered Cloud Modular's brand, website, marketing assets, and pitch deck to position the modular construction company for growth.</p>
             <div class="project-row__tags">
@@ -113,7 +153,7 @@
 
           <article class="project-row">
             <div class="project-row__logo">
-              <img src="/public/images/logos/PLI Logo Light.png" alt="Place Intelligence">
+              <img src="/public/images/logos/PLI Logo Light.webp" alt="Place Intelligence" loading="lazy">
             </div>
             <p class="project-row__description">Partnered with location intelligence startup Place Intelligence to refine their product strategy and capital raising approach.</p>
             <div class="project-row__tags">
@@ -124,7 +164,7 @@
 
           <article class="project-row">
             <div class="project-row__logo">
-              <img src="/public/images/logos/SB Logo Light.png" alt="Superbeing">
+              <img src="/public/images/logos/SB Logo Light.webp" alt="Superbeing" loading="lazy">
             </div>
             <p class="project-row__description">Created a bold digital identity for Superbeing to stand out in the competitive wellness technology space.</p>
             <div class="project-row__tags">
@@ -135,7 +175,7 @@
 
           <article class="project-row">
             <div class="project-row__logo">
-              <img src="/public/images/logos/FD Logo Light.png" alt="Future Directors">
+              <img src="/public/images/logos/FD Logo Light.webp" alt="Future Directors" loading="lazy">
             </div>
             <p class="project-row__description">Developed strategy and collateral for Future Directors' investor readiness and capital raising efforts.</p>
             <div class="project-row__tags">
@@ -146,7 +186,7 @@
 
           <article class="project-row">
             <div class="project-row__logo">
-              <img src="/public/images/logos/BU Logo Light.png" alt="Buildsource">
+              <img src="/public/images/logos/BU Logo Light.webp" alt="Buildsource" loading="lazy">
             </div>
             <p class="project-row__description">Crafted Buildsource's brand identity and web presence to streamline construction material sourcing.</p>
             <div class="project-row__tags">
@@ -157,7 +197,7 @@
 
           <article class="project-row">
             <div class="project-row__logo">
-              <img src="/public/images/logos/CC Logo Light.png" alt="Cell Cyber">
+              <img src="/public/images/logos/CC Logo Light.webp" alt="Cell Cyber" loading="lazy">
             </div>
             <p class="project-row__description">Built Cell Cyber's cybersecurity brand with a focus on trust, expertise, and cutting-edge protection.</p>
             <div class="project-row__tags">
@@ -177,21 +217,20 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__lead">
-          <img src="/public/images/Icon.png" alt="" class="footer__icon" aria-hidden="true">
+          <img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy">
           <h3 class="footer__heading">Interested in working with us?</h3>
-          <a href="/contact.html" class="footer__cta">Let's Chat</a>
+          <a href="/contact" class="footer__cta">Let's Chat</a>
         </div>
 
         <div class="footer__navs">
           <nav class="footer__nav" aria-label="Footer sitemap">
-            <a href="/work.html" class="footer__nav-link">Work</a>
-            <a href="/about.html" class="footer__nav-link">About</a>
-            <a href="/resources.html" class="footer__nav-link">Resources</a>
+            <a href="/work" class="footer__nav-link">Work</a>
+            <a href="/about" class="footer__nav-link">About</a>
+            <a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a>
           </nav>
 
           <nav class="footer__nav" aria-label="Footer social links">
-            <a href="https://twitter.com" class="footer__nav-link" target="_blank" rel="noopener">Twitter</a>
-            <a href="https://linkedin.com" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a>
           </nav>
         </div>
       </div>
@@ -201,7 +240,7 @@
       <div class="footer__brand">Off-Piste Studio</div>
 
       <div class="container footer__bottom">
-        <p class="footer__copyright">&copy; Off Piste Studio 2025 All Rights Reserved</p>
+        <p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p>
         <p class="footer__location">City Beach, WA</p>
       </div>
     </div>
