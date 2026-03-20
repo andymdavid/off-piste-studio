@@ -1,0 +1,77 @@
+# Off Piste Studio
+
+> Web design and branding agency for small businesses. Based in Perth, WA, Australia. We build websites that generate leads for local service businesses — tradies, clinics, professional firms, and multi-location operators.
+
+## Services
+
+- [Website Design](https://offpistestudio.com/services/website-design): Custom website design for small businesses with lead forms, click-to-call, local SEO, and mobile-responsive layouts. Built to convert visitors into customers.
+- [Local SEO](https://offpistestudio.com/services/local-seo): Google Business Profile setup, local citations, suburb pages, and Google Maps optimisation for service businesses.
+- [Brand Identity](https://offpistestudio.com/services/brand-identity): Logo, brand guidelines, and visual identity for businesses that want to look professional and trustworthy.
+- [Landing Pages](https://offpistestudio.com/services/landing-pages): High-converting landing pages for trades and service businesses running Google or Meta ads.
+- [Content & Copywriting](https://offpistestudio.com/services/content): Website copy, blog content, and content marketing for local businesses.
+- [Google Business Profile](https://offpistestudio.com/services/google-business-profile): Setup, optimisation, and ongoing management of your Google Business listing.
+
+## Industries We Serve
+
+- [Plumbers](https://offpistestudio.com/industries/plumbers)
+- [Electricians](https://offpistestudio.com/industries/electricians)
+- [Cleaners](https://offpistestudio.com/industries/cleaners)
+- [Landscapers](https://offpistestudio.com/industries/landscapers)
+- [Painters](https://offpistestudio.com/industries/painters)
+- [Pest Control](https://offpistestudio.com/industries/pest-control)
+- [Roofers](https://offpistestudio.com/industries/roofers)
+- [HVAC](https://offpistestudio.com/industries/hvac)
+- [Dentists](https://offpistestudio.com/industries/dentists)
+- [Physiotherapists](https://offpistestudio.com/industries/physiotherapy)
+- [Accountants](https://offpistestudio.com/industries/accountants)
+- [Mortgage Brokers](https://offpistestudio.com/industries/mortgage-brokers)
+- [Lawyers](https://offpistestudio.com/industries/lawyers)
+- [Photographers](https://offpistestudio.com/industries/photographers)
+- [Builders](https://offpistestudio.com/industries/builders)
+- [Real Estate Agents](https://offpistestudio.com/industries/real-estate)
+- [Buyers Agents](https://offpistestudio.com/industries/buyers-agents)
+- [Coaches](https://offpistestudio.com/industries/coaches)
+- [Bookkeepers](https://offpistestudio.com/industries/bookkeepers)
+- [Property Maintenance](https://offpistestudio.com/industries/property-maintenance)
+
+## Pricing
+
+- Website design packages start from $10,000 AUD
+- Typical project timeline: 2–4 weeks
+- [View pricing](https://offpistestudio.com/pricing)
+
+## How We Work
+
+1. Discovery call — understand your business, goals, and audience
+2. Strategy & wireframes — plan the site structure, pages, and conversion flow
+3. Design — build the visual design, brand-aligned and mobile-first
+4. Development — build a fast, SEO-ready website with lead capture built in
+5. Launch & support — go live with ongoing support and optimisation
+
+## About
+
+- Based in City Beach, Perth, Western Australia
+- Serves clients across Australia, New Zealand, and internationally
+- Agent-powered agency — uses AI to deliver faster, more consistent results
+- 50+ projects delivered for small and medium businesses
+- [About us](https://offpistestudio.com/about)
+
+## Contact
+
+- Email: hello@offpistestudio.com
+- [Get in touch](https://offpistestudio.com/contact)
+
+## Free Tools
+
+- [Contrast Checker](https://offpistestudio.com/tools/contrast-checker): Check if text and background colours meet WCAG 2.1 accessibility standards. Free, instant, no signup required.
+- [Colour Converter](https://offpistestudio.com/tools/color-converter): Convert between hex, RGB, and HSL colour formats. Copy CSS-ready values with one click.
+- [Brand Colour Extractor](https://offpistestudio.com/tools/brand-color-extractor): Upload a logo or image and extract brand colours with hex codes, RGB, and HSL values. Export as CSS variables.
+- [Colour Palette Generator](https://offpistestudio.com/tools/color-palette): Generate harmonious colour palettes. Choose complementary, analogous, triadic, or monochromatic modes. Lock colours and shuffle.
+- [CSS Gradient Generator](https://offpistestudio.com/tools/gradient-generator): Create linear, radial, and conic CSS gradients with a visual editor. Copy production-ready code.
+
+## Insights
+
+- [Google SGE and SEO](https://offpistestudio.com/insights/google-sge-and-seo): What AI-shaped search changes mean for visibility and how to adapt your strategy.
+- [How Design Impacts Revenue](https://offpistestudio.com/insights/how-design-impacts-revenue): The commercial impact of good design on business growth and customer acquisition.
+- [Website Accessibility and SEO](https://offpistestudio.com/insights/website-accessibility-and-seo): How accessibility improvements benefit both users and search rankings.
+- [All insights](https://offpistestudio.com/resources)

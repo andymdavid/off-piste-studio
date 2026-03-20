@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <meta name="description" content="Free colour contrast checker. Test text and background colour combinations against WCAG 2.1 accessibility standards. Get instant pass/fail results for AA and AAA compliance.">
+  <title>Free Colour Contrast Checker — WCAG Accessibility | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/tools/contrast-checker">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Colour Contrast Checker — WCAG Accessibility | Off Piste Studio">
+  <meta property="og:description" content="Check if your text and background colours meet WCAG accessibility standards. Instant contrast ratio calculation with AA and AAA compliance results.">
+  <meta property="og:url" content="https://offpistestudio.com/tools/contrast-checker">
+  <meta property="og:site_name" content="Off Piste Studio">
+  <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Colour Contrast Checker — WCAG Accessibility | Off Piste Studio">
+  <meta name="twitter:description" content="Check if your text and background colours meet WCAG accessibility standards. Instant contrast ratio calculation.">
+  <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Colour Contrast Checker",
+        "description": "Check if text and background colour combinations meet WCAG 2.1 accessibility standards. Free, instant, no signup required.",
+        "url": "https://offpistestudio.com/tools/contrast-checker",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "AUD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "url": "https://offpistestudio.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a good contrast ratio for web accessibility?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WCAG 2.1 Level AA requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text (18pt or 14pt bold). Level AAA requires 7:1 for normal text and 4.5:1 for large text. Most websites should aim for at least AA compliance."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does colour contrast matter for websites?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sufficient colour contrast ensures text is readable for all users, including those with low vision or colour blindness. Poor contrast leads to higher bounce rates, reduced engagement, and potential legal accessibility compliance issues. It also impacts SEO — search engines favour accessible websites."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is WCAG?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WCAG (Web Content Accessibility Guidelines) is an international standard for web accessibility published by the W3C. It provides guidelines for making web content more accessible to people with disabilities, including requirements for colour contrast ratios between text and backgrounds."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is contrast ratio calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Contrast ratio is calculated using the relative luminance of two colours. The formula is (L1 + 0.05) / (L2 + 0.05), where L1 is the lighter colour's luminance and L2 is the darker colour's luminance. The result ranges from 1:1 (no contrast) to 21:1 (maximum contrast, black on white)."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://offpistestudio.com/tools" },
+          { "@type": "ListItem", "position": 3, "name": "Contrast Checker", "item": "https://offpistestudio.com/tools/contrast-checker" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/tools.css">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="tool" data-page-slug="contrast-checker">
+  <header class="header">
+    <div class="header__inner">
+      <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="header__nav">
+        <a href="/work" class="header__nav-link">Work</a>
+        <a href="/about" class="header__nav-link">About</a>
+        <div class="header__nav-item header__nav-item--dropdown"><button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button></div>
+      </nav>
+      <a href="/" class="header__logo"><span class="header__logo-letter">O</span><span class="header__logo-letter">f</span><span class="header__logo-letter">f</span><span class="header__logo-space"> </span><span class="header__logo-letter">P</span><span class="header__logo-letter">i</span><span class="header__logo-letter">s</span><span class="header__logo-letter">t</span><span class="header__logo-letter">e</span><span class="header__logo-space"> </span><span class="header__logo-letter">S</span><span class="header__logo-letter">t</span><span class="header__logo-letter">u</span><span class="header__logo-letter">d</span><span class="header__logo-letter">i</span><span class="header__logo-letter">o</span></a>
+      <a href="/contact" class="header__cta">Let's Chat</a>
+    </div>
+    <div class="header__dropdown"><a href="/resources" class="header__dropdown-link">Insights</a></div>
+  </header>
+
+  <main>
+    <section class="tool-hero">
+      <div class="container">
+        <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/tools">Tools</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Contrast Checker</span>
+        </nav>
+        <h1 class="tool-hero__title">Colour Contrast Checker</h1>
+        <p class="tool-hero__subtitle">Check if your text and background colours meet WCAG 2.1 accessibility standards. Free, instant, no signup required.</p>
+      </div>
+    </section>
+
+    <section class="tool-app">
+      <div class="container">
+        <div class="contrast-checker">
+          <!-- Color inputs -->
+          <div class="contrast-checker__inputs">
+            <div class="contrast-checker__input-group">
+              <label class="tool-label" for="text-color">Text Colour</label>
+              <div class="tool-color-input">
+                <input type="color" id="text-picker" value="#1a1a2e" class="tool-color-input__picker" aria-label="Text colour picker">
+                <input type="text" id="text-color" value="#1a1a2e" class="tool-color-input__text" placeholder="#000000" spellcheck="false" autocomplete="off">
+              </div>
+            </div>
+
+            <button id="swap-colors" class="contrast-checker__swap" type="button" aria-label="Swap text and background colours">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg>
+            </button>
+
+            <div class="contrast-checker__input-group">
+              <label class="tool-label" for="bg-color">Background Colour</label>
+              <div class="tool-color-input">
+                <input type="color" id="bg-picker" value="#f5f5f5" class="tool-color-input__picker" aria-label="Background colour picker">
+                <input type="text" id="bg-color" value="#f5f5f5" class="tool-color-input__text" placeholder="#ffffff" spellcheck="false" autocomplete="off">
+              </div>
+            </div>
+          </div>
+
+          <!-- Ratio display -->
+          <div class="contrast-checker__ratio">
+            <span class="contrast-checker__ratio-label">Contrast Ratio</span>
+            <span class="contrast-checker__ratio-value" id="contrast-ratio">--</span>
+            <button class="tool-copy-btn" id="copy-ratio" type="button">Copy</button>
+          </div>
+
+          <!-- Live preview -->
+          <div class="contrast-checker__preview" id="contrast-preview">
+            <p class="contrast-checker__preview-large" id="preview-large">Large text preview (18pt+)</p>
+            <p class="contrast-checker__preview-small" id="preview-small">Normal text preview. This is how your body text will look with this colour combination. Make sure it's easy to read at this size.</p>
+          </div>
+
+          <!-- WCAG results grid -->
+          <div class="contrast-checker__results">
+            <div class="wcag-result" id="aa-normal">
+              <span class="wcag-result__level">AA</span>
+              <span class="wcag-result__type">Normal Text</span>
+              <span class="wcag-result__threshold">4.5:1</span>
+              <span class="wcag-result__status">--</span>
+            </div>
+            <div class="wcag-result" id="aa-large">
+              <span class="wcag-result__level">AA</span>
+              <span class="wcag-result__type">Large Text</span>
+              <span class="wcag-result__threshold">3:1</span>
+              <span class="wcag-result__status">--</span>
+            </div>
+            <div class="wcag-result" id="aaa-normal">
+              <span class="wcag-result__level">AAA</span>
+              <span class="wcag-result__type">Normal Text</span>
+              <span class="wcag-result__threshold">7:1</span>
+              <span class="wcag-result__status">--</span>
+            </div>
+            <div class="wcag-result" id="aaa-large">
+              <span class="wcag-result__level">AAA</span>
+              <span class="wcag-result__type">Large Text</span>
+              <span class="wcag-result__threshold">4.5:1</span>
+              <span class="wcag-result__status">--</span>
+            </div>
+          </div>
+
+          <!-- Fix suggestion -->
+          <div class="contrast-checker__fix" id="fix-suggestion" hidden>
+            <span class="contrast-checker__fix-label">Suggested accessible alternative:</span>
+            <div class="contrast-checker__fix-color">
+              <span class="contrast-checker__fix-swatch" id="fix-swatch"></span>
+              <code id="fix-hex"></code>
+              <button class="tool-copy-btn" id="fix-apply" type="button">Apply</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO content -->
+    <section class="tool-content">
+      <div class="container">
+        <div class="tool-content__body">
+          <h2>How to Use This Tool</h2>
+          <p>Enter your text colour and background colour using hex codes (e.g. #1a1a2e) or use the colour pickers. The tool instantly calculates the contrast ratio and checks compliance against WCAG 2.1 Level AA and AAA standards.</p>
+          <p>If your colours fail the minimum contrast requirement, the tool suggests the nearest accessible alternative that maintains your colour's hue while meeting the 4.5:1 ratio for AA compliance.</p>
+
+          <h2>Why Colour Contrast Matters for Your Website</h2>
+          <p>Poor colour contrast is one of the most common accessibility issues on the web. When text doesn't have enough contrast against its background, it becomes difficult or impossible to read for people with low vision, colour blindness, or anyone viewing a screen in bright sunlight.</p>
+          <p>Beyond accessibility, contrast directly impacts your business. Visitors who can't read your content leave faster, reducing conversions and increasing bounce rates. Search engines also factor accessibility into rankings — a well-contrasted, accessible site performs better in search results.</p>
+
+          <h2>Related Tools</h2>
+          <div class="tool-related">
+            <a href="/tools/color-converter" class="tool-related__link">
+              <span class="tool-related__name">Colour Converter</span>
+              <span class="tool-related__desc">Convert between hex, RGB, and HSL formats</span>
+            </a>
+            <a href="/tools/brand-color-extractor" class="tool-related__link">
+              <span class="tool-related__name">Brand Colour Extractor</span>
+              <span class="tool-related__desc">Upload your logo and extract brand colours with hex codes</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section page-faq">
+      <div class="container">
+        <div class="faq__layout">
+          <div class="faq__intro">
+            <h2 class="faq__heading">Frequently asked questions</h2>
+          </div>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">What is a good contrast ratio for web accessibility?</summary>
+              <p class="faq__answer">WCAG 2.1 Level AA requires a minimum contrast ratio of 4.5:1 for normal text and 3:1 for large text (18pt or 14pt bold). Level AAA requires 7:1 for normal text and 4.5:1 for large text. Most websites should aim for at least AA compliance.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Why does colour contrast matter for websites?</summary>
+              <p class="faq__answer">Sufficient colour contrast ensures text is readable for all users, including those with low vision or colour blindness. Poor contrast leads to higher bounce rates, reduced engagement, and potential legal accessibility compliance issues. It also impacts SEO — search engines favour accessible websites.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">What is WCAG?</summary>
+              <p class="faq__answer">WCAG (Web Content Accessibility Guidelines) is an international standard for web accessibility published by the W3C. It provides guidelines for making web content more accessible to people with disabilities, including requirements for colour contrast ratios between text and backgrounds.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How is contrast ratio calculated?</summary>
+              <p class="faq__answer">Contrast ratio is calculated using the relative luminance of two colours. The formula is (L1 + 0.05) / (L2 + 0.05), where L1 is the lighter colour's luminance and L2 is the darker colour's luminance. The result ranges from 1:1 (no contrast) to 21:1 (maximum contrast, black on white).</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="page-cta">
+      <div class="container">
+        <div class="page-cta__content">
+          <h2 class="page-cta__heading">Need an accessible website that converts?</h2>
+          <p class="page-cta__text">We build websites with accessibility and performance baked in from the start. Get in touch to discuss your project.</p>
+          <a href="/contact" class="page-cta__button">Let's Chat</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta">Let's Chat</a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/resources" class="footer__nav-link">Resources</a></nav><nav class="footer__nav" aria-label="Footer social links"><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
+    <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/tools/contrast-checker.js"></script>
+</body>
+</html>

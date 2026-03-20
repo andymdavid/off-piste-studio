@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <meta name="description" content="Free brand colour extractor. Upload your logo or any image and instantly extract a colour palette with hex codes, RGB, and HSL values. Export as CSS variables.">
+  <title>Free Brand Colour Extractor — Get Colours From Your Logo | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/tools/brand-color-extractor">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Brand Colour Extractor — Get Colours From Your Logo | Off Piste Studio">
+  <meta property="og:description" content="Upload your logo or any image and instantly extract a colour palette with hex codes. Export as CSS variables.">
+  <meta property="og:url" content="https://offpistestudio.com/tools/brand-color-extractor">
+  <meta property="og:site_name" content="Off Piste Studio">
+  <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Brand Colour Extractor — Get Colours From Your Logo | Off Piste Studio">
+  <meta name="twitter:description" content="Upload your logo or any image and instantly extract a colour palette with hex codes.">
+  <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Brand Colour Extractor",
+        "description": "Upload a logo or image and extract dominant brand colours with hex codes, RGB, and HSL values. Free, instant, no signup required.",
+        "url": "https://offpistestudio.com/tools/brand-color-extractor",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "AUD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "url": "https://offpistestudio.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I extract colours from my logo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Upload your logo image (PNG, JPG, WebP, or SVG) to this tool. It will automatically analyse the image and extract the dominant colours, giving you hex codes, RGB values, and HSL values for each colour. You can then copy these values for use in your website, design files, or brand guidelines."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What image formats are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The tool supports PNG, JPG/JPEG, WebP, SVG, and GIF image formats. For best results, use a high-quality image with a transparent or solid background. Maximum file size is 10MB."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does colour extraction work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The tool uses a median cut algorithm to analyse every pixel in your image and identify the most dominant colour clusters. It then returns the average colour from each cluster, sorted by how much of the image each colour occupies. This gives you the most representative colours from your image."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is having consistent brand colours important?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Consistent brand colours build recognition and trust. When your website, social media, print materials, and signage all use the same colours, customers recognise your brand instantly. Inconsistent colours make a business look unprofessional and can confuse potential customers."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://offpistestudio.com/tools" },
+          { "@type": "ListItem", "position": 3, "name": "Brand Colour Extractor", "item": "https://offpistestudio.com/tools/brand-color-extractor" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/tools.css">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="tool" data-page-slug="brand-color-extractor">
+  <header class="header">
+    <div class="header__inner">
+      <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="header__nav">
+        <a href="/work" class="header__nav-link">Work</a>
+        <a href="/about" class="header__nav-link">About</a>
+        <div class="header__nav-item header__nav-item--dropdown"><button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button></div>
+      </nav>
+      <a href="/" class="header__logo"><span class="header__logo-letter">O</span><span class="header__logo-letter">f</span><span class="header__logo-letter">f</span><span class="header__logo-space"> </span><span class="header__logo-letter">P</span><span class="header__logo-letter">i</span><span class="header__logo-letter">s</span><span class="header__logo-letter">t</span><span class="header__logo-letter">e</span><span class="header__logo-space"> </span><span class="header__logo-letter">S</span><span class="header__logo-letter">t</span><span class="header__logo-letter">u</span><span class="header__logo-letter">d</span><span class="header__logo-letter">i</span><span class="header__logo-letter">o</span></a>
+      <a href="/contact" class="header__cta">Let's Chat</a>
+    </div>
+    <div class="header__dropdown"><a href="/resources" class="header__dropdown-link">Insights</a></div>
+  </header>
+
+  <main>
+    <section class="tool-hero">
+      <div class="container">
+        <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/tools">Tools</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Brand Colour Extractor</span>
+        </nav>
+        <h1 class="tool-hero__title">Brand Colour Extractor</h1>
+        <p class="tool-hero__subtitle">Upload your logo or any image and instantly extract a colour palette with hex codes. Free, no signup required.</p>
+      </div>
+    </section>
+
+    <section class="tool-app">
+      <div class="container">
+        <div class="brand-extractor">
+          <!-- Dropzone -->
+          <div class="brand-extractor__dropzone" id="dropzone">
+            <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp,image/svg+xml,image/gif" hidden>
+            <div class="brand-extractor__dropzone-content">
+              <svg class="brand-extractor__dropzone-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <p class="brand-extractor__dropzone-text">Drag and drop your image here</p>
+              <p class="brand-extractor__dropzone-subtext">PNG, JPG, WebP, SVG &middot; Max 10MB</p>
+              <button class="brand-extractor__browse" id="browse-btn" type="button">Browse Files</button>
+            </div>
+          </div>
+
+          <!-- Image preview -->
+          <div class="brand-extractor__preview" id="image-preview" hidden>
+            <img id="preview-image" alt="Uploaded image preview">
+            <button class="brand-extractor__reset" id="reset-btn" type="button">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+              New Image
+            </button>
+          </div>
+
+          <!-- Loading -->
+          <div class="brand-extractor__loading" id="extractor-loading" hidden>
+            <p>Extracting colours...</p>
+          </div>
+
+          <!-- Results -->
+          <div class="brand-extractor__results" id="extractor-results" hidden>
+            <h2 class="brand-extractor__results-title">Extracted Colours</h2>
+
+            <div class="palette-grid" id="palette-grid"></div>
+
+            <!-- Export options -->
+            <div class="brand-extractor__exports">
+              <div class="brand-extractor__export">
+                <div class="brand-extractor__export-header">
+                  <span class="tool-label">CSS Variables</span>
+                  <button class="tool-copy-btn" id="copy-css" type="button">Copy</button>
+                </div>
+                <pre class="brand-extractor__export-code"><code id="export-css"></code></pre>
+              </div>
+
+              <div class="brand-extractor__export">
+                <div class="brand-extractor__export-header">
+                  <span class="tool-label">Hex Values</span>
+                  <button class="tool-copy-btn" id="copy-hex" type="button">Copy</button>
+                </div>
+                <pre class="brand-extractor__export-code"><code id="export-hex"></code></pre>
+              </div>
+            </div>
+
+            <a class="brand-extractor__refine" id="refine-link" href="/tools/color-palette.html">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15"/></svg>
+              Refine this palette
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO content -->
+    <section class="tool-content">
+      <div class="container">
+        <div class="tool-content__body">
+          <h2>How to Use This Tool</h2>
+          <p>Upload your logo, brand image, or any photo by dragging it onto the dropzone or clicking "Browse Files". The tool analyses every pixel and identifies the dominant colours using a median cut algorithm. You get up to 6 colours with hex codes, RGB, and HSL values — ready to copy into your CSS, design tool, or brand guidelines.</p>
+          <p>Each extracted colour has a "Check" link that takes you to the Contrast Checker with that colour pre-loaded, so you can verify accessibility before using it on your website.</p>
+
+          <h2>Why Consistent Brand Colours Matter</h2>
+          <p>Your brand colours are one of the first things people notice. Consistent use of colour across your website, social media, print materials, and signage builds instant recognition and trust. If you've received a logo from a designer but don't have the exact colour codes, this tool extracts them so every touchpoint matches.</p>
+          <p>For websites specifically, having your brand colours defined as CSS variables makes development faster and ensures consistency across every page.</p>
+
+          <h2>Related Tools</h2>
+          <div class="tool-related">
+            <a href="/tools/contrast-checker" class="tool-related__link">
+              <span class="tool-related__name">Contrast Checker</span>
+              <span class="tool-related__desc">Check if your extracted colours meet WCAG accessibility standards</span>
+            </a>
+            <a href="/tools/color-converter" class="tool-related__link">
+              <span class="tool-related__name">Colour Converter</span>
+              <span class="tool-related__desc">Convert between hex, RGB, and HSL formats</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section page-faq">
+      <div class="container">
+        <div class="faq__layout">
+          <div class="faq__intro">
+            <h2 class="faq__heading">Frequently asked questions</h2>
+          </div>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">How do I extract colours from my logo?</summary>
+              <p class="faq__answer">Upload your logo image (PNG, JPG, WebP, or SVG) to this tool. It will automatically analyse the image and extract the dominant colours, giving you hex codes, RGB values, and HSL values for each colour. You can then copy these values for use in your website, design files, or brand guidelines.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">What image formats are supported?</summary>
+              <p class="faq__answer">The tool supports PNG, JPG/JPEG, WebP, SVG, and GIF image formats. For best results, use a high-quality image with a transparent or solid background. Maximum file size is 10MB.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How does colour extraction work?</summary>
+              <p class="faq__answer">The tool uses a median cut algorithm to analyse every pixel in your image and identify the most dominant colour clusters. It then returns the average colour from each cluster, sorted by how much of the image each colour occupies. This gives you the most representative colours from your image.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">Why is having consistent brand colours important?</summary>
+              <p class="faq__answer">Consistent brand colours build recognition and trust. When your website, social media, print materials, and signage all use the same colours, customers recognise your brand instantly. Inconsistent colours make a business look unprofessional and can confuse potential customers.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="page-cta">
+      <div class="container">
+        <div class="page-cta__content">
+          <h2 class="page-cta__heading">Need a complete brand identity?</h2>
+          <p class="page-cta__text">We create cohesive brand identities for small businesses — logos, colour palettes, typography, and brand guidelines. Get in touch to discuss your project.</p>
+          <a href="/contact" class="page-cta__button">Let's Chat</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta">Let's Chat</a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/resources" class="footer__nav-link">Resources</a></nav><nav class="footer__nav" aria-label="Footer social links"><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
+    <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/tools/brand-color-extractor.js"></script>
+</body>
+</html>

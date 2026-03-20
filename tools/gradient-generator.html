@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <meta name="description" content="Free CSS gradient generator. Create linear, radial, and conic gradients with a visual editor. Add colour stops, adjust angles, and copy production-ready CSS.">
+  <title>Free CSS Gradient Generator | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/tools/gradient-generator">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free CSS Gradient Generator | Off Piste Studio">
+  <meta property="og:description" content="Create linear, radial, and conic gradients visually. Copy production-ready CSS with one click.">
+  <meta property="og:url" content="https://offpistestudio.com/tools/gradient-generator">
+  <meta property="og:site_name" content="Off Piste Studio">
+  <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free CSS Gradient Generator | Off Piste Studio">
+  <meta name="twitter:description" content="Create CSS gradients visually. Copy production-ready code.">
+  <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "CSS Gradient Generator",
+        "description": "Create linear, radial, and conic CSS gradients with a visual editor. Free, instant, no signup required.",
+        "url": "https://offpistestudio.com/tools/gradient-generator",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Web",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "AUD" },
+        "author": { "@type": "Organization", "name": "Off Piste Studio", "url": "https://offpistestudio.com" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a CSS gradient?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A CSS gradient is a smooth transition between two or more colours, rendered by the browser without needing an image file. This makes gradients fast-loading and resolution-independent. CSS supports linear gradients (straight line), radial gradients (from a centre point), and conic gradients (around a centre point)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I use a CSS gradient on my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Copy the generated CSS code and apply it as a background property to any HTML element. For example: .hero { background: linear-gradient(135deg, #d4622a 0%, #1a1a2e 100%); }. Gradients can be used on sections, buttons, cards, or any element that accepts a background."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many colour stops can I use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This tool supports up to 6 colour stops. In practice, most effective gradients use 2-3 stops. More stops create more complex transitions but can look busy if overused. Start simple and add stops only when needed."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://offpistestudio.com/tools" },
+          { "@type": "ListItem", "position": 3, "name": "Gradient Generator", "item": "https://offpistestudio.com/tools/gradient-generator" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/tools.css">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="tool" data-page-slug="gradient-generator">
+  <header class="header">
+    <div class="header__inner">
+      <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="header__nav">
+        <a href="/work" class="header__nav-link">Work</a>
+        <a href="/about" class="header__nav-link">About</a>
+        <div class="header__nav-item header__nav-item--dropdown"><button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button></div>
+      </nav>
+      <a href="/" class="header__logo"><span class="header__logo-letter">O</span><span class="header__logo-letter">f</span><span class="header__logo-letter">f</span><span class="header__logo-space"> </span><span class="header__logo-letter">P</span><span class="header__logo-letter">i</span><span class="header__logo-letter">s</span><span class="header__logo-letter">t</span><span class="header__logo-letter">e</span><span class="header__logo-space"> </span><span class="header__logo-letter">S</span><span class="header__logo-letter">t</span><span class="header__logo-letter">u</span><span class="header__logo-letter">d</span><span class="header__logo-letter">i</span><span class="header__logo-letter">o</span></a>
+      <a href="/contact" class="header__cta">Let's Chat</a>
+    </div>
+    <div class="header__dropdown"><a href="/resources" class="header__dropdown-link">Insights</a></div>
+  </header>
+
+  <main>
+    <section class="tool-hero">
+      <div class="container">
+        <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/tools">Tools</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Gradient Generator</span>
+        </nav>
+        <h1 class="tool-hero__title">CSS Gradient Generator</h1>
+        <p class="tool-hero__subtitle">Create beautiful gradients with a visual editor. Add colour stops, adjust angles, and copy production-ready CSS.</p>
+      </div>
+    </section>
+
+    <section class="tool-app">
+      <div class="container">
+        <div class="gradient-tool">
+          <!-- Preview -->
+          <div class="gradient-tool__preview" id="gradient-preview"></div>
+
+          <!-- Controls -->
+          <div class="gradient-tool__controls">
+            <div class="gradient-tool__row">
+              <div class="gradient-tool__field">
+                <label class="tool-label" for="gradient-type">Type</label>
+                <select id="gradient-type" class="color-palette-tool__select">
+                  <option value="linear">Linear</option>
+                  <option value="radial">Radial</option>
+                  <option value="conic">Conic</option>
+                </select>
+              </div>
+              <div class="gradient-tool__field gradient-tool__field--angle">
+                <label class="tool-label" for="gradient-angle">Angle <span id="angle-value">135°</span></label>
+                <input type="range" id="gradient-angle" min="0" max="360" value="135" class="gradient-tool__slider">
+              </div>
+              <div class="gradient-tool__field gradient-tool__field--buttons">
+                <button class="color-palette-tool__btn color-palette-tool__btn--secondary" id="add-stop" type="button">+ Add Stop</button>
+                <button class="color-palette-tool__btn color-palette-tool__btn--secondary" id="gradient-random" type="button">Random</button>
+              </div>
+            </div>
+
+            <!-- Colour stops -->
+            <div class="gradient-stops" id="gradient-stops"></div>
+          </div>
+
+          <!-- CSS output -->
+          <div class="gradient-tool__output">
+            <div class="brand-extractor__export-header">
+              <span class="tool-label">CSS</span>
+              <button class="tool-copy-btn" id="gradient-copy-css" type="button">Copy</button>
+            </div>
+            <pre class="brand-extractor__export-code"><code id="gradient-css"></code></pre>
+          </div>
+
+          <!-- Download -->
+          <div class="gradient-tool__downloads">
+            <span class="tool-label">Download</span>
+            <div class="gradient-tool__download-buttons">
+              <button class="color-palette-tool__btn" id="download-png" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                PNG (1920x1080)
+              </button>
+              <button class="color-palette-tool__btn color-palette-tool__btn--secondary" id="download-svg" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                SVG
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO content -->
+    <section class="tool-content">
+      <div class="container">
+        <div class="tool-content__body">
+          <h2>How to Use This Tool</h2>
+          <p>Choose a gradient type (linear, radial, or conic), adjust the angle, and set your colour stops. Each stop has a colour picker, hex input, and position slider. Click "Add Stop" for more colours, or "Random" for inspiration. The CSS updates in real time — copy it straight into your stylesheet.</p>
+
+          <h2>Using Gradients on Your Website</h2>
+          <p>Gradients add depth and visual interest without the weight of image files. Use them on hero sections for dramatic impact, on buttons for a polished feel, or as subtle background textures. A well-chosen gradient can make a simple layout feel premium.</p>
+          <p>For best results, keep gradients subtle on content-heavy sections (use low-contrast colours) and bolder on hero sections or CTAs where you want to draw attention.</p>
+
+          <h2>Related Tools</h2>
+          <div class="tool-related">
+            <a href="/tools/color-palette" class="tool-related__link">
+              <span class="tool-related__name">Colour Palette Generator</span>
+              <span class="tool-related__desc">Generate harmonious colour schemes for your gradient</span>
+            </a>
+            <a href="/tools/contrast-checker" class="tool-related__link">
+              <span class="tool-related__name">Contrast Checker</span>
+              <span class="tool-related__desc">Check text readability on gradient backgrounds</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section page-faq">
+      <div class="container">
+        <div class="faq__layout">
+          <div class="faq__intro">
+            <h2 class="faq__heading">Frequently asked questions</h2>
+          </div>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">What is a CSS gradient?</summary>
+              <p class="faq__answer">A CSS gradient is a smooth transition between two or more colours, rendered by the browser without needing an image file. This makes gradients fast-loading and resolution-independent. CSS supports linear gradients (straight line), radial gradients (from a centre point), and conic gradients (around a centre point).</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How do I use a CSS gradient on my website?</summary>
+              <p class="faq__answer">Copy the generated CSS code and apply it as a background property to any HTML element. For example: .hero { background: linear-gradient(135deg, #d4622a 0%, #1a1a2e 100%); }. Gradients can be used on sections, buttons, cards, or any element that accepts a background.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How many colour stops can I use?</summary>
+              <p class="faq__answer">This tool supports up to 6 colour stops. In practice, most effective gradients use 2-3 stops. More stops create more complex transitions but can look busy if overused. Start simple and add stops only when needed.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="page-cta">
+      <div class="container">
+        <div class="page-cta__content">
+          <h2 class="page-cta__heading">Need a website that stands out?</h2>
+          <p class="page-cta__text">We design websites with attention to every detail. Get in touch to discuss your project.</p>
+          <a href="/contact" class="page-cta__button">Let's Chat</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta">Let's Chat</a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/resources" class="footer__nav-link">Resources</a></nav><nav class="footer__nav" aria-label="Footer social links"><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
+    <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/tools/gradient-generator.js"></script>
+</body>
+</html>

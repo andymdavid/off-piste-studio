@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <meta name="description" content="Free colour palette generator. Create harmonious colour schemes from a base colour. Choose complementary, analogous, triadic, or monochromatic palettes. Export as CSS variables.">
+  <title>Free Colour Palette Generator | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/tools/color-palette">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Colour Palette Generator | Off Piste Studio">
+  <meta property="og:description" content="Create harmonious colour schemes from a base colour. Choose complementary, analogous, triadic, or monochromatic palettes.">
+  <meta property="og:url" content="https://offpistestudio.com/tools/color-palette">
+  <meta property="og:site_name" content="Off Piste Studio">
+  <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Colour Palette Generator | Off Piste Studio">
+  <meta name="twitter:description" content="Create harmonious colour schemes from a base colour.">
+  <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Colour Palette Generator",
+        "description": "Generate harmonious colour palettes from a base colour. Choose complementary, analogous, triadic, split-complementary, or monochromatic modes. Free, instant, no signup required.",
+        "url": "https://offpistestudio.com/tools/color-palette",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "AUD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "url": "https://offpistestudio.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a colour harmony?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Colour harmony refers to combinations of colours that are visually pleasing and balanced. These combinations are based on the relationships between colours on the colour wheel. Common harmonies include complementary (opposite colours), analogous (adjacent colours), triadic (three evenly spaced colours), and monochromatic (variations of a single hue)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many colours should a brand palette have?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most effective brand palettes use 3-5 colours: a primary colour (your main brand colour), a secondary colour (supporting), an accent colour (for calls to action and highlights), plus neutral colours for backgrounds and text. This gives enough variety for a complete website and marketing materials without becoming inconsistent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best colour scheme for a business website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The best scheme depends on your industry and audience. Professional services (law, finance, healthcare) typically use complementary or monochromatic palettes for a clean, trustworthy feel. Creative businesses can use more vibrant triadic or split-complementary schemes. The key is consistency — pick a palette and use it everywhere."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I use the spacebar shortcut?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Press the spacebar to instantly generate a new palette variation. Locked colours stay the same while unlocked colours regenerate. This lets you quickly explore different combinations while keeping your preferred colours fixed."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://offpistestudio.com/tools" },
+          { "@type": "ListItem", "position": 3, "name": "Colour Palette Generator", "item": "https://offpistestudio.com/tools/color-palette" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/tools.css">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="tool" data-page-slug="color-palette">
+  <header class="header">
+    <div class="header__inner">
+      <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="header__nav">
+        <a href="/work" class="header__nav-link">Work</a>
+        <a href="/about" class="header__nav-link">About</a>
+        <div class="header__nav-item header__nav-item--dropdown"><button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button></div>
+      </nav>
+      <a href="/" class="header__logo"><span class="header__logo-letter">O</span><span class="header__logo-letter">f</span><span class="header__logo-letter">f</span><span class="header__logo-space"> </span><span class="header__logo-letter">P</span><span class="header__logo-letter">i</span><span class="header__logo-letter">s</span><span class="header__logo-letter">t</span><span class="header__logo-letter">e</span><span class="header__logo-space"> </span><span class="header__logo-letter">S</span><span class="header__logo-letter">t</span><span class="header__logo-letter">u</span><span class="header__logo-letter">d</span><span class="header__logo-letter">i</span><span class="header__logo-letter">o</span></a>
+      <a href="/contact" class="header__cta">Let's Chat</a>
+    </div>
+    <div class="header__dropdown"><a href="/resources" class="header__dropdown-link">Insights</a></div>
+  </header>
+
+  <main>
+    <section class="tool-hero">
+      <div class="container">
+        <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/tools">Tools</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Colour Palette Generator</span>
+        </nav>
+        <h1 class="tool-hero__title">Colour Palette Generator</h1>
+        <p class="tool-hero__subtitle">Generate harmonious colour schemes. Lock colours you like and regenerate the rest. Press spacebar to shuffle.</p>
+      </div>
+    </section>
+
+    <section class="tool-app">
+      <div class="container">
+        <div class="color-palette-tool">
+          <!-- Controls -->
+          <div class="color-palette-tool__controls">
+            <div class="color-palette-tool__mode">
+              <label class="tool-label" for="harmony-mode">Harmony Mode</label>
+              <select id="harmony-mode" class="color-palette-tool__select">
+                <option value="complementary">Complementary</option>
+                <option value="analogous">Analogous</option>
+                <option value="triadic">Triadic</option>
+                <option value="split-complementary">Split Complementary</option>
+                <option value="monochromatic">Monochromatic</option>
+              </select>
+            </div>
+            <div class="color-palette-tool__buttons">
+              <button class="color-palette-tool__btn" id="generate-btn" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15"/></svg>
+                Generate
+              </button>
+              <button class="color-palette-tool__btn color-palette-tool__btn--secondary" id="random-btn" type="button">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="1" width="22" height="22" rx="4"/><circle cx="8" cy="8" r="1.5" fill="currentColor"/><circle cx="16" cy="8" r="1.5" fill="currentColor"/><circle cx="8" cy="16" r="1.5" fill="currentColor"/><circle cx="16" cy="16" r="1.5" fill="currentColor"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+                Random
+              </button>
+            </div>
+            <p class="color-palette-tool__hint">Press <kbd>Space</kbd> to shuffle unlocked colours</p>
+          </div>
+
+          <!-- Palette slots -->
+          <div class="palette-slots" id="palette-slots"></div>
+
+          <!-- Export -->
+          <div class="color-palette-tool__exports">
+            <div class="brand-extractor__export">
+              <div class="brand-extractor__export-header">
+                <span class="tool-label">CSS Variables</span>
+                <button class="tool-copy-btn" id="palette-copy-css" type="button">Copy</button>
+              </div>
+              <pre class="brand-extractor__export-code"><code id="palette-export-css"></code></pre>
+            </div>
+
+            <div class="brand-extractor__export">
+              <div class="brand-extractor__export-header">
+                <span class="tool-label">Hex Values</span>
+                <button class="tool-copy-btn" id="palette-copy-hex" type="button">Copy</button>
+              </div>
+              <pre class="brand-extractor__export-code"><code id="palette-export-hex"></code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO content -->
+    <section class="tool-content">
+      <div class="container">
+        <div class="tool-content__body">
+          <h2>How to Use This Tool</h2>
+          <p>Select a harmony mode — complementary, analogous, triadic, split-complementary, or monochromatic — and the tool generates a balanced 5-colour palette. Click the lock icon on any colour to keep it fixed while regenerating the others. Press spacebar or click "Generate" to shuffle unlocked colours.</p>
+          <p>You can also type a hex code directly into any colour slot to use your own brand colour as a starting point. Coming from the Brand Colour Extractor? Your colours will be pre-loaded automatically.</p>
+
+          <h2>Choosing the Right Harmony for Your Brand</h2>
+          <p>Each harmony mode creates a different feel. Complementary palettes (opposite colours on the wheel) create strong contrast and energy — great for brands that want to stand out. Analogous palettes (neighbouring colours) feel calm and cohesive — ideal for professional services. Triadic palettes offer balance with variety, while monochromatic palettes give a sophisticated, unified look.</p>
+          <p>For most small business websites, start with complementary or split-complementary. These give you enough contrast for clear calls to action while maintaining visual harmony.</p>
+
+          <h2>Related Tools</h2>
+          <div class="tool-related">
+            <a href="/tools/brand-color-extractor" class="tool-related__link">
+              <span class="tool-related__name">Brand Colour Extractor</span>
+              <span class="tool-related__desc">Upload your logo and extract brand colours to use as a starting point</span>
+            </a>
+            <a href="/tools/contrast-checker" class="tool-related__link">
+              <span class="tool-related__name">Contrast Checker</span>
+              <span class="tool-related__desc">Check if your palette colours meet WCAG accessibility standards</span>
+            </a>
+            <a href="/tools/color-converter" class="tool-related__link">
+              <span class="tool-related__name">Colour Converter</span>
+              <span class="tool-related__desc">Convert between hex, RGB, and HSL formats</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section page-faq">
+      <div class="container">
+        <div class="faq__layout">
+          <div class="faq__intro">
+            <h2 class="faq__heading">Frequently asked questions</h2>
+          </div>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">What is a colour harmony?</summary>
+              <p class="faq__answer">Colour harmony refers to combinations of colours that are visually pleasing and balanced. These combinations are based on the relationships between colours on the colour wheel. Common harmonies include complementary (opposite colours), analogous (adjacent colours), triadic (three evenly spaced colours), and monochromatic (variations of a single hue).</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How many colours should a brand palette have?</summary>
+              <p class="faq__answer">Most effective brand palettes use 3-5 colours: a primary colour (your main brand colour), a secondary colour (supporting), an accent colour (for calls to action and highlights), plus neutral colours for backgrounds and text. This gives enough variety for a complete website and marketing materials without becoming inconsistent.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">What is the best colour scheme for a business website?</summary>
+              <p class="faq__answer">The best scheme depends on your industry and audience. Professional services (law, finance, healthcare) typically use complementary or monochromatic palettes for a clean, trustworthy feel. Creative businesses can use more vibrant triadic or split-complementary schemes. The key is consistency — pick a palette and use it everywhere.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How do I use the spacebar shortcut?</summary>
+              <p class="faq__answer">Press the spacebar to instantly generate a new palette variation. Locked colours stay the same while unlocked colours regenerate. This lets you quickly explore different combinations while keeping your preferred colours fixed.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="page-cta">
+      <div class="container">
+        <div class="page-cta__content">
+          <h2 class="page-cta__heading">Need a complete brand identity?</h2>
+          <p class="page-cta__text">We create cohesive brand identities for small businesses — logos, colour palettes, typography, and brand guidelines. Get in touch to discuss your project.</p>
+          <a href="/contact" class="page-cta__button">Let's Chat</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta">Let's Chat</a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/resources" class="footer__nav-link">Resources</a></nav><nav class="footer__nav" aria-label="Footer social links"><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
+    <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/tools/color-palette.js"></script>
+</body>
+</html>

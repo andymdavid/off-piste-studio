@@ -2,18 +2,29 @@ import { readdirSync, existsSync } from 'fs'
 import { resolve } from 'path'
 import { defineConfig } from 'vite'
 
-const insightInputs = {}
-const insightsDir = resolve(__dirname, 'insights')
+// Auto-discover generated HTML pages from multiple directories
+function discoverPages(dir, prefix = '') {
+  const inputs = {}
+  const fullPath = resolve(__dirname, dir)
 
-if (existsSync(insightsDir)) {
-  readdirSync(insightsDir)
-    .filter(file => file.endsWith('.html'))
-    .forEach(file => {
-      insightInputs[file.replace(/\.html$/, '')] = resolve(insightsDir, file)
-    })
+  if (existsSync(fullPath)) {
+    readdirSync(fullPath)
+      .filter(file => file.endsWith('.html'))
+      .forEach(file => {
+        const key = prefix + file.replace(/\.html$/, '')
+        inputs[key] = resolve(fullPath, file)
+      })
+  }
+
+  return inputs
 }
 
 export default defineConfig({
+  server: {
+    port: parseInt(process.env.PORT) || 5173,
+    host: true,
+    allowedHosts: true,
+  },
   build: {
     rollupOptions: {
       input: {
@@ -22,7 +33,12 @@ export default defineConfig({
         about: resolve(__dirname, 'about.html'),
         resources: resolve(__dirname, 'resources.html'),
         contact: resolve(__dirname, 'contact.html'),
-        ...insightInputs,
+        tools: resolve(__dirname, 'tools.html'),
+        ...discoverPages('insights', 'insight-'),
+        ...discoverPages('industries', 'industry-'),
+        ...discoverPages('services', 'service-'),
+        ...discoverPages('locations', 'location-'),
+        ...discoverPages('tools', 'tool-'),
       },
     },
   },

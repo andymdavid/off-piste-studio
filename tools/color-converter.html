@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <meta name="description" content="Free colour converter. Convert between hex, RGB, and HSL colour formats instantly. Copy CSS values, find the nearest named colour, and get Tailwind-ready values.">
+  <title>Free Colour Converter — Hex, RGB, HSL | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/tools/color-converter">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Colour Converter — Hex, RGB, HSL | Off Piste Studio">
+  <meta property="og:description" content="Convert between hex, RGB, and HSL colour formats instantly. Copy CSS values and find the nearest named colour.">
+  <meta property="og:url" content="https://offpistestudio.com/tools/color-converter">
+  <meta property="og:site_name" content="Off Piste Studio">
+  <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Colour Converter — Hex, RGB, HSL | Off Piste Studio">
+  <meta name="twitter:description" content="Convert between hex, RGB, and HSL colour formats instantly.">
+  <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Colour Converter",
+        "description": "Convert between hex, RGB, and HSL colour formats. Free, instant, no signup required.",
+        "url": "https://offpistestudio.com/tools/color-converter",
+        "applicationCategory": "DesignApplication",
+        "operatingSystem": "Web",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "AUD"
+        },
+        "author": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "url": "https://offpistestudio.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the difference between hex, RGB, and HSL?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Hex is a six-character code (e.g. #ff6600) commonly used in CSS and design tools. RGB defines colours by red, green, and blue values from 0-255. HSL defines colours by hue (0-360 degrees), saturation (0-100%), and lightness (0-100%). All three represent the same colours, just in different formats."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "When should I use HSL instead of hex?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "HSL is more intuitive for creating colour variations. To make a colour lighter or darker, adjust the L (lightness) value. To make it more or less vivid, adjust S (saturation). This makes HSL ideal for building colour palettes and design systems where you need consistent tints and shades."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I convert hex to RGB?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each pair of characters in a hex code represents a colour channel: the first two are red, the middle two are green, and the last two are blue. Convert each pair from hexadecimal (base 16) to decimal (base 10). For example, #ff6600 becomes rgb(255, 102, 0)."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Tools", "item": "https://offpistestudio.com/tools" },
+          { "@type": "ListItem", "position": 3, "name": "Colour Converter", "item": "https://offpistestudio.com/tools/color-converter" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="stylesheet" href="/src/styles/tools.css">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="tool" data-page-slug="color-converter">
+  <header class="header">
+    <div class="header__inner">
+      <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="header__nav">
+        <a href="/work" class="header__nav-link">Work</a>
+        <a href="/about" class="header__nav-link">About</a>
+        <div class="header__nav-item header__nav-item--dropdown"><button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button></div>
+      </nav>
+      <a href="/" class="header__logo"><span class="header__logo-letter">O</span><span class="header__logo-letter">f</span><span class="header__logo-letter">f</span><span class="header__logo-space"> </span><span class="header__logo-letter">P</span><span class="header__logo-letter">i</span><span class="header__logo-letter">s</span><span class="header__logo-letter">t</span><span class="header__logo-letter">e</span><span class="header__logo-space"> </span><span class="header__logo-letter">S</span><span class="header__logo-letter">t</span><span class="header__logo-letter">u</span><span class="header__logo-letter">d</span><span class="header__logo-letter">i</span><span class="header__logo-letter">o</span></a>
+      <a href="/contact" class="header__cta">Let's Chat</a>
+    </div>
+    <div class="header__dropdown"><a href="/resources" class="header__dropdown-link">Insights</a></div>
+  </header>
+
+  <main>
+    <section class="tool-hero">
+      <div class="container">
+        <nav class="tool-breadcrumb" aria-label="Breadcrumb">
+          <a href="/">Home</a>
+          <span aria-hidden="true">/</span>
+          <a href="/tools">Tools</a>
+          <span aria-hidden="true">/</span>
+          <span aria-current="page">Colour Converter</span>
+        </nav>
+        <h1 class="tool-hero__title">Colour Converter</h1>
+        <p class="tool-hero__subtitle">Convert between hex, RGB, and HSL colour formats instantly. Copy CSS-ready values with one click.</p>
+      </div>
+    </section>
+
+    <section class="tool-app">
+      <div class="container">
+        <div class="color-converter">
+          <!-- Large swatch + picker -->
+          <div class="color-converter__swatch-wrap">
+            <div class="color-converter__swatch" id="color-swatch"></div>
+            <input type="color" id="color-picker" value="#d4622a" class="color-converter__native-picker" aria-label="Visual colour picker">
+            <p class="color-converter__name">Nearest CSS colour: <strong id="color-name">--</strong></p>
+          </div>
+
+          <!-- Format inputs -->
+          <div class="color-converter__formats">
+            <!-- Hex -->
+            <div class="color-converter__format">
+              <label class="tool-label" for="hex-input">Hex</label>
+              <div class="color-converter__row">
+                <input type="text" id="hex-input" value="#d4622a" class="tool-text-input" placeholder="#000000" spellcheck="false" autocomplete="off">
+                <button class="tool-copy-btn" data-copy="hex" type="button">Copy</button>
+              </div>
+            </div>
+
+            <!-- RGB -->
+            <div class="color-converter__format">
+              <span class="tool-label">RGB</span>
+              <div class="color-converter__row">
+                <div class="color-converter__fields">
+                  <div class="color-converter__field">
+                    <label class="color-converter__field-label" for="rgb-r">R</label>
+                    <input type="number" id="rgb-r" min="0" max="255" value="212" class="tool-text-input tool-text-input--small">
+                  </div>
+                  <div class="color-converter__field">
+                    <label class="color-converter__field-label" for="rgb-g">G</label>
+                    <input type="number" id="rgb-g" min="0" max="255" value="98" class="tool-text-input tool-text-input--small">
+                  </div>
+                  <div class="color-converter__field">
+                    <label class="color-converter__field-label" for="rgb-b">B</label>
+                    <input type="number" id="rgb-b" min="0" max="255" value="42" class="tool-text-input tool-text-input--small">
+                  </div>
+                </div>
+                <button class="tool-copy-btn" data-copy="rgb" type="button">Copy</button>
+              </div>
+            </div>
+
+            <!-- HSL -->
+            <div class="color-converter__format">
+              <span class="tool-label">HSL</span>
+              <div class="color-converter__row">
+                <div class="color-converter__fields">
+                  <div class="color-converter__field">
+                    <label class="color-converter__field-label" for="hsl-h">H</label>
+                    <input type="number" id="hsl-h" min="0" max="360" value="20" class="tool-text-input tool-text-input--small">
+                  </div>
+                  <div class="color-converter__field">
+                    <label class="color-converter__field-label" for="hsl-s">S</label>
+                    <input type="number" id="hsl-s" min="0" max="100" value="67" class="tool-text-input tool-text-input--small">
+                  </div>
+                  <div class="color-converter__field">
+                    <label class="color-converter__field-label" for="hsl-l">L</label>
+                    <input type="number" id="hsl-l" min="0" max="100" value="50" class="tool-text-input tool-text-input--small">
+                  </div>
+                </div>
+                <button class="tool-copy-btn" data-copy="hsl" type="button">Copy</button>
+              </div>
+            </div>
+
+            <!-- CSS Variable -->
+            <div class="color-converter__format">
+              <span class="tool-label">CSS Variable</span>
+              <div class="color-converter__row">
+                <code class="color-converter__code" id="css-var">--color: #d4622a;</code>
+                <button class="tool-copy-btn" data-copy="css" type="button">Copy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO content -->
+    <section class="tool-content">
+      <div class="container">
+        <div class="tool-content__body">
+          <h2>How to Use This Tool</h2>
+          <p>Enter a colour in any format — hex, RGB, or HSL — and all other formats update instantly. You can also use the visual colour picker to select a colour. Click "Copy" next to any format to copy the value to your clipboard, ready to paste into your CSS or design tool.</p>
+
+          <h2>Why Colour Formats Matter</h2>
+          <p>Different situations call for different colour formats. Hex codes are compact and widely supported. RGB is useful when you need to manipulate individual colour channels. HSL is the most intuitive for designers — adjusting lightness and saturation is straightforward, making it ideal for creating consistent colour palettes and design systems.</p>
+          <p>Having the right format at your fingertips saves time when building websites, creating brand guidelines, or communicating colour specs to developers.</p>
+
+          <h2>Related Tools</h2>
+          <div class="tool-related">
+            <a href="/tools/contrast-checker" class="tool-related__link">
+              <span class="tool-related__name">Contrast Checker</span>
+              <span class="tool-related__desc">Check if your colours meet WCAG accessibility standards</span>
+            </a>
+            <a href="/tools/brand-color-extractor" class="tool-related__link">
+              <span class="tool-related__name">Brand Colour Extractor</span>
+              <span class="tool-related__desc">Upload your logo and extract brand colours with hex codes</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq section page-faq">
+      <div class="container">
+        <div class="faq__layout">
+          <div class="faq__intro">
+            <h2 class="faq__heading">Frequently asked questions</h2>
+          </div>
+          <div class="faq__list">
+            <details class="faq__item">
+              <summary class="faq__question">What is the difference between hex, RGB, and HSL?</summary>
+              <p class="faq__answer">Hex is a six-character code (e.g. #ff6600) commonly used in CSS and design tools. RGB defines colours by red, green, and blue values from 0-255. HSL defines colours by hue (0-360 degrees), saturation (0-100%), and lightness (0-100%). All three represent the same colours, just in different formats.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">When should I use HSL instead of hex?</summary>
+              <p class="faq__answer">HSL is more intuitive for creating colour variations. To make a colour lighter or darker, adjust the L (lightness) value. To make it more or less vivid, adjust S (saturation). This makes HSL ideal for building colour palettes and design systems where you need consistent tints and shades.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How do I convert hex to RGB?</summary>
+              <p class="faq__answer">Each pair of characters in a hex code represents a colour channel: the first two are red, the middle two are green, and the last two are blue. Convert each pair from hexadecimal (base 16) to decimal (base 10). For example, #ff6600 becomes rgb(255, 102, 0). Or just use this tool.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="page-cta">
+      <div class="container">
+        <div class="page-cta__content">
+          <h2 class="page-cta__heading">Need a brand identity that stands out?</h2>
+          <p class="page-cta__text">We create cohesive colour palettes and brand identities for small businesses. Get in touch to discuss your project.</p>
+          <a href="/contact" class="page-cta__button">Let's Chat</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta">Let's Chat</a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/resources" class="footer__nav-link">Resources</a></nav><nav class="footer__nav" aria-label="Footer social links"><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
+    <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
+  </footer>
+
+  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/tools/color-converter.js"></script>
+</body>
+</html>
