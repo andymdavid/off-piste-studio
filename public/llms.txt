@@ -67,6 +67,7 @@
 - [Colour Converter](https://offpistestudio.com/tools/color-converter): Convert between hex, RGB, and HSL colour formats. Copy CSS-ready values with one click.
 - [Brand Colour Extractor](https://offpistestudio.com/tools/brand-color-extractor): Upload a logo or image and extract brand colours with hex codes, RGB, and HSL values. Export as CSS variables.
 - [Colour Palette Generator](https://offpistestudio.com/tools/color-palette): Generate harmonious colour palettes. Choose complementary, analogous, triadic, or monochromatic modes. Lock colours and shuffle.
+- [Palette Previewer](https://offpistestudio.com/tools/palette-preview): Preview your brand colours on real website mockup templates. Four layout types for service businesses, professional firms, creative agencies, and landing pages.
 - [CSS Gradient Generator](https://offpistestudio.com/tools/gradient-generator): Create linear, radial, and conic CSS gradients with a visual editor. Copy production-ready code.
 
 ## Insights

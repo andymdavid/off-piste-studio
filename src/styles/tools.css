@@ -815,6 +815,357 @@ body[data-page-type="tool"] {
 }
 
 /* ==========================================================================
+   Palette Previewer
+   ========================================================================== */
+
+.palette-preview-tool__inputs {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.preview-color-input {
+  flex: 1;
+  min-width: 100px;
+}
+
+.preview-color-input__row {
+  display: flex;
+  gap: 0.375rem;
+  align-items: center;
+}
+
+.preview-color-input__picker {
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  padding: 2px;
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.preview-color-input__picker::-webkit-color-swatch-wrapper { padding: 0; }
+.preview-color-input__picker::-webkit-color-swatch { border: none; border-radius: 4px; }
+.preview-color-input__picker::-moz-color-swatch { border: none; border-radius: 4px; }
+
+.preview-color-input__text {
+  width: 100%;
+  padding: 0.375rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Template tabs */
+.palette-preview-tool__tabs {
+  display: flex;
+  gap: 0.375rem;
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.palette-preview-tool__tab {
+  padding: 0.375rem 0.75rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  color: var(--color-text-muted);
+  font-family: var(--font-alfabet);
+  font-size: 0.5625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.palette-preview-tool__tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+}
+
+.palette-preview-tool__tab.is-active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Preview frame */
+.palette-preview-tool__frame {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* ==========================================================================
+   Preview Templates (miniature website mockups)
+   ========================================================================== */
+
+.preview-template {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.preview-template[hidden] {
+  display: none;
+}
+
+/* Shared template components */
+.pt-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+}
+
+.pt-nav__logo {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+}
+
+.pt-nav__links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 11px;
+}
+
+.pt-btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: default;
+  text-align: center;
+}
+
+.pt-btn--sm {
+  padding: 0.3rem 0.75rem;
+  font-size: 10px;
+}
+
+.pt-btn--outline {
+  background: transparent;
+  border: 1px solid;
+}
+
+.pt-hero {
+  padding: 3rem 1.25rem 2.5rem;
+  text-align: center;
+}
+
+.pt-hero--light {
+  padding: 3rem 1.25rem 2.5rem;
+}
+
+.pt-hero--tall {
+  padding: 4rem 1.25rem 3rem;
+  position: relative;
+}
+
+.pt-hero--centered {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.pt-hero__eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.pt-hero__title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pt-hero__title--large {
+  font-size: 28px;
+}
+
+.pt-hero__sub {
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto 1.25rem;
+}
+
+.pt-hero__actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.pt-badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.pt-section {
+  padding: 2rem 1.25rem;
+}
+
+.pt-section__title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.25rem;
+  text-align: center;
+}
+
+/* Cards */
+.pt-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.pt-card {
+  padding: 1rem;
+  border: 1px solid;
+  border-radius: 8px;
+  opacity: 0.95;
+}
+
+.pt-card__icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  margin-bottom: 0.625rem;
+}
+
+.pt-card h4 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.pt-card p {
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+/* Stats */
+.pt-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pt-stat {
+  text-align: center;
+}
+
+.pt-stat__number {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.pt-stat__label {
+  font-size: 10px;
+}
+
+/* Testimonial */
+.pt-testimonial {
+  padding: 1rem 1.25rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.pt-testimonial p {
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.pt-testimonial span {
+  font-size: 10.5px;
+}
+
+/* Portfolio grid */
+.pt-portfolio {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.pt-portfolio__item {
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem;
+}
+
+.pt-portfolio__label {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Features */
+.pt-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.pt-feature__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  margin: 0 auto 0.5rem;
+}
+
+.pt-feature h4 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.pt-feature p {
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+/* CTA band */
+.pt-cta {
+  padding: 2rem 1.25rem;
+  text-align: center;
+}
+
+.pt-cta h3 {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.375rem;
+}
+
+.pt-cta p {
+  font-size: 11px;
+  margin-bottom: 1rem;
+}
+
+/* ==========================================================================
    Gradient Generator
    ========================================================================== */
 
@@ -1337,6 +1688,34 @@ body[data-page-type="tool"] {
 
   .tools-hub__grid {
     grid-template-columns: 1fr;
+  }
+
+  .palette-preview-tool__inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .pt-cards,
+  .pt-features,
+  .pt-portfolio {
+    grid-template-columns: 1fr;
+  }
+
+  .pt-stats {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .pt-nav__links {
+    display: none;
+  }
+
+  .pt-hero__title {
+    font-size: 18px;
+  }
+
+  .pt-hero__title--large {
+    font-size: 22px;
   }
 }
 
