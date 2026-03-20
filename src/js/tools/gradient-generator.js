@@ -1,5 +1,6 @@
 import { parseColor, rgbToHex } from './color-utils.js';
 import { copyToClipboard } from './export-utils.js';
+import { attachColorPicker } from './color-picker.js';
 
 function init() {
   const preview = document.getElementById('gradient-preview');
@@ -41,12 +42,18 @@ function init() {
       stopsContainer.appendChild(el);
     });
 
-    // Picker events
+    // Custom colour pickers on each stop
     stopsContainer.querySelectorAll('.gradient-stop__picker').forEach(picker => {
-      picker.addEventListener('input', (e) => {
-        const i = parseInt(e.target.dataset.index);
-        stops[i].color = e.target.value;
-        render();
+      const i = parseInt(picker.dataset.index);
+      attachColorPicker(picker, {
+        color: stops[i].color,
+        onChange: (hex) => {
+          stops[i].color = hex;
+          // Sync hex input
+          const hexInput = stopsContainer.querySelector(`.gradient-stop__hex[data-index="${i}"]`);
+          if (hexInput) hexInput.value = hex;
+          updatePreview();
+        },
       });
     });
 

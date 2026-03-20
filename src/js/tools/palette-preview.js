@@ -1,5 +1,6 @@
 import { parseColor, rgbToHex, rgbToHsl, hslToRgb } from './color-utils.js';
 import { copyToClipboard } from './export-utils.js';
+import { attachColorPicker } from './color-picker.js';
 
 function init() {
   const previewFrame = document.getElementById('preview-frame');
@@ -113,10 +114,13 @@ function init() {
     const picker = input.querySelector('.preview-color-input__picker');
     const text = input.querySelector('.preview-color-input__text');
 
-    picker.addEventListener('input', () => {
-      colors[role] = picker.value;
-      text.value = picker.value;
-      updatePreview();
+    attachColorPicker(picker, {
+      color: colors[role],
+      onChange: (hex) => {
+        colors[role] = hex;
+        text.value = hex;
+        updatePreview();
+      },
     });
 
     text.addEventListener('change', () => {

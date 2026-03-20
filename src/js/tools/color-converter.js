@@ -1,5 +1,6 @@
 import { parseColor, rgbToHex, rgbToHsl, hslToRgb, nearestColorName } from './color-utils.js';
 import { copyToClipboard } from './export-utils.js';
+import { attachColorPicker } from './color-picker.js';
 
 function init() {
   const hexInput = document.getElementById('hex-input');
@@ -67,10 +68,13 @@ function init() {
     });
   });
 
-  // Native picker
-  picker.addEventListener('input', () => {
-    const color = parseColor(picker.value);
-    if (color) updateFromRgb(color.r, color.g, color.b, 'picker');
+  // Custom colour picker
+  attachColorPicker(picker, {
+    color: hexInput.value,
+    onChange: (hex) => {
+      const color = parseColor(hex);
+      if (color) updateFromRgb(color.r, color.g, color.b, 'picker');
+    },
   });
 
   // Copy buttons

@@ -1,6 +1,7 @@
 import { parseColor, rgbToHex, rgbToHsl, hslToRgb } from './color-utils.js';
 import { contrastRatio, checkWcag } from './wcag-utils.js';
 import { copyToClipboard } from './export-utils.js';
+import { attachColorPicker } from './color-picker.js';
 
 function init() {
   const textInput = document.getElementById('text-color');
@@ -122,14 +123,15 @@ function init() {
   textInput.addEventListener('input', update);
   bgInput.addEventListener('input', update);
 
-  textPicker.addEventListener('input', () => {
-    textInput.value = textPicker.value;
-    update();
+  // Custom colour pickers
+  attachColorPicker(textPicker, {
+    color: textInput.value,
+    onChange: (hex) => { textInput.value = hex; update(); },
   });
 
-  bgPicker.addEventListener('input', () => {
-    bgInput.value = bgPicker.value;
-    update();
+  attachColorPicker(bgPicker, {
+    color: bgInput.value,
+    onChange: (hex) => { bgInput.value = hex; update(); },
   });
 
   swapBtn.addEventListener('click', () => {

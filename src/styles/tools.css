@@ -815,6 +815,143 @@ body[data-page-type="tool"] {
 }
 
 /* ==========================================================================
+   Custom Colour Picker Popover
+   ========================================================================== */
+
+.cp-popover {
+  width: 224px;
+  padding: 0.75rem;
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+  user-select: none;
+  touch-action: none;
+}
+
+/* Saturation/Value area */
+.cp-area {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: crosshair;
+  margin-bottom: 0.625rem;
+}
+
+.cp-area__gradient {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(0, 100%, 50%);
+}
+
+/* White-to-transparent overlay (saturation) */
+.cp-area__gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #ffffff, transparent);
+}
+
+/* Black-to-transparent overlay (value/brightness) */
+.cp-area__gradient::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent, #000000);
+}
+
+.cp-area__cursor {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3), inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Hue strip */
+.cp-hue {
+  position: relative;
+  width: 100%;
+  height: 14px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-bottom: 0.625rem;
+}
+
+.cp-hue__track {
+  position: absolute;
+  inset: 0;
+  border-radius: 7px;
+  background: linear-gradient(to right,
+    hsl(0, 100%, 50%),
+    hsl(60, 100%, 50%),
+    hsl(120, 100%, 50%),
+    hsl(180, 100%, 50%),
+    hsl(240, 100%, 50%),
+    hsl(300, 100%, 50%),
+    hsl(360, 100%, 50%)
+  );
+}
+
+.cp-hue__cursor {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 18px;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Footer: swatch + hex input */
+.cp-footer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cp-footer__swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  flex-shrink: 0;
+}
+
+.cp-footer__input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.375rem 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  color: var(--color-text);
+  font-family: 'Inter', monospace;
+  font-size: 0.75rem;
+  box-sizing: border-box;
+}
+
+.cp-footer__input:focus {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* Hide native color input when custom picker is active */
+.cp-native-hidden {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+/* ==========================================================================
    Palette Previewer
    ========================================================================== */
 
@@ -969,8 +1106,9 @@ body[data-page-type="tool"] {
 }
 
 .pt-hero--centered {
-  max-width: 480px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .pt-hero__eyebrow {
