@@ -69,6 +69,7 @@
 - [Colour Palette Generator](https://offpistestudio.com/tools/color-palette): Generate harmonious colour palettes. Choose complementary, analogous, triadic, or monochromatic modes. Lock colours and shuffle.
 - [Palette Previewer](https://offpistestudio.com/tools/palette-preview): Preview your brand colours on real website mockup templates. Four layout types for service businesses, professional firms, creative agencies, and landing pages.
 - [CSS Gradient Generator](https://offpistestudio.com/tools/gradient-generator): Create linear, radial, and conic CSS gradients with a visual editor. Copy production-ready code.
+- [Font Pairing Suggester](https://offpistestudio.com/tools/font-pairing): Find the perfect heading and body font combination. 30 curated Google Fonts with live previews, mood filters, and copyable CSS.
 - [Favicon Generator](https://offpistestudio.com/tools/favicon-generator): Upload a logo and generate all required favicon sizes (16x16 to 512x512). Download individually with ready-to-use HTML snippet.
 - [SVG to PNG Converter](https://offpistestudio.com/tools/svg-to-png): Convert SVG files to PNG at any resolution. Upload a file or paste SVG code. Choose 1x, 2x, or 3x scale.
 

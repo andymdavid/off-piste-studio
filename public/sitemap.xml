@@ -277,6 +277,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://offpistestudio.com/tools/font-pairing</loc>
+    <lastmod>2026-03-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://offpistestudio.com/tools/gradient-generator</loc>
     <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
