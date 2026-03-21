@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/images/Icon.webp" type="image/webp">
-  <meta name="description" content="Free colour converter. Convert between hex, RGB, and HSL colour formats instantly. Copy CSS values, find the nearest named colour, and get Tailwind-ready values.">
-  <title>Free Colour Converter — Hex, RGB, HSL | Off Piste Studio</title>
+  <meta name="description" content="Free colour converter. Convert between hex, RGB, HSL, and Tailwind CSS classes instantly. Find the nearest Tailwind colour for any hex code. Copy CSS-ready values.">
+  <title>Free Colour Converter — Hex, RGB, HSL, Tailwind | Off Piste Studio</title>
   <link rel="canonical" href="https://offpistestudio.com/tools/color-converter">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Free Colour Converter — Hex, RGB, HSL | Off Piste Studio">
-  <meta property="og:description" content="Convert between hex, RGB, and HSL colour formats instantly. Copy CSS values and find the nearest named colour.">
+  <meta property="og:title" content="Free Colour Converter — Hex, RGB, HSL, Tailwind | Off Piste Studio">
+  <meta property="og:description" content="Convert between hex, RGB, HSL, and Tailwind CSS classes. Find the nearest Tailwind colour for any hex code.">
   <meta property="og:url" content="https://offpistestudio.com/tools/color-converter">
   <meta property="og:site_name" content="Off Piste Studio">
   <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Free Colour Converter — Hex, RGB, HSL | Off Piste Studio">
-  <meta name="twitter:description" content="Convert between hex, RGB, and HSL colour formats instantly.">
+  <meta name="twitter:title" content="Free Colour Converter — Hex, RGB, HSL, Tailwind | Off Piste Studio">
+  <meta name="twitter:description" content="Convert between hex, RGB, HSL, and Tailwind CSS classes instantly.">
   <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
   <script type="application/ld+json">
   {
@@ -24,7 +24,7 @@
       {
         "@type": "SoftwareApplication",
         "name": "Colour Converter",
-        "description": "Convert between hex, RGB, and HSL colour formats. Free, instant, no signup required.",
+        "description": "Convert between hex, RGB, HSL, and Tailwind CSS colour classes. Find the nearest Tailwind colour for any hex code. Free, instant, no signup required.",
         "url": "https://offpistestudio.com/tools/color-converter",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Web",
@@ -64,6 +64,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Each pair of characters in a hex code represents a colour channel: the first two are red, the middle two are green, and the last two are blue. Convert each pair from hexadecimal (base 16) to decimal (base 10). For example, #ff6600 becomes rgb(255, 102, 0)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I find the nearest Tailwind CSS colour for a hex code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Enter your hex code into this tool and it will automatically show the nearest matching Tailwind CSS colour class (e.g. bg-orange-600). It compares your colour against all 220+ colours in the Tailwind v3 default palette and shows whether it is an exact match or the closest approximation. You can copy the Tailwind class directly."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a Tailwind CSS colour class?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tailwind CSS uses utility classes like bg-blue-500 or text-red-600 to apply colours. Each class maps to a specific hex value from Tailwind's default colour palette. If your brand colours don't match a Tailwind class exactly, this tool helps you find the closest one so you can maintain visual consistency in Tailwind projects."
             }
           }
         ]
@@ -113,7 +129,7 @@
           <span aria-current="page">Colour Converter</span>
         </nav>
         <h1 class="tool-hero__title">Colour Converter</h1>
-        <p class="tool-hero__subtitle">Convert between hex, RGB, and HSL colour formats instantly. Copy CSS-ready values with one click.</p>
+        <p class="tool-hero__subtitle">Convert between hex, RGB, HSL, and Tailwind CSS colour classes. Find the nearest Tailwind colour for any hex code.</p>
       </div>
     </section>
 
@@ -190,6 +206,17 @@
                 <button class="tool-copy-btn" data-copy="css" type="button">Copy</button>
               </div>
             </div>
+
+            <!-- Tailwind -->
+            <div class="color-converter__format">
+              <span class="tool-label">Tailwind CSS</span>
+              <div class="color-converter__row">
+                <span class="color-converter__tw-swatch" id="tw-swatch"></span>
+                <code class="color-converter__code" id="tw-class">bg-orange-600</code>
+                <span class="color-converter__tw-match" id="tw-exact">nearest</span>
+                <button class="tool-copy-btn" data-copy="tw" type="button">Copy</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -200,11 +227,14 @@
       <div class="container">
         <div class="tool-content__body">
           <h2>How to Use This Tool</h2>
-          <p>Enter a colour in any format — hex, RGB, or HSL — and all other formats update instantly. You can also use the visual colour picker to select a colour. Click "Copy" next to any format to copy the value to your clipboard, ready to paste into your CSS or design tool.</p>
+          <p>Enter a colour in any format — hex, RGB, or HSL — and all other formats update instantly, including the nearest Tailwind CSS class. You can also use the visual colour picker to select a colour. Click "Copy" next to any format to copy the value to your clipboard, ready to paste into your CSS, design tool, or Tailwind project.</p>
 
           <h2>Why Colour Formats Matter</h2>
           <p>Different situations call for different colour formats. Hex codes are compact and widely supported. RGB is useful when you need to manipulate individual colour channels. HSL is the most intuitive for designers — adjusting lightness and saturation is straightforward, making it ideal for creating consistent colour palettes and design systems.</p>
           <p>Having the right format at your fingertips saves time when building websites, creating brand guidelines, or communicating colour specs to developers.</p>
+
+          <h2>Hex to Tailwind CSS Colour Lookup</h2>
+          <p>If you're building with Tailwind CSS, this tool instantly finds the nearest Tailwind colour class for any hex code. It checks your colour against all 220+ colours in Tailwind's v3 default palette and tells you whether it's an exact match or shows you the closest alternative. This is useful when you're converting brand colours into a Tailwind design system and need to know which utility class to use.</p>
 
           <h2>Related Tools</h2>
           <div class="tool-related">
@@ -240,6 +270,14 @@
             <details class="faq__item">
               <summary class="faq__question">How do I convert hex to RGB?</summary>
               <p class="faq__answer">Each pair of characters in a hex code represents a colour channel: the first two are red, the middle two are green, and the last two are blue. Convert each pair from hexadecimal (base 16) to decimal (base 10). For example, #ff6600 becomes rgb(255, 102, 0). Or just use this tool.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">How do I find the nearest Tailwind CSS colour for a hex code?</summary>
+              <p class="faq__answer">Enter your hex code into this tool and it will automatically show the nearest matching Tailwind CSS colour class (e.g. bg-orange-600). It compares your colour against all 220+ colours in the Tailwind v3 default palette and shows whether it is an exact match or the closest approximation. You can copy the Tailwind class directly.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">What is a Tailwind CSS colour class?</summary>
+              <p class="faq__answer">Tailwind CSS uses utility classes like bg-blue-500 or text-red-600 to apply colours. Each class maps to a specific hex value from Tailwind's default colour palette. If your brand colours don't match a Tailwind class exactly, this tool helps you find the closest one so you can maintain visual consistency in Tailwind projects.</p>
             </details>
           </div>
         </div>

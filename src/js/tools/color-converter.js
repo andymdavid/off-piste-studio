@@ -1,6 +1,7 @@
 import { parseColor, rgbToHex, rgbToHsl, hslToRgb, nearestColorName } from './color-utils.js';
 import { copyToClipboard } from './export-utils.js';
 import { attachColorPicker } from './color-picker.js';
+import { nearestTailwind } from './tailwind-colors.js';
 
 function init() {
   const hexInput = document.getElementById('hex-input');
@@ -14,6 +15,9 @@ function init() {
   const swatch = document.getElementById('color-swatch');
   const colorName = document.getElementById('color-name');
   const cssVar = document.getElementById('css-var');
+  const twClass = document.getElementById('tw-class');
+  const twSwatch = document.getElementById('tw-swatch');
+  const twExact = document.getElementById('tw-exact');
 
   let updating = false;
 
@@ -32,6 +36,12 @@ function init() {
     swatch.style.backgroundColor = hex;
     colorName.textContent = nearestColorName(r, g, b);
     cssVar.textContent = `--color: ${hex};`;
+
+    // Tailwind lookup
+    const tw = nearestTailwind(r, g, b);
+    twClass.textContent = `bg-${tw.name}`;
+    twSwatch.style.backgroundColor = tw.hex;
+    twExact.textContent = tw.distance === 0 ? 'exact match' : `nearest (${tw.hex})`;
 
     // Update URL without reload
     const url = new URL(window.location);
@@ -88,6 +98,7 @@ function init() {
         case 'rgb': text = `rgb(${rgbR.value}, ${rgbG.value}, ${rgbB.value})`; break;
         case 'hsl': text = `hsl(${hslH.value}, ${hslS.value}%, ${hslL.value}%)`; break;
         case 'css': text = cssVar.textContent; break;
+        case 'tw': text = twClass.textContent; break;
       }
 
       copyToClipboard(text, btn);

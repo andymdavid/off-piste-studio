@@ -488,6 +488,20 @@ body[data-page-type="tool"] {
   text-align: center;
 }
 
+.color-converter__tw-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  flex-shrink: 0;
+}
+
+.color-converter__tw-match {
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
 .color-converter__code {
   flex: 1;
   padding: 0.625rem 0.75rem;
@@ -1860,5 +1874,421 @@ body[data-page-type="tool"] {
 @media (max-width: 480px) {
   .palette-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   Favicon Generator
+   ========================================================================== */
+
+.favicon-generator {
+  max-width: 720px;
+}
+
+.favicon-generator__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+#favicon-results[hidden] {
+  display: none;
+}
+
+/* Favicon preview grid */
+.favicon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: var(--space-xl);
+}
+
+.favicon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.favicon-card__preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  background: repeating-conic-gradient(rgba(255, 255, 255, 0.06) 0% 25%, transparent 0% 50%) 0 0 / 16px 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.favicon-card__preview canvas {
+  image-rendering: auto;
+}
+
+.favicon-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.favicon-card__size {
+  font-family: 'Inter', monospace;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.favicon-card__desc {
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+}
+
+.favicon-card__download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 1.25rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.favicon-card__download:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+/* Snippet section */
+.favicon-generator__snippet {
+  margin-top: var(--space-md);
+}
+
+@media (max-width: 480px) {
+  .favicon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .favicon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SVG to PNG Converter
+   ========================================================================== */
+
+.svg-converter {
+  max-width: 720px;
+}
+
+/* Tabs */
+.svg-converter__tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-bottom: var(--space-md);
+}
+
+.svg-converter__tab {
+  padding: 0.5rem 1.25rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.svg-converter__tab:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.svg-converter__tab.is-active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Paste area */
+.svg-converter__paste {
+  margin-bottom: var(--space-md);
+}
+
+.svg-converter__textarea {
+  width: 100%;
+  min-height: 200px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  resize: vertical;
+  transition: border-color var(--transition-fast);
+}
+
+.svg-converter__textarea::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.svg-converter__textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.svg-converter__load-btn {
+  margin-top: var(--space-sm);
+  padding: 0.625rem 1.5rem;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 2rem;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.svg-converter__load-btn:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.03);
+}
+
+/* Workspace */
+.svg-converter__workspace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.svg-converter__toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.svg-converter__filename {
+  font-family: var(--font-primary);
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Dimensions row */
+.svg-converter__dimensions {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-sm);
+}
+
+.svg-converter__dim-group {
+  flex: 1;
+}
+
+.svg-converter__dim-group--lock {
+  flex: 0 0 auto;
+  padding-bottom: 0.125rem;
+}
+
+.svg-converter__dim-x {
+  flex-shrink: 0;
+  padding-bottom: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 1rem;
+}
+
+.svg-converter__lock-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 8px;
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.svg-converter__lock-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+}
+
+.svg-converter__lock-btn.is-locked {
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* Scale presets */
+.svg-converter__scales {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.svg-converter__scales .tool-label {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.svg-converter__scale-btns {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.svg-converter__scale-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 2rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.svg-converter__scale-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.svg-converter__scale-btn.is-active {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Preview */
+.svg-converter__preview-area {
+  padding: var(--space-md);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  overflow: auto;
+  /* Checkerboard pattern for transparency */
+  background-image:
+    linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0;
+}
+
+.svg-converter__preview-area canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Actions row */
+.svg-converter__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.svg-converter__filesize {
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+}
+
+.svg-converter__download-btn {
+  padding: 0.625rem 1.5rem;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 2rem;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.svg-converter__download-btn:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.03);
+}
+
+/* Hidden utility */
+.svg-converter [hidden] {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .svg-converter__dimensions {
+    flex-wrap: wrap;
+  }
+
+  .svg-converter__dim-group {
+    flex: 1 1 40%;
+  }
+
+  .svg-converter__dim-x {
+    display: none;
+  }
+
+  .svg-converter__dim-group--lock {
+    flex: 0 0 40px;
   }
 }
