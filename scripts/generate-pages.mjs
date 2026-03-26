@@ -111,6 +111,7 @@ const headerHtml = `
       <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="header__nav">
         <a href="/work" class="header__nav-link">Work</a>
+        <a href="/pricing" class="header__nav-link">Pricing</a>
         <a href="/about" class="header__nav-link">About</a>
         <div class="header__nav-item header__nav-item--dropdown"><button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button></div>
       </nav>
@@ -123,7 +124,7 @@ const headerHtml = `
 const footerHtml = `
   <footer class="footer">
     <div class="footer__divider"></div>
-    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta">Let's Chat</a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a></nav><nav class="footer__nav" aria-label="Footer social links"><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
+    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta"><img src="/public/images/Lara.webp" alt="Lara" class="footer__cta-avatar" loading="lazy"><span class="footer__cta-text"><span class="footer__cta-primary">Let's Chat <span class="footer__cta-arrow">&rarr;</span></span><span class="footer__cta-sub">Talk to Lara about your project</span></span></a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a><a href="/resources" class="footer__nav-link">Insights</a></nav><nav class="footer__nav" aria-label="Footer resources"><a href="/tools" class="footer__nav-link">Tools</a><a href="/industries" class="footer__nav-link">Industries</a><a href="/locations" class="footer__nav-link">Locations</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
     <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
   </footer>`;
 
@@ -181,21 +182,57 @@ const clientBarHtml = `
 // Internal linking helpers
 // ---------------------------------------------------------------------------
 
-function shuffleAndPick(arr, count, excludeSlug) {
-  const filtered = arr.filter(p => p.slug !== excludeSlug);
-  for (let i = filtered.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [filtered[i], filtered[j]] = [filtered[j], filtered[i]];
-  }
-  return filtered.slice(0, count);
+// ---------------------------------------------------------------------------
+// Deterministic internal linking — semantic groups instead of random
+// ---------------------------------------------------------------------------
+
+const INDUSTRY_GROUPS = {
+  trades: ['electricians', 'plumbers', 'builders', 'hvac', 'roofers', 'painters', 'landscapers', 'cleaners', 'pest-control', 'property-maintenance'],
+  professional: ['accountants', 'bookkeepers', 'lawyers', 'mortgage-brokers', 'buyers-agents', 'real-estate', 'coaches'],
+  health_creative: ['dentists', 'physiotherapy', 'photographers'],
+};
+
+const LOCATION_GROUPS = {
+  perth_metro: ['perth', 'fremantle', 'joondalup', 'armadale', 'rockingham', 'mandurah', 'wanneroo', 'midland', 'canning-vale', 'osborne-park'],
+  capital_cities: ['sydney', 'melbourne', 'brisbane', 'adelaide', 'gold-coast'],
+};
+
+function getRelatedIndustries(slug, allIndustries, count) {
+  // Find which group this industry belongs to
+  const group = Object.values(INDUSTRY_GROUPS).find(g => g.includes(slug)) || [];
+  // Pick from same group first (excluding self), then fill from other groups
+  const sameGroup = group.filter(s => s !== slug);
+  const otherSlugs = Object.values(INDUSTRY_GROUPS).flat().filter(s => s !== slug && !sameGroup.includes(s));
+  const ordered = [...sameGroup, ...otherSlugs].slice(0, count);
+  return ordered.map(s => allIndustries.find(p => p.slug === s)).filter(Boolean);
+}
+
+function getRelatedLocations(slug, allLocations, count) {
+  const group = Object.values(LOCATION_GROUPS).find(g => g.includes(slug)) || [];
+  const sameGroup = group.filter(s => s !== slug);
+  const otherSlugs = Object.values(LOCATION_GROUPS).flat().filter(s => s !== slug && !sameGroup.includes(s));
+  const ordered = [...sameGroup, ...otherSlugs].slice(0, count);
+  return ordered.map(s => allLocations.find(p => p.slug === s)).filter(Boolean);
+}
+
+function getDeterministicLocations(allLocations, count) {
+  // Deterministic spread: Perth first, then capitals, then suburbs
+  const priority = ['perth', 'sydney', 'melbourne', 'brisbane', 'fremantle', 'adelaide'];
+  return priority.slice(0, count).map(s => allLocations.find(p => p.slug === s)).filter(Boolean);
+}
+
+function getDeterministicIndustries(allIndustries, count) {
+  // Spread across groups: trades, professional, health
+  const priority = ['electricians', 'accountants', 'dentists', 'plumbers', 'lawyers', 'builders', 'photographers', 'mortgage-brokers'];
+  return priority.slice(0, count).map(s => allIndustries.find(p => p.slug === s)).filter(Boolean);
 }
 
 function createInternalLinksHtml(page, allIndustries, allServices, allLocations) {
   const sections = [];
 
   if (page._type === 'industry') {
-    const related = shuffleAndPick(allIndustries, 4, page.slug);
-    const locs = shuffleAndPick(allLocations, 4, null);
+    const related = getRelatedIndustries(page.slug, allIndustries, 4);
+    const locs = getDeterministicLocations(allLocations, 4);
     const svcs = allServices.slice(0, 4);
 
     if (related.length) {
@@ -210,8 +247,8 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
   }
 
   if (page._type === 'service') {
-    const inds = shuffleAndPick(allIndustries, 6, null);
-    const locs = shuffleAndPick(allLocations, 4, null);
+    const inds = getDeterministicIndustries(allIndustries, 6);
+    const locs = getDeterministicLocations(allLocations, 4);
 
     if (inds.length) {
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">Industries we serve</h3><div class="page-links__list">${inds.map(p => `<a href="/industries/${p.slug}" class="page-links__link">${escapeHtml(p.industry || p.title)}</a>`).join('')}</div></div>`);
@@ -222,7 +259,7 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
   }
 
   if (page._type === 'location') {
-    const inds = shuffleAndPick(allIndustries, 6, null);
+    const inds = getDeterministicIndustries(allIndustries, 6);
     const svcs = allServices.slice(0, 4);
 
     if (inds.length) {
@@ -292,7 +329,9 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="description" content="${escapeHtml(page.description)}">
   <title>${escapeHtml(page.title)} | Off Piste Studio</title>
   <link rel="canonical" href="https://offpistestudio.com/industries/${escapeHtml(page.slug)}">
@@ -445,7 +484,9 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="description" content="${escapeHtml(page.description)}">
   <title>${escapeHtml(page.title)} | Off Piste Studio</title>
   <link rel="canonical" href="https://offpistestudio.com/services/${escapeHtml(page.slug)}">
@@ -597,7 +638,9 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="/images/Icon.webp" type="image/webp">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="description" content="${escapeHtml(page.description)}">
   <title>${escapeHtml(page.title)} | Off Piste Studio</title>
   <link rel="canonical" href="https://offpistestudio.com/locations/${escapeHtml(page.slug)}">

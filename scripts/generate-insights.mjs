@@ -1,5 +1,6 @@
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { resolve, basename } from 'path';
+import { marked } from 'marked';
 
 const rootDir = resolve('.');
 const contentDir = resolve(rootDir, 'content/insights');
@@ -43,73 +44,27 @@ function formatDate(dateValue) {
   }).format(new Date(`${dateValue}T00:00:00`));
 }
 
+const renderer = {
+  heading({ tokens, depth }) {
+    const text = this.parser.parseInline(tokens);
+    if (depth === 2) return `<h2 class="insight-article__section-title">${text}</h2>\n`;
+    if (depth === 3) return `<h3 class="insight-article__sub-title">${text}</h3>\n`;
+    return `<h${depth}>${text}</h${depth}>\n`;
+  },
+  blockquote({ tokens }) {
+    const body = this.parser.parse(tokens);
+    return `<blockquote class="insight-article__quote">${body}</blockquote>\n`;
+  },
+  image({ href, title, text }) {
+    const titleAttr = title ? ` title="${title}"` : '';
+    return `<figure class="insight-article__figure"><img src="${href}" alt="${text}" loading="lazy"${titleAttr}>${text ? `<figcaption>${text}</figcaption>` : ''}</figure>\n`;
+  }
+};
+
+marked.use({ renderer });
+
 function renderMarkdown(markdown) {
-  const lines = markdown.split('\n');
-  const html = [];
-  let paragraph = [];
-  let listItems = [];
-  let quote = [];
-
-  const flushParagraph = () => {
-    if (!paragraph.length) return;
-    html.push(`<p>${escapeHtml(paragraph.join(' '))}</p>`);
-    paragraph = [];
-  };
-
-  const flushList = () => {
-    if (!listItems.length) return;
-    html.push(`<ul>${listItems.map(item => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`);
-    listItems = [];
-  };
-
-  const flushQuote = () => {
-    if (!quote.length) return;
-    html.push(`<blockquote class="insight-article__quote">${escapeHtml(quote.join(' '))}</blockquote>`);
-    quote = [];
-  };
-
-  lines.forEach(line => {
-    const trimmed = line.trim();
-
-    if (!trimmed) {
-      flushParagraph();
-      flushList();
-      flushQuote();
-      return;
-    }
-
-    if (trimmed.startsWith('## ')) {
-      flushParagraph();
-      flushList();
-      flushQuote();
-      html.push(`<h2 class="insight-article__section-title">${escapeHtml(trimmed.slice(3))}</h2>`);
-      return;
-    }
-
-    if (trimmed.startsWith('- ')) {
-      flushParagraph();
-      flushQuote();
-      listItems.push(trimmed.slice(2));
-      return;
-    }
-
-    if (trimmed.startsWith('> ')) {
-      flushParagraph();
-      flushList();
-      quote.push(trimmed.slice(2));
-      return;
-    }
-
-    flushList();
-    flushQuote();
-    paragraph.push(trimmed);
-  });
-
-  flushParagraph();
-  flushList();
-  flushQuote();
-
-  return html.join('\n');
+  return marked.parse(markdown);
 }
 
 function createArticleHtml(post) {
@@ -120,9 +75,42 @@ function createArticleHtml(post) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="description" content="${escapeHtml(post.description)}">
   <title>${escapeHtml(post.title)} | Off Piste Studio</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": ${JSON.stringify(post.title)},
+        "description": ${JSON.stringify(post.description)},
+        "datePublished": "${escapeHtml(post.date)}",
+        "author": { "@type": "Organization", "name": "Off Piste Studio" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/Icon.png" }
+        },
+        "url": "https://offpistestudio.com/insights/${escapeHtml(post.slug)}"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": ${JSON.stringify(post.title)}, "item": "https://offpistestudio.com/insights/${escapeHtml(post.slug)}" }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -132,14 +120,15 @@ function createArticleHtml(post) {
     <div class="header__inner">
       <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
       <nav class="header__nav">
-        <a href="/work.html" class="header__nav-link">Work</a>
-        <a href="/about.html" class="header__nav-link">About</a>
+        <a href="/work" class="header__nav-link">Work</a>
+        <a href="/pricing" class="header__nav-link">Pricing</a>
+        <a href="/about" class="header__nav-link">About</a>
         <div class="header__nav-item header__nav-item--dropdown"><button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button></div>
       </nav>
       <a href="/" class="header__logo"><span class="header__logo-letter">O</span><span class="header__logo-letter">f</span><span class="header__logo-letter">f</span><span class="header__logo-space"> </span><span class="header__logo-letter">P</span><span class="header__logo-letter">i</span><span class="header__logo-letter">s</span><span class="header__logo-letter">t</span><span class="header__logo-letter">e</span><span class="header__logo-space"> </span><span class="header__logo-letter">S</span><span class="header__logo-letter">t</span><span class="header__logo-letter">u</span><span class="header__logo-letter">d</span><span class="header__logo-letter">i</span><span class="header__logo-letter">o</span></a>
-      <a href="/contact.html" class="header__cta">Let's Chat</a>
+      <a href="/contact" class="header__cta">Let's Chat</a>
     </div>
-    <div class="header__dropdown"><a href="/resources.html" class="header__dropdown-link active">Insights</a></div>
+    <div class="header__dropdown"><a href="/resources" class="header__dropdown-link active">Insights</a><a href="/tools" class="header__dropdown-link">Tools</a></div>
   </header>
   <main>
     <article class="insight-article">
@@ -149,11 +138,19 @@ function createArticleHtml(post) {
           <h1 class="insight-article__title">${escapeHtml(post.title)}</h1>
           <p class="insight-article__intro">${escapeHtml(post.intro)}</p>
         </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/public/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">${escapeHtml(post.displayDate)}</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/${escapeHtml(post.slug)}" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/${escapeHtml(post.slug)}&text=${encodeURIComponent(post.title)}" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/${escapeHtml(post.slug)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
         <section class="insight-article__body"><div class="insight-article__body-inner">
           ${post.html}
-        </div></section>
-        <section class="insight-article__footer"><div class="insight-article__footer-inner">
-          <div class="insight-article__author"><img src="/public/images/Icon.png" alt="Off Piste Studio"><div><p class="insight-article__author-name">By Off Piste Studio</p><p class="insight-article__author-date">${escapeHtml(post.displayDate)}</p></div></div>
         </div></section>
       </div>
     </article>
@@ -161,8 +158,8 @@ function createArticleHtml(post) {
   </main>
   <footer class="footer">
     <div class="footer__divider"></div>
-    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.png" alt="" class="footer__icon" aria-hidden="true"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact.html" class="footer__cta">Let's Chat</a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work.html" class="footer__nav-link">Work</a><a href="/about.html" class="footer__nav-link">About</a><a href="/resources.html" class="footer__nav-link">Resources</a></nav><nav class="footer__nav" aria-label="Footer social links"><a href="https://twitter.com" class="footer__nav-link" target="_blank" rel="noopener">Twitter</a><a href="https://linkedin.com" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
-    <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2025 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
+    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta"><img src="/public/images/Lara.webp" alt="Lara" class="footer__cta-avatar" loading="lazy"><span class="footer__cta-text"><span class="footer__cta-primary">Let's Chat <span class="footer__cta-arrow">&rarr;</span></span><span class="footer__cta-sub">Talk to Lara about your project</span></span></a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a><a href="/resources" class="footer__nav-link">Insights</a></nav><nav class="footer__nav" aria-label="Footer resources"><a href="/tools" class="footer__nav-link">Tools</a><a href="/industries" class="footer__nav-link">Industries</a><a href="/locations" class="footer__nav-link">Locations</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
+    <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
   </footer>
   <script type="module" src="/src/js/main.js"></script>
 </body>
@@ -199,7 +196,7 @@ posts.forEach(post => {
 
 const clientPosts = posts.map(({ html, ...post }) => ({
   ...post,
-  url: `/insights/${post.slug}.html`
+  url: `/insights/${post.slug}`
 }));
 
 writeFileSync(

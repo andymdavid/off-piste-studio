@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Your website now has two audiences. Humans and language models. How to structure content, implement llms.txt, and make your site readable by the AI tools people increasingly rely on.">
+  <title>Building Your Website for LLMs | Off Piste Studio</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Building Your Website for LLMs",
+        "description": "Your website now has two audiences. Humans and language models. How to structure content, implement llms.txt, and make your site readable by the AI tools people increasingly rely on.",
+        "datePublished": "2026-03-19",
+        "author": { "@type": "Organization", "name": "Off Piste Studio" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/Icon.png" }
+        },
+        "url": "https://offpistestudio.com/insights/building-your-website-for-llms"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Building Your Website for LLMs", "item": "https://offpistestudio.com/insights/building-your-website-for-llms" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-insight-slug="building-your-website-for-llms">
+  <header class="header">
+    <div class="header__inner">
+      <button class="header__menu-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="header__nav">
+        <a href="/work" class="header__nav-link">Work</a>
+        <a href="/pricing" class="header__nav-link">Pricing</a>
+        <a href="/about" class="header__nav-link">About</a>
+        <div class="header__nav-item header__nav-item--dropdown"><button class="header__nav-link header__nav-toggle" type="button" aria-expanded="false" aria-haspopup="true">Resources</button></div>
+      </nav>
+      <a href="/" class="header__logo"><span class="header__logo-letter">O</span><span class="header__logo-letter">f</span><span class="header__logo-letter">f</span><span class="header__logo-space"> </span><span class="header__logo-letter">P</span><span class="header__logo-letter">i</span><span class="header__logo-letter">s</span><span class="header__logo-letter">t</span><span class="header__logo-letter">e</span><span class="header__logo-space"> </span><span class="header__logo-letter">S</span><span class="header__logo-letter">t</span><span class="header__logo-letter">u</span><span class="header__logo-letter">d</span><span class="header__logo-letter">i</span><span class="header__logo-letter">o</span></a>
+      <a href="/contact" class="header__cta">Let's Chat</a>
+    </div>
+    <div class="header__dropdown"><a href="/resources" class="header__dropdown-link active">Insights</a><a href="/tools" class="header__dropdown-link">Tools</a></div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO</span><span>AI</span><span>Website Design</span></div><p class="insight-article__read-time">14 min read</p></div>
+          <h1 class="insight-article__title">Building Your Website for LLMs</h1>
+          <p class="insight-article__intro">Your website has always been built for people. Now it needs to work for language models too. AI chatbots, search tools, copilots, and recommendation engines are reading your site every day, and the way they interpret your content determines whether your business gets surfaced or ignored in an increasing share of discovery.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/public/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">March 19, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/building-your-website-for-llms" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/building-your-website-for-llms&text=Building%20Your%20Website%20for%20LLMs" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/building-your-website-for-llms"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <h2 class="insight-article__section-title">LLMs are now a meaningful audience</h2>
+<p>A growing share of the questions people ask about businesses, products, and services are now answered by AI. ChatGPT, Perplexity, Google&#39;s AI Overviews, Microsoft Copilot, and dozens of other tools are pulling information from websites, synthesising it, and presenting it to users. When someone asks an AI assistant to recommend a web design agency in Perth, or to explain the difference between two types of service, the answer is built from web content.</p>
+<p>That means your website is being read, interpreted, and represented by software you do not control. If your site is easy for these models to understand, your business is more likely to be mentioned, cited, and recommended. If your content is buried in complex layouts, vague marketing language, or poorly structured HTML, the model may misunderstand your offer or skip you entirely.</p>
+<p>This is already happening at scale. AI-driven traffic is projected to grow from roughly 0.25% of search in 2024 to around 10% by the end of 2025. The businesses that show up in AI-generated answers are the ones with clear, well-structured, factual content that language models can parse confidently. This is a new channel of discovery and it is growing fast.</p>
+<h2 class="insight-article__section-title">How LLMs read your website</h2>
+<p>Language models do not experience your website the way a human does. They do not see your hero image, notice your brand colours, or feel the effect of your animations. They read text, parse HTML structure, and extract meaning from the relationships between elements on the page.</p>
+<p>That means the things that matter most for LLM readability are the same things that have always mattered for good web development. Clean semantic HTML. Logical heading hierarchies. Descriptive link text. Well-written copy that says what the business does, who it serves, and what makes it different.</p>
+<p>Where LLMs differ from traditional search crawlers is in how deeply they process language. A search engine matches keywords and evaluates authority signals. A language model reads your content and builds a representation of what your business is, what it offers, and how it compares to alternatives. Vague, jargon-heavy, or overly clever copy that a human might tolerate will often confuse a language model. Clear, direct, factual writing performs best.</p>
+<p>Page structure also matters more than many teams realise. When your content is organised with clear sections, descriptive headings, and a logical flow from topic to topic, the model can extract accurate information about each part of your offering. When everything is jumbled together or hidden behind JavaScript-rendered elements that require interaction to reveal, the model gets a fragmented or incomplete picture.</p>
+<h2 class="insight-article__section-title">The llms.txt standard</h2>
+<p>One of the most practical steps a business can take is to implement an llms.txt file. This is a plain markdown file hosted at the root of your domain that gives language models a structured, curated summary of your most important content.</p>
+<p>The concept was proposed by Jeremy Howard from Answer.AI in September 2024. Adoption was initially slow, but accelerated rapidly through late 2024 and into 2025 as companies like Anthropic, Cloudflare, Vercel, Cursor, and Astro adopted the format. It has since become a widely recognised convention, though it is worth noting that it is not yet an official standard. The IETF has launched an AI Preferences Working Group, but no formal specification has been ratified.</p>
+<p>Here is what an llms.txt file looks like in practice. This is a trimmed version of our own.</p>
+<div class="llms-demo">
+  <div class="llms-demo__header">
+    <svg viewBox="0 0 16 16" fill="currentColor"><path d="M3.5 1A1.5 1.5 0 002 2.5v11A1.5 1.5 0 003.5 15h9a1.5 1.5 0 001.5-1.5v-8.5L9.5 1H3.5zM9 2l4 4H9.5A.5.5 0 019 5.5V2z"/></svg>
+    llms.txt
+  </div>
+  <div class="llms-demo__body">
+    <div class="llms-demo__scroll"><span class="llms-h1"># Off Piste Studio</span>
+
+<p><span class="llms-quote">&gt; Web design and branding agency for small businesses.</p>
+<blockquote class="insight-article__quote"><p>Based in Perth, WA, Australia. We build websites that
+generate leads for local service businesses.</span></p>
+</blockquote>
+<p><span class="llms-h2">## Services</span></p>
+<p><span class="llms-bullet">-</span> <span class="llms-link">[Website Design]</span><span class="llms-url">(<a href="https://offpistestudio.com/services/website-design">https://offpistestudio.com/services/website-design</a>)</span>:
+  Custom website design for small businesses with lead
+  forms, click-to-call, local SEO, and mobile-responsive
+  layouts. Built to convert visitors into customers.
+<span class="llms-bullet">-</span> <span class="llms-link">[Local SEO]</span><span class="llms-url">(<a href="https://offpistestudio.com/services/local-seo">https://offpistestudio.com/services/local-seo</a>)</span>:
+  Google Business Profile setup, local citations, suburb
+  pages, and Google Maps optimisation.
+<span class="llms-bullet">-</span> <span class="llms-link">[Brand Identity]</span><span class="llms-url">(<a href="https://offpistestudio.com/services/brand-identity">https://offpistestudio.com/services/brand-identity</a>)</span>:
+  Logo, brand guidelines, and visual identity for businesses
+  that want to look professional and trustworthy.
+<span class="llms-bullet">-</span> <span class="llms-link">[Landing Pages]</span><span class="llms-url">(<a href="https://offpistestudio.com/services/landing-pages">https://offpistestudio.com/services/landing-pages</a>)</span>:
+  High-converting landing pages for trades and service
+  businesses running Google or Meta ads.</p>
+<p><span class="llms-h2">## How We Work</span></p>
+<p><span class="llms-num">1.</span> Discovery call — understand your business, goals,
+   and audience
+<span class="llms-num">2.</span> Strategy &amp; wireframes — plan the site structure,
+   pages, and conversion flow
+<span class="llms-num">3.</span> Design — build the visual design, brand-aligned
+   and mobile-first
+<span class="llms-num">4.</span> Development — build a fast, SEO-ready website
+   with lead capture built in
+<span class="llms-num">5.</span> Launch &amp; support — go live with ongoing support
+   and optimisation</p>
+<p><span class="llms-h2">## About</span></p>
+<p><span class="llms-bullet">-</span> Based in City Beach, Perth, Western Australia
+<span class="llms-bullet">-</span> Serves clients across Australia, NZ, and internationally
+<span class="llms-bullet">-</span> 50+ projects delivered for small and medium businesses
+<span class="llms-bullet">-</span> <span class="llms-link">[About us]</span><span class="llms-url">(<a href="https://offpistestudio.com/about">https://offpistestudio.com/about</a>)</span></p>
+<p><span class="llms-h2">## Contact</span></p>
+<p><span class="llms-bullet">-</span> Email: <a href="mailto:hello@offpistestudio.com">hello@offpistestudio.com</a>
+<span class="llms-bullet">-</span> <span class="llms-link">[Get in touch]</span><span class="llms-url">(<a href="https://offpistestudio.com/contact">https://offpistestudio.com/contact</a>)</span></div>
+  </div></p>
+</div>
+
+<h3 class="insight-article__sub-title">How it differs from robots.txt and sitemap.xml</h3>
+<p>These three files serve different purposes. Your sitemap.xml is the complete catalogue of every URL on your site. Your robots.txt marks which areas crawlers should and should not access. Your llms.txt is a curated reading list of the content that matters most.</p>
+<p>If your website were a library, the sitemap would be the full catalogue, robots.txt would mark the restricted shelves, and llms.txt would be the librarian&#39;s recommended reading list. It tells AI tools where to start and what deserves the most attention.</p>
+<h3 class="insight-article__sub-title">File format and structure</h3>
+<p>The format is deliberately simple. The only required element is an H1 title. A well-structured file typically includes a brief blockquote summary of the business, followed by H2 sections that group your most important links with short descriptions.</p>
+<p>A typical structure might include sections for services, key pages, guides, case studies, and reference material. Each link includes a brief description so the model understands what it will find before fetching the page. This is important because AI agents using llms.txt can reason about which pages to fetch based on those descriptions, rather than relying on guessing or keyword matching.</p>
+<p>You can also include an &quot;Optional&quot; section for lower-priority resources that provide additional context but are not essential for understanding the business.</p>
+<h3 class="insight-article__sub-title">The three related formats</h3>
+<p>The llms.txt proposal actually encompasses three related conventions that work together.</p>
+<p>The first is llms.txt itself, the core summary file hosted at your domain root. This is the starting point for any AI tool trying to understand your business. It should be concise enough that a model can process it in a single pass.</p>
+<p>The second is llms-full.txt, an extended version that compiles your most important content into a single markdown document. Where llms.txt provides the outline and links, llms-full.txt provides the full text. This gives language models a richer, more detailed understanding of your business without needing to crawl multiple pages. Data from analytics providers has shown that llms-full.txt files receive more than twice the visitor traffic of the standard llms.txt file, which suggests AI agents actively prefer the detailed version when available.</p>
+<p>The third convention is the .md extension for individual pages. By making each page on your site accessible as clean markdown by appending .md to the URL, you give AI tools a way to fetch any specific page in the most efficient format possible. Companies that serve markdown versions of their pages report up to 10x reductions in token usage compared to parsing raw HTML. That efficiency matters because it means the model can process more of your content within its context limits and do so with fewer errors.</p>
+<h3 class="insight-article__sub-title">Why it matters commercially</h3>
+<p>The practical value of llms.txt comes down to control and accuracy. Without it, AI tools piece together their understanding of your business from whatever they can find across your site. They may focus on the wrong pages, miss key services, or misrepresent your positioning. With a well-written llms.txt file, you are curating that understanding directly.</p>
+<p>Internal benchmarks from LangChain tested four approaches to feeding documentation to AI agents. Context stuffing, vector search retrieval, a basic llms.txt implementation, and an optimised llms.txt with descriptive context. The optimised llms.txt approach significantly outperformed the others because the agents could reason about which documentation to fetch based on the descriptions provided, rather than relying on semantic similarity matching.</p>
+<p>That finding has direct implications for any business that wants AI tools to represent them accurately. The more structured and descriptive your llms.txt file is, the better the model&#39;s understanding of your business will be.</p>
+<h3 class="insight-article__sub-title">What llms.txt is not</h3>
+<p>It is important to understand that llms.txt is not an SEO tool in the traditional sense. It will not improve your Google search rankings. Its value shows up in AI-powered search and discovery tools like ChatGPT, Perplexity, and Gemini, not in traditional search engine results pages.</p>
+<p>If your primary concern is Google rankings, llms.txt will not move the needle. If your concern is how AI tools understand and recommend your business, it is one of the most direct levers you have.</p>
+<h2 class="insight-article__section-title">Structured content and machine-readable formats</h2>
+<p>Beyond llms.txt, there are broader content decisions that affect how well your site works for language models.</p>
+<h3 class="insight-article__sub-title">Markdown exports</h3>
+<p>Making your key content available in clean markdown format gives language models and AI-powered tools the easiest possible version of your content to work with. Blog posts, service descriptions, and case studies exported as .md files can be consumed directly by RAG (retrieval-augmented generation) systems, which are the pipelines that feed relevant content into AI tools when they need to answer a question.</p>
+<p>If your content is locked inside complex HTML with deeply nested divs, inline styles, and JavaScript-dependent rendering, a language model has to work much harder to extract the useful information. A clean markdown version removes that friction entirely.</p>
+<h3 class="insight-article__sub-title">Schema markup</h3>
+<p>Structured data using schema.org vocabulary helps both search engines and language models understand the type and context of your content. Article schema, Organisation schema, Service schema, FAQ schema, and Review schema all provide explicit metadata that a model can use to categorise and represent your content accurately.</p>
+<p>A page with strong schema markup is essentially telling language models exactly what the content is, who created it, when it was published, and what entities it relates to. That explicitness reduces the chance of misinterpretation.</p>
+<h3 class="insight-article__sub-title">Clean, accessible HTML</h3>
+<p>The accessibility improvements described in our article on website accessibility and SEO apply here too. Semantic HTML, proper heading hierarchy, descriptive alt text, and clear form labels all make your content easier for language models to parse. The overlap between accessibility, SEO, and LLM readability is significant. Investing in clean markup pays dividends across all three.</p>
+<h2 class="insight-article__section-title">What this means for content strategy</h2>
+<p>Writing for a dual audience of humans and language models is less of a compromise than it sounds. The content that performs best for LLMs is the same content that performs best for people. Clear, specific, well-organised information that says what you do and backs it up with evidence.</p>
+<p>Vague brand messaging that sounds impressive but says nothing concrete is a problem for both audiences. A human scanning your site will struggle to understand your offer. A language model will either misrepresent you or skip you in favour of a competitor whose content is more specific.</p>
+<p>The practical shift is toward content that states facts clearly. Instead of &quot;we deliver transformative digital experiences,&quot; say &quot;we design and build websites for service businesses, with a focus on lead generation and local SEO.&quot; The first version sounds like marketing. The second version gives both the human and the model something concrete to work with.</p>
+<p>Case studies with specific outcomes are particularly valuable. A language model can extract &quot;this agency increased enquiries by 40% for a plumbing business in Perth&quot; and use that as a factual reference point. A vague testimonial about &quot;great service&quot; gives the model nothing useful.</p>
+<p>FAQ content also performs well because it maps directly to the question-and-answer format that most AI interactions follow. If someone asks a chatbot a question that your FAQ page answers clearly, your content is likely to be surfaced. Structured Q&amp;A content is one of the easiest ways to increase your visibility in AI-powered discovery.</p>
+<blockquote class="insight-article__quote"><p>The content that works best for language models is the same content that works best for people. Clear, factual, and specific.</p>
+</blockquote>
+<h2 class="insight-article__section-title">Getting started</h2>
+<p>Most businesses can start making their website more LLM-friendly with a few focused steps.</p>
+<ul>
+<li>Create an llms.txt file at your domain root. Start with an H1 title and a blockquote summary of your business. Organise your most important pages under H2 sections with brief descriptions for each link. Keep it concise and factual.</li>
+<li>Consider adding an llms-full.txt with the full text of your key pages compiled into a single markdown document. AI agents actively look for this file and use it more heavily than the standard version.</li>
+<li>Review your most important pages for clarity. Read the copy and ask whether a language model could accurately summarise what you do from that text alone. If the answer is no, rewrite it.</li>
+<li>Ensure your HTML is semantic and well-structured. Use proper heading levels, descriptive link text, and meaningful alt text on images.</li>
+<li>Add schema markup to your key pages. At minimum, implement Organisation, Service, and Article schema where relevant.</li>
+<li>Make your blog posts and key content available as markdown files. This makes your content directly consumable by RAG systems and AI tools with significantly lower token costs.</li>
+<li>Write an FAQ section for your most common questions. Structure it with clear questions and direct answers that a language model can extract and reference.</li>
+<li>Keep your content up to date. Language models value recency, and stale content is less likely to be cited or recommended.</li>
+</ul>
+<p>The businesses that take these steps now will have an advantage as AI-driven discovery continues to grow. This is still early. Most websites are not optimised for language models at all, which means the opportunity for businesses that move first is significant. If you want a <a href="/services/website-design">website built with these foundations</a> and an <a href="/services/seo">SEO strategy</a> that accounts for both traditional search and AI discovery, that is exactly what we do.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="projects__list" data-related-posts></div></div></section>
+  </main>
+  <footer class="footer">
+    <div class="footer__divider"></div>
+    <div class="container"><div class="footer__top"><div class="footer__lead"><img src="/public/images/Icon.webp" alt="" class="footer__icon" aria-hidden="true" loading="lazy"><h3 class="footer__heading">Interested in working with us?</h3><a href="/contact" class="footer__cta"><img src="/public/images/Lara.webp" alt="Lara" class="footer__cta-avatar" loading="lazy"><span class="footer__cta-text"><span class="footer__cta-primary">Let's Chat <span class="footer__cta-arrow">&rarr;</span></span><span class="footer__cta-sub">Talk to Lara about your project</span></span></a></div><div class="footer__navs"><nav class="footer__nav" aria-label="Footer sitemap"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a><a href="/resources" class="footer__nav-link">Insights</a></nav><nav class="footer__nav" aria-label="Footer resources"><a href="/tools" class="footer__nav-link">Tools</a><a href="/industries" class="footer__nav-link">Industries</a><a href="/locations" class="footer__nav-link">Locations</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div></div>
+    <div class="footer__brand-wrap"><div class="footer__brand">Off-Piste Studio</div><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js"></script>
+</body>
+</html>

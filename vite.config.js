@@ -34,6 +34,7 @@ export default defineConfig({
         resources: resolve(__dirname, 'resources.html'),
         contact: resolve(__dirname, 'contact.html'),
         tools: resolve(__dirname, 'tools.html'),
+        pricing: resolve(__dirname, 'pricing.html'),
         ...discoverPages('insights', 'insight-'),
         ...discoverPages('industries', 'industry-'),
         ...discoverPages('services', 'service-'),

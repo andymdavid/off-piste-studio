@@ -14,7 +14,7 @@ function init() {
   const randomBtn = document.getElementById('gradient-random');
 
   let stops = [
-    { color: '#d4622a', position: 0 },
+    { color: '#F37021', position: 0 },
     { color: '#1a1a2e', position: 100 },
   ];
 

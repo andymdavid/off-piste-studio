@@ -12,7 +12,7 @@ function init() {
 
   // Default colours
   const defaults = {
-    primary: '#d4622a',
+    primary: '#F37021',
     secondary: '#1a1a2e',
     accent: '#e94560',
     bg: '#ffffff',

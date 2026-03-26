@@ -276,7 +276,7 @@ function createLeadModal() {
       <div class="lead-modal__grid">
         <div class="lead-modal__content">
           <div class="lead-modal__eyebrow">
-            <img src="/public/images/Icon.png" alt="" aria-hidden="true">
+            <img src="/images/Icon.webp" alt="" aria-hidden="true">
             <span>Start a Project</span>
           </div>
           <h2 class="lead-modal__title" id="lead-modal-title">Let&apos;s scope what you&apos;re building.</h2>
@@ -292,7 +292,7 @@ function createLeadModal() {
 
         <div class="lead-modal__chat">
           <div class="lead-modal__chat-header">
-            <img src="/public/images/Lara.png" alt="Lara">
+            <img src="/images/Lara.webp" alt="Lara">
             <div>
               <p class="lead-modal__chat-title">Chat with Lara</p>
               <p class="lead-modal__chat-status">Creative Director at Off Piste Studio</p>
@@ -315,7 +315,7 @@ function createLeadModal() {
 }
 
 function initLeadModal() {
-  const triggers = document.querySelectorAll('a[href="/contact.html"]');
+  const triggers = document.querySelectorAll('a[href="/contact"]');
 
   if (!triggers.length) return;
 
@@ -362,6 +362,130 @@ function initLeadModal() {
   });
 }
 
+// Copy link share button
+function initShareButtons() {
+  document.querySelectorAll('[data-copy-url]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      navigator.clipboard.writeText(btn.dataset.copyUrl).then(() => {
+        btn.classList.add('is-copied');
+        setTimeout(() => btn.classList.remove('is-copied'), 1500);
+      });
+    });
+  });
+}
+
+// Auto-scrolling llms.txt demo viewer
+function initLlmsDemos() {
+  document.querySelectorAll('.llms-demo').forEach(demo => {
+    const scroll = demo.querySelector('.llms-demo__scroll');
+    if (!scroll) return;
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        scroll.classList.toggle('is-scrolling', entry.isIntersecting);
+      });
+    }, { threshold: 0.3 });
+
+    observer.observe(demo);
+  });
+}
+
+// Pricing page quote estimator
+function initEstimator() {
+  const form = document.querySelector('[data-estimator]');
+  if (!form) return;
+
+  const pagesGroup = form.querySelector('[data-estimator-pages]');
+  const hostingGroup = form.querySelector('[data-estimator-hosting]');
+  const addons = form.querySelectorAll('[data-addon]');
+  const lowEl = form.querySelector('[data-estimator-low]');
+  const highEl = form.querySelector('[data-estimator-high]');
+  const monthlyEl = form.querySelector('[data-estimator-monthly]');
+  const ctaEl = form.querySelector('[data-estimator-cta]');
+
+  const basePrices = { '5': [3500, 4500], '10': [5500, 7500], '15': [8000, 11000] };
+  const addonPrices = {
+    booking:  [600, 1200],
+    payments: [800, 1800],
+    blog:     [400, 800],
+    gbp:      [300, 500],
+    seo:      [500, 1000]
+  };
+  const hostingMonthly = { none: 0, managed: 49, growth: 99 };
+
+  let selectedPages = '5';
+  let selectedHosting = 'none';
+
+  function formatCurrency(n) {
+    return '$' + n.toLocaleString('en-AU');
+  }
+
+  function update() {
+    let [low, high] = basePrices[selectedPages];
+
+    addons.forEach(input => {
+      if (input.checked) {
+        const key = input.dataset.addon;
+        if (addonPrices[key]) {
+          low += addonPrices[key][0];
+          high += addonPrices[key][1];
+        }
+      }
+    });
+
+    lowEl.textContent = formatCurrency(low);
+    highEl.textContent = formatCurrency(high);
+
+    const monthly = hostingMonthly[selectedHosting];
+    if (monthly > 0) {
+      monthlyEl.textContent = '+ ' + formatCurrency(monthly) + '/month hosting';
+    } else {
+      monthlyEl.textContent = '';
+    }
+
+    // Build mailto with selections pre-filled
+    const parts = [];
+    parts.push('Pages: ' + (selectedPages === '15' ? '15+' : 'Up to ' + selectedPages));
+
+    const activeAddons = [];
+    addons.forEach(input => {
+      if (input.checked) {
+        const label = input.closest('.pricing-estimator__toggle').querySelector('.pricing-estimator__toggle-label');
+        if (label) activeAddons.push(label.textContent);
+      }
+    });
+    if (activeAddons.length) parts.push('Add-ons: ' + activeAddons.join(', '));
+
+    if (selectedHosting !== 'none') {
+      parts.push('Hosting: ' + (selectedHosting === 'managed' ? 'Managed ($49/mo)' : 'Managed + Growth ($99/mo)'));
+    }
+
+    parts.push('Estimate range: ' + formatCurrency(low) + ' – ' + formatCurrency(high));
+
+    const body = 'Hi,\n\nI\'d like a detailed quote for my project.\n\n' + parts.join('\n') + '\n\nProject details:\n';
+    ctaEl.href = '/contact';
+    ctaEl.dataset.estimatorBody = body;
+  }
+
+  function initOptionGroup(group, callback) {
+    const buttons = group.querySelectorAll('.pricing-estimator__option');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        callback(btn.dataset.value);
+        update();
+      });
+    });
+  }
+
+  initOptionGroup(pagesGroup, val => { selectedPages = val; });
+  initOptionGroup(hostingGroup, val => { selectedHosting = val; });
+  addons.forEach(input => input.addEventListener('change', update));
+
+  update();
+}
+
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
@@ -373,6 +497,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilter();
   initRelatedPosts();
   initLeadModal();
+  initEstimator();
+  initLlmsDemos();
+  initShareButtons();
 
   // Scale footer brand after fonts load
   if (document.fonts) {

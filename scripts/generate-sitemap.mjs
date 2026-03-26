@@ -31,7 +31,7 @@ function scanDir(dirName) {
 }
 
 // Core pages (in project root)
-const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'contact.html'];
+const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'contact.html', 'pricing.html', 'tools.html', 'industries.html', 'locations.html'];
 
 const entries = [];
 
@@ -53,7 +53,7 @@ for (const file of corePages) {
     url: `${BASE_URL}/${slug}`,
     lastmod: getLastmod(filePath),
     changefreq: 'weekly',
-    priority: '0.8',
+    priority: slug === 'pricing' ? '0.9' : '0.8',
   });
 }
 
