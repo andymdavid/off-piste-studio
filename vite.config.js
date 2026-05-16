@@ -29,6 +29,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        'home-duplicate': resolve(__dirname, 'home-duplicate.html'),
+        'duplicate-home': resolve(__dirname, 'duplicate-home.html'),
         work: resolve(__dirname, 'work.html'),
         about: resolve(__dirname, 'about.html'),
         resources: resolve(__dirname, 'resources.html'),

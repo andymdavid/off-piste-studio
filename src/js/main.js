@@ -3,6 +3,8 @@ import { INSIGHT_POSTS } from '../generated/insights-data.js';
 
 // Scale footer brand to fill the horizontal space available to it.
 function scaleFooterBrand() {
+  if (document.body.dataset.pageType === 'duplicate-home') return;
+
   const brand = document.querySelector('.footer__brand');
   if (!brand) return;
 
@@ -122,6 +124,336 @@ function initHeaderDropdowns() {
     if (event.target.closest('.header__dropdown')) return;
     closeDropdown();
   });
+}
+
+function initHeroDistortion() {
+  const canvas = document.querySelector('[data-hero-distortion]');
+  if (!canvas) return;
+
+  const gl = canvas.getContext('webgl', {
+    alpha: true,
+    antialias: false,
+    depth: false,
+    premultipliedAlpha: false,
+    preserveDrawingBuffer: false
+  });
+
+  if (!gl) return;
+
+  const vertexShaderSource = `
+    attribute vec2 a_position;
+    varying vec2 v_uv;
+
+    void main() {
+      v_uv = a_position * 0.5 + 0.5;
+      gl_Position = vec4(a_position, 0.0, 1.0);
+    }
+  `;
+
+  const fragmentShaderSource = `
+    precision highp float;
+
+    const int TRAIL_COUNT = 32;
+
+    uniform sampler2D u_image;
+    uniform vec2 u_resolution;
+    uniform vec2 u_imageResolution;
+    uniform vec2 u_pointer;
+    uniform vec3 u_trails[TRAIL_COUNT];
+    uniform float u_time;
+    uniform float u_motion;
+    uniform float u_active;
+    varying vec2 v_uv;
+
+    float hash(vec2 p) {
+      return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453123);
+    }
+
+    float noise(vec2 p) {
+      vec2 i = floor(p);
+      vec2 f = fract(p);
+      vec2 u = f * f * (3.0 - 2.0 * f);
+
+      return mix(
+        mix(hash(i), hash(i + vec2(1.0, 0.0)), u.x),
+        mix(hash(i + vec2(0.0, 1.0)), hash(i + vec2(1.0, 1.0)), u.x),
+        u.y
+      );
+    }
+
+    vec2 coverUv(vec2 uv) {
+      vec2 screenRatio = vec2(u_resolution.x / u_resolution.y, 1.0);
+      vec2 imageRatio = vec2(u_imageResolution.x / u_imageResolution.y, 1.0);
+      vec2 scale = screenRatio.x < imageRatio.x
+        ? vec2(screenRatio.x / imageRatio.x, 1.0)
+        : vec2(1.0, imageRatio.x / screenRatio.x);
+
+      return (uv - 0.5) * scale + 0.5;
+    }
+
+    void main() {
+      vec2 uv = v_uv;
+      vec2 pointer = u_pointer;
+      float aspect = u_resolution.x / u_resolution.y;
+      vec3 baseColor = vec3(0.0706, 0.0706, 0.0706);
+
+      float fineNoise = noise(uv * vec2(34.0, 18.0) - u_time * 0.22);
+      float revealFeather = 0.13;
+      float revealMask = 0.0;
+      float edgeField = 0.0;
+      float banding = 0.0;
+
+      for (int i = 0; i < TRAIL_COUNT; i++) {
+        vec3 trail = u_trails[i];
+
+        if (trail.z > 0.001) {
+          vec2 fromTrail = vec2((uv.x - trail.x) * aspect, uv.y - trail.y);
+          float distanceFromTrail = length(fromTrail);
+          float angle = atan(fromTrail.y, fromTrail.x);
+          vec2 liquidUv = vec2(cos(angle), sin(angle));
+          float slowNoise = noise(liquidUv * 2.1 + vec2(u_time * 0.11, -u_time * 0.07) + trail.xy * 2.0);
+          float midNoise = noise(liquidUv * 5.2 + vec2(-u_time * 0.16, u_time * 0.13) + trail.yx * 3.0);
+          float localBanding = sin((uv.y * 150.0) + (slowNoise * 7.0) + (u_time * 1.5)) * 0.5 + 0.5;
+          float pulse = sin(u_time * 1.15 + trail.x * 9.0 + trail.y * 5.0) * 0.025;
+          float wobble = (slowNoise - 0.5) * 0.085 + (midNoise - 0.5) * 0.035;
+          float revealRadius = 0.27 + pulse + wobble;
+          float localReveal = 1.0 - smoothstep(revealRadius, revealRadius + revealFeather * 0.82, distanceFromTrail);
+          localReveal *= trail.z;
+
+          float edgeWidth = revealFeather * 0.42;
+          float localEdge = 1.0 - smoothstep(0.0, edgeWidth, abs(distanceFromTrail - revealRadius));
+          float edgeNoise = smoothstep(0.26, 0.82, midNoise) * (0.45 + fineNoise * 0.55);
+          localEdge *= trail.z * edgeNoise;
+
+          revealMask = max(revealMask, localReveal);
+          edgeField = max(edgeField, localEdge);
+          banding = max(banding, localBanding * localEdge);
+        }
+      }
+
+      revealMask *= u_active;
+      edgeField *= u_active;
+
+      vec2 imageUv = coverUv(uv);
+
+      float r = texture2D(u_image, imageUv).r;
+      float g = texture2D(u_image, imageUv).g;
+      float b = texture2D(u_image, imageUv).b;
+      vec3 color = vec3(r, g, b);
+
+      color *= 1.0 + edgeField * 0.012;
+
+      vec3 finalColor = mix(baseColor, color, revealMask);
+      float outerBurn = edgeField * (1.0 - revealMask) * (0.55 + fineNoise * 0.45);
+      float innerGlow = edgeField * revealMask * (0.25 + banding * 0.2);
+      finalColor += vec3(0.85, 0.2, 0.02) * outerBurn * 0.16;
+      finalColor += vec3(0.1, 0.55, 1.0) * innerGlow * 0.04;
+
+      float alpha = max(revealMask, edgeField * 0.95);
+      gl_FragColor = vec4(finalColor, alpha);
+    }
+  `;
+
+  const createShader = (type, source) => {
+    const shader = gl.createShader(type);
+    gl.shaderSource(shader, source);
+    gl.compileShader(shader);
+
+    if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+      console.warn(gl.getShaderInfoLog(shader));
+      gl.deleteShader(shader);
+      return null;
+    }
+
+    return shader;
+  };
+
+  const vertexShader = createShader(gl.VERTEX_SHADER, vertexShaderSource);
+  const fragmentShader = createShader(gl.FRAGMENT_SHADER, fragmentShaderSource);
+  if (!vertexShader || !fragmentShader) return;
+
+  const program = gl.createProgram();
+  gl.attachShader(program, vertexShader);
+  gl.attachShader(program, fragmentShader);
+  gl.linkProgram(program);
+
+  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+    console.warn(gl.getProgramInfoLog(program));
+    return;
+  }
+
+  const buffer = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+    -1, -1,
+     1, -1,
+    -1,  1,
+    -1,  1,
+     1, -1,
+     1,  1
+  ]), gl.STATIC_DRAW);
+
+  const positionLocation = gl.getAttribLocation(program, 'a_position');
+  const resolutionLocation = gl.getUniformLocation(program, 'u_resolution');
+  const imageResolutionLocation = gl.getUniformLocation(program, 'u_imageResolution');
+  const pointerLocation = gl.getUniformLocation(program, 'u_pointer');
+  const trailsLocation = gl.getUniformLocation(program, 'u_trails[0]');
+  const timeLocation = gl.getUniformLocation(program, 'u_time');
+  const motionLocation = gl.getUniformLocation(program, 'u_motion');
+  const activeLocation = gl.getUniformLocation(program, 'u_active');
+  const imageLocation = gl.getUniformLocation(program, 'u_image');
+
+  const image = new Image();
+  image.src = canvas.dataset.imageSrc;
+  const pointer = { x: 0.62, y: 0.58, targetX: 0.62, targetY: 0.58 };
+  const reveal = { value: 0, target: 0 };
+  const maxTrailPoints = 32;
+  const trailDuration = 3000;
+  const trailPoints = [];
+  const trailUniformData = new Float32Array(maxTrailPoints * 3);
+  let lastTrailPoint = null;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const motion = reducedMotion ? 0.42 : 1.0;
+
+  function addTrailPoint(x, y, time) {
+    const point = { x, y, time };
+    const shouldAppend = !lastTrailPoint ||
+      Math.hypot(x - lastTrailPoint.x, y - lastTrailPoint.y) > 0.018 ||
+      time - lastTrailPoint.time > 90;
+
+    if (!shouldAppend) return;
+
+    trailPoints.push(point);
+    lastTrailPoint = point;
+
+    while (trailPoints.length > maxTrailPoints) {
+      trailPoints.shift();
+    }
+  }
+
+  function updateTrailUniforms(time) {
+    trailUniformData.fill(0);
+
+    for (let i = trailPoints.length - 1; i >= 0; i--) {
+      if (time - trailPoints[i].time > trailDuration) {
+        trailPoints.splice(i, 1);
+      }
+    }
+
+    trailPoints.forEach((point, index) => {
+      if (index >= maxTrailPoints) return;
+
+      const age = Math.max(0, Math.min(1, (time - point.time) / trailDuration));
+      const strength = 1 - Math.max(0, Math.min(1, (age - 0.68) / 0.32));
+      const offset = index * 3;
+
+      trailUniformData[offset] = point.x;
+      trailUniformData[offset + 1] = point.y;
+      trailUniformData[offset + 2] = strength;
+    });
+  }
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const width = Math.max(1, Math.floor(rect.width * dpr));
+    const height = Math.max(1, Math.floor(rect.height * dpr));
+
+    if (canvas.width !== width || canvas.height !== height) {
+      canvas.width = width;
+      canvas.height = height;
+      gl.viewport(0, 0, width, height);
+    }
+  }
+
+  function render(time) {
+    resize();
+
+    pointer.x += (pointer.targetX - pointer.x) * 0.07;
+    pointer.y += (pointer.targetY - pointer.y) * 0.07;
+    reveal.value += (reveal.target - reveal.value) * 0.08;
+
+    if (reveal.target > 0.5) {
+      addTrailPoint(pointer.x, pointer.y, time);
+    }
+
+    updateTrailUniforms(time);
+
+    gl.useProgram(program);
+    gl.clearColor(0.0, 0.0, 0.0, 0.0);
+    gl.clear(gl.COLOR_BUFFER_BIT);
+    gl.enable(gl.BLEND);
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+    gl.enableVertexAttribArray(positionLocation);
+    gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
+    gl.vertexAttribPointer(positionLocation, 2, gl.FLOAT, false, 0, 0);
+
+    gl.uniform2f(resolutionLocation, canvas.width, canvas.height);
+    gl.uniform2f(imageResolutionLocation, image.naturalWidth, image.naturalHeight);
+    gl.uniform2f(pointerLocation, pointer.x, pointer.y);
+    gl.uniform3fv(trailsLocation, trailUniformData);
+    gl.uniform1f(timeLocation, time * 0.001);
+    gl.uniform1f(motionLocation, motion);
+    gl.uniform1f(activeLocation, Math.max(reveal.value, trailPoints.length ? 1 : 0));
+    gl.uniform1i(imageLocation, 0);
+
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+    if (!reducedMotion) {
+      requestAnimationFrame(render);
+    }
+  }
+
+  image.addEventListener('load', () => {
+    const texture = gl.createTexture();
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, texture);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+
+    requestAnimationFrame(render);
+  });
+
+  const hero = canvas.closest('.hero-intro');
+
+  function updatePointer(event) {
+    const rect = canvas.getBoundingClientRect();
+    pointer.targetX = (event.clientX - rect.left) / rect.width;
+    pointer.targetY = 1 - ((event.clientY - rect.top) / rect.height);
+    addTrailPoint(pointer.targetX, pointer.targetY, performance.now());
+  }
+
+  if (hero) {
+    hero.addEventListener('pointerenter', event => {
+      reveal.target = 1;
+      updatePointer(event);
+    }, { passive: true });
+
+    hero.addEventListener('pointermove', event => {
+      reveal.target = 1;
+      updatePointer(event);
+    }, { passive: true });
+
+    hero.addEventListener('pointerleave', () => {
+      reveal.target = 0;
+    }, { passive: true });
+
+    hero.addEventListener('touchstart', event => {
+      reveal.target = 1;
+      if (event.touches.length) updatePointer(event.touches[0]);
+    }, { passive: true });
+
+    hero.addEventListener('touchmove', event => {
+      reveal.target = 1;
+      if (event.touches.length) updatePointer(event.touches[0]);
+    }, { passive: true });
+  }
+
+  window.addEventListener('resize', resize);
 }
 
 // Set active nav link based on current page
@@ -490,6 +822,7 @@ function initEstimator() {
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeaderDropdowns();
+  initHeroDistortion();
   setActiveNavLink();
   initFaqAccordion();
   initProjectSlideshow();
