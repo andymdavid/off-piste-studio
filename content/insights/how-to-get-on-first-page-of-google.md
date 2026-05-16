@@ -3,7 +3,7 @@ title: How to Get Your Small Business on the First Page of Google
 slug: how-to-get-on-first-page-of-google
 description: A practical guide to getting your small business on the first page of Google. Covers local SEO, Google Business Profile, on-page SEO, content, and backlinks.
 intro: Every small business owner wants to be on the first page of Google. The good news is that for local businesses, it is genuinely achievable. You are not competing against Amazon or Wikipedia — you are competing against other local businesses, most of whom are doing very little to optimise their online presence.
-date: 2026-03-26
+date: 2026-03-22
 readTime: 13 min read
 tags: SEO, Small Business
 ---

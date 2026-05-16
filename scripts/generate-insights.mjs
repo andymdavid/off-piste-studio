@@ -80,6 +80,7 @@ function createArticleHtml(post) {
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="description" content="${escapeHtml(post.description)}">
   <title>${escapeHtml(post.title)} | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/${escapeHtml(post.slug)}">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",

@@ -3,7 +3,7 @@ title: Website Speed and Why It Matters for Lead Generation
 slug: website-speed-and-lead-generation
 description: How website speed affects lead generation, Google rankings, and conversion rates. What slows sites down, what Core Web Vitals measure, and how to fix it.
 intro: A slow website is not just a poor user experience. It is a lead generation problem. Every second of delay costs visibility in search, increases bounce rates, and reduces the number of enquiries that come through. Most businesses have no idea how much it is costing them.
-date: 2026-03-26
+date: 2026-03-28
 readTime: 10 min read
 tags: Website Design, SEO, Performance
 ---

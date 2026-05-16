@@ -1,102 +1,32 @@
 export const INSIGHT_POSTS = [
   {
-    "slug": "best-website-features-for-tradies",
-    "title": "Best Website Features for Tradies That Actually Get Leads",
-    "description": "The website features that actually generate leads for tradies. Click-to-call, service pages, reviews, galleries, mobile-first design, and more.",
-    "intro": "Most tradie websites are either overbuilt with features nobody uses, or underbuilt with nothing that helps a customer take action. The features that actually generate leads for trades businesses are simple, proven, and surprisingly few. Get these right and your website becomes your hardest-working salesperson.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
-    "readTime": "10 min read",
-    "tags": [
-      "Website Design",
-      "Trades",
-      "Lead Generation"
-    ],
-    "url": "/insights/best-website-features-for-tradies"
-  },
-  {
-    "slug": "diy-vs-professional-web-design",
-    "title": "DIY Website vs Professional Web Design — What's the Real Cost?",
-    "description": "Squarespace and Wix look cheap until you count the hidden costs. We compare DIY website builders to professional web design for Australian small businesses.",
-    "intro": "DIY website builders like Squarespace and Wix have made it possible for anyone to put a website online in a weekend. But \"possible\" and \"effective\" are not the same thing. The real cost of a website is not what you pay upfront — it is the revenue it generates or fails to generate over the life of your business.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
+    "slug": "what-makes-a-good-tradie-website",
+    "title": "What Makes a Good Plumber, Electrician, or Builder Website?",
+    "description": "What separates a tradie website that generates leads from one that sits idle. Structure, content, trust signals, local SEO, and conversion elements explained.",
+    "intro": "A good tradie website is not about flashy design or clever animations. It is about structure, clarity, and making it as easy as possible for a potential customer to trust you and get in touch. The websites that generate the most leads for plumbers, electricians, and builders share a set of common elements — and most of them have nothing to do with how the site looks.",
+    "date": "2026-03-30",
+    "displayDate": "March 30, 2026",
     "readTime": "11 min read",
     "tags": [
       "Website Design",
-      "Small Business"
+      "Trades"
     ],
-    "url": "/insights/diy-vs-professional-web-design"
+    "url": "/insights/what-makes-a-good-tradie-website"
   },
   {
-    "slug": "google-business-profile-guide",
-    "title": "Google Business Profile Optimisation Guide for Local Businesses",
-    "description": "How to optimise your Google Business Profile for local search. Covers setup, categories, photos, reviews, posts, and how GBP works with your website.",
-    "intro": "Your Google Business Profile is often the first thing a potential customer sees. For local businesses, it can drive more enquiries than the website itself. This guide covers how to set it up properly, optimise it for local search, and avoid the mistakes that cost visibility.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
-    "readTime": "12 min read",
-    "tags": [
-      "SEO",
-      "Local Business"
-    ],
-    "url": "/insights/google-business-profile-guide"
-  },
-  {
-    "slug": "how-much-does-a-website-cost",
-    "title": "How Much Does a Website Cost for a Small Business in Australia?",
-    "description": "What does a website actually cost in Australia? We break down pricing tiers, what affects the price, DIY vs professional, and how to think about ROI.",
-    "intro": "Website pricing in Australia ranges from a few hundred dollars to well over $50,000, and that spread confuses most business owners. The real question is not how much a website costs — it is how much revenue the right website will generate for your business relative to what you spend.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
-    "readTime": "12 min read",
-    "tags": [
-      "Website Design",
-      "Pricing"
-    ],
-    "url": "/insights/how-much-does-a-website-cost"
-  },
-  {
-    "slug": "how-to-choose-a-web-designer-in-perth",
-    "title": "How to Choose a Web Designer in Perth",
-    "description": "What to look for when choosing a web designer in Perth. Covers red flags, questions to ask, pricing models, and how to evaluate a designer's real capability.",
-    "intro": "Choosing a web designer is one of the most consequential decisions a small business makes. The right choice builds a digital asset that generates leads for years. The wrong one wastes months and money, and you end up doing it again sooner than planned.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
+    "slug": "website-speed-and-lead-generation",
+    "title": "Website Speed and Why It Matters for Lead Generation",
+    "description": "How website speed affects lead generation, Google rankings, and conversion rates. What slows sites down, what Core Web Vitals measure, and how to fix it.",
+    "intro": "A slow website is not just a poor user experience. It is a lead generation problem. Every second of delay costs visibility in search, increases bounce rates, and reduces the number of enquiries that come through. Most businesses have no idea how much it is costing them.",
+    "date": "2026-03-28",
+    "displayDate": "March 28, 2026",
     "readTime": "10 min read",
     "tags": [
       "Website Design",
-      "Perth"
-    ],
-    "url": "/insights/how-to-choose-a-web-designer-in-perth"
-  },
-  {
-    "slug": "how-to-get-on-first-page-of-google",
-    "title": "How to Get Your Small Business on the First Page of Google",
-    "description": "A practical guide to getting your small business on the first page of Google. Covers local SEO, Google Business Profile, on-page SEO, content, and backlinks.",
-    "intro": "Every small business owner wants to be on the first page of Google. The good news is that for local businesses, it is genuinely achievable. You are not competing against Amazon or Wikipedia — you are competing against other local businesses, most of whom are doing very little to optimise their online presence.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
-    "readTime": "13 min read",
-    "tags": [
       "SEO",
-      "Small Business"
+      "Performance"
     ],
-    "url": "/insights/how-to-get-on-first-page-of-google"
-  },
-  {
-    "slug": "small-business-seo-guide-2026",
-    "title": "The Small Business Owner's Guide to SEO in 2026",
-    "description": "A practical SEO guide for small business owners in 2026. Covers fundamentals, AI search changes, local vs national strategy, content, and realistic expectations.",
-    "intro": "SEO has changed significantly in the last two years, but the fundamentals still hold. This guide is written for business owners who want to understand what actually works in 2026, what has changed with AI-driven search, and how to build a strategy that delivers results without wasting time or money on tactics that no longer matter.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
-    "readTime": "14 min read",
-    "tags": [
-      "SEO",
-      "Small Business"
-    ],
-    "url": "/insights/small-business-seo-guide-2026"
+    "url": "/insights/website-speed-and-lead-generation"
   },
   {
     "slug": "website-redesign-checklist",
@@ -113,41 +43,111 @@ export const INSIGHT_POSTS = [
     "url": "/insights/website-redesign-checklist"
   },
   {
-    "slug": "website-speed-and-lead-generation",
-    "title": "Website Speed and Why It Matters for Lead Generation",
-    "description": "How website speed affects lead generation, Google rankings, and conversion rates. What slows sites down, what Core Web Vitals measure, and how to fix it.",
-    "intro": "A slow website is not just a poor user experience. It is a lead generation problem. Every second of delay costs visibility in search, increases bounce rates, and reduces the number of enquiries that come through. Most businesses have no idea how much it is costing them.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
+    "slug": "small-business-seo-guide-2026",
+    "title": "The Small Business Owner's Guide to SEO in 2026",
+    "description": "A practical SEO guide for small business owners in 2026. Covers fundamentals, AI search changes, local vs national strategy, content, and realistic expectations.",
+    "intro": "SEO has changed significantly in the last two years, but the fundamentals still hold. This guide is written for business owners who want to understand what actually works in 2026, what has changed with AI-driven search, and how to build a strategy that delivers results without wasting time or money on tactics that no longer matter.",
+    "date": "2026-03-24",
+    "displayDate": "March 24, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "SEO",
+      "Small Business"
+    ],
+    "url": "/insights/small-business-seo-guide-2026"
+  },
+  {
+    "slug": "how-to-get-on-first-page-of-google",
+    "title": "How to Get Your Small Business on the First Page of Google",
+    "description": "A practical guide to getting your small business on the first page of Google. Covers local SEO, Google Business Profile, on-page SEO, content, and backlinks.",
+    "intro": "Every small business owner wants to be on the first page of Google. The good news is that for local businesses, it is genuinely achievable. You are not competing against Amazon or Wikipedia — you are competing against other local businesses, most of whom are doing very little to optimise their online presence.",
+    "date": "2026-03-22",
+    "displayDate": "March 22, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "SEO",
+      "Small Business"
+    ],
+    "url": "/insights/how-to-get-on-first-page-of-google"
+  },
+  {
+    "slug": "how-to-choose-a-web-designer-in-perth",
+    "title": "How to Choose a Web Designer in Perth",
+    "description": "What to look for when choosing a web designer in Perth. Covers red flags, questions to ask, pricing models, and how to evaluate a designer's real capability.",
+    "intro": "Choosing a web designer is one of the most consequential decisions a small business makes. The right choice builds a digital asset that generates leads for years. The wrong one wastes months and money, and you end up doing it again sooner than planned.",
+    "date": "2026-03-20",
+    "displayDate": "March 20, 2026",
     "readTime": "10 min read",
     "tags": [
       "Website Design",
-      "SEO",
-      "Performance"
+      "Perth"
     ],
-    "url": "/insights/website-speed-and-lead-generation"
+    "url": "/insights/how-to-choose-a-web-designer-in-perth"
   },
   {
-    "slug": "what-makes-a-good-tradie-website",
-    "title": "What Makes a Good Plumber, Electrician, or Builder Website?",
-    "description": "What separates a tradie website that generates leads from one that sits idle. Structure, content, trust signals, local SEO, and conversion elements explained.",
-    "intro": "A good tradie website is not about flashy design or clever animations. It is about structure, clarity, and making it as easy as possible for a potential customer to trust you and get in touch. The websites that generate the most leads for plumbers, electricians, and builders share a set of common elements — and most of them have nothing to do with how the site looks.",
-    "date": "2026-03-26",
-    "displayDate": "March 26, 2026",
+    "slug": "how-much-does-a-website-cost",
+    "title": "How Much Does a Website Cost for a Small Business in Australia?",
+    "description": "What does a website actually cost in Australia? We break down pricing tiers, what affects the price, DIY vs professional, and how to think about ROI.",
+    "intro": "Website pricing in Australia ranges from a few hundred dollars to well over $50,000, and that spread confuses most business owners. The real question is not how much a website costs — it is how much revenue the right website will generate for your business relative to what you spend.",
+    "date": "2026-03-18",
+    "displayDate": "March 18, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Website Design",
+      "Pricing"
+    ],
+    "url": "/insights/how-much-does-a-website-cost"
+  },
+  {
+    "slug": "google-business-profile-guide",
+    "title": "Google Business Profile Optimisation Guide for Local Businesses",
+    "description": "How to optimise your Google Business Profile for local search. Covers setup, categories, photos, reviews, posts, and how GBP works with your website.",
+    "intro": "Your Google Business Profile is often the first thing a potential customer sees. For local businesses, it can drive more enquiries than the website itself. This guide covers how to set it up properly, optimise it for local search, and avoid the mistakes that cost visibility.",
+    "date": "2026-03-16",
+    "displayDate": "March 16, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "SEO",
+      "Local Business"
+    ],
+    "url": "/insights/google-business-profile-guide"
+  },
+  {
+    "slug": "diy-vs-professional-web-design",
+    "title": "DIY Website vs Professional Web Design — What's the Real Cost?",
+    "description": "Squarespace and Wix look cheap until you count the hidden costs. We compare DIY website builders to professional web design for Australian small businesses.",
+    "intro": "DIY website builders like Squarespace and Wix have made it possible for anyone to put a website online in a weekend. But \"possible\" and \"effective\" are not the same thing. The real cost of a website is not what you pay upfront — it is the revenue it generates or fails to generate over the life of your business.",
+    "date": "2026-03-14",
+    "displayDate": "March 14, 2026",
     "readTime": "11 min read",
     "tags": [
       "Website Design",
-      "Trades"
+      "Small Business"
     ],
-    "url": "/insights/what-makes-a-good-tradie-website"
+    "url": "/insights/diy-vs-professional-web-design"
+  },
+  {
+    "slug": "best-website-features-for-tradies",
+    "title": "Best Website Features for Tradies That Actually Get Leads",
+    "description": "The website features that actually generate leads for tradies. Click-to-call, service pages, reviews, galleries, mobile-first design, and more.",
+    "intro": "Most tradie websites are either overbuilt with features nobody uses, or underbuilt with nothing that helps a customer take action. The features that actually generate leads for trades businesses are simple, proven, and surprisingly few. Get these right and your website becomes your hardest-working salesperson.",
+    "date": "2026-03-12",
+    "displayDate": "March 12, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "Website Design",
+      "Trades",
+      "Lead Generation"
+    ],
+    "url": "/insights/best-website-features-for-tradies"
   },
   {
     "slug": "why-every-tradie-needs-a-website",
     "title": "Why Every Tradie Needs a Website (Not Just a Facebook Page)",
     "description": "A Facebook page is not a website. Tradies who rely on social media alone are losing jobs to competitors with a proper online presence.",
     "intro": "Most tradies start with a Facebook page because it is free and easy. But a Facebook page is not a website, and the difference between the two is costing trades businesses real money. The businesses that invest in a proper website consistently get more enquiries, better jobs, and stronger local visibility than those relying on social media alone.",
-    "date": "2026-03-23",
-    "displayDate": "March 23, 2026",
+    "date": "2026-03-10",
+    "displayDate": "March 10, 2026",
     "readTime": "10 min read",
     "tags": [
       "SEO",
@@ -161,8 +161,8 @@ export const INSIGHT_POSTS = [
     "title": "Building Your Website for LLMs",
     "description": "Your website now has two audiences. Humans and language models. How to structure content, implement llms.txt, and make your site readable by the AI tools people increasingly rely on.",
     "intro": "Your website has always been built for people. Now it needs to work for language models too. AI chatbots, search tools, copilots, and recommendation engines are reading your site every day, and the way they interpret your content determines whether your business gets surfaced or ignored in an increasing share of discovery.",
-    "date": "2026-03-19",
-    "displayDate": "March 19, 2026",
+    "date": "2026-03-08",
+    "displayDate": "March 8, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -176,8 +176,8 @@ export const INSIGHT_POSTS = [
     "title": "Google Search Generative Experience (SGE) and SEO: Navigating the New Search Landscape",
     "description": "How Google's AI Overviews change organic traffic, which content gets cited versus compressed, and what businesses should do to stay visible in AI-driven search.",
     "intro": "Google now generates AI-powered answers at the top of most search results. That changes how traffic is earned, which content stays valuable, and where businesses should focus their energy. The companies that treat this as a visibility shift will be better positioned than those waiting for things to go back to normal.",
-    "date": "2026-03-07",
-    "displayDate": "March 7, 2026",
+    "date": "2026-03-06",
+    "displayDate": "March 6, 2026",
     "readTime": "11 min read",
     "tags": [
       "SEO",
@@ -190,8 +190,8 @@ export const INSIGHT_POSTS = [
     "title": "How Does Design Impact Revenue?",
     "description": "How design affects conversion, pricing power, sales velocity, and retention. A practical look at the commercial value most businesses are leaving on the table.",
     "intro": "Design affects revenue long before a user clicks a button. It shapes how clearly the offer is understood, how credible the business feels, and how much confidence a buyer has in taking the next step. Most businesses underestimate how much commercial value is sitting in the gap between what they deliver and how they present themselves.",
-    "date": "2026-03-05",
-    "displayDate": "March 5, 2026",
+    "date": "2026-03-04",
+    "displayDate": "March 4, 2026",
     "readTime": "10 min read",
     "tags": [
       "Brand Design",

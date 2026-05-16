@@ -3,7 +3,7 @@ title: The Small Business Owner's Guide to SEO in 2026
 slug: small-business-seo-guide-2026
 description: A practical SEO guide for small business owners in 2026. Covers fundamentals, AI search changes, local vs national strategy, content, and realistic expectations.
 intro: SEO has changed significantly in the last two years, but the fundamentals still hold. This guide is written for business owners who want to understand what actually works in 2026, what has changed with AI-driven search, and how to build a strategy that delivers results without wasting time or money on tactics that no longer matter.
-date: 2026-03-26
+date: 2026-03-24
 readTime: 14 min read
 tags: SEO, Small Business
 ---

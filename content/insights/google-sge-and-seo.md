@@ -3,7 +3,7 @@ title: Google Search Generative Experience (SGE) and SEO: Navigating the New Sea
 slug: google-sge-and-seo
 description: How Google's AI Overviews change organic traffic, which content gets cited versus compressed, and what businesses should do to stay visible in AI-driven search.
 intro: Google now generates AI-powered answers at the top of most search results. That changes how traffic is earned, which content stays valuable, and where businesses should focus their energy. The companies that treat this as a visibility shift will be better positioned than those waiting for things to go back to normal.
-date: 2026-03-07
+date: 2026-03-06
 readTime: 11 min read
 tags: SEO, AI
 ---

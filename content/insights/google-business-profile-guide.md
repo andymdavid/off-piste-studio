@@ -3,7 +3,7 @@ title: Google Business Profile Optimisation Guide for Local Businesses
 slug: google-business-profile-guide
 description: How to optimise your Google Business Profile for local search. Covers setup, categories, photos, reviews, posts, and how GBP works with your website.
 intro: Your Google Business Profile is often the first thing a potential customer sees. For local businesses, it can drive more enquiries than the website itself. This guide covers how to set it up properly, optimise it for local search, and avoid the mistakes that cost visibility.
-date: 2026-03-26
+date: 2026-03-16
 readTime: 12 min read
 tags: SEO, Local Business
 ---

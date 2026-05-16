@@ -3,7 +3,7 @@ title: Building Your Website for LLMs
 slug: building-your-website-for-llms
 description: Your website now has two audiences. Humans and language models. How to structure content, implement llms.txt, and make your site readable by the AI tools people increasingly rely on.
 intro: Your website has always been built for people. Now it needs to work for language models too. AI chatbots, search tools, copilots, and recommendation engines are reading your site every day, and the way they interpret your content determines whether your business gets surfaced or ignored in an increasing share of discovery.
-date: 2026-03-19
+date: 2026-03-08
 readTime: 14 min read
 tags: SEO, AI, Website Design
 ---

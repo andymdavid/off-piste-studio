@@ -3,7 +3,7 @@ title: What Makes a Good Plumber, Electrician, or Builder Website?
 slug: what-makes-a-good-tradie-website
 description: What separates a tradie website that generates leads from one that sits idle. Structure, content, trust signals, local SEO, and conversion elements explained.
 intro: A good tradie website is not about flashy design or clever animations. It is about structure, clarity, and making it as easy as possible for a potential customer to trust you and get in touch. The websites that generate the most leads for plumbers, electricians, and builders share a set of common elements — and most of them have nothing to do with how the site looks.
-date: 2026-03-26
+date: 2026-03-30
 readTime: 11 min read
 tags: Website Design, Trades
 ---

@@ -3,7 +3,7 @@ title: Why Every Tradie Needs a Website (Not Just a Facebook Page)
 slug: why-every-tradie-needs-a-website
 description: A Facebook page is not a website. Tradies who rely on social media alone are losing jobs to competitors with a proper online presence.
 intro: Most tradies start with a Facebook page because it is free and easy. But a Facebook page is not a website, and the difference between the two is costing trades businesses real money. The businesses that invest in a proper website consistently get more enquiries, better jobs, and stronger local visibility than those relying on social media alone.
-date: 2026-03-23
+date: 2026-03-10
 readTime: 10 min read
 tags: SEO, Website Design, Trades
 ---

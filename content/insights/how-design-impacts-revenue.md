@@ -3,7 +3,7 @@ title: How Does Design Impact Revenue?
 slug: how-design-impacts-revenue
 description: How design affects conversion, pricing power, sales velocity, and retention. A practical look at the commercial value most businesses are leaving on the table.
 intro: Design affects revenue long before a user clicks a button. It shapes how clearly the offer is understood, how credible the business feels, and how much confidence a buyer has in taking the next step. Most businesses underestimate how much commercial value is sitting in the gap between what they deliver and how they present themselves.
-date: 2026-03-05
+date: 2026-03-04
 readTime: 10 min read
 tags: Brand Design, Website Design
 ---

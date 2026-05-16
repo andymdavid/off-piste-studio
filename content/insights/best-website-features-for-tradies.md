@@ -3,7 +3,7 @@ title: Best Website Features for Tradies That Actually Get Leads
 slug: best-website-features-for-tradies
 description: The website features that actually generate leads for tradies. Click-to-call, service pages, reviews, galleries, mobile-first design, and more.
 intro: Most tradie websites are either overbuilt with features nobody uses, or underbuilt with nothing that helps a customer take action. The features that actually generate leads for trades businesses are simple, proven, and surprisingly few. Get these right and your website becomes your hardest-working salesperson.
-date: 2026-03-26
+date: 2026-03-12
 readTime: 10 min read
 tags: Website Design, Trades, Lead Generation
 ---

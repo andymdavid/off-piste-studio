@@ -3,7 +3,7 @@ title: How Much Does a Website Cost for a Small Business in Australia?
 slug: how-much-does-a-website-cost
 description: What does a website actually cost in Australia? We break down pricing tiers, what affects the price, DIY vs professional, and how to think about ROI.
 intro: Website pricing in Australia ranges from a few hundred dollars to well over $50,000, and that spread confuses most business owners. The real question is not how much a website costs — it is how much revenue the right website will generate for your business relative to what you spend.
-date: 2026-03-26
+date: 2026-03-18
 readTime: 12 min read
 tags: Website Design, Pricing
 ---
