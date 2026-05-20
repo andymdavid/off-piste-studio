@@ -325,6 +325,11 @@
       -webkit-backdrop-filter: blur(24px);
     }
 
+    body[data-page-type="duplicate-home"] .duplicate-header.is-open .duplicate-header__nav {
+      max-width: 20rem;
+      padding: 0.45rem 0.78rem 0.62rem;
+    }
+
     body[data-page-type="duplicate-home"] .duplicate-header__row {
       display: flex;
       align-items: center;
@@ -526,18 +531,20 @@
     }
 
     body[data-page-type="duplicate-home"] .duplicate-header__menu-inner {
-      padding-top: 2rem;
-      padding-bottom: 0.15rem;
+      padding-top: 0.8rem;
+      padding-bottom: 0;
     }
 
     body[data-page-type="duplicate-home"] .duplicate-header__menu-link {
+      position: relative;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-      padding: 0.45rem 0;
-      color: #ffffff;
+      justify-content: flex-start;
+      gap: 0.6rem;
+      padding: 0.2rem 0;
+      color: rgba(255, 255, 255, 0.86);
       text-decoration: none;
+      transition: color 180ms ease;
     }
 
     body[data-page-type="duplicate-home"] .duplicate-header__menu-label,
@@ -545,6 +552,7 @@
       opacity: 0;
       transform: translateY(0.85rem);
       transition:
+        color 180ms ease,
         opacity 500ms ease,
         transform 500ms ease;
       transition-delay: 0ms;
@@ -553,11 +561,15 @@
     body[data-page-type="duplicate-home"] .duplicate-header__menu-label {
       display: block;
       font-family: Inter, "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
-      font-size: clamp(1.02rem, 1.92vw, 1.47rem);
-      font-weight: 600;
-      line-height: 0.95;
+      font-size: clamp(0.82rem, 1vw, 0.94rem);
+      font-weight: 500;
+      line-height: 0.9;
       letter-spacing: 0;
       text-transform: none;
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-header__menu-link .duplicate-header__icon {
+      display: none;
     }
 
     body[data-page-type="duplicate-home"] .duplicate-header.is-open .duplicate-header__menu-label,
@@ -567,8 +579,12 @@
       transition-delay: var(--item-delay, 120ms);
     }
 
-    body[data-page-type="duplicate-home"] .duplicate-header__menu-link:hover .duplicate-header__icon {
-      transform: translate(0.25rem, -0.25rem);
+    body[data-page-type="duplicate-home"] .duplicate-header__menu-link:hover {
+      color: rgba(255, 255, 255, 0.58);
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-header.is-open .duplicate-header__menu-link:hover .duplicate-header__menu-label {
+      transform: translateX(0.18rem);
     }
 
     @media (min-width: 768px) {
@@ -1665,10 +1681,27 @@
       padding-right: 1rem;
       border-bottom: 0 !important;
       border-top-color: rgba(255, 255, 255, 0.08) !important;
+      transition: background-color 180ms ease;
     }
 
     body[data-page-type="duplicate-home"] .about-grid .services__category:first-child {
       border-top: 0 !important;
+    }
+
+    body[data-page-type="duplicate-home"] .about-grid .services__title,
+    body[data-page-type="duplicate-home"] .about-grid .services__items {
+      transition:
+        color 180ms ease,
+        transform 180ms ease;
+    }
+
+    body[data-page-type="duplicate-home"] .about-grid .services__category:hover {
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    body[data-page-type="duplicate-home"] .about-grid .services__category:hover .services__title,
+    body[data-page-type="duplicate-home"] .about-grid .services__category:hover .services__items {
+      transform: translateX(0.18rem);
     }
 
     body[data-page-type="duplicate-home"] .about-grid__row--top {
@@ -1677,6 +1710,148 @@
 
     body[data-page-type="duplicate-home"] .about-grid .services__category:last-child {
       border-bottom: 0;
+    }
+
+    body[data-page-type="duplicate-home"] .pathways {
+      padding-top: 0;
+      padding-bottom: 0;
+      background: #121212;
+      border-top: 0;
+      border-bottom: 0;
+    }
+
+    body[data-page-type="duplicate-home"] .pathways > .container {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: clamp(0.9rem, 1.8vw, 1.4rem);
+      padding-right: clamp(0.9rem, 1.8vw, 1.4rem);
+    }
+
+    body[data-page-type="duplicate-home"] .pathways__grid {
+      display: grid;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    body[data-page-type="duplicate-home"] .pathways__intro {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      min-height: clamp(16rem, 28vw, 22rem);
+      background-image: linear-gradient(rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.08));
+      background-repeat: no-repeat;
+      background-size: 1px 100%;
+      background-position: 50% 0;
+    }
+
+    body[data-page-type="duplicate-home"] .pathways__intro-cell {
+      min-width: 0;
+      padding: 1.35rem 1rem 1.5rem;
+    }
+
+    body[data-page-type="duplicate-home"] .pathways__intro-cell--title,
+    body[data-page-type="duplicate-home"] .pathways__intro-cell--copy {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    body[data-page-type="duplicate-home"] .pathways__heading {
+      font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+      font-size: clamp(1.4rem, 2vw, 2rem);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 1.04;
+      color: rgba(255, 255, 255, 0.92);
+      width: 43.75rem;
+      max-width: 100%;
+      margin: 0 0 3.25rem;
+      text-wrap: balance;
+    }
+
+    body[data-page-type="duplicate-home"] .pathways__text {
+      font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.98rem;
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      line-height: 1.3;
+      color: rgba(255, 255, 255, 0.6);
+      max-width: 43.75rem;
+      margin: 0 0 3.25rem;
+      text-wrap: balance;
+    }
+
+    body[data-page-type="duplicate-home"] .pathways__list {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    body[data-page-type="duplicate-home"] .pathway {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      min-height: clamp(18rem, 25vw, 23rem);
+      padding: 1rem;
+      text-decoration: none;
+      color: inherit;
+      border-left: 1px solid rgba(255, 255, 255, 0.08);
+      transition:
+        background-color 180ms ease,
+        color 180ms ease;
+    }
+
+    body[data-page-type="duplicate-home"] .pathway:first-child {
+      border-left: 0;
+    }
+
+    body[data-page-type="duplicate-home"] .pathway__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: auto;
+      font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: rgba(255, 255, 255, 0.42);
+    }
+
+    body[data-page-type="duplicate-home"] .pathway__arrow {
+      font-size: 1rem;
+      line-height: 1;
+      transition: transform 180ms ease;
+    }
+
+    body[data-page-type="duplicate-home"] .pathway__title {
+      margin: 0 0 0.85rem;
+      font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+      font-size: clamp(1.36rem, 2.1vw, 2.15rem);
+      font-weight: 500;
+      letter-spacing: -0.045em;
+      line-height: 0.98;
+      color: rgba(255, 255, 255, 0.92);
+      text-wrap: balance;
+    }
+
+    body[data-page-type="duplicate-home"] .pathway__text {
+      margin: 0;
+      font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+      font-size: 0.92rem;
+      font-weight: 400;
+      letter-spacing: -0.015em;
+      line-height: 1.32;
+      color: rgba(255, 255, 255, 0.58);
+      text-wrap: balance;
+    }
+
+    body[data-page-type="duplicate-home"] .pathway:hover {
+      background: rgba(255, 255, 255, 0.035);
+    }
+
+    body[data-page-type="duplicate-home"] .pathway:hover .pathway__arrow {
+      transform: translate(0.2rem, -0.2rem);
     }
 
     body[data-page-type="duplicate-home"] .testimonials {
@@ -2868,6 +3043,41 @@
         max-width: none;
       }
 
+      body[data-page-type="duplicate-home"] .pathways__intro,
+      body[data-page-type="duplicate-home"] .pathways__list {
+        grid-template-columns: 1fr;
+        background-image: none;
+      }
+
+      body[data-page-type="duplicate-home"] .pathways__intro {
+        min-height: auto;
+      }
+
+      body[data-page-type="duplicate-home"] .pathways__intro-cell {
+        padding: 0.95rem;
+      }
+
+      body[data-page-type="duplicate-home"] .pathways__intro-cell + .pathways__intro-cell {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      body[data-page-type="duplicate-home"] .pathways__heading,
+      body[data-page-type="duplicate-home"] .pathways__text {
+        margin-bottom: 0;
+        max-width: none;
+      }
+
+      body[data-page-type="duplicate-home"] .pathway {
+        min-height: 14rem;
+        padding: 0.95rem;
+        border-left: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      body[data-page-type="duplicate-home"] .pathway__title {
+        font-size: clamp(1.45rem, 8vw, 2.2rem);
+      }
+
       body[data-page-type="duplicate-home"] .testimonials__logo-cell + .testimonials__logo-cell,
       body[data-page-type="duplicate-home"] .testimonial + .testimonial {
         border-left: 0;
@@ -3434,52 +3644,109 @@
             <div class="services__list">
               <div class="services__category">
                 <span class="services__number">(01)</span>
-                <h3 class="services__title"><a href="/services/branding">Identity</a></h3>
+                <h3 class="services__title"><a href="/services/branding">Brand</a></h3>
                 <ul class="services__items">
                   <li>Brand Strategy</li>
+                  <li>Positioning &amp; Messaging</li>
                   <li>Customer & Audience Analysis</li>
-                  <li>Foundational Brand Identity Design</li>
-                  <li>Design Brand Collateral</li>
+                  <li>Visual Identity Design</li>
                   <li>Brand Guidelines</li>
+                  <li>Sales &amp; Marketing Collateral</li>
                 </ul>
               </div>
 
               <div class="services__category">
                 <span class="services__number">(02)</span>
-                <h3 class="services__title">Conversion</h3>
+                <h3 class="services__title"><a href="/services/website-design">Website</a></h3>
                 <ul class="services__items">
-                  <li>Landing Pages</li>
-                  <li>Sales Collateral</li>
-                  <li>Ad Design & Copywriting</li>
-                  <li>Investor Readiness</li>
-                  <li>Pitch Deck Design</li>
+                  <li>Website Design</li>
+                  <li>Website Development</li>
+                  <li>UX &amp; Page Structure</li>
+                  <li>Conversion Copywriting</li>
+                  <li>Forms, Booking &amp; Lead Capture</li>
+                  <li>Analytics Setup</li>
                 </ul>
               </div>
 
               <div class="services__category">
                 <span class="services__number">(03)</span>
-                <h3 class="services__title">Customer Experience</h3>
+                <h3 class="services__title"><a href="/services/seo">Search</a></h3>
                 <ul class="services__items">
-                  <li><a href="/services/website-design">Website Design</a></li>
-                  <li>Storytelling & Copywriting</li>
-                  <li>User Experience</li>
-                  <li><a href="/services/seo">Search Engine Optimisation</a></li>
-                  <li>Product Design</li>
+                  <li>Technical SEO</li>
+                  <li>Local SEO</li>
+                  <li>Service &amp; Location Pages</li>
+                  <li>Google Business Profile</li>
+                  <li>Structured Data &amp; Schema</li>
+                  <li>AI Search Readiness</li>
                 </ul>
               </div>
 
               <div class="services__category">
                 <span class="services__number">(04)</span>
-                <h3 class="services__title">Content</h3>
+                <h3 class="services__title">Growth</h3>
                 <ul class="services__items">
                   <li>Content Strategy</li>
-                  <li>Long & Short Form Copywriting</li>
-                  <li>Content Marketing</li>
-                  <li>Social Media</li>
-                  <li>Email Marketing</li>
+                  <li>Articles, FAQs &amp; Case Studies</li>
+                  <li>SEO Iteration</li>
+                  <li>Website Updates</li>
+                  <li>Reporting &amp; Insights</li>
+                  <li>Performance Improvements</li>
                 </ul>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pathways" aria-labelledby="pathways-title">
+      <div class="container">
+        <div class="pathways__grid">
+          <div class="pathways__intro">
+            <div class="pathways__intro-cell pathways__intro-cell--title">
+              <h2 class="pathways__heading" id="pathways-title">Choose the right starting point.</h2>
+            </div>
+            <div class="pathways__intro-cell pathways__intro-cell--copy">
+              <p class="pathways__text">Some businesses need a sharper brand. Some need a new website. Others need search, content and ongoing improvement after launch. We meet you where the commercial problem starts.</p>
+            </div>
+          </div>
+
+          <div class="pathways__list">
+            <a href="/services/branding" class="pathway">
+              <div class="pathway__meta">
+                <span>(01)</span>
+                <span class="pathway__arrow" aria-hidden="true">→</span>
+              </div>
+              <h3 class="pathway__title">Brand Foundation</h3>
+              <p class="pathway__text">For businesses that need clearer positioning, messaging and identity before they ask the market to pay attention.</p>
+            </a>
+
+            <a href="/services/website-design" class="pathway">
+              <div class="pathway__meta">
+                <span>(02)</span>
+                <span class="pathway__arrow" aria-hidden="true">→</span>
+              </div>
+              <h3 class="pathway__title">Website Build</h3>
+              <p class="pathway__text">For businesses that need a professional website launched properly, with the structure to explain the offer and convert enquiries.</p>
+            </a>
+
+            <a href="/services/seo" class="pathway">
+              <div class="pathway__meta">
+                <span>(03)</span>
+                <span class="pathway__arrow" aria-hidden="true">→</span>
+              </div>
+              <h3 class="pathway__title">Website + Search</h3>
+              <p class="pathway__text">For businesses that need the site plus SEO foundations, local pages, structured content and stronger discovery.</p>
+            </a>
+
+            <a href="/contact" class="pathway">
+              <div class="pathway__meta">
+                <span>(04)</span>
+                <span class="pathway__arrow" aria-hidden="true">→</span>
+              </div>
+              <h3 class="pathway__title">Growth Partnership</h3>
+              <p class="pathway__text">For businesses that want ongoing content, SEO iteration, reporting, updates and performance improvement after launch.</p>
+            </a>
           </div>
         </div>
       </div>
