@@ -150,7 +150,9 @@
     }
 
     body[data-page-type="duplicate-home"] .hero-intro__button {
-      width: auto;
+      display: inline-flex;
+      align-items: center;
+      width: min(100%, var(--duplicate-home-button-width));
       min-width: 0;
       height: 42px;
       padding: 0 0.64rem;
