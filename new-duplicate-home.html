@@ -793,11 +793,21 @@
       font-size: 0.8rem;
     }
 
+    body[data-page-type="duplicate-home"] .client-bar__track {
+      contain: paint;
+      isolation: isolate;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+
     body[data-page-type="duplicate-home"] .client-bar__logos {
       gap: 0;
       animation: duplicateLogoMarquee 42s linear infinite;
       will-change: transform;
       transform: translate3d(0, 0, 0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
     }
 
     body[data-page-type="duplicate-home"] .client-bar__logo-set {
