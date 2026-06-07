@@ -713,6 +713,54 @@
       }
     }
 
+    body[data-page-type="duplicate-home"] .duplicate-header__actions {
+      display: inline-flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-theme-toggle {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.7);
+      opacity: 1;
+      pointer-events: auto;
+      transition: color 180ms ease, transform 180ms ease;
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-theme-toggle:hover {
+      color: #ffffff;
+      transform: scale(0.96);
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-theme-toggle__icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-theme-toggle__moon-mask {
+      transition: transform 300ms ease;
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-theme-toggle:hover .duplicate-theme-toggle__moon-mask {
+      transform: translate(-13px, 9px);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-theme-toggle__moon-mask {
+      transform: translate(-13px, 9px);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-theme-toggle:hover .duplicate-theme-toggle__moon-mask {
+      transform: translate(0, 0);
+    }
+
     body[data-page-type="duplicate-home"] .client-bar,
     body[data-page-type="duplicate-home"] .hero,
     body[data-page-type="duplicate-home"] .case-studies,
