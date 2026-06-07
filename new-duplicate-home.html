@@ -820,7 +820,9 @@
 
     body[data-page-type="duplicate-home"] .client-bar__logo {
       opacity: 0.7;
-      transition: opacity var(--transition-fast);
+      transition:
+        filter 180ms ease,
+        opacity var(--transition-fast);
     }
 
     body[data-page-type="duplicate-home"] .client-bar__logo:hover {
