@@ -424,9 +424,26 @@
     body[data-page-type="duplicate-home"] .duplicate-header__side-link {
       display: none;
       height: 2.75rem;
+      padding: 0;
       flex-shrink: 0;
       align-self: flex-start;
       pointer-events: auto;
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-header.is-scrolled .duplicate-header__side-link,
+    body[data-page-type="duplicate-home"] .duplicate-header.is-open .duplicate-header__side-link {
+      height: 3.25rem;
+      min-width: 8.25rem;
+      padding: 0 1rem;
+      background: rgba(8, 8, 8, 0.92);
+      border-radius: 10px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      color: #ffffff;
+    }
+
+    body[data-page-type="duplicate-home"] .duplicate-header.is-scrolled .duplicate-header__side-link:hover,
+    body[data-page-type="duplicate-home"] .duplicate-header.is-open .duplicate-header__side-link:hover {
+      color: #ffffff;
     }
 
     body[data-page-type="duplicate-home"] .duplicate-header__icon {
