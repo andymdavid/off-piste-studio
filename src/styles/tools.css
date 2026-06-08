@@ -86,7 +86,7 @@ body[data-page-type="tool"] {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   color: var(--color-text);
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.9375rem;
   transition: border-color var(--transition-fast);
 }
@@ -180,7 +180,7 @@ body[data-page-type="tool"] {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
   color: var(--color-text);
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.9375rem;
   transition: border-color var(--transition-fast);
 }
@@ -388,7 +388,7 @@ body[data-page-type="tool"] {
 }
 
 .contrast-checker__fix-color code {
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.875rem;
 }
 
@@ -508,7 +508,7 @@ body[data-page-type="tool"] {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 8px;
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.875rem;
   color: var(--color-text);
 }
@@ -748,7 +748,7 @@ body[data-page-type="tool"] {
 }
 
 .palette-card__hex {
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-text);
@@ -760,7 +760,7 @@ body[data-page-type="tool"] {
 }
 
 .palette-card__values {
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.6875rem;
   color: var(--color-text-muted);
 }
@@ -820,7 +820,7 @@ body[data-page-type="tool"] {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.8125rem;
   color: var(--color-text-muted);
   overflow-x: auto;
@@ -948,7 +948,7 @@ body[data-page-type="tool"] {
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 6px;
   color: var(--color-text);
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.75rem;
   box-sizing: border-box;
 }
@@ -1055,7 +1055,7 @@ body[data-page-type="tool"] {
    ========================================================================== */
 
 .preview-template {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: var(--font-primary);
   font-size: 13px;
   line-height: 1.5;
 }
@@ -1458,7 +1458,7 @@ body[data-page-type="tool"] {
 }
 
 .gradient-stop__percent {
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.75rem;
   color: var(--color-text-muted);
   width: 32px;
@@ -1691,7 +1691,7 @@ body[data-page-type="tool"] {
   border: none;
   background: transparent;
   color: var(--color-text);
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.8125rem;
   font-weight: 500;
   padding: 0.125rem 0;
@@ -1705,7 +1705,7 @@ body[data-page-type="tool"] {
 }
 
 .palette-slot__hsl {
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.625rem;
   color: var(--color-text-muted);
 }
@@ -1940,7 +1940,7 @@ body[data-page-type="tool"] {
 }
 
 .favicon-card__size {
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.9375rem;
   font-weight: 500;
   color: var(--color-text);
@@ -2739,7 +2739,7 @@ body[data-page-type="tool"] {
   padding: var(--space-md);
   margin: 0;
   overflow-x: auto;
-  font-family: 'Inter', monospace;
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.8125rem;
   line-height: 1.6;
   color: var(--color-text);
