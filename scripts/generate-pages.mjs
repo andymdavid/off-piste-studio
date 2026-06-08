@@ -121,7 +121,7 @@ const headerHtml = `
   </header>`;
 
 const footerHtml = `
-  <footer class="footer">
+  <footer class="footer footer--current">
     <div class="container">
       <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
       <div class="footer__sections">
@@ -380,7 +380,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-footer-typography">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-current-footer">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -534,7 +534,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-footer-typography">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-current-footer">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -690,7 +690,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-footer-typography">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-current-footer">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">

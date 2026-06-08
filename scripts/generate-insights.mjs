@@ -83,7 +83,7 @@ const headerHtml = `
   </header>`;
 
 const footerHtml = `
-  <footer class="footer">
+  <footer class="footer footer--current">
     <div class="container">
       <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
       <div class="footer__sections">
@@ -138,7 +138,7 @@ ${post.image ? `        "image": "https://offpistestudio.com${escapeHtml(post.im
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-footer-typography">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-current-footer">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
