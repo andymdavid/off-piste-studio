@@ -5262,58 +5262,6 @@
     (() => {
       if (document.body.dataset.pageType !== "duplicate-home") return;
 
-      const header = document.querySelector("[data-duplicate-header]");
-      const toggle = document.querySelector("[data-duplicate-nav-toggle]");
-      const overlay = document.querySelector("[data-duplicate-nav-overlay]");
-      const closeTargets = document.querySelectorAll("[data-duplicate-nav-close]");
-
-      if (!header || !toggle) return;
-
-      const setOpen = (isOpen) => {
-        header.classList.toggle("is-open", isOpen);
-        header.dataset.navigationStatus = isOpen ? "active" : "not-active";
-        document.body.dataset.duplicateNavOpen = isOpen ? "true" : "false";
-        toggle.setAttribute("aria-expanded", String(isOpen));
-        toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
-      };
-
-      let hasScrolled = null;
-      let scrollFrame = 0;
-
-      const syncScrollState = () => {
-        scrollFrame = 0;
-        const nextScrolled = window.scrollY > 24;
-        if (nextScrolled === hasScrolled) return;
-
-        hasScrolled = nextScrolled;
-        header.classList.toggle("is-scrolled", nextScrolled);
-      };
-
-      const updateScrollState = () => {
-        if (scrollFrame) return;
-        scrollFrame = window.requestAnimationFrame(syncScrollState);
-      };
-
-      syncScrollState();
-
-      toggle.addEventListener("click", () => {
-        setOpen(!header.classList.contains("is-open"));
-      });
-
-      overlay?.addEventListener("click", () => setOpen(false));
-      closeTargets.forEach((target) => {
-        target.addEventListener("click", () => setOpen(false));
-      });
-
-      window.addEventListener("scroll", updateScrollState, { passive: true });
-      window.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") setOpen(false);
-      });
-    })();
-
-    (() => {
-      if (document.body.dataset.pageType !== "duplicate-home") return;
-
       const pointerQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
       if (!pointerQuery.matches) return;
 

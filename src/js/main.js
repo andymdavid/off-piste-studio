@@ -34,26 +34,30 @@ function initCurrentHeader() {
   if (!header) return;
 
   const toggle = header.querySelector('[data-duplicate-nav-toggle]');
+  const overlay = document.querySelector('[data-duplicate-nav-overlay]');
   const closeTargets = header.querySelectorAll('[data-duplicate-nav-close]');
 
   const syncHeaderState = () => {
     header.classList.toggle('is-scrolled', window.scrollY > 24);
   };
 
-  const closeMenu = () => {
-    header.classList.remove('is-open');
-    if (toggle) {
-      toggle.setAttribute('aria-expanded', 'false');
-      toggle.setAttribute('aria-label', 'Open navigation');
-    }
-  };
+  const setMenuOpen = (isOpen) => {
+    header.classList.toggle('is-open', isOpen);
+    header.dataset.navigationStatus = isOpen ? 'active' : 'not-active';
+    document.body.dataset.duplicateNavOpen = isOpen ? 'true' : 'false';
 
-  const toggleMenu = () => {
-    const isOpen = header.classList.toggle('is-open');
     if (toggle) {
       toggle.setAttribute('aria-expanded', String(isOpen));
       toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
     }
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const toggleMenu = () => {
+    setMenuOpen(!header.classList.contains('is-open'));
   };
 
   syncHeaderState();
@@ -62,6 +66,8 @@ function initCurrentHeader() {
   if (toggle) {
     toggle.addEventListener('click', toggleMenu);
   }
+
+  overlay?.addEventListener('click', closeMenu);
 
   closeTargets.forEach(target => {
     target.addEventListener('click', closeMenu);
