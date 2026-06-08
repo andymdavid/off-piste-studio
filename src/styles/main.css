@@ -4510,3 +4510,49 @@ body .footer__location::before {
     line-height: 0.78;
   }
 }
+
+body .footer .footer__statement {
+  font-family: var(--font-serif) !important;
+  font-size: clamp(1.75rem, 3.4vw, 3.1rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.08 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+body .footer .footer__description,
+body .footer .footer__section-title,
+body .footer .footer__nav-link,
+body .footer .footer__contact-link,
+body .footer .footer__copyright,
+body .footer .footer__location {
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif !important;
+  text-transform: none !important;
+}
+
+body .footer .footer__section-title {
+  font-size: 0.98rem !important;
+  font-weight: 700 !important;
+  line-height: 1 !important;
+  letter-spacing: -0.02em !important;
+}
+
+body .footer .footer__nav-link,
+body .footer .footer__contact-link {
+  font-size: 0.92rem !important;
+  font-weight: 400 !important;
+  line-height: 1.22 !important;
+  letter-spacing: -0.01em !important;
+}
+
+body .footer .footer__nav-link:hover,
+body .footer .footer__contact-link:hover {
+  font-weight: 700 !important;
+}
+
+body .footer .footer__brand {
+  font-family: var(--font-logo) !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase !important;
+}
