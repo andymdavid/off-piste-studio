@@ -610,54 +610,6 @@ function initProjectFilter() {
   });
 }
 
-function initScrambleText() {
-  const targets = document.querySelectorAll('[data-scramble-text]');
-  if (!targets.length) return;
-
-  const characters = ['0', '1', '/', '<', '>', '{', '}', '[', ']', '_', '=', '+', '#', '$'];
-  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  targets.forEach(target => {
-    const originalText = target.textContent.trim();
-    if (!originalText || target.dataset.scrambleReady === 'true') return;
-
-    target.dataset.scrambleReady = 'true';
-
-    target.addEventListener('mouseenter', () => {
-      if (prefersReducedMotion) return;
-
-      const letters = Array.from(originalText);
-      let frame = 0;
-      const totalFrames = 18;
-
-      window.clearInterval(target.scrambleTimer);
-      target.style.minWidth = `${target.offsetWidth}px`;
-
-      target.scrambleTimer = window.setInterval(() => {
-        const resolvedCount = Math.floor((frame / totalFrames) * letters.length);
-
-        target.textContent = letters.map((letter, index) => {
-          if (letter === ' ') return ' ';
-          if (index < resolvedCount) return letter;
-          return characters[Math.floor(Math.random() * characters.length)];
-        }).join('');
-
-        frame += 1;
-
-        if (frame > totalFrames) {
-          window.clearInterval(target.scrambleTimer);
-          target.textContent = originalText;
-        }
-      }, 34);
-    });
-
-    target.addEventListener('mouseleave', () => {
-      window.clearInterval(target.scrambleTimer);
-      target.textContent = originalText;
-    });
-  });
-}
-
 function createInsightRow(post) {
   const article = document.createElement('article');
   article.className = 'insight-row';
@@ -950,7 +902,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectSlideshow();
   initInsightsList();
   initProjectFilter();
-  initScrambleText();
   initRelatedPosts();
   initLeadModal();
   initEstimator();

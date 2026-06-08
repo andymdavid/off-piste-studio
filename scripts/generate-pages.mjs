@@ -139,7 +139,7 @@ const fontsHtml = `
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/main.css?v=20260608-static-css-v3">`;
+  <link rel="stylesheet" href="/styles/main.css?v=20260608-static-css-v4">`;
 
 const projectSlideshowHtml = `
     <div class="project-modal project-modal--page">
