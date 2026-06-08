@@ -11,6 +11,7 @@ export const INSIGHT_POSTS = [
       "Website Design",
       "Trades"
     ],
+    "imageAlt": "What Makes a Good Plumber, Electrician, or Builder Website?",
     "url": "/insights/what-makes-a-good-tradie-website"
   },
   {
@@ -26,6 +27,7 @@ export const INSIGHT_POSTS = [
       "SEO",
       "Performance"
     ],
+    "imageAlt": "Website Speed and Why It Matters for Lead Generation",
     "url": "/insights/website-speed-and-lead-generation"
   },
   {
@@ -40,6 +42,7 @@ export const INSIGHT_POSTS = [
       "Website Design",
       "Small Business"
     ],
+    "imageAlt": "Website Redesign Checklist for Small Businesses",
     "url": "/insights/website-redesign-checklist"
   },
   {
@@ -54,6 +57,7 @@ export const INSIGHT_POSTS = [
       "SEO",
       "Small Business"
     ],
+    "imageAlt": "The Small Business Owner's Guide to SEO in 2026",
     "url": "/insights/small-business-seo-guide-2026"
   },
   {
@@ -68,6 +72,7 @@ export const INSIGHT_POSTS = [
       "SEO",
       "Small Business"
     ],
+    "imageAlt": "How to Get Your Small Business on the First Page of Google",
     "url": "/insights/how-to-get-on-first-page-of-google"
   },
   {
@@ -82,6 +87,7 @@ export const INSIGHT_POSTS = [
       "Website Design",
       "Perth"
     ],
+    "imageAlt": "How to Choose a Web Designer in Perth",
     "url": "/insights/how-to-choose-a-web-designer-in-perth"
   },
   {
@@ -96,6 +102,7 @@ export const INSIGHT_POSTS = [
       "Website Design",
       "Pricing"
     ],
+    "imageAlt": "How Much Does a Website Cost for a Small Business in Australia?",
     "url": "/insights/how-much-does-a-website-cost"
   },
   {
@@ -110,6 +117,7 @@ export const INSIGHT_POSTS = [
       "SEO",
       "Local Business"
     ],
+    "imageAlt": "Google Business Profile Optimisation Guide for Local Businesses",
     "url": "/insights/google-business-profile-guide"
   },
   {
@@ -124,6 +132,7 @@ export const INSIGHT_POSTS = [
       "Website Design",
       "Small Business"
     ],
+    "imageAlt": "DIY Website vs Professional Web Design — What's the Real Cost?",
     "url": "/insights/diy-vs-professional-web-design"
   },
   {
@@ -139,6 +148,7 @@ export const INSIGHT_POSTS = [
       "Trades",
       "Lead Generation"
     ],
+    "imageAlt": "Best Website Features for Tradies That Actually Get Leads",
     "url": "/insights/best-website-features-for-tradies"
   },
   {
@@ -154,6 +164,7 @@ export const INSIGHT_POSTS = [
       "Website Design",
       "Trades"
     ],
+    "imageAlt": "Why Every Tradie Needs a Website (Not Just a Facebook Page)",
     "url": "/insights/why-every-tradie-needs-a-website"
   },
   {
@@ -169,6 +180,7 @@ export const INSIGHT_POSTS = [
       "AI",
       "Website Design"
     ],
+    "imageAlt": "Building Your Website for LLMs",
     "url": "/insights/building-your-website-for-llms"
   },
   {
@@ -183,6 +195,7 @@ export const INSIGHT_POSTS = [
       "SEO",
       "AI"
     ],
+    "imageAlt": "Google Search Generative Experience (SGE) and SEO: Navigating the New Search Landscape",
     "url": "/insights/google-sge-and-seo"
   },
   {
@@ -197,6 +210,7 @@ export const INSIGHT_POSTS = [
       "Brand Design",
       "Website Design"
     ],
+    "imageAlt": "How Does Design Impact Revenue?",
     "url": "/insights/how-design-impacts-revenue"
   },
   {
@@ -212,6 +226,7 @@ export const INSIGHT_POSTS = [
       "User Experience",
       "Website Design"
     ],
+    "imageAlt": "Website Accessibility and SEO",
     "url": "/insights/website-accessibility-and-seo"
   }
 ];
