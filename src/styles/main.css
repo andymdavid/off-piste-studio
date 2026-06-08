@@ -4154,14 +4154,14 @@ body.lead-modal-open {
 .footer.footer--current .footer__statement {
   max-width: 18ch !important;
   margin: 0 !important;
-  font-family: var(--font-serif) !important;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif !important;
   font-size: clamp(1.75rem, 3.4vw, 3.1rem) !important;
-  font-weight: 400 !important;
-  line-height: 1.08 !important;
-  letter-spacing: 0 !important;
+  font-weight: 500 !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.04em !important;
   text-transform: none !important;
   text-wrap: balance !important;
-  color: #ffffff !important;
+  color: rgba(255, 255, 255, 0.92) !important;
 }
 
 .footer.footer--current .footer__description {
