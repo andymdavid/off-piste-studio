@@ -16,6 +16,15 @@ tags: SEO, AI
 ---
 ```
 
+Optional frontmatter:
+
+```md
+image: /images/insights/your-post-image.webp
+imageAlt: Short description of the image
+```
+
+When provided, `image` is used as the primary image for homepage/blog feeds before any fallback image mapping.
+
 Supported markdown in the body:
 
 - `## Heading`
