@@ -8,11 +8,11 @@ module.exports = {
       "script": "bash",
       "args": [
         "-c",
-        "set -a; [ -f .env ] && . ./.env; set +a; export APP_ID='a54f297c-c139-4f53-8f0d-0350e586ad1b' APP_LABEL='Off Piste Studio' USER_ALIAS='swift-zinnia-forge' PORT=41011; npm run dev"
+        "set -a; [ -f .env ] && . ./.env; set +a; export APP_ID='05793a68-be41-485c-9ff0-1405f4add6a6' APP_LABEL='Off Piste Studio' USER_ALIAS='swift-zinnia-forge' PORT=42001; npm run dev"
       ],
-      "cwd": "/home/pw21/wingman/swift-zinnia-forge/off-piste-studio",
-      "out_file": "/home/pw21/wingman/swift-zinnia-forge/off-piste-studio/apps/logs/swift-zinnia-forge-app-off-piste-studio-out.log",
-      "error_file": "/home/pw21/wingman/swift-zinnia-forge/off-piste-studio/apps/logs/swift-zinnia-forge-app-off-piste-studio-error.log",
+      "cwd": "/workspace/off-piste-studio",
+      "out_file": "/workspace/off-piste-studio/apps/logs/swift-zinnia-forge-app-off-piste-studio-out.log",
+      "error_file": "/workspace/off-piste-studio/apps/logs/swift-zinnia-forge-app-off-piste-studio-error.log",
       "log_date_format": "YYYY-MM-DD HH:mm:ss",
       "merge_logs": true,
       "autorestart": false,
