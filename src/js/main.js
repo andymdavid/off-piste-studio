@@ -891,8 +891,10 @@ function initEstimator() {
   update();
 }
 
-// Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
+function initSite() {
+  if (document.documentElement.dataset.siteInitialized === 'true') return;
+  document.documentElement.dataset.siteInitialized = 'true';
+
   initCurrentHeader();
   initMobileMenu();
   initHeaderDropdowns();
@@ -915,7 +917,14 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     scaleFooterBrand();
   }
-});
+}
+
+// Initialize on DOM ready, or immediately if the module loads after the event.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSite);
+} else {
+  initSite();
+}
 
 // Rescale on window resize
 window.addEventListener('resize', scaleFooterBrand);
