@@ -138,7 +138,8 @@ const fontsHtml = `
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">`;
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/main.css?v=20260608-static-css-v2">`;
 
 const projectSlideshowHtml = `
     <div class="project-modal project-modal--page">
@@ -380,7 +381,6 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-neue-ui">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -534,7 +534,6 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-neue-ui">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -690,7 +689,6 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260608-neue-ui">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">
