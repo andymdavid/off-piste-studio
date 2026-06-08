@@ -3,39 +3,112 @@ import { INSIGHT_POSTS } from '../generated/insights-data.js';
 
 // Scale footer brand to fill the horizontal space available to it.
 function scaleFooterBrand() {
-  if (document.body.dataset.pageType === 'duplicate-home') return;
-
   const brand = document.querySelector('.footer__brand');
   if (!brand) return;
+  const brandText = brand.querySelector('.footer__brand-text');
+  const measuredElement = brandText || brand;
 
   const styles = getComputedStyle(brand);
   const paddingLeft = parseFloat(styles.paddingLeft) || 0;
   const paddingRight = parseFloat(styles.paddingRight) || 0;
 
-  // On pages where the brand sits inside `.container`, use that width.
-  // On the homepage it bleeds full-width, so use the element's own width.
-  const container = brand.closest('.container');
-  const availableWidth = container
-    ? container.clientWidth - paddingLeft - paddingRight
-    : brand.clientWidth - paddingLeft - paddingRight;
+  const availableWidth = brand.clientWidth - paddingLeft - paddingRight;
 
   if (availableWidth <= 0) return;
 
-  // Reset to a predictable base size before measuring the text width.
-  brand.style.fontSize = '100px';
-  brand.style.display = 'inline-block';
-  brand.style.width = 'auto';
-
+  brand.style.setProperty('--footer-brand-scale', '1');
+  brand.classList.remove('is-fit');
   brand.offsetHeight;
 
-  const textWidth = brand.scrollWidth;
+  const textWidth = measuredElement.scrollWidth;
   if (!textWidth) return;
 
-  const newFontSize = (100 * availableWidth) / textWidth;
+  const scale = availableWidth / textWidth;
 
-  brand.style.fontSize = newFontSize + 'px';
-  brand.style.display = 'block';
-  brand.style.width = '';
+  brand.style.setProperty('--footer-brand-scale', scale.toString());
+  brand.classList.add('is-fit');
+}
+
+function initCurrentHeader() {
+  const header = document.querySelector('[data-duplicate-header]');
+  if (!header) return;
+
+  const toggle = header.querySelector('[data-duplicate-nav-toggle]');
+  const closeTargets = header.querySelectorAll('[data-duplicate-nav-close]');
+
+  const syncHeaderState = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 24);
+  };
+
+  const closeMenu = () => {
+    header.classList.remove('is-open');
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Open navigation');
+    }
+  };
+
+  const toggleMenu = () => {
+    const isOpen = header.classList.toggle('is-open');
+    if (toggle) {
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+    }
+  };
+
+  syncHeaderState();
+  window.addEventListener('scroll', syncHeaderState, { passive: true });
+
+  if (toggle) {
+    toggle.addEventListener('click', toggleMenu);
+  }
+
+  closeTargets.forEach(target => {
+    target.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') closeMenu();
+  });
+}
+
+function initFooterWordmark() {
+  if (document.body.dataset.pageType === 'duplicate-home') return;
+
+  const brand = document.querySelector('.footer__brand');
+  const brandText = brand?.querySelector('.footer__brand-text');
+  if (!brand || !brandText || brand.dataset.wordmarkReady === 'true') return;
+
+  const text = brandText.textContent || '';
+  brandText.innerHTML = Array.from(text).map((character, index) => {
+    const className = character === ' ' ? 'footer__brand-letter footer__brand-letter--space' : 'footer__brand-letter';
+    const content = character === ' ' ? '&nbsp;' : character;
+    return `<span class="${className}" style="--footer-brand-letter-index: ${index}">${content}</span>`;
+  }).join('');
+  brand.dataset.wordmarkReady = 'true';
+
+  const startAnimation = () => {
+    scaleFooterBrand();
+    brand.classList.add('is-animated');
+  };
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    startAnimation();
+    return;
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      const entry = entries[0];
+      if (!entry?.isIntersecting) return;
+      observer.disconnect();
+      startAnimation();
+    }, { threshold: 0.35 });
+
+    observer.observe(brand);
+  } else {
+    startAnimation();
+  }
 }
 
 // Mobile menu toggle
@@ -820,6 +893,7 @@ function initEstimator() {
 
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
+  initCurrentHeader();
   initMobileMenu();
   initHeaderDropdowns();
   initHeroDistortion();
@@ -833,6 +907,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initEstimator();
   initLlmsDemos();
   initShareButtons();
+  initFooterWordmark();
 
   // Scale footer brand after fonts load
   if (document.fonts) {
