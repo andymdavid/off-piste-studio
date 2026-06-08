@@ -2144,6 +2144,18 @@
       letter-spacing: -0.02em;
       line-height: 1.2;
       color: rgba(255, 255, 255, 0.88);
+      transition:
+        background-color 180ms ease,
+        color 180ms ease;
+    }
+
+    body[data-page-type="duplicate-home"] .testimonials__industries-item:hover {
+      background: #fdfdfc;
+      color: rgba(18, 18, 18, 0.9);
+    }
+
+    body[data-page-type="duplicate-home"] .testimonials__industries-item:first-child {
+      border-top: 0;
     }
 
     body[data-page-type="duplicate-home"] .testimonials__industries-item + .testimonials__industries-item {
