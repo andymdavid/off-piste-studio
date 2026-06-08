@@ -2334,7 +2334,6 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 2px;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
     }
 
     body[data-page-type="duplicate-home"] .testimonial + .testimonial {
@@ -2383,6 +2382,8 @@
 
     body[data-page-type="duplicate-home"] .hero__button,
     body[data-page-type="duplicate-home"] .services__button {
+      display: inline-flex;
+      align-items: center;
       background: #1b1b1b;
       color: #ababab;
       border: 1px solid #1b1b1b;
@@ -2393,9 +2394,10 @@
       letter-spacing: -0.01em;
       text-transform: none;
       min-width: 0;
-      width: auto;
+      width: min(100%, var(--duplicate-home-button-width, 13.25rem));
       padding: 0 0.8rem;
       height: 42px;
+      justify-content: center;
     }
 
     body[data-page-type="duplicate-home"] .hero__button:hover,
@@ -2499,8 +2501,6 @@
       border: 1px solid rgba(255, 255, 255, 0.06);
       border-radius: 2px;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
     }
 
     body[data-page-type="duplicate-home"] .case-card {
@@ -2742,8 +2742,6 @@
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 2px;
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
     }
 
     body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial + .testimonial {
@@ -2929,7 +2927,6 @@
 
     body[data-page-type="duplicate-home"] .footer {
       padding-top: clamp(5.5rem, 10vw, 9rem);
-      /* Alternate footer exploration: #0000f8 */
       background: var(--color-bg-dark);
       border-top: 0;
     }
@@ -2980,10 +2977,11 @@
 
     body[data-page-type="duplicate-home"] .footer__section-title {
       font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
-      font-size: 0.92rem;
-      font-weight: 400;
-      letter-spacing: -0.015em;
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       line-height: 1;
+      text-transform: none;
       color: rgba(255, 255, 255, 0.72);
     }
 
@@ -3013,7 +3011,8 @@
 
     body[data-page-type="duplicate-home"] .footer__nav-link:hover,
     body[data-page-type="duplicate-home"] .footer__contact-link:hover {
-      color: rgba(255, 255, 255, 0.58);
+      color: #ffffff;
+      font-weight: 700;
       transform: translateX(3px);
     }
 
@@ -3046,7 +3045,6 @@
     body[data-page-type="duplicate-home"] .footer__brand {
       font-family: var(--font-logo);
       font-size: clamp(4.6rem, 15.6vw, 20rem);
-      height: clamp(7rem, 19vw, 24rem);
       font-weight: 400;
       letter-spacing: 0;
       line-height: 0.8;
@@ -3062,16 +3060,56 @@
       transform-origin: left bottom;
     }
 
-    body[data-page-type="duplicate-home"] .footer__brand-canvas {
-      display: block;
-      width: 100%;
-      height: 100%;
-      cursor: default;
-      user-select: none;
+    body[data-page-type="duplicate-home"] .footer__brand-text {
+      display: inline-block;
+      visibility: hidden;
+      transform: scaleX(var(--footer-brand-scale, 1));
+      transform-origin: left bottom;
+      will-change: transform;
     }
 
-    body[data-page-type="duplicate-home"] .footer__brand-text {
-      display: none;
+    body[data-page-type="duplicate-home"] .footer__brand.is-fit .footer__brand-text {
+      visibility: visible;
+    }
+
+    body[data-page-type="duplicate-home"] .footer__brand-letter {
+      display: inline-block;
+      transform: translateY(105%);
+      opacity: 0;
+      will-change: transform, opacity;
+    }
+
+    body[data-page-type="duplicate-home"] .footer__brand.is-animated .footer__brand-letter {
+      animation: footerBrandLetterRise 720ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      animation-delay: calc(var(--footer-brand-letter-index, 0) * 125ms);
+    }
+
+    body[data-page-type="duplicate-home"] .footer__brand-letter--space {
+      width: 0.24em;
+    }
+
+    @keyframes footerBrandLetterRise {
+      from {
+        transform: translateY(105%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      body[data-page-type="duplicate-home"] .footer__brand-letter {
+        transform: translateY(0);
+        opacity: 1;
+        animation: none;
+      }
+
+      body[data-page-type="duplicate-home"] .footer__brand-text {
+        visibility: visible;
+      }
     }
 
     body[data-page-type="duplicate-home"] .footer__bottom {
@@ -3161,9 +3199,11 @@
       }
 
       body[data-page-type="duplicate-home"] .testimonials__row--intro,
+      body[data-page-type="duplicate-home"] .testimonials__row--industries,
       body[data-page-type="duplicate-home"] .testimonials__row--logos,
       body[data-page-type="duplicate-home"] .testimonials__row--quotes {
         grid-template-columns: 1fr;
+        grid-template-rows: auto;
         background-image: none;
       }
 
@@ -3183,9 +3223,20 @@
       }
 
       body[data-page-type="duplicate-home"] .testimonials__intro-cell,
+      body[data-page-type="duplicate-home"] .testimonials__industries-cell,
       body[data-page-type="duplicate-home"] .testimonials__logo-cell,
       body[data-page-type="duplicate-home"] .testimonial {
         padding: 0.95rem;
+      }
+
+      body[data-page-type="duplicate-home"] .testimonials__industries-cell--copy {
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      body[data-page-type="duplicate-home"] .testimonials__industries-headline,
+      body[data-page-type="duplicate-home"] .testimonials__industries-copy {
+        margin-bottom: 0;
+        max-width: none;
       }
 
       body[data-page-type="duplicate-home"] .testimonials__heading {
@@ -3237,6 +3288,7 @@
       }
 
       body[data-page-type="duplicate-home"] .pathways__intro-cell + .pathways__intro-cell {
+        border-left: 0;
         border-top: 1px solid rgba(255, 255, 255, 0.08);
       }
 
@@ -3255,6 +3307,21 @@
 
       body[data-page-type="duplicate-home"] .pathway__title {
         font-size: clamp(1.45rem, 8vw, 2.2rem);
+      }
+
+      body[data-page-type="duplicate-home"] .pathway__body,
+      body[data-page-type="duplicate-home"] .pathway:hover .pathway__body,
+      body[data-page-type="duplicate-home"] .pathway:focus-visible .pathway__body {
+        transform: none;
+      }
+
+      body[data-page-type="duplicate-home"] .pathway__details,
+      body[data-page-type="duplicate-home"] .pathway:hover .pathway__details,
+      body[data-page-type="duplicate-home"] .pathway:focus-visible .pathway__details {
+        max-height: none;
+        margin-top: 1rem;
+        opacity: 1;
+        transform: none;
       }
 
       body[data-page-type="duplicate-home"] .testimonials__logo-cell + .testimonials__logo-cell,
@@ -3334,14 +3401,6 @@
         line-height: 0.78;
       }
 
-      body[data-page-type="duplicate-home"] .footer__brand-canvas {
-        display: none;
-      }
-
-      body[data-page-type="duplicate-home"] .footer__brand-text {
-        display: block;
-      }
-
       body[data-page-type="duplicate-home"] .case-studies__row,
       body[data-page-type="duplicate-home"] .case-studies__row--top,
       body[data-page-type="duplicate-home"] .case-studies__row--bottom {
@@ -3415,8 +3474,6 @@
         height: 58px;
         padding: 0 1rem 0 1.15rem;
         background: rgba(18, 18, 18, 0.34);
-        backdrop-filter: blur(14px) saturate(120%);
-        -webkit-backdrop-filter: blur(14px) saturate(120%);
         border: 1px solid rgba(255, 255, 255, 0.06);
         border-left: 0;
         border-right: 0;
@@ -3522,8 +3579,6 @@
         background: rgba(18, 18, 18, 0.88);
         border: 0;
         border-radius: 2px;
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
       }
 
       body[data-page-type="duplicate-home"] .header__dropdown-link {
@@ -3550,9 +3605,854 @@
         background: rgba(255, 255, 255, 0.88);
       }
     }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] {
+      background: #fdfdfc;
+      color: rgba(18, 18, 18, 0.9);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] main,
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro,
+    body[data-page-type="duplicate-home"][data-theme="light"] .client-bar,
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies,
+    body[data-page-type="duplicate-home"][data-theme="light"] .between-strip,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-section,
+    body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate,
+    body[data-page-type="duplicate-home"][data-theme="light"] .closing-cta,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segments,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer {
+      background: #fdfdfc !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-nav-overlay {
+      background: rgba(253, 253, 252, 0.42);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header {
+      color: #121212;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__nav,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__nav,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__side-link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__side-link {
+      background: rgba(8, 8, 8, 0.92);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__brand,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__brand-text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__link:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__side-link:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__menu-link {
+      color: #121212;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__brand,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__brand,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__brand-text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__brand-text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__side-link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__side-link {
+      color: #ffffff;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__side-link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__menu-toggle,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-theme-toggle {
+      color: rgba(18, 18, 18, 0.58);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__menu-toggle,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-toggle,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-theme-toggle,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-theme-toggle {
+      color: rgba(255, 255, 255, 0.7);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__menu-toggle:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-theme-toggle:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__menu-link:hover {
+      color: rgba(18, 18, 18, 0.9);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__side-link:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__side-link:hover {
+      color: #ffffff;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-cursor {
+      background: rgba(18, 18, 18, 0.88);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-cursor.is-pressed {
+      background: rgba(18, 18, 18, 0.64);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer {
+      background: rgba(18, 18, 18, 0.035) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__mark,
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__icon {
+      filter: invert(1);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark {
+      filter: none;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__scroll {
+      color: rgba(18, 18, 18, 0.44);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__title,
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero__headline,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__heading,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segments__heading,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__heading,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__heading,
+    body[data-page-type="duplicate-home"][data-theme="light"] .closing-cta__headline,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__heading,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__statement,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__title,
+    body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate .faq__question,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__heading,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway__title,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__title,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__title,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonial__quote,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__brand,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__section-title {
+      color: rgba(18, 18, 18, 0.92) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero__subtext,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__intro,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segments__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segment__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__items,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__items a,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__excerpt,
+    body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate .faq__answer,
+    body[data-page-type="duplicate-home"][data-theme="light"] .closing-cta__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__description,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__copyright,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__location {
+      color: rgba(18, 18, 18, 0.62) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .client-bar__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__number,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonial__label,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__tags span,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__meta,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__date,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonial__role {
+      color: rgba(18, 18, 18, 0.46) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .between-strip__link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segment__link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__nav-link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__contact-link {
+      color: rgba(18, 18, 18, 0.78) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .between-strip__link:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__title-link:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__link:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segment__link:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__nav-link:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__contact-link:hover {
+      color: rgba(18, 18, 18, 0.98) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__button,
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero__button,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__button,
+    body[data-page-type="duplicate-home"][data-theme="light"] .closing-cta__button,
+    body[data-page-type="duplicate-home"][data-theme="light"] .lara-dock__toggle,
+    body[data-page-type="duplicate-home"][data-theme="light"] .lara-dock__ask {
+      background: #f5f5f4 !important;
+      border-color: transparent !important;
+      color: #121212 !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__button:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero__button:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__button:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .closing-cta__button:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .lara-dock__ask:hover {
+      background: #121212 !important;
+      border-color: #121212 !important;
+      color: #fdfdfc !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segment,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonial,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__cta,
+    body[data-page-type="duplicate-home"][data-theme="light"] .lara-dock__panel,
+    body[data-page-type="duplicate-home"][data-theme="light"] .lara-dock__choice {
+      background: rgba(18, 18, 18, 0.025) !important;
+      border-color: rgba(18, 18, 18, 0.08) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .client-bar,
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero.section,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies,
+    body[data-page-type="duplicate-home"][data-theme="light"] .between-strip,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-section,
+    body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate,
+    body[data-page-type="duplicate-home"][data-theme="light"] .closing-cta,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segments,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__sections,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__section,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__bottom,
+    body[data-page-type="duplicate-home"][data-theme="light"] .faq__item,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__footer,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__category,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes,
+    body[data-page-type="duplicate-home"][data-theme="light"] .between-strip__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .closing-cta__row,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__grid {
+      border-color: rgba(18, 18, 18, 0.08) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__footer::before {
+      background: rgba(18, 18, 18, 0.08) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__row--top,
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__service-row + .about-grid__service-row,
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid .services__category,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--intro,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__industries-cell--copy,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__industries-cell--options,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__industries-item + .testimonials__industries-item,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__avatar,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--bottom,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__list,
+    body[data-page-type="duplicate-home"][data-theme="light"] .services__category {
+      border-color: rgba(18, 18, 18, 0.08) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__row--top,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--top {
+      background-image: linear-gradient(rgba(18, 18, 18, 0.08), rgba(18, 18, 18, 0.08)) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-row--cards {
+      background-image:
+        linear-gradient(rgba(18, 18, 18, 0.08), rgba(18, 18, 18, 0.08)),
+        linear-gradient(rgba(18, 18, 18, 0.08), rgba(18, 18, 18, 0.08));
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--intro {
+      background-image: linear-gradient(
+        to right,
+        transparent calc(50% - 0.5px),
+        rgba(18, 18, 18, 0.08) calc(50% - 0.5px),
+        rgba(18, 18, 18, 0.08) calc(50% + 0.5px),
+        transparent calc(50% + 0.5px)
+      ) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--bottom,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes {
+      background-image:
+        linear-gradient(rgba(18, 18, 18, 0.08), rgba(18, 18, 18, 0.08)),
+        linear-gradient(rgba(18, 18, 18, 0.08), rgba(18, 18, 18, 0.08)) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos {
+      background-image:
+        linear-gradient(
+          to right,
+          transparent calc(20% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(20% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(20% + 0.5px),
+          transparent calc(20% + 0.5px)
+        ),
+        linear-gradient(
+          to right,
+          transparent calc(40% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(40% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(40% + 0.5px),
+          transparent calc(40% + 0.5px)
+        ),
+        linear-gradient(
+          to right,
+          transparent calc(60% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(60% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(60% + 0.5px),
+          transparent calc(60% + 0.5px)
+        ),
+        linear-gradient(
+          to right,
+          transparent calc(80% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(80% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(80% + 0.5px),
+          transparent calc(80% + 0.5px)
+        ) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials + .between-strip::before,
+    body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate__row--blank::after,
+    body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate__row--blank-bottom::before,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--strip::before,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--strip::after,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries-blank::before,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries-blank::after,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__author::before,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__intro::after,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list::before,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list::after {
+      background: rgba(18, 18, 18, 0.08) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .closing-cta__row::before {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(18, 18, 18, 0.055), transparent 52%),
+        linear-gradient(180deg, rgba(18, 18, 18, 0.018), rgba(18, 18, 18, 0)) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .client-bar__logo {
+      filter: invert(1);
+      opacity: 0.64;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .client-bar__logo:hover {
+      opacity: 0.92;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__label,
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__headline,
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__service-title,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__industries-headline,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__industries-item,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonial__name,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__label,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__name,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__cta-primary {
+      color: rgba(18, 18, 18, 0.9) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__service-list li,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__summary,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway__details li,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__industries-copy,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonial__quote,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__quote,
+    body[data-page-type="duplicate-home"][data-theme="light"] .footer__cta-sub {
+      color: rgba(18, 18, 18, 0.6) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__industries-item:hover {
+      background: #121212 !important;
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__service-number,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway__meta,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__label,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonial__label,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__role {
+      color: rgba(18, 18, 18, 0.46) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__tags span,
+    body[data-page-type="duplicate-home"][data-theme="light"] .segment__link {
+      background: rgba(18, 18, 18, 0.04) !important;
+      border-color: rgba(18, 18, 18, 0.08) !important;
+      color: rgba(18, 18, 18, 0.58) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .about-grid .services__category:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:hover {
+      background: rgba(18, 18, 18, 0.035) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__logo {
+      filter: invert(1);
+      opacity: 0.64;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__logo:hover {
+      opacity: 0.92;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .about-grid,
+      .about-grid__row,
+      .about-grid__cell,
+      .about-grid__service-row,
+      .pathways__grid,
+      .pathways__intro,
+      .pathways__intro-cell,
+      .pathways__list,
+      .testimonials__grid,
+      .testimonials__row,
+      .testimonials__strip-cell,
+      .testimonials__industries-cell,
+      .testimonials__industries-list,
+      .testimonials__industries-blank-cell,
+      .testimonials__intro-cell,
+      .testimonials__logo-cell,
+      .testimonials__row--quotes .testimonial,
+      .case-studies__grid,
+      .case-studies__row,
+      .case-card,
+      .case-card__content,
+      .case-card__image-wrapper,
+      .segments__grid,
+      .services__intro,
+      .services__list,
+      .footer__brand-wrap,
+      .footer__bottom,
+      .lara-dock__shell,
+      .lara-dock__header,
+      .lara-dock__body,
+      .lara-dock__agent,
+      .lara-dock__tabs
+    ) {
+      background-color: transparent !important;
+      color: inherit;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      h1,
+      h2,
+      h3,
+      h4,
+      p,
+      li,
+      span,
+      a,
+      button,
+      summary
+    ) {
+      color: inherit;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .hero-intro__title,
+      .hero__headline,
+      .case-studies__heading,
+      .segments__heading,
+      .services__heading,
+      .testimonials__heading,
+      .closing-cta__headline,
+      .footer__statement,
+      .about-grid__label,
+      .about-grid__headline,
+      .pathways__heading,
+      .pathway__title,
+      .testimonials__industries-headline,
+      .case-card__title,
+      .segment__title,
+      .services__title,
+      .testimonial__name,
+      .faq__question,
+      .footer__section-title
+    ) {
+      color: rgba(18, 18, 18, 0.92) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .hero-intro__text,
+      .hero__subtext,
+      .case-studies__intro,
+      .case-card__summary,
+      .segments__text,
+      .segment__text,
+      .services__text,
+      .services__items,
+      .services__items li,
+      .services__items a,
+      .testimonials__text,
+      .testimonial__quote,
+      .testimonial__role,
+      .pathways__text,
+      .pathway__text,
+      .faq__answer,
+      .closing-cta__text,
+      .footer__description,
+      .footer__cta-sub,
+      .footer__copyright,
+      .footer__location,
+      .lara-dock__agent-line
+    ) {
+      color: rgba(18, 18, 18, 0.62) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .client-bar__text,
+      .case-studies__count,
+      .case-card__label,
+      .case-card__tags span,
+      .services__number,
+      .testimonial__label,
+      .pathway__meta,
+      .insights-card__meta,
+      .insights-card__date,
+      .about-grid__service-number,
+      .lara-dock__tab,
+      .lara-dock__close
+    ) {
+      color: rgba(18, 18, 18, 0.46) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .duplicate-header__link,
+      .duplicate-header__side-link,
+      .case-studies__cta,
+      .segment__link,
+      .between-strip__link,
+      .insights-card__link,
+      .footer__nav-link,
+      .footer__contact-link,
+      .lara-dock__choice
+    ) {
+      color: rgba(18, 18, 18, 0.78) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__side-link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__side-link,
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__side-link :where(svg, path),
+    body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__side-link :where(svg, path) {
+      color: #ffffff !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .hero-intro__button,
+      .hero__button,
+      .services__button,
+      .closing-cta__button,
+      .lara-dock__toggle,
+      .lara-dock__ask
+    ) {
+      background: #f5f5f4 !important;
+      border-color: transparent !important;
+      color: #121212 !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .hero-intro__button,
+      .hero__button,
+      .services__button,
+      .closing-cta__button,
+      .lara-dock__toggle,
+      .lara-dock__ask
+    ) :where(span, svg, path) {
+      color: #121212 !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .hero-intro__button:hover,
+      .hero__button:hover,
+      .services__button:hover,
+      .closing-cta__button:hover,
+      .lara-dock__ask:hover
+    ) {
+      background: #121212 !important;
+      border-color: #121212 !important;
+      color: #fdfdfc !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .hero-intro__button:hover,
+      .hero__button:hover,
+      .services__button:hover,
+      .closing-cta__button:hover,
+      .lara-dock__ask:hover
+    ) :where(span, svg, path) {
+      color: #fdfdfc !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__button {
+      background: rgba(253, 253, 252, 0.46) !important;
+      border-color: transparent !important;
+      color: #121212 !important;
+      box-shadow: 0 12px 32px rgba(18, 18, 18, 0.08);
+      backdrop-filter: blur(14px) saturate(1.12);
+      -webkit-backdrop-filter: blur(14px) saturate(1.12);
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__button:hover {
+      background: #121212 !important;
+      border-color: #121212 !important;
+      color: #fdfdfc !important;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .pathway,
+      .case-card,
+      .case-card__content,
+      .segment,
+      .testimonial,
+      .testimonials__row--quotes .testimonial,
+      .testimonials__row--quotes .testimonial__author,
+      .footer__cta,
+      .lara-dock__panel,
+      .lara-dock__choice
+    ) {
+      background: #fdfdfc !important;
+      background-color: #fdfdfc !important;
+      box-shadow: none !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .pathway:hover,
+      .about-grid .services__category:hover,
+      .case-card:hover,
+      .segment:hover,
+      .testimonial:hover,
+      .footer__cta:hover,
+      .lara-dock__choice:hover,
+      .lara-dock__choice:focus-visible
+    ) {
+      background: #fdfdfc !important;
+      background-color: #fdfdfc !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] :where(
+      .case-card__image-wrapper,
+      .case-card__image,
+      .testimonials__logo-cell,
+      .testimonials__strip-cell,
+      .testimonials__industries-cell,
+      .testimonials__industries-blank-cell,
+      .testimonials__intro-cell,
+      .pathways__intro-cell,
+      .about-grid__cell
+    ) {
+      background: transparent !important;
+      background-color: transparent !important;
+      box-shadow: none !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__content,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__image-wrapper,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__image,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__intro,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__body,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__author,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__author-copy {
+      background: #fdfdfc !important;
+      background-color: #fdfdfc !important;
+      background-image: none !important;
+      box-shadow: none !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__image-wrapper,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__image {
+      border-color: rgba(18, 18, 18, 0.08) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-card__image::after {
+      background: transparent !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--top {
+      background-image: linear-gradient(rgba(18, 18, 18, 0.08), rgba(18, 18, 18, 0.08)) !important;
+      background-repeat: no-repeat !important;
+      background-size: 1px 100% !important;
+      background-position: 50% 0 !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--bottom,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes {
+      background-image:
+        linear-gradient(rgba(18, 18, 18, 0.08), rgba(18, 18, 18, 0.08)),
+        linear-gradient(rgba(18, 18, 18, 0.08), rgba(18, 18, 18, 0.08)) !important;
+      background-repeat: no-repeat !important;
+      background-size: 1px 100%, 1px 100% !important;
+      background-position: 33.3333% 0, 66.6666% 0 !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway {
+      border-left: 1px solid rgba(18, 18, 18, 0.08) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:first-child {
+      border-left: 0 !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--intro {
+      background-image: linear-gradient(
+        to right,
+        transparent calc(50% - 0.5px),
+        rgba(18, 18, 18, 0.08) calc(50% - 0.5px),
+        rgba(18, 18, 18, 0.08) calc(50% + 0.5px),
+        transparent calc(50% + 0.5px)
+      ) !important;
+      background-repeat: no-repeat !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos {
+      background-image:
+        linear-gradient(
+          to right,
+          transparent calc(20% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(20% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(20% + 0.5px),
+          transparent calc(20% + 0.5px)
+        ),
+        linear-gradient(
+          to right,
+          transparent calc(40% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(40% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(40% + 0.5px),
+          transparent calc(40% + 0.5px)
+        ),
+        linear-gradient(
+          to right,
+          transparent calc(60% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(60% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(60% + 0.5px),
+          transparent calc(60% + 0.5px)
+        ),
+        linear-gradient(
+          to right,
+          transparent calc(80% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(80% - 0.5px),
+          rgba(18, 18, 18, 0.08) calc(80% + 0.5px),
+          transparent calc(80% + 0.5px)
+        ) !important;
+      background-repeat: no-repeat !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__grid,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__grid {
+      border-left-color: rgba(18, 18, 18, 0.12) !important;
+      border-right-color: rgba(18, 18, 18, 0.12) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--top > .case-card + .case-card,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--bottom > .case-card + .case-card,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list > .pathway + .pathway,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--intro > .testimonials__intro-cell + .testimonials__intro-cell,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos > .testimonials__logo-cell + .testimonials__logo-cell,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes > .testimonial + .testimonial {
+      border-left: 1px solid rgba(18, 18, 18, 0.12) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries > .testimonials__industries-cell {
+      border-left: 0 !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries > .testimonials__industries-cell:nth-child(2),
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries > .testimonials__industries-cell:nth-child(4) {
+      border-left: 1px solid rgba(18, 18, 18, 0.12) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--top,
+    body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--bottom,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--intro,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos,
+    body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes {
+      background-image: none !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__intro {
+      background-image: none !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathways__intro-cell + .pathways__intro-cell {
+      border-left-color: rgba(18, 18, 18, 0.12) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .insights-row--title {
+      border-bottom-color: rgba(18, 18, 18, 0.08) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:hover,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:focus-visible {
+      background: #121212 !important;
+      background-color: #121212 !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:hover .pathway__meta,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:focus-visible .pathway__meta {
+      color: rgba(255, 255, 255, 0.42) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:hover .pathway__title,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:focus-visible .pathway__title {
+      color: rgba(255, 255, 255, 0.92) !important;
+    }
+
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:hover .pathway__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:focus-visible .pathway__text,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:hover .pathway__details li,
+    body[data-page-type="duplicate-home"][data-theme="light"] .pathway:focus-visible .pathway__details li {
+      color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    @media (max-width: 767px) {
+      body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__nav {
+        background: rgba(8, 8, 8, 0.92);
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries > .testimonials__industries-cell:nth-child(2),
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries > .testimonials__industries-cell:nth-child(4) {
+        border-left: 0 !important;
+      }
+    }
   </style>
 </head>
-<body data-page-type="duplicate-home">
+<body data-page-type="duplicate-home" data-theme="dark">
   <div class="duplicate-nav-overlay" data-duplicate-nav-overlay aria-hidden="true"></div>
 
   <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
@@ -3571,12 +4471,26 @@
             <a href="/resources" class="duplicate-header__link">Insights</a>
           </div>
 
-          <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle>
-            <span class="duplicate-header__menu-lines" aria-hidden="true">
-              <span></span>
-              <span></span>
-            </span>
-          </button>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="duplicate-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#duplicate-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle>
+              <span class="duplicate-header__menu-lines" aria-hidden="true">
+                <span></span>
+                <span></span>
+              </span>
+            </button>
+          </div>
         </div>
 
         <div class="duplicate-header__menu" id="duplicate-site-menu">
@@ -3657,26 +4571,26 @@
         <div class="client-bar__track">
           <div class="client-bar__logos">
             <div class="client-bar__logo-set">
-              <img src="/public/images/logos/PLI Logo Light.webp" alt="Place Intelligence" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/SB Logo Light.webp" alt="Superbeing" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/PLE Logo Light.webp" alt="Pleiades" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/FD Logo Light.webp" alt="Future Directors" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/FDY Logo Light.webp" alt="Flow Dynamics" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/DE Logo Light.webp" alt="Decarbonology" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/BU Logo Light.webp" alt="Buildsource" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/CC Logo Light.webp" alt="Cell Cyber" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/LI Logo Light.webp" alt="Linear" class="client-bar__logo" loading="eager">
+              <img src="/public/images/logos/PLI Logo Light.webp" alt="Place Intelligence" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/SB Logo Light.webp" alt="Superbeing" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/PLE Logo Light.webp" alt="Pleiades" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/FD Logo Light.webp" alt="Future Directors" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/FDY Logo Light.webp" alt="Flow Dynamics" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/DE Logo Light.webp" alt="Decarbonology" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/BU Logo Light.webp" alt="Buildsource" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/CC Logo Light.webp" alt="Cell Cyber" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/LI Logo Light.webp" alt="Linear" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
             </div>
             <div class="client-bar__logo-set" aria-hidden="true">
-              <img src="/public/images/logos/PLI Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/SB Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/PLE Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/FD Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/FDY Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/DE Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/BU Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/CC Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
-              <img src="/public/images/logos/LI Logo Light.webp" alt="" class="client-bar__logo" loading="eager">
+              <img src="/public/images/logos/PLI Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/SB Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/PLE Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/FD Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/FDY Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/DE Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/BU Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/CC Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
+              <img src="/public/images/logos/LI Logo Light.webp" alt="" class="client-bar__logo" loading="eager" decoding="async" width="599" height="299">
             </div>
           </div>
         </div>
@@ -3689,14 +4603,13 @@
           <div class="case-studies__intro-meta">
             <h2 class="case-studies__heading">Selected Works</h2>
           </div>
-          <a href="/work" class="case-studies__cta">View all our work</a>
         </div>
         <div class="case-studies__grid">
           <div class="case-studies__row case-studies__row--top">
             <article class="case-card case-card--feature">
               <div class="case-card__image-wrapper">
                 <a href="#" class="case-card__image">
-                  <img src="/public/images/cases/OtherStuff.webp" alt="Other Stuff website screenshot">
+                  <img src="/public/images/cases/OtherStuff-new-duplicate.webp" alt="Other Stuff website screenshot">
                 </a>
               </div>
               <div class="case-card__content">
@@ -3716,19 +4629,19 @@
             <article class="case-card case-card--wide">
               <div class="case-card__image-wrapper">
                 <a href="#" class="case-card__image">
-                  <img src="/public/images/cases/Decarbonology.webp" alt="Decarbonology website screenshot" loading="lazy">
+                  <img src="/public/images/cases/Supply-Drop-new-duplicate.webp" alt="Supply Drop website screenshot" loading="lazy">
                 </a>
               </div>
               <div class="case-card__content">
                 <div class="case-card__meta">
-                  <span class="case-card__label">Decarbonology</span>
+                  <span class="case-card__label">Supply Drop</span>
                   <div class="case-card__tags">
-                    <span>Climate Tech</span>
+                    <span>Brand</span>
                     <span>Web</span>
                   </div>
                 </div>
-                <h3 class="case-card__title">Launched Decarbonology's digital presence to accelerate enterprise climate action.</h3>
-                <p class="case-card__summary">Positioning and web rollout designed to make a complex climate offer feel credible, legible, and ready for scale.</p>
+                <h3 class="case-card__title">Created Supply Drop's brand and web presence for a sharper product launch.</h3>
+                <p class="case-card__summary">A product-led identity and website system shaped to make the drop feel sharper, more credible, and ready to sell.</p>
               </div>
             </article>
           </div>
@@ -3755,25 +4668,25 @@
             <article class="case-card case-card--half">
               <div class="case-card__image-wrapper">
                 <a href="#" class="case-card__image">
-                  <img src="/public/images/cases/Pleiades.webp" alt="Pleiades website screenshot" loading="lazy">
+                  <img src="/public/images/cases/Decarbonology-new-duplicate.webp" alt="Decarbonology website screenshot" loading="lazy">
                 </a>
               </div>
               <div class="case-card__content">
                 <div class="case-card__meta">
-                  <span class="case-card__label">Pleiades</span>
+                  <span class="case-card__label">Decarbonology</span>
                   <div class="case-card__tags">
-                    <span>SaaS</span>
-                    <span>Deck</span>
+                    <span>Climate Tech</span>
+                    <span>Web</span>
                   </div>
                 </div>
-                <h3 class="case-card__title">Positioned Pleiades for capital raising with strategic web and collateral.</h3>
+                <h3 class="case-card__title">Launched Decarbonology's digital presence to accelerate enterprise climate action.</h3>
               </div>
             </article>
 
             <article class="case-card case-card--half">
               <div class="case-card__image-wrapper">
                 <a href="#" class="case-card__image">
-                  <img src="/public/images/cases/Place-Intelligence.webp" alt="Place Intelligence website screenshot" loading="lazy">
+                  <img src="/public/images/cases/Place-Intelligence-new-duplicate.webp" alt="Place Intelligence website screenshot" loading="lazy">
                 </a>
               </div>
               <div class="case-card__content">
@@ -3819,71 +4732,9 @@
             </div>
           </div>
 
-          <div class="about-grid__row about-grid__row--services">
-            <div class="services__list">
-              <div class="services__category">
-                <span class="services__number">(01)</span>
-                <h3 class="services__title"><a href="/services/branding">Brand</a></h3>
-                <ul class="services__items">
-                  <li>Brand Strategy</li>
-                  <li>Positioning &amp; Messaging</li>
-                  <li>Customer & Audience Analysis</li>
-                  <li>Visual Identity Design</li>
-                  <li>Brand Guidelines</li>
-                  <li>Sales &amp; Marketing Collateral</li>
-                </ul>
-              </div>
-
-              <div class="services__category">
-                <span class="services__number">(02)</span>
-                <h3 class="services__title"><a href="/services/website-design">Website</a></h3>
-                <ul class="services__items">
-                  <li>Website Design</li>
-                  <li>Website Development</li>
-                  <li>UX &amp; Page Structure</li>
-                  <li>Conversion Copywriting</li>
-                  <li>Forms, Booking &amp; Lead Capture</li>
-                  <li>Analytics Setup</li>
-                </ul>
-              </div>
-
-              <div class="services__category">
-                <span class="services__number">(03)</span>
-                <h3 class="services__title"><a href="/services/seo">Search</a></h3>
-                <ul class="services__items">
-                  <li>Technical SEO</li>
-                  <li>Local SEO</li>
-                  <li>Service &amp; Location Pages</li>
-                  <li>Google Business Profile</li>
-                  <li>Structured Data &amp; Schema</li>
-                  <li>AI Search Readiness</li>
-                </ul>
-              </div>
-
-              <div class="services__category">
-                <span class="services__number">(04)</span>
-                <h3 class="services__title">Growth</h3>
-                <ul class="services__items">
-                  <li>Content Strategy</li>
-                  <li>Articles, FAQs &amp; Case Studies</li>
-                  <li>SEO Iteration</li>
-                  <li>Website Updates</li>
-                  <li>Reporting &amp; Insights</li>
-                  <li>Performance Improvements</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="pathways" aria-labelledby="pathways-title">
-      <div class="container">
-        <div class="pathways__grid">
           <div class="pathways__intro">
             <div class="pathways__intro-cell pathways__intro-cell--title">
-              <h2 class="pathways__heading" id="pathways-title">Choose the right starting point.</h2>
+              <h2 class="pathways__heading">Choose the right starting point.</h2>
             </div>
             <div class="pathways__intro-cell pathways__intro-cell--copy">
               <p class="pathways__text">Some businesses need a sharper brand. Some need a new website. Others need search, content and ongoing improvement after launch. We meet you where the commercial problem starts.</p>
@@ -3896,8 +4747,18 @@
                 <span>(01)</span>
                 <span class="pathway__arrow" aria-hidden="true">→</span>
               </div>
-              <h3 class="pathway__title">Brand Foundation</h3>
-              <p class="pathway__text">For businesses that need clearer positioning, messaging and identity before they ask the market to pay attention.</p>
+              <div class="pathway__body">
+                <h3 class="pathway__title">Brand Foundation</h3>
+                <p class="pathway__text">For businesses that need clearer positioning, messaging and identity before they ask the market to pay attention.</p>
+                <ul class="pathway__details">
+                  <li>Brand Strategy</li>
+                  <li>Positioning &amp; Messaging</li>
+                  <li>Customer &amp; Audience Analysis</li>
+                  <li>Visual Identity Design</li>
+                  <li>Brand Guidelines</li>
+                  <li>Sales &amp; Marketing Collateral</li>
+                </ul>
+              </div>
             </a>
 
             <a href="/services/website-design" class="pathway">
@@ -3905,8 +4766,18 @@
                 <span>(02)</span>
                 <span class="pathway__arrow" aria-hidden="true">→</span>
               </div>
-              <h3 class="pathway__title">Website Build</h3>
-              <p class="pathway__text">For businesses that need a professional website launched properly, with the structure to explain the offer and convert enquiries.</p>
+              <div class="pathway__body">
+                <h3 class="pathway__title">Website Build</h3>
+                <p class="pathway__text">For businesses that need a professional website launched properly, with the structure to explain the offer and convert enquiries.</p>
+                <ul class="pathway__details">
+                  <li>Website Design</li>
+                  <li>Website Development</li>
+                  <li>UX &amp; Page Structure</li>
+                  <li>Conversion Copywriting</li>
+                  <li>Forms, Booking &amp; Lead Capture</li>
+                  <li>Analytics Setup</li>
+                </ul>
+              </div>
             </a>
 
             <a href="/services/seo" class="pathway">
@@ -3914,8 +4785,18 @@
                 <span>(03)</span>
                 <span class="pathway__arrow" aria-hidden="true">→</span>
               </div>
-              <h3 class="pathway__title">Website + Search</h3>
-              <p class="pathway__text">For businesses that need the site plus SEO foundations, local pages, structured content and stronger discovery.</p>
+              <div class="pathway__body">
+                <h3 class="pathway__title">Website + Search</h3>
+                <p class="pathway__text">For businesses that need the site plus SEO foundations, local pages, structured content and stronger discovery.</p>
+                <ul class="pathway__details">
+                  <li>Technical SEO</li>
+                  <li>Local SEO</li>
+                  <li>Service &amp; Location Pages</li>
+                  <li>Google Business Profile</li>
+                  <li>Structured Data &amp; Schema</li>
+                  <li>AI Search Readiness</li>
+                </ul>
+              </div>
             </a>
 
             <a href="/contact" class="pathway">
@@ -3923,8 +4804,18 @@
                 <span>(04)</span>
                 <span class="pathway__arrow" aria-hidden="true">→</span>
               </div>
-              <h3 class="pathway__title">Growth Partnership</h3>
-              <p class="pathway__text">For businesses that want ongoing content, SEO iteration, reporting, updates and performance improvement after launch.</p>
+              <div class="pathway__body">
+                <h3 class="pathway__title">Growth Partnership</h3>
+                <p class="pathway__text">For businesses that want ongoing design, content, SEO, updates and performance improvement after launch.</p>
+                <ul class="pathway__details">
+                  <li>Design</li>
+                  <li>Content</li>
+                  <li>Articles, FAQs &amp; Case Studies</li>
+                  <li>SEO Iteration</li>
+                  <li>Website Updates</li>
+                  <li>Performance Improvements</li>
+                </ul>
+              </div>
             </a>
           </div>
         </div>
@@ -3941,17 +4832,25 @@
 
           <div class="testimonials__row testimonials__row--industries">
             <div class="testimonials__industries-cell testimonials__industries-cell--title">
-              <h2 class="testimonials__industries-headline">We work with expertise-led businesses in trust-heavy markets — helping trades, professional services, health, real estate, engineering and specialist teams clarify their value, strengthen credibility and convert more of the right enquiries.</h2>
+              <h2 class="testimonials__industries-headline">We work with expertise-led businesses in trust-heavy markets.</h2>
+            </div>
+
+            <div class="testimonials__industries-cell testimonials__industries-cell--copy">
+              <p class="testimonials__industries-copy">Helping trades, professional services, health, real estate, engineering and specialist teams clarify their value, strengthen credibility and convert more of the right enquiries.</p>
             </div>
 
             <div class="testimonials__industries-cell testimonials__industries-cell--options">
               <div class="testimonials__industries-list">
                 <div class="testimonials__industries-item">Trades &amp; Home Services</div>
-                <div class="testimonials__industries-item">Plumbers</div>
-                <div class="testimonials__industries-item">Electricians</div>
                 <div class="testimonials__industries-item">Builders</div>
                 <div class="testimonials__industries-item">Real Estate</div>
+                <div class="testimonials__industries-item">Property Services</div>
                 <div class="testimonials__industries-item">Professional Services</div>
+              </div>
+            </div>
+
+            <div class="testimonials__industries-cell testimonials__industries-cell--options">
+              <div class="testimonials__industries-list">
                 <div class="testimonials__industries-item">Accountants</div>
                 <div class="testimonials__industries-item">Lawyers</div>
                 <div class="testimonials__industries-item">Consultants</div>
@@ -4179,7 +5078,7 @@
 
                       <details class="faq__item">
                         <summary class="faq__question">Do you offer revisions?</summary>
-                        <p class="faq__answer">Yes, we absolutely value your input and collaboration during the design process. We'll communicate with you transparently and regularly where we will seek your input to ensure the final design aligns with your vision, goals and expectations.</p>
+                        <p class="faq__answer">Yes. Revisions are part of the process and are handled at clear review points throughout the project. We'll ask for focused feedback, make agreed refinements, and keep the work moving toward the approved scope, goals and final handover.</p>
                       </details>
                     </div>
                   </div>
@@ -4274,6 +5173,27 @@
           </div>
         </div>
 
+        <div class="footer__section footer__section--tools">
+          <h3 class="footer__section-title">Tools</h3>
+          <div class="footer__link-columns">
+            <nav class="footer__nav" aria-label="Footer colour tools">
+              <a href="/tools" class="footer__nav-link">All Tools</a>
+              <a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a>
+              <a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a>
+              <a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a>
+              <a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a>
+            </nav>
+
+            <nav class="footer__nav" aria-label="Footer design tools">
+              <a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a>
+              <a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a>
+              <a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a>
+              <a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a>
+              <a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a>
+            </nav>
+          </div>
+        </div>
+
         <div class="footer__section footer__section--contact">
           <h3 class="footer__section-title">Work with us</h3>
           <div class="footer__contact">
@@ -4290,14 +5210,55 @@
         <p class="footer__location">City Beach, WA</p>
       </div>
 
-      <div class="footer__brand" data-footer-wordmark aria-label="Off Piste Studio">
-        <canvas class="footer__brand-canvas" data-footer-wordmark-canvas aria-hidden="true"></canvas>
+      <div class="footer__brand" aria-label="Off Piste Studio">
         <span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span>
       </div>
     </div>
   </footer>
 
   <script>
+    (() => {
+      if (document.body.dataset.pageType !== "duplicate-home") return;
+
+      const storageKey = "off-piste-duplicate-theme";
+      const toggle = document.querySelector("[data-theme-toggle]");
+      const getStoredTheme = () => {
+        try {
+          return localStorage.getItem(storageKey);
+        } catch {
+          return null;
+        }
+      };
+
+      const storeTheme = (theme) => {
+        try {
+          localStorage.setItem(storageKey, theme);
+        } catch {
+          // Ignore storage failures; the toggle should still work for the current page view.
+        }
+      };
+
+      const setTheme = (theme) => {
+        const nextTheme = theme === "light" ? "light" : "dark";
+        const isLight = nextTheme === "light";
+
+        document.body.dataset.theme = nextTheme;
+
+        if (toggle) {
+          toggle.setAttribute("aria-pressed", String(isLight));
+          toggle.setAttribute("aria-label", isLight ? "Switch to dark mode" : "Switch to light mode");
+        }
+      };
+
+      setTheme(getStoredTheme());
+
+      toggle?.addEventListener("click", () => {
+        const nextTheme = document.body.dataset.theme === "light" ? "dark" : "light";
+        setTheme(nextTheme);
+        storeTheme(nextTheme);
+      });
+    })();
+
     (() => {
       if (document.body.dataset.pageType !== "duplicate-home") return;
 
@@ -4316,11 +5277,24 @@
         toggle.setAttribute("aria-label", isOpen ? "Close navigation" : "Open navigation");
       };
 
-      const updateScrollState = () => {
-        header.classList.toggle("is-scrolled", window.scrollY > 24);
+      let hasScrolled = null;
+      let scrollFrame = 0;
+
+      const syncScrollState = () => {
+        scrollFrame = 0;
+        const nextScrolled = window.scrollY > 24;
+        if (nextScrolled === hasScrolled) return;
+
+        hasScrolled = nextScrolled;
+        header.classList.toggle("is-scrolled", nextScrolled);
       };
 
-      updateScrollState();
+      const updateScrollState = () => {
+        if (scrollFrame) return;
+        scrollFrame = window.requestAnimationFrame(syncScrollState);
+      };
+
+      syncScrollState();
 
       toggle.addEventListener("click", () => {
         setOpen(!header.classList.contains("is-open"));
@@ -4348,29 +5322,15 @@
       cursor.setAttribute("aria-hidden", "true");
       document.body.appendChild(cursor);
 
-      let currentX = window.innerWidth / 2;
-      let currentY = window.innerHeight / 2;
-      let targetX = currentX;
-      let targetY = currentY;
-      let frame = null;
+      let scrollTimer = 0;
 
-      const render = () => {
-        currentX += (targetX - currentX) * 0.55;
-        currentY += (targetY - currentY) * 0.55;
-        cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
-
-        frame = window.requestAnimationFrame(render);
-      };
-
-      const start = () => {
-        if (!frame) frame = window.requestAnimationFrame(render);
+      const setPosition = (event) => {
+        cursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0) translate(-50%, -50%)`;
       };
 
       window.addEventListener("pointermove", (event) => {
-        targetX = event.clientX;
-        targetY = event.clientY;
+        setPosition(event);
         cursor.classList.add("is-visible");
-        start();
       }, { passive: true });
 
       window.addEventListener("pointerdown", () => {
@@ -4379,6 +5339,14 @@
 
       window.addEventListener("pointerup", () => {
         cursor.classList.remove("is-pressed");
+      }, { passive: true });
+
+      window.addEventListener("scroll", () => {
+        cursor.classList.remove("is-visible");
+        window.clearTimeout(scrollTimer);
+        scrollTimer = window.setTimeout(() => {
+          cursor.classList.add("is-visible");
+        }, 120);
       }, { passive: true });
 
       document.addEventListener("mouseleave", () => {
@@ -4393,232 +5361,149 @@
     (() => {
       if (document.body.dataset.pageType !== "duplicate-home") return;
 
-      const wordmark = document.querySelector("[data-footer-wordmark]");
-      const canvas = document.querySelector("[data-footer-wordmark-canvas]");
-      if (!wordmark || !canvas) return;
+      const brand = document.querySelector(".footer__brand");
+      const text = document.querySelector(".footer__brand-text");
+      if (!brand || !text) return;
 
-      const label = wordmark.getAttribute("aria-label") || "Off Piste Studio";
-      const mobileQuery = window.matchMedia("(max-width: 640px)");
-      if (mobileQuery.matches) return;
+      let resizeTimer = 0;
+      let hasAnimated = false;
+      const label = text.textContent || "";
 
-      const ctx = canvas.getContext("2d", { alpha: true });
-      const maskCanvas = document.createElement("canvas");
-      const maskCtx = maskCanvas.getContext("2d", { alpha: true, willReadFrequently: true });
-      if (!ctx || !maskCtx) return;
+      const splitLetters = () => {
+        text.innerHTML = "";
 
-      const controls = {
-        dotSize: 0.82,
-        gridSpacing: 2.35,
-        speed: 1.35,
-        pulseIntensity: 0.18,
-        hoverRadius: 132,
-        impulse: 9.5,
-        spring: 0.075,
-        friction: 0.84
-      };
-      const dots = [];
-      const pointer = { x: -10000, y: -10000, lastX: -10000, lastY: -10000, vx: 0, vy: 0, speed: 0 };
-      let isActive = false;
-      let width = 0;
-      let height = 0;
-      let dpr = 1;
-      let gridSpacing = controls.gridSpacing;
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      const random = (value) => {
-        const x = Math.sin(value * 12.9898) * 43758.5453;
-        return x - Math.floor(x);
+        Array.from(label).forEach((character, index) => {
+          const letter = document.createElement("span");
+          letter.className = character === " " ? "footer__brand-letter footer__brand-letter--space" : "footer__brand-letter";
+          letter.style.setProperty("--footer-brand-letter-index", String(index));
+          letter.textContent = character === " " ? "\u00a0" : character;
+          text.appendChild(letter);
+        });
       };
 
-      const buildDots = () => {
-        const rect = wordmark.getBoundingClientRect();
-        width = Math.max(1, Math.floor(rect.width));
-        height = Math.max(1, Math.floor(rect.height));
-        dpr = Math.min(window.devicePixelRatio || 1, 1.35);
-        gridSpacing = controls.gridSpacing;
+      const fitBrand = () => {
+        if (!hasAnimated) brand.classList.remove("is-animated");
+        text.style.setProperty("--footer-brand-scale", "1");
 
-        canvas.width = Math.floor(width * dpr);
-        canvas.height = Math.floor(height * dpr);
-        canvas.style.width = `${width}px`;
-        canvas.style.height = `${height}px`;
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        const availableWidth = brand.getBoundingClientRect().width;
+        const textWidth = text.getBoundingClientRect().width;
+        if (!availableWidth || !textWidth) return;
 
-        maskCanvas.width = width;
-        maskCanvas.height = height;
-        maskCtx.clearRect(0, 0, width, height);
-
-        const fontFamily = getComputedStyle(wordmark).fontFamily || "Bebas Neue, sans-serif";
-        let fontSize = 100;
-        maskCtx.font = `400 ${fontSize}px ${fontFamily}`;
-        const measured = maskCtx.measureText(label);
-        const horizontalInset = Math.max(8, width * 0.018);
-        const targetWidth = width - horizontalInset * 2;
-
-        if (measured.width > 0) {
-          fontSize = (fontSize * targetWidth) / measured.width;
-        }
-
-        maskCtx.font = `400 ${fontSize}px ${fontFamily}`;
-        maskCtx.textBaseline = "alphabetic";
-        maskCtx.textAlign = "left";
-        maskCtx.fillStyle = "#ffffff";
-
-        const metrics = maskCtx.measureText(label);
-        const textHeight = (metrics.actualBoundingBoxAscent || fontSize * 0.72) + (metrics.actualBoundingBoxDescent || fontSize * 0.08);
-        const x = horizontalInset;
-        const y = height - Math.max(0, (height - textHeight) * 0.02) - (metrics.actualBoundingBoxDescent || fontSize * 0.06);
-
-        maskCtx.fillText(label, x, y);
-
-        const imageData = maskCtx.getImageData(0, 0, width, height).data;
-        dots.length = 0;
-
-        for (let xPos = 0; xPos < width; xPos += gridSpacing) {
-          for (let yPos = 0; yPos < height; yPos += gridSpacing) {
-            const index = ((Math.floor(yPos) * width) + Math.floor(xPos)) * 4 + 3;
-            const alpha = imageData[index] / 255;
-
-            if (alpha > 0.2) {
-              const seed = dots.length + xPos * 0.17 + yPos * 0.31;
-              dots.push({
-                x: xPos + (random(seed + 1.3) - 0.5) * gridSpacing * 0.6,
-                y: yPos + (random(seed + 2.7) - 0.5) * gridSpacing * 0.6,
-                alpha,
-                noiseOff: random(seed) * 10000,
-                sizeMult: 0.68 + random(seed + 8.7) * 0.62,
-                phase: random(seed + 11.4) * Math.PI * 2,
-                phase2: random(seed + 19.8) * Math.PI * 2,
-                drift: 0.2 + random(seed + 27.1) * 0.48,
-                ox: 0,
-                oy: 0,
-                vx: 0,
-                vy: 0,
-                energy: 0
-              });
-            }
-          }
-        }
+        const scale = availableWidth / textWidth;
+        text.style.setProperty("--footer-brand-scale", String(scale));
+        brand.classList.add("is-fit");
       };
 
-      const applyPointerImpulse = (fromX, fromY, toX, toY) => {
-        const moveX = toX - fromX;
-        const moveY = toY - fromY;
-        const moveDistance = Math.hypot(moveX, moveY);
-        if (moveDistance < 0.1) return;
-
-        const directionX = moveX / moveDistance;
-        const directionY = moveY / moveDistance;
-        const radius = controls.hoverRadius;
-        const radiusSq = radius * radius;
-        const speedFactor = Math.min(1.85, moveDistance / 18);
-        const pathLengthSq = Math.max(1, moveX * moveX + moveY * moveY);
-
-        for (const dot of dots) {
-          const dotX = dot.x + dot.ox;
-          const dotY = dot.y + dot.oy;
-          const projected = Math.max(0, Math.min(1, (((dotX - fromX) * moveX) + ((dotY - fromY) * moveY)) / pathLengthSq));
-          const closestX = fromX + moveX * projected;
-          const closestY = fromY + moveY * projected;
-          const dx = dotX - closestX;
-          const dy = dotY - closestY;
-          const distanceSq = dx * dx + dy * dy;
-
-          if (distanceSq > radiusSq) continue;
-
-          const distance = Math.sqrt(distanceSq);
-          const proximity = Math.max(0, 1 - distance / radius);
-          const influence = proximity * proximity * (3 - 2 * proximity);
-          const awayLength = Math.max(1, Math.hypot(dotX - toX, dotY - toY));
-          const awayX = (dotX - toX) / awayLength;
-          const awayY = (dotY - toY) / awayLength;
-          const side = Math.max(-1, Math.min(1, ((dotY - toY) * directionX - (dotX - toX) * directionY) / radius));
-          const curlX = -directionY * side * 0.28;
-          const curlY = directionX * side * 0.28;
-          const force = controls.impulse * influence * (0.62 + speedFactor);
-
-          dot.vx += (directionX * 0.92 + awayX * 0.44 + curlX) * force;
-          dot.vy += (directionY * 0.92 + awayY * 0.44 + curlY) * force;
-          dot.energy = Math.min(1, dot.energy + influence * 0.95);
-        }
+      const startAnimation = () => {
+        if (hasAnimated) return;
+        hasAnimated = true;
+        window.requestAnimationFrame(() => {
+          brand.classList.add("is-animated");
+        });
       };
 
-      const render = (time = 0) => {
-        ctx.clearRect(0, 0, width, height);
-
-        const t = time * 0.001 * controls.speed;
-
-        for (const dot of dots) {
-          dot.vx += -dot.ox * controls.spring;
-          dot.vy += -dot.oy * controls.spring;
-          dot.vx *= controls.friction;
-          dot.vy *= controls.friction;
-          dot.ox += dot.vx;
-          dot.oy += dot.vy;
-          dot.energy *= 0.9;
-
-          const pulse = 1 + Math.sin(t * 2.1 + dot.phase) * controls.pulseIntensity;
-          const ambientX = Math.sin(t * 0.78 + dot.phase) * dot.drift;
-          const ambientY = Math.cos(t * 0.72 + dot.phase2) * dot.drift;
-          const px = dot.x + ambientX + dot.ox;
-          const py = dot.y + ambientY + dot.oy;
-          const radius = Math.max(0.5, controls.dotSize * dot.sizeMult * pulse) * 0.5;
-          const alpha = Math.min(1, (0.5 + Math.sin(t * 1.7 + dot.phase2) * 0.12 + dot.energy * 0.34)) * (0.78 + dot.alpha * 0.22);
-
-          ctx.beginPath();
-          ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
-          ctx.arc(px, py, radius, 0, Math.PI * 2);
-          ctx.fill();
-        }
-
-        if (!reducedMotion) {
-          window.requestAnimationFrame(render);
-        }
+      const scheduleFit = () => {
+        window.clearTimeout(resizeTimer);
+        resizeTimer = window.setTimeout(() => {
+          const wasAnimated = hasAnimated;
+          fitBrand();
+          hasAnimated = wasAnimated;
+          if (wasAnimated) brand.classList.add("is-animated");
+        }, 80);
       };
 
-      wordmark.addEventListener("pointerenter", (event) => {
-        isActive = true;
-        const rect = wordmark.getBoundingClientRect();
-        pointer.x = event.clientX - rect.left;
-        pointer.y = event.clientY - rect.top;
-        pointer.lastX = pointer.x;
-        pointer.lastY = pointer.y;
-      }, { passive: true });
-
-      wordmark.addEventListener("pointermove", (event) => {
-        isActive = true;
-        const rect = wordmark.getBoundingClientRect();
-        const nextX = event.clientX - rect.left;
-        const nextY = event.clientY - rect.top;
-        applyPointerImpulse(pointer.x, pointer.y, nextX, nextY);
-        pointer.lastX = pointer.x;
-        pointer.lastY = pointer.y;
-        pointer.x = nextX;
-        pointer.y = nextY;
-
-        if (reducedMotion) render(performance.now());
-      }, { passive: true });
-
-      wordmark.addEventListener("pointerleave", () => {
-        isActive = false;
-        pointer.x = -10000;
-        pointer.y = -10000;
-
-        if (reducedMotion) render(performance.now());
-      }, { passive: true });
-
-      const init = () => {
-        buildDots();
-        render(performance.now());
-      };
+      splitLetters();
 
       if (document.fonts) {
-        document.fonts.ready.then(init);
+        document.fonts.ready.then(fitBrand);
       } else {
-        init();
+        fitBrand();
       }
 
-      window.addEventListener("resize", init);
+      if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver((entries) => {
+          const entry = entries[0];
+          if (!entry?.isIntersecting) return;
+
+          observer.disconnect();
+          if (document.fonts) {
+            document.fonts.ready.then(startAnimation);
+          } else {
+            startAnimation();
+          }
+        }, { threshold: 0.35 });
+
+        observer.observe(brand);
+      } else {
+        startAnimation();
+      }
+
+      window.addEventListener("resize", scheduleFit);
     })();
+
+    (() => {
+      if (document.body.dataset.pageType !== "duplicate-home") return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      const scrambleTargets = document.querySelectorAll(".footer__nav-link, .footer__contact-link, .testimonials__industries-item");
+      const pathwayCards = document.querySelectorAll(".pathway");
+      if (!scrambleTargets.length && !pathwayCards.length) return;
+
+      const symbols = "{}[]<>/\\|01#$%&*=+_~";
+      const duration = 280;
+      const interval = 35;
+
+      const bindScramble = (trigger, target, shouldLockWidth) => {
+        const originalText = target.textContent || "";
+        let timer = 0;
+        let elapsed = 0;
+
+        const restore = () => {
+          window.clearInterval(timer);
+          timer = 0;
+          elapsed = 0;
+          target.textContent = originalText;
+          target.style.width = "";
+          target.style.whiteSpace = "";
+        };
+
+        const scramble = () => {
+          if (timer) return;
+
+          if (shouldLockWidth) {
+            const width = target.getBoundingClientRect().width;
+            target.style.width = `${width}px`;
+            target.style.whiteSpace = "nowrap";
+          }
+
+          timer = window.setInterval(() => {
+            elapsed += interval;
+            target.textContent = Array.from(originalText)
+              .map((character) => {
+                if (character === " ") return " ";
+                return symbols[Math.floor(Math.random() * symbols.length)];
+              })
+              .join("");
+
+            if (elapsed >= duration) restore();
+          }, interval);
+        };
+
+        trigger.addEventListener("mouseenter", scramble);
+        trigger.addEventListener("mouseleave", restore);
+      };
+
+      scrambleTargets.forEach((target) => {
+        bindScramble(target, target, !target.classList.contains("testimonials__industries-item"));
+      });
+
+      pathwayCards.forEach((card) => {
+        const title = card.querySelector(".pathway__title");
+        if (!title) return;
+        bindScramble(card, title, false);
+      });
+    })();
+
 
     (() => {
       if (document.body.dataset.pageType !== "duplicate-home") return;
@@ -4789,12 +5674,13 @@
 
         insightsRow.innerHTML = latestPosts
           .map((post, index) => {
-            const imageSrc = imageBySlug[post.slug] || fallbackImages[index % fallbackImages.length];
+            const imageSrc = post.image || imageBySlug[post.slug] || fallbackImages[index % fallbackImages.length];
+            const imageAlt = post.imageAlt || post.title;
 
             return `
               <article class="insights-card">
                 <a href="${escapeHtml(post.url)}" class="insights-card__image">
-                  <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(post.title)}" loading="lazy" decoding="async">
+                  <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(imageAlt)}" loading="lazy" decoding="async">
                 </a>
                 <div class="insights-card__content">
                   <div class="insights-card__meta">
