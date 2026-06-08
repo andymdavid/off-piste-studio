@@ -89,6 +89,7 @@ function createArticleHtml(post) {
         "@type": "Article",
         "headline": ${JSON.stringify(post.title)},
         "description": ${JSON.stringify(post.description)},
+${post.image ? `        "image": "https://offpistestudio.com${escapeHtml(post.image)}",\n` : ''}\
         "datePublished": "${escapeHtml(post.date)}",
         "author": { "@type": "Organization", "name": "Off Piste Studio" },
         "publisher": {
@@ -186,6 +187,8 @@ const posts = readdirSync(contentDir)
       displayDate: formatDate(data.date),
       readTime: data.readTime,
       tags,
+      image: data.image || undefined,
+      imageAlt: data.imageAlt || data.title,
       html: renderMarkdown(body)
     };
   })
