@@ -48,11 +48,14 @@ function initCurrentHeader() {
     }
   };
 
-  const toggleMenu = () => {
+  const toggleMenu = event => {
+    event?.preventDefault();
+    event?.stopPropagation();
+
     const isOpen = header.classList.toggle('is-open');
     if (toggle) {
       toggle.setAttribute('aria-expanded', String(isOpen));
-      toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+      toggle.setAttribute('aria-label', 'Open navigation');
     }
   };
 

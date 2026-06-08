@@ -3823,16 +3823,17 @@ body.lead-modal-open {
 }
 
 .duplicate-header.is-open .duplicate-header__menu-lines span:first-child {
-  top: 9px;
+  top: 7px;
   left: 0;
-  transform: rotate(45deg);
+  width: 1.5rem;
+  transform: none;
 }
 
 .duplicate-header.is-open .duplicate-header__menu-lines span:last-child {
-  bottom: 9px;
-  left: 0;
-  width: 1.5rem;
-  transform: rotate(-45deg);
+  bottom: 7px;
+  left: 0.25rem;
+  width: 1.25rem;
+  transform: none;
 }
 
 .duplicate-header__menu {
