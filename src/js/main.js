@@ -616,6 +616,53 @@ function initProjectFilter() {
   });
 }
 
+function initWorkRowScramble() {
+  if (document.body.dataset.pageType !== 'work') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const rows = document.querySelectorAll('.project-row');
+  if (!rows.length) return;
+
+  const symbols = '{}[]<>/\\|01#$%&*=+_~';
+  const duration = 280;
+  const interval = 35;
+
+  rows.forEach(row => {
+    const target = row.querySelector('.project-row__description');
+    if (!target) return;
+
+    const originalText = target.textContent || '';
+    let timer = 0;
+    let elapsed = 0;
+
+    const restore = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+      target.textContent = originalText;
+    };
+
+    const scramble = () => {
+      if (timer) return;
+
+      timer = window.setInterval(() => {
+        elapsed += interval;
+        target.textContent = Array.from(originalText)
+          .map(character => {
+            if (character === ' ') return ' ';
+            return symbols[Math.floor(Math.random() * symbols.length)];
+          })
+          .join('');
+
+        if (elapsed >= duration) restore();
+      }, interval);
+    };
+
+    row.addEventListener('mouseenter', scramble);
+    row.addEventListener('mouseleave', restore);
+  });
+}
+
 function createInsightRow(post) {
   const article = document.createElement('article');
   article.className = 'insight-row';
@@ -908,6 +955,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectSlideshow();
   initInsightsList();
   initProjectFilter();
+  initWorkRowScramble();
   initRelatedPosts();
   initLeadModal();
   initEstimator();
