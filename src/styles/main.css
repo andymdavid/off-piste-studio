@@ -3902,6 +3902,25 @@ body[data-page-type="work"] .project-row:focus-within .project-row__tags span {
   pointer-events: none;
 }
 
+body[data-duplicate-nav-open="true"] {
+  overflow: hidden;
+}
+
+.duplicate-nav-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 220ms ease;
+}
+
+body[data-duplicate-nav-open="true"] .duplicate-nav-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 .duplicate-header__layout {
   display: flex;
   align-items: flex-start;
