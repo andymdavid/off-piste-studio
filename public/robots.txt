@@ -3,6 +3,12 @@ Allow: /
 Disallow: /src/
 Disallow: /scripts/
 Disallow: /node_modules/
+Disallow: /archived-home
+Disallow: /home-duplicate
+Disallow: /duplicate-home
+Disallow: /duplicate-home.html
+Disallow: /new-duplicate-home
+Disallow: /new-duplicate-home.html
 
 User-agent: GPTBot
 Allow: /
