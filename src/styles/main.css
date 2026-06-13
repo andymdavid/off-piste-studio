@@ -5528,6 +5528,8 @@ body[data-page-type="duplicate-home"] .faq-duplicate__list-wrap {
 
 body[data-page-type="duplicate-home"] .faq-duplicate .faq__layout {
   display: block;
+  margin: 0;
+  border: 0;
 }
 
 body[data-page-type="duplicate-home"] .faq-duplicate .faq.section {
@@ -5537,8 +5539,14 @@ body[data-page-type="duplicate-home"] .faq-duplicate .faq.section {
 }
 
 body[data-page-type="duplicate-home"] .faq-duplicate .faq.section > .container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
   padding-left: 0;
   padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 0;
 }
 
 body[data-page-type="duplicate-home"] .faq-duplicate .faq__intro {
