@@ -133,8 +133,8 @@ html {
 
 body {
   font-family: var(--font-primary);
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  background: #121212;
+  color: rgba(255, 255, 255, 0.9);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -3929,6 +3929,149 @@ body[data-page-type="work"] .project-row:focus-within .project-row__tags span {
 /* ==========================================================================
    Current Header / Footer
    ========================================================================== */
+
+main,
+.section,
+.hero,
+.hero-intro,
+.case-studies,
+.segments,
+.services,
+.testimonials,
+.about-hero,
+.about,
+.services-alt,
+.faq,
+.work-hero,
+.projects,
+.page-body,
+.page-cta,
+.page-faq,
+.page-trust,
+.pricing-tiers,
+.pricing-hosting,
+.pricing-estimator {
+  background: #121212;
+}
+
+.button,
+.hero-intro__button,
+.hero__button,
+.services__button,
+.about-hero__button,
+.about__button,
+.page-hero__button,
+.page-cta__button,
+.pricing-tier__cta,
+.pricing-tier--featured .pricing-tier__cta,
+.pricing-estimator__result-cta,
+body[data-page-type="about"] .about-hero__button,
+body[data-page-type="about"] .about__button,
+.about-grid__button,
+.testimonials__button,
+.case-studies__cta,
+.closing-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, var(--site-button-width, 13.25rem));
+  min-width: 0;
+  height: 42px;
+  padding: 0 0.8rem;
+  background: #1b1b1b;
+  color: #ababab;
+  border: 1px solid #1b1b1b;
+  border-radius: 1px;
+  box-shadow: none;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  text-decoration: none;
+  gap: 0.6rem;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.button:hover,
+.hero-intro__button:hover,
+.hero__button:hover,
+.services__button:hover,
+.about-hero__button:hover,
+.about__button:hover,
+.page-hero__button:hover,
+.page-cta__button:hover,
+.pricing-tier__cta:hover,
+.pricing-tier--featured .pricing-tier__cta:hover,
+.pricing-estimator__result-cta:hover,
+body[data-page-type="about"] .about-hero__button:hover,
+body[data-page-type="about"] .about__button:hover,
+.about-grid__button:hover,
+.testimonials__button:hover,
+.case-studies__cta:hover,
+.closing-cta__button:hover {
+  background: #ffffff;
+  color: #121212;
+  border-color: #ffffff;
+  transform: none;
+}
+
+.button::after,
+.hero-intro__button::after,
+.hero__button::after,
+.services__button::after,
+.about-hero__button::after,
+.about__button::after,
+.page-hero__button::after,
+.page-cta__button::after,
+.pricing-tier__cta::after,
+.pricing-tier--featured .pricing-tier__cta::after,
+.pricing-estimator__result-cta::after,
+body[data-page-type="about"] .about-hero__button::after,
+body[data-page-type="about"] .about__button::after,
+.about-grid__button::after,
+.testimonials__button::after,
+.case-studies__cta::after,
+.closing-cta__button::after {
+  content: "→";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  line-height: 1;
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.button:hover::after,
+.hero-intro__button:hover::after,
+.hero__button:hover::after,
+.services__button:hover::after,
+.about-hero__button:hover::after,
+.about__button:hover::after,
+.page-hero__button:hover::after,
+.page-cta__button:hover::after,
+.pricing-tier__cta:hover::after,
+.pricing-tier--featured .pricing-tier__cta:hover::after,
+.pricing-estimator__result-cta:hover::after,
+body[data-page-type="about"] .about-hero__button:hover::after,
+body[data-page-type="about"] .about__button:hover::after,
+.about-grid__button:hover::after,
+.testimonials__button:hover::after,
+.case-studies__cta:hover::after,
+.closing-cta__button:hover::after {
+  transform: rotate(-45deg);
+}
+
+.pricing-tier__cta {
+  width: 100%;
+}
+
+.page-hero__button {
+  margin-top: var(--space-md);
+}
 
 .duplicate-header {
   position: fixed;
