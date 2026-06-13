@@ -5458,14 +5458,14 @@ body[data-page-type="duplicate-home"] .faq-duplicate__row--blank {
   position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  min-height: 4.15rem;
+  height: 4.15rem;
 }
 
 body[data-page-type="duplicate-home"] .faq-duplicate__row--blank::after {
   content: "";
   position: absolute;
-  left: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
-  right: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
+  left: 0;
+  right: 0;
   bottom: 0;
   height: 1px;
   background: var(--site-divider);
@@ -5479,7 +5479,7 @@ body[data-page-type="duplicate-home"] .faq-duplicate__blank-cell {
 body[data-page-type="duplicate-home"] .faq-duplicate__row--title {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  min-height: 4.15rem;
+  height: 4.15rem;
   border-bottom: 1px solid var(--site-divider);
 }
 
@@ -5545,11 +5545,16 @@ body[data-page-type="duplicate-home"] .faq-duplicate .faq__item {
   margin: 0;
 }
 
+body[data-page-type="duplicate-home"] .faq-duplicate .faq__item:not([open]) {
+  height: 4.15rem;
+  overflow: hidden;
+}
+
 body[data-page-type="duplicate-home"] .faq-duplicate .faq__item::after {
   content: "";
   position: absolute;
-  left: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
-  right: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
+  left: 0;
+  right: 0;
   bottom: 0;
   height: 1px;
   background: var(--site-divider);
@@ -5557,7 +5562,9 @@ body[data-page-type="duplicate-home"] .faq-duplicate .faq__item::after {
 }
 
 body[data-page-type="duplicate-home"] .faq-duplicate .faq__question {
-  min-height: 4.15rem;
+  display: flex;
+  align-items: center;
+  height: 4.15rem;
   padding: 1rem 4rem 1rem 1rem;
   font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
