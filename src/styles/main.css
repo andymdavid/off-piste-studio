@@ -2492,6 +2492,152 @@ body.lead-modal-open {
   }
 }
 
+body[data-page-type="about"] {
+  background: #121212;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+body[data-page-type="about"] main,
+body[data-page-type="about"] .about-hero,
+body[data-page-type="about"] .about,
+body[data-page-type="about"] .services-alt,
+body[data-page-type="about"] .faq {
+  background: #121212;
+}
+
+body[data-page-type="about"] main > section {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 0;
+  --about-page-gutter: clamp(0.9rem, 1.8vw, 1.4rem);
+}
+
+body[data-page-type="about"] main > section::before,
+body[data-page-type="about"] main > section:last-child::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+body[data-page-type="about"] main > section::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+}
+
+body[data-page-type="about"] main > section:last-child::after {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+}
+
+body[data-page-type="about"] main > section > .container::before,
+body[data-page-type="about"] main > section > .container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+}
+
+body[data-page-type="about"] main > section > .container::before {
+  left: var(--about-page-gutter);
+}
+
+body[data-page-type="about"] main > section > .container::after {
+  right: var(--about-page-gutter);
+}
+
+body[data-page-type="about"] main > section > .container {
+  position: relative;
+  width: 100%;
+  max-width: none;
+  padding-left: var(--about-page-gutter);
+  padding-right: var(--about-page-gutter);
+}
+
+body[data-page-type="about"] .about-hero {
+  min-height: auto;
+}
+
+body[data-page-type="about"] .about-hero > .container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 120px;
+  padding-bottom: var(--space-2xl);
+}
+
+body[data-page-type="about"] .about-hero__content {
+  max-width: 1100px;
+  margin-bottom: var(--space-2xl);
+}
+
+body[data-page-type="about"] .project-modal {
+  flex: none;
+  padding: 0;
+}
+
+body[data-page-type="about"] .project-modal__slideshow {
+  max-width: none;
+  border-radius: 0;
+}
+
+body[data-page-type="about"] .project-modal__slideshow::before {
+  content: none;
+}
+
+body[data-page-type="about"] .project-modal__slide {
+  border-radius: 0;
+}
+
+body[data-page-type="about"] .about > .container,
+body[data-page-type="about"] .services-alt > .container,
+body[data-page-type="about"] .faq > .container {
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+}
+
+body[data-page-type="about"] .about {
+  min-height: auto;
+  justify-content: flex-start;
+}
+
+body[data-page-type="about"] .about__content {
+  max-width: 1120px;
+  margin-bottom: 0;
+}
+
+body[data-page-type="about"] .services-alt__item,
+body[data-page-type="about"] .faq__item {
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+body[data-page-type="about"] .services-alt__item:last-child {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 768px) {
+  body[data-page-type="about"] .about-hero > .container {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: var(--space-xl);
+  }
+
+  body[data-page-type="about"] .about > .container,
+  body[data-page-type="about"] .services-alt > .container,
+  body[data-page-type="about"] .faq > .container {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+}
+
 /* ==========================================================================
    Work Page
    ========================================================================== */
