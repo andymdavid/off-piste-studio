@@ -1134,6 +1134,50 @@
         if (!title) return;
         bindScramble(card, title, false);
       });
+
+      const faqQuestions = document.querySelectorAll(".faq-duplicate .faq__question");
+
+      faqQuestions.forEach((question) => {
+        const item = question.closest(".faq__item");
+        if (!item) return;
+
+        const originalText = question.textContent || "";
+        let timer = 0;
+        let elapsed = 0;
+
+        const restore = () => {
+          window.clearInterval(timer);
+          timer = 0;
+          elapsed = 0;
+          question.textContent = originalText;
+          window.setTimeout(() => {
+            item.classList.remove("is-click-animating");
+          }, 120);
+        };
+
+        const scramble = () => {
+          window.clearInterval(timer);
+          timer = 0;
+          elapsed = 0;
+          item.classList.remove("is-click-animating");
+          void item.offsetWidth;
+          item.classList.add("is-click-animating");
+
+          timer = window.setInterval(() => {
+            elapsed += interval;
+            question.textContent = Array.from(originalText)
+              .map((character) => {
+                if (character === " ") return " ";
+                return symbols[Math.floor(Math.random() * symbols.length)];
+              })
+              .join("");
+
+            if (elapsed >= duration) restore();
+          }, interval);
+        };
+
+        question.addEventListener("click", scramble);
+      });
     })();
 
 
