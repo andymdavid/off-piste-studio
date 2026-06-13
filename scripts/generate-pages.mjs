@@ -380,7 +380,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260613-shared-dividers">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260613-shared-section-type">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -534,7 +534,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260613-shared-dividers">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260613-shared-section-type">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -690,7 +690,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260613-shared-dividers">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260613-shared-section-type">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">
