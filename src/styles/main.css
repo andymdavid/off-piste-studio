@@ -5133,6 +5133,11 @@ body[data-page-type="duplicate-home"] .case-studies {
   border-bottom: 1px solid var(--site-divider-soft);
 }
 
+body[data-page-type="duplicate-home"] .case-studies > .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 body[data-page-type="duplicate-home"] .hero.section {
   display: block;
   min-height: 0 !important;
