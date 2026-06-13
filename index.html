@@ -343,7 +343,6 @@
     }
 
     body[data-page-type="duplicate-home"] .container,
-    body[data-page-type="duplicate-home"] .client-bar__inner,
     body[data-page-type="duplicate-home"] .header__inner,
     body[data-page-type="duplicate-home"] .footer__bottom {
       width: 100%;
@@ -351,7 +350,6 @@
     }
 
     body[data-page-type="duplicate-home"] .container,
-    body[data-page-type="duplicate-home"] .client-bar__inner,
     body[data-page-type="duplicate-home"] .footer__bottom {
       padding-left: clamp(0.9rem, 1.8vw, 1.4rem);
       padding-right: clamp(0.9rem, 1.8vw, 1.4rem);
@@ -447,7 +445,6 @@
       transform: translate(0, 0);
     }
 
-    body[data-page-type="duplicate-home"] .client-bar,
     body[data-page-type="duplicate-home"] .hero,
     body[data-page-type="duplicate-home"] .case-studies,
     body[data-page-type="duplicate-home"] .segments,
@@ -457,13 +454,6 @@
       background: #121212;
     }
 
-    body[data-page-type="duplicate-home"] .client-bar {
-      border-top: 1px solid rgba(255, 255, 255, 0.06);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 0.9rem 0;
-    }
-
-    body[data-page-type="duplicate-home"] .client-bar__text,
     body[data-page-type="duplicate-home"] .services__number,
     body[data-page-type="duplicate-home"] .testimonial__label,
     body[data-page-type="duplicate-home"] .segment__link,
@@ -472,57 +462,6 @@
       font-weight: 400;
       letter-spacing: -0.01em;
       text-transform: none;
-    }
-
-    body[data-page-type="duplicate-home"] .client-bar__text {
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.8rem;
-    }
-
-    body[data-page-type="duplicate-home"] .client-bar__track {
-      contain: paint;
-      isolation: isolate;
-      transform: translateZ(0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-
-    body[data-page-type="duplicate-home"] .client-bar__logos {
-      gap: 0;
-      animation: duplicateLogoMarquee 42s linear infinite;
-      will-change: transform;
-      transform: translate3d(0, 0, 0);
-      backface-visibility: hidden;
-      -webkit-backface-visibility: hidden;
-    }
-
-    body[data-page-type="duplicate-home"] .client-bar__logo-set {
-      display: flex;
-      align-items: center;
-      gap: 4rem;
-      flex: 0 0 auto;
-      padding-right: 4rem;
-    }
-
-    body[data-page-type="duplicate-home"] .client-bar__logo {
-      opacity: 0.7;
-      transition:
-        filter 180ms ease,
-        opacity var(--transition-fast);
-    }
-
-    body[data-page-type="duplicate-home"] .client-bar__logo:hover {
-      opacity: 0.95;
-    }
-
-    @keyframes duplicateLogoMarquee {
-      from {
-        transform: translate3d(0, 0, 0);
-      }
-
-      to {
-        transform: translate3d(-50%, 0, 0);
-      }
     }
 
     body[data-page-type="duplicate-home"] .hero.section,
@@ -2818,8 +2757,7 @@
     }
 
     @media (max-width: 640px) {
-      body[data-page-type="duplicate-home"] .container,
-      body[data-page-type="duplicate-home"] .client-bar__inner {
+      body[data-page-type="duplicate-home"] .container {
         padding-left: 0.8rem;
         padding-right: 0.8rem;
       }
