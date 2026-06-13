@@ -2534,31 +2534,14 @@ body[data-page-type="about"] main > section:last-child::after {
   height: 1px;
 }
 
-body[data-page-type="about"] main > section > .container::before,
-body[data-page-type="about"] main > section > .container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.12);
-  pointer-events: none;
-}
-
-body[data-page-type="about"] main > section > .container::before {
-  left: var(--about-page-gutter);
-}
-
-body[data-page-type="about"] main > section > .container::after {
-  right: var(--about-page-gutter);
-}
-
 body[data-page-type="about"] main > section > .container {
   position: relative;
-  width: 100%;
+  width: calc(100% - (var(--about-page-gutter) * 2));
   max-width: none;
-  padding-left: var(--about-page-gutter);
-  padding-right: var(--about-page-gutter);
+  padding-left: 0;
+  padding-right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 body[data-page-type="about"] .about-hero {
@@ -2566,22 +2549,83 @@ body[data-page-type="about"] .about-hero {
 }
 
 body[data-page-type="about"] .about-hero > .container {
-  min-height: 100vh;
+  min-height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
   padding-top: 120px;
   padding-bottom: var(--space-2xl);
 }
 
 body[data-page-type="about"] .about-hero__content {
-  max-width: 1100px;
-  margin-bottom: var(--space-2xl);
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body[data-page-type="about"] .about-hero__icon,
+body[data-page-type="about"] .about__icon {
+  opacity: 0.9;
+}
+
+body[data-page-type="about"] .about-hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.875rem, 4.8vw, 4.25rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  color: var(--color-text);
+  margin: 0 auto var(--space-lg);
+  max-width: 800px;
+  text-wrap: balance;
+}
+
+body[data-page-type="about"] .about-hero__title em {
+  font-style: italic;
+}
+
+body[data-page-type="about"] .about-hero__text {
+  font-family: var(--font-primary);
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+  max-width: 700px;
+  margin: 0 auto 10px;
+  text-wrap: balance;
+}
+
+body[data-page-type="about"] .about-hero__button,
+body[data-page-type="about"] .about__button {
+  width: 120px;
+  height: 32px;
+  padding: 0;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #000000;
+  border: 0;
+  border-radius: 2rem;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+body[data-page-type="about"] .about-hero__button:hover,
+body[data-page-type="about"] .about__button:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
 }
 
 body[data-page-type="about"] .project-modal {
   flex: none;
   padding: 0;
+  width: 100%;
 }
 
 body[data-page-type="about"] .project-modal__slideshow {
@@ -2614,6 +2658,54 @@ body[data-page-type="about"] .about__content {
   margin-bottom: 0;
 }
 
+body[data-page-type="about"] .about__headline,
+body[data-page-type="about"] .faq__heading {
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body[data-page-type="about"] .about__headline {
+  max-width: 780px;
+}
+
+body[data-page-type="about"] .services-alt__title {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+body[data-page-type="about"] .services-alt__title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+body[data-page-type="about"] .about__subtext,
+body[data-page-type="about"] .services-alt__description,
+body[data-page-type="about"] .faq__answer {
+  font-family: var(--font-primary);
+  font-size: 0.9375rem;
+  letter-spacing: -0.03em;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+body[data-page-type="about"] .services-alt__label span,
+body[data-page-type="about"] .services-alt__tags span,
+body[data-page-type="about"] .faq__question {
+  font-family: var(--font-alfabet);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+body[data-page-type="about"] .services-alt__tags span {
+  letter-spacing: 0.08em;
+}
+
 body[data-page-type="about"] .services-alt__item,
 body[data-page-type="about"] .faq__item {
   border-color: rgba(255, 255, 255, 0.12);
@@ -2628,6 +2720,12 @@ body[data-page-type="about"] .services-alt__item:last-child {
     min-height: auto;
     padding-top: 100px;
     padding-bottom: var(--space-xl);
+  }
+
+  body[data-page-type="about"] .about-hero__title,
+  body[data-page-type="about"] .about__headline,
+  body[data-page-type="about"] .faq__heading {
+    font-size: clamp(1.4rem, 2vw, 2rem);
   }
 
   body[data-page-type="about"] .about > .container,
