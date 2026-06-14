@@ -679,12 +679,7 @@ function initWorkImagePreview() {
   document.body.appendChild(cursorCta);
 
   const moveCursorCta = event => {
-    const offset = 18;
-    const rect = cursorCta.getBoundingClientRect();
-    const gutter = 12;
-    const x = Math.min(event.clientX + offset, window.innerWidth - rect.width - gutter);
-    const y = Math.min(event.clientY + offset, window.innerHeight - rect.height - gutter);
-    cursorCta.style.transform = `translate3d(${Math.max(gutter, x)}px, ${Math.max(gutter, y)}px, 0)`;
+    cursorCta.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0) translate(-50%, -50%)`;
   };
 
   rows.forEach(row => {
@@ -710,10 +705,12 @@ function initWorkImagePreview() {
 
     row.addEventListener('mouseenter', event => {
       movePreview(event);
+      document.body.classList.add('is-work-preview-cursor');
       cursorCta.classList.add('is-visible');
     });
     row.addEventListener('mousemove', movePreview);
     row.addEventListener('mouseleave', () => {
+      document.body.classList.remove('is-work-preview-cursor');
       cursorCta.classList.remove('is-visible');
     });
   });

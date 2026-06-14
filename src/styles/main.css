@@ -2880,7 +2880,7 @@ body[data-page-type="work"] .project-row:focus-within .project-row__tags span {
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
-    transform: translate3d(-100vw, -100vh, 0);
+    transform: translate3d(-100vw, -100vh, 0) translate(-50%, -50%);
     transition: opacity 120ms ease;
     will-change: transform, opacity;
   }
@@ -5072,6 +5072,10 @@ body[data-page-type="duplicate-home"] main {
     width: 0.374rem;
     height: 0.374rem;
     background: rgba(255, 255, 255, 0.76);
+  }
+
+  body.has-custom-cursor.is-work-preview-cursor .duplicate-cursor {
+    opacity: 0;
   }
 }
 
