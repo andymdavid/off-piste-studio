@@ -174,7 +174,7 @@ ${headerHtml}
     <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="projects__list" data-related-posts></div></div></section>
   </main>
 ${footerHtml}
-  <script type="module" src="/src/js/main.js"></script>
+  <script type="module" src="/src/js/main.js?v=20260614-button-scramble"></script>
 </body>
 </html>
 `;
