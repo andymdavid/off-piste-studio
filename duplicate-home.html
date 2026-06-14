@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="Homepage Sandbox | Off Piste Studio">
   <meta name="twitter:description" content="Homepage sandbox for Off Piste Studio redesign exploration.">
   <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260614-work-preview">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260614-preview-cta-cursor">
   <link rel="preload" href="/public/fonts/NeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/NeueMontreal-Medium.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
@@ -4190,59 +4190,6 @@
     (() => {
       if (document.body.dataset.pageType !== "duplicate-home") return;
 
-      const pointerQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
-      if (!pointerQuery.matches) return;
-
-      const cursor = document.createElement("div");
-      cursor.className = "duplicate-cursor";
-      cursor.setAttribute("aria-hidden", "true");
-      document.body.appendChild(cursor);
-
-      let currentX = window.innerWidth / 2;
-      let currentY = window.innerHeight / 2;
-      let targetX = currentX;
-      let targetY = currentY;
-      let frame = null;
-
-      const render = () => {
-        currentX += (targetX - currentX) * 0.55;
-        currentY += (targetY - currentY) * 0.55;
-        cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
-
-        frame = window.requestAnimationFrame(render);
-      };
-
-      const start = () => {
-        if (!frame) frame = window.requestAnimationFrame(render);
-      };
-
-      window.addEventListener("pointermove", (event) => {
-        targetX = event.clientX;
-        targetY = event.clientY;
-        cursor.classList.add("is-visible");
-        start();
-      }, { passive: true });
-
-      window.addEventListener("pointerdown", () => {
-        cursor.classList.add("is-pressed");
-      }, { passive: true });
-
-      window.addEventListener("pointerup", () => {
-        cursor.classList.remove("is-pressed");
-      }, { passive: true });
-
-      document.addEventListener("mouseleave", () => {
-        cursor.classList.remove("is-visible");
-      });
-
-      document.addEventListener("mouseenter", () => {
-        cursor.classList.add("is-visible");
-      });
-    })();
-
-    (() => {
-      if (document.body.dataset.pageType !== "duplicate-home") return;
-
       const wordmark = document.querySelector("[data-footer-wordmark]");
       const canvas = document.querySelector("[data-footer-wordmark-canvas]");
       if (!wordmark || !canvas) return;
@@ -4669,6 +4616,6 @@
       }
     }
   </script>
-  <script type="module" src="/src/js/main.js?v=20260614-work-preview"></script>
+  <script type="module" src="/src/js/main.js?v=20260614-preview-cta-cursor"></script>
 </body>
 </html>

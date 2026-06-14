@@ -770,6 +770,60 @@ function initButtonScramble() {
   });
 }
 
+function initCustomCursor() {
+  const pointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
+  if (!pointerQuery.matches) return;
+  if (document.body.dataset.customCursorBound === 'true') return;
+
+  document.body.dataset.customCursorBound = 'true';
+  document.body.classList.add('has-custom-cursor');
+
+  let cursor = document.querySelector('.duplicate-cursor');
+  if (!cursor) {
+    cursor = document.createElement('div');
+    cursor.className = 'duplicate-cursor';
+    cursor.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(cursor);
+  }
+
+  let scrollTimer = 0;
+  let hasPointer = false;
+
+  const setPosition = event => {
+    hasPointer = true;
+    cursor.style.transform = `translate3d(${event.clientX}px, ${event.clientY}px, 0) translate(-50%, -50%)`;
+  };
+
+  window.addEventListener('pointermove', event => {
+    setPosition(event);
+    cursor.classList.add('is-visible');
+  }, { passive: true });
+
+  window.addEventListener('pointerdown', () => {
+    cursor.classList.add('is-pressed');
+  }, { passive: true });
+
+  window.addEventListener('pointerup', () => {
+    cursor.classList.remove('is-pressed');
+  }, { passive: true });
+
+  window.addEventListener('scroll', () => {
+    cursor.classList.remove('is-visible');
+    window.clearTimeout(scrollTimer);
+    scrollTimer = window.setTimeout(() => {
+      if (hasPointer) cursor.classList.add('is-visible');
+    }, 120);
+  }, { passive: true });
+
+  document.addEventListener('mouseleave', () => {
+    cursor.classList.remove('is-visible');
+  });
+
+  document.addEventListener('mouseenter', () => {
+    if (hasPointer) cursor.classList.add('is-visible');
+  });
+}
+
 function createInsightRow(post) {
   const article = document.createElement('article');
   article.className = 'insight-row';
@@ -1056,6 +1110,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCurrentHeader();
   initMobileMenu();
   initHeaderDropdowns();
+  initCustomCursor();
   initHeroDistortion();
   setActiveNavLink();
   initFaqAccordion();

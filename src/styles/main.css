@@ -2856,9 +2856,43 @@ body[data-page-type="work"] .project-row:focus-within .project-row__tags span {
     transition: transform 520ms ease;
   }
 
+  body[data-page-type="work"] .project-row__preview-cta {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 2.15rem;
+    padding: 0.45rem 0.75rem;
+    background: #fdfdfc;
+    color: #121212;
+    font-family: var(--font-primary);
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 0.35rem));
+    transition: opacity 160ms ease, transform 200ms ease;
+  }
+
+  body[data-page-type="work"] .project-row__preview-cta span {
+    width: 0.4rem;
+    height: 0.4rem;
+    background: currentColor;
+    border-radius: 999px;
+  }
+
   body[data-page-type="work"] .project-row:hover .project-row__preview-item img,
   body[data-page-type="work"] .project-row:focus-within .project-row__preview-item img {
     transform: scale(1);
+  }
+
+  body[data-page-type="work"] .project-row:hover .project-row__preview-cta,
+  body[data-page-type="work"] .project-row:focus-within .project-row__preview-cta {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 
@@ -5002,13 +5036,13 @@ body[data-page-type="duplicate-home"] main {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  body[data-page-type="duplicate-home"],
-  body[data-page-type="duplicate-home"] a,
-  body[data-page-type="duplicate-home"] button {
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button {
     cursor: none;
   }
 
-  body[data-page-type="duplicate-home"] .duplicate-cursor {
+  body.has-custom-cursor .duplicate-cursor {
     position: fixed;
     left: 0;
     top: 0;
@@ -5028,11 +5062,11 @@ body[data-page-type="duplicate-home"] main {
     will-change: transform, opacity;
   }
 
-  body[data-page-type="duplicate-home"] .duplicate-cursor.is-visible {
+  body.has-custom-cursor .duplicate-cursor.is-visible {
     opacity: 1;
   }
 
-  body[data-page-type="duplicate-home"] .duplicate-cursor.is-pressed {
+  body.has-custom-cursor .duplicate-cursor.is-pressed {
     width: 0.374rem;
     height: 0.374rem;
     background: rgba(255, 255, 255, 0.76);
