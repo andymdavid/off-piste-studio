@@ -2743,6 +2743,18 @@ body[data-page-type="work"] .projects__blank-row::after {
   pointer-events: none;
 }
 
+body[data-page-type="work"] .projects__blank-row::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--site-divider);
+  pointer-events: none;
+}
+
 body[data-page-type="work"] .projects__filter-row .work-hero__filters {
   justify-content: flex-end;
 }
