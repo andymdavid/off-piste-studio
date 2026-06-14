@@ -2605,11 +2605,11 @@ body[data-page-type="work"] .work-hero > .container {
 }
 
 .work-hero__title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.875rem, 4.8vw, 4.25rem);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.61rem, 2.3vw, 2.3rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
   margin: 0 auto var(--space-lg);
   max-width: 800px;
 }
