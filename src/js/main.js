@@ -672,6 +672,21 @@ function initWorkImagePreview() {
   const canHover = window.matchMedia('(min-width: 1024px) and (hover: hover)').matches;
   if (!canHover) return;
 
+  const cursorCta = document.createElement('div');
+  cursorCta.className = 'work-preview-cursor-cta';
+  cursorCta.setAttribute('aria-hidden', 'true');
+  cursorCta.textContent = 'Coming Soon';
+  document.body.appendChild(cursorCta);
+
+  const moveCursorCta = event => {
+    const offset = 18;
+    const rect = cursorCta.getBoundingClientRect();
+    const gutter = 12;
+    const x = Math.min(event.clientX + offset, window.innerWidth - rect.width - gutter);
+    const y = Math.min(event.clientY + offset, window.innerHeight - rect.height - gutter);
+    cursorCta.style.transform = `translate3d(${Math.max(gutter, x)}px, ${Math.max(gutter, y)}px, 0)`;
+  };
+
   rows.forEach(row => {
     const preview = row.querySelector('.project-row__preview');
     if (!preview) return;
@@ -690,17 +705,17 @@ function initWorkImagePreview() {
 
       preview.style.setProperty('--work-preview-x', `${x}px`);
       preview.style.setProperty('--work-preview-y', `${y}px`);
-
-      const ctaOffset = 18;
-      const ctaX = Math.min(Math.max(event.clientX - x + halfWidth + ctaOffset, 20), rect.width - 20);
-      const ctaY = Math.min(Math.max(event.clientY - y + halfHeight + ctaOffset, 18), rect.height - 18);
-
-      preview.style.setProperty('--work-preview-cta-x', `${ctaX}px`);
-      preview.style.setProperty('--work-preview-cta-y', `${ctaY}px`);
+      moveCursorCta(event);
     };
 
-    row.addEventListener('mouseenter', movePreview);
+    row.addEventListener('mouseenter', event => {
+      movePreview(event);
+      cursorCta.classList.add('is-visible');
+    });
     row.addEventListener('mousemove', movePreview);
+    row.addEventListener('mouseleave', () => {
+      cursorCta.classList.remove('is-visible');
+    });
   });
 }
 
