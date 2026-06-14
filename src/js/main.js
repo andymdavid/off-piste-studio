@@ -663,6 +663,40 @@ function initWorkRowScramble() {
   });
 }
 
+function initWorkImagePreview() {
+  if (document.body.dataset.pageType !== 'work') return;
+
+  const rows = document.querySelectorAll('.project-row');
+  if (!rows.length) return;
+
+  const canHover = window.matchMedia('(min-width: 1024px) and (hover: hover)').matches;
+  if (!canHover) return;
+
+  rows.forEach(row => {
+    const preview = row.querySelector('.project-row__preview');
+    if (!preview) return;
+
+    const movePreview = event => {
+      const rect = preview.getBoundingClientRect();
+      const gutter = 24;
+      const halfWidth = rect.width / 2;
+      const halfHeight = rect.height / 2;
+      const minX = gutter + halfWidth;
+      const maxX = window.innerWidth - gutter - halfWidth;
+      const minY = gutter + halfHeight;
+      const maxY = window.innerHeight - gutter - halfHeight;
+      const x = Math.min(Math.max(event.clientX, minX), maxX);
+      const y = Math.min(Math.max(event.clientY, minY), maxY);
+
+      preview.style.setProperty('--work-preview-x', `${x}px`);
+      preview.style.setProperty('--work-preview-y', `${y}px`);
+    };
+
+    row.addEventListener('mouseenter', movePreview);
+    row.addEventListener('mousemove', movePreview);
+  });
+}
+
 function initButtonScramble() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -1029,6 +1063,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initInsightsList();
   initProjectFilter();
   initWorkRowScramble();
+  initWorkImagePreview();
   initButtonScramble();
   initRelatedPosts();
   initLeadModal();
