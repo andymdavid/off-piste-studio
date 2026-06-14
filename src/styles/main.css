@@ -2718,7 +2718,8 @@ body[data-page-type="work"] .projects::after {
   bottom: 0;
 }
 
-body[data-page-type="work"] .projects__filter-row {
+body[data-page-type="work"] .projects__filter-row,
+body[data-page-type="work"] .projects__blank-row {
   position: relative;
   display: flex;
   align-items: center;
@@ -2729,7 +2730,8 @@ body[data-page-type="work"] .projects__filter-row {
   border-right: 1px solid var(--site-divider-strong);
 }
 
-body[data-page-type="work"] .projects__filter-row::after {
+body[data-page-type="work"] .projects__filter-row::after,
+body[data-page-type="work"] .projects__blank-row::after {
   content: "";
   position: absolute;
   left: 50%;
