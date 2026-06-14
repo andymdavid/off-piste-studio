@@ -690,6 +690,13 @@ function initWorkImagePreview() {
 
       preview.style.setProperty('--work-preview-x', `${x}px`);
       preview.style.setProperty('--work-preview-y', `${y}px`);
+
+      const ctaOffset = 18;
+      const ctaX = Math.min(Math.max(event.clientX - x + halfWidth + ctaOffset, 20), rect.width - 20);
+      const ctaY = Math.min(Math.max(event.clientY - y + halfHeight + ctaOffset, 18), rect.height - 18);
+
+      preview.style.setProperty('--work-preview-cta-x', `${ctaX}px`);
+      preview.style.setProperty('--work-preview-cta-y', `${ctaY}px`);
     };
 
     row.addEventListener('mouseenter', movePreview);
