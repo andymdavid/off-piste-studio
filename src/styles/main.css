@@ -2611,11 +2611,11 @@ body[data-page-type="work"] .work-hero > .container {
   letter-spacing: -0.04em;
   line-height: 1.04;
   margin: 0 auto 0.9rem;
-  max-width: 800px;
+  max-width: 680px;
 }
 
 .work-hero__text {
-  max-width: 46rem;
+  max-width: 34.5rem;
   margin: 0 auto var(--space-lg);
   color: rgba(255, 255, 255, 0.72);
   font-family: var(--font-primary);
