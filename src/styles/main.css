@@ -2593,7 +2593,7 @@ body[data-page-type="work"] .work-hero > .container {
   justify-content: flex-end;
   align-items: center;
   padding-top: 120px;
-  padding-bottom: var(--space-2xl);
+  padding-bottom: calc(var(--space-2xl) + 2.15rem);
   border-left: 1px solid var(--site-divider-strong);
   border-right: 1px solid var(--site-divider-strong);
 }
@@ -2704,6 +2704,33 @@ body[data-page-type="work"] .projects::before {
 
 body[data-page-type="work"] .projects::after {
   bottom: 0;
+}
+
+body[data-page-type="work"] .projects__filter-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 5.75rem;
+  padding: 0 1rem;
+  border-left: 1px solid var(--site-divider-strong);
+  border-right: 1px solid var(--site-divider-strong);
+}
+
+body[data-page-type="work"] .projects__filter-row::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--site-divider);
+  pointer-events: none;
+}
+
+body[data-page-type="work"] .projects__filter-row .work-hero__filters {
+  justify-content: flex-end;
 }
 
 .projects__list {
