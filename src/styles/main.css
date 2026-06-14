@@ -2606,7 +2606,7 @@ body[data-page-type="work"] .work-hero > .container {
 
 .work-hero__title {
   font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(1.61rem, 2.3vw, 2.3rem);
+  font-size: clamp(1.85rem, 2.65vw, 2.65rem);
   font-weight: 700;
   letter-spacing: -0.04em;
   line-height: 1.04;
