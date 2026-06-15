@@ -2457,15 +2457,24 @@ body[data-page-type="about"] .about__intro {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   min-height: 50vh;
+  position: relative;
+}
+
+body[data-page-type="about"] .about__intro::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: 50%;
+  width: 1px;
+  background: var(--site-divider);
+  transform: translateX(-0.5px);
+  pointer-events: none;
 }
 
 body[data-page-type="about"] .about__intro-cell {
   min-width: 0;
   padding: 1.35rem 1rem 1.5rem;
-}
-
-body[data-page-type="about"] .about__intro-cell + .about__intro-cell {
-  border-left: 1px solid var(--site-divider);
 }
 
 body[data-page-type="about"] .about__intro-cell--title,
