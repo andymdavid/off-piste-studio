@@ -2380,14 +2380,25 @@ body[data-page-type="about"] .about-hero {
   min-height: auto;
 }
 
+body[data-page-type="about"] .about-hero::before,
+body[data-page-type="about"] .about-hero::after {
+  display: none;
+}
+
 body[data-page-type="about"] .about-hero > .container {
+  width: 100%;
+  max-width: none;
   min-height: 55vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
   padding-top: 120px;
+  padding-left: clamp(0.9rem, 1.8vw, 1.4rem);
+  padding-right: clamp(0.9rem, 1.8vw, 1.4rem);
   padding-bottom: var(--space-2xl);
+  border-left: 0;
+  border-right: 0;
 }
 
 body[data-page-type="about"] .about-hero__content {
@@ -2425,13 +2436,13 @@ body[data-page-type="about"] .about-hero__text {
   letter-spacing: -0.03em;
   color: rgba(255, 255, 255, 0.72);
   max-width: 34.5rem;
-  margin: 0 auto var(--space-lg);
+  margin: 0 auto 1.6rem;
   text-wrap: balance;
 }
 
 body[data-page-type="about"] .about-hero__button,
 body[data-page-type="about"] .about__button {
-  margin-top: 0.2rem;
+  margin-top: 0;
 }
 
 body[data-page-type="about"] .about-hero__button:hover {
@@ -2449,6 +2460,9 @@ body[data-page-type="about"] .about > .container {
 
 body[data-page-type="about"] .about__content {
   display: grid;
+  gap: 0;
+  width: 100%;
+  align-items: stretch;
   max-width: none;
   margin-bottom: 0;
 }
@@ -2457,19 +2471,15 @@ body[data-page-type="about"] .about__intro {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   min-height: 50vh;
-  position: relative;
-}
-
-body[data-page-type="about"] .about__intro::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: -1px;
-  left: 50%;
-  width: 1px;
-  background: var(--site-divider);
-  transform: translateX(-0.5px);
-  pointer-events: none;
+  background-image:
+    linear-gradient(
+      to right,
+      transparent calc(50% - 0.5px),
+      var(--site-divider) calc(50% - 0.5px),
+      var(--site-divider) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    );
+  background-repeat: no-repeat;
 }
 
 body[data-page-type="about"] .about__intro-cell {
@@ -2510,6 +2520,94 @@ body[data-page-type="about"] .about__cards {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   border-top: 1px solid var(--site-divider);
+  background-image:
+    linear-gradient(
+      to right,
+      transparent calc(25% - 0.5px),
+      var(--site-divider) calc(25% - 0.5px),
+      var(--site-divider) calc(25% + 0.5px),
+      transparent calc(25% + 0.5px)
+    ),
+    linear-gradient(
+      to right,
+      transparent calc(50% - 0.5px),
+      var(--site-divider) calc(50% - 0.5px),
+      var(--site-divider) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      to right,
+      transparent calc(75% - 0.5px),
+      var(--site-divider) calc(75% - 0.5px),
+      var(--site-divider) calc(75% + 0.5px),
+      transparent calc(75% + 0.5px)
+    );
+  background-repeat: no-repeat;
+}
+
+body[data-page-type="about"] .about__blank-row {
+  min-height: 5.75rem;
+  border-top: 1px solid var(--site-divider);
+  border-bottom: 1px solid var(--site-divider);
+}
+
+body[data-page-type="about"] .about__logo-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-bottom: 1px solid var(--site-divider);
+}
+
+body[data-page-type="about"] .about__logo-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: clamp(5.5rem, 8vw, 7rem);
+  padding: 0.75rem;
+  border-left: 1px solid var(--site-divider);
+}
+
+body[data-page-type="about"] .about__logo-cell:first-child,
+body[data-page-type="about"] .about__logo-cell:nth-child(5) {
+  border-left: 0;
+}
+
+body[data-page-type="about"] .about__logo-cell:nth-child(n + 5) {
+  border-top: 1px solid var(--site-divider);
+}
+
+body[data-page-type="about"] .about__logo {
+  width: auto;
+  max-width: 70%;
+  max-height: 4.7rem;
+  opacity: 0.72;
+  filter: none;
+  transition: opacity 280ms ease, transform 280ms ease;
+}
+
+body[data-page-type="about"] .about__logo-cell:hover .about__logo {
+  opacity: 0.96;
+  transform: translateY(-0.15rem);
+}
+
+body[data-page-type="about"] .about__logo.is-swapping-out {
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+body[data-page-type="about"] .about__logo.is-swapping-in {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+body[data-page-type="about"][data-theme="light"] .about__logo {
+  filter: invert(1);
+  opacity: 0.64;
+}
+
+body[data-page-type="about"][data-theme="light"] .about__logo-cell:hover .about__logo {
+  opacity: 0.92;
 }
 
 body[data-page-type="about"] .about__card {
@@ -2519,15 +2617,10 @@ body[data-page-type="about"] .about__card {
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
-  border-left: 1px solid var(--site-divider);
   background: transparent;
   transition:
     background-color 180ms ease,
     color 180ms ease;
-}
-
-body[data-page-type="about"] .about__card:first-child {
-  border-left: 0;
 }
 
 body[data-page-type="about"] .about__card-index {
@@ -2679,12 +2772,19 @@ body[data-page-type="about"] .services-alt__item:last-child {
   }
 
   body[data-page-type="about"] .about__intro,
-  body[data-page-type="about"] .about__cards {
+  body[data-page-type="about"] .about__cards,
+  body[data-page-type="about"] .about__logo-row {
     grid-template-columns: 1fr;
   }
 
   body[data-page-type="about"] .about__intro {
     min-height: auto;
+    background-image: none;
+  }
+
+  body[data-page-type="about"] .about__cards,
+  body[data-page-type="about"] .about__blank-row {
+    background-image: none;
   }
 
   body[data-page-type="about"] .about__intro-cell + .about__intro-cell,
@@ -2695,6 +2795,24 @@ body[data-page-type="about"] .services-alt__item:last-child {
 
   body[data-page-type="about"] .about__card:first-child {
     border-top: 0;
+  }
+
+  body[data-page-type="about"] .about__logo-row {
+    min-height: 0;
+  }
+
+  body[data-page-type="about"] .about__logo-cell {
+    min-height: 8.25rem;
+    border-left: 0;
+    border-top: 1px solid var(--site-divider);
+  }
+
+  body[data-page-type="about"] .about__logo-cell:first-child {
+    border-top: 0;
+  }
+
+  body[data-page-type="about"] .about__logo-cell:nth-child(5) {
+    border-top: 1px solid var(--site-divider);
   }
 
   body[data-page-type="about"] .about__headline,
