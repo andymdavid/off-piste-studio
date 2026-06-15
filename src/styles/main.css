@@ -2457,7 +2457,6 @@ body[data-page-type="about"] .about__intro {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   min-height: 50vh;
-  border-bottom: 1px solid var(--site-divider);
 }
 
 body[data-page-type="about"] .about__intro-cell {
@@ -2501,6 +2500,7 @@ body[data-page-type="about"] .about__subtext:last-of-type {
 body[data-page-type="about"] .about__cards {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--site-divider);
 }
 
 body[data-page-type="about"] .about__card {
@@ -2511,6 +2511,10 @@ body[data-page-type="about"] .about__card {
   justify-content: space-between;
   padding: 1rem;
   border-left: 1px solid var(--site-divider);
+  background: transparent;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
 }
 
 body[data-page-type="about"] .about__card:first-child {
@@ -2523,6 +2527,12 @@ body[data-page-type="about"] .about__card-index {
   font-weight: 400;
   letter-spacing: -0.01em;
   color: rgba(255, 255, 255, 0.42);
+  transition: color 180ms ease;
+}
+
+body[data-page-type="about"] .about__card-body {
+  transform: translateY(0);
+  transition: transform 220ms ease;
 }
 
 body[data-page-type="about"] .about__card-title {
@@ -2534,6 +2544,7 @@ body[data-page-type="about"] .about__card-title {
   line-height: 0.98;
   color: rgba(255, 255, 255, 0.92);
   text-wrap: balance;
+  transition: color 180ms ease;
 }
 
 body[data-page-type="about"] .about__card-text {
@@ -2545,6 +2556,32 @@ body[data-page-type="about"] .about__card-text {
   line-height: 1.32;
   color: rgba(255, 255, 255, 0.58);
   text-wrap: balance;
+  transition: color 180ms ease;
+}
+
+body[data-page-type="about"] .about__card:hover,
+body[data-page-type="about"] .about__card:focus-within {
+  background: #fdfdfc;
+}
+
+body[data-page-type="about"] .about__card:hover .about__card-index,
+body[data-page-type="about"] .about__card:focus-within .about__card-index {
+  color: rgba(18, 18, 18, 0.46);
+}
+
+body[data-page-type="about"] .about__card:hover .about__card-title,
+body[data-page-type="about"] .about__card:focus-within .about__card-title {
+  color: rgba(18, 18, 18, 0.92);
+}
+
+body[data-page-type="about"] .about__card:hover .about__card-text,
+body[data-page-type="about"] .about__card:focus-within .about__card-text {
+  color: rgba(18, 18, 18, 0.62);
+}
+
+body[data-page-type="about"] .about__card:hover .about__card-body,
+body[data-page-type="about"] .about__card:focus-within .about__card-body {
+  transform: translateY(-0.35rem);
 }
 
 body[data-page-type="about"] .services-alt > .container,

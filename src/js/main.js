@@ -716,6 +716,57 @@ function initWorkImagePreview() {
   });
 }
 
+function initAboutCardScramble() {
+  if (document.body.dataset.pageType !== 'about') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const cards = document.querySelectorAll('.about__card');
+  if (!cards.length) return;
+
+  const symbols = '{}[]<>/\\|01#$%&*=+_~';
+  const duration = 280;
+  const interval = 35;
+
+  cards.forEach(card => {
+    const target = card.querySelector('.about__card-title');
+    if (!target || target.dataset.scrambleBound === 'true') return;
+
+    target.dataset.scrambleBound = 'true';
+
+    const originalText = target.textContent || '';
+    let timer = 0;
+    let elapsed = 0;
+
+    const restore = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+      target.textContent = originalText;
+    };
+
+    const scramble = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+
+      timer = window.setInterval(() => {
+        elapsed += interval;
+        target.textContent = Array.from(originalText)
+          .map(character => {
+            if (character === ' ') return ' ';
+            return symbols[Math.floor(Math.random() * symbols.length)];
+          })
+          .join('');
+
+        if (elapsed >= duration) restore();
+      }, interval);
+    };
+
+    card.addEventListener('mouseenter', scramble);
+    card.addEventListener('mouseleave', restore);
+  });
+}
+
 function initButtonScramble() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -1138,6 +1189,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilter();
   initWorkRowScramble();
   initWorkImagePreview();
+  initAboutCardScramble();
   initButtonScramble();
   initRelatedPosts();
   initLeadModal();
