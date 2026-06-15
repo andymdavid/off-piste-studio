@@ -2438,25 +2438,6 @@ body[data-page-type="about"] .about-hero__button:hover {
   transform: none;
 }
 
-body[data-page-type="about"] .project-modal {
-  flex: none;
-  padding: 0;
-  width: 100%;
-}
-
-body[data-page-type="about"] .project-modal__slideshow {
-  max-width: none;
-  border-radius: 0;
-}
-
-body[data-page-type="about"] .project-modal__slideshow::before {
-  content: none;
-}
-
-body[data-page-type="about"] .project-modal__slide {
-  border-radius: 0;
-}
-
 body[data-page-type="about"] .about > .container,
 body[data-page-type="about"] .services-alt > .container,
 body[data-page-type="about"] .faq > .container {
