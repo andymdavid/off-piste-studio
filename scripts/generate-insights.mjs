@@ -138,7 +138,7 @@ ${post.image ? `        "image": "https://offpistestudio.com${escapeHtml(post.im
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260615-about-cta-spacing">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260615-about-hero-align">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -174,7 +174,7 @@ ${headerHtml}
     <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="projects__list" data-related-posts></div></div></section>
   </main>
 ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260615-about-cta-spacing"></script>
+  <script type="module" src="/src/js/main.js?v=20260615-about-hero-align"></script>
 </body>
 </html>
 `;
