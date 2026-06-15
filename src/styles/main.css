@@ -2438,7 +2438,115 @@ body[data-page-type="about"] .about-hero__button:hover {
   transform: none;
 }
 
-body[data-page-type="about"] .about > .container,
+body[data-page-type="about"] .about-spacer > .container {
+  min-height: 5.75rem;
+}
+
+body[data-page-type="about"] .about > .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+body[data-page-type="about"] .about__content {
+  display: grid;
+  max-width: none;
+  margin-bottom: 0;
+}
+
+body[data-page-type="about"] .about__intro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 50vh;
+  border-bottom: 1px solid var(--site-divider);
+}
+
+body[data-page-type="about"] .about__intro-cell {
+  min-width: 0;
+  padding: 1.35rem 1rem 1.5rem;
+}
+
+body[data-page-type="about"] .about__intro-cell + .about__intro-cell {
+  border-left: 1px solid var(--site-divider);
+}
+
+body[data-page-type="about"] .about__intro-cell--title,
+body[data-page-type="about"] .about__intro-cell--copy {
+  display: flex;
+  align-items: flex-end;
+}
+
+body[data-page-type="about"] .about__headline {
+  width: 43.75rem;
+  max-width: 100%;
+  margin: 0 0 3.25rem;
+  text-wrap: balance;
+}
+
+body[data-page-type="about"] .about__copy {
+  display: flex;
+  flex-direction: column;
+  max-width: 43.75rem;
+  margin: 0 0 3.25rem;
+}
+
+body[data-page-type="about"] .about__subtext {
+  max-width: 100%;
+  margin: 0 0 0.95rem;
+}
+
+body[data-page-type="about"] .about__subtext:last-of-type {
+  margin-bottom: var(--space-lg);
+}
+
+body[data-page-type="about"] .about__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+body[data-page-type="about"] .about__card {
+  display: flex;
+  min-width: 0;
+  min-height: clamp(18rem, 25vw, 23rem);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border-left: 1px solid var(--site-divider);
+}
+
+body[data-page-type="about"] .about__card:first-child {
+  border-left: 0;
+}
+
+body[data-page-type="about"] .about__card-index {
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.42);
+}
+
+body[data-page-type="about"] .about__card-title {
+  margin: 0 0 0.85rem;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.36rem, 2.1vw, 2.15rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  color: rgba(255, 255, 255, 0.92);
+  text-wrap: balance;
+}
+
+body[data-page-type="about"] .about__card-text {
+  margin: 0;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.32;
+  color: rgba(255, 255, 255, 0.58);
+  text-wrap: balance;
+}
+
 body[data-page-type="about"] .services-alt > .container,
 body[data-page-type="about"] .faq > .container {
   padding-top: var(--space-3xl);
@@ -2448,11 +2556,6 @@ body[data-page-type="about"] .faq > .container {
 body[data-page-type="about"] .about {
   min-height: auto;
   justify-content: flex-start;
-}
-
-body[data-page-type="about"] .about__content {
-  max-width: 1120px;
-  margin-bottom: 0;
 }
 
 body[data-page-type="about"] .about__headline,
@@ -2481,7 +2584,6 @@ body[data-page-type="about"] .services-alt__title {
   line-height: 1;
 }
 
-body[data-page-type="about"] .about__subtext,
 body[data-page-type="about"] .services-alt__description,
 body[data-page-type="about"] .faq__answer {
   font-family: var(--font-primary);
@@ -2524,11 +2626,34 @@ body[data-page-type="about"] .services-alt__item:last-child {
     font-size: clamp(1.4rem, 2vw, 2rem);
   }
 
-  body[data-page-type="about"] .about > .container,
   body[data-page-type="about"] .services-alt > .container,
   body[data-page-type="about"] .faq > .container {
     padding-top: var(--space-2xl);
     padding-bottom: var(--space-2xl);
+  }
+
+  body[data-page-type="about"] .about__intro,
+  body[data-page-type="about"] .about__cards {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page-type="about"] .about__intro {
+    min-height: auto;
+  }
+
+  body[data-page-type="about"] .about__intro-cell + .about__intro-cell,
+  body[data-page-type="about"] .about__card {
+    border-left: 0;
+    border-top: 1px solid var(--site-divider);
+  }
+
+  body[data-page-type="about"] .about__card:first-child {
+    border-top: 0;
+  }
+
+  body[data-page-type="about"] .about__headline,
+  body[data-page-type="about"] .about__copy {
+    margin-bottom: var(--space-xl);
   }
 }
 

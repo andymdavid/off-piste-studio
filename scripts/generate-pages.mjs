@@ -380,7 +380,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260615-about-no-carousel">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260615-about-intro-grid">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -437,7 +437,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'industry' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260615-about-no-carousel"></script>
+  <script type="module" src="/src/js/main.js?v=20260615-about-intro-grid"></script>
 </body>
 </html>`;
 }
@@ -534,7 +534,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260615-about-no-carousel">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260615-about-intro-grid">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -591,7 +591,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'service' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260615-about-no-carousel"></script>
+  <script type="module" src="/src/js/main.js?v=20260615-about-intro-grid"></script>
 </body>
 </html>`;
 }
@@ -690,7 +690,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260615-about-no-carousel">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260615-about-intro-grid">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">
@@ -728,7 +728,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'location' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260615-about-no-carousel"></script>
+  <script type="module" src="/src/js/main.js?v=20260615-about-intro-grid"></script>
 </body>
 </html>`;
 }
