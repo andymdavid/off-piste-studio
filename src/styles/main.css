@@ -2410,7 +2410,7 @@ body[data-page-type="about"] .about-hero__title {
   color: var(--color-text);
   margin: 0 auto 0.9rem;
   max-width: 734px;
-  text-wrap: balance;
+  text-wrap: normal;
 }
 
 body[data-page-type="about"] .about-hero__title em {
