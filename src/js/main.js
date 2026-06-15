@@ -767,6 +767,73 @@ function initAboutCardScramble() {
   });
 }
 
+function initAboutLogoSwap() {
+  if (document.body.dataset.pageType !== 'about') return;
+
+  const logos = Array.from(document.querySelectorAll('.about__logo'));
+  if (!logos.length) return;
+
+  const logoPool = [
+    { src: '/public/images/logos/PLI Logo Light.webp', alt: 'Place Intelligence' },
+    { src: '/public/images/logos/SB Logo Light.webp', alt: 'Superbeing' },
+    { src: '/public/images/logos/PLE Logo Light.webp', alt: 'Pleiades' },
+    { src: '/public/images/logos/FD Logo Light.webp', alt: 'Future Directors' },
+    { src: '/public/images/logos/FDY Logo Light.webp', alt: 'Flow Dynamics' },
+    { src: '/public/images/logos/DE Logo Light.webp', alt: 'Decarbonology' },
+    { src: '/public/images/logos/BU Logo Light.webp', alt: 'Buildsource' },
+    { src: '/public/images/logos/CC Logo Light.webp', alt: 'Cell Cyber' },
+    { src: '/public/images/logos/LI Logo Light.webp', alt: 'Linear' }
+  ];
+
+  const pickNextIndex = () => {
+    const active = new Set(
+      logos
+        .map(logo => Number.parseInt(logo.dataset.logoIndex || '', 10))
+        .filter(value => Number.isInteger(value))
+    );
+
+    const available = logoPool
+      .map((_, index) => index)
+      .filter(index => !active.has(index));
+
+    if (!available.length) return null;
+    return available[Math.floor(Math.random() * available.length)];
+  };
+
+  const swapLogo = () => {
+    const target = logos[Math.floor(Math.random() * logos.length)];
+    const nextIndex = pickNextIndex();
+    if (!target || nextIndex === null) return;
+
+    const nextLogo = logoPool[nextIndex];
+    target.classList.add('is-swapping-out');
+
+    window.setTimeout(() => {
+      target.src = nextLogo.src;
+      target.alt = nextLogo.alt;
+      target.dataset.logoIndex = String(nextIndex);
+      target.classList.remove('is-swapping-out');
+      target.classList.add('is-swapping-in');
+
+      window.requestAnimationFrame(() => {
+        window.requestAnimationFrame(() => {
+          target.classList.remove('is-swapping-in');
+        });
+      });
+    }, 280);
+  };
+
+  const scheduleNextSwap = () => {
+    const delay = 2200 + Math.floor(Math.random() * 2600);
+    window.setTimeout(() => {
+      swapLogo();
+      scheduleNextSwap();
+    }, delay);
+  };
+
+  scheduleNextSwap();
+}
+
 function initButtonScramble() {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
@@ -1190,6 +1257,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initWorkRowScramble();
   initWorkImagePreview();
   initAboutCardScramble();
+  initAboutLogoSwap();
   initButtonScramble();
   initRelatedPosts();
   initLeadModal();
