@@ -1469,7 +1469,11 @@ body[data-page-type="resources"] .projects--insights > .container {
 }
 
 body[data-page-type="resources"] .insights-hero__text {
-  max-width: 42rem;
+  max-width: 34.5rem;
+}
+
+body[data-page-type="resources"] .insights-hero__title {
+  max-width: 28rem;
 }
 
 .insights-index__filter-row {
