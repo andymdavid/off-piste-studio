@@ -2503,6 +2503,20 @@ body[data-page-type="about"] .about__headline {
   text-wrap: balance;
 }
 
+body[data-page-type="about"] .about__headline-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 43.75rem;
+  max-width: 100%;
+  margin: 0 0 3.25rem;
+}
+
+body[data-page-type="about"] .about__headline-group .about__headline {
+  width: 100%;
+  margin-bottom: var(--space-lg);
+}
+
 body[data-page-type="about"] .about__copy {
   display: flex;
   flex-direction: column;
