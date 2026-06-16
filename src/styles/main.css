@@ -1457,7 +1457,12 @@ body[data-page-type="resources"] .work-hero {
 }
 
 body[data-page-type="resources"] .projects--insights > .container {
-  max-width: var(--site-frame-max);
+  width: calc(100% - (var(--site-page-gutter) * 2));
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
   border-left: 1px solid var(--site-divider);
   border-right: 1px solid var(--site-divider);
 }
@@ -1530,11 +1535,10 @@ body[data-page-type="resources"] .insights-index__grid {
 
 .insight-card__link {
   display: flex;
-  aspect-ratio: 1 / 1;
-  min-height: 0;
-  height: auto;
+  min-height: clamp(18rem, 25vw, 23rem);
   overflow: hidden;
   flex-direction: column;
+  padding: 1rem;
   color: inherit;
   text-decoration: none;
   transition:
@@ -1544,7 +1548,8 @@ body[data-page-type="resources"] .insights-index__grid {
 
 .insight-card__media {
   position: relative;
-  flex: 0 0 37%;
+  flex: 0 0 34%;
+  margin: -1rem -1rem 1rem;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.035);
   border-bottom: 1px solid var(--site-divider);
@@ -1563,10 +1568,10 @@ body[data-page-type="resources"] .insights-index__grid {
 .insight-card__content {
   display: flex;
   min-height: 0;
-  height: 100%;
+  flex: 1 1 auto;
   flex-direction: column;
-  gap: 0.78rem;
-  padding: 0.9rem;
+  gap: 0;
+  padding: 0;
 }
 
 .insight-card__top {
@@ -1574,6 +1579,7 @@ body[data-page-type="resources"] .insights-index__grid {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.75rem;
   align-items: start;
+  margin-bottom: auto;
 }
 
 .insight-card__meta {
@@ -1591,15 +1597,15 @@ body[data-page-type="resources"] .insights-index__grid {
 .insight-card__title {
   display: -webkit-box;
   max-width: 13.5ch;
-  margin: 0;
+  margin: 0 0 0.85rem;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
-  font-size: clamp(1.32rem, 1.6vw, 1.75rem);
+  font-size: clamp(1.36rem, 2.1vw, 2.15rem);
   font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 1.02;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
   color: rgba(255, 255, 255, 0.92);
 }
 
@@ -1609,12 +1615,12 @@ body[data-page-type="resources"] .insights-index__grid {
   margin: 0;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   font-weight: 400;
   letter-spacing: -0.015em;
-  line-height: 1.28;
+  line-height: 1.32;
   color: rgba(255, 255, 255, 0.58);
 }
 
