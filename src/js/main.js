@@ -612,6 +612,10 @@ function initProjectFilter() {
           row.style.display = 'none';
         }
       });
+
+      document.querySelectorAll('.insights-index__row-spacer').forEach(spacer => {
+        spacer.style.display = filter === 'all' ? '' : 'none';
+      });
     });
   });
 }
@@ -1019,6 +1023,16 @@ function initInsightsList() {
 
   INSIGHT_POSTS.forEach((post, index) => {
     insightsList.appendChild(createInsightCard(post, index));
+
+    const isRowEnd = (index + 1) % 4 === 0;
+    const isLastPost = index === INSIGHT_POSTS.length - 1;
+
+    if (isRowEnd || isLastPost) {
+      const spacer = document.createElement('div');
+      spacer.className = 'insights-index__row-spacer';
+      spacer.setAttribute('aria-hidden', 'true');
+      insightsList.appendChild(spacer);
+    }
   });
 
   if (!filtersRoot) return;
