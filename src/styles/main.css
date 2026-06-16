@@ -3213,10 +3213,12 @@ body[data-page-type="work"] {
   color: rgba(255, 255, 255, 0.9);
 }
 
+body[data-page-type="resources"] main,
 body[data-page-type="work"] main {
   background: #121212;
 }
 
+body[data-page-type="resources"] main > .work-hero > .container,
 body[data-page-type="work"] main > .work-hero > .container,
 body[data-page-type="work"] main > .projects > .container {
   width: 100%;
@@ -3247,6 +3249,17 @@ body[data-page-type="work"] .work-hero > .container {
   padding-bottom: calc(var(--space-2xl) + 2.15rem);
   border-left: 1px solid var(--site-divider-strong);
   border-right: 1px solid var(--site-divider-strong);
+}
+
+body[data-page-type="resources"] .work-hero > .container {
+  display: flex;
+  flex: 1;
+  min-height: 55vh;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: calc(var(--space-2xl) + 2.15rem);
 }
 
 .work-hero__icon {
