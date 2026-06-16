@@ -614,7 +614,16 @@ function initProjectFilter() {
       });
 
       document.querySelectorAll('.insights-index__row-spacer').forEach(spacer => {
-        spacer.style.display = filter === 'all' ? '' : 'none';
+        const row = spacer.previousElementSibling;
+        const hasVisibleCards = row?.classList.contains('insights-index__article-row')
+          ? Array.from(row.querySelectorAll('.insight-card')).some(card => card.style.display !== 'none')
+          : false;
+        spacer.style.display = filter === 'all' || hasVisibleCards ? '' : 'none';
+      });
+
+      document.querySelectorAll('.insights-index__article-row').forEach(row => {
+        const hasVisibleCards = Array.from(row.querySelectorAll('.insight-card')).some(card => card.style.display !== 'none');
+        row.style.display = filter === 'all' || hasVisibleCards ? '' : 'none';
       });
     });
   });
@@ -1021,19 +1030,21 @@ function initInsightsList() {
 
   insightsList.classList.add('insights-index__grid');
 
-  INSIGHT_POSTS.forEach((post, index) => {
-    insightsList.appendChild(createInsightCard(post, index));
+  for (let index = 0; index < INSIGHT_POSTS.length; index += 4) {
+    const row = document.createElement('div');
+    row.className = 'insights-index__article-row';
 
-    const isRowEnd = (index + 1) % 4 === 0;
-    const isLastPost = index === INSIGHT_POSTS.length - 1;
+    INSIGHT_POSTS.slice(index, index + 4).forEach((post, offset) => {
+      row.appendChild(createInsightCard(post, index + offset));
+    });
 
-    if (isRowEnd || isLastPost) {
-      const spacer = document.createElement('div');
-      spacer.className = 'insights-index__row-spacer';
-      spacer.setAttribute('aria-hidden', 'true');
-      insightsList.appendChild(spacer);
-    }
-  });
+    insightsList.appendChild(row);
+
+    const spacer = document.createElement('div');
+    spacer.className = 'insights-index__row-spacer';
+    spacer.setAttribute('aria-hidden', 'true');
+    insightsList.appendChild(spacer);
+  }
 
   if (!filtersRoot) return;
 

@@ -1498,6 +1498,11 @@ body[data-page-type="resources"] .work-hero__title.insights-hero__title {
 }
 
 body[data-page-type="resources"] .insights-index__grid {
+  display: flex;
+  flex-direction: column;
+}
+
+body[data-page-type="resources"] .insights-index__article-row {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   background-image:
@@ -1531,11 +1536,28 @@ body[data-page-type="resources"] .insights-index__grid {
 .insights-index__row-spacer {
   position: relative;
   z-index: 1;
-  grid-column: 1 / -1;
   min-height: 3.6rem;
   background: var(--page-bg);
-  border-top: 1px solid var(--site-divider);
-  border-bottom: 1px solid var(--site-divider);
+}
+
+.insights-index__row-spacer::before,
+.insights-index__row-spacer::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--site-divider);
+  pointer-events: none;
+}
+
+.insights-index__row-spacer::before {
+  top: 0;
+}
+
+.insights-index__row-spacer::after {
+  bottom: 0;
 }
 
 .insight-card__link {
@@ -2191,7 +2213,7 @@ body[data-page-type="resources"] .insights-index__grid {
     justify-content: flex-start;
   }
 
-  body[data-page-type="resources"] .insights-index__grid {
+  body[data-page-type="resources"] .insights-index__article-row {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     background-image:
       linear-gradient(
@@ -2206,7 +2228,7 @@ body[data-page-type="resources"] .insights-index__grid {
 }
 
 @media (max-width: 640px) {
-  body[data-page-type="resources"] .insights-index__grid {
+  body[data-page-type="resources"] .insights-index__article-row {
     grid-template-columns: 1fr;
     background-image: none;
   }
