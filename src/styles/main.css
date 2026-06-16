@@ -2714,7 +2714,6 @@ body[data-page-type="about"] .about__card-text {
   letter-spacing: -0.015em;
   line-height: 1.32;
   color: rgba(255, 255, 255, 0.58);
-  text-wrap: balance;
   transition: color 180ms ease;
 }
 
