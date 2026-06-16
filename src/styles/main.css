@@ -2588,7 +2588,6 @@ body[data-page-type="about"] .about__logo-row {
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-bottom: 1px solid var(--site-divider);
 }
 
 body[data-page-type="about"] .about__logo-cell {
