@@ -3262,7 +3262,7 @@ body[data-page-type="resources"] .work-hero > .container {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 72px;
   padding-bottom: calc(var(--space-2xl) + 2.15rem);
 }
 
