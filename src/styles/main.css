@@ -1444,7 +1444,7 @@ body.lead-modal-open {
 
 .projects--insights {
   min-height: 100vh;
-  padding: 0 0 var(--space-3xl);
+  padding: 0;
   background-color: var(--color-bg-dark);
 }
 
@@ -1473,12 +1473,31 @@ body[data-page-type="resources"] .work-hero__title.insights-hero__title {
 }
 
 .insights-index__filter-row {
+  position: relative;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   min-height: 5.75rem;
-  border-top: 1px solid var(--site-divider);
-  border-bottom: 1px solid var(--site-divider);
+}
+
+.insights-index__filter-row::before,
+.insights-index__filter-row::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--site-divider);
+  pointer-events: none;
+}
+
+.insights-index__filter-row::before {
+  top: 0;
+}
+
+.insights-index__filter-row::after {
+  bottom: 0;
 }
 
 .insights-index__label {

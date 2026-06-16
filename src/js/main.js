@@ -585,6 +585,7 @@ function initProjectSlideshow() {
 function initProjectFilter() {
   const filterButtons = document.querySelectorAll('.work-hero__filter');
   const filterRows = document.querySelectorAll('.project-row, .insight-row, .insight-card');
+  const resourcesInsightsList = document.querySelector('body[data-page-type="resources"] [data-insights-list]');
 
   if (!filterButtons.length || !filterRows.length) return;
 
@@ -595,6 +596,14 @@ function initProjectFilter() {
       // Update active state
       filterButtons.forEach(btn => btn.classList.remove('is-active'));
       button.classList.add('is-active');
+
+      if (resourcesInsightsList) {
+        const posts = filter === 'all'
+          ? INSIGHT_POSTS
+          : INSIGHT_POSTS.filter(post => post.tags.includes(filter));
+        renderInsightsGrid(resourcesInsightsList, posts);
+        return;
+      }
 
       // Filter rows
       filterRows.forEach(row => {
@@ -1022,19 +1031,14 @@ function createInsightCard(post, index = 0) {
   return article;
 }
 
-function initInsightsList() {
-  const insightsList = document.querySelector('[data-insights-list]');
-  const filtersRoot = document.querySelector('[data-insights-filters]');
+function renderInsightsGrid(insightsList, posts) {
+  insightsList.innerHTML = '';
 
-  if (!insightsList) return;
-
-  insightsList.classList.add('insights-index__grid');
-
-  for (let index = 0; index < INSIGHT_POSTS.length; index += 4) {
+  for (let index = 0; index < posts.length; index += 4) {
     const row = document.createElement('div');
     row.className = 'insights-index__article-row';
 
-    INSIGHT_POSTS.slice(index, index + 4).forEach((post, offset) => {
+    posts.slice(index, index + 4).forEach((post, offset) => {
       row.appendChild(createInsightCard(post, index + offset));
     });
 
@@ -1045,6 +1049,16 @@ function initInsightsList() {
     spacer.setAttribute('aria-hidden', 'true');
     insightsList.appendChild(spacer);
   }
+}
+
+function initInsightsList() {
+  const insightsList = document.querySelector('[data-insights-list]');
+  const filtersRoot = document.querySelector('[data-insights-filters]');
+
+  if (!insightsList) return;
+
+  insightsList.classList.add('insights-index__grid');
+  renderInsightsGrid(insightsList, INSIGHT_POSTS);
 
   if (!filtersRoot) return;
 
