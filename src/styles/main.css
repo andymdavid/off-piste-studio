@@ -2456,6 +2456,25 @@ body[data-page-type="about"] .about-spacer > .container {
   min-height: 5.75rem;
 }
 
+body[data-page-type="about"] .about-spacer__row {
+  display: flex;
+  min-height: 5.75rem;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+body[data-page-type="about"] .about-spacer__heading {
+  max-width: 43.75rem;
+  margin: 0;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  color: rgba(255, 255, 255, 0.92);
+  text-wrap: balance;
+}
+
 body[data-page-type="about"] .about > .container {
   padding-top: 0;
   padding-bottom: 0;
