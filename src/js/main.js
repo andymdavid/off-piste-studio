@@ -980,17 +980,18 @@ function createInsightRow(post) {
 
 function createInsightCard(post, index = 0) {
   const article = document.createElement('article');
-  article.className = `insight-card${index === 0 ? ' insight-card--featured' : ''}`;
+  article.className = 'insight-card';
 
   const imageHtml = post.image
     ? `<div class="insight-card__media"><img src="${post.image}" alt="${post.imageAlt || post.title}" loading="lazy" decoding="async"></div>`
-    : `<div class="insight-card__media insight-card__media--fallback" aria-hidden="true"><span>${String(index + 1).padStart(2, '0')}</span></div>`;
+    : '';
 
   article.innerHTML = `
     <a href="${post.url}" class="insight-card__link" aria-label="Read ${post.title}">
       ${imageHtml}
       <div class="insight-card__content">
         <div class="insight-card__meta">
+          <span>${String(index + 1).padStart(2, '0')}</span>
           <span>${post.displayDate}</span>
           <span>${post.readTime}</span>
         </div>
