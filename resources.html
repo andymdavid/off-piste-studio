@@ -43,7 +43,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260616-about-logo-divider">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260616-insights-grid">
   <!-- Font preloads -->
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
@@ -52,7 +52,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-page-type="resources">
   <!-- Header -->
   <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
     <div class="duplicate-header__layout">
@@ -74,16 +74,19 @@
       <div class="container">
         <img src="/public/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
         <h2 class="work-hero__title insights-hero__title">From AI to SEO to user experience, we share practical thinking for businesses that want sharper positioning and stronger performance.</h2>
-        <div class="work-hero__filters">
-          <span class="work-hero__filter-label">Filter by</span>
-          <div class="work-hero__filter-tags" data-insights-filters></div>
-        </div>
       </div>
     </section>
 
     <!-- Insights List -->
     <section class="projects projects--insights">
       <div class="container">
+        <div class="insights-index__filter-row">
+          <h1 class="insights-index__label">Insights</h1>
+          <div class="work-hero__filters insights-index__filters" aria-label="Filter insights">
+            <span class="work-hero__filter-label">Filter by</span>
+            <div class="work-hero__filter-tags" data-insights-filters></div>
+          </div>
+        </div>
         <div class="projects__list" data-insights-list></div>
       </div>
     </section>
@@ -102,6 +105,6 @@
     <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
   </footer>
 
-  <script type="module" src="/src/js/main.js?v=20260616-about-logo-divider"></script>
+  <script type="module" src="/src/js/main.js?v=20260616-insights-grid"></script>
 </body>
 </html>

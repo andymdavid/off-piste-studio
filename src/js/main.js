@@ -584,7 +584,7 @@ function initProjectSlideshow() {
 // Work page project filter
 function initProjectFilter() {
   const filterButtons = document.querySelectorAll('.work-hero__filter');
-  const filterRows = document.querySelectorAll('.project-row, .insight-row');
+  const filterRows = document.querySelectorAll('.project-row, .insight-row, .insight-card');
 
   if (!filterButtons.length || !filterRows.length) return;
 
@@ -603,7 +603,7 @@ function initProjectFilter() {
           return;
         }
 
-        const tags = row.querySelectorAll('.project-row__tags span, .insight-row__tags span');
+        const tags = row.querySelectorAll('.project-row__tags span, .insight-row__tags span, .insight-card__tags span');
         const tagTexts = Array.from(tags).map(tag => tag.textContent);
 
         if (tagTexts.includes(filter)) {
@@ -978,14 +978,44 @@ function createInsightRow(post) {
   return article;
 }
 
+function createInsightCard(post, index = 0) {
+  const article = document.createElement('article');
+  article.className = `insight-card${index === 0 ? ' insight-card--featured' : ''}`;
+
+  const imageHtml = post.image
+    ? `<div class="insight-card__media"><img src="${post.image}" alt="${post.imageAlt || post.title}" loading="lazy" decoding="async"></div>`
+    : `<div class="insight-card__media insight-card__media--fallback" aria-hidden="true"><span>${String(index + 1).padStart(2, '0')}</span></div>`;
+
+  article.innerHTML = `
+    <a href="${post.url}" class="insight-card__link" aria-label="Read ${post.title}">
+      ${imageHtml}
+      <div class="insight-card__content">
+        <div class="insight-card__meta">
+          <span>${post.displayDate}</span>
+          <span>${post.readTime}</span>
+        </div>
+        <h3 class="insight-card__title">${post.title}</h3>
+        <p class="insight-card__description">${post.description}</p>
+        <div class="insight-card__tags">
+          ${post.tags.map(tag => `<span>${tag}</span>`).join('')}
+        </div>
+      </div>
+    </a>
+  `;
+
+  return article;
+}
+
 function initInsightsList() {
   const insightsList = document.querySelector('[data-insights-list]');
   const filtersRoot = document.querySelector('[data-insights-filters]');
 
   if (!insightsList) return;
 
-  INSIGHT_POSTS.forEach(post => {
-    insightsList.appendChild(createInsightRow(post));
+  insightsList.classList.add('insights-index__grid');
+
+  INSIGHT_POSTS.forEach((post, index) => {
+    insightsList.appendChild(createInsightCard(post, index));
   });
 
   if (!filtersRoot) return;
