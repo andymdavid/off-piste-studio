@@ -1450,6 +1450,7 @@ body.lead-modal-open {
 
 body[data-page-type="resources"] {
   background: var(--page-bg);
+  --resources-page-gutter: clamp(0.9rem, 1.8vw, 1.4rem);
 }
 
 body[data-page-type="resources"] .work-hero {
@@ -1457,7 +1458,7 @@ body[data-page-type="resources"] .work-hero {
 }
 
 body[data-page-type="resources"] .projects--insights > .container {
-  width: calc(100% - (var(--site-page-gutter) * 2));
+  width: calc(100% - (var(--resources-page-gutter) * 2));
   max-width: none;
   margin-left: auto;
   margin-right: auto;
@@ -1499,7 +1500,6 @@ body[data-page-type="resources"] .work-hero__title.insights-hero__title {
 body[data-page-type="resources"] .insights-index__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-bottom: 1px solid var(--site-divider);
   background-image:
     linear-gradient(
       to right,
@@ -1529,9 +1529,13 @@ body[data-page-type="resources"] .insights-index__grid {
 }
 
 .insights-index__row-spacer {
+  position: relative;
+  z-index: 1;
   grid-column: 1 / -1;
   min-height: 3.6rem;
+  background: var(--page-bg);
   border-top: 1px solid var(--site-divider);
+  border-bottom: 1px solid var(--site-divider);
 }
 
 .insight-card__link {
