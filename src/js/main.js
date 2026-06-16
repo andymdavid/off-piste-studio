@@ -990,16 +990,18 @@ function createInsightCard(post, index = 0) {
     <a href="${post.url}" class="insight-card__link" aria-label="Read ${post.title}">
       ${imageHtml}
       <div class="insight-card__content">
-        <div class="insight-card__meta">
-          <span>${String(index + 1).padStart(2, '0')}</span>
-          <span>${post.displayDate}</span>
-          <span>${post.readTime}</span>
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>${String(index + 1).padStart(2, '0')}</span>
+            <span>${post.displayDate}</span>
+            <span>${post.readTime}</span>
+          </div>
+          <div class="insight-card__tags">
+            ${post.tags.map(tag => `<span>${tag}</span>`).join('')}
+          </div>
         </div>
         <h3 class="insight-card__title">${post.title}</h3>
         <p class="insight-card__description">${post.description}</p>
-        <div class="insight-card__tags">
-          ${post.tags.map(tag => `<span>${tag}</span>`).join('')}
-        </div>
       </div>
     </a>
   `;
