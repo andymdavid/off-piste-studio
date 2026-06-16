@@ -2706,6 +2706,10 @@ body[data-page-type="about"] .about__card-title {
   transition: color 180ms ease;
 }
 
+body[data-page-type="about"] .about__team-media + .about__card-body .about__card-title {
+  margin-bottom: 0.42rem;
+}
+
 body[data-page-type="about"] .about__card-text {
   margin: 0;
   font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
