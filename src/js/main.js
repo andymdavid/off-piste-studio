@@ -601,7 +601,7 @@ function initProjectFilter() {
         const posts = filter === 'all'
           ? INSIGHT_POSTS
           : INSIGHT_POSTS.filter(post => post.tags.includes(filter));
-        renderInsightsGrid(resourcesInsightsList, posts);
+        renderInsightsGrid(resourcesInsightsList, posts, { limitRows: filter === 'all' });
         return;
       }
 
@@ -1031,14 +1031,20 @@ function createInsightCard(post, index = 0) {
   return article;
 }
 
-function renderInsightsGrid(insightsList, posts) {
+function renderInsightsGrid(insightsList, posts, options = {}) {
   insightsList.innerHTML = '';
 
-  for (let index = 0; index < posts.length; index += 4) {
+  const cardsPerRow = 4;
+  const initialRows = 3;
+  const initialPostCount = cardsPerRow * initialRows;
+  const shouldLimit = options.limitRows && posts.length > initialPostCount;
+  const visiblePosts = shouldLimit ? posts.slice(0, initialPostCount) : posts;
+
+  for (let index = 0; index < visiblePosts.length; index += cardsPerRow) {
     const row = document.createElement('div');
     row.className = 'insights-index__article-row';
 
-    posts.slice(index, index + 4).forEach((post, offset) => {
+    visiblePosts.slice(index, index + cardsPerRow).forEach((post, offset) => {
       row.appendChild(createInsightCard(post, index + offset));
     });
 
@@ -1046,7 +1052,22 @@ function renderInsightsGrid(insightsList, posts) {
 
     const spacer = document.createElement('div');
     spacer.className = 'insights-index__row-spacer';
-    spacer.setAttribute('aria-hidden', 'true');
+
+    const isLimitedFinalRow = shouldLimit && index + cardsPerRow >= visiblePosts.length;
+    if (isLimitedFinalRow) {
+      spacer.classList.add('insights-index__row-spacer--action');
+      const showMoreButton = document.createElement('button');
+      showMoreButton.type = 'button';
+      showMoreButton.className = 'button insights-index__show-more';
+      showMoreButton.textContent = 'Show More';
+      showMoreButton.addEventListener('click', () => {
+        renderInsightsGrid(insightsList, posts);
+      });
+      spacer.appendChild(showMoreButton);
+    } else {
+      spacer.setAttribute('aria-hidden', 'true');
+    }
+
     insightsList.appendChild(spacer);
   }
 }
@@ -1058,7 +1079,7 @@ function initInsightsList() {
   if (!insightsList) return;
 
   insightsList.classList.add('insights-index__grid');
-  renderInsightsGrid(insightsList, INSIGHT_POSTS);
+  renderInsightsGrid(insightsList, INSIGHT_POSTS, { limitRows: true });
 
   if (!filtersRoot) return;
 

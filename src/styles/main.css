@@ -1559,6 +1559,18 @@ body[data-page-type="resources"] .insights-index__article-row {
   background: var(--page-bg);
 }
 
+.insights-index__row-spacer--action {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 1rem;
+}
+
+.insights-index__show-more {
+  position: relative;
+  z-index: 1;
+}
+
 .insights-index__row-spacer::before,
 .insights-index__row-spacer::after {
   content: "";
