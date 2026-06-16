@@ -1468,8 +1468,8 @@ body[data-page-type="resources"] .projects--insights > .container {
   border-right: 1px solid var(--site-divider);
 }
 
-body[data-page-type="resources"] .work-hero__title.insights-hero__title {
-  max-width: 760px;
+body[data-page-type="resources"] .insights-hero__text {
+  max-width: 42rem;
 }
 
 .insights-index__filter-row {
@@ -3279,11 +3279,6 @@ body[data-page-type="work"] .work-hero > .container {
 
 .work-hero__title em {
   font-style: italic;
-}
-
-.work-hero__title.insights-hero__title {
-  font-size: clamp(1.5rem, 3.6vw, 2.75rem);
-  max-width: 720px;
 }
 
 .work-hero__filters {
