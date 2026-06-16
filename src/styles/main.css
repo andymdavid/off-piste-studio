@@ -1455,6 +1455,8 @@ body[data-page-type="resources"] {
 
 body[data-page-type="resources"] .work-hero {
   background: var(--page-bg);
+  height: 55vh;
+  min-height: 0;
 }
 
 body[data-page-type="resources"] .projects--insights > .container {
@@ -3258,7 +3260,8 @@ body[data-page-type="work"] .work-hero > .container {
 body[data-page-type="resources"] .work-hero > .container {
   display: flex;
   flex: 1;
-  min-height: 55vh;
+  height: 55vh;
+  min-height: 0;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
