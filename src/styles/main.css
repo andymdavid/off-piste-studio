@@ -2847,7 +2847,10 @@ body[data-page-type="about"] main > section::before {
 }
 
 body[data-page-type="about"] main > section:last-child::after {
-  display: none;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
 }
 
 body[data-page-type="about"] main > section > .container {
@@ -3065,6 +3068,10 @@ body[data-page-type="about"] .about__blank-row {
 
 body[data-page-type="about"] .about__blank-row + .about__blank-row {
   border-top: 0;
+}
+
+body[data-page-type="about"] .about__content > .about__blank-row:last-child {
+  border-bottom: 0;
 }
 
 body[data-page-type="about"] .about__blank-row--label {
