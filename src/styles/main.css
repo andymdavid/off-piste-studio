@@ -9014,6 +9014,16 @@ body[data-page-type="work"][data-theme="light"] .duplicate-cursor.is-pressed {
   background: rgba(18, 18, 18, 0.64);
 }
 
+body[data-page-type="resources"][data-theme="light"] .duplicate-cursor,
+body[data-page-type="about"][data-theme="light"] .duplicate-cursor {
+  background: rgba(18, 18, 18, 0.88);
+}
+
+body[data-page-type="resources"][data-theme="light"] .duplicate-cursor.is-pressed,
+body[data-page-type="about"][data-theme="light"] .duplicate-cursor.is-pressed {
+  background: rgba(18, 18, 18, 0.64);
+}
+
 body[data-page-type="duplicate-home"][data-theme="light"] .footer {
   background: rgba(18, 18, 18, 0.035) !important;
 }
