@@ -1455,8 +1455,6 @@ body[data-page-type="resources"] {
 
 body[data-page-type="resources"] .work-hero {
   background: var(--page-bg);
-  height: 55vh;
-  min-height: 0;
 }
 
 body[data-page-type="resources"] .projects--insights > .container {
@@ -3260,12 +3258,11 @@ body[data-page-type="work"] .work-hero > .container {
 body[data-page-type="resources"] .work-hero > .container {
   display: flex;
   flex: 1;
-  height: 55vh;
-  min-height: 0;
+  min-height: 55vh;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  padding-top: 72px;
+  padding-top: 120px;
   padding-bottom: calc(var(--space-2xl) + 2.15rem);
 }
 
@@ -4486,6 +4483,7 @@ main,
 .button,
 .hero-intro__button,
 .hero__button,
+.work-hero__button,
 .services__button,
 .about-hero__button,
 .about__button,
@@ -4526,6 +4524,7 @@ body[data-page-type="about"] .about__button,
 .button:hover,
 .hero-intro__button:hover,
 .hero__button:hover,
+.work-hero__button:hover,
 .services__button:hover,
 .about-hero__button:hover,
 .about__button:hover,
@@ -4549,6 +4548,7 @@ body[data-page-type="about"] .about__button:hover,
 .button::after,
 .hero-intro__button::after,
 .hero__button::after,
+.work-hero__button::after,
 .services__button::after,
 .about-hero__button::after,
 .about__button::after,
@@ -4577,6 +4577,7 @@ body[data-page-type="about"] .about__button::after,
 .button:hover::after,
 .hero-intro__button:hover::after,
 .hero__button:hover::after,
+.work-hero__button:hover::after,
 .services__button:hover::after,
 .about-hero__button:hover::after,
 .about__button:hover::after,
