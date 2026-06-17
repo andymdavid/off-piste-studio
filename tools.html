@@ -51,7 +51,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260617-cal-new-tab">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260617-tools-index-grid">
   <link rel="stylesheet" href="/src/styles/tools.css?v=20260608-current-footer">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
@@ -59,14 +59,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body data-page-type="tool" data-page-slug="tools-hub">
+<body data-page-type="tools" data-page-slug="tools-hub" data-theme="dark">
   <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
     <div class="duplicate-header__layout">
       <nav class="duplicate-header__nav" aria-label="Primary">
         <div class="duplicate-header__row">
           <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/public/images/Icon.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
           <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
-          <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="tools-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#tools-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
         </div>
         <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
       </nav>
@@ -75,112 +88,123 @@
   </header>
 
   <main>
-    <section class="tool-hero">
+    <section class="work-hero">
       <div class="container">
-        <nav class="tool-breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          <span aria-hidden="true">/</span>
-          <span aria-current="page">Tools</span>
-        </nav>
-        <h1 class="tool-hero__title">Free Design Tools</h1>
-        <p class="tool-hero__subtitle">Colour and design tools for designers and business owners. Everything runs in your browser — no signup, no uploads, no tracking.</p>
+        <img src="/public/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
+        <h1 class="work-hero__title tools-hero__title">Free tools for sharper digital decisions.</h1>
+        <p class="work-hero__text tools-hero__text">Colour, typography and conversion tools for designers, founders and business owners. Everything runs in your browser with no signup, uploads or tracking.</p>
       </div>
     </section>
 
-    <section class="tool-app">
+    <section class="tools-index">
       <div class="container">
-        <div class="tools-hub">
-          <h2 class="tools-hub__section-title">Colour Tools</h2>
-          <div class="tools-hub__grid">
-            <a href="/tools/contrast-checker" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+        <div class="tools-index__section-row">
+          <h2 class="tools-index__section-heading">Colour Tools</h2>
+        </div>
+
+        <div class="tools-index__grid">
+          <div class="tools-index__card-row">
+            <a href="/tools/contrast-checker" class="tools-index__card">
+              <span class="tools-index__card-index">(01)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2v20"/><path d="M2 12h10" opacity="0.4"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">Contrast Checker</h3>
-              <p class="tools-hub__card-desc">Check if text and background colours meet WCAG 2.1 accessibility standards.</p>
+              <h3 class="tools-index__card-title">Contrast Checker</h3>
+              <p class="tools-index__card-text">Check if text and background colours meet WCAG 2.1 accessibility standards.</p>
             </a>
 
-            <a href="/tools/color-converter" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+            <a href="/tools/color-converter" class="tools-index__card">
+              <span class="tools-index__card-index">(02)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">Colour Converter</h3>
-              <p class="tools-hub__card-desc">Convert between hex, RGB, and HSL colour formats. Copy CSS-ready values.</p>
+              <h3 class="tools-index__card-title">Colour Converter</h3>
+              <p class="tools-index__card-text">Convert between hex, RGB, and HSL colour formats. Copy CSS-ready values.</p>
             </a>
 
-            <a href="/tools/brand-color-extractor" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+            <a href="/tools/brand-color-extractor" class="tools-index__card">
+              <span class="tools-index__card-index">(03)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">Brand Colour Extractor</h3>
-              <p class="tools-hub__card-desc">Upload your logo or any image and extract a colour palette with hex codes.</p>
+              <h3 class="tools-index__card-title">Brand Colour Extractor</h3>
+              <p class="tools-index__card-text">Upload your logo or any image and extract a colour palette with hex codes.</p>
             </a>
 
-            <a href="/tools/color-palette" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+            <a href="/tools/color-palette" class="tools-index__card">
+              <span class="tools-index__card-index">(04)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="10.5" r="2.5" opacity="0.6"/><circle cx="8.5" cy="7.5" r="2.5" opacity="0.8"/><circle cx="6.5" cy="12.5" r="2.5" opacity="0.4"/><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12a10 10 0 005 8.66"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">Palette Generator</h3>
-              <p class="tools-hub__card-desc">Generate harmonious colour schemes. Lock colours you like and shuffle the rest.</p>
+              <h3 class="tools-index__card-title">Palette Generator</h3>
+              <p class="tools-index__card-text">Generate harmonious colour schemes. Lock colours you like and shuffle the rest.</p>
             </a>
+          </div>
 
-            <a href="/tools/palette-preview" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+          <div class="tools-index__card-row">
+            <a href="/tools/palette-preview" class="tools-index__card">
+              <span class="tools-index__card-index">(05)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">Palette Previewer</h3>
-              <p class="tools-hub__card-desc">See how your colours look on real website layouts. Four template types.</p>
+              <h3 class="tools-index__card-title">Palette Previewer</h3>
+              <p class="tools-index__card-text">See how your colours look on real website layouts. Four template types.</p>
             </a>
 
-            <a href="/tools/gradient-generator" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+            <a href="/tools/gradient-generator" class="tools-index__card">
+              <span class="tools-index__card-index">(06)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M7 2v20" opacity="0.2"/><path d="M12 2v20" opacity="0.5"/><path d="M17 2v20" opacity="0.8"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">Gradient Generator</h3>
-              <p class="tools-hub__card-desc">Create linear, radial, and conic CSS gradients. Copy production-ready code.</p>
+              <h3 class="tools-index__card-title">Gradient Generator</h3>
+              <p class="tools-index__card-text">Create linear, radial, and conic CSS gradients. Copy production-ready code.</p>
             </a>
           </div>
 
-          <h2 class="tools-hub__section-title" style="margin-top:var(--space-2xl)">Typography</h2>
-          <div class="tools-hub__grid">
-            <a href="/tools/font-pairing" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+          <div class="tools-index__spacer" aria-hidden="true"></div>
+
+          <div class="tools-index__section-row">
+            <h2 class="tools-index__section-heading">Typography</h2>
+          </div>
+
+          <div class="tools-index__card-row">
+            <a href="/tools/font-pairing" class="tools-index__card">
+              <span class="tools-index__card-index">(07)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">Font Pairing Suggester</h3>
-              <p class="tools-hub__card-desc">Find the perfect heading + body font combination from 30 curated Google Fonts with live previews.</p>
+              <h3 class="tools-index__card-title">Font Pairing Suggester</h3>
+              <p class="tools-index__card-text">Find the perfect heading and body font combination from 30 curated Google Fonts.</p>
             </a>
           </div>
 
-          <h2 class="tools-hub__section-title" style="margin-top:var(--space-2xl)">Conversion Tools</h2>
-          <div class="tools-hub__grid">
-            <a href="/tools/favicon-generator" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+          <div class="tools-index__spacer" aria-hidden="true"></div>
+
+          <div class="tools-index__section-row">
+            <h2 class="tools-index__section-heading">Conversion Tools</h2>
+          </div>
+
+          <div class="tools-index__card-row">
+            <a href="/tools/favicon-generator" class="tools-index__card">
+              <span class="tools-index__card-index">(08)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="4"/><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">Favicon Generator</h3>
-              <p class="tools-hub__card-desc">Upload a logo and generate all the favicon sizes you need. Download individually.</p>
+              <h3 class="tools-index__card-title">Favicon Generator</h3>
+              <p class="tools-index__card-text">Upload a logo and generate all the favicon sizes you need. Download individually.</p>
             </a>
 
-            <a href="/tools/svg-to-png" class="tools-hub__card">
-              <div class="tools-hub__card-icon">
+            <a href="/tools/svg-to-png" class="tools-index__card">
+              <span class="tools-index__card-index">(09)</span>
+              <div class="tools-index__card-icon">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
               </div>
-              <h3 class="tools-hub__card-title">SVG to PNG</h3>
-              <p class="tools-hub__card-desc">Convert SVG files to PNG at any resolution. Upload or paste SVG code.</p>
+              <h3 class="tools-index__card-title">SVG to PNG</h3>
+              <p class="tools-index__card-text">Convert SVG files to PNG at any resolution. Upload or paste SVG code.</p>
             </a>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="page-cta">
-      <div class="container">
-        <div class="page-cta__content">
-          <h2 class="page-cta__heading">Need help with your brand or website?</h2>
-          <p class="page-cta__text">We design websites and brand identities for small businesses. Get in touch to discuss your project.</p>
-          <a href="/contact" class="page-cta__button">Let's Chat</a>
+          <div class="tools-index__spacer tools-index__spacer--footer" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -198,6 +222,6 @@
     <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
   </footer>
 
-  <script type="module" src="/src/js/main.js?v=20260617-cal-new-tab"></script>
+  <script type="module" src="/src/js/main.js?v=20260617-tools-index-grid"></script>
 </body>
 </html>
