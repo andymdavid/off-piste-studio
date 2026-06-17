@@ -2847,10 +2847,7 @@ body[data-page-type="about"] main > section::before {
 }
 
 body[data-page-type="about"] main > section:last-child::after {
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
+  display: none;
 }
 
 body[data-page-type="about"] main > section > .container {
@@ -3064,6 +3061,10 @@ body[data-page-type="about"] .about__blank-row {
   min-height: 5.75rem;
   border-top: 1px solid var(--about-divider);
   border-bottom: 1px solid var(--about-divider);
+}
+
+body[data-page-type="about"] .about__blank-row + .about__blank-row {
+  border-top: 0;
 }
 
 body[data-page-type="about"] .about__blank-row--label {
