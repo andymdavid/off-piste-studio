@@ -2030,7 +2030,7 @@ body[data-page-type="tools"] .tools-index__grid {
   padding: 0 1rem;
 }
 
-.tools-index__section-row::before,
+.tools-index > .container > .tools-index__section-row:first-child::before,
 .tools-index__section-row::after,
 .tools-index__spacer::after,
 .tools-index__card-row::after {
@@ -2044,7 +2044,7 @@ body[data-page-type="tools"] .tools-index__grid {
   pointer-events: none;
 }
 
-.tools-index__section-row::before {
+.tools-index > .container > .tools-index__section-row:first-child::before {
   top: 0;
 }
 
@@ -2121,7 +2121,7 @@ body[data-page-type="tools"] .tools-index__grid {
 }
 
 .tools-index__card-title {
-  max-width: 13.5ch;
+  max-width: 100%;
   margin: 0 0 0.85rem;
   font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(1.36rem, 2.1vw, 2.15rem);
