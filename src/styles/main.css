@@ -9039,33 +9039,30 @@ body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-o
 }
 
 body[data-page-type="resources"][data-theme="light"] .duplicate-header__mark,
-body[data-page-type="resources"][data-theme="light"] .work-hero__icon {
+body[data-page-type="resources"][data-theme="light"] .work-hero__icon,
+body[data-page-type="about"][data-theme="light"] .duplicate-header__mark,
+body[data-page-type="about"][data-theme="light"] .about-hero__icon,
+body[data-page-type="work"][data-theme="light"] .duplicate-header__mark,
+body[data-page-type="work"][data-theme="light"] .work-hero__icon {
   filter: invert(1);
+  opacity: 1;
 }
 
 body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
-body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark {
-  filter: none;
-}
-
-body[data-page-type="about"][data-theme="light"] .duplicate-header__mark,
-body[data-page-type="about"][data-theme="light"] .about-hero__icon {
-  filter: invert(1);
-}
-
 body[data-page-type="about"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
-body[data-page-type="about"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark {
+body[data-page-type="work"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
+body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark,
+body[data-page-type="about"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark,
+body[data-page-type="work"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark {
   filter: none;
+  opacity: 1;
 }
 
-body[data-page-type="work"][data-theme="light"] .duplicate-header__mark,
-body[data-page-type="work"][data-theme="light"] .work-hero__icon,
 body[data-page-type="work"][data-theme="light"] .project-row__logo img {
   filter: invert(1);
+  opacity: 1;
 }
 
-body[data-page-type="work"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
-body[data-page-type="work"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark,
 body[data-page-type="work"][data-theme="light"] .project-row:hover .project-row__logo img,
 body[data-page-type="work"][data-theme="light"] .project-row:focus-within .project-row__logo img {
   filter: none;
