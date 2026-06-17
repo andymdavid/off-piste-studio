@@ -78,6 +78,48 @@ function initCurrentHeader() {
   });
 }
 
+function initThemeToggle() {
+  if (document.body.dataset.pageType === 'duplicate-home') return;
+
+  const toggle = document.querySelector('[data-theme-toggle]');
+  if (!toggle) return;
+
+  const storageKey = 'off-piste-duplicate-theme';
+
+  const getStoredTheme = () => {
+    try {
+      return localStorage.getItem(storageKey);
+    } catch {
+      return null;
+    }
+  };
+
+  const storeTheme = theme => {
+    try {
+      localStorage.setItem(storageKey, theme);
+    } catch {
+      // The toggle should still work for this page view if storage is unavailable.
+    }
+  };
+
+  const setTheme = theme => {
+    const nextTheme = theme === 'light' ? 'light' : 'dark';
+    const isLight = nextTheme === 'light';
+
+    document.body.dataset.theme = nextTheme;
+    toggle.setAttribute('aria-pressed', String(isLight));
+    toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+  };
+
+  setTheme(getStoredTheme());
+
+  toggle.addEventListener('click', () => {
+    const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+    setTheme(nextTheme);
+    storeTheme(nextTheme);
+  });
+}
+
 function initFooterWordmark() {
   if (document.body.dataset.pageType === 'duplicate-home') return;
 
@@ -1338,6 +1380,7 @@ function initEstimator() {
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', () => {
   initCurrentHeader();
+  initThemeToggle();
   initMobileMenu();
   initHeaderDropdowns();
   initCustomCursor();
