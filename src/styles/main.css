@@ -8905,6 +8905,11 @@ body[data-page-type="resources"][data-theme="light"] .duplicate-theme-toggle {
   color: rgba(18, 18, 18, 0.58);
 }
 
+body[data-page-type="resources"][data-theme="light"] .duplicate-header__brand,
+body[data-page-type="resources"][data-theme="light"] .duplicate-header__brand-text {
+  color: #121212;
+}
+
 body[data-page-type="resources"][data-theme="light"] .duplicate-header__link:hover,
 body[data-page-type="resources"][data-theme="light"] .duplicate-header__side-link:hover,
 body[data-page-type="resources"][data-theme="light"] .duplicate-header__menu-toggle:hover,
@@ -8914,6 +8919,10 @@ body[data-page-type="resources"][data-theme="light"] .duplicate-theme-toggle:hov
 
 body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__menu-toggle,
 body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-toggle,
+body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__brand,
+body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-open .duplicate-header__brand,
+body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__brand-text,
+body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-open .duplicate-header__brand-text,
 body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-theme-toggle,
 body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-open .duplicate-theme-toggle,
 body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__side-link,
@@ -8936,6 +8945,11 @@ body[data-page-type="about"][data-theme="light"] .duplicate-theme-toggle {
   color: rgba(18, 18, 18, 0.58);
 }
 
+body[data-page-type="about"][data-theme="light"] .duplicate-header__brand,
+body[data-page-type="about"][data-theme="light"] .duplicate-header__brand-text {
+  color: #121212;
+}
+
 body[data-page-type="about"][data-theme="light"] .duplicate-header__link:hover,
 body[data-page-type="about"][data-theme="light"] .duplicate-header__side-link:hover,
 body[data-page-type="about"][data-theme="light"] .duplicate-header__menu-toggle:hover,
@@ -8945,6 +8959,10 @@ body[data-page-type="about"][data-theme="light"] .duplicate-theme-toggle:hover {
 
 body[data-page-type="about"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__menu-toggle,
 body[data-page-type="about"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-toggle,
+body[data-page-type="about"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__brand,
+body[data-page-type="about"][data-theme="light"] .duplicate-header.is-open .duplicate-header__brand,
+body[data-page-type="about"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__brand-text,
+body[data-page-type="about"][data-theme="light"] .duplicate-header.is-open .duplicate-header__brand-text,
 body[data-page-type="about"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-theme-toggle,
 body[data-page-type="about"][data-theme="light"] .duplicate-header.is-open .duplicate-theme-toggle,
 body[data-page-type="about"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__side-link,
@@ -8961,12 +8979,15 @@ body[data-page-type="about"][data-theme="light"] .duplicate-header.is-open .dupl
 }
 
 body[data-page-type="work"][data-theme="light"] .duplicate-header__link,
-body[data-page-type="work"][data-theme="light"] .duplicate-header__brand,
-body[data-page-type="work"][data-theme="light"] .duplicate-header__brand-text,
 body[data-page-type="work"][data-theme="light"] .duplicate-header__side-link,
 body[data-page-type="work"][data-theme="light"] .duplicate-header__menu-toggle,
 body[data-page-type="work"][data-theme="light"] .duplicate-theme-toggle {
   color: rgba(18, 18, 18, 0.58);
+}
+
+body[data-page-type="work"][data-theme="light"] .duplicate-header__brand,
+body[data-page-type="work"][data-theme="light"] .duplicate-header__brand-text {
+  color: #121212;
 }
 
 body[data-page-type="work"][data-theme="light"] .duplicate-header__link:hover,
