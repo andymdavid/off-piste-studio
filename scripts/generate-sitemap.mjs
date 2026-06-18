@@ -77,16 +77,6 @@ for (const page of scanDir('industries')) {
   });
 }
 
-// Location pages - priority 0.7
-for (const page of scanDir('locations')) {
-  entries.push({
-    url: `${BASE_URL}/locations/${page.slug}`,
-    lastmod: page.lastmod,
-    changefreq: 'weekly',
-    priority: '0.7',
-  });
-}
-
 // Tool pages - priority 0.7
 for (const page of scanDir('tools')) {
   entries.push({

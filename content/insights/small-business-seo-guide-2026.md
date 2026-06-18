@@ -67,7 +67,7 @@ The local SEO fundamentals in 2026 are the same as they have been for years, but
 
 National SEO is about ranking for broader terms without geographic qualification. This is relevant for e-commerce businesses, SaaS companies, and businesses that serve customers regardless of location. It requires significantly more investment in content and link building, and the competition is much steeper.
 
-Most small service businesses in [Perth](/locations/perth) or [Melbourne](/locations/melbourne) do not need a national SEO strategy. They need a local one done properly.
+Most small service businesses in [Perth](/locations) or [Melbourne](/locations) do not need a national SEO strategy. They need a local one done properly.
 
 ## Building a content strategy that works
 
@@ -123,7 +123,7 @@ A local trades business targeting a specific suburb may need relatively modest S
 
 ### Chasing the wrong keywords
 
-Many small businesses target broad, high-volume keywords that they have no realistic chance of ranking for. "Accountant" has enormous search volume, but a small firm in [Brisbane](/locations/brisbane) is not going to outrank the major directories and national firms. "Small business accountant Fortitude Valley" is winnable and far more likely to produce an actual client.
+Many small businesses target broad, high-volume keywords that they have no realistic chance of ranking for. "Accountant" has enormous search volume, but a small firm in [Brisbane](/locations) is not going to outrank the major directories and national firms. "Small business accountant Fortitude Valley" is winnable and far more likely to produce an actual client.
 
 ### Neglecting technical basics
 

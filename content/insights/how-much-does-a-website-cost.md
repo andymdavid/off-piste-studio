@@ -83,7 +83,7 @@ The business owner ends up spending money on Google Ads to drive traffic to a si
 
 Instead of asking "how much does a website cost," the better question is "what is a customer worth to me and how many customers does my website need to bring in to justify the investment?"
 
-Take an [accountant in Perth](/locations/perth) as an example. The average client engagement is worth $2,000 to $5,000 per year, and many clients stay for years. If a $6,000 website generates just two new clients in its first year, it has already paid for itself. Every client after that is pure return on the investment.
+Take an [accountant in Perth](/locations) as an example. The average client engagement is worth $2,000 to $5,000 per year, and many clients stay for years. If a $6,000 website generates just two new clients in its first year, it has already paid for itself. Every client after that is pure return on the investment.
 
 For a [builder](/industries/builders), the numbers are even more compelling. A single residential project might be worth $50,000 to $200,000. One job from the website covers the cost of the site many times over.
 
@@ -123,6 +123,6 @@ The most common cause of delays is content. If the business owner needs to provi
 
 A website is one of the few marketing investments that can pay for itself repeatedly. The right site, built properly, generates leads and revenue for years with minimal ongoing cost.
 
-For most small businesses in [Melbourne](/locations/melbourne), [Sydney](/locations/sydney), Perth, or anywhere in Australia, the sweet spot is $3,000 to $10,000 for a [professionally designed website](/services/website-design) that looks credible, ranks in Google, and makes it easy for customers to get in touch.
+For most small businesses in [Melbourne](/locations), [Sydney](/locations), Perth, or anywhere in Australia, the sweet spot is $3,000 to $10,000 for a [professionally designed website](/services/website-design) that looks credible, ranks in Google, and makes it easy for customers to get in touch.
 
 The businesses that treat their website as an expense to minimise tend to get minimal results. The ones that treat it as an investment in their most visible sales tool tend to see returns that dwarf the initial cost. The question is not whether you can afford a good website. It is whether your business can afford to keep operating without one.

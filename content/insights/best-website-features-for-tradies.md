@@ -89,7 +89,7 @@ If you serve multiple suburbs or regions, dedicated location pages are one of th
 
 A page titled "Electrician in Joondalup" or "Plumber Serving Mandurah" targets the exact searches your customers are making. Each page should mention the suburb, the services you offer there, and any local details that make the content genuine rather than a copy-paste job with the suburb name swapped out.
 
-This strategy is particularly effective in [Perth](/locations/perth) and other Australian cities where customers search using suburb names. "Painter Scarborough," "roofer Rockingham," "landscaper Wanneroo" — each of these is a search that a dedicated page can rank for.
+This strategy is particularly effective in [Perth](/locations) and other Australian cities where customers search using suburb names. "Painter Scarborough," "roofer Rockingham," "landscaper Wanneroo" — each of these is a search that a dedicated page can rank for.
 
 Do not create hundreds of thin location pages with identical content. Google penalises that approach. Instead, create pages for your core service areas with genuine, useful content about serving that area.
 
@@ -121,4 +121,4 @@ The best tradie websites are not complicated. They are focused. Every feature se
 
 If your website has these features working properly, you have a lead generation system, not just a website. If it is missing any of them, that is where the leads are leaking out.
 
-We build [websites for trades businesses](/services/website-design) across [Sydney](/locations/sydney), [Melbourne](/locations/melbourne), Perth, and Australia-wide. Every site includes the features covered here because they are the features that work. If your current site is not generating the leads you expected, the issue is almost certainly in the details — and the details are fixable.
+We build [websites for trades businesses](/services/website-design) across [Sydney](/locations), [Melbourne](/locations), Perth, and Australia-wide. Every site includes the features covered here because they are the features that work. If your current site is not generating the leads you expected, the issue is almost certainly in the details — and the details are fixable.

@@ -133,7 +133,7 @@ Here is a realistic timeline for a small business starting with proper local SEO
 
 **Year two and beyond.** SEO compounds over time. The businesses that maintain their effort continue gaining ground while competitors who gave up after three months fall behind.
 
-For businesses in [Perth](/locations/perth), [Melbourne](/locations/melbourne), or [Sydney](/locations/sydney), the timeline depends on the specific industry and level of competition. A [builder in a suburban area](/industries/builders) with few competitors doing SEO may see results in weeks. A lawyer in a competitive inner-city market may take six to twelve months to reach page one for their primary terms.
+For businesses in [Perth](/locations), [Melbourne](/locations), or [Sydney](/locations), the timeline depends on the specific industry and level of competition. A [builder in a suburban area](/industries/builders) with few competitors doing SEO may see results in weeks. A lawyer in a competitive inner-city market may take six to twelve months to reach page one for their primary terms.
 
 ## Common mistakes that keep businesses off page one
 

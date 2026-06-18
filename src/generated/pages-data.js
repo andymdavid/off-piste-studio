@@ -225,7 +225,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design adelaide, adelaide web design, website design adelaide, adelaide website designer, small business website adelaide",
     "location": "Adelaide",
     "region": "South Australia",
-    "url": "/locations/adelaide"
+    "url": "/locations"
   },
   {
     "slug": "armadale",
@@ -235,7 +235,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design armadale, armadale web design, website design armadale, armadale website designer",
     "location": "Armadale",
     "region": "Perth",
-    "url": "/locations/armadale"
+    "url": "/locations"
   },
   {
     "slug": "brisbane",
@@ -245,7 +245,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design brisbane, brisbane web design, website design brisbane, brisbane website designer, small business website brisbane",
     "location": "Brisbane",
     "region": "Queensland",
-    "url": "/locations/brisbane"
+    "url": "/locations"
   },
   {
     "slug": "canning-vale",
@@ -255,7 +255,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design canning vale, canning vale web design, website design canning vale, canning vale website designer",
     "location": "Canning Vale",
     "region": "Perth",
-    "url": "/locations/canning-vale"
+    "url": "/locations"
   },
   {
     "slug": "fremantle",
@@ -265,7 +265,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design fremantle, fremantle web design, website design fremantle, freo website designer",
     "location": "Fremantle",
     "region": "Perth",
-    "url": "/locations/fremantle"
+    "url": "/locations"
   },
   {
     "slug": "gold-coast",
@@ -275,7 +275,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design gold coast, gold coast web design, website design gold coast, gold coast website designer, small business website gold coast",
     "location": "Gold Coast",
     "region": "Queensland",
-    "url": "/locations/gold-coast"
+    "url": "/locations"
   },
   {
     "slug": "joondalup",
@@ -285,7 +285,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design joondalup, joondalup web design, website design joondalup, joondalup website designer",
     "location": "Joondalup",
     "region": "Perth",
-    "url": "/locations/joondalup"
+    "url": "/locations"
   },
   {
     "slug": "mandurah",
@@ -295,7 +295,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design mandurah, mandurah web design, website design mandurah, mandurah website designer",
     "location": "Mandurah",
     "region": "Western Australia",
-    "url": "/locations/mandurah"
+    "url": "/locations"
   },
   {
     "slug": "melbourne",
@@ -305,7 +305,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design melbourne, melbourne web design, website design melbourne, melbourne website designer, small business website melbourne",
     "location": "Melbourne",
     "region": "Victoria",
-    "url": "/locations/melbourne"
+    "url": "/locations"
   },
   {
     "slug": "midland",
@@ -315,7 +315,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design midland, midland web design, website design midland, midland website designer",
     "location": "Midland",
     "region": "Perth",
-    "url": "/locations/midland"
+    "url": "/locations"
   },
   {
     "slug": "osborne-park",
@@ -325,7 +325,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design osborne park, osborne park web design, website design osborne park, osborne park website designer",
     "location": "Osborne Park",
     "region": "Perth",
-    "url": "/locations/osborne-park"
+    "url": "/locations"
   },
   {
     "slug": "perth",
@@ -335,7 +335,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design perth, perth web design, website design perth, perth website designer",
     "location": "Perth",
     "region": "Perth",
-    "url": "/locations/perth"
+    "url": "/locations"
   },
   {
     "slug": "rockingham",
@@ -345,7 +345,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design rockingham, rockingham web design, website design rockingham, rockingham website designer",
     "location": "Rockingham",
     "region": "Perth",
-    "url": "/locations/rockingham"
+    "url": "/locations"
   },
   {
     "slug": "sydney",
@@ -355,7 +355,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design sydney, sydney web design, website design sydney, sydney website designer, small business website sydney",
     "location": "Sydney",
     "region": "New South Wales",
-    "url": "/locations/sydney"
+    "url": "/locations"
   },
   {
     "slug": "wanneroo",
@@ -365,6 +365,6 @@ export const LOCATION_PAGES = [
     "keywords": "web design wanneroo, wanneroo web design, website design wanneroo, wanneroo website designer",
     "location": "Wanneroo",
     "region": "Perth",
-    "url": "/locations/wanneroo"
+    "url": "/locations"
   }
 ];

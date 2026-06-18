@@ -41,7 +41,7 @@ Good CLS is under 0.1. The most common causes are images without defined dimensi
 
 Google has been explicit that page speed is a ranking factor. Core Web Vitals are part of the page experience signals that influence where your site appears in search results.
 
-This does not mean speed is the only factor. Relevance, authority, and content quality still dominate. But when two pages are comparable in those areas, the faster one gets the edge. In competitive local markets like [Perth](/locations/perth) and [Brisbane](/locations/brisbane), where multiple businesses are targeting the same keywords, that edge matters.
+This does not mean speed is the only factor. Relevance, authority, and content quality still dominate. But when two pages are comparable in those areas, the faster one gets the edge. In competitive local markets like [Perth](/locations) and [Brisbane](/locations), where multiple businesses are targeting the same keywords, that edge matters.
 
 For [local SEO](/services/seo) specifically, speed is even more important because mobile performance weighs heavily. Local searches are overwhelmingly mobile. A homeowner searching for a [plumber](/industries/plumbers) at 7 PM on a weeknight is on their phone, probably on cellular data, and has zero patience for a slow site.
 

@@ -226,6 +226,10 @@ function getDeterministicLocations(allLocations, count) {
   return priority.slice(0, count).map(s => allLocations.find(p => p.slug === s)).filter(Boolean);
 }
 
+function createLocationHubLinksHtml(locations) {
+  return locations.map(p => `<a href="/locations" class="page-links__link">${escapeHtml(p.location || p.title)}</a>`).join('');
+}
+
 function getDeterministicIndustries(allIndustries, count) {
   // Spread across groups: trades, professional, health
   const priority = ['electricians', 'accountants', 'dentists', 'plumbers', 'lawyers', 'builders', 'photographers', 'mortgage-brokers'];
@@ -247,7 +251,7 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">Our services</h3><div class="page-links__list">${svcs.map(p => `<a href="/services/${p.slug}" class="page-links__link">${escapeHtml(p.title)}</a>`).join('')}</div></div>`);
     }
     if (locs.length) {
-      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Serving businesses in</h3><div class="page-links__list">${locs.map(p => `<a href="/locations/${p.slug}" class="page-links__link">${escapeHtml(p.location || p.title)}</a>`).join('')}</div></div>`);
+      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Serving businesses in</h3><div class="page-links__list">${createLocationHubLinksHtml(locs)}</div></div>`);
     }
   }
 
@@ -259,7 +263,7 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">Industries we serve</h3><div class="page-links__list">${inds.map(p => `<a href="/industries/${p.slug}" class="page-links__link">${escapeHtml(p.industry || p.title)}</a>`).join('')}</div></div>`);
     }
     if (locs.length) {
-      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Serving businesses in</h3><div class="page-links__list">${locs.map(p => `<a href="/locations/${p.slug}" class="page-links__link">${escapeHtml(p.location || p.title)}</a>`).join('')}</div></div>`);
+      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Serving businesses in</h3><div class="page-links__list">${createLocationHubLinksHtml(locs)}</div></div>`);
     }
   }
 
@@ -780,6 +784,30 @@ function writePages(pages, outputPath, templateFn, allIndustries, allServices, a
   });
 }
 
+function createLocationRedirectHtml(page) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, follow">
+  <meta http-equiv="refresh" content="0; url=/locations">
+  <link rel="canonical" href="https://offpistestudio.com/locations">
+  <title>${escapeHtml(page.location || page.title)} | Off Piste Studio</title>
+</head>
+<body>
+  <p>This location page has moved to <a href="/locations">Locations</a>.</p>
+</body>
+</html>`;
+}
+
+function writeLocationRedirectPages(pages, outputPath) {
+  mkdirSync(outputPath, { recursive: true });
+  pages.forEach(page => {
+    writeFileSync(resolve(outputPath, `${page.slug}.html`), createLocationRedirectHtml(page));
+  });
+}
+
 // ---------------------------------------------------------------------------
 // Main
 // ---------------------------------------------------------------------------
@@ -794,13 +822,13 @@ const locations = parseContentDir(resolve(rootDir, 'content/locations'), ['locat
 // Generate HTML with cross-links
 writePages(industries, resolve(rootDir, 'industries'), createIndustryHtml, industries, services, locations);
 writePages(services, resolve(rootDir, 'services'), createServiceHtml, industries, services, locations);
-writePages(locations, resolve(rootDir, 'locations'), createLocationHtml, industries, services, locations);
+writeLocationRedirectPages(locations, resolve(rootDir, 'locations'));
 
 // Write data files for client-side use (listings, internal linking, etc.)
 const pageData = {
   industries: industries.map(({ html, faqs, ...p }) => ({ ...p, url: `/industries/${p.slug}` })),
   services: services.map(({ html, faqs, ...p }) => ({ ...p, url: `/services/${p.slug}` })),
-  locations: locations.map(({ html, faqs, ...p }) => ({ ...p, url: `/locations/${p.slug}` })),
+  locations: locations.map(({ html, faqs, ...p }) => ({ ...p, url: '/locations' })),
 };
 
 writeFileSync(
@@ -808,5 +836,5 @@ writeFileSync(
   `export const INDUSTRY_PAGES = ${JSON.stringify(pageData.industries, null, 2)};\n\nexport const SERVICE_PAGES = ${JSON.stringify(pageData.services, null, 2)};\n\nexport const LOCATION_PAGES = ${JSON.stringify(pageData.locations, null, 2)};\n`
 );
 
-const total = industries.length + services.length + locations.length;
-console.log(`Generated ${total} pages (${industries.length} industries, ${services.length} services, ${locations.length} locations)`);
+const total = industries.length + services.length;
+console.log(`Generated ${total} pages (${industries.length} industries, ${services.length} services) and ${locations.length} location redirects`);

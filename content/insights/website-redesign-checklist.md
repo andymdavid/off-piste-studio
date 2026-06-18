@@ -75,7 +75,7 @@ Be deliberate about these choices.
 - **Animations.** Subtle motion can improve the experience. Heavy JavaScript-driven animations on every scroll event will hurt performance on mobile devices, which is where most of your visitors are.
 - **Third-party scripts.** Every chat widget, analytics tool, and marketing pixel adds weight. Audit what is actually being used and remove anything that is not earning its keep.
 
-A fast, clean site will outperform a visually complex one in both search rankings and conversion rates. For businesses competing in [Perth](/locations/perth) and other Australian markets, where mobile usage is high and attention spans are short, this is not optional.
+A fast, clean site will outperform a visually complex one in both search rankings and conversion rates. For businesses competing in [Perth](/locations) and other Australian markets, where mobile usage is high and attention spans are short, this is not optional.
 
 ## Common redesign mistakes
 
@@ -101,7 +101,7 @@ Watch user behaviour through analytics. Are people finding the content they need
 
 Collect feedback from real customers and prospects. They will tell you things that analytics cannot. If multiple people mention that they could not find something or were confused by the navigation, that is actionable intelligence.
 
-A website is a living asset. The businesses in [Melbourne](/locations/melbourne), [Sydney](/locations/sydney), and across Australia that get the most value from their sites are the ones that treat the redesign as the foundation for ongoing improvement rather than a one-time project.
+A website is a living asset. The businesses in [Melbourne](/locations), [Sydney](/locations), and across Australia that get the most value from their sites are the ones that treat the redesign as the foundation for ongoing improvement rather than a one-time project.
 
 ## The bottom line
 

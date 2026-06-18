@@ -13,7 +13,7 @@ Perth has a wide range of web designers and agencies, from solo freelancers work
 
 At the low end, you will find template-based operators who build sites quickly using page builders and pre-made themes. These sites can look acceptable, but they often have performance issues, limited flexibility, and a short useful lifespan. At the high end, you will find agencies that charge premium rates but deliver strategy, design, development, and ongoing support as an integrated service.
 
-Most small businesses in [Perth](/locations/perth) need something in between. A designer who understands business goals, can build a site that performs well technically, and produces work that genuinely differentiates the business from its competitors.
+Most small businesses in [Perth](/locations) need something in between. A designer who understands business goals, can build a site that performs well technically, and produces work that genuinely differentiates the business from its competitors.
 
 The challenge is figuring out who actually delivers that.
 
@@ -97,7 +97,7 @@ A newer model where the website is built and maintained for a fixed monthly fee.
 
 ## Local knowledge matters
 
-Choosing a designer who understands the [Perth](/locations/perth) market has practical advantages. They understand local search behaviour, the competitive landscape, and the expectations of Western Australian consumers. A designer in [Sydney](/locations/sydney) or [Melbourne](/locations/melbourne) can certainly build a good website, but local context adds a layer of relevance that is difficult to replicate remotely.
+Choosing a designer who understands the [Perth](/locations) market has practical advantages. They understand local search behaviour, the competitive landscape, and the expectations of Western Australian consumers. A designer in [Sydney](/locations) or [Melbourne](/locations) can certainly build a good website, but local context adds a layer of relevance that is difficult to replicate remotely.
 
 This is particularly true for [service-based businesses](/industries/electricians) that rely on local search. Understanding how Perth suburbs are searched, which areas are competitive, and how locals evaluate businesses online is knowledge that comes from working in the market.
 

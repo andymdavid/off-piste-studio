@@ -111,7 +111,7 @@ Your website provides the depth that your GBP listing cannot. When someone click
 
 Equally, your website supports your GBP ranking. Google uses your site content to understand what your business does, where it operates, and how authoritative it is in your space. A website with well-structured [local SEO](/services/seo) content, proper schema markup, and consistent business information strengthens every local signal.
 
-For businesses operating in [Perth](/locations/perth), the combination of an optimised GBP and a fast, well-built website is the foundation of local visibility. Businesses in [Brisbane](/locations/brisbane) and other Australian cities benefit from the same approach. The map pack is competitive in every metro area, and the businesses that invest in both assets consistently outperform those that focus on one or the other.
+For businesses operating in [Perth](/locations), the combination of an optimised GBP and a fast, well-built website is the foundation of local visibility. Businesses in [Brisbane](/locations) and other Australian cities benefit from the same approach. The map pack is competitive in every metro area, and the businesses that invest in both assets consistently outperform those that focus on one or the other.
 
 ### Schema markup for local businesses
 

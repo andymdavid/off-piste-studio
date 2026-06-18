@@ -133,7 +133,7 @@ Some common features on tradie websites actively work against lead generation.
 
 **Sliders and carousels on the homepage.** They slow the site down, most visitors never see past the first slide, and they push important content below the fold. Use a single strong hero section instead.
 
-**Vague or clever taglines.** "Building Tomorrow, Today" tells the visitor nothing. "Licensed Builder in [Perth](/locations/perth) — Renovations, Extensions, and New Builds" tells them everything.
+**Vague or clever taglines.** "Building Tomorrow, Today" tells the visitor nothing. "Licensed Builder in [Perth](/locations) — Renovations, Extensions, and New Builds" tells them everything.
 
 **Buried contact information.** If your phone number is only on the contact page, you are losing calls. It should be in the header, in the footer, and in the body of every page.
 
@@ -149,4 +149,4 @@ None of this is complicated. But it requires intentional design decisions and a 
 
 If your website is not generating the enquiries you expect, the issue is almost certainly in these fundamentals. Not in the colour of the buttons or the style of the font, but in the structure, the content, and the conversion path.
 
-We build websites for [plumbers](/industries/plumbers), electricians, builders, and trades businesses across [Perth](/locations/perth), [Melbourne](/locations/melbourne), and Australia-wide. Every site is built on these principles because they are what works. If you want to see what a properly built tradie website looks like for your trade, [get in touch for a free mockup](/contact) and we will show you.
+We build websites for [plumbers](/industries/plumbers), electricians, builders, and trades businesses across [Perth](/locations), [Melbourne](/locations), and Australia-wide. Every site is built on these principles because they are what works. If you want to see what a properly built tradie website looks like for your trade, [get in touch for a free mockup](/contact) and we will show you.
