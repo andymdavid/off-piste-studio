@@ -9844,6 +9844,47 @@ body[data-page-type="tools"][data-theme="light"] .duplicate-header.is-open .dupl
   color: #ffffff;
 }
 
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__link,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__side-link,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__menu-toggle,
+body[data-page-type="tool"][data-theme="light"] .duplicate-theme-toggle {
+  color: rgba(18, 18, 18, 0.58);
+}
+
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__brand,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__brand-text {
+  color: #121212;
+}
+
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__link:hover,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__brand:hover,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__side-link:hover,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__menu-toggle:hover,
+body[data-page-type="tool"][data-theme="light"] .duplicate-theme-toggle:hover {
+  color: rgba(18, 18, 18, 0.9);
+}
+
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__menu-toggle,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-toggle,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__brand,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__brand,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__brand-text,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__brand-text,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-theme-toggle,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-theme-toggle,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__side-link,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__side-link,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link {
+  color: #ffffff;
+}
+
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__menu-toggle:hover,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-toggle:hover,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-theme-toggle:hover,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-theme-toggle:hover {
+  color: #ffffff;
+}
+
 body[data-page-type="locations"][data-theme="light"] .duplicate-header__link,
 body[data-page-type="locations"][data-theme="light"] .duplicate-header__side-link,
 body[data-page-type="locations"][data-theme="light"] .duplicate-header__menu-toggle,
@@ -9903,6 +9944,7 @@ body[data-page-type="work"][data-theme="light"] .duplicate-cursor.is-pressed {
 
 body[data-page-type="resources"][data-theme="light"] .duplicate-cursor,
 body[data-page-type="about"][data-theme="light"] .duplicate-cursor,
+body[data-page-type="tool"][data-theme="light"] .duplicate-cursor,
 body[data-page-type="tools"][data-theme="light"] .duplicate-cursor,
 body[data-page-type="locations"][data-theme="light"] .duplicate-cursor {
   background: rgba(18, 18, 18, 0.88);
@@ -9910,6 +9952,7 @@ body[data-page-type="locations"][data-theme="light"] .duplicate-cursor {
 
 body[data-page-type="resources"][data-theme="light"] .duplicate-cursor.is-pressed,
 body[data-page-type="about"][data-theme="light"] .duplicate-cursor.is-pressed,
+body[data-page-type="tool"][data-theme="light"] .duplicate-cursor.is-pressed,
 body[data-page-type="tools"][data-theme="light"] .duplicate-cursor.is-pressed,
 body[data-page-type="locations"][data-theme="light"] .duplicate-cursor.is-pressed {
   background: rgba(18, 18, 18, 0.64);
@@ -9935,6 +9978,8 @@ body[data-page-type="about"][data-theme="light"] .duplicate-header__mark,
 body[data-page-type="about"][data-theme="light"] .about-hero__icon,
 body[data-page-type="work"][data-theme="light"] .duplicate-header__mark,
 body[data-page-type="work"][data-theme="light"] .work-hero__icon,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header__mark,
+body[data-page-type="tool"][data-theme="light"] .work-hero__icon,
 body[data-page-type="tools"][data-theme="light"] .duplicate-header__mark,
 body[data-page-type="tools"][data-theme="light"] .work-hero__icon,
 body[data-page-type="locations"][data-theme="light"] .duplicate-header__mark,
@@ -9946,11 +9991,13 @@ body[data-page-type="locations"][data-theme="light"] .work-hero__icon {
 body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
 body[data-page-type="about"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
 body[data-page-type="work"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
 body[data-page-type="tools"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
 body[data-page-type="locations"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark,
 body[data-page-type="resources"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark,
 body[data-page-type="about"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark,
 body[data-page-type="work"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark,
+body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark,
 body[data-page-type="tools"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark,
 body[data-page-type="locations"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark {
   filter: none;
@@ -10110,6 +10157,20 @@ body[data-page-type="work"][data-theme="light"] .work-hero__button {
 }
 
 body[data-page-type="work"][data-theme="light"] .work-hero__button:hover {
+  background: #121212 !important;
+  border-color: #121212 !important;
+  color: #fdfdfc !important;
+}
+
+body[data-page-type="tool"][data-theme="light"] .work-hero__button,
+body[data-page-type="tool"][data-theme="light"] .page-cta__button {
+  background: #f5f5f4 !important;
+  border-color: transparent !important;
+  color: #121212 !important;
+}
+
+body[data-page-type="tool"][data-theme="light"] .work-hero__button:hover,
+body[data-page-type="tool"][data-theme="light"] .page-cta__button:hover {
   background: #121212 !important;
   border-color: #121212 !important;
   color: #fdfdfc !important;

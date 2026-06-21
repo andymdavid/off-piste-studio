@@ -2,33 +2,101 @@
    Tools — Shared Styles
    ========================================================================== */
 
-/* Override body background on tool pages to match site sections */
 body[data-page-type="tool"] {
-  background-color: var(--color-bg-dark);
+  --tool-page-bg: #121212;
+  --tool-page-text: rgba(255, 255, 255, 0.9);
+  --tool-page-text-muted: rgba(255, 255, 255, 0.62);
+  --tool-page-text-soft: rgba(255, 255, 255, 0.46);
+  --tool-page-divider: var(--site-divider);
+  --color-text: var(--tool-page-text);
+  --color-text-muted: var(--tool-page-text-muted);
+  --color-bg-dark: var(--tool-page-bg);
+  --site-divider-strong: var(--tool-page-divider);
+  background: var(--tool-page-bg);
+  color: var(--tool-page-text);
+}
+
+body[data-page-type="tool"][data-theme="light"] {
+  --tool-page-bg: #fdfdfc;
+  --tool-page-text: rgba(18, 18, 18, 0.92);
+  --tool-page-text-muted: rgba(18, 18, 18, 0.62);
+  --tool-page-text-soft: rgba(18, 18, 18, 0.46);
+  --tool-page-divider: var(--site-divider-light);
+  --color-text: var(--tool-page-text);
+  --color-text-muted: var(--tool-page-text-muted);
+  --color-bg-dark: var(--tool-page-bg);
+  background: var(--tool-page-bg);
+  color: var(--tool-page-text);
+}
+
+body[data-page-type="tool"] main,
+body[data-page-type="tool"] main > section,
+body[data-page-type="tool"] .tool-hero,
+body[data-page-type="tool"] .tool-app,
+body[data-page-type="tool"] .tool-content,
+body[data-page-type="tool"] .page-faq,
+body[data-page-type="tool"] .page-cta {
+  background: var(--tool-page-bg);
 }
 
 /* Tool Hero */
 .tool-hero {
-  padding-top: calc(65px + var(--space-3xl));
-  padding-bottom: var(--space-xl);
-  background-color: var(--color-bg-dark);
+  display: flex;
+  min-height: 55vh;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+  text-align: center;
+}
+
+body[data-page-type="tool"] .tool-hero::before {
+  display: none;
+}
+
+body[data-page-type="tool"] .tool-hero > .container {
+  display: flex;
+  min-height: 55vh;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: calc(var(--space-2xl) + 2.15rem);
+  border-left: 0;
+  border-right: 0;
+}
+
+.tool-hero__icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 8px;
 }
 
 .tool-hero__title {
-  font-family: var(--font-serif);
-  font-size: clamp(1.875rem, 4.8vw, 4.25rem);
-  font-weight: 400;
-  letter-spacing: -0.05em;
-  line-height: 1.1;
-  margin-bottom: var(--space-sm);
+  max-width: 34rem;
+  margin: 0 auto 0.9rem;
+  color: var(--tool-page-text);
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.85rem, 2.65vw, 2.65rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
 }
 
 .tool-hero__subtitle {
   font-family: var(--font-primary);
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: var(--color-text-muted);
-  max-width: 640px;
+  color: var(--tool-page-text-muted);
+  max-width: 36rem;
+  margin: 0 auto var(--space-lg);
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.tool-hero__button {
+  margin-top: 0;
 }
 
 /* Breadcrumb */
@@ -60,8 +128,46 @@ body[data-page-type="tool"] {
 
 /* Tool App Section */
 .tool-app {
-  padding-bottom: var(--space-3xl);
-  background-color: var(--color-bg-dark);
+  background: var(--tool-page-bg);
+}
+
+body[data-page-type="tool"] .tool-app > .container,
+body[data-page-type="tool"] .tool-content > .container,
+body[data-page-type="tool"] .page-faq > .container,
+body[data-page-type="tool"] .page-cta > .container {
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+body[data-page-type="tool"][data-theme="light"] .footer {
+  background: rgba(18, 18, 18, 0.035) !important;
+}
+
+body[data-page-type="tool"][data-theme="light"] .footer__statement,
+body[data-page-type="tool"][data-theme="light"] .footer__section-title,
+body[data-page-type="tool"][data-theme="light"] .footer__brand {
+  color: rgba(18, 18, 18, 0.92) !important;
+}
+
+body[data-page-type="tool"][data-theme="light"] .footer__description,
+body[data-page-type="tool"][data-theme="light"] .footer__copyright,
+body[data-page-type="tool"][data-theme="light"] .footer__location {
+  color: rgba(18, 18, 18, 0.62) !important;
+}
+
+body[data-page-type="tool"][data-theme="light"] .footer__nav-link,
+body[data-page-type="tool"][data-theme="light"] .footer__contact-link {
+  color: rgba(18, 18, 18, 0.78) !important;
+}
+
+body[data-page-type="tool"][data-theme="light"] .footer__nav-link:hover,
+body[data-page-type="tool"][data-theme="light"] .footer__contact-link:hover {
+  color: rgba(18, 18, 18, 0.98) !important;
+}
+
+body[data-page-type="tool"][data-theme="light"] .footer__sections,
+body[data-page-type="tool"][data-theme="light"] .footer__section,
+body[data-page-type="tool"][data-theme="light"] .footer__bottom {
+  border-color: var(--site-divider-light) !important;
 }
 
 /* ==========================================================================
@@ -518,23 +624,23 @@ body[data-page-type="tool"] {
    ========================================================================== */
 
 .tool-content {
-  padding: var(--space-3xl) 0;
-  background-color: var(--color-bg-dark);
-  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0;
+  background: var(--tool-page-bg);
 }
 
 .tool-content__body {
-  max-width: 720px;
+  max-width: min(100%, 52rem);
 }
 
 .tool-content__body h2 {
-  font-family: var(--font-serif);
-  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
-  font-weight: 400;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
   margin-top: var(--space-xl);
   margin-bottom: var(--space-sm);
+  color: var(--tool-page-text);
 }
 
 .tool-content__body h2:first-child {
@@ -545,7 +651,7 @@ body[data-page-type="tool"] {
   font-family: var(--font-primary);
   font-size: 0.9375rem;
   line-height: 1.7;
-  color: var(--color-text-muted);
+  color: var(--tool-page-text-muted);
   margin-bottom: var(--space-md);
 }
 
@@ -560,15 +666,23 @@ body[data-page-type="tool"] {
 .tool-related__link {
   display: block;
   padding: var(--space-md);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
+  border: 1px solid var(--tool-page-divider);
+  border-radius: 0;
   background: rgba(255, 255, 255, 0.04);
   transition: border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .tool-related__link:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--tool-page-divider);
+  background: #fdfdfc;
+}
+
+body[data-page-type="tool"][data-theme="light"] .tool-related__link {
+  background: rgba(18, 18, 18, 0.025);
+}
+
+body[data-page-type="tool"][data-theme="light"] .tool-related__link:hover {
+  background: #121212;
 }
 
 .tool-related__name {
@@ -576,11 +690,28 @@ body[data-page-type="tool"] {
   font-size: 1rem;
   font-weight: 500;
   margin-bottom: 0.25rem;
+  color: var(--tool-page-text);
 }
 
 .tool-related__desc {
   font-size: 0.875rem;
-  color: var(--color-text-muted);
+  color: var(--tool-page-text-muted);
+}
+
+.tool-related__link:hover .tool-related__name {
+  color: rgba(18, 18, 18, 0.92);
+}
+
+.tool-related__link:hover .tool-related__desc {
+  color: rgba(18, 18, 18, 0.62);
+}
+
+body[data-page-type="tool"][data-theme="light"] .tool-related__link:hover .tool-related__name {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body[data-page-type="tool"][data-theme="light"] .tool-related__link:hover .tool-related__desc {
+  color: rgba(255, 255, 255, 0.62);
 }
 
 /* ==========================================================================
