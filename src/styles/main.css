@@ -9946,14 +9946,23 @@ body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .dupli
 }
 
 @media (max-width: 767px) {
-  body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link,
-  body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-label {
-    color: rgba(18, 18, 18, 0.92);
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header__brand,
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header__brand-text,
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header__menu-toggle,
+  body[data-page-type="tool"][data-theme="light"] .duplicate-theme-toggle {
+    color: #ffffff;
   }
 
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link,
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-label {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header__menu-toggle:hover,
+  body[data-page-type="tool"][data-theme="light"] .duplicate-theme-toggle:hover,
   body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link:hover,
   body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link:hover .duplicate-header__menu-label {
-    color: rgba(18, 18, 18, 0.58);
+    color: rgba(255, 255, 255, 0.62);
   }
 }
 
