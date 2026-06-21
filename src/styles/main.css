@@ -6809,7 +6809,8 @@ body[data-page-type="work"] .duplicate-header__actions {
   margin-left: auto;
 }
 
-body[data-page-type="tools"] .duplicate-header__actions {
+body[data-page-type="tools"] .duplicate-header__actions,
+body[data-page-type="tool"] .duplicate-header__actions {
   display: inline-flex;
   align-items: center;
   margin-left: auto;
@@ -6885,7 +6886,8 @@ body[data-page-type="work"] .duplicate-theme-toggle {
   transition: color 180ms ease, transform 180ms ease;
 }
 
-body[data-page-type="tools"] .duplicate-theme-toggle {
+body[data-page-type="tools"] .duplicate-theme-toggle,
+body[data-page-type="tool"] .duplicate-theme-toggle {
   position: relative;
   display: inline-flex;
   align-items: center;
@@ -6937,7 +6939,8 @@ body[data-page-type="work"] .duplicate-theme-toggle:hover {
   transform: scale(0.96);
 }
 
-body[data-page-type="tools"] .duplicate-theme-toggle:hover {
+body[data-page-type="tools"] .duplicate-theme-toggle:hover,
+body[data-page-type="tool"] .duplicate-theme-toggle:hover {
   color: #ffffff;
   transform: scale(0.96);
 }
@@ -6967,7 +6970,8 @@ body[data-page-type="work"] .duplicate-theme-toggle__icon {
   height: 1.25rem;
 }
 
-body[data-page-type="tools"] .duplicate-theme-toggle__icon {
+body[data-page-type="tools"] .duplicate-theme-toggle__icon,
+body[data-page-type="tool"] .duplicate-theme-toggle__icon {
   width: 1.25rem;
   height: 1.25rem;
 }
@@ -6993,7 +6997,8 @@ body[data-page-type="work"] .duplicate-theme-toggle__moon-mask {
   transition: transform 300ms ease;
 }
 
-body[data-page-type="tools"] .duplicate-theme-toggle__moon-mask {
+body[data-page-type="tools"] .duplicate-theme-toggle__moon-mask,
+body[data-page-type="tool"] .duplicate-theme-toggle__moon-mask {
   transition: transform 300ms ease;
 }
 
@@ -7017,7 +7022,8 @@ body[data-page-type="work"] .duplicate-theme-toggle:hover .duplicate-theme-toggl
   transform: translate(-13px, 9px);
 }
 
-body[data-page-type="tools"] .duplicate-theme-toggle:hover .duplicate-theme-toggle__moon-mask {
+body[data-page-type="tools"] .duplicate-theme-toggle:hover .duplicate-theme-toggle__moon-mask,
+body[data-page-type="tool"] .duplicate-theme-toggle:hover .duplicate-theme-toggle__moon-mask {
   transform: translate(-13px, 9px);
 }
 
@@ -7041,7 +7047,8 @@ body[data-page-type="work"][data-theme="light"] .duplicate-theme-toggle__moon-ma
   transform: translate(-13px, 9px);
 }
 
-body[data-page-type="tools"][data-theme="light"] .duplicate-theme-toggle__moon-mask {
+body[data-page-type="tools"][data-theme="light"] .duplicate-theme-toggle__moon-mask,
+body[data-page-type="tool"][data-theme="light"] .duplicate-theme-toggle__moon-mask {
   transform: translate(-13px, 9px);
 }
 
@@ -7065,7 +7072,8 @@ body[data-page-type="work"][data-theme="light"] .duplicate-theme-toggle:hover .d
   transform: translate(0, 0);
 }
 
-body[data-page-type="tools"][data-theme="light"] .duplicate-theme-toggle:hover .duplicate-theme-toggle__moon-mask {
+body[data-page-type="tools"][data-theme="light"] .duplicate-theme-toggle:hover .duplicate-theme-toggle__moon-mask,
+body[data-page-type="tool"][data-theme="light"] .duplicate-theme-toggle:hover .duplicate-theme-toggle__moon-mask {
   transform: translate(0, 0);
 }
 
