@@ -93,16 +93,29 @@
         <img src="/public/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
         <h1 class="work-hero__title tools-hero__title">Free tools for sharper digital decisions.</h1>
         <p class="work-hero__text tools-hero__text">Colour, typography and conversion tools for designers, founders and business owners. Everything runs in your browser with no signup, uploads or tracking.</p>
+        <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="hero-intro__button work-hero__button">Book a Free Discovery Call</a>
       </div>
     </section>
 
     <section class="tools-index">
       <div class="container">
-        <div class="tools-index__section-row">
-          <h2 class="tools-index__section-heading">Colour Tools</h2>
+        <div class="tools-index__filter-row">
+          <h2 class="tools-index__label">Tools</h2>
+          <nav class="work-hero__filters tools-index__filters" aria-label="Browse tool categories">
+            <span class="work-hero__filter-label">Browse</span>
+            <div class="work-hero__filter-tags">
+              <a class="work-hero__filter is-active" href="#colour-tools">Colour</a>
+              <a class="work-hero__filter" href="#typography-tools">Typography</a>
+              <a class="work-hero__filter" href="#conversion-tools">Conversion</a>
+            </div>
+          </nav>
         </div>
 
         <div class="tools-index__grid">
+          <div class="tools-index__section-row" id="colour-tools">
+            <h2 class="tools-index__section-heading">Colour Tools</h2>
+          </div>
+
           <div class="tools-index__card-row">
             <a href="/tools/contrast-checker" class="tools-index__card">
               <span class="tools-index__card-index">(01)</span>
@@ -163,7 +176,7 @@
 
           <div class="tools-index__spacer" aria-hidden="true"></div>
 
-          <div class="tools-index__section-row">
+          <div class="tools-index__section-row" id="typography-tools">
             <h2 class="tools-index__section-heading">Typography</h2>
           </div>
 
@@ -180,7 +193,7 @@
 
           <div class="tools-index__spacer" aria-hidden="true"></div>
 
-          <div class="tools-index__section-row">
+          <div class="tools-index__section-row" id="conversion-tools">
             <h2 class="tools-index__section-heading">Conversion Tools</h2>
           </div>
 
