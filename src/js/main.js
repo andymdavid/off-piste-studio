@@ -82,8 +82,8 @@ function initCurrentHeader() {
 function initThemeToggle() {
   if (document.body.dataset.pageType === 'duplicate-home') return;
 
-  const toggle = document.querySelector('[data-theme-toggle]');
-  if (!toggle) return;
+  const toggles = document.querySelectorAll('[data-theme-toggle]');
+  if (!toggles.length) return;
 
   const storageKey = 'off-piste-duplicate-theme';
 
@@ -108,16 +108,23 @@ function initThemeToggle() {
     const isLight = nextTheme === 'light';
 
     document.body.dataset.theme = nextTheme;
-    toggle.setAttribute('aria-pressed', String(isLight));
-    toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    document.documentElement.dataset.theme = nextTheme;
+    document.documentElement.style.colorScheme = nextTheme;
+
+    toggles.forEach(toggle => {
+      toggle.setAttribute('aria-pressed', String(isLight));
+      toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+    });
   };
 
   setTheme(getStoredTheme());
 
-  toggle.addEventListener('click', () => {
-    const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
-    setTheme(nextTheme);
-    storeTheme(nextTheme);
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const nextTheme = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+      setTheme(nextTheme);
+      storeTheme(nextTheme);
+    });
   });
 }
 
@@ -1378,8 +1385,7 @@ function initEstimator() {
   update();
 }
 
-// Initialize on DOM ready
-document.addEventListener('DOMContentLoaded', () => {
+function initSite() {
   initCurrentHeader();
   initThemeToggle();
   initMobileMenu();
@@ -1409,7 +1415,14 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     scaleFooterBrand();
   }
-});
+}
+
+// Initialize on DOM ready, or immediately if this module is evaluated late.
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initSite, { once: true });
+} else {
+  initSite();
+}
 
 // Rescale on window resize
 window.addEventListener('resize', scaleFooterBrand);

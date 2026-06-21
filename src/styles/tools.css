@@ -16,6 +16,7 @@ body[data-page-type="tool"] {
   color: var(--tool-page-text);
 }
 
+html[data-theme="light"] body[data-page-type="tool"],
 body[data-page-type="tool"][data-theme="light"] {
   --tool-page-bg: #fdfdfc;
   --tool-page-text: rgba(18, 18, 18, 0.92);
