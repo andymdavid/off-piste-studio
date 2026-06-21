@@ -125,7 +125,7 @@ const footerHtml = `
     <div class="container">
       <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
       <div class="footer__sections">
-        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a><a href="/resources" class="footer__nav-link">Insights</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/tools" class="footer__nav-link">Tools</a><a href="/industries" class="footer__nav-link">Industries</a><a href="/locations" class="footer__nav-link">Locations</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a><a href="/resources" class="footer__nav-link">Insights</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/tools" class="footer__nav-link">Tools</a><a href="/for-agents" class="footer__nav-link">For Agents</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
         <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
         <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
       </div>
@@ -227,7 +227,11 @@ function getDeterministicLocations(allLocations, count) {
 }
 
 function createLocationHubLinksHtml(locations) {
-  return locations.map(p => `<a href="/locations" class="page-links__link">${escapeHtml(p.location || p.title)}</a>`).join('');
+  return locations.map(p => `<a href="/for-agents" class="page-links__link">${escapeHtml(p.location || p.title)}</a>`).join('');
+}
+
+function createIndustryHubLinksHtml(industries) {
+  return industries.map(p => `<a href="/for-agents" class="page-links__link">${escapeHtml(p.industry || p.title)}</a>`).join('');
 }
 
 function getDeterministicIndustries(allIndustries, count) {
@@ -245,7 +249,7 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
     const svcs = allServices.slice(0, 4);
 
     if (related.length) {
-      sections.push(`<div class="page-links__group"><h3 class="page-links__label">We also build websites for</h3><div class="page-links__list">${related.map(p => `<a href="/industries/${p.slug}" class="page-links__link">${escapeHtml(p.industry || p.title)}</a>`).join('')}</div></div>`);
+      sections.push(`<div class="page-links__group"><h3 class="page-links__label">We also build websites for</h3><div class="page-links__list">${createIndustryHubLinksHtml(related)}</div></div>`);
     }
     if (svcs.length) {
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">Our services</h3><div class="page-links__list">${svcs.map(p => `<a href="/services/${p.slug}" class="page-links__link">${escapeHtml(p.title)}</a>`).join('')}</div></div>`);
@@ -260,7 +264,7 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
     const locs = getDeterministicLocations(allLocations, 4);
 
     if (inds.length) {
-      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Industries we serve</h3><div class="page-links__list">${inds.map(p => `<a href="/industries/${p.slug}" class="page-links__link">${escapeHtml(p.industry || p.title)}</a>`).join('')}</div></div>`);
+      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Industries we serve</h3><div class="page-links__list">${createIndustryHubLinksHtml(inds)}</div></div>`);
     }
     if (locs.length) {
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">Serving businesses in</h3><div class="page-links__list">${createLocationHubLinksHtml(locs)}</div></div>`);
@@ -272,7 +276,7 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
     const svcs = allServices.slice(0, 4);
 
     if (inds.length) {
-      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Industries we serve in ${escapeHtml(page.location || '')}</h3><div class="page-links__list">${inds.map(p => `<a href="/industries/${p.slug}" class="page-links__link">${escapeHtml(p.industry || p.title)}</a>`).join('')}</div></div>`);
+      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Industries we serve in ${escapeHtml(page.location || '')}</h3><div class="page-links__list">${createIndustryHubLinksHtml(inds)}</div></div>`);
     }
     if (svcs.length) {
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">Our services</h3><div class="page-links__list">${svcs.map(p => `<a href="/services/${p.slug}" class="page-links__link">${escapeHtml(p.title)}</a>`).join('')}</div></div>`);
@@ -784,27 +788,27 @@ function writePages(pages, outputPath, templateFn, allIndustries, allServices, a
   });
 }
 
-function createLocationRedirectHtml(page) {
+function createRedirectHtml(page, targetUrl, label) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, follow">
-  <meta http-equiv="refresh" content="0; url=/locations">
-  <link rel="canonical" href="https://offpistestudio.com/locations">
-  <title>${escapeHtml(page.location || page.title)} | Off Piste Studio</title>
+  <meta http-equiv="refresh" content="0; url=${targetUrl}">
+  <link rel="canonical" href="https://offpistestudio.com${targetUrl}">
+  <title>${escapeHtml(page.location || page.industry || page.title)} | Off Piste Studio</title>
 </head>
 <body>
-  <p>This location page has moved to <a href="/locations">Locations</a>.</p>
+  <p>This ${label} page has moved to <a href="${targetUrl}">For Agents</a>.</p>
 </body>
 </html>`;
 }
 
-function writeLocationRedirectPages(pages, outputPath) {
+function writeRedirectPages(pages, outputPath, targetUrl, label) {
   mkdirSync(outputPath, { recursive: true });
   pages.forEach(page => {
-    writeFileSync(resolve(outputPath, `${page.slug}.html`), createLocationRedirectHtml(page));
+    writeFileSync(resolve(outputPath, `${page.slug}.html`), createRedirectHtml(page, targetUrl, label));
   });
 }
 
@@ -820,15 +824,15 @@ const services = parseContentDir(resolve(rootDir, 'content/services'), []);
 const locations = parseContentDir(resolve(rootDir, 'content/locations'), ['location', 'region']);
 
 // Generate HTML with cross-links
-writePages(industries, resolve(rootDir, 'industries'), createIndustryHtml, industries, services, locations);
+writeRedirectPages(industries, resolve(rootDir, 'industries'), '/for-agents', 'industry');
 writePages(services, resolve(rootDir, 'services'), createServiceHtml, industries, services, locations);
-writeLocationRedirectPages(locations, resolve(rootDir, 'locations'));
+writeRedirectPages(locations, resolve(rootDir, 'locations'), '/for-agents', 'location');
 
 // Write data files for client-side use (listings, internal linking, etc.)
 const pageData = {
-  industries: industries.map(({ html, faqs, ...p }) => ({ ...p, url: `/industries/${p.slug}` })),
+  industries: industries.map(({ html, faqs, ...p }) => ({ ...p, url: '/for-agents' })),
   services: services.map(({ html, faqs, ...p }) => ({ ...p, url: `/services/${p.slug}` })),
-  locations: locations.map(({ html, faqs, ...p }) => ({ ...p, url: '/locations' })),
+  locations: locations.map(({ html, faqs, ...p }) => ({ ...p, url: '/for-agents' })),
 };
 
 writeFileSync(
@@ -836,5 +840,4 @@ writeFileSync(
   `export const INDUSTRY_PAGES = ${JSON.stringify(pageData.industries, null, 2)};\n\nexport const SERVICE_PAGES = ${JSON.stringify(pageData.services, null, 2)};\n\nexport const LOCATION_PAGES = ${JSON.stringify(pageData.locations, null, 2)};\n`
 );
 
-const total = industries.length + services.length;
-console.log(`Generated ${total} pages (${industries.length} industries, ${services.length} services) and ${locations.length} location redirects`);
+console.log(`Generated ${services.length} service pages, ${industries.length} industry redirects and ${locations.length} location redirects`);

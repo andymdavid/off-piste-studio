@@ -31,7 +31,7 @@ function scanDir(dirName) {
 }
 
 // Core pages (in project root)
-const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'contact.html', 'pricing.html', 'tools.html', 'industries.html', 'locations.html'];
+const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'contact.html', 'pricing.html', 'tools.html', 'for-agents.html'];
 
 const entries = [];
 
@@ -64,16 +64,6 @@ for (const page of scanDir('services')) {
     lastmod: page.lastmod,
     changefreq: 'weekly',
     priority: '0.9',
-  });
-}
-
-// Industry pages - priority 0.8
-for (const page of scanDir('industries')) {
-  entries.push({
-    url: `${BASE_URL}/industries/${page.slug}`,
-    lastmod: page.lastmod,
-    changefreq: 'weekly',
-    priority: '0.8',
   });
 }
 
