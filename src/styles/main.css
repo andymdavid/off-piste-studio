@@ -1725,6 +1725,58 @@ body[data-page-type="tools"][data-theme="light"] .footer__bottom {
   border-color: var(--site-divider-light) !important;
 }
 
+body[data-page-type="tool"] {
+  --tool-page-bg: #121212;
+  --tool-page-text: rgba(255, 255, 255, 0.9);
+  --tool-page-text-muted: rgba(255, 255, 255, 0.62);
+  --tool-page-text-soft: rgba(255, 255, 255, 0.46);
+  --tool-page-divider: var(--site-divider);
+  --color-text: var(--tool-page-text);
+  --color-text-muted: var(--tool-page-text-muted);
+  --color-bg-dark: var(--tool-page-bg);
+  --site-divider-strong: var(--tool-page-divider);
+  background: var(--tool-page-bg);
+  color: var(--tool-page-text);
+}
+
+html[data-theme="light"] body[data-page-type="tool"],
+body[data-page-type="tool"][data-theme="light"] {
+  --tool-page-bg: #fdfdfc;
+  --tool-page-text: rgba(18, 18, 18, 0.92);
+  --tool-page-text-muted: rgba(18, 18, 18, 0.62);
+  --tool-page-text-soft: rgba(18, 18, 18, 0.46);
+  --tool-page-divider: var(--site-divider-light);
+  --color-text: var(--tool-page-text);
+  --color-text-muted: var(--tool-page-text-muted);
+  --color-bg-dark: var(--tool-page-bg);
+  --site-divider-strong: var(--tool-page-divider);
+  background: var(--tool-page-bg) !important;
+  color: var(--tool-page-text) !important;
+}
+
+body[data-page-type="tool"] main,
+body[data-page-type="tool"] main > section,
+body[data-page-type="tool"] .tool-hero,
+body[data-page-type="tool"] .tool-spacer,
+body[data-page-type="tool"] .tool-app,
+body[data-page-type="tool"] .tool-content,
+body[data-page-type="tool"] .page-faq,
+body[data-page-type="tool"] .page-cta {
+  background: var(--tool-page-bg) !important;
+  color: var(--tool-page-text);
+}
+
+body[data-page-type="tool"] .tool-hero__title,
+body[data-page-type="tool"] .tool-spacer__heading,
+body[data-page-type="tool"] .tool-content__body h2 {
+  color: var(--tool-page-text);
+}
+
+body[data-page-type="tool"] .tool-hero__subtitle,
+body[data-page-type="tool"] .tool-content__body p {
+  color: var(--tool-page-text-muted);
+}
+
 body[data-page-type="locations"] {
   --locations-page-bg: #121212;
   --locations-page-text: rgba(255, 255, 255, 0.9);
