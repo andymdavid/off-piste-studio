@@ -36,7 +36,6 @@ export default defineConfig({
         contact: resolve(__dirname, 'contact.html'),
         tools: resolve(__dirname, 'tools.html'),
         pricing: resolve(__dirname, 'pricing.html'),
-        'for-agents': resolve(__dirname, 'for-agents.html'),
         industries: resolve(__dirname, 'industries.html'),
         locations: resolve(__dirname, 'locations.html'),
         ...discoverPages('insights', 'insight-'),

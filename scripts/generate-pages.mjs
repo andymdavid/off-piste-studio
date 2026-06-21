@@ -125,7 +125,7 @@ const footerHtml = `
     <div class="container">
       <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
       <div class="footer__sections">
-        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a><a href="/resources" class="footer__nav-link">Insights</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/tools" class="footer__nav-link">Tools</a><a href="/for-agents" class="footer__nav-link">For Agents</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a><a href="/resources" class="footer__nav-link">Insights</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
         <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
         <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
       </div>
@@ -227,11 +227,11 @@ function getDeterministicLocations(allLocations, count) {
 }
 
 function createLocationHubLinksHtml(locations) {
-  return locations.map(p => `<a href="/for-agents" class="page-links__link">${escapeHtml(p.location || p.title)}</a>`).join('');
+  return locations.map(p => `<span class="page-links__link">${escapeHtml(p.location || p.title)}</span>`).join('');
 }
 
 function createIndustryHubLinksHtml(industries) {
-  return industries.map(p => `<a href="/for-agents" class="page-links__link">${escapeHtml(p.industry || p.title)}</a>`).join('');
+  return industries.map(p => `<span class="page-links__link">${escapeHtml(p.industry || p.title)}</span>`).join('');
 }
 
 function getDeterministicIndustries(allIndustries, count) {
@@ -800,7 +800,7 @@ function createRedirectHtml(page, targetUrl, label) {
   <title>${escapeHtml(page.location || page.industry || page.title)} | Off Piste Studio</title>
 </head>
 <body>
-  <p>This ${label} page has moved to <a href="${targetUrl}">For Agents</a>.</p>
+  <p>This ${label} page has moved to <a href="${targetUrl}">llms.txt</a>.</p>
 </body>
 </html>`;
 }
@@ -824,15 +824,15 @@ const services = parseContentDir(resolve(rootDir, 'content/services'), []);
 const locations = parseContentDir(resolve(rootDir, 'content/locations'), ['location', 'region']);
 
 // Generate HTML with cross-links
-writeRedirectPages(industries, resolve(rootDir, 'industries'), '/for-agents', 'industry');
+writeRedirectPages(industries, resolve(rootDir, 'industries'), '/llms.txt', 'industry');
 writePages(services, resolve(rootDir, 'services'), createServiceHtml, industries, services, locations);
-writeRedirectPages(locations, resolve(rootDir, 'locations'), '/for-agents', 'location');
+writeRedirectPages(locations, resolve(rootDir, 'locations'), '/llms.txt', 'location');
 
 // Write data files for client-side use (listings, internal linking, etc.)
 const pageData = {
-  industries: industries.map(({ html, faqs, ...p }) => ({ ...p, url: '/for-agents' })),
+  industries: industries.map(({ html, faqs, ...p }) => ({ ...p, url: '/llms.txt' })),
   services: services.map(({ html, faqs, ...p }) => ({ ...p, url: `/services/${p.slug}` })),
-  locations: locations.map(({ html, faqs, ...p }) => ({ ...p, url: '/for-agents' })),
+  locations: locations.map(({ html, faqs, ...p }) => ({ ...p, url: '/llms.txt' })),
 };
 
 writeFileSync(
