@@ -9945,6 +9945,18 @@ body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .dupli
   color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link,
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-label {
+    color: rgba(18, 18, 18, 0.92);
+  }
+
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link:hover,
+  body[data-page-type="tool"][data-theme="light"] .duplicate-header.is-open .duplicate-header__menu-link:hover .duplicate-header__menu-label {
+    color: rgba(18, 18, 18, 0.58);
+  }
+}
+
 body[data-page-type="locations"][data-theme="light"] .duplicate-header__link,
 body[data-page-type="locations"][data-theme="light"] .duplicate-header__side-link,
 body[data-page-type="locations"][data-theme="light"] .duplicate-header__menu-toggle,
