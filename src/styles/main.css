@@ -1816,6 +1816,7 @@ body[data-page-type="tool"] .page-faq > .container {
 }
 
 body[data-page-type="tool"] .page-faq .faq__layout {
+  --tool-faq-intro-width: 85.185%;
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   gap: 0;
@@ -1837,7 +1838,6 @@ body[data-page-type="tool"] .page-faq .faq__list {
   margin: 0;
   padding: 0;
   border-top: 0;
-  border-left: 1px solid var(--tool-page-divider);
 }
 
 body[data-page-type="tool"] .page-faq .faq__layout > .faq__list {
@@ -1853,11 +1853,10 @@ body[data-page-type="tool"] .page-faq .faq__item {
 body[data-page-type="tool"] .page-faq .faq__item::after {
   content: "";
   position: absolute;
-  left: 50%;
+  left: calc(var(--tool-faq-intro-width) * -1);
   bottom: 0;
-  width: 100vw;
+  width: calc(100% + var(--tool-faq-intro-width));
   height: 1px;
-  transform: translateX(-50%);
   background: var(--tool-page-divider);
   pointer-events: none;
 }
@@ -1884,6 +1883,7 @@ body[data-page-type="tool"] .page-cta::before {
   }
 
   body[data-page-type="tool"] .page-faq .faq__layout {
+    --tool-faq-intro-width: 0px;
     grid-template-columns: 1fr;
   }
 
