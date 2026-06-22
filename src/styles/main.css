@@ -1811,65 +1811,27 @@ body[data-page-type="tool"] .page-cta__text {
   color: var(--tool-page-text-muted);
 }
 
-body[data-page-type="tool"] .page-faq > .container {
-  padding: 0;
-}
-
-body[data-page-type="tool"] .page-faq .faq__layout {
-  --tool-faq-intro-width: 85.185%;
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 0;
-  margin: 0;
-  border: 0;
-}
-
-body[data-page-type="tool"] .page-faq .faq__layout > * {
-  padding: clamp(1.5rem, 3vw, 2.75rem);
-}
-
-body[data-page-type="tool"] .page-faq .faq__layout > * + * {
-  border-left: 1px solid var(--tool-page-divider);
-}
-
 body[data-page-type="tool"] .page-faq .faq__list {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
+  display: block;
   border-top: 0;
-}
-
-body[data-page-type="tool"] .page-faq .faq__layout > .faq__list {
-  padding: 0;
+  border-left: 0;
 }
 
 body[data-page-type="tool"] .page-faq .faq__item {
-  position: relative;
-  border: 0;
-  margin: 0;
-}
-
-body[data-page-type="tool"] .page-faq .faq__item::after {
-  content: "";
-  position: absolute;
-  left: calc(var(--tool-faq-intro-width) * -1);
-  bottom: 0;
-  width: calc(100% + var(--tool-faq-intro-width));
-  height: 1px;
-  background: var(--tool-page-divider);
-  pointer-events: none;
+  border-right: 0;
+  border-bottom: 1px solid var(--tool-page-divider);
 }
 
 body[data-page-type="tool"] .page-faq .faq__question {
   min-height: 5.75rem;
   display: flex;
   align-items: center;
-  padding: 1rem 4rem 1rem 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 body[data-page-type="tool"] .page-faq .faq__answer {
-  padding: 0 4rem 1.4rem 1rem;
+  padding-bottom: 1.4rem;
 }
 
 body[data-page-type="tool"] .page-cta::before {
@@ -1882,22 +1844,8 @@ body[data-page-type="tool"] .page-cta::before {
     padding: 1.25rem;
   }
 
-  body[data-page-type="tool"] .page-faq .faq__layout {
-    --tool-faq-intro-width: 0px;
-    grid-template-columns: 1fr;
-  }
-
-  body[data-page-type="tool"] .page-faq .faq__layout > * + *,
   body[data-page-type="tool"] .page-faq .faq__list {
-    border-left: 0;
-  }
-
-  body[data-page-type="tool"] .page-faq .faq__layout > * {
-    padding: 1.25rem;
-  }
-
-  body[data-page-type="tool"] .page-faq .faq__layout > .faq__list {
-    padding: 0;
+    border-top: 1px solid var(--tool-page-divider);
   }
 }
 
