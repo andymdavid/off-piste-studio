@@ -1828,16 +1828,21 @@ body[data-page-type="tool"] .faq-duplicate--tool > .container {
 
 body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__grid {
   display: grid;
-  border-left: 1px solid var(--tool-page-divider);
-  border-right: 1px solid var(--tool-page-divider);
+  border-left: 0;
+  border-right: 0;
 }
 
 body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__row--blank,
 body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__row--blank-bottom,
 body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__row--title {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   height: var(--faq-row-height);
+}
+
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__blank-cell:nth-child(2),
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__title-cell--right {
+  display: none;
 }
 
 body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__row--blank,
