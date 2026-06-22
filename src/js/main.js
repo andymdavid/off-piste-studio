@@ -615,6 +615,62 @@ function initFaqAccordion() {
   });
 }
 
+function initFaqClickScramble() {
+  if (document.body.dataset.pageType === 'duplicate-home') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const questions = document.querySelectorAll('.faq-duplicate .faq__question');
+  if (!questions.length) return;
+
+  const symbols = '{}[]<>/\\|01#$%&*=+_~';
+  const duration = 280;
+  const interval = 35;
+
+  questions.forEach(question => {
+    const item = question.closest('.faq__item');
+    if (!item || question.dataset.scrambleBound === 'true') return;
+
+    question.dataset.scrambleBound = 'true';
+
+    const originalText = question.textContent || '';
+    let timer = 0;
+    let elapsed = 0;
+
+    const restore = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+      question.textContent = originalText;
+      window.setTimeout(() => {
+        item.classList.remove('is-click-animating');
+      }, 120);
+    };
+
+    const scramble = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+      item.classList.remove('is-click-animating');
+      void item.offsetWidth;
+      item.classList.add('is-click-animating');
+
+      timer = window.setInterval(() => {
+        elapsed += interval;
+        question.textContent = Array.from(originalText)
+          .map(character => {
+            if (character === ' ') return ' ';
+            return symbols[Math.floor(Math.random() * symbols.length)];
+          })
+          .join('');
+
+        if (elapsed >= duration) restore();
+      }, interval);
+    };
+
+    question.addEventListener('click', scramble);
+  });
+}
+
 // Project modal slideshow - auto-rotate
 function initProjectSlideshow() {
   const slides = document.querySelectorAll('.project-modal__slide');
@@ -801,6 +857,57 @@ function initAboutCardScramble() {
 
   cards.forEach(card => {
     const target = card.querySelector('.about__card-title');
+    if (!target || target.dataset.scrambleBound === 'true') return;
+
+    target.dataset.scrambleBound = 'true';
+
+    const originalText = target.textContent || '';
+    let timer = 0;
+    let elapsed = 0;
+
+    const restore = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+      target.textContent = originalText;
+    };
+
+    const scramble = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+
+      timer = window.setInterval(() => {
+        elapsed += interval;
+        target.textContent = Array.from(originalText)
+          .map(character => {
+            if (character === ' ') return ' ';
+            return symbols[Math.floor(Math.random() * symbols.length)];
+          })
+          .join('');
+
+        if (elapsed >= duration) restore();
+      }, interval);
+    };
+
+    card.addEventListener('mouseenter', scramble);
+    card.addEventListener('mouseleave', restore);
+  });
+}
+
+function initToolRelatedCardScramble() {
+  if (document.body.dataset.pageType !== 'tool') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const cards = document.querySelectorAll('.tool-related__link');
+  if (!cards.length) return;
+
+  const symbols = '{}[]<>/\\|01#$%&*=+_~';
+  const duration = 280;
+  const interval = 35;
+
+  cards.forEach(card => {
+    const target = card.querySelector('.tool-related__name');
     if (!target || target.dataset.scrambleBound === 'true') return;
 
     target.dataset.scrambleBound = 'true';
@@ -1394,12 +1501,14 @@ function initSite() {
   initHeroDistortion();
   setActiveNavLink();
   initFaqAccordion();
+  initFaqClickScramble();
   initProjectSlideshow();
   initInsightsList();
   initProjectFilter();
   initWorkRowScramble();
   initWorkImagePreview();
   initAboutCardScramble();
+  initToolRelatedCardScramble();
   initAboutLogoSwap();
   initButtonScramble();
   initRelatedPosts();
