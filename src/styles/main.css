@@ -1811,10 +1811,93 @@ body[data-page-type="tool"] .page-cta__text {
   color: var(--tool-page-text-muted);
 }
 
+body[data-page-type="tool"] .page-faq > .container {
+  padding: 0;
+}
+
+body[data-page-type="tool"] .page-faq .faq__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: 0;
+  margin: 0;
+  border: 0;
+}
+
+body[data-page-type="tool"] .page-faq .faq__layout > * {
+  padding: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+body[data-page-type="tool"] .page-faq .faq__layout > * + * {
+  border-left: 1px solid var(--tool-page-divider);
+}
+
+body[data-page-type="tool"] .page-faq .faq__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border-top: 0;
+  border-left: 1px solid var(--tool-page-divider);
+}
+
+body[data-page-type="tool"] .page-faq .faq__layout > .faq__list {
+  padding: 0;
+}
+
+body[data-page-type="tool"] .page-faq .faq__item {
+  position: relative;
+  border: 0;
+  margin: 0;
+}
+
+body[data-page-type="tool"] .page-faq .faq__item::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--tool-page-divider);
+  pointer-events: none;
+}
+
+body[data-page-type="tool"] .page-faq .faq__question {
+  min-height: 5.75rem;
+  display: flex;
+  align-items: center;
+  padding: 1rem 4rem 1rem 1rem;
+}
+
+body[data-page-type="tool"] .page-faq .faq__answer {
+  padding: 0 4rem 1.4rem 1rem;
+}
+
+body[data-page-type="tool"] .page-cta::before {
+  content: none;
+}
+
 @media (max-width: 767px) {
   body[data-page-type="tool"] .page-cta > .container {
     min-height: 21rem;
     padding: 1.25rem;
+  }
+
+  body[data-page-type="tool"] .page-faq .faq__layout {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-page-type="tool"] .page-faq .faq__layout > * + *,
+  body[data-page-type="tool"] .page-faq .faq__list {
+    border-left: 0;
+  }
+
+  body[data-page-type="tool"] .page-faq .faq__layout > * {
+    padding: 1.25rem;
+  }
+
+  body[data-page-type="tool"] .page-faq .faq__layout > .faq__list {
+    padding: 0;
   }
 }
 
