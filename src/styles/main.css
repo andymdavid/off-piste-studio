@@ -1811,6 +1811,37 @@ body[data-page-type="tool"] .page-cta__text {
   color: var(--tool-page-text-muted);
 }
 
+body[data-page-type="tool"] .page-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, var(--site-button-width, 13.25rem));
+  min-width: 0;
+  height: 42px;
+  padding: 0 0.8rem;
+  background: #1b1b1b;
+  color: #ababab;
+  border: 1px solid #1b1b1b;
+  border-radius: 1px;
+  box-shadow: none;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  text-decoration: none;
+  gap: 0.6rem;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+body[data-page-type="tool"] .page-cta__button:hover {
+  background: #ffffff;
+  color: #121212;
+  border-color: #ffffff;
+  transform: none;
+}
+
 body[data-page-type="tool"] .page-cta::before {
   content: none;
 }
@@ -1985,33 +2016,45 @@ body[data-page-type="tool"] .faq-duplicate--tool .faq__answer {
   transition: color var(--transition-fast);
 }
 
-body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] {
+body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open],
+body[data-page-type="tool"] .faq-duplicate--tool .faq__item.is-click-animating {
   background: #fdfdfc;
 }
 
 body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__question,
-body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__question::after {
+body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__question::after,
+body[data-page-type="tool"] .faq-duplicate--tool .faq__item.is-click-animating .faq__question,
+body[data-page-type="tool"] .faq-duplicate--tool .faq__item.is-click-animating .faq__question::after {
   color: rgba(18, 18, 18, 0.92);
 }
 
-body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__answer {
+body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__answer,
+body[data-page-type="tool"] .faq-duplicate--tool .faq__item.is-click-animating .faq__answer {
   color: rgba(18, 18, 18, 0.62);
 }
 
 body[data-page-type="tool"][data-theme="light"] .faq-duplicate--tool .faq__item[open],
-html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] {
+body[data-page-type="tool"][data-theme="light"] .faq-duplicate--tool .faq__item.is-click-animating,
+html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open],
+html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item.is-click-animating {
   background: #121212;
 }
 
 body[data-page-type="tool"][data-theme="light"] .faq-duplicate--tool .faq__item[open] .faq__question,
 body[data-page-type="tool"][data-theme="light"] .faq-duplicate--tool .faq__item[open] .faq__question::after,
+body[data-page-type="tool"][data-theme="light"] .faq-duplicate--tool .faq__item.is-click-animating .faq__question,
+body[data-page-type="tool"][data-theme="light"] .faq-duplicate--tool .faq__item.is-click-animating .faq__question::after,
 html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__question,
-html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__question::after {
+html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__question::after,
+html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item.is-click-animating .faq__question,
+html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item.is-click-animating .faq__question::after {
   color: rgba(255, 255, 255, 0.92);
 }
 
 body[data-page-type="tool"][data-theme="light"] .faq-duplicate--tool .faq__item[open] .faq__answer,
-html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__answer {
+body[data-page-type="tool"][data-theme="light"] .faq-duplicate--tool .faq__item.is-click-animating .faq__answer,
+html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item[open] .faq__answer,
+html[data-theme="light"] body[data-page-type="tool"] .faq-duplicate--tool .faq__item.is-click-animating .faq__answer {
   color: rgba(255, 255, 255, 0.62);
 }
 
@@ -6757,7 +6800,7 @@ body[data-duplicate-nav-open="true"] .duplicate-nav-overlay {
 .footer.footer--current {
   padding-top: clamp(5.5rem, 10vw, 9rem) !important;
   overflow: hidden !important;
-  background: var(--color-bg-dark) !important;
+  background: #0f0e0d !important;
   border-top: 0 !important;
 }
 
@@ -10718,6 +10761,36 @@ body[data-page-type="duplicate-home"][data-theme="light"] .case-studies .case-ca
 body[data-page-type="duplicate-home"][data-theme="light"] .case-studies .case-card:hover .case-card__tags span {
   color: rgba(18, 18, 18, 0.58) !important;
   border-color: var(--site-divider-light) !important;
+}
+
+/* Final tool FAQ overrides must sit after the homepage FAQ rules. */
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__row--blank,
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__row--blank-bottom,
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__row--title,
+body[data-page-type="tool"] .faq-duplicate--tool .faq__layout,
+body[data-page-type="tool"] .faq-duplicate--tool .faq__list {
+  display: block !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  width: 100% !important;
+}
+
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__title-cell--right,
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__blank-cell:nth-child(2) {
+  display: none !important;
+}
+
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__grid,
+body[data-page-type="tool"] .faq-duplicate--tool .faq.section > .container,
+body[data-page-type="tool"] .faq-duplicate--tool .faq__layout,
+body[data-page-type="tool"] .faq-duplicate--tool .faq__list,
+body[data-page-type="tool"] .faq-duplicate--tool .faq__item {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+
+html[data-theme="light"] body .footer.footer--current,
+body[data-theme="light"] .footer.footer--current {
+  background: rgba(18, 18, 18, 0.035) !important;
 }
 
 /* Selected works title row final alignment. Keep this as the last selected-works rule. */
