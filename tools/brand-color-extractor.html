@@ -89,8 +89,8 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260622-tool-faq-full">
-  <link rel="stylesheet" href="/src/styles/tools.css?v=20260622-tool-faq-full">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260622-related-stacked-spacing">
+  <link rel="stylesheet" href="/src/styles/tools.css?v=20260622-related-stacked-spacing">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -217,6 +217,7 @@
     <section class="tool-content">
       <div class="container">
         <div class="tool-content__body">
+          <div class="tool-content__main">
           <h2>How to Use This Tool</h2>
           <p>Upload your logo, brand image, or any photo by dragging it onto the dropzone or clicking "Browse Files". The tool analyses every pixel and identifies the dominant colours using a median cut algorithm. You get up to 6 colours with hex codes, RGB, and HSL values — ready to copy into your CSS, design tool, or brand guidelines.</p>
           <p>Each extracted colour has a "Check" link that takes you to the Contrast Checker with that colour pre-loaded, so you can verify accessibility before using it on your website.</p>
@@ -224,9 +225,10 @@
           <h2>Why Consistent Brand Colours Matter</h2>
           <p>Your brand colours are one of the first things people notice. Consistent use of colour across your website, social media, print materials, and signage builds instant recognition and trust. If you've received a logo from a designer but don't have the exact colour codes, this tool extracts them so every touchpoint matches.</p>
           <p>For websites specifically, having your brand colours defined as CSS variables makes development faster and ensures consistency across every page.</p>
-
-          <h2>Related Tools</h2>
-          <div class="tool-related">
+          </div>
+          <aside class="tool-content__related" aria-labelledby="related-tools-heading">
+            <h2 id="related-tools-heading">Related Tools</h2>
+            <div class="tool-related">
             <a href="/tools/contrast-checker" class="tool-related__link">
               <span class="tool-related__name">Contrast Checker</span>
               <span class="tool-related__desc">Check if your extracted colours meet WCAG accessibility standards</span>
@@ -236,6 +238,7 @@
               <span class="tool-related__desc">Convert between hex, RGB, and HSL formats</span>
             </a>
           </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -246,18 +249,15 @@
         <div class="faq-duplicate__grid">
           <div class="faq-duplicate__row faq-duplicate__row--blank" aria-hidden="true">
             <div class="faq-duplicate__blank-cell"></div>
-            <div class="faq-duplicate__blank-cell"></div>
           </div>
 
           <div class="faq-duplicate__row faq-duplicate__row--title">
             <div class="faq-duplicate__title-cell faq-duplicate__title-cell--left">
               <h2 class="segments__heading">FAQ</h2>
             </div>
-            <div class="faq-duplicate__title-cell faq-duplicate__title-cell--right"></div>
           </div>
 
           <div class="faq-duplicate__row faq-duplicate__row--blank" aria-hidden="true">
-            <div class="faq-duplicate__blank-cell"></div>
             <div class="faq-duplicate__blank-cell"></div>
           </div>
 
@@ -292,7 +292,6 @@
 
           <div class="faq-duplicate__row faq-duplicate__row--blank-bottom" aria-hidden="true">
             <div class="faq-duplicate__blank-cell"></div>
-            <div class="faq-duplicate__blank-cell"></div>
           </div>
         </div>
       </div>
@@ -304,7 +303,7 @@
         <div class="page-cta__content">
           <h2 class="page-cta__heading">Need a complete brand identity?</h2>
           <p class="page-cta__text">We create cohesive brand identities for small businesses — logos, colour palettes, typography, and brand guidelines. Get in touch to discuss your project.</p>
-          <a href="/contact" class="page-cta__button">Let's Chat</a>
+          <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="hero-intro__button work-hero__button page-cta__button">Book a Discovery Call</a>
         </div>
       </div>
     </section>
@@ -312,17 +311,74 @@
 
   <footer class="footer footer--current">
     <div class="container">
-      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__intro-grid">
+        <h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2>
+        <p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p>
+      </div>
+
       <div class="footer__sections">
-        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a><a href="/resources" class="footer__nav-link">Insights</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
-        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
-        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+        <div class="footer__section footer__section--sitemap">
+          <h3 class="footer__section-title">Sitemap</h3>
+          <div class="footer__link-columns">
+            <nav class="footer__nav" aria-label="Footer sitemap primary">
+              <a href="/work" class="footer__nav-link">Work</a>
+              <a href="/about" class="footer__nav-link">About</a>
+              <a href="/pricing" class="footer__nav-link">Pricing</a>
+              <a href="/resources" class="footer__nav-link">Insights</a>
+            </nav>
+
+            <nav class="footer__nav" aria-label="Footer sitemap resources">
+              <a href="/tools" class="footer__nav-link">Tools</a>
+              
+              <a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer__section footer__section--tools">
+          <h3 class="footer__section-title">Tools</h3>
+          <div class="footer__link-columns">
+            <nav class="footer__nav" aria-label="Footer colour tools">
+              <a href="/tools" class="footer__nav-link">All Tools</a>
+              <a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a>
+              <a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a>
+              <a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a>
+              <a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a>
+            </nav>
+
+            <nav class="footer__nav" aria-label="Footer design tools">
+              <a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a>
+              <a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a>
+              <a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a>
+              <a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a>
+              <a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="footer__section footer__section--contact">
+          <h3 class="footer__section-title">Work with us</h3>
+          <div class="footer__contact">
+            <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a>
+            <a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+
+    <div class="footer__brand-wrap">
+      <div class="container footer__bottom">
+        <p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p>
+        <p class="footer__location">City Beach, WA</p>
+      </div>
+
+      <div class="footer__brand" aria-label="Off Piste Studio">
+        <span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span>
+      </div>
+    </div>
   </footer>
 
-  <script type="module" src="/src/js/main.js?v=20260622-tool-faq-full"></script>
+  <script type="module" src="/src/js/main.js?v=20260622-related-stacked-spacing"></script>
   <script type="module" src="/src/js/tools/brand-color-extractor.js"></script>
 </body>
 </html>
