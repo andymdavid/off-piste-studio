@@ -65,8 +65,8 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260622-tool-faq-column">
-  <link rel="stylesheet" href="/src/styles/tools.css?v=20260622-tool-faq-column">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260622-tool-faq-home">
+  <link rel="stylesheet" href="/src/styles/tools.css?v=20260622-tool-faq-home">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -382,22 +382,33 @@
       </div>
     </section>
 
-    <section class="tool-spacer" aria-label="Frequently asked questions section">
-      <div class="container">
-        <div class="tool-spacer__row">
-          <h2 class="tool-spacer__heading">FAQs</h2>
-        </div>
-      </div>
-    </section>
 
-    <!-- FAQ -->
-    <section class="faq section page-faq">
+    <section class="faq-duplicate faq-duplicate--tool">
       <div class="container">
-        <div class="faq__layout">
-          <div class="faq__intro">
-            <h2 class="faq__heading">Frequently asked questions</h2>
+        <div class="faq-duplicate__grid">
+          <div class="faq-duplicate__row faq-duplicate__row--blank" aria-hidden="true">
+            <div class="faq-duplicate__blank-cell"></div>
+            <div class="faq-duplicate__blank-cell"></div>
           </div>
-          <div class="faq__list">
+
+          <div class="faq-duplicate__row faq-duplicate__row--title">
+            <div class="faq-duplicate__title-cell faq-duplicate__title-cell--left">
+              <h2 class="segments__heading">FAQ</h2>
+            </div>
+            <div class="faq-duplicate__title-cell faq-duplicate__title-cell--right"></div>
+          </div>
+
+          <div class="faq-duplicate__row faq-duplicate__row--blank" aria-hidden="true">
+            <div class="faq-duplicate__blank-cell"></div>
+            <div class="faq-duplicate__blank-cell"></div>
+          </div>
+
+          <div class="faq-duplicate__row faq-duplicate__row--list">
+            <div class="faq-duplicate__list-wrap">
+              <section class="faq section page-faq">
+                <div class="container">
+                  <div class="faq__layout">
+                    <div class="faq__list">
             <details class="faq__item">
               <summary class="faq__question">How do I preview my brand colours on a website?</summary>
               <p class="faq__answer">Enter your brand colours in the input fields — primary, secondary, accent, background, text, and muted. The tool instantly renders them on real website mockup templates so you can see how your colour palette works in context before committing to a design.</p>
@@ -406,6 +417,16 @@
               <summary class="faq__question">What website templates are available?</summary>
               <p class="faq__answer">The tool includes four template types: a service business layout (ideal for tradies and local businesses), a professional services layout (for clinics, law firms, and accountants), a creative portfolio layout, and a landing page layout. Each represents a common website style for small businesses.</p>
             </details>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="faq-duplicate__row faq-duplicate__row--blank-bottom" aria-hidden="true">
+            <div class="faq-duplicate__blank-cell"></div>
+            <div class="faq-duplicate__blank-cell"></div>
           </div>
         </div>
       </div>
@@ -435,7 +456,7 @@
     <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
   </footer>
 
-  <script type="module" src="/src/js/main.js?v=20260622-tool-faq-column"></script>
+  <script type="module" src="/src/js/main.js?v=20260622-tool-faq-home"></script>
   <script type="module" src="/src/js/tools/palette-preview.js"></script>
 </body>
 </html>

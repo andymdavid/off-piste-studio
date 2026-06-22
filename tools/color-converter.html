@@ -97,8 +97,8 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260622-tool-faq-column">
-  <link rel="stylesheet" href="/src/styles/tools.css?v=20260622-tool-faq-column">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260622-tool-faq-home">
+  <link rel="stylesheet" href="/src/styles/tools.css?v=20260622-tool-faq-home">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -277,22 +277,33 @@
       </div>
     </section>
 
-    <section class="tool-spacer" aria-label="Frequently asked questions section">
-      <div class="container">
-        <div class="tool-spacer__row">
-          <h2 class="tool-spacer__heading">FAQs</h2>
-        </div>
-      </div>
-    </section>
 
-    <!-- FAQ -->
-    <section class="faq section page-faq">
+    <section class="faq-duplicate faq-duplicate--tool">
       <div class="container">
-        <div class="faq__layout">
-          <div class="faq__intro">
-            <h2 class="faq__heading">Frequently asked questions</h2>
+        <div class="faq-duplicate__grid">
+          <div class="faq-duplicate__row faq-duplicate__row--blank" aria-hidden="true">
+            <div class="faq-duplicate__blank-cell"></div>
+            <div class="faq-duplicate__blank-cell"></div>
           </div>
-          <div class="faq__list">
+
+          <div class="faq-duplicate__row faq-duplicate__row--title">
+            <div class="faq-duplicate__title-cell faq-duplicate__title-cell--left">
+              <h2 class="segments__heading">FAQ</h2>
+            </div>
+            <div class="faq-duplicate__title-cell faq-duplicate__title-cell--right"></div>
+          </div>
+
+          <div class="faq-duplicate__row faq-duplicate__row--blank" aria-hidden="true">
+            <div class="faq-duplicate__blank-cell"></div>
+            <div class="faq-duplicate__blank-cell"></div>
+          </div>
+
+          <div class="faq-duplicate__row faq-duplicate__row--list">
+            <div class="faq-duplicate__list-wrap">
+              <section class="faq section page-faq">
+                <div class="container">
+                  <div class="faq__layout">
+                    <div class="faq__list">
             <details class="faq__item">
               <summary class="faq__question">What is the difference between hex, RGB, and HSL?</summary>
               <p class="faq__answer">Hex is a six-character code (e.g. #ff6600) commonly used in CSS and design tools. RGB defines colours by red, green, and blue values from 0-255. HSL defines colours by hue (0-360 degrees), saturation (0-100%), and lightness (0-100%). All three represent the same colours, just in different formats.</p>
@@ -313,6 +324,16 @@
               <summary class="faq__question">What is a Tailwind CSS colour class?</summary>
               <p class="faq__answer">Tailwind CSS uses utility classes like bg-blue-500 or text-red-600 to apply colours. Each class maps to a specific hex value from Tailwind's default colour palette. If your brand colours don't match a Tailwind class exactly, this tool helps you find the closest one so you can maintain visual consistency in Tailwind projects.</p>
             </details>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+
+          <div class="faq-duplicate__row faq-duplicate__row--blank-bottom" aria-hidden="true">
+            <div class="faq-duplicate__blank-cell"></div>
+            <div class="faq-duplicate__blank-cell"></div>
           </div>
         </div>
       </div>
@@ -342,7 +363,7 @@
     <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
   </footer>
 
-  <script type="module" src="/src/js/main.js?v=20260622-tool-faq-column"></script>
+  <script type="module" src="/src/js/main.js?v=20260622-tool-faq-home"></script>
   <script type="module" src="/src/js/tools/color-converter.js"></script>
 </body>
 </html>
