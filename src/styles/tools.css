@@ -167,19 +167,51 @@ body[data-page-type="tool"] .tool-spacer > .container {
 }
 
 body[data-page-type="tool"] .tool-app > .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: clamp(24rem, 42vw, 38rem);
+}
+
+body[data-page-type="tool"] .tool-app > .container > * {
+  width: min(100%, var(--tool-app-max-width, 960px));
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body[data-page-type="tool"] .tool-content > .container {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 1fr);
   gap: 0;
   padding: 0;
 }
 
 body[data-page-type="tool"] .tool-content__body {
-  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: none;
+  min-height: clamp(24rem, 36vw, 34rem);
+  padding: 0;
+}
+
+body[data-page-type="tool"] .tool-content__body:has(.tool-related--stacked) {
+  min-height: clamp(41rem, 58vw, 52rem);
+}
+
+body[data-page-type="tool"] .tool-content__main,
+body[data-page-type="tool"] .tool-content__related {
+  min-width: 0;
   padding: clamp(1.5rem, 3vw, 2.75rem);
+}
+
+body[data-page-type="tool"] .tool-content__main {
+  align-self: start;
+}
+
+body[data-page-type="tool"] .tool-content__related {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
   border-left: 1px solid var(--tool-page-divider);
 }
 
@@ -202,8 +234,19 @@ body[data-page-type="tool"] .page-faq .faq__list {
   border-left: 1px solid var(--tool-page-divider);
 }
 
-body[data-page-type="tool"][data-theme="light"] .footer {
-  background: rgba(18, 18, 18, 0.035) !important;
+body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__layout,
+body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__list {
+  display: block;
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+  border-left: 0;
+}
+
+body[data-page-type="tool"] .faq-duplicate--tool .page-faq > .container,
+body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__layout,
+body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__list,
+body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__item {
+  border-right: 0;
 }
 
 body[data-page-type="tool"][data-theme="light"] .footer__statement,
@@ -711,6 +754,11 @@ body[data-page-type="tool"][data-theme="light"] .footer__bottom {
   margin-top: 0;
 }
 
+.tool-content__related h2 {
+  margin: 0;
+  padding: clamp(1.5rem, 3vw, 2.75rem) clamp(1.5rem, 3vw, 2.75rem) 0;
+}
+
 .tool-content__body p {
   font-family: var(--font-primary);
   font-size: 0.9375rem;
@@ -721,23 +769,50 @@ body[data-page-type="tool"][data-theme="light"] .footer__bottom {
 
 /* Related tools */
 .tool-related {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: var(--space-sm);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  margin-top: auto;
+  border-top: 1px solid var(--tool-page-divider);
+}
+
+.tool-related--stacked {
+  margin-top: clamp(2rem, 4vw, 4rem);
 }
 
 .tool-related__link {
-  display: block;
-  padding: var(--space-md);
-  border: 1px solid var(--tool-page-divider);
+  display: flex;
+  min-height: clamp(18rem, 25vw, 23rem);
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0;
+  padding: 1rem;
+  border-right: 0;
+  border-bottom: 1px solid var(--tool-page-divider);
   border-radius: 0;
-  background: rgba(255, 255, 255, 0.04);
-  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+  background: transparent;
+  color: inherit;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.tool-related__link:nth-child(odd) {
+  border-right: 1px solid var(--tool-page-divider);
+}
+
+.tool-related__link:nth-last-child(-n + 2) {
+  border-bottom: 0;
+}
+
+.tool-related__link:nth-child(2):nth-last-child(2) {
+  border-bottom: 1px solid var(--tool-page-divider);
 }
 
 .tool-related__link:hover {
-  border-color: var(--tool-page-divider);
   background: #fdfdfc;
 }
 
@@ -751,15 +826,38 @@ body[data-page-type="tool"][data-theme="light"] .tool-related__link:hover {
 
 .tool-related__name {
   display: block;
-  font-size: 1rem;
+  max-width: 10ch;
+  margin: 0 0 0.85rem;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.25rem, 1.75vw, 1.85rem);
   font-weight: 500;
-  margin-bottom: 0.25rem;
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
   color: var(--tool-page-text);
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .tool-related__desc {
-  font-size: 0.875rem;
+  max-width: 18rem;
+  margin: 0;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
   color: var(--tool-page-text-muted);
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.tool-related__link:hover .tool-related__name,
+.tool-related__link:hover .tool-related__desc {
+  transform: translateX(0.18rem);
 }
 
 .tool-related__link:hover .tool-related__name {
@@ -1953,14 +2051,32 @@ body[data-page-type="tool"][data-theme="light"] .tool-related__link:hover .tool-
 
 @media (max-width: 768px) {
   body[data-page-type="tool"] .tool-content > .container,
+  body[data-page-type="tool"] .tool-content__body,
   body[data-page-type="tool"] .page-faq .faq__layout {
     grid-template-columns: 1fr;
   }
 
-  body[data-page-type="tool"] .tool-content__body,
+  body[data-page-type="tool"] .tool-content__related,
   body[data-page-type="tool"] .page-faq .faq__list {
     border-left: 0;
     border-top: 1px solid var(--tool-page-divider);
+  }
+
+  .tool-related {
+    grid-template-columns: 1fr;
+    border-top: 0;
+  }
+
+  .tool-related__link:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .tool-related__link:nth-last-child(-n + 2) {
+    border-bottom: 1px solid var(--tool-page-divider);
+  }
+
+  .tool-related__link:last-child {
+    border-bottom: 0;
   }
 
   .contrast-checker__inputs {
