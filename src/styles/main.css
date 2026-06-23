@@ -9314,7 +9314,7 @@ body[data-page-type="duplicate-home"] .pathway {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  min-height: clamp(18rem, 25vw, 23rem);
+  min-height: clamp(20rem, 26vw, 25rem);
   padding: 1rem;
   text-decoration: none;
   color: inherit;
@@ -10483,7 +10483,7 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
   }
 
   body[data-page-type="duplicate-home"] .pathway {
-    min-height: 14rem;
+    min-height: 24rem;
     padding: 0.95rem;
     border-left: 0;
     border-top: 1px solid var(--site-divider);
