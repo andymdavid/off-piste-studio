@@ -9215,11 +9215,35 @@ body[data-page-type="duplicate-home"] .about-grid .services__category:hover .ser
 }
 
 body[data-page-type="duplicate-home"] .about-grid__row--top {
-  border-bottom: 1px solid var(--site-divider);
+  border-bottom: 0;
 }
 
 body[data-page-type="duplicate-home"] .about-grid .services__category:last-child {
   border-bottom: 0;
+}
+
+body[data-page-type="duplicate-home"] .about-grid__blank-row {
+  position: relative;
+  min-height: 5.75rem;
+}
+
+body[data-page-type="duplicate-home"] .about-grid__blank-row::before,
+body[data-page-type="duplicate-home"] .about-grid__blank-row::after {
+  content: "";
+  position: absolute;
+  left: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
+  right: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
+  height: 1px;
+  background: var(--site-divider);
+  pointer-events: none;
+}
+
+body[data-page-type="duplicate-home"] .about-grid__blank-row::before {
+  top: 0;
+}
+
+body[data-page-type="duplicate-home"] .about-grid__blank-row::after {
+  bottom: 0;
 }
 
 body[data-page-type="duplicate-home"] .pathways {
@@ -11511,6 +11535,8 @@ body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--st
 body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries-blank::before,
 body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries-blank::after,
 body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__author::before,
+body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__blank-row::before,
+body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__blank-row::after,
 body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__intro::after,
 body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list::before,
 body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list::after {
@@ -11653,6 +11679,13 @@ body[data-page-type="duplicate-home"][data-theme="light"] .case-studies .case-ca
 body[data-page-type="duplicate-home"][data-theme="light"] .case-studies .case-card:hover .case-card__tags span {
   color: rgba(18, 18, 18, 0.58) !important;
   border-color: var(--site-divider-light) !important;
+}
+
+@media (max-width: 768px) {
+  body[data-page-type="duplicate-home"] .about-grid__row--top,
+  body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__row--top {
+    background-image: none !important;
+  }
 }
 
 /* Final tool FAQ overrides must sit after the homepage FAQ rules. */
