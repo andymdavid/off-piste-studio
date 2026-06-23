@@ -123,7 +123,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-inline">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-light-rails-v10">
   <!-- Font preloads -->
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
@@ -131,6 +131,69 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <style>
+    @media (max-width: 768px) {
+      body[data-page-type="duplicate-home"][data-theme="light"] {
+        --home-mobile-light-rail: var(--site-divider-light);
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .insights-row--cards,
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos {
+        background-image: none !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .insights-card,
+      body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__content,
+      body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__footer {
+        border-left: 0 !important;
+        border-right: 0 !important;
+        background-image: none !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos {
+        border-top: 0 !important;
+        border-bottom: 1px solid var(--home-mobile-light-rail) !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__logo-cell {
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-bottom: 0 !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__logo-cell + .testimonials__logo-cell {
+        border-left: 0 !important;
+        border-right: 0 !important;
+        border-top: 1px solid var(--home-mobile-light-rail) !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos > .testimonials__logo-cell,
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos > .testimonials__logo-cell + .testimonials__logo-cell {
+        border-left: 0 !important;
+        border-right: 0 !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate__row--title {
+        border-bottom: 1px solid var(--home-mobile-light-rail) !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate__row--blank,
+      body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate__row--blank-bottom,
+      body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate .faq__item {
+        border-bottom: 0 !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate__row--blank::after,
+      body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate__row--blank-bottom::before,
+      body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate .faq__item::after {
+        background: var(--home-mobile-light-rail) !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .faq-duplicate .faq__item:last-child::after {
+        content: none !important;
+      }
+    }
+  </style>
 </head>
 <body data-page-type="archived-home">
   <!-- Header -->
