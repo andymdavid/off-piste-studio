@@ -6186,7 +6186,7 @@ body[data-page-type="pricing"] .pricing-investment > .container {
   content: none;
 }
 
-.pricing-investment__cards + .pricing-investment__blank-row::before {
+.pricing-investment__content > .pricing-investment__blank-row:first-child::before {
   content: none;
 }
 
@@ -6485,6 +6485,17 @@ body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::a
   left: 0;
   right: 0;
   bottom: 0;
+  height: 1px;
+  background: var(--site-divider);
+  pointer-events: none;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__grid > .faq-duplicate__row--blank:first-child::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   height: 1px;
   background: var(--site-divider);
   pointer-events: none;
