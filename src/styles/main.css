@@ -10362,6 +10362,8 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
 
   body[data-page-type="duplicate-home"] .about-grid__row--top {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    min-height: 100svh;
     background-image: none;
   }
 
@@ -10417,6 +10419,34 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
   body[data-page-type="duplicate-home"] .testimonials__logo-cell,
   body[data-page-type="duplicate-home"] .testimonial {
     padding: 0.95rem;
+  }
+
+  body[data-page-type="duplicate-home"] .client-bar {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+
+  body[data-page-type="duplicate-home"] .client-bar__text {
+    padding-left: 0;
+    padding-right: 1.5rem;
+  }
+
+  body[data-page-type="duplicate-home"] .client-bar__logo-set {
+    gap: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  body[data-page-type="duplicate-home"] .client-bar__logo {
+    height: 48px;
+  }
+
+  body[data-page-type="duplicate-home"] .testimonials__logo-cell {
+    min-height: 5.75rem;
+  }
+
+  body[data-page-type="duplicate-home"] .testimonials__logo {
+    max-height: 4.65rem;
+    max-width: 82%;
   }
 
   body[data-page-type="duplicate-home"] .testimonials__industries-cell--copy {
@@ -10534,7 +10564,7 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
   }
 
   body[data-page-type="duplicate-home"] .pathway {
-    min-height: 24rem;
+    min-height: auto;
     padding: 0.95rem;
     border-left: 0;
     border-top: 1px solid var(--site-divider);
