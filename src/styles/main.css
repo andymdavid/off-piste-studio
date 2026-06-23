@@ -11395,6 +11395,36 @@ body[data-page-type="pricing"][data-theme="light"] .duplicate-header.is-open .du
   color: #ffffff;
 }
 
+@media (max-width: 767px) {
+  body[data-theme="light"]:not([data-page-type="duplicate-home"]) .duplicate-header__brand,
+  body[data-theme="light"]:not([data-page-type="duplicate-home"]) .duplicate-header__brand-text,
+  body[data-theme="light"]:not([data-page-type="duplicate-home"]) .duplicate-header__menu-toggle,
+  body[data-theme="light"]:not([data-page-type="duplicate-home"]) .duplicate-theme-toggle {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  body[data-theme="light"]:not([data-page-type="duplicate-home"]) .duplicate-header__menu-toggle:hover,
+  body[data-theme="light"]:not([data-page-type="duplicate-home"]) .duplicate-theme-toggle:hover {
+    color: #ffffff !important;
+  }
+
+  .duplicate-header.is-open .duplicate-header__menu-link,
+  .duplicate-header.is-open .duplicate-header__menu-label,
+  .duplicate-header.is-open .duplicate-header__menu-link .duplicate-header__icon,
+  .duplicate-header[data-navigation-status="active"] .duplicate-header__menu-link,
+  .duplicate-header[data-navigation-status="active"] .duplicate-header__menu-label,
+  .duplicate-header[data-navigation-status="active"] .duplicate-header__menu-link .duplicate-header__icon {
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .duplicate-header.is-open .duplicate-header__menu-link:hover,
+  .duplicate-header.is-open .duplicate-header__menu-link:hover .duplicate-header__menu-label,
+  .duplicate-header[data-navigation-status="active"] .duplicate-header__menu-link:hover,
+  .duplicate-header[data-navigation-status="active"] .duplicate-header__menu-link:hover .duplicate-header__menu-label {
+    color: rgba(255, 255, 255, 0.62) !important;
+  }
+}
+
 body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-cursor {
   background: rgba(18, 18, 18, 0.88);
 }
@@ -11477,6 +11507,13 @@ body[data-page-type="tools"][data-theme="light"] .duplicate-header.is-open .dupl
 body[data-page-type="locations"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark {
   filter: none;
   opacity: 1;
+}
+
+@media (max-width: 767px) {
+  body[data-theme="light"]:not([data-page-type="duplicate-home"]) .duplicate-header__mark {
+    filter: none !important;
+    opacity: 1;
+  }
 }
 
 body[data-page-type="work"][data-theme="light"] .project-row__logo img {
