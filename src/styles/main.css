@@ -10546,6 +10546,21 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
     border-top: 1px solid var(--site-divider);
   }
 
+  body[data-page-type="duplicate-home"] .testimonials__row--quotes {
+    position: relative;
+  }
+
+  body[data-page-type="duplicate-home"] .testimonials__row--quotes::after {
+    content: "";
+    position: absolute;
+    left: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
+    right: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
+    bottom: 0;
+    height: 1px;
+    background: var(--site-divider);
+    pointer-events: none;
+  }
+
   body[data-page-type="duplicate-home"] .between-strip__grid {
     grid-template-columns: 1fr;
     background-image: none;
@@ -11566,6 +11581,7 @@ body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--st
 body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--strip::after,
 body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries-blank::before,
 body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--industries-blank::after,
+body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes::after,
 body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--quotes .testimonial__author::before,
 body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__blank-row::before,
 body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__blank-row::after,
