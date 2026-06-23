@@ -11838,6 +11838,23 @@ body[data-page-type="duplicate-home"][data-theme="light"] .case-studies .case-ca
   border-color: var(--site-divider-light) !important;
 }
 
+body[data-page-type="duplicate-home"] .insights-row--title {
+  align-items: center !important;
+  min-height: 5.75rem !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-top: 0 !important;
+}
+
+body[data-page-type="duplicate-home"] .insights-title-cell {
+  align-items: center !important;
+  padding: 0 !important;
+}
+
+body[data-page-type="duplicate-home"] .insights-row--title .segments__heading {
+  margin: 0 !important;
+}
+
 @media (max-width: 768px) {
   body[data-page-type="duplicate-home"] .about-grid__row--top,
   body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__row--top {
