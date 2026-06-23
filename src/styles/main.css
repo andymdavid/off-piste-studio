@@ -3484,6 +3484,10 @@ body[data-page-type="locations"][data-theme="light"] .locations-index__card:focu
     background-image: none;
   }
 
+  body[data-page-type="resources"] .insights-index__article-row > .insight-card + .insight-card {
+    border-top: 1px solid var(--resources-divider);
+  }
+
   body[data-page-type="tools"] .tools-index__card-row {
     grid-template-columns: 1fr;
     background-image: none;
