@@ -11599,6 +11599,12 @@ body[data-page-type="duplicate-home"][data-theme="light"] .case-studies .case-ca
     text-align: left !important;
   }
 
+  body[data-page-type="duplicate-home"] .case-card__image,
+  body[data-page-type="duplicate-home"] .case-card--feature .case-card__image,
+  body[data-page-type="duplicate-home"] .case-card--wide .case-card__image {
+    aspect-ratio: 1 / 1 !important;
+  }
+
   body[data-page-type="duplicate-home"] .case-studies__row--top,
   body[data-page-type="duplicate-home"] .case-studies__row--bottom,
   body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__row--top,
