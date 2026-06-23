@@ -110,7 +110,7 @@ const headerHtml = `
     <div class="duplicate-header__layout">
       <nav class="duplicate-header__nav" aria-label="Primary">
         <div class="duplicate-header__row">
-          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/public/images/Icon.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/Icon.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
           <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
           <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
         </div>
@@ -143,14 +143,14 @@ const fontsHtml = `
 const projectSlideshowHtml = `
     <div class="project-modal project-modal--page">
       <div class="project-modal__slideshow">
-        <div class="project-modal__slide is-active"><img src="/public/images/cases/OtherStuff.webp" alt="Other Stuff website project"></div>
-        <div class="project-modal__slide"><img src="/public/images/cases/Decarbonology.webp" alt="Decarbonology website project" loading="lazy"></div>
-        <div class="project-modal__slide"><img src="/public/images/cases/Flow-Dynamics.webp" alt="Flow Dynamics website project" loading="lazy"></div>
-        <div class="project-modal__slide"><img src="/public/images/cases/FlowDynamics.webp" alt="Flow Dynamics brand project" loading="lazy"></div>
-        <div class="project-modal__slide"><img src="/public/images/cases/MCIA.webp" alt="MCIA website project" loading="lazy"></div>
-        <div class="project-modal__slide"><img src="/public/images/cases/levelup.webp" alt="Level Up website project" loading="lazy"></div>
-        <div class="project-modal__slide"><img src="/public/images/cases/adammonk.webp" alt="Adam Monk website project" loading="lazy"></div>
-        <div class="project-modal__slide"><img src="/public/images/cases/crete.webp" alt="Crete website project" loading="lazy"></div>
+        <div class="project-modal__slide is-active"><img src="/images/cases/OtherStuff.webp" alt="Other Stuff website project"></div>
+        <div class="project-modal__slide"><img src="/images/cases/Decarbonology.webp" alt="Decarbonology website project" loading="lazy"></div>
+        <div class="project-modal__slide"><img src="/images/cases/Flow-Dynamics.webp" alt="Flow Dynamics website project" loading="lazy"></div>
+        <div class="project-modal__slide"><img src="/images/cases/FlowDynamics.webp" alt="Flow Dynamics brand project" loading="lazy"></div>
+        <div class="project-modal__slide"><img src="/images/cases/MCIA.webp" alt="MCIA website project" loading="lazy"></div>
+        <div class="project-modal__slide"><img src="/images/cases/levelup.webp" alt="Level Up website project" loading="lazy"></div>
+        <div class="project-modal__slide"><img src="/images/cases/adammonk.webp" alt="Adam Monk website project" loading="lazy"></div>
+        <div class="project-modal__slide"><img src="/images/cases/crete.webp" alt="Crete website project" loading="lazy"></div>
       </div>
     </div>`;
 
@@ -160,24 +160,24 @@ const clientBarHtml = `
         <span class="client-bar__text">Trusted by 50+ Clients</span>
         <div class="client-bar__track">
           <div class="client-bar__logos">
-            <img src="/public/images/logos/PLI Logo Light.webp" alt="Place Intelligence" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/SB Logo Light.webp" alt="Superbeing" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/PLE Logo Light.webp" alt="Pleiades" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/FD Logo Light.webp" alt="Future Directors" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/FDY Logo Light.webp" alt="Flow Dynamics" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/DE Logo Light.webp" alt="Decarbonology" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/BU Logo Light.webp" alt="Buildsource" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/CC Logo Light.webp" alt="Cell Cyber" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/LI Logo Light.webp" alt="Linear" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/PLI Logo Light.webp" alt="Place Intelligence" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/SB Logo Light.webp" alt="Superbeing" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/PLE Logo Light.webp" alt="Pleiades" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/FD Logo Light.webp" alt="Future Directors" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/FDY Logo Light.webp" alt="Flow Dynamics" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/DE Logo Light.webp" alt="Decarbonology" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/BU Logo Light.webp" alt="Buildsource" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/CC Logo Light.webp" alt="Cell Cyber" class="client-bar__logo" loading="lazy">
-            <img src="/public/images/logos/LI Logo Light.webp" alt="Linear" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/PLI Logo Light.webp" alt="Place Intelligence" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/SB Logo Light.webp" alt="Superbeing" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/PLE Logo Light.webp" alt="Pleiades" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/FD Logo Light.webp" alt="Future Directors" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/FDY Logo Light.webp" alt="Flow Dynamics" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/DE Logo Light.webp" alt="Decarbonology" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/BU Logo Light.webp" alt="Buildsource" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/CC Logo Light.webp" alt="Cell Cyber" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/LI Logo Light.webp" alt="Linear" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/PLI Logo Light.webp" alt="Place Intelligence" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/SB Logo Light.webp" alt="Superbeing" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/PLE Logo Light.webp" alt="Pleiades" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/FD Logo Light.webp" alt="Future Directors" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/FDY Logo Light.webp" alt="Flow Dynamics" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/DE Logo Light.webp" alt="Decarbonology" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/BU Logo Light.webp" alt="Buildsource" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/CC Logo Light.webp" alt="Cell Cyber" class="client-bar__logo" loading="lazy">
+            <img src="/images/logos/LI Logo Light.webp" alt="Linear" class="client-bar__logo" loading="lazy">
           </div>
         </div>
       </div>
@@ -396,7 +396,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
   <main>
     <section class="work-hero">
       <div class="container">
-        <img src="/public/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
+        <img src="/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
         <a href="/contact" class="page-hero__button">Let's Chat</a>
@@ -550,7 +550,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
   <main>
     <section class="work-hero">
       <div class="container">
-        <img src="/public/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
+        <img src="/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
         <a href="/contact" class="page-hero__button">Let's Chat</a>
@@ -706,7 +706,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
   <main>
     <section class="work-hero">
       <div class="container">
-        <img src="/public/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
+        <img src="/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
         <a href="/contact" class="page-hero__button">Let's Chat</a>

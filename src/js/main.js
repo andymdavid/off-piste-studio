@@ -1004,15 +1004,15 @@ function initAboutLogoSwap() {
   if (!logos.length) return;
 
   const logoPool = [
-    { src: '/public/images/logos/PLI Logo Light.webp', alt: 'Place Intelligence' },
-    { src: '/public/images/logos/SB Logo Light.webp', alt: 'Superbeing' },
-    { src: '/public/images/logos/PLE Logo Light.webp', alt: 'Pleiades' },
-    { src: '/public/images/logos/FD Logo Light.webp', alt: 'Future Directors' },
-    { src: '/public/images/logos/FDY Logo Light.webp', alt: 'Flow Dynamics' },
-    { src: '/public/images/logos/DE Logo Light.webp', alt: 'Decarbonology' },
-    { src: '/public/images/logos/BU Logo Light.webp', alt: 'Buildsource' },
-    { src: '/public/images/logos/CC Logo Light.webp', alt: 'Cell Cyber' },
-    { src: '/public/images/logos/LI Logo Light.webp', alt: 'Linear' }
+    { src: '/images/logos/PLI Logo Light.webp', alt: 'Place Intelligence' },
+    { src: '/images/logos/SB Logo Light.webp', alt: 'Superbeing' },
+    { src: '/images/logos/PLE Logo Light.webp', alt: 'Pleiades' },
+    { src: '/images/logos/FD Logo Light.webp', alt: 'Future Directors' },
+    { src: '/images/logos/FDY Logo Light.webp', alt: 'Flow Dynamics' },
+    { src: '/images/logos/DE Logo Light.webp', alt: 'Decarbonology' },
+    { src: '/images/logos/BU Logo Light.webp', alt: 'Buildsource' },
+    { src: '/images/logos/CC Logo Light.webp', alt: 'Cell Cyber' },
+    { src: '/images/logos/LI Logo Light.webp', alt: 'Linear' }
   ];
 
   const pickNextIndex = () => {

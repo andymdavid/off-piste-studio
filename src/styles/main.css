@@ -767,7 +767,7 @@ body.lead-modal-open {
   padding-top: 80px;
   padding-bottom: var(--space-3xl);
   position: relative;
-  background-image: url('/public/images/Hero-Background.png');
+  background-image: url('/images/Hero-Background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
