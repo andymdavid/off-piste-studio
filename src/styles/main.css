@@ -10574,10 +10574,14 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
   }
 
   body[data-page-type="duplicate-home"] .pathway {
-    min-height: auto;
+    min-height: 28rem;
     padding: 0.95rem;
     border-left: 0;
     border-top: 1px solid var(--site-divider);
+  }
+
+  body[data-page-type="duplicate-home"] .pathway:first-child {
+    border-top: 0;
   }
 
   body[data-page-type="duplicate-home"] .pathway__title {
