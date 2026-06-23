@@ -10338,6 +10338,7 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
 
   body[data-page-type="duplicate-home"] .about-grid__row--top {
     grid-template-columns: 1fr;
+    background-image: none;
   }
 
   body[data-page-type="duplicate-home"] .testimonials__grid {
@@ -10500,7 +10501,7 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
 
   body[data-page-type="duplicate-home"] .about-grid__cell + .about-grid__cell {
     border-left: 0;
-    border-top: 1px solid var(--site-divider);
+    border-top: 0;
   }
 
   body[data-page-type="duplicate-home"] .about-grid__service-row {
