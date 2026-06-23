@@ -10404,6 +10404,11 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
     border-top: 1px solid var(--site-divider);
   }
 
+  body[data-page-type="duplicate-home"] .testimonials__industries-cell--title,
+  body[data-page-type="duplicate-home"] .testimonials__industries-cell--copy {
+    min-height: 50svh;
+  }
+
   body[data-page-type="duplicate-home"] .testimonials__industries-cell--options {
     padding: 0;
     border-top: 0;
