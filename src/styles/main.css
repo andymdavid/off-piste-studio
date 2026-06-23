@@ -3493,6 +3493,10 @@ body[data-page-type="locations"][data-theme="light"] .locations-index__card:focu
     background-image: none;
   }
 
+  body[data-page-type="tools"] .tools-index__card-row > .tools-index__card + .tools-index__card {
+    border-top: 1px solid var(--tools-divider);
+  }
+
   .insight-card__link {
     aspect-ratio: auto;
     min-height: 22rem;

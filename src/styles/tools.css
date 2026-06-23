@@ -239,6 +239,7 @@ body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__list {
   display: block;
   grid-template-columns: minmax(0, 1fr);
   width: 100%;
+  border-top: 0;
   border-left: 0;
 }
 
@@ -247,6 +248,11 @@ body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__layout,
 body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__list,
 body[data-page-type="tool"] .faq-duplicate--tool .page-faq .faq__item {
   border-right: 0;
+}
+
+body[data-page-type="tool"] .faq-duplicate--tool .faq-duplicate__title-cell {
+  min-height: var(--faq-row-height, 4.15rem);
+  padding: 0 1rem;
 }
 
 body[data-page-type="tool"][data-theme="light"] .footer__statement,
@@ -2062,9 +2068,16 @@ body[data-page-type="tool"][data-theme="light"] .tool-related__link:hover .tool-
     border-top: 1px solid var(--tool-page-divider);
   }
 
+  .tool-content__related h2 {
+    display: flex;
+    min-height: 5.75rem;
+    align-items: center;
+    padding: 0 1rem;
+  }
+
   .tool-related {
     grid-template-columns: 1fr;
-    border-top: 0;
+    border-top: 1px solid var(--tool-page-divider);
   }
 
   .tool-related__link:nth-child(odd) {
