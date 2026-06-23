@@ -1027,6 +1027,7 @@ function initButtonScramble() {
     '.page-cta__button',
     '.pricing-tier__cta',
     '.pricing-estimator__result-cta',
+    '.pricing-investment__button',
     '.about-grid__button',
     '.testimonials__button',
     '.case-studies__cta',

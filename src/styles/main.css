@@ -5808,7 +5808,8 @@ main,
 .page-trust,
 .pricing-tiers,
 .pricing-hosting,
-.pricing-estimator {
+.pricing-estimator,
+.pricing-investment {
   background: #121212;
 }
 
@@ -5827,6 +5828,7 @@ main,
 body[data-page-type="about"] .about-hero__button,
 body[data-page-type="about"] .about__button,
 .about-grid__button,
+.pricing-investment__button,
 .testimonials__button,
 .case-studies__cta,
 .closing-cta__button {
@@ -5868,6 +5870,7 @@ body[data-page-type="about"] .about__button,
 body[data-page-type="about"] .about-hero__button:hover,
 body[data-page-type="about"] .about__button:hover,
 .about-grid__button:hover,
+.pricing-investment__button:hover,
 .testimonials__button:hover,
 .case-studies__cta:hover,
 .closing-cta__button:hover {
@@ -5892,6 +5895,7 @@ body[data-page-type="about"] .about__button:hover,
 body[data-page-type="about"] .about-hero__button::after,
 body[data-page-type="about"] .about__button::after,
 .about-grid__button::after,
+.pricing-investment__button::after,
 .testimonials__button::after,
 .case-studies__cta::after,
 .closing-cta__button::after {
@@ -5921,6 +5925,7 @@ body[data-page-type="about"] .about__button::after,
 body[data-page-type="about"] .about-hero__button:hover::after,
 body[data-page-type="about"] .about__button:hover::after,
 .about-grid__button:hover::after,
+.pricing-investment__button:hover::after,
 .testimonials__button:hover::after,
 .case-studies__cta:hover::after,
 .closing-cta__button:hover::after {
@@ -6112,6 +6117,325 @@ body:not([data-page-type]) .page-body > .container {
   letter-spacing: -0.03em;
   line-height: 1.1;
   color: rgba(255, 255, 255, 0.88);
+}
+
+body[data-page-type="pricing"] .work-hero > .container {
+  width: 100%;
+  max-width: none;
+  border-left: 0;
+  border-right: 0;
+  padding-left: clamp(0.9rem, 1.8vw, 1.4rem);
+  padding-right: clamp(0.9rem, 1.8vw, 1.4rem);
+  padding-bottom: calc(var(--space-2xl) + 2.15rem);
+}
+
+body[data-page-type="pricing"] .work-hero::before,
+body[data-page-type="pricing"] .work-hero::after {
+  display: none;
+}
+
+body[data-page-type="pricing"] .work-hero__title {
+  max-width: 47rem;
+}
+
+body[data-page-type="pricing"] .work-hero__text {
+  max-width: 39rem;
+}
+
+body[data-page-type="pricing"] .pricing-investment > .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.pricing-investment__content {
+  display: grid;
+  gap: 0;
+  width: 100%;
+  align-items: stretch;
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.pricing-investment__blank-row {
+  min-height: 5.75rem;
+  border-top: 1px solid var(--site-divider-strong);
+  border-bottom: 1px solid var(--site-divider-strong);
+}
+
+.pricing-investment__blank-row + .pricing-investment__blank-row {
+  border-top: 0;
+}
+
+.pricing-investment__content > .pricing-investment__blank-row:last-child {
+  border-bottom: 0;
+}
+
+.pricing-investment__blank-row--label {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.pricing-investment__label-heading {
+  max-width: 43.75rem;
+  margin: 0;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  color: rgba(255, 255, 255, 0.92);
+  text-wrap: balance;
+}
+
+.pricing-investment__intro {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 50vh;
+  background-image:
+    linear-gradient(
+      to right,
+      transparent calc(50% - 0.5px),
+      var(--site-divider-strong) calc(50% - 0.5px),
+      var(--site-divider-strong) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    );
+  background-repeat: no-repeat;
+}
+
+.pricing-investment__intro-cell {
+  min-width: 0;
+  padding: 1.35rem 1rem 1.5rem;
+}
+
+.pricing-investment__intro-cell--title,
+.pricing-investment__intro-cell--copy {
+  display: flex;
+  align-items: flex-end;
+}
+
+.pricing-investment__headline {
+  width: min(50%, 21.875rem);
+  max-width: 100%;
+  margin: 0 0 3.25rem;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.04;
+  color: rgba(255, 255, 255, 0.92);
+  text-wrap: balance;
+}
+
+.pricing-investment__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 43.75rem;
+  margin: 0 0 3.25rem;
+}
+
+.pricing-investment__subtext {
+  max-width: 100%;
+  margin: 0;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.pricing-investment__cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--site-divider-strong);
+  background-image:
+    linear-gradient(
+      to right,
+      transparent calc(25% - 0.5px),
+      var(--site-divider-strong) calc(25% - 0.5px),
+      var(--site-divider-strong) calc(25% + 0.5px),
+      transparent calc(25% + 0.5px)
+    ),
+    linear-gradient(
+      to right,
+      transparent calc(50% - 0.5px),
+      var(--site-divider-strong) calc(50% - 0.5px),
+      var(--site-divider-strong) calc(50% + 0.5px),
+      transparent calc(50% + 0.5px)
+    ),
+    linear-gradient(
+      to right,
+      transparent calc(75% - 0.5px),
+      var(--site-divider-strong) calc(75% - 0.5px),
+      var(--site-divider-strong) calc(75% + 0.5px),
+      transparent calc(75% + 0.5px)
+    );
+  background-repeat: no-repeat;
+}
+
+.pricing-investment__card {
+  display: flex;
+  min-width: 0;
+  min-height: clamp(18rem, 25vw, 23rem);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  background: transparent;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.pricing-investment__card-index {
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 180ms ease;
+}
+
+.pricing-investment__card-body {
+  transform: translateY(0);
+  transition: transform 220ms ease;
+}
+
+.pricing-investment__card-title {
+  max-width: 10ch;
+  margin: 0 0 0.85rem;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(1.36rem, 2.1vw, 2.15rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+  color: rgba(255, 255, 255, 0.92);
+  text-wrap: balance;
+  transition: color 180ms ease;
+}
+
+.pricing-investment__card-text {
+  max-width: 18rem;
+  margin: 0;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: 1.32;
+  color: rgba(255, 255, 255, 0.56);
+  transition: color 180ms ease;
+}
+
+.pricing-investment__card:hover,
+.pricing-investment__card:focus-within {
+  background: #fdfdfc;
+}
+
+.pricing-investment__card:hover .pricing-investment__card-index,
+.pricing-investment__card:focus-within .pricing-investment__card-index {
+  color: rgba(18, 18, 18, 0.46);
+}
+
+.pricing-investment__card:hover .pricing-investment__card-title,
+.pricing-investment__card:focus-within .pricing-investment__card-title {
+  color: rgba(18, 18, 18, 0.92);
+}
+
+.pricing-investment__card:hover .pricing-investment__card-text,
+.pricing-investment__card:focus-within .pricing-investment__card-text {
+  color: rgba(18, 18, 18, 0.62);
+}
+
+.pricing-investment__card:hover .pricing-investment__card-body,
+.pricing-investment__card:focus-within .pricing-investment__card-body {
+  transform: translateY(-0.35rem);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__label-heading,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__label-heading,
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__headline,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__headline,
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card-title,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card-title {
+  color: rgba(18, 18, 18, 0.92);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__subtext,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__subtext,
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card-text,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card-text {
+  color: rgba(18, 18, 18, 0.62);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card-index,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card-index {
+  color: rgba(18, 18, 18, 0.46);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card:hover,
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card:focus-within,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card:hover,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card:focus-within {
+  background: #121212;
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card:hover .pricing-investment__card-title,
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card:focus-within .pricing-investment__card-title,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card:hover .pricing-investment__card-title,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card:focus-within .pricing-investment__card-title {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card:hover .pricing-investment__card-text,
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card:focus-within .pricing-investment__card-text,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card:hover .pricing-investment__card-text,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card:focus-within .pricing-investment__card-text {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card:hover .pricing-investment__card-index,
+body[data-page-type="pricing"][data-theme="light"] .pricing-investment__card:focus-within .pricing-investment__card-index,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card:hover .pricing-investment__card-index,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__card:focus-within .pricing-investment__card-index {
+  color: rgba(255, 255, 255, 0.46);
+}
+
+@media (max-width: 900px) {
+  .pricing-investment__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background-image:
+      linear-gradient(
+        to right,
+        transparent calc(50% - 0.5px),
+        var(--site-divider-strong) calc(50% - 0.5px),
+        var(--site-divider-strong) calc(50% + 0.5px),
+        transparent calc(50% + 0.5px)
+      );
+  }
+
+  .pricing-investment__card:nth-child(n + 3) {
+    border-top: 1px solid var(--site-divider-strong);
+  }
+}
+
+@media (max-width: 680px) {
+  .pricing-investment__intro,
+  .pricing-investment__cards {
+    grid-template-columns: 1fr;
+    background-image: none;
+  }
+
+  .pricing-investment__intro-cell + .pricing-investment__intro-cell,
+  .pricing-investment__card + .pricing-investment__card {
+    border-top: 1px solid var(--site-divider-strong);
+  }
+
+  .pricing-investment__headline,
+  .pricing-investment__copy {
+    width: 100%;
+    margin-bottom: 1.75rem;
+  }
 }
 
 .site-rail,
