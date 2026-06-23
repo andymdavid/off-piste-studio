@@ -6479,17 +6479,6 @@ body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::b
   top: 0;
 }
 
-body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: var(--site-divider);
-  pointer-events: none;
-}
-
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--title {
   height: var(--faq-row-height);
   border-bottom: 1px solid var(--site-divider);
