@@ -6936,6 +6936,8 @@ body[data-duplicate-nav-open="true"] .duplicate-nav-overlay {
   gap: 0.25rem;
   color: #ffffff;
   text-decoration: none;
+  transform: scale(1.12);
+  transform-origin: left center;
 }
 
 .duplicate-header__mark {
