@@ -10640,6 +10640,15 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
     border-top: 1px solid var(--site-divider);
   }
 
+  body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial {
+    min-height: 34rem;
+    padding: 1.4rem 0.95rem 0.95rem;
+  }
+
+  body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__body {
+    flex: 1 1 auto;
+  }
+
   body[data-page-type="duplicate-home"] .testimonials__row--quotes {
     position: relative;
   }
