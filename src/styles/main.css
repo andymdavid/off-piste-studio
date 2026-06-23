@@ -6401,6 +6401,245 @@ html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__car
   color: rgba(255, 255, 255, 0.46);
 }
 
+body[data-page-type="pricing"] .pricing-faq {
+  --faq-row-height: 4.15rem;
+  background: #121212;
+  border-bottom: 1px solid var(--site-divider-strong);
+}
+
+body[data-page-type="pricing"] .pricing-faq > .container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__grid {
+  display: grid;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row {
+  min-width: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank,
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom,
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--title {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank,
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom {
+  position: relative;
+  height: var(--faq-row-height);
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank::after,
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--site-divider-strong);
+  pointer-events: none;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank::after {
+  bottom: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::before {
+  top: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--title {
+  height: var(--faq-row-height);
+  border-bottom: 1px solid var(--site-divider-strong);
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__title-cell {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  padding: 0.95rem 1rem;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__title-cell--left {
+  justify-content: flex-start;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__title-cell--right {
+  justify-content: flex-end;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--list {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__list-wrap {
+  min-width: 0;
+  padding: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq.section {
+  background: transparent;
+  padding: 0;
+  border: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq.section > .container {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__layout {
+  display: block;
+  margin: 0;
+  border: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__layout > * {
+  padding: 0;
+  border-left: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__intro {
+  display: none;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__list {
+  margin: 0;
+  padding: 0;
+  border-top: 0;
+  border-left: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__item {
+  position: relative;
+  border-bottom: 0;
+  margin: 0;
+  transition:
+    background var(--transition-fast),
+    color var(--transition-fast);
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__item:not([open]) {
+  height: var(--faq-row-height);
+  overflow: hidden;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--site-divider-strong);
+  pointer-events: none;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__item:last-child::after {
+  content: none;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__question {
+  display: flex;
+  align-items: center;
+  height: var(--faq-row-height);
+  padding: 1rem 4rem 1rem 1rem;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color var(--transition-fast);
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__question::after {
+  right: 1rem;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.86);
+  transition: color var(--transition-fast);
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__answer {
+  max-width: 54rem;
+  padding: 0 4rem 1.35rem 1rem;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.96rem;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  color: rgba(255, 255, 255, 0.58);
+  transition: color var(--transition-fast);
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__item[open],
+body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating {
+  background: #fdfdfc;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__item[open] .faq__question,
+body[data-page-type="pricing"] .pricing-faq .faq__item[open] .faq__question::after,
+body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating .faq__question,
+body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating .faq__question::after {
+  color: rgba(18, 18, 18, 0.92);
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq__item[open] .faq__answer,
+body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating .faq__answer {
+  color: rgba(18, 18, 18, 0.62);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq {
+  background: #fdfdfc;
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__question,
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__question::after,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__question,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__question::after {
+  color: rgba(18, 18, 18, 0.9);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__answer,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__answer {
+  color: rgba(18, 18, 18, 0.62);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item[open],
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item.is-click-animating,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item[open],
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating {
+  background: #121212;
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item[open] .faq__question,
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item[open] .faq__question::after,
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item.is-click-animating .faq__question,
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item.is-click-animating .faq__question::after,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item[open] .faq__question,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item[open] .faq__question::after,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating .faq__question,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating .faq__question::after {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item[open] .faq__answer,
+body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item.is-click-animating .faq__answer,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item[open] .faq__answer,
+html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating .faq__answer {
+  color: rgba(255, 255, 255, 0.62);
+}
+
 @media (max-width: 900px) {
   .pricing-investment__cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
