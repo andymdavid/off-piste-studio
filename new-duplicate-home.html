@@ -20,7 +20,7 @@
   <meta name="twitter:title" content="New Homepage Sandbox | Off Piste Studio">
   <meta name="twitter:description" content="Alternate homepage sandbox for Off Piste Studio redesign comparison.">
   <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-intro">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-inline">
   <link rel="preload" href="/public/fonts/NeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/NeueMontreal-Medium.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
@@ -3240,6 +3240,13 @@
         background-image: none;
       }
 
+      body[data-page-type="duplicate-home"] .testimonials__row--intro {
+        grid-template-rows: repeat(2, minmax(0, 1fr));
+        min-height: 100vh;
+        min-height: 100svh;
+        background-image: none !important;
+      }
+
       body[data-page-type="duplicate-home"] .insights-row--title,
       body[data-page-type="duplicate-home"] .insights-row--cards {
         grid-template-columns: 1fr;
@@ -3273,8 +3280,23 @@
       }
 
       body[data-page-type="duplicate-home"] .testimonials__heading {
-        margin-bottom: 1.5rem;
+        margin-bottom: 0;
         max-width: none;
+      }
+
+      body[data-page-type="duplicate-home"] .testimonials__intro-cell + .testimonials__intro-cell {
+        border-left: 0;
+        border-top: 0;
+      }
+
+      body[data-page-type="duplicate-home"] .testimonials__intro-copy {
+        justify-content: flex-start;
+        gap: 0.85rem;
+      }
+
+      body[data-page-type="duplicate-home"] .testimonials__button {
+        display: inline-flex;
+        margin-top: 0.15rem;
       }
 
       body[data-page-type="duplicate-home"] .closing-cta__row {

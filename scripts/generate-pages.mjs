@@ -388,7 +388,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-intro">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-inline">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -542,7 +542,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-intro">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-inline">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -698,7 +698,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-intro">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-home-mobile-testimonials-inline">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">
