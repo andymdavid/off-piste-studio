@@ -445,7 +445,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'industry' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260616-insights-row-spacers"></script>
+  <script type="module" src="/src/js/main.js?v=20260623-footer-scramble"></script>
 </body>
 </html>`;
 }
@@ -599,7 +599,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'service' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260616-insights-row-spacers"></script>
+  <script type="module" src="/src/js/main.js?v=20260623-footer-scramble"></script>
 </body>
 </html>`;
 }
@@ -736,7 +736,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'location' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260616-insights-row-spacers"></script>
+  <script type="module" src="/src/js/main.js?v=20260623-footer-scramble"></script>
 </body>
 </html>`;
 }

@@ -1138,6 +1138,63 @@ function initButtonScramble() {
   });
 }
 
+function initFooterLinkScramble() {
+  if (document.body.dataset.pageType === 'duplicate-home') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const targets = document.querySelectorAll('.footer__nav-link, .footer__contact-link');
+  if (!targets.length) return;
+
+  const symbols = '{}[]<>/\\|01#$%&*=+_~';
+  const duration = 280;
+  const interval = 35;
+
+  targets.forEach(target => {
+    if (target.dataset.scrambleBound === 'true') return;
+    if (target.children.length > 0) return;
+
+    target.dataset.scrambleBound = 'true';
+
+    const originalText = target.textContent || '';
+    let timer = 0;
+    let elapsed = 0;
+
+    const restore = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+      target.textContent = originalText;
+      target.style.width = '';
+      target.style.whiteSpace = '';
+    };
+
+    const scramble = () => {
+      window.clearInterval(timer);
+      timer = 0;
+      elapsed = 0;
+
+      const width = target.getBoundingClientRect().width;
+      target.style.width = `${width}px`;
+      target.style.whiteSpace = 'nowrap';
+
+      timer = window.setInterval(() => {
+        elapsed += interval;
+        target.textContent = Array.from(originalText)
+          .map(character => {
+            if (character === ' ') return ' ';
+            return symbols[Math.floor(Math.random() * symbols.length)];
+          })
+          .join('');
+
+        if (elapsed >= duration) restore();
+      }, interval);
+    };
+
+    target.addEventListener('mouseenter', scramble);
+    target.addEventListener('mouseleave', restore);
+  });
+}
+
 function initCustomCursor() {
   const pointerQuery = window.matchMedia('(hover: hover) and (pointer: fine)');
   if (!pointerQuery.matches) return;
@@ -1564,6 +1621,7 @@ function initSite() {
   initToolRelatedCardScramble();
   initAboutLogoSwap();
   initButtonScramble();
+  initFooterLinkScramble();
   initRelatedPosts();
   initLeadModal();
   initEstimator();
