@@ -10384,8 +10384,27 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
     background-image: none;
   }
 
+  body[data-page-type="duplicate-home"] .insights-row--title .segments__heading {
+    margin: 0;
+  }
+
   body[data-page-type="duplicate-home"] .insights-card {
     padding: 0.95rem;
+  }
+
+  body[data-page-type="duplicate-home"] .insights-card__footer {
+    padding-bottom: 0.85rem;
+  }
+
+  body[data-page-type="duplicate-home"] .insights-card__footer::after {
+    content: "";
+    position: absolute;
+    left: -0.95rem;
+    right: -0.95rem;
+    bottom: 0;
+    height: 1px;
+    background: var(--site-divider);
+    pointer-events: none;
   }
 
   body[data-page-type="duplicate-home"] .insights-card__title,
@@ -11586,6 +11605,7 @@ body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--qu
 body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__blank-row::before,
 body[data-page-type="duplicate-home"][data-theme="light"] .about-grid__blank-row::after,
 body[data-page-type="duplicate-home"][data-theme="light"] .case-studies__intro::after,
+body[data-page-type="duplicate-home"][data-theme="light"] .insights-card__footer::after,
 body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list::before,
 body[data-page-type="duplicate-home"][data-theme="light"] .pathways__list::after {
   background: var(--site-divider-light) !important;
