@@ -10322,6 +10322,11 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
     padding-bottom: 3.2rem;
   }
 
+  body[data-page-type="duplicate-home"] .testimonials {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
   body[data-page-type="duplicate-home"] .case-studies {
     padding-top: 3.2rem;
     padding-bottom: 0;
@@ -10654,7 +10659,7 @@ body[data-page-type="duplicate-home"] .testimonials__row--quotes .testimonial__r
   }
 
   body[data-page-type="duplicate-home"] .testimonials__row--quotes::after {
-    content: "";
+    content: none;
     position: absolute;
     left: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
     right: calc(clamp(0.9rem, 1.8vw, 1.4rem) * -1 - 1px);
