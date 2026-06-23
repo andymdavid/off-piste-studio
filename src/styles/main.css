@@ -4999,6 +4999,53 @@ body[data-page-type="work"][data-theme="light"] .project-row:focus-within .proje
   }
 }
 
+@media (max-width: 768px) {
+  body[data-page-type="work"] .work-hero > .container {
+    border-left: 0;
+    border-right: 0;
+  }
+
+  body[data-page-type="work"] .projects__filter-row {
+    justify-content: flex-start;
+    padding: 0.95rem 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  body[data-page-type="work"] .projects__filter-row .work-hero__filters {
+    width: 100%;
+    min-width: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+  }
+
+  body[data-page-type="work"] .projects__filter-row .work-hero__filter-label {
+    flex: 0 0 auto;
+  }
+
+  body[data-page-type="work"] .projects__filter-row .work-hero__filter-tags {
+    min-width: 0;
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  body[data-page-type="work"] .projects__filter-row .work-hero__filter-tags::-webkit-scrollbar {
+    display: none;
+  }
+
+  body[data-page-type="work"] .projects__filter-row .work-hero__filter {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+
 /* ==========================================================================
    Contact Page
    ========================================================================== */
