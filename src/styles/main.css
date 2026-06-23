@@ -6186,6 +6186,10 @@ body[data-page-type="pricing"] .pricing-investment > .container {
   content: none;
 }
 
+.pricing-investment__cards + .pricing-investment__blank-row::before {
+  content: none;
+}
+
 .pricing-investment__content > .pricing-investment__blank-row:last-child::after {
   content: none;
 }
@@ -6323,7 +6327,7 @@ body[data-page-type="pricing"] .pricing-investment > .container {
 }
 
 .pricing-investment__card-title {
-  max-width: 10ch;
+  max-width: 100%;
   margin: 0 0 0.85rem;
   font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(1.36rem, 2.1vw, 2.15rem);
@@ -6424,7 +6428,6 @@ html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__car
 body[data-page-type="pricing"] .pricing-faq {
   --faq-row-height: 4.15rem;
   background: #121212;
-  border-bottom: 1px solid var(--site-divider);
 }
 
 body[data-page-type="pricing"] .pricing-faq > .container {
@@ -6474,6 +6477,17 @@ body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank::after {
 
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::before {
   top: 0;
+}
+
+body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--site-divider);
+  pointer-events: none;
 }
 
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--title {
