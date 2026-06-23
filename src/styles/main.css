@@ -6404,16 +6404,20 @@ html[data-theme="light"] body[data-page-type="pricing"] .pricing-investment__car
 body[data-page-type="pricing"] .pricing-faq {
   --faq-row-height: 4.15rem;
   background: #121212;
-  border-bottom: 1px solid var(--site-divider-strong);
+  border-bottom: 1px solid var(--site-divider);
 }
 
 body[data-page-type="pricing"] .pricing-faq > .container {
   padding-top: 0;
   padding-bottom: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__grid {
   display: grid;
+  border-left: 1px solid var(--site-divider);
+  border-right: 1px solid var(--site-divider);
 }
 
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row {
@@ -6440,7 +6444,7 @@ body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::b
   left: 0;
   right: 0;
   height: 1px;
-  background: var(--site-divider-strong);
+  background: var(--site-divider);
   pointer-events: none;
 }
 
@@ -6454,7 +6458,7 @@ body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--blank-bottom::b
 
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--title {
   height: var(--faq-row-height);
-  border-bottom: 1px solid var(--site-divider-strong);
+  border-bottom: 1px solid var(--site-divider);
 }
 
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__title-cell {
@@ -6539,7 +6543,7 @@ body[data-page-type="pricing"] .pricing-faq .faq__item::after {
   right: 0;
   bottom: 0;
   height: 1px;
-  background: var(--site-divider-strong);
+  background: var(--site-divider);
   pointer-events: none;
 }
 
