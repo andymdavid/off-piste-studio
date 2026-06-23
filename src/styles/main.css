@@ -4444,6 +4444,12 @@ body[data-page-type="about"] .services-alt__item:last-child {
     padding-bottom: var(--space-2xl);
   }
 
+  body[data-page-type="about"] .about__content {
+    grid-template-columns: minmax(0, 1fr);
+    column-gap: 0;
+    row-gap: 0;
+  }
+
   body[data-page-type="about"] .about__intro,
   body[data-page-type="about"] .about__cards,
   body[data-page-type="about"] .about__logo-row {
@@ -4455,15 +4461,57 @@ body[data-page-type="about"] .services-alt__item:last-child {
     background-image: none;
   }
 
+  body[data-page-type="about"] .about__content > .about__intro {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: visible;
+  }
+
+  body[data-page-type="about"] .about__content > .about__intro .about__intro-cell {
+    min-height: 0;
+  }
+
+  body[data-page-type="about"] .about__content > .about__intro .about__intro-cell--title {
+    flex: 1 1 auto;
+    align-items: flex-end;
+  }
+
+  body[data-page-type="about"] .about__content > .about__intro .about__intro-cell--copy {
+    flex: 0 0 auto;
+    padding-top: 0;
+  }
+
+  body[data-page-type="about"] .about__content > .about__intro .about__headline {
+    margin-bottom: 0.9rem;
+  }
+
+  body[data-page-type="about"] .about__content > .about__intro .about__copy {
+    gap: 0.9rem;
+    margin-bottom: 1.4rem;
+  }
+
   body[data-page-type="about"] .about__cards,
   body[data-page-type="about"] .about__blank-row {
     background-image: none;
+  }
+
+  body[data-page-type="about"] .about__cards {
+    position: relative;
+    z-index: 1;
   }
 
   body[data-page-type="about"] .about__intro-cell + .about__intro-cell,
   body[data-page-type="about"] .about__card {
     border-left: 0;
     border-top: 1px solid var(--site-divider);
+  }
+
+  body[data-page-type="about"] .about__content > .about__intro .about__intro-cell + .about__intro-cell {
+    border-top: 0;
   }
 
   body[data-page-type="about"] .about__card:first-child {
@@ -4490,7 +4538,13 @@ body[data-page-type="about"] .services-alt__item:last-child {
 
   body[data-page-type="about"] .about__headline,
   body[data-page-type="about"] .about__copy {
+    width: 100%;
+    max-width: none;
     margin-bottom: var(--space-xl);
+  }
+
+  body[data-page-type="about"] .about__headline--narrow {
+    width: 100%;
   }
 }
 
@@ -6622,6 +6676,20 @@ body[data-page-type="pricing"] .pricing-faq .faq-duplicate__title-cell--left {
 
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__title-cell--right {
   justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--title {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body[data-page-type="pricing"] .pricing-faq .faq-duplicate__title-cell--right {
+    display: none;
+  }
+
+  body[data-page-type="pricing"] .pricing-faq .segments__heading {
+    white-space: nowrap;
+  }
 }
 
 body[data-page-type="pricing"] .pricing-faq .faq-duplicate__row--list {
