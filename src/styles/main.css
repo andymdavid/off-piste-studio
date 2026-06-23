@@ -6157,17 +6157,37 @@ body[data-page-type="pricing"] .pricing-investment > .container {
 }
 
 .pricing-investment__blank-row {
+  position: relative;
   min-height: 5.75rem;
-  border-top: 1px solid var(--site-divider-strong);
-  border-bottom: 1px solid var(--site-divider-strong);
+  border: 0;
 }
 
-.pricing-investment__blank-row + .pricing-investment__blank-row {
-  border-top: 0;
+.pricing-investment__blank-row::before,
+.pricing-investment__blank-row::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  background: var(--site-divider-strong);
+  transform: translateX(-50%);
+  pointer-events: none;
 }
 
-.pricing-investment__content > .pricing-investment__blank-row:last-child {
-  border-bottom: 0;
+.pricing-investment__blank-row::before {
+  top: 0;
+}
+
+.pricing-investment__blank-row::after {
+  bottom: 0;
+}
+
+.pricing-investment__blank-row + .pricing-investment__blank-row::before {
+  content: none;
+}
+
+.pricing-investment__content > .pricing-investment__blank-row:last-child::after {
+  content: none;
 }
 
 .pricing-investment__blank-row--label {
@@ -6642,6 +6662,44 @@ body[data-page-type="pricing"][data-theme="light"] .pricing-faq .faq__item.is-cl
 html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item[open] .faq__answer,
 html[data-theme="light"] body[data-page-type="pricing"] .pricing-faq .faq__item.is-click-animating .faq__answer {
   color: rgba(255, 255, 255, 0.62);
+}
+
+body[data-page-type="pricing"] .page-cta {
+  background: #121212;
+}
+
+body[data-page-type="pricing"] .page-cta > .container {
+  display: flex;
+  min-height: clamp(22rem, 32vw, 34rem);
+  align-items: flex-end;
+  padding: clamp(2rem, 4vw, 4rem);
+}
+
+body[data-page-type="pricing"] .page-cta__content {
+  display: flex;
+  width: 100%;
+  max-width: 43.75rem;
+  margin: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+body[data-page-type="pricing"] .page-cta__heading {
+  max-width: 43.75rem;
+  margin-bottom: 1rem;
+}
+
+body[data-page-type="pricing"] .page-cta__text {
+  max-width: 36rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 767px) {
+  body[data-page-type="pricing"] .page-cta > .container {
+    min-height: 21rem;
+    padding: 1.25rem;
+  }
 }
 
 @media (max-width: 900px) {
