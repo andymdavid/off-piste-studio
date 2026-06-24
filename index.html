@@ -122,7 +122,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-tool-faq-heading-v1">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260624-home-insights-v3">
   <link rel="preload" href="/public/fonts/NeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/NeueMontreal-Medium.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
@@ -725,19 +725,20 @@
 
           <div class="insights-row insights-row--cards" id="insights-cards">
             <article class="insights-card">
-              <a href="/insights/what-makes-a-good-tradie-website" class="insights-card__image">
-                <img src="/images/cases/Place-Intelligence.webp" alt="Insights article cover image" loading="lazy">
-              </a>
               <div class="insights-card__content">
-                <div class="insights-card__meta">
-                  <span>11 min read</span>
-                  <div class="insights-card__tags">
-                    <span>Website Design</span>
-                    <span>Trades</span>
+                <a href="/insights/what-makes-a-good-tradie-website" class="insight-card__link insights-card__body">
+                  <div class="insight-card__content">
+                    <div class="insight-card__top">
+                      <div class="insight-card__meta">11 min read</div>
+                      <div class="insight-card__tags">
+                      <span>Website Design</span>
+                      <span>Trades</span>
+                      </div>
+                    </div>
+                    <h3 class="insight-card__title">What Makes a Good Plumber, Electrician, or Builder Website?</h3>
+                    <p class="insight-card__description">What separates a tradie website that generates leads from one that sits idle. Structure, content, trust signals, local SEO, and conversion elements explained.</p>
                   </div>
-                </div>
-                <h3 class="insights-card__title"><a href="/insights/what-makes-a-good-tradie-website" class="insights-card__title-link">What Makes a Good Plumber, Electrician, or Builder Website?</a></h3>
-                <p class="insights-card__excerpt">What separates a tradie website that generates leads from one that sits idle. Structure, content, trust signals, local SEO, and conversion elements explained.</p>
+                </a>
                 <div class="insights-card__footer">
                   <span class="insights-card__date">March 30, 2026</span>
                   <a href="/insights/what-makes-a-good-tradie-website" class="insights-card__link">Read article</a>
@@ -746,19 +747,20 @@
             </article>
 
             <article class="insights-card">
-              <a href="/insights/website-speed-and-lead-generation" class="insights-card__image">
-                <img src="/images/cases/Flow-Dynamics.webp" alt="Insights article cover image" loading="lazy">
-              </a>
               <div class="insights-card__content">
-                <div class="insights-card__meta">
-                  <span>10 min read</span>
-                  <div class="insights-card__tags">
-                    <span>Website Design</span>
-                    <span>SEO</span>
+                <a href="/insights/website-speed-and-lead-generation" class="insight-card__link insights-card__body">
+                  <div class="insight-card__content">
+                    <div class="insight-card__top">
+                      <div class="insight-card__meta">10 min read</div>
+                      <div class="insight-card__tags">
+                      <span>Website Design</span>
+                      <span>SEO</span>
+                      </div>
+                    </div>
+                    <h3 class="insight-card__title">Website Speed and Why It Matters for Lead Generation</h3>
+                    <p class="insight-card__description">How website speed affects lead generation, Google rankings, and conversion rates. What slows sites down, what Core Web Vitals measure, and how to fix it.</p>
                   </div>
-                </div>
-                <h3 class="insights-card__title"><a href="/insights/website-speed-and-lead-generation" class="insights-card__title-link">Website Speed and Why It Matters for Lead Generation</a></h3>
-                <p class="insights-card__excerpt">How website speed affects lead generation, Google rankings, and conversion rates. What slows sites down, what Core Web Vitals measure, and how to fix it.</p>
+                </a>
                 <div class="insights-card__footer">
                   <span class="insights-card__date">March 28, 2026</span>
                   <a href="/insights/website-speed-and-lead-generation" class="insights-card__link">Read article</a>
@@ -767,19 +769,20 @@
             </article>
 
             <article class="insights-card">
-              <a href="/insights/website-redesign-checklist" class="insights-card__image">
-                <img src="/images/cases/Decarbonology.webp" alt="Insights article cover image" loading="lazy">
-              </a>
               <div class="insights-card__content">
-                <div class="insights-card__meta">
-                  <span>10 min read</span>
-                  <div class="insights-card__tags">
-                    <span>Website Design</span>
-                    <span>Small Business</span>
+                <a href="/insights/website-redesign-checklist" class="insight-card__link insights-card__body">
+                  <div class="insight-card__content">
+                    <div class="insight-card__top">
+                      <div class="insight-card__meta">10 min read</div>
+                      <div class="insight-card__tags">
+                      <span>Website Design</span>
+                      <span>Small Business</span>
+                      </div>
+                    </div>
+                    <h3 class="insight-card__title">Website Redesign Checklist for Small Businesses</h3>
+                    <p class="insight-card__description">A practical website redesign checklist for small businesses. Know when to redesign, what to keep, how to protect your SEO, and avoid the most common mistakes.</p>
                   </div>
-                </div>
-                <h3 class="insights-card__title"><a href="/insights/website-redesign-checklist" class="insights-card__title-link">Website Redesign Checklist for Small Businesses</a></h3>
-                <p class="insights-card__excerpt">A practical website redesign checklist for small businesses. Know when to redesign, what to keep, how to protect your SEO, and avoid the most common mistakes.</p>
+                </a>
                 <div class="insights-card__footer">
                   <span class="insights-card__date">March 26, 2026</span>
                   <a href="/insights/website-redesign-checklist" class="insights-card__link">Read article</a>
@@ -1355,18 +1358,6 @@
           .sort((a, b) => new Date(b.date) - new Date(a.date))
           .slice(0, 3);
 
-        const fallbackImages = [
-          "/images/cases/Place-Intelligence.webp",
-          "/images/cases/Flow-Dynamics.webp",
-          "/images/cases/Decarbonology.webp"
-        ];
-
-        const imageBySlug = {
-          "what-makes-a-good-tradie-website": "/images/cases/Place-Intelligence.webp",
-          "website-speed-and-lead-generation": "/images/cases/Flow-Dynamics.webp",
-          "website-redesign-checklist": "/images/cases/Decarbonology.webp"
-        };
-
         const escapeHtml = (value = "") =>
           String(value)
             .replaceAll("&", "&amp;")
@@ -1382,34 +1373,28 @@
             .join("");
 
         insightsRow.innerHTML = latestPosts
-          .map((post, index) => {
-            const imageSrc = post.image || imageBySlug[post.slug] || fallbackImages[index % fallbackImages.length];
-            const imageAlt = post.imageAlt || post.title;
-
-            return `
+          .map((post) => `
               <article class="insights-card">
-                <a href="${escapeHtml(post.url)}" class="insights-card__image">
-                  <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(imageAlt)}" loading="lazy" decoding="async">
-                </a>
                 <div class="insights-card__content">
-                  <div class="insights-card__meta">
-                    <span>${escapeHtml(post.readTime || "")}</span>
-                    <div class="insights-card__tags">
-                      ${renderTags(post.tags)}
+                  <a href="${escapeHtml(post.url)}" class="insight-card__link insights-card__body">
+                    <div class="insight-card__content">
+                      <div class="insight-card__top">
+                        <div class="insight-card__meta">${escapeHtml(post.readTime || "")}</div>
+                        <div class="insight-card__tags">
+                        ${renderTags(post.tags)}
+                        </div>
+                      </div>
+                      <h3 class="insight-card__title">${escapeHtml(post.title)}</h3>
+                      <p class="insight-card__description">${escapeHtml(post.description || "")}</p>
                     </div>
-                  </div>
-                  <h3 class="insights-card__title">
-                    <a href="${escapeHtml(post.url)}" class="insights-card__title-link">${escapeHtml(post.title)}</a>
-                  </h3>
-                  <p class="insights-card__excerpt">${escapeHtml(post.description || "")}</p>
+                  </a>
                   <div class="insights-card__footer">
                     <span class="insights-card__date">${escapeHtml(post.displayDate || "")}</span>
                     <a href="${escapeHtml(post.url)}" class="insights-card__link">Read article</a>
                   </div>
                 </div>
               </article>
-            `;
-          })
+            `)
           .join("");
       }
     }
