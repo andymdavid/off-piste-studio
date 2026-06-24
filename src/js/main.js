@@ -1376,8 +1376,31 @@ function initRelatedPosts() {
     .slice(0, 3);
 
   randomizedPosts.forEach(post => {
-    relatedPostsRoot.appendChild(createInsightRow(post));
+    relatedPostsRoot.appendChild(createRelatedPostCard(post));
   });
+}
+
+function createRelatedPostCard(post) {
+  const article = document.createElement('article');
+  article.className = 'related-posts__card insight-card';
+  article.innerHTML = `
+    <a href="${post.url}" class="insight-card__link" aria-label="Read ${post.title}">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>${post.readTime}</span>
+          </div>
+          <div class="insight-card__tags">
+            ${post.tags.map(tag => `<span>${tag}</span>`).join('')}
+          </div>
+        </div>
+        <h3 class="insight-card__title">${post.title}</h3>
+        <p class="insight-card__description">${post.description}</p>
+      </div>
+    </a>
+  `;
+
+  return article;
 }
 
 function createLeadModal() {

@@ -138,14 +138,14 @@ ${post.image ? `        "image": "https://offpistestudio.com${escapeHtml(post.im
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-tool-faq-heading-v1">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260624-insight-page-v5">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
-<body data-insight-slug="${escapeHtml(post.slug)}">
+<body data-page-type="insight" data-insight-slug="${escapeHtml(post.slug)}">
 ${headerHtml}
   <main>
     <article class="insight-article">
@@ -171,10 +171,10 @@ ${headerHtml}
         </div></section>
       </div>
     </article>
-    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="projects__list" data-related-posts></div></div></section>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
   </main>
 ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260623-footer-scramble"></script>
+  <script type="module" src="/src/js/main.js?v=20260624-insight-page-v5"></script>
 </body>
 </html>
 `;
