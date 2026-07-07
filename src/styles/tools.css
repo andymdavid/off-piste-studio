@@ -44,9 +44,9 @@ body[data-page-type="tool"] .page-cta {
 /* Tool Hero */
 .tool-hero {
   display: flex;
-  min-height: 55vh;
+  min-height: 65vh;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding: 0;
   text-align: center;
@@ -58,15 +58,33 @@ body[data-page-type="tool"] .tool-hero::before {
 
 body[data-page-type="tool"] .tool-hero > .container {
   display: flex;
-  min-height: 55vh;
+  min-height: 65vh;
   flex: 1;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding-top: 120px;
   padding-bottom: calc(var(--space-2xl) + 2.15rem);
   border-left: 0;
   border-right: 0;
+}
+
+body[data-page-type="tool"] .tool-hero > .container {
+  padding-top: calc(120px + clamp(2.5rem, 5vh, 4rem));
+}
+
+body[data-page-type="tool"] .tool-hero > .container > * {
+  transform: translateY(clamp(3.5rem, 7vh, 5.5rem));
+}
+
+@media (max-width: 768px) {
+  body[data-page-type="tool"] .tool-hero > .container {
+    padding-top: calc(100px + 2rem);
+  }
+
+  body[data-page-type="tool"] .tool-hero > .container > * {
+    transform: translateY(2.5rem);
+  }
 }
 
 .tool-hero__icon {
