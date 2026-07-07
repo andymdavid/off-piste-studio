@@ -151,7 +151,7 @@ ${post.image ? `        "image": "https://offpistestudio.com${escapeHtml(post.im
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-why-heading-match-v60">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">

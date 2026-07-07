@@ -388,7 +388,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-why-heading-match-v60">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -541,7 +541,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-why-heading-match-v60">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -696,7 +696,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-why-heading-match-v60">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">
