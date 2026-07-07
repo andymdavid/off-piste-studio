@@ -122,7 +122,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-why-heading-match-v60">
   <link rel="preload" href="/public/fonts/NeueMontreal-Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/NeueMontreal-Medium.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
@@ -130,6 +130,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Pixel&display=swap" rel="stylesheet">
   <style>
     @media (max-width: 768px) {
       body[data-page-type="duplicate-home"][data-theme="light"] {
@@ -471,8 +472,10 @@
       <div class="container">
         <div class="home-why-placeholder__inner">
           <div class="home-why-placeholder__content">
-            <h2 class="home-why-placeholder__heading" id="home-why-heading">The cost of looking the same as everyone else keeps going up.</h2>
-            <p class="home-why-placeholder__text">AI has made it easier than ever to produce more websites, more content, more campaigns and more noise. But more volume won't make your business memorable. We provide you with taste, judgement and creative solutions needed to turn your expertise into a clear signal in the age of intelligence.</p>
+            <h2 class="home-why-placeholder__heading" id="home-why-heading">The cost of looking the same as everyone else keeps going up. We provide the taste, judgement and creativity to turn your expertise into clear signal.</h2>
+            <p class="home-why-placeholder__text">Off Piste Studio creates systems that compound value — websites, brands, and collateral that clarify what you do, communicate why it matters, and convert attention into revenue.</p>
+            <p class="home-why-placeholder__text">We combine design and technology to help growing companies look sharper, explain their value faster, and turn more of the right attention into revenue.</p>
+            <a href="/about" class="hero__button home-why-placeholder__button">About Off Piste</a>
           </div>
         </div>
       </div>
@@ -481,22 +484,6 @@
     <section class="hero section">
       <div class="container">
         <div class="about-grid">
-          <div class="about-grid__row about-grid__row--top">
-            <div class="about-grid__cell about-grid__cell--title about-grid__cell--intro">
-              <h2 class="about-grid__headline">Off Piste Studio creates systems that compound value — websites, brands, and collateral that clarify what you do, communicate why it matters, and convert attention into revenue.</h2>
-            </div>
-
-            <div class="about-grid__cell about-grid__cell--intro">
-              <div class="about-grid__copy">
-                <p class="about-grid__text">We combine design and technology to help growing companies perform at the level they operate. Every project is engineered for clarity and commercial return — design that pays for itself through stronger acquisition, higher retention, and faster growth.</p>
-                <p class="about-grid__text">If you're an ambitious small or medium-sized company ready to stand out and accelerate growth online in the age of AI, it's time you went Off Piste.</p>
-                <a href="/about" class="hero__button about-grid__button">About Off Piste</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-grid__blank-row" aria-hidden="true"></div>
-
           <div class="pathways__intro">
             <div class="pathways__intro-cell pathways__intro-cell--title">
               <h2 class="pathways__heading">Choose the right starting point.</h2>
@@ -588,56 +575,68 @@
       </div>
     </section>
 
-    <section class="testimonials">
+    <section class="between-strip between-strip--before-testimonials" aria-label="Testimonials transition">
       <div class="container">
-        <div class="testimonials__grid">
-          <div class="testimonials__row testimonials__row--strip" aria-hidden="true">
-            <div class="testimonials__strip-cell"></div>
-            <div class="testimonials__strip-cell"></div>
+        <div class="between-strip__grid">
+          <div class="between-strip__cell between-strip__cell--left"></div>
+          <div class="between-strip__cell between-strip__cell--right"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonial-feature" aria-labelledby="testimonial-feature-heading">
+      <div class="container">
+        <div class="testimonial-feature__inner" data-testimonial-slider>
+          <h2 class="sr-only" id="testimonial-feature-heading">Client testimonials</h2>
+          <div class="testimonial-feature__slides">
+            <article class="testimonial-feature__slide is-active" data-testimonial-slide>
+              <span class="testimonial-feature__mark" aria-hidden="true">"</span>
+              <blockquote class="testimonial-feature__quote">Their creative approach ensured that our new website not only looks professional but also effectively communicates our commitment.</blockquote>
+              <footer class="testimonial-feature__author">
+                <img src="/images/testimonial-mariyam.webp" alt="Dr. Mariyam Shakeela" class="testimonial-feature__avatar" loading="lazy">
+                <div class="testimonial-feature__author-copy">
+                  <span class="testimonial-feature__name">Dr. Mariyam Shakeela</span>
+                  <span class="testimonial-feature__role">President + Fmr Minister of Health &amp; Energy, Maldives</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="testimonial-feature__slide" data-testimonial-slide>
+              <span class="testimonial-feature__mark" aria-hidden="true">"</span>
+              <blockquote class="testimonial-feature__quote">Off Piste Studio's know-how was crucial for our rebrand, website design and development and successful go to market.</blockquote>
+              <footer class="testimonial-feature__author">
+                <img src="/images/testimonial-tan.webp" alt="Tan Tran" class="testimonial-feature__avatar" loading="lazy">
+                <div class="testimonial-feature__author-copy">
+                  <span class="testimonial-feature__name">Tan Tran</span>
+                  <span class="testimonial-feature__role">Manager, Flow Dynamics</span>
+                </div>
+              </footer>
+            </article>
+
+            <article class="testimonial-feature__slide" data-testimonial-slide>
+              <span class="testimonial-feature__mark" aria-hidden="true">"</span>
+              <blockquote class="testimonial-feature__quote">Excellent customer service. OPS is responsive and proactive in developing our online presence and providing the necessary technical expertise we require.</blockquote>
+              <footer class="testimonial-feature__author">
+                <img src="/images/testimonial-cameron.webp" alt="Cameron Edwards" class="testimonial-feature__avatar" loading="lazy">
+                <div class="testimonial-feature__author-copy">
+                  <span class="testimonial-feature__name">Cameron Edwards</span>
+                  <span class="testimonial-feature__role">Director, Decarbonology</span>
+                </div>
+              </footer>
+            </article>
           </div>
-
-          <div class="testimonials__row testimonials__row--industries">
-            <div class="testimonials__industries-mobile-intro">
-              <h2 class="testimonials__industries-headline">We work with expertise-led businesses in trust-heavy markets.</h2>
-              <p class="testimonials__industries-copy">Helping trades, professional services, health, real estate, engineering and specialist teams clarify their value, strengthen credibility and convert more of the right enquiries.</p>
-              <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="hero-intro__button testimonials__industries-button">Book a Free Discovery Call</a>
-            </div>
-
-            <div class="testimonials__industries-cell testimonials__industries-cell--title">
-              <h2 class="testimonials__industries-headline">We work with expertise-led businesses in trust-heavy markets.</h2>
-            </div>
-
-            <div class="testimonials__industries-cell testimonials__industries-cell--copy">
-              <p class="testimonials__industries-copy">Helping trades, professional services, health, real estate, engineering and specialist teams clarify their value, strengthen credibility and convert more of the right enquiries.</p>
-              <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="hero-intro__button testimonials__industries-button">Book a Free Discovery Call</a>
-            </div>
-
-            <div class="testimonials__industries-cell testimonials__industries-cell--options">
-              <div class="testimonials__industries-list">
-                <div class="testimonials__industries-item">Trades &amp; Home Services</div>
-                <div class="testimonials__industries-item">Builders</div>
-                <div class="testimonials__industries-item">Real Estate</div>
-                <div class="testimonials__industries-item">Property Services</div>
-                <div class="testimonials__industries-item">Professional Services</div>
-              </div>
-            </div>
-
-            <div class="testimonials__industries-cell testimonials__industries-cell--options">
-              <div class="testimonials__industries-list">
-                <div class="testimonials__industries-item">Accountants</div>
-                <div class="testimonials__industries-item">Lawyers</div>
-                <div class="testimonials__industries-item">Consultants</div>
-                <div class="testimonials__industries-item">Health &amp; Medical</div>
-                <div class="testimonials__industries-item">Mining &amp; Engineering Services</div>
-              </div>
-            </div>
+          <div class="testimonial-feature__dots" aria-label="Choose testimonial">
+            <button class="testimonial-feature__dot is-active" type="button" aria-label="Show Dr. Mariyam Shakeela testimonial" aria-current="true" data-testimonial-dot></button>
+            <button class="testimonial-feature__dot" type="button" aria-label="Show Tan Tran testimonial" data-testimonial-dot></button>
+            <button class="testimonial-feature__dot" type="button" aria-label="Show Cameron Edwards testimonial" data-testimonial-dot></button>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="testimonials__row testimonials__row--industries-blank" aria-hidden="true">
-            <div class="testimonials__industries-blank-cell"></div>
-            <div class="testimonials__industries-blank-cell"></div>
-          </div>
-
+    <section class="testimonials testimonials--logos-only" aria-label="Client logos">
+      <div class="container">
+        <div class="testimonials__grid testimonials__grid--logos-only">
           <div class="testimonials__row testimonials__row--logos">
             <div class="testimonials__logo-cell">
               <img src="/images/testimonial-logo-01.webp" alt="Client logo" class="testimonials__logo" loading="lazy" data-logo-index="0">
@@ -654,64 +653,6 @@
             <div class="testimonials__logo-cell">
               <img src="/images/testimonial-logo-05.webp" alt="Client logo" class="testimonials__logo" loading="lazy" data-logo-index="4">
             </div>
-          </div>
-
-          <div class="testimonials__row testimonials__row--intro">
-            <div class="testimonials__intro-cell testimonials__intro-cell--title">
-              <h2 class="testimonials__heading">We've helped our clients turn heads and open wallets - Here's what they have to say.</h2>
-            </div>
-
-            <div class="testimonials__intro-cell testimonials__intro-cell--copy">
-              <div class="testimonials__intro-copy">
-                <p class="testimonials__text">From early-stage ventures to established operators, we build brands and websites that give clients the confidence to sell harder, communicate more clearly, and look the part at every touchpoint.</p>
-                <p class="testimonials__text">The logos below are only part of the picture. The real proof is what changed for the businesses behind them.</p>
-                <a href="/work" class="hero__button testimonials__button">View all our work</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonials__row testimonials__row--quotes">
-            <article class="testimonial">
-              <span class="testimonial__label">Multicultural Integration Australia</span>
-              <div class="testimonial__body">
-                <blockquote class="testimonial__quote">"Their creative approach ensured that our new website not only looks professional but also effectively communicates our commitment to integrating people from various backgrounds into Australian society. It has not only enhanced our online presence but also significantly supported our outreach efforts, allowing us to connect more meaningfully with the communities we serve. We are grateful for Off Piste Studio's role in helping us establish a strong, impactful presence."</blockquote>
-                <div class="testimonial__author">
-                  <img src="/images/testimonial-mariyam.webp" alt="Dr. Mariyam Shakeela" class="testimonial__avatar" loading="lazy">
-                  <div class="testimonial__author-copy">
-                    <span class="testimonial__name">Dr. Mariyam Shakeela</span>
-                    <span class="testimonial__role">President + Fmr Minister of Health &amp; Energy, Maldives</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial">
-              <span class="testimonial__label">Flow Dynamics</span>
-              <div class="testimonial__body">
-                <blockquote class="testimonial__quote">"Off Piste Studio's know-how was crucial for our rebrand, website design and development and successful go to market. They walked us through the whole process - from market research to creating our new brand identity and overall look. We're thrilled with the fresh, distinctive brand they've helped us build."</blockquote>
-                <div class="testimonial__author">
-                  <img src="/images/testimonial-tan.webp" alt="Tan Tran" class="testimonial__avatar" loading="lazy">
-                  <div class="testimonial__author-copy">
-                    <span class="testimonial__name">Tan Tran</span>
-                    <span class="testimonial__role">Manager</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial">
-              <span class="testimonial__label">Decarbonology</span>
-              <div class="testimonial__body">
-                <blockquote class="testimonial__quote">"Off Piste Studio's played a key role in our website and brand development. The team responded in a timely manner to requests and pricing was fair. Excellent customer service. We have developed several websites with OPS and we are very happy with their technical support, design and development. OPS is responsive and proactive in developing our online presence and providing the necessary technical expertise we require. We will continue to use Off Piste Studio in the future."</blockquote>
-                <div class="testimonial__author">
-                  <img src="/images/testimonial-cameron.webp" alt="Cameron Edwards" class="testimonial__avatar" loading="lazy">
-                  <div class="testimonial__author-copy">
-                    <span class="testimonial__name">Cameron Edwards</span>
-                    <span class="testimonial__role">Director</span>
-                  </div>
-                </div>
-              </div>
-            </article>
           </div>
         </div>
       </div>
@@ -871,6 +812,27 @@
           <div class="faq-duplicate__row faq-duplicate__row--blank-bottom" aria-hidden="true">
             <div class="faq-duplicate__blank-cell"></div>
             <div class="faq-duplicate__blank-cell"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing-cta" aria-labelledby="closing-cta-heading">
+      <div class="container">
+        <div class="closing-cta__row">
+          <div class="closing-cta__inner">
+            <h2 class="site-section-heading closing-cta__headline" id="closing-cta-heading">Let's build the website, brand or content system your next stage needs.</h2>
+            <p class="closing-cta__text">Book a short discovery call. We'll map what's working, what's unclear, and where the highest-leverage improvement sits.</p>
+            <div class="closing-cta__action">
+              <div class="closing-cta__profile">
+                <img src="/images/team/lara-avatar.webp" alt="Lara" class="closing-cta__avatar" loading="lazy" decoding="async">
+                <div class="closing-cta__profile-copy">
+                  <span class="closing-cta__name">Lara</span>
+                  <span class="closing-cta__role">Creative Partner</span>
+                </div>
+              </div>
+              <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="closing-cta__button">Book a Free Discovery Call</a>
+            </div>
           </div>
         </div>
       </div>
@@ -1120,6 +1082,52 @@
       }
 
       window.addEventListener("resize", scheduleFit);
+    })();
+
+    (() => {
+      const slider = document.querySelector("[data-testimonial-slider]");
+      if (!slider) return;
+
+      const slides = Array.from(slider.querySelectorAll("[data-testimonial-slide]"));
+      const dots = Array.from(slider.querySelectorAll("[data-testimonial-dot]"));
+      if (slides.length < 2 || slides.length !== dots.length) return;
+
+      const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      let activeIndex = 0;
+      let timer = 0;
+
+      const setActiveSlide = (nextIndex) => {
+        activeIndex = (nextIndex + slides.length) % slides.length;
+
+        slides.forEach((slide, index) => {
+          slide.classList.toggle("is-active", index === activeIndex);
+        });
+
+        dots.forEach((dot, index) => {
+          const isActive = index === activeIndex;
+          dot.classList.toggle("is-active", isActive);
+          if (isActive) {
+            dot.setAttribute("aria-current", "true");
+          } else {
+            dot.removeAttribute("aria-current");
+          }
+        });
+      };
+
+      const restartTimer = () => {
+        window.clearInterval(timer);
+        if (prefersReducedMotion) return;
+        timer = window.setInterval(() => setActiveSlide(activeIndex + 1), 5200);
+      };
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener("click", () => {
+          setActiveSlide(index);
+          restartTimer();
+        });
+      });
+
+      restartTimer();
     })();
 
     (() => {
