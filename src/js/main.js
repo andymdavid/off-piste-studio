@@ -1012,7 +1012,8 @@ function initAboutLogoSwap() {
     { src: '/images/logos/DE Logo Light.webp', alt: 'Decarbonology' },
     { src: '/images/logos/BU Logo Light.webp', alt: 'Buildsource' },
     { src: '/images/logos/CC Logo Light.webp', alt: 'Cell Cyber' },
-    { src: '/images/logos/LI Logo Light.webp', alt: 'Linear' }
+    { src: '/images/logos/LI Logo Light.webp', alt: 'Linear' },
+    { src: '/images/logos/new-client-logo.webp', alt: '3LINES Group' }
   ];
 
   const pickNextIndex = () => {
@@ -1414,7 +1415,7 @@ function createLeadModal() {
       <div class="lead-modal__grid">
         <div class="lead-modal__content">
           <div class="lead-modal__eyebrow">
-            <img src="/images/Icon.webp" alt="" aria-hidden="true">
+            <img src="/images/off-piste-mark-transparent-white.webp" alt="" aria-hidden="true">
             <span>Start a Project</span>
           </div>
           <h2 class="lead-modal__title" id="lead-modal-title">Let&apos;s scope what you&apos;re building.</h2>

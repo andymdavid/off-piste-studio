@@ -110,7 +110,7 @@ const headerHtml = `
     <div class="duplicate-header__layout">
       <nav class="duplicate-header__nav" aria-label="Primary">
         <div class="duplicate-header__row">
-          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/Icon.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
           <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
           <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
         </div>
@@ -388,7 +388,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-tool-faq-heading-v1">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -396,7 +396,6 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
   <main>
     <section class="work-hero">
       <div class="container">
-        <img src="/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
         <a href="/contact" class="page-hero__button">Let's Chat</a>
@@ -542,7 +541,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-tool-faq-heading-v1">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -550,7 +549,6 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
   <main>
     <section class="work-hero">
       <div class="container">
-        <img src="/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
         <a href="/contact" class="page-hero__button">Let's Chat</a>
@@ -698,7 +696,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260623-tool-faq-heading-v1">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">
@@ -706,7 +704,6 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
   <main>
     <section class="work-hero">
       <div class="container">
-        <img src="/images/Icon.webp" alt="" class="work-hero__icon" aria-hidden="true">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
         <a href="/contact" class="page-hero__button">Let's Chat</a>

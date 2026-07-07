@@ -72,7 +72,7 @@ const headerHtml = `
     <div class="duplicate-header__layout">
       <nav class="duplicate-header__nav" aria-label="Primary">
         <div class="duplicate-header__row">
-          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/Icon.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
           <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
           <div class="duplicate-header__actions">
             <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
@@ -136,7 +136,7 @@ ${post.image ? `        "image": "https://offpistestudio.com${escapeHtml(post.im
         "publisher": {
           "@type": "Organization",
           "name": "Off Piste Studio",
-          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/Icon.png" }
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
         },
         "url": "https://offpistestudio.com/insights/${escapeHtml(post.slug)}"
       },
@@ -151,7 +151,7 @@ ${post.image ? `        "image": "https://offpistestudio.com${escapeHtml(post.im
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260624-insight-theme-v3">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-header-logo-font-revert-v22">
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
   <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
