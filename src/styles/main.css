@@ -6419,7 +6419,8 @@ body[data-page-type="about"] .about__button,
 .pricing-investment__button,
 .testimonials__button,
 .case-studies__cta,
-.closing-cta__button {
+.closing-cta__button,
+.pathway__cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -6461,7 +6462,8 @@ body[data-page-type="about"] .about__button:hover,
 .pricing-investment__button:hover,
 .testimonials__button:hover,
 .case-studies__cta:hover,
-.closing-cta__button:hover {
+.closing-cta__button:hover,
+.pathway__cta:hover {
   background: #ffffff;
   color: #121212;
   border-color: #ffffff;
@@ -6486,7 +6488,8 @@ body[data-page-type="about"] .about__button::after,
 .pricing-investment__button::after,
 .testimonials__button::after,
 .case-studies__cta::after,
-.closing-cta__button::after {
+.closing-cta__button::after,
+.pathway__cta::after {
   content: "→";
   display: inline-flex;
   align-items: center;
@@ -6516,7 +6519,8 @@ body[data-page-type="about"] .about__button:hover::after,
 .pricing-investment__button:hover::after,
 .testimonials__button:hover::after,
 .case-studies__cta:hover::after,
-.closing-cta__button:hover::after {
+.closing-cta__button:hover::after,
+.pathway__cta:hover::after {
   transform: rotate(-45deg);
 }
 
@@ -9516,6 +9520,18 @@ body[data-page-type="duplicate-home"] .closing-cta__action {
   margin-top: clamp(0.35rem, 1vw, 0.85rem);
 }
 
+body[data-page-type="duplicate-home"] .closing-cta__button {
+  background: #ffffff;
+  color: #121212;
+  border-color: #ffffff;
+}
+
+body[data-page-type="duplicate-home"] .closing-cta__button:hover {
+  background: #1b1b1b;
+  color: #ffffff;
+  border-color: #1b1b1b;
+}
+
 body[data-page-type="duplicate-home"] .closing-cta__profile {
   display: inline-flex;
   flex-direction: row;
@@ -10060,7 +10076,7 @@ body[data-page-type="duplicate-home"] .pathways__intro-cell--copy {
 }
 
 body[data-page-type="duplicate-home"] .pathways__heading {
-  width: 43.75rem;
+  width: 36rem;
   max-width: 100%;
   margin: 0 0 3.25rem;
   text-wrap: balance;
@@ -10177,6 +10193,19 @@ body[data-page-type="duplicate-home"] .pathway__details li {
   color: rgba(255, 255, 255, 0.56);
 }
 
+body[data-page-type="duplicate-home"] .pathway__cta {
+  align-self: flex-start;
+  margin-top: 0;
+  opacity: 0;
+  transform: translateY(0.45rem);
+  transition:
+    margin-top 220ms ease,
+    opacity 180ms ease,
+    transform 220ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
 body[data-page-type="duplicate-home"] .pathway:hover,
 body[data-page-type="duplicate-home"] .pathway:focus-visible {
   background: #fdfdfc;
@@ -10212,6 +10241,13 @@ body[data-page-type="duplicate-home"] .pathway:hover .pathway__details,
 body[data-page-type="duplicate-home"] .pathway:focus-visible .pathway__details {
   max-height: 10rem;
   margin-top: 1rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body[data-page-type="duplicate-home"] .pathway:hover .pathway__cta,
+body[data-page-type="duplicate-home"] .pathway:focus-visible .pathway__cta {
+  margin-top: 1.05rem;
   opacity: 1;
   transform: translateY(0);
 }
@@ -11625,6 +11661,14 @@ body[data-page-type="duplicate-home"] .testimonial-feature__dot.is-active {
   body[data-page-type="duplicate-home"] .pathway:hover .pathway__details,
   body[data-page-type="duplicate-home"] .pathway:focus-visible .pathway__details {
     max-height: none;
+    margin-top: 1rem;
+    opacity: 1;
+    transform: none;
+  }
+
+  body[data-page-type="duplicate-home"] .pathway__cta,
+  body[data-page-type="duplicate-home"] .pathway:hover .pathway__cta,
+  body[data-page-type="duplicate-home"] .pathway:focus-visible .pathway__cta {
     margin-top: 1rem;
     opacity: 1;
     transform: none;

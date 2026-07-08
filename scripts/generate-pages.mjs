@@ -388,7 +388,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-why-heading-match-v60">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-closing-cta-invert-v65">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -500,6 +500,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="description" content="${escapeHtml(page.description)}">
+  <meta name="robots" content="noindex, follow">
   <title>${escapeHtml(page.title)} | Off Piste Studio</title>
   <link rel="canonical" href="https://offpistestudio.com/services/${escapeHtml(page.slug)}">
   <meta property="og:type" content="website">
@@ -541,7 +542,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-why-heading-match-v60">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-closing-cta-invert-v65">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -696,7 +697,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260707-why-heading-match-v60">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-closing-cta-invert-v65">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">

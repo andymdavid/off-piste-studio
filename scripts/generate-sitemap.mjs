@@ -57,16 +57,6 @@ for (const file of corePages) {
   });
 }
 
-// Service pages - priority 0.9
-for (const page of scanDir('services')) {
-  entries.push({
-    url: `${BASE_URL}/services/${page.slug}`,
-    lastmod: page.lastmod,
-    changefreq: 'weekly',
-    priority: '0.9',
-  });
-}
-
 // Tool pages - priority 0.7
 for (const page of scanDir('tools')) {
   entries.push({
