@@ -5824,12 +5824,29 @@
         return available[Math.floor(Math.random() * available.length)];
       };
 
-      const swapLogo = () => {
+      const preloadLogo = (src) =>
+        new Promise((resolve) => {
+          const image = new Image();
+          image.onload = () => {
+            if (typeof image.decode === "function") {
+              image.decode().then(resolve).catch(resolve);
+              return;
+            }
+
+            resolve();
+          };
+          image.onerror = resolve;
+          image.src = src;
+        });
+
+      const swapLogo = async () => {
         const target = logos[Math.floor(Math.random() * logos.length)];
         const nextIndex = pickNextIndex();
         if (!target || nextIndex === null) return;
 
         const nextLogo = logoPool[nextIndex];
+        await preloadLogo(nextLogo.src);
+
         target.classList.add("is-swapping-out");
 
         window.setTimeout(() => {
