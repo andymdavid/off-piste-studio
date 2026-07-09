@@ -388,7 +388,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-closing-cta-invert-v65">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-mobile-cta-profile-left-v70">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -444,7 +444,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'industry' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260623-footer-scramble"></script>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
 </body>
 </html>`;
 }
@@ -542,7 +542,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-closing-cta-invert-v65">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-mobile-cta-profile-left-v70">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -598,7 +598,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'service' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260623-footer-scramble"></script>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
 </body>
 </html>`;
 }
@@ -697,7 +697,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-closing-cta-invert-v65">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260708-mobile-cta-profile-left-v70">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">
@@ -734,7 +734,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ${createInternalLinksHtml({ ...page, _type: 'location' }, allIndustries, allServices, allLocations)}
   </main>
   ${footerHtml}
-  <script type="module" src="/src/js/main.js?v=20260623-footer-scramble"></script>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
 </body>
 </html>`;
 }
