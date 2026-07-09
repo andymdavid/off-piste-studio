@@ -137,8 +137,7 @@
         --home-mobile-light-rail: var(--site-divider-light);
       }
 
-      body[data-page-type="duplicate-home"][data-theme="light"] .insights-row--cards,
-      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos {
+      body[data-page-type="duplicate-home"][data-theme="light"] .insights-row--cards {
         background-image: none !important;
       }
 
@@ -153,6 +152,7 @@
       body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos {
         border-top: 0 !important;
         border-bottom: 1px solid var(--home-mobile-light-rail) !important;
+        background-image: linear-gradient(to right, transparent calc(50% - 0.5px), var(--home-mobile-light-rail) calc(50% - 0.5px), var(--home-mobile-light-rail) calc(50% + 0.5px), transparent calc(50% + 0.5px)) !important;
       }
 
       body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__logo-cell {
@@ -161,10 +161,14 @@
         border-bottom: 0 !important;
       }
 
-      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__logo-cell + .testimonials__logo-cell {
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__logo-cell {
         border-left: 0 !important;
         border-right: 0 !important;
         border-top: 1px solid var(--home-mobile-light-rail) !important;
+      }
+
+      body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__logo-cell:nth-child(-n + 2) {
+        border-top: 0 !important;
       }
 
       body[data-page-type="duplicate-home"][data-theme="light"] .testimonials__row--logos > .testimonials__logo-cell,
@@ -656,6 +660,9 @@
             </div>
             <div class="testimonials__logo-cell">
               <img src="/images/testimonial-logo-05.webp" alt="Client logo" class="testimonials__logo" loading="lazy" data-logo-index="4">
+            </div>
+            <div class="testimonials__logo-cell testimonials__logo-cell--mobile-extra">
+              <img src="/images/testimonial-logo-06.webp" alt="Client logo" class="testimonials__logo" loading="lazy" data-logo-index="5">
             </div>
           </div>
         </div>
