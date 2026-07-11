@@ -17,16 +17,21 @@ function getLastmod(filePath) {
   }
 }
 
-function scanDir(dirName) {
+function scanDir(dirName, contentDirName = null) {
   const dirPath = resolve(rootDir, dirName);
   if (!existsSync(dirPath)) return [];
 
   return readdirSync(dirPath)
     .filter(f => f.endsWith('.html'))
+    .sort()
     .map(f => ({
       slug: basename(f, '.html'),
       dir: dirName,
-      lastmod: getLastmod(resolve(dirPath, f)),
+      lastmod: getLastmod(
+        contentDirName && existsSync(resolve(rootDir, contentDirName, `${basename(f, '.html')}.md`))
+          ? resolve(rootDir, contentDirName, `${basename(f, '.html')}.md`)
+          : resolve(dirPath, f)
+      ),
     }));
 }
 
@@ -57,6 +62,26 @@ for (const file of corePages) {
   });
 }
 
+function addScannedPages(dirName, pathPrefix, contentDirName, changefreq, priority) {
+  for (const page of scanDir(dirName, contentDirName)) {
+    entries.push({
+      url: `${BASE_URL}/${pathPrefix}/${page.slug}`,
+      lastmod: page.lastmod,
+      changefreq,
+      priority,
+    });
+  }
+}
+
+// Service pages - priority 0.9
+addScannedPages('services', 'services', 'content/services', 'weekly', '0.9');
+
+// Industry pages - priority 0.8
+addScannedPages('industries', 'industries', 'content/industries', 'weekly', '0.8');
+
+// Location pages - priority 0.8
+addScannedPages('locations', 'locations', 'content/locations', 'weekly', '0.8');
+
 // Tool pages - priority 0.7
 for (const page of scanDir('tools')) {
   entries.push({
@@ -68,7 +93,7 @@ for (const page of scanDir('tools')) {
 }
 
 // Insights pages - priority 0.6
-for (const page of scanDir('insights')) {
+for (const page of scanDir('insights', 'content/insights')) {
   entries.push({
     url: `${BASE_URL}/insights/${page.slug}`,
     lastmod: page.lastmod,

@@ -500,7 +500,6 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="description" content="${escapeHtml(page.description)}">
-  <meta name="robots" content="noindex, follow">
   <title>${escapeHtml(page.title)} | Off Piste Studio</title>
   <link rel="canonical" href="https://offpistestudio.com/services/${escapeHtml(page.slug)}">
   <meta property="og:type" content="website">
@@ -822,15 +821,15 @@ const services = parseContentDir(resolve(rootDir, 'content/services'), []);
 const locations = parseContentDir(resolve(rootDir, 'content/locations'), ['location', 'region']);
 
 // Generate HTML with cross-links
-writeRedirectPages(industries, resolve(rootDir, 'industries'), '/llms.txt', 'industry');
+writePages(industries, resolve(rootDir, 'industries'), createIndustryHtml, industries, services, locations);
 writePages(services, resolve(rootDir, 'services'), createServiceHtml, industries, services, locations);
-writeRedirectPages(locations, resolve(rootDir, 'locations'), '/llms.txt', 'location');
+writePages(locations, resolve(rootDir, 'locations'), createLocationHtml, industries, services, locations);
 
 // Write data files for client-side use (listings, internal linking, etc.)
 const pageData = {
-  industries: industries.map(({ html, faqs, ...p }) => ({ ...p, url: '/llms.txt' })),
+  industries: industries.map(({ html, faqs, ...p }) => ({ ...p, url: `/industries/${p.slug}` })),
   services: services.map(({ html, faqs, ...p }) => ({ ...p, url: `/services/${p.slug}` })),
-  locations: locations.map(({ html, faqs, ...p }) => ({ ...p, url: '/llms.txt' })),
+  locations: locations.map(({ html, faqs, ...p }) => ({ ...p, url: `/locations/${p.slug}` })),
 };
 
 writeFileSync(
@@ -838,4 +837,4 @@ writeFileSync(
   `export const INDUSTRY_PAGES = ${JSON.stringify(pageData.industries, null, 2)};\n\nexport const SERVICE_PAGES = ${JSON.stringify(pageData.services, null, 2)};\n\nexport const LOCATION_PAGES = ${JSON.stringify(pageData.locations, null, 2)};\n`
 );
 
-console.log(`Generated ${services.length} service pages, ${industries.length} industry redirects and ${locations.length} location redirects`);
+console.log(`Generated ${services.length} service pages, ${industries.length} industry pages and ${locations.length} location pages`);

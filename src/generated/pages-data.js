@@ -6,7 +6,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Business owners and individuals choose an accountant based on expertise, trust, and accessibility. Your website is where prospective clients assess whether you understand their industry, offer the services they need, and are the kind of firm they want to work with long-term.",
     "keywords": "accountant website design, accounting website, accountant web design, website for accountants",
     "industry": "Accounting",
-    "url": "/llms.txt"
+    "url": "/industries/accountants"
   },
   {
     "slug": "bookkeepers",
@@ -15,7 +15,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Small business owners looking for a bookkeeper want someone reliable, knowledgeable, and easy to work with. They search online, compare a few options, and choose the one that looks the most professional and trustworthy. Your website is where that decision is made.",
     "keywords": "bookkeeper website design, bookkeeping website, bookkeeper web design, website for bookkeepers",
     "industry": "Bookkeeping",
-    "url": "/llms.txt"
+    "url": "/industries/bookkeepers"
   },
   {
     "slug": "builders",
@@ -24,7 +24,7 @@ export const INDUSTRY_PAGES = [
     "intro": "A builder's website is not a brochure — it is the place where a homeowner decides whether you are worth a six-figure contract. People researching builders spend more time on a website than they spend on almost any other trade. They study your portfolio, check your credentials, and read your process before they ever make contact. We build websites that reward that scrutiny.",
     "keywords": "builder website design, building website, builder web design, website for builders",
     "industry": "Building",
-    "url": "/llms.txt"
+    "url": "/industries/builders"
   },
   {
     "slug": "buyers-agents",
@@ -33,7 +33,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Buyers agents sell expertise, not property. Your website cannot rely on listings to drive traffic the way a selling agent's site can. Instead, it needs to demonstrate market knowledge so convincingly that a prospective client — someone about to spend half a million dollars or more — decides you are the person they trust to spend it wisely. That requires a different kind of website entirely.",
     "keywords": "buyers agent website design, buyers agency website, buyers agent web design, website for buyers agents",
     "industry": "Buyers Agency",
-    "url": "/llms.txt"
+    "url": "/industries/buyers-agents"
   },
   {
     "slug": "cleaners",
@@ -42,7 +42,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Cleaning is one of the most searched-for services in Australia, and one of the most competitive. Your potential clients range from tenants scrambling to get their bond back to office managers sourcing a reliable commercial contractor. Each audience searches differently, decides differently, and needs different information from your website. A generic one-page site cannot serve them all.",
     "keywords": "cleaning website design, cleaner website, cleaning business web design, website for cleaners",
     "industry": "Cleaning",
-    "url": "/llms.txt"
+    "url": "/industries/cleaners"
   },
   {
     "slug": "coaches",
@@ -51,7 +51,7 @@ export const INDUSTRY_PAGES = [
     "intro": "The coaching industry does not have a lead generation problem — it has a positioning problem. Thousands of coaches in Australia have websites that say some version of \"I help people reach their potential.\" That sentence means nothing to anyone. The coaches who fill their practice are the ones whose website instantly communicates a specific niche, a clear methodology, and a credible track record. That is what we build.",
     "keywords": "coach website design, coaching website, business coach web design, website for coaches",
     "industry": "Coaching",
-    "url": "/llms.txt"
+    "url": "/industries/coaches"
   },
   {
     "slug": "dentists",
@@ -60,7 +60,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Patients research dental practices online before booking — especially new patients who have just moved to an area or are looking for a specific treatment. A modern, trustworthy website with online booking and clear treatment information is essential for growing your patient base.",
     "keywords": "dentist website design, dental website, dental practice web design, website for dentists",
     "industry": "Dental",
-    "url": "/llms.txt"
+    "url": "/industries/dentists"
   },
   {
     "slug": "electricians",
@@ -69,7 +69,7 @@ export const INDUSTRY_PAGES = [
     "intro": "When someone's power goes out at midnight or a business needs a compliance certificate by Friday, they reach for their phone and search. Your website is the thing standing between that search and a booked job. We build electrical websites that work as hard as you do — fast, credible, and built around how customers actually find and choose an electrician.",
     "keywords": "electrician website design, electrical website, electrician web design, website for electricians",
     "industry": "Electrical",
-    "url": "/llms.txt"
+    "url": "/industries/electricians"
   },
   {
     "slug": "hvac",
@@ -78,7 +78,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Air conditioning and heating customers fall into two camps — the homeowner whose system just died in 40-degree heat, and the one spending weeks comparing split systems before a summer install. Your website needs to convert both, and it needs to do it at different times of year with different messaging. We build HVAC websites around the seasonal, research-heavy reality of how people actually buy heating and cooling.",
     "keywords": "hvac website design, air conditioning website, heating website, website for hvac businesses",
     "industry": "HVAC",
-    "url": "/llms.txt"
+    "url": "/industries/hvac"
   },
   {
     "slug": "landscapers",
@@ -87,7 +87,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Landscaping sits at the intersection of construction and design. Your website needs to reflect both — the structural competence to build retaining walls and the creative vision to transform a bare backyard into an outdoor living space. The landscapers winning the best projects online are the ones whose websites tell a visual story, not just list services.",
     "keywords": "landscaper website design, landscaping website, landscaper web design, website for landscapers",
     "industry": "Landscaping",
-    "url": "/llms.txt"
+    "url": "/industries/landscapers"
   },
   {
     "slug": "lawyers",
@@ -96,7 +96,7 @@ export const INDUSTRY_PAGES = [
     "intro": "People searching for a lawyer are often dealing with stressful, high-stakes situations. They need to find someone who specialises in their type of matter, understand how the process works, and feel confident enough to make contact. Your website needs to guide them through that journey.",
     "keywords": "lawyer website design, law firm website, solicitor web design, website for lawyers",
     "industry": "Legal",
-    "url": "/llms.txt"
+    "url": "/industries/lawyers"
   },
   {
     "slug": "mortgage-brokers",
@@ -105,7 +105,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Borrowers research their options before speaking to a broker. They want to understand what you offer, who you work with, and whether you have experience with their type of loan. A professional website that answers these questions and makes it easy to get in touch turns online visitors into booked consultations.",
     "keywords": "mortgage broker website design, broker website, mortgage broker web design, website for mortgage brokers",
     "industry": "Mortgage Broking",
-    "url": "/llms.txt"
+    "url": "/industries/mortgage-brokers"
   },
   {
     "slug": "painters",
@@ -114,7 +114,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Painting is one of the most competitive trades online. Dozens of painters serve every suburb, and most of their websites look identical — a few job photos, a phone number, and a generic quote form. The painters winning the best work online are the ones whose websites communicate expertise, not just availability.",
     "keywords": "painter website design, painting website, painter web design, website for painters",
     "industry": "Painting",
-    "url": "/llms.txt"
+    "url": "/industries/painters"
   },
   {
     "slug": "pest-control",
@@ -123,7 +123,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Pest control searches are some of the most urgent and emotional on Google. Someone who has just found termite damage or a rat in their kitchen is not casually browsing — they need a professional, now. Your website has seconds to establish trust and make contact effortless, or they hit the back button and call your competitor instead.",
     "keywords": "pest control website design, pest control website, pest control web design, website for pest control",
     "industry": "Pest Control",
-    "url": "/llms.txt"
+    "url": "/industries/pest-control"
   },
   {
     "slug": "photographers",
@@ -132,7 +132,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Photography is a visual business. Your website is your portfolio, your shopfront, and your booking system all in one. Potential clients judge your skills by your online presence — if your website does not look exceptional, they will assume your photography does not either.",
     "keywords": "photographer website design, photography website, photographer web design, website for photographers",
     "industry": "Photography",
-    "url": "/llms.txt"
+    "url": "/industries/photographers"
   },
   {
     "slug": "physiotherapy",
@@ -141,7 +141,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Patients choose their physiotherapist based on location, specialisation, and trust. Whether they have been referred by a GP or are searching on their own, your website is often the first place they look. A clear, professional site with online booking and detailed condition information converts visitors into patients.",
     "keywords": "physiotherapy website design, physio website, physiotherapist web design, website for physiotherapists",
     "industry": "Physiotherapy",
-    "url": "/llms.txt"
+    "url": "/industries/physiotherapy"
   },
   {
     "slug": "plumbers",
@@ -150,7 +150,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Plumbing websites need to do two completely different jobs at once — catch the panicked homeowner with water pouring across their kitchen floor, and attract the couple planning a bathroom renovation who will spend weeks comparing options. We build plumbing websites that handle both, with distinct user journeys that convert each type of visitor into a lead.",
     "keywords": "plumber website design, plumbing website, plumber web design, website for plumbers",
     "industry": "Plumbing",
-    "url": "/llms.txt"
+    "url": "/industries/plumbers"
   },
   {
     "slug": "property-maintenance",
@@ -159,7 +159,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Property maintenance businesses do not sell to homeowners scrolling on their phone. Your buyers are strata managers juggling 200-unit complexes, real estate agencies with rental portfolios, and facilities managers with procurement processes. Your website needs to function like a tender document as much as a marketing tool — communicating capability, compliance, and reliability to people who evaluate contractors for a living.",
     "keywords": "property maintenance website design, property maintenance website, handyman web design, website for property maintenance",
     "industry": "Property Maintenance",
-    "url": "/llms.txt"
+    "url": "/industries/property-maintenance"
   },
   {
     "slug": "real-estate",
@@ -168,7 +168,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Real estate is fiercely competitive. Vendors choose their agent based on local expertise, track record, and professionalism. Your website is where potential vendors and landlords assess whether you are the right agent for their property — before they ever meet you.",
     "keywords": "real estate website design, real estate agent website, real estate web design, website for real estate agents",
     "industry": "Real Estate",
-    "url": "/llms.txt"
+    "url": "/industries/real-estate"
   },
   {
     "slug": "roofers",
@@ -177,7 +177,7 @@ export const INDUSTRY_PAGES = [
     "intro": "Roofing is the one trade where customers literally cannot see the work from the ground. That makes your website the primary way homeowners evaluate your quality, experience, and professionalism. When a storm hits or tiles start cracking, the roofer with the strongest online presence wins the job.",
     "keywords": "roofer website design, roofing website, roofer web design, website for roofers",
     "industry": "Roofing",
-    "url": "/llms.txt"
+    "url": "/industries/roofers"
   }
 ];
 
@@ -225,7 +225,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design adelaide, adelaide web design, website design adelaide, adelaide website designer, small business website adelaide",
     "location": "Adelaide",
     "region": "South Australia",
-    "url": "/llms.txt"
+    "url": "/locations/adelaide"
   },
   {
     "slug": "armadale",
@@ -235,7 +235,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design armadale, armadale web design, website design armadale, armadale website designer",
     "location": "Armadale",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/armadale"
   },
   {
     "slug": "brisbane",
@@ -245,7 +245,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design brisbane, brisbane web design, website design brisbane, brisbane website designer, small business website brisbane",
     "location": "Brisbane",
     "region": "Queensland",
-    "url": "/llms.txt"
+    "url": "/locations/brisbane"
   },
   {
     "slug": "canning-vale",
@@ -255,7 +255,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design canning vale, canning vale web design, website design canning vale, canning vale website designer",
     "location": "Canning Vale",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/canning-vale"
   },
   {
     "slug": "fremantle",
@@ -265,7 +265,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design fremantle, fremantle web design, website design fremantle, freo website designer",
     "location": "Fremantle",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/fremantle"
   },
   {
     "slug": "gold-coast",
@@ -275,7 +275,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design gold coast, gold coast web design, website design gold coast, gold coast website designer, small business website gold coast",
     "location": "Gold Coast",
     "region": "Queensland",
-    "url": "/llms.txt"
+    "url": "/locations/gold-coast"
   },
   {
     "slug": "joondalup",
@@ -285,7 +285,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design joondalup, joondalup web design, website design joondalup, joondalup website designer",
     "location": "Joondalup",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/joondalup"
   },
   {
     "slug": "mandurah",
@@ -295,7 +295,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design mandurah, mandurah web design, website design mandurah, mandurah website designer",
     "location": "Mandurah",
     "region": "Western Australia",
-    "url": "/llms.txt"
+    "url": "/locations/mandurah"
   },
   {
     "slug": "melbourne",
@@ -305,7 +305,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design melbourne, melbourne web design, website design melbourne, melbourne website designer, small business website melbourne",
     "location": "Melbourne",
     "region": "Victoria",
-    "url": "/llms.txt"
+    "url": "/locations/melbourne"
   },
   {
     "slug": "midland",
@@ -315,7 +315,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design midland, midland web design, website design midland, midland website designer",
     "location": "Midland",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/midland"
   },
   {
     "slug": "osborne-park",
@@ -325,7 +325,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design osborne park, osborne park web design, website design osborne park, osborne park website designer",
     "location": "Osborne Park",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/osborne-park"
   },
   {
     "slug": "perth",
@@ -335,7 +335,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design perth, perth web design, website design perth, perth website designer",
     "location": "Perth",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/perth"
   },
   {
     "slug": "rockingham",
@@ -345,7 +345,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design rockingham, rockingham web design, website design rockingham, rockingham website designer",
     "location": "Rockingham",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/rockingham"
   },
   {
     "slug": "sydney",
@@ -355,7 +355,7 @@ export const LOCATION_PAGES = [
     "keywords": "web design sydney, sydney web design, website design sydney, sydney website designer, small business website sydney",
     "location": "Sydney",
     "region": "New South Wales",
-    "url": "/llms.txt"
+    "url": "/locations/sydney"
   },
   {
     "slug": "wanneroo",
@@ -365,6 +365,6 @@ export const LOCATION_PAGES = [
     "keywords": "web design wanneroo, wanneroo web design, website design wanneroo, wanneroo website designer",
     "location": "Wanneroo",
     "region": "Perth",
-    "url": "/llms.txt"
+    "url": "/locations/wanneroo"
   }
 ];
