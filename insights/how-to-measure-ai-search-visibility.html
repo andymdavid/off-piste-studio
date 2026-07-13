@@ -95,10 +95,10 @@
         <section class="insight-article__body"><div class="insight-article__body-inner">
           <h2 class="insight-article__section-title">Start with the buyer problem</h2>
 <p>The commercial question is rarely &quot;are we visible in AI?&quot; in the abstract. It&#39;s usually sharper than that. A buyer is asking ChatGPT, Perplexity, Google AI Overviews, AI Mode, or another answer engine who they should shortlist. Your business may be omitted, mentioned with thin proof, described in old language, or grouped with competitors that look clearer because their sites explain the offer better.</p>
-<p>That makes AI visibility measurement a diagnosis job before it becomes a tools job. A dashboard helps only when the team knows what it is measuring. The aim is to see whether AI systems can find the right evidence, connect it to the buyer problem, and represent the business accurately.</p>
+<p>That makes AI visibility measurement a diagnosis job before it becomes a tools job. A dashboard helps only when the team knows what it&#39;s measuring. The aim is to see whether AI systems can find the right evidence, connect it to the buyer problem, and represent the business accurately.</p>
 <p>For a service business or professional firm, the audit should answer whether the business is mentioned for the prompts that matter, whether it&#39;s cited by name, whether the answer is accurate about services and geography, whether useful pages can be accessed, and whether AI-influenced searches or enquiries look commercially better over time.</p>
 <p>That keeps the work grounded and stops the conversation becoming a vague score that moves around every time a model, prompt, location, or source set changes.</p>
-<h2 class="insight-article__section-title">Measure More Than One Score</h2>
+<h2 class="insight-article__section-title">Measure Across Several Signals</h2>
 <p>Generated answers vary by platform, prompt wording, location, timing, account context, source access, and retrieval method. A single screenshot proves only that something happened once. A stable measurement system needs repeated checks.</p>
 <p>Google says its AI Overviews and AI Mode use the same broad Search foundations as the rest of Google Search, with no additional technical requirements, no special AI text files, and no special schema needed for eligibility (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central</a>). Google also says AI features can use query fan-out, which means the system may issue multiple related searches across subtopics and data sources before forming an answer (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central</a>).</p>
 <p>One exact keyword is too narrow. A useful audit measures groups of buyer prompts, related questions, comparison scenarios, local modifiers, and proof-seeking searches. The goal is to see whether the business is consistently findable, accurately represented, and supported by sources a buyer would trust.</p>
@@ -133,6 +133,7 @@
 </tr>
 </tbody></table>
 <p>The higher levels are slower to collect, but more useful. Screenshots can start a conversation. Logs, citations, Search Console trends, referral traffic, and enquiry quality help decide what to change.</p>
+<p>Dedicated Google reporting now gives teams a stronger Google-specific layer. It works best beside prompts, citations, crawler logs, analytics, and commercial signals.</p>
 <h2 class="insight-article__section-title">Build a prompt set around buyer decisions</h2>
 <p>Start with prompts a real buyer would use before they know what to buy or who to trust. Keep the set small enough to repeat monthly. A bloated prompt library becomes hard to maintain and easy to over-interpret.</p>
 <p>Use six groups.</p>
@@ -231,6 +232,10 @@
 <td>What the answer needed but could not find</td>
 </tr>
 <tr>
+<td>Google report access</td>
+<td>Whether the Search Console property has dedicated generative AI reports available</td>
+</tr>
+<tr>
 <td>Next action</td>
 <td>Fix content, source quality, access, positioning, or tracking</td>
 </tr>
@@ -239,6 +244,7 @@
 <h2 class="insight-article__section-title">Separate mentions, citations, and recommendations</h2>
 <p>A brand mention, a citation, and a recommendation are different signals.</p>
 <p>A mention means the system knows the business exists or has seen it in a source. A cited source means the answer is leaning on a page, profile, review, article, or directory. A recommendation means the answer is actively positioning the business as a fit for the buyer&#39;s need.</p>
+<p>Google reporting can show whether pages appeared in Google&#39;s generative AI features. Answer quality still needs prompt checks, citation review, analytics, and sales feedback because the report won&#39;t show whether an answer recommended the business with the right proof, described the offer accurately, or sent a qualified buyer.</p>
 <p>The gaps matter.</p>
 <table>
 <thead>
@@ -278,22 +284,68 @@
 <p>When the audit finds access issues, link the finding to the likely cause. A key service page may be missing from the index. Useful proof may be hidden in images, scripts, PDFs, or inaccessible components. A WAF rule may block a crawler needed for retrieval. robots.txt may allow one class of access while blocking another. The page may load for humans while returning poor text to crawlers. Internal links may also make priority pages harder to discover.</p>
 <p>If the issue is structure, the repair may sit with <a href="/services/website-design">website design</a> alongside content work. If the issue is search interpretation, internal linking, citations, or topic coverage, it belongs in <a href="/services/seo">SEO</a>.</p>
 <h2 class="insight-article__section-title">Use Google data carefully</h2>
-<p>Google measurement needs its own handling because AI features sit inside Search rather than in a standalone report. Google says sites appearing in AI Overviews and AI Mode are included in overall Search Console traffic, specifically within the Performance report&#39;s Web search type (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central</a>).</p>
-<p>Use Search Console as broad Search performance data, not as a dedicated AI Overview tracker. Watch query groups, landing pages, impressions, clicks, country, device, and topic movement. Pair it with manual AI feature checks, analytics, and lead data.</p>
+<p>Google measurement needs its own handling because AI features are part of Search, but the reporting layer has changed.</p>
+<p>On 3 June 2026, Google announced dedicated Search Generative AI performance reports in Search Console, including separate views for Search and Discover generative AI features (<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">Google Search Central Blog</a>). Google said the new reports show impressions, pages, countries, devices for Search results, and dates, with hourly, daily, weekly, and monthly views where available (<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">Google Search Central Blog</a>).</p>
+<p>The access caveat matters. Google said the reports were initially rolling out to a subset of websites, so wait to rebuild reporting assumptions until the Search Console property has access (<a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">Google Search Central Blog</a>).</p>
+<blockquote class="insight-article__quote"><p>Check availability first. If the dedicated reports have not reached your property yet, keep using normal Search Console performance data, manual AI feature checks, prompt audits, analytics, and crawler logs until access appears.</p>
+</blockquote>
+<p>Google&#39;s documentation still says pages need normal Search eligibility for AI Overviews and AI Mode. A page must be indexed and eligible to show with a snippet, with no additional technical requirements for those supporting links (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central</a>). Google also says sites appearing in AI features are included in overall Search Console traffic in the Web search type (<a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central</a>).</p>
+<p>That gives you two useful Google layers. The overall Performance report remains the broad Search trend view. The dedicated generative AI reports, when available, are the better view for Google-specific AI visibility.</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Shows</th>
+<th>Limits</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Search Generative AI reports</td>
+<td>Whether URLs appeared in Google&#39;s generative AI features, with views such as impressions, pages, countries, devices, and dates</td>
+<td>Limited rollout, Google-only, and focused on visibility rather than recommendation quality</td>
+</tr>
+<tr>
+<td>Manual Google AI feature checks</td>
+<td>What AI Overviews or AI Mode actually say for priority queries</td>
+<td>Sampled, time-sensitive, and affected by location, account context, and wording</td>
+</tr>
+<tr>
+<td>Prompt audits across answer engines</td>
+<td>Mentions, citations, positioning, and answer quality across buyer questions</td>
+<td>Needs a stable prompt set and human judgement</td>
+</tr>
+<tr>
+<td>Crawler and server logs</td>
+<td>Whether search and AI crawlers can reach important pages</td>
+<td>Access proves reachability rather than citation, trust, or commercial impact</td>
+</tr>
+<tr>
+<td>Analytics referrals and branded demand</td>
+<td>Whether answer engines, branded searches, or returning visitors are changing</td>
+<td>Attribution is partial because many buyers search again or arrive later</td>
+</tr>
+<tr>
+<td>Lead-quality signals</td>
+<td>Whether enquiries are better informed and closer to the right service</td>
+<td>Slower to collect and needs sales notes or CRM discipline</td>
+</tr>
+</tbody></table>
+<p>Use the Google report when the question is &quot;are our pages appearing more often in Google&#39;s generative AI features?&quot; Use prompt tracking when the question is &quot;does the answer describe and cite us properly?&quot; Use crawler logs when the question is &quot;can the systems access the pages they would need?&quot; Use lead-quality review when the question is &quot;is this visibility helping the right buyers move forward?&quot;</p>
 <p>For Google-focused context, read our article on <a href="/insights/google-sge-and-seo">AI Overviews and SEO</a>. The terminology has moved from SGE into AI Overviews and AI Mode, so use current language when reporting or briefing internal teams.</p>
-<p>Practical Google checks should focus on branded query movement, comparison topics, local searches, proof-seeking searches, and pages that gain impressions while losing clicks. Look closely at queries where Google compresses generic information into an answer, then compare them with pages that still earn clicks because they add proof, examples, pricing context, or local detail.</p>
+<p>Practical Google checks should focus on branded query movement, comparison topics, local searches, proof-seeking searches, and pages that gain impressions while losing clicks. Look closely at queries where Google compresses generic information into an answer, then compare them with pages that still earn clicks because they add proof, examples, pricing context, or local detail. The wider <a href="/insights/small-business-seo-guide-2026">small business SEO</a> work still matters because AI reporting sits on top of clear services, useful pages, local relevance, and commercial intent.</p>
 <p>The useful question is whether the pages that matter are still being discovered, understood, and chosen across the query groups that influence revenue.</p>
 <h2 class="insight-article__section-title">Look for referral and lead-quality signals</h2>
 <p>AI visibility reaches beyond a search report. Some buyers click a cited source. Others remember the brand and search later. Some arrive through answer-engine referrals or mention in an enquiry that they already compared providers.</p>
 <p>Track signals that show better-informed demand: identifiable referral traffic from answer engines, server log events from AI crawlers and user-triggered fetches, branded search increases after content or PR activity, enquiries that mention specific services or case studies, higher conversion rates on service and proof pages, and sales calls where prospects arrive with better context.</p>
+<p>SparkToro&#39;s 2026 zero-click research is useful context here because it reinforces a practical reporting problem: many search journeys never become a clean organic session, so sessions alone understate visibility and influence (<a href="https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/">SparkToro</a>). Use that as context, then bring the report back to citations, branded demand, referral quality, and leads.</p>
 <p>A site can lose some low-value informational clicks while gaining better-qualified enquiries. Every traffic decline still deserves investigation, but visibility should be judged against the work the website is meant to do: build trust, clarify fit, and help the right buyer take action.</p>
-<h2 class="insight-article__section-title">Place llms.txt in the low-confidence layer</h2>
+<h2 class="insight-article__section-title">Keep llms.txt as Supporting Evidence</h2>
 <p>An <code>llms.txt</code> file can clarify priority pages, canonical URLs, service language, and machine-readable context. Keep it in a supporting role while citations, crawler logs, referrals, branded demand, and lead quality do the heavier measurement work.</p>
 <p>The evidence is still cautious. Ahrefs analysed 137,189 websites with valid <code>llms.txt</code> files and found that 97% received no requests during May 2026 (<a href="https://ahrefs.com/blog/llmstxt-study/">Ahrefs</a>). Contentful also argues that there is not yet validated evidence that <code>llms.txt</code> reliably improves AI citation frequency, referral traffic, or answer inclusion (<a href="https://www.contentful.com/blog/llms-txt-search-visibility/">Contentful</a>).</p>
 <p>For measurement, <code>llms.txt</code> belongs in the low-confidence layer. Record whether the file exists, whether it&#39;s current, whether it&#39;s requested, and whether it points to the strongest pages. Then keep watching actual citations, crawler logs, referrals, branded demand, and lead quality.</p>
 <p>Off Piste&#39;s own <a href="/llms.txt"><code>llms.txt</code></a> and <a href="/llms-full.txt"><code>llms-full.txt</code></a> are examples of support files. They&#39;re useful housekeeping alongside crawlable pages, clear service content, structured proof, accessible HTML, and earned authority.</p>
 <h2 class="insight-article__section-title">Turn the audit into fixes</h2>
-<p>The value of the audit is the repair map. Every finding should point to an action.</p>
+<p>The audit&#39;s value is the repair map. Every finding should point to an action.</p>
 <table>
 <thead>
 <tr>
@@ -326,6 +378,10 @@
 <td>Review robots.txt, WAF rules, CDN settings, and bot-specific controls</td>
 </tr>
 <tr>
+<td>Dedicated Google generative AI reports are unavailable</td>
+<td>Keep manual Google AI feature checks and query-group reporting until the property has access</td>
+</tr>
+<tr>
 <td>Enquiries are low quality despite mentions</td>
 <td>Refine positioning, service boundaries, pricing context, and next steps</td>
 </tr>
@@ -335,6 +391,7 @@
 <h2 class="insight-article__section-title">Set a review rhythm</h2>
 <p>Repeat the audit on a cadence the business can maintain. Monthly is enough for most service businesses. Fortnightly can make sense during a launch, repositioning, migration, or active content campaign.</p>
 <p>Use the same prompt set, logging fields, and commercial signals. Add new prompts only when buyer behaviour changes or a new service matters. Keep a short notes field for model changes, website updates, PR mentions, reviews, and major search shifts.</p>
+<p>Once the dedicated Google report is available, review it on the same cadence. Note any significant reporting changes beside content refreshes, technical releases, PR mentions, reviews, and service-page updates so the trend has context.</p>
 <p>Act when the evidence repeats across more than one signal. A single odd answer is a watch item. Repeated omissions, missing citations for priority pages, blocked crawler evidence, and weak enquiries are business problems worth fixing.</p>
 <p>The decision rule is simple. Measure prompts to spot the issue. Use citations and source checks to understand the evidence gap. Use crawler logs and analytics to confirm access and demand. Use lead quality to decide whether visibility is moving the right buyers closer.</p>
 
