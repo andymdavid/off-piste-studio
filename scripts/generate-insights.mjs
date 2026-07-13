@@ -67,6 +67,11 @@ function renderMarkdown(markdown) {
   return marked.parse(markdown);
 }
 
+function parseListValue(value) {
+  if (!value) return [];
+  return value.split(',').map(item => item.trim()).filter(Boolean);
+}
+
 const headerHtml = `
   <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
     <div class="duplicate-header__layout">
@@ -108,11 +113,70 @@ const footerHtml = `
     <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
   </footer>`;
 
-function createArticleHtml(post) {
+function getRelatedPosts(post, allPosts, count = 3) {
+  const postsBySlug = new Map(allPosts.map(candidate => [candidate.slug, candidate]));
+  const manualPosts = post.relatedPosts
+    .map(slug => postsBySlug.get(slug))
+    .filter(Boolean)
+    .filter(candidate => candidate.slug !== post.slug);
+  const manualSlugs = new Set(manualPosts.map(candidate => candidate.slug));
+  const currentTags = new Set(post.tags);
+
+  const scoredPosts = allPosts
+    .filter(candidate => candidate.slug !== post.slug && !manualSlugs.has(candidate.slug))
+    .map(candidate => {
+      const sharedTags = candidate.tags.filter(tag => currentTags.has(tag)).length;
+      const sameCluster = post.cluster && candidate.cluster === post.cluster ? 1 : 0;
+
+      return {
+        post: candidate,
+        score: sameCluster * 100 + sharedTags * 10
+      };
+    })
+    .filter(candidate => candidate.score > 0)
+    .sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      return new Date(b.post.date) - new Date(a.post.date);
+    })
+    .map(candidate => candidate.post);
+
+  const selectedSlugs = new Set([...manualSlugs, ...scoredPosts.map(candidate => candidate.slug)]);
+  const fallbackPosts = allPosts
+    .filter(candidate => candidate.slug !== post.slug && !selectedSlugs.has(candidate.slug))
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+
+  return [...manualPosts, ...scoredPosts, ...fallbackPosts].slice(0, count);
+}
+
+function createRelatedPostCardHtml(post) {
+  const tagsHtml = post.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('');
+
+  return `<article class="related-posts__card insight-card">
+    <a href="/insights/${escapeHtml(post.slug)}" class="insight-card__link" aria-label="Read ${escapeHtml(post.title)}">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>${escapeHtml(post.readTime)}</span>
+          </div>
+          <div class="insight-card__tags">
+            ${tagsHtml}
+          </div>
+        </div>
+        <h3 class="insight-card__title">${escapeHtml(post.title)}</h3>
+        <p class="insight-card__description">${escapeHtml(post.description)}</p>
+      </div>
+    </a>
+  </article>`;
+}
+
+function createArticleHtml(post, allPosts) {
   const tagsHtml = post.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('');
   const updatedDateHtml = post.displayUpdatedDate
     ? ` <span class="insight-article__updated-date">(Updated ${escapeHtml(post.displayUpdatedDate)})</span>`
     : '';
+  const relatedPostsHtml = getRelatedPosts(post, allPosts)
+    .map(createRelatedPostCardHtml)
+    .join('');
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -188,7 +252,7 @@ ${headerHtml}
         </div></section>
       </div>
     </article>
-    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts>${relatedPostsHtml}</div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
   </main>
 ${footerHtml}
   <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
@@ -204,7 +268,7 @@ const posts = readdirSync(contentDir)
   .filter(file => file.endsWith('.md') && file !== 'README.md')
   .map(file => {
     const { data, body } = parseFrontmatter(readFileSync(resolve(contentDir, file), 'utf8'));
-    const tags = data.tags.split(',').map(tag => tag.trim()).filter(Boolean);
+    const tags = parseListValue(data.tags);
 
     return {
       slug: data.slug || basename(file, '.md'),
@@ -217,6 +281,8 @@ const posts = readdirSync(contentDir)
       displayUpdatedDate: data.updatedDate ? formatDate(data.updatedDate) : undefined,
       readTime: data.readTime,
       tags,
+      cluster: data.cluster || undefined,
+      relatedPosts: parseListValue(data.relatedPosts),
       image: data.image || undefined,
       imageAlt: data.imageAlt || data.title,
       html: renderMarkdown(body)
@@ -225,7 +291,7 @@ const posts = readdirSync(contentDir)
   .sort((a, b) => new Date(b.date) - new Date(a.date));
 
 posts.forEach(post => {
-  writeFileSync(resolve(insightsDir, `${post.slug}.html`), createArticleHtml(post));
+  writeFileSync(resolve(insightsDir, `${post.slug}.html`), createArticleHtml(post, posts));
 });
 
 const clientPosts = posts.map(({ html, ...post }) => ({

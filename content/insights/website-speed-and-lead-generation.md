@@ -6,6 +6,7 @@ intro: A slow website is not just a poor user experience. It is a lead generatio
 date: 2026-03-28
 readTime: 10 min read
 tags: Website Design, SEO, Performance
+cluster: Technical Website Foundations
 ---
 ## The numbers behind the problem
 

@@ -6,6 +6,7 @@ intro: Website pricing in Australia ranges from a few hundred dollars to well ov
 date: 2026-03-18
 readTime: 12 min read
 tags: Website Design, Pricing
+cluster: Website Investment And Selection
 ---
 ## The short answer most people are looking for
 

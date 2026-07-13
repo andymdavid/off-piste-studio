@@ -6,6 +6,7 @@ intro: SEO has changed significantly in the last two years, but the fundamentals
 date: 2026-03-24
 readTime: 14 min read
 tags: SEO, Small Business
+cluster: Search Strategy
 ---
 ## SEO fundamentals that still matter
 

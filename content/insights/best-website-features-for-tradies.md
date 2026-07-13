@@ -6,6 +6,7 @@ intro: Most tradie websites are either overbuilt with features nobody uses, or u
 date: 2026-03-12
 readTime: 10 min read
 tags: Website Design, Trades, Lead Generation
+cluster: Trades Website Lead Generation
 ---
 ## Why most tradie websites fail at generating leads
 

@@ -6,6 +6,7 @@ intro: Most tradies start with a Facebook page because it is free and easy. But 
 date: 2026-03-10
 readTime: 10 min read
 tags: SEO, Website Design, Trades
+cluster: Trades Website Lead Generation
 ---
 ## Tradie website vs Facebook page — why it matters
 

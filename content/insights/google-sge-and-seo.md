@@ -6,6 +6,8 @@ intro: Google now generates AI-powered answers at the top of most search results
 date: 2026-03-06
 readTime: 11 min read
 tags: SEO, AI
+cluster: AI Search Visibility
+relatedPosts: how-to-measure-ai-search-visibility, building-your-website-for-llms, small-business-seo-guide-2026
 ---
 ## What AI Overviews actually do
 

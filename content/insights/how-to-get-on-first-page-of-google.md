@@ -6,6 +6,7 @@ intro: Every small business owner wants to be on the first page of Google. The g
 date: 2026-03-22
 readTime: 13 min read
 tags: SEO, Small Business
+cluster: Local Search Visibility
 ---
 ## Understanding how Google decides who ranks first
 

@@ -6,6 +6,7 @@ intro: Design affects revenue long before a user clicks a button. It shapes how 
 date: 2026-03-04
 readTime: 10 min read
 tags: Brand Design, Website Design
+cluster: Commercial Website Strategy
 ---
 ## Design shapes decisions before the conversation starts
 

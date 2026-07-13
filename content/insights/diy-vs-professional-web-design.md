@@ -6,6 +6,7 @@ intro: DIY website builders like Squarespace and Wix have made it possible for a
 date: 2026-03-14
 readTime: 11 min read
 tags: Website Design, Small Business
+cluster: Website Investment And Selection
 ---
 ## The appeal of DIY website builders
 

@@ -6,6 +6,7 @@ intro: Accessibility and search performance share more common ground than most t
 date: 2026-03-02
 readTime: 10 min read
 tags: SEO, User Experience, Website Design
+cluster: Technical Website Foundations
 ---
 ## Why accessibility and SEO overlap
 

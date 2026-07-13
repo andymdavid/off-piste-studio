@@ -13,6 +13,7 @@ intro: Intro paragraph shown under the article title
 date: 2026-03-09
 readTime: 6 min read
 tags: SEO, AI
+cluster: AI Search Visibility
 ---
 ```
 
@@ -20,11 +21,16 @@ Optional frontmatter:
 
 ```md
 updatedDate: 2026-07-12
+relatedPosts: building-your-website-for-llms, google-sge-and-seo
 image: /images/insights/your-post-image.webp
 imageAlt: Short description of the image
 ```
 
 When provided, `updatedDate` appears subtly beside the original publish date on the article page and is used as `dateModified` in Article schema.
+
+When provided, `cluster` is used to choose related posts and strengthen internal linking around the topical map.
+
+When provided, `relatedPosts` pins specific insight slugs ahead of the automatic cluster and tag matching.
 
 When provided, `image` is used as the primary image for homepage/blog feeds before any fallback image mapping.
 

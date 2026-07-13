@@ -6,6 +6,7 @@ intro: A website redesign is one of the highest-impact investments a small busin
 date: 2026-03-26
 readTime: 10 min read
 tags: Website Design, Small Business
+cluster: Commercial Website Strategy
 ---
 ## How to know it is time for a redesign
 

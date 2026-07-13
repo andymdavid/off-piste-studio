@@ -7,6 +7,8 @@ date: 2026-03-08
 updatedDate: 2026-07-13
 readTime: 15 min read
 tags: SEO, AI, Website Design
+cluster: AI Search Visibility
+relatedPosts: how-to-measure-ai-search-visibility, google-sge-and-seo, website-accessibility-and-seo
 ---
 ## LLMs are now a meaningful audience
 

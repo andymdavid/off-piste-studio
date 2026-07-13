@@ -6,6 +6,7 @@ intro: Your Google Business Profile is often the first thing a potential custome
 date: 2026-03-16
 readTime: 12 min read
 tags: SEO, Local Business
+cluster: Local Search Visibility
 ---
 ## Why your Google Business Profile matters more than you think
 

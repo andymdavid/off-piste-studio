@@ -1384,16 +1384,33 @@ function initRelatedPosts() {
   const currentSlug = document.body.dataset.insightSlug;
 
   if (!relatedPostsRoot || !currentSlug) return;
+  if (relatedPostsRoot.children.length) return;
 
   const availablePosts = INSIGHT_POSTS.filter(post => post.slug !== currentSlug);
 
   if (!availablePosts.length) return;
 
-  const randomizedPosts = [...availablePosts]
-    .sort(() => Math.random() - 0.5)
+  const currentPost = INSIGHT_POSTS.find(post => post.slug === currentSlug);
+  const currentTags = new Set(currentPost?.tags || []);
+  const relatedSlugs = new Set(currentPost?.relatedPosts || []);
+
+  const relatedPosts = [...availablePosts]
+    .sort((a, b) => {
+      const aManual = relatedSlugs.has(a.slug) ? 1 : 0;
+      const bManual = relatedSlugs.has(b.slug) ? 1 : 0;
+      const aSameCluster = currentPost?.cluster && a.cluster === currentPost.cluster ? 1 : 0;
+      const bSameCluster = currentPost?.cluster && b.cluster === currentPost.cluster ? 1 : 0;
+      const aSharedTags = a.tags.filter(tag => currentTags.has(tag)).length;
+      const bSharedTags = b.tags.filter(tag => currentTags.has(tag)).length;
+      const aScore = aManual * 1000 + aSameCluster * 100 + aSharedTags * 10;
+      const bScore = bManual * 1000 + bSameCluster * 100 + bSharedTags * 10;
+
+      if (bScore !== aScore) return bScore - aScore;
+      return new Date(b.date) - new Date(a.date);
+    })
     .slice(0, 3);
 
-  randomizedPosts.forEach(post => {
+  relatedPosts.forEach(post => {
     relatedPostsRoot.appendChild(createRelatedPostCard(post));
   });
 }
