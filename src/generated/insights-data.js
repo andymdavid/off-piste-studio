@@ -170,11 +170,13 @@ export const INSIGHT_POSTS = [
   {
     "slug": "building-your-website-for-llms",
     "title": "Building Your Website for LLMs",
-    "description": "Your website now has two audiences. Humans and language models. How to structure content, implement llms.txt, and make your site readable by the AI tools people increasingly rely on.",
-    "intro": "Your website has always been built for people. Now it needs to work for language models too. AI chatbots, search tools, copilots, and recommendation engines are reading your site every day, and the way they interpret your content determines whether your business gets surfaced or ignored in an increasing share of discovery.",
+    "description": "How to make your website easier for AI search tools to understand, from crawlability and structured content to crawler access, schema, llms.txt, and measurement.",
+    "intro": "AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.",
     "date": "2026-03-08",
     "displayDate": "March 8, 2026",
-    "readTime": "14 min read",
+    "updatedDate": "2026-07-13",
+    "displayUpdatedDate": "July 13, 2026",
+    "readTime": "15 min read",
     "tags": [
       "SEO",
       "AI",

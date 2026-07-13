@@ -110,6 +110,9 @@ const footerHtml = `
 
 function createArticleHtml(post) {
   const tagsHtml = post.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('');
+  const updatedDateHtml = post.displayUpdatedDate
+    ? ` <span class="insight-article__updated-date">(Updated ${escapeHtml(post.displayUpdatedDate)})</span>`
+    : '';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -132,7 +135,8 @@ function createArticleHtml(post) {
         "description": ${JSON.stringify(post.description)},
 ${post.image ? `        "image": "https://offpistestudio.com${escapeHtml(post.image)}",\n` : ''}\
         "datePublished": "${escapeHtml(post.date)}",
-        "author": { "@type": "Organization", "name": "Off Piste Studio" },
+        "dateModified": "${escapeHtml(post.updatedDate || post.date)}",
+        "author": { "@type": "Person", "name": "Lara" },
         "publisher": {
           "@type": "Organization",
           "name": "Off Piste Studio",
@@ -169,7 +173,7 @@ ${headerHtml}
           <p class="insight-article__intro">${escapeHtml(post.intro)}</p>
         </div></section>
         <section class="insight-article__byline"><div class="insight-article__byline-inner">
-          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">${escapeHtml(post.displayDate)}</p></div></div>
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">${escapeHtml(post.displayDate)}${updatedDateHtml}</p></div></div>
           <div class="insight-article__share">
             <p class="insight-article__share-label">Share</p>
             <div class="insight-article__share-buttons">
@@ -209,6 +213,8 @@ const posts = readdirSync(contentDir)
       intro: data.intro,
       date: data.date,
       displayDate: formatDate(data.date),
+      updatedDate: data.updatedDate || undefined,
+      displayUpdatedDate: data.updatedDate ? formatDate(data.updatedDate) : undefined,
       readTime: data.readTime,
       tags,
       image: data.image || undefined,

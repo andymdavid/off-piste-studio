@@ -3185,8 +3185,16 @@ body[data-page-type="insight"][data-theme="light"] .insight-article__author-name
   margin-top: 0.1rem;
 }
 
+.insight-article__updated-date {
+  color: rgba(255, 255, 255, 0.32);
+}
+
 body[data-page-type="insight"][data-theme="light"] .insight-article__author-date {
   color: rgba(18, 18, 18, 0.46);
+}
+
+body[data-page-type="insight"][data-theme="light"] .insight-article__updated-date {
+  color: rgba(18, 18, 18, 0.34);
 }
 
 .insight-article__share {

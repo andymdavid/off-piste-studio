@@ -1,37 +1,81 @@
 ---
 title: Building Your Website for LLMs
 slug: building-your-website-for-llms
-description: Your website now has two audiences. Humans and language models. How to structure content, implement llms.txt, and make your site readable by the AI tools people increasingly rely on.
-intro: Your website has always been built for people. Now it needs to work for language models too. AI chatbots, search tools, copilots, and recommendation engines are reading your site every day, and the way they interpret your content determines whether your business gets surfaced or ignored in an increasing share of discovery.
+description: How to make your website easier for AI search tools to understand, from crawlability and structured content to crawler access, schema, llms.txt, and measurement.
+intro: AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.
 date: 2026-03-08
-readTime: 14 min read
+updatedDate: 2026-07-13
+readTime: 15 min read
 tags: SEO, AI, Website Design
 ---
 ## LLMs are now a meaningful audience
 
-A growing share of the questions people ask about businesses, products, and services are now answered by AI. ChatGPT, Perplexity, Google's AI Overviews, Microsoft Copilot, and dozens of other tools are pulling information from websites, synthesising it, and presenting it to users. When someone asks an AI assistant to recommend a web design agency in Perth, or to explain the difference between two types of service, the answer is built from web content.
+Discovery no longer happens only through a list of blue links. Buyers ask Google AI Overviews, AI Mode, ChatGPT Search, Perplexity, Microsoft Copilot, and other assistants to compress research into a usable answer. They ask who does the work, which provider looks credible, what a service includes, and what makes one option safer than another.
 
-That means your website is being read, interpreted, and represented by software you do not control. If your site is easy for these models to understand, your business is more likely to be mentioned, cited, and recommended. If your content is buried in complex layouts, vague marketing language, or poorly structured HTML, the model may misunderstand your offer or skip you entirely.
+That changes the job of your website. It still has to persuade humans, and it also has to give AI-assisted systems enough clear, crawlable evidence to represent the business accurately. The commercial risk includes omission, misunderstanding, reduction to a generic category, and comparison against competitors whose websites explain their services and proof more precisely.
 
-This is already happening at scale. AI-driven traffic is projected to grow from roughly 0.25% of search in 2024 to around 10% by the end of 2025. The businesses that show up in AI-generated answers are the ones with clear, well-structured, factual content that language models can parse confidently. This is a new channel of discovery and it is growing fast.
+Traffic alone is a weaker signal in this environment. SparkToro reported that in 2026 less than one third of Google searches still send a click, which reinforces the need to measure visibility through branded search, citations, referral quality, qualified leads, and buyer confidence as well as organic sessions ([SparkToro](https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/)).
+
+The practical goal is simple. The right buyer should be able to find, understand, trust, and compare your business. AI systems can only help with that when the underlying website is clear, current, and evidenced.
 
 ## How LLMs read your website
 
-Language models do not experience your website the way a human does. They do not see your hero image, notice your brand colours, or feel the effect of your animations. They read text, parse HTML structure, and extract meaning from the relationships between elements on the page.
+Language models and AI search systems do not experience a website the way a human does. They may crawl pages, render HTML, extract text, follow links, query search indexes, retrieve documents, and summarise the pieces that look relevant. The exact process depends on the platform, but the foundation is familiar.
 
-That means the things that matter most for LLM readability are the same things that have always mattered for good web development. Clean semantic HTML. Logical heading hierarchies. Descriptive link text. Well-written copy that says what the business does, who it serves, and what makes it different.
+Google's own guidance for AI Overviews and AI Mode says there are no additional technical requirements, no special AI text files, and no special schema.org markup required to appear in those features. Google points site owners back to normal Search eligibility, crawlability, indexability, snippet controls, internal links, textual content, and structured data that matches visible content ([Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)).
 
-Where LLMs differ from traditional search crawlers is in how deeply they process language. A search engine matches keywords and evaluates authority signals. A language model reads your content and builds a representation of what your business is, what it offers, and how it compares to alternatives. Vague, jargon-heavy, or overly clever copy that a human might tolerate will often confuse a language model. Clear, direct, factual writing performs best.
+That means the first layer of LLM readiness is still good web publishing:
 
-Page structure also matters more than many teams realise. When your content is organised with clear sections, descriptive headings, and a logical flow from topic to topic, the model can extract accurate information about each part of your offering. When everything is jumbled together or hidden behind JavaScript-rendered elements that require interaction to reveal, the model gets a fragmented or incomplete picture.
+1. Crawlable and indexable pages
+2. Important content available as text
+3. Semantic HTML with logical headings
+4. Descriptive internal links
+5. Clear entity information about the business, services, people, locations, and proof
+6. Structured data that matches the page
+7. Evidence-led content that goes beyond generic claims
+8. Thoughtful crawler access controls
+9. Optional llms.txt and markdown support
+10. Measurement across visibility, leads, and commercial quality
+
+Google's generative AI guidance also emphasises unique, valuable, expert-led content that goes beyond common knowledge ([Google Search Central](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)). That is important because generic content gives answer systems little reason to cite or trust one business over another.
+
+For Off Piste, this is where [website design](/services/website-design) and [SEO](/services/seo) overlap. Site architecture, page templates, content structure, technical search foundations, and measurement all shape whether a business is legible to people and machines.
+
+## Crawler access comes before llms.txt
+
+Before adding support files, decide what AI systems may access and why. Different bots have different jobs. Search visibility, model training, and user-triggered retrieval should not be treated as one setting.
+
+OpenAI separates `OAI-SearchBot` for ChatGPT search, `GPTBot` for training-related crawling, and `ChatGPT-User` for user-triggered actions. Its crawler documentation gives each crawler separate robots.txt handling ([OpenAI](https://developers.openai.com/api/docs/bots)).
+
+Perplexity makes a similar distinction. `PerplexityBot` supports website surfacing in Perplexity search results, while `Perplexity-User` handles user-triggered fetches. Perplexity also recommends using its current published IP ranges when teams manage access through a WAF or firewall ([Perplexity](https://docs.perplexity.ai/docs/resources/perplexity-crawlers)).
+
+Infrastructure teams now have more operational tooling for this. Cloudflare's AI Crawl Control lets site owners monitor AI crawler activity, set crawler-level allow or block rules, monitor robots.txt compliance, and explore pay-per-crawl options ([Cloudflare](https://developers.cloudflare.com/ai-crawl-control/)).
+
+| Crawler or token | Main role | Visibility relevance | Training relevance | User-triggered relevance | Control surface |
+| --- | --- | --- | --- | --- | --- |
+| `Googlebot` | Google Search crawling | High for Google Search and AI features built into Search | Not the training control | No | robots.txt, noindex, snippet controls, Search Console |
+| `Google-Extended` | Google product token for AI training and grounding controls | Google says Search inclusion and ranking continue to use separate systems | High | No | robots.txt product token |
+| `OAI-SearchBot` | ChatGPT search crawling | High for ChatGPT search | No | No | robots.txt |
+| `GPTBot` | OpenAI training-related crawling | Indirect | High | No | robots.txt |
+| `ChatGPT-User` | User-triggered OpenAI fetches | Depends on user requests | No | High | robots.txt and server access rules |
+| `PerplexityBot` | Perplexity search surfacing | High for Perplexity | No | No | robots.txt and WAF rules |
+| `Perplexity-User` | User-triggered Perplexity fetches | Depends on user requests | No | High | robots.txt and WAF rules |
+
+Google also documents that `Google-Extended` is a robots.txt product token rather than a separate HTTP user agent string, with Search crawling and ranking handled separately ([Google Crawling Infrastructure](https://developers.google.com/crawling/docs/crawlers-fetchers/google-common-crawlers)).
+
+The practical rule is to document the access decision, configure robots.txt and WAF rules carefully, and monitor logs. Blanket blocking can affect search surfacing, user-requested retrieval, or training use depending on the bot involved.
 
 ## The llms.txt standard
 
-One of the most practical steps a business can take is to implement an llms.txt file. This is a plain markdown file hosted at the root of your domain that gives language models a structured, curated summary of your most important content.
+An `llms.txt` file is a plain markdown file hosted at the root of your domain. It gives AI agents, assistants, and answer engines a curated guide to the pages and facts you consider most important.
 
-The concept was proposed by Jeremy Howard from Answer.AI in September 2024. Adoption was initially slow, but accelerated rapidly through late 2024 and into 2025 as companies like Anthropic, Cloudflare, Vercel, Cursor, and Astro adopted the format. It has since become a widely recognised convention, though it is worth noting that it is not yet an official standard. The IETF has launched an AI Preferences Working Group, but no formal specification has been ratified.
+The concept was proposed by Jeremy Howard from Answer.AI in September 2024. It has become a recognised convention in parts of the web and developer ecosystem. Its current role is best understood as a voluntary support format rather than an official search standard or ranking signal.
 
-Here is what an llms.txt file looks like in practice. This is a trimmed version of our own.
+The useful way to think about `llms.txt` is as one maintained layer in a wider visibility system. It can clarify positioning, services, canonical URLs, and priority pages. Its value is strongest when it points to crawlable pages, strong content, structured data, and search-ready technical foundations.
+
+That distinction matters because recent evidence is cautious. Ahrefs analysed 137,189 websites with valid `llms.txt` files and found that 97% received zero requests during May 2026 ([Ahrefs](https://ahrefs.com/blog/llmstxt-study/)). Contentful also argues that there is no validated evidence that `llms.txt` reliably improves AI citation frequency or search visibility ([Contentful](https://www.contentful.com/blog/llms-txt-search-visibility/)).
+
+Here is a trimmed version of Off Piste Studio's own file. It reflects the current positioning in our live [`llms.txt`](/llms.txt) and points agents to the fuller [`llms-full.txt`](/llms-full.txt) context.
 
 <div class="llms-demo">
   <div class="llms-demo__header">
@@ -41,136 +85,129 @@ Here is what an llms.txt file looks like in practice. This is a trimmed version 
   <div class="llms-demo__body">
     <div class="llms-demo__scroll"><span class="llms-h1"># Off Piste Studio</span>
 
-<span class="llms-quote">> Web design and branding agency for small businesses.
-> Based in Perth, WA, Australia. We build websites that
-> generate leads for local service businesses.</span>
+<span class="llms-quote">> AI-native design and technology studio helping ambitious
+> businesses turn expertise into trust, clarity and growth.</span>
 
-<span class="llms-h2">## Services</span>
+This file is a compact discovery index for AI agents,
+assistants and answer engines. For complete structured context,
+fetch:
 
-<span class="llms-bullet">-</span> <span class="llms-link">[Website Design]</span><span class="llms-url">(https://offpistestudio.com/services/website-design)</span>:
-  Custom website design for small businesses with lead
-  forms, click-to-call, local SEO, and mobile-responsive
-  layouts. Built to convert visitors into customers.
-<span class="llms-bullet">-</span> <span class="llms-link">[Local SEO]</span><span class="llms-url">(https://offpistestudio.com/services/local-seo)</span>:
-  Google Business Profile setup, local citations, suburb
-  pages, and Google Maps optimisation.
-<span class="llms-bullet">-</span> <span class="llms-link">[Brand Identity]</span><span class="llms-url">(https://offpistestudio.com/services/brand-identity)</span>:
-  Logo, brand guidelines, and visual identity for businesses
-  that want to look professional and trustworthy.
-<span class="llms-bullet">-</span> <span class="llms-link">[Landing Pages]</span><span class="llms-url">(https://offpistestudio.com/services/landing-pages)</span>:
-  High-converting landing pages for trades and service
-  businesses running Google or Meta ads.
+<span class="llms-bullet">-</span> <span class="llms-link">[Full agent context]</span><span class="llms-url">(https://offpistestudio.com/llms-full.txt)</span>:
+  machine-readable company profile, services, audience,
+  availability, pricing guidance, canonical URLs and usage notes.
 
-<span class="llms-h2">## How We Work</span>
+<span class="llms-h2">## Core Pages</span>
 
-<span class="llms-num">1.</span> Discovery call — understand your business, goals,
-   and audience
-<span class="llms-num">2.</span> Strategy & wireframes — plan the site structure,
-   pages, and conversion flow
-<span class="llms-num">3.</span> Design — build the visual design, brand-aligned
-   and mobile-first
-<span class="llms-num">4.</span> Development — build a fast, SEO-ready website
-   with lead capture built in
-<span class="llms-num">5.</span> Launch & support — go live with ongoing support
-   and optimisation
+<span class="llms-bullet">-</span> <span class="llms-link">[Home]</span><span class="llms-url">(https://offpistestudio.com/)</span>:
+  primary positioning, services, selected work, proof and calls to action.
+<span class="llms-bullet">-</span> <span class="llms-link">[Work]</span><span class="llms-url">(https://offpistestudio.com/work)</span>:
+  selected projects and examples of client work.
+<span class="llms-bullet">-</span> <span class="llms-link">[About]</span><span class="llms-url">(https://offpistestudio.com/about)</span>:
+  studio positioning, team and approach.
+<span class="llms-bullet">-</span> <span class="llms-link">[Insights]</span><span class="llms-url">(https://offpistestudio.com/resources)</span>:
+  articles and search, AI and design thinking.
 
-<span class="llms-h2">## About</span>
+<span class="llms-h2">## Preferred Positioning</span>
 
-<span class="llms-bullet">-</span> Based in City Beach, Perth, Western Australia
-<span class="llms-bullet">-</span> Serves clients across Australia, NZ, and internationally
-<span class="llms-bullet">-</span> 50+ projects delivered for small and medium businesses
-<span class="llms-bullet">-</span> <span class="llms-link">[About us]</span><span class="llms-url">(https://offpistestudio.com/about)</span>
-
-<span class="llms-h2">## Contact</span>
-
-<span class="llms-bullet">-</span> Email: hello@offpistestudio.com
-<span class="llms-bullet">-</span> <span class="llms-link">[Get in touch]</span><span class="llms-url">(https://offpistestudio.com/contact)</span></div>
+<span class="llms-bullet">-</span> Preferred summary: Off Piste Studio is an AI-native design
+  and technology studio for ambitious businesses.
+<span class="llms-bullet">-</span> The studio works across brand, websites, content structure,
+  search and AI-ready digital systems.
+<span class="llms-bullet">-</span> Pricing is scoped per project after discovery, with
+  recommendations based on commercial fit and project complexity.</div>
   </div>
 </div>
 
 ### How it differs from robots.txt and sitemap.xml
 
-These three files serve different purposes. Your sitemap.xml is the complete catalogue of every URL on your site. Your robots.txt marks which areas crawlers should and should not access. Your llms.txt is a curated reading list of the content that matters most.
+These files are easy to confuse because they sit near the root of a website and speak to crawlers or machines. They do different jobs.
 
-If your website were a library, the sitemap would be the full catalogue, robots.txt would mark the restricted shelves, and llms.txt would be the librarian's recommended reading list. It tells AI tools where to start and what deserves the most attention.
+| Format | Purpose | Primary audience | Strength | Limitation | Maintenance owner |
+| --- | --- | --- | --- | --- | --- |
+| `sitemap.xml` | Lists canonical URLs for discovery | Search engines | Helps crawlers find pages | Does not explain priority, meaning, or proof | SEO or development |
+| `robots.txt` | Gives crawler access instructions | Crawlers and bots | Controls allowed and disallowed paths | Cannot make weak content useful or visible | SEO, development, infrastructure |
+| `llms.txt` | Curates important pages and descriptions | AI agents and answer engines that choose to fetch it | Clarifies priority content and positioning | Direct citation impact is unproven | Content, SEO, strategy |
+| `llms-full.txt` | Provides fuller machine-readable context | AI agents and internal workflows | Gives a complete reference in one file | Can become stale if not generated or maintained | Content and development |
+| Page-level markdown exports | Presents individual pages in clean markdown | Agents, RAG systems, internal tools | Reduces extraction friction where supported | Must stay aligned with canonical HTML | Development and content |
+
+Each asset works best when the underlying page already carries the weight. A sitemap helps crawlers find the page. A robots.txt file gives access instructions. An `llms.txt` file clarifies priority and meaning. The page still needs to explain the claim, show the proof, and earn the trust.
 
 ### File format and structure
 
-The format is deliberately simple. The only required element is an H1 title. A well-structured file typically includes a brief blockquote summary of the business, followed by H2 sections that group your most important links with short descriptions.
+The format is deliberately simple. The only required element is an H1 title. A useful file usually includes a short blockquote summary, followed by H2 sections that group priority links with clear descriptions.
 
-A typical structure might include sections for services, key pages, guides, case studies, and reference material. Each link includes a brief description so the model understands what it will find before fetching the page. This is important because AI agents using llms.txt can reason about which pages to fetch based on those descriptions, rather than relying on guessing or keyword matching.
+The descriptions are the work. They should name services, audiences, locations, proof, and page purpose without stuffing every keyword into the file. A good `llms.txt` file tells an agent which pages matter and what it will find there. A weak one becomes another generic index.
 
-You can also include an "Optional" section for lower-priority resources that provide additional context but are not essential for understanding the business.
+Review the file whenever service positioning, pricing guidance, priority pages, or canonical URLs change. If the website has moved from local service language into a broader strategic design and technology position, the machine-readable summary needs to move with it.
 
 ### The three related formats
 
-The llms.txt proposal actually encompasses three related conventions that work together.
+There are three related support formats worth separating.
 
-The first is llms.txt itself, the core summary file hosted at your domain root. This is the starting point for any AI tool trying to understand your business. It should be concise enough that a model can process it in a single pass.
+`llms.txt` is the compact guide. It should stay concise enough to scan and maintain.
 
-The second is llms-full.txt, an extended version that compiles your most important content into a single markdown document. Where llms.txt provides the outline and links, llms-full.txt provides the full text. This gives language models a richer, more detailed understanding of your business without needing to crawl multiple pages. Data from analytics providers has shown that llms-full.txt files receive more than twice the visitor traffic of the standard llms.txt file, which suggests AI agents actively prefer the detailed version when available.
+`llms-full.txt` is the fuller reference. It can compile company context, services, audience fit, canonical URLs, and usage notes into one machine-readable document. It is useful when the team can keep it current, while evidence for universal agent preference remains limited.
 
-The third convention is the .md extension for individual pages. By making each page on your site accessible as clean markdown by appending .md to the URL, you give AI tools a way to fetch any specific page in the most efficient format possible. Companies that serve markdown versions of their pages report up to 10x reductions in token usage compared to parsing raw HTML. That efficiency matters because it means the model can process more of your content within its context limits and do so with fewer errors.
+Page-level markdown exports give individual pages a clean text version. They can be useful for internal tools, retrieval systems, and agents that can request markdown. They are only worth doing when the site can generate them reliably and keep them in sync with the canonical HTML.
 
 ### Why it matters commercially
 
-The practical value of llms.txt comes down to control and accuracy. Without it, AI tools piece together their understanding of your business from whatever they can find across your site. They may focus on the wrong pages, miss key services, or misrepresent your positioning. With a well-written llms.txt file, you are curating that understanding directly.
+The commercial value is accuracy. AI systems can only work with the evidence they can retrieve and interpret. If your offer is vague, your service pages are thin, your proof is scattered, or your crawler rules are inconsistent, the system has less to use when a buyer asks who to trust.
 
-Internal benchmarks from LangChain tested four approaches to feeding documentation to AI agents. Context stuffing, vector search retrieval, a basic llms.txt implementation, and an optimised llms.txt with descriptive context. The optimised llms.txt approach significantly outperformed the others because the agents could reason about which documentation to fetch based on the descriptions provided, rather than relying on semantic similarity matching.
+Machine-readable summaries help when they are grounded in strong pages. They can clarify what the business does, who it serves, what pages are canonical, and which claims should not be inferred from old content. That is useful operational housekeeping, especially for a business whose positioning has changed.
 
-That finding has direct implications for any business that wants AI tools to represent them accurately. The more structured and descriptive your llms.txt file is, the better the model's understanding of your business will be.
+Proof still carries the weight. Case studies, named services, outcomes, process, authorship, dates, credentials, FAQs, and third-party references give search systems and buyers something real to evaluate. The support files should point to that evidence and keep the important paths clear.
 
-### What llms.txt is not
+### Where llms.txt fits
 
-It is important to understand that llms.txt is not an SEO tool in the traditional sense. It will not improve your Google search rankings. Its value shows up in AI-powered search and discovery tools like ChatGPT, Perplexity, and Gemini, not in traditional search engine results pages.
+`llms.txt` works best as a maintained guide to priority content. It helps clarify which pages matter, what the business does, and which canonical URLs an agent should start with.
 
-If your primary concern is Google rankings, llms.txt will not move the needle. If your concern is how AI tools understand and recommend your business, it is one of the most direct levers you have.
+Its role is strongest when it points to strong underlying pages. Search visibility still depends on crawlable content, useful evidence, structured pages, current information, and platform-specific eligibility. Keep the file factual, keep it current, and treat it as one support layer inside a broader search and AI discovery system.
 
 ## Structured content and machine-readable formats
 
-Beyond llms.txt, there are broader content decisions that affect how well your site works for language models.
-
-### Markdown exports
-
-Making your key content available in clean markdown format gives language models and AI-powered tools the easiest possible version of your content to work with. Blog posts, service descriptions, and case studies exported as .md files can be consumed directly by RAG (retrieval-augmented generation) systems, which are the pipelines that feed relevant content into AI tools when they need to answer a question.
-
-If your content is locked inside complex HTML with deeply nested divs, inline styles, and JavaScript-dependent rendering, a language model has to work much harder to extract the useful information. A clean markdown version removes that friction entirely.
-
-### Schema markup
-
-Structured data using schema.org vocabulary helps both search engines and language models understand the type and context of your content. Article schema, Organisation schema, Service schema, FAQ schema, and Review schema all provide explicit metadata that a model can use to categorise and represent your content accurately.
-
-A page with strong schema markup is essentially telling language models exactly what the content is, who created it, when it was published, and what entities it relates to. That explicitness reduces the chance of misinterpretation.
+Beyond `llms.txt`, broader publishing decisions shape how well your site works for search systems and language models.
 
 ### Clean, accessible HTML
 
-The accessibility improvements described in our article on website accessibility and SEO apply here too. Semantic HTML, proper heading hierarchy, descriptive alt text, and clear form labels all make your content easier for language models to parse. The overlap between accessibility, SEO, and LLM readability is significant. Investing in clean markup pays dividends across all three.
+Clean HTML and accessible structure come first. Semantic elements, heading order, descriptive links, useful alt text, readable copy, and labelled forms all make a page easier to parse. They also help people navigate the site with less friction.
+
+The overlap with [website accessibility and SEO](/insights/website-accessibility-and-seo) is direct. The same structural clarity that helps assistive technology move through a page also helps crawlers and extraction systems understand what each section means.
+
+### Schema markup
+
+Structured data using schema.org vocabulary can help systems understand page type, authorship, organisation details, services, reviews, FAQs, and article metadata. The important word is "matching". Google specifically says structured data should match the visible text on the page and that no special schema is required for AI Overviews or AI Mode ([Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)).
+
+Use `Organization`, `Service`, `Article`, `FAQPage`, `Review`, and `LocalBusiness` schema where the page genuinely supports it. Schema should describe the visible page faithfully, so the structured data and human content stay aligned.
+
+### Markdown exports
+
+Clean markdown versions can reduce extraction friction for tools that use them. They work best when generated from the same source as the canonical page, so the markdown version stays aligned with the live content.
+
+For many businesses, markdown exports should come after the basics. Make the HTML page clear, indexable, internally linked, and useful first. Then add machine-readable formats where the workflow can maintain them properly.
 
 ## What this means for content strategy
 
-Writing for a dual audience of humans and language models is less of a compromise than it sounds. The content that performs best for LLMs is the same content that performs best for people. Clear, specific, well-organised information that says what you do and backs it up with evidence.
+Writing for humans and language models rewards the same discipline. The content that works best for both is clear, specific, well-organised, and supported by evidence.
 
-Vague brand messaging that sounds impressive but says nothing concrete is a problem for both audiences. A human scanning your site will struggle to understand your offer. A language model will either misrepresent you or skip you in favour of a competitor whose content is more specific.
+Vague brand language creates problems for both audiences. A human scanning the page struggles to understand the offer. A model trying to summarise the business has to fill gaps. Specific language gives both audiences something reliable to work with.
 
-The practical shift is toward content that states facts clearly. Instead of "we deliver transformative digital experiences," say "we design and build websites for service businesses, with a focus on lead generation and local SEO." The first version sounds like marketing. The second version gives both the human and the model something concrete to work with.
+Specific language gives buyers and models a firmer representation of the business. For example, "we combine brand strategy, website design, UX/UI, content structure, and technical SEO to help expertise-led businesses clarify value and convert the right attention into action" carries more useful meaning than a broad claim about digital experience.
 
-Case studies with specific outcomes are particularly valuable. A language model can extract "this agency increased enquiries by 40% for a plumbing business in Perth" and use that as a factual reference point. A vague testimonial about "great service" gives the model nothing useful.
+Proof architecture matters. Strong pages name the service, audience, problem, process, outcome, author, date, and evidence. Case studies with specific context are more useful than generic testimonials. FAQs are useful when they answer buyer questions directly rather than repeating keywords.
 
-FAQ content also performs well because it maps directly to the question-and-answer format that most AI interactions follow. If someone asks a chatbot a question that your FAQ page answers clearly, your content is likely to be surfaced. Structured Q&A content is one of the easiest ways to increase your visibility in AI-powered discovery.
-
-> The content that works best for language models is the same content that works best for people. Clear, factual, and specific.
+For Google specifically, this connects to the broader shift described in our article on [AI Overviews and SEO](/insights/google-sge-and-seo). Generic information is easier to compress. Specific proof, commercial judgement, and useful comparison context are harder to replace.
 
 ## Getting started
 
-Most businesses can start making their website more LLM-friendly with a few focused steps.
+Most businesses should build LLM readiness in four phases.
 
-- Create an llms.txt file at your domain root. Start with an H1 title and a blockquote summary of your business. Organise your most important pages under H2 sections with brief descriptions for each link. Keep it concise and factual.
-- Consider adding an llms-full.txt with the full text of your key pages compiled into a single markdown document. AI agents actively look for this file and use it more heavily than the standard version.
-- Review your most important pages for clarity. Read the copy and ask whether a language model could accurately summarise what you do from that text alone. If the answer is no, rewrite it.
-- Ensure your HTML is semantic and well-structured. Use proper heading levels, descriptive link text, and meaningful alt text on images.
-- Add schema markup to your key pages. At minimum, implement Organisation, Service, and Article schema where relevant.
-- Make your blog posts and key content available as markdown files. This makes your content directly consumable by RAG systems and AI tools with significantly lower token costs.
-- Write an FAQ section for your most common questions. Structure it with clear questions and direct answers that a language model can extract and reference.
-- Keep your content up to date. Language models value recency, and stale content is less likely to be cited or recommended.
+First, confirm the foundations. Check crawlability, indexability, page structure, and whether important content is available as text.
 
-The businesses that take these steps now will have an advantage as AI-driven discovery continues to grow. This is still early. Most websites are not optimised for language models at all, which means the opportunity for businesses that move first is significant. If you want a [website built with these foundations](/services/website-design) and an [SEO strategy](/services/seo) that accounts for both traditional search and AI discovery, that is exactly what we do.
+Second, strengthen the evidence. Update service pages, proof, pricing guidance, FAQs, author details, and internal links.
+
+Third, manage machine access. Review robots.txt, CDN rules, WAF rules, crawler logs, and AI crawler permissions.
+
+Fourth, add maintained support files. Create or refresh `llms.txt`, then add `llms-full.txt` or markdown exports where the team can keep them aligned with the site.
+
+A website becomes easier to recommend when its claims, structure, and evidence stay current. The maintenance is the point. AI search visibility comes from publishing a business clearly enough that people and machines can understand why it should be trusted.

@@ -2,5 +2,6 @@ node_modules
 dist
 .DS_Store
 *.log
+docs/private/
 public/images/cases/adammonk.png
 public/images/cases/crete.png

@@ -19,9 +19,12 @@ tags: SEO, AI
 Optional frontmatter:
 
 ```md
+updatedDate: 2026-07-12
 image: /images/insights/your-post-image.webp
 imageAlt: Short description of the image
 ```
+
+When provided, `updatedDate` appears subtly beside the original publish date on the article page and is used as `dateModified` in Article schema.
 
 When provided, `image` is used as the primary image for homepage/blog feeds before any fallback image mapping.
 
