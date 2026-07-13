@@ -36,6 +36,13 @@ Supported markdown in the body:
 - markdown tables when comparison is useful and every column has a short, scannable label
 - `> blockquotes`
 
+Editorial pass before publishing:
+
+- cut filler sentences, throat-clearing, repeated ideas, vague intensifiers, and generic transitions
+- keep a detail only when it changes the reader's understanding or decision
+- prefer concrete nouns, active verbs, and specific evidence over expansive explanation
+- if a paragraph says the same thing twice, keep the sharper version
+
 Then run:
 
 ```bash

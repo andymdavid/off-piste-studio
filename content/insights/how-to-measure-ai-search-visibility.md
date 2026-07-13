@@ -12,19 +12,19 @@ tags: SEO, AI
 
 The commercial question is rarely "are we visible in AI?" in the abstract. It's usually sharper than that. A buyer is asking ChatGPT, Perplexity, Google AI Overviews, AI Mode, or another answer engine who they should shortlist. Your business may be omitted, mentioned with thin proof, described in old language, or grouped with competitors that look clearer because their sites explain the offer better.
 
-That makes AI visibility measurement a diagnosis job before it becomes a tools job. A dashboard can be useful, but only if the team already knows what it is trying to measure. The aim is to understand whether AI systems can find the right evidence, connect it to the right buyer problem, and represent the business in a way that would help a real person make a decision.
+That makes AI visibility measurement a diagnosis job before it becomes a tools job. A dashboard helps only when the team knows what it is measuring. The aim is to see whether AI systems can find the right evidence, connect it to the buyer problem, and represent the business accurately.
 
 For a service business or professional firm, the audit should answer whether the business is mentioned for the prompts that matter, whether it's cited by name, whether the answer is accurate about services and geography, whether useful pages can be accessed, and whether AI-influenced searches or enquiries look commercially better over time.
 
-That keeps the work grounded. It also stops the conversation becoming a vague score that moves around every time a model, prompt, location, or source set changes.
+That keeps the work grounded and stops the conversation becoming a vague score that moves around every time a model, prompt, location, or source set changes.
 
 ## Measure More Than One Score
 
-Generated answers vary by platform, prompt wording, location, timing, account context, source access, and the way each system retrieves information. A single screenshot is evidence that something happened once. A stable measurement system needs repeated checks.
+Generated answers vary by platform, prompt wording, location, timing, account context, source access, and retrieval method. A single screenshot proves only that something happened once. A stable measurement system needs repeated checks.
 
 Google says its AI Overviews and AI Mode use the same broad Search foundations as the rest of Google Search, with no additional technical requirements, no special AI text files, and no special schema needed for eligibility ([Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)). Google also says AI features can use query fan-out, which means the system may issue multiple related searches across subtopics and data sources before forming an answer ([Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)).
 
-That matters for measurement. One exact keyword is too narrow. A useful audit measures groups of buyer prompts, related questions, comparison scenarios, local modifiers, and proof-seeking searches. The goal is a practical pattern that shows whether the business is consistently findable, accurately represented, and supported by sources that would make a buyer trust the answer.
+One exact keyword is too narrow. A useful audit measures groups of buyer prompts, related questions, comparison scenarios, local modifiers, and proof-seeking searches. The goal is to see whether the business is consistently findable, accurately represented, and supported by sources a buyer would trust.
 
 Use four measurement levels.
 
@@ -35,11 +35,11 @@ Use four measurement levels.
 | Access and log data | Whether crawlers, referrals, and user-triggered fetches reached the site | Medium to high |
 | Commercial signals | Whether branded demand, enquiries, and lead quality changed | High when repeated |
 
-The higher levels are slower to collect, but they are more useful. Screenshots can start a conversation. Logs, citations, Search Console trends, referral traffic, and enquiry quality help decide what to change.
+The higher levels are slower to collect, but more useful. Screenshots can start a conversation. Logs, citations, Search Console trends, referral traffic, and enquiry quality help decide what to change.
 
 ## Build a prompt set around buyer decisions
 
-Start with prompts a real buyer would use before they know what to buy, who to trust, or which questions to ask. Keep the prompt set small enough to repeat monthly. A bloated prompt library becomes hard to maintain and easy to over-interpret.
+Start with prompts a real buyer would use before they know what to buy or who to trust. Keep the set small enough to repeat monthly. A bloated prompt library becomes hard to maintain and easy to over-interpret.
 
 Use six groups.
 
@@ -58,7 +58,7 @@ Test more than the brand name. Branded prompts show whether the system understan
 
 ## Record what the answer actually does
 
-Measurement improves when the team records the same fields each time. The audit log should capture what was asked, what was answered, what was cited, and what a buyer would take away.
+Measurement improves when the team records the same fields each time. The audit log should capture the prompt, answer, citations, and likely buyer takeaway.
 
 | Field | Record |
 | --- | --- |
@@ -75,13 +75,13 @@ Measurement improves when the team records the same fields each time. The audit 
 | Evidence gap | What the answer needed but could not find |
 | Next action | Fix content, source quality, access, positioning, or tracking |
 
-This is where a visibility tool can help, especially if it tracks prompts over time. The tool is still only useful if the prompt set reflects how buyers actually decide. A neat chart built on weak prompts creates false confidence.
+Visibility tools can help when they track prompts over time. They still need a prompt set that reflects how buyers decide. A neat chart built on weak prompts creates false confidence.
 
 ## Separate mentions, citations, and recommendations
 
 A brand mention, a citation, and a recommendation are different signals.
 
-A mention means the system knows the business exists or has seen it in a source. That can be useful, but it may not be enough to influence a shortlist. A cited source means the answer is leaning on a page, profile, review, article, or directory. A recommendation means the answer is actively positioning the business as a fit for the buyer's need.
+A mention means the system knows the business exists or has seen it in a source. A cited source means the answer is leaning on a page, profile, review, article, or directory. A recommendation means the answer is actively positioning the business as a fit for the buyer's need.
 
 The gaps matter.
 
@@ -92,55 +92,55 @@ The gaps matter.
 | Recommended with thin proof | The answer sounds positive but gives the buyer little reason to trust it | Add case studies, reviews, outcomes, process, and author context |
 | Competitors cited instead | Other sources explain the category or decision better | Build stronger comparison, service, and proof content |
 
-This is also where [AI-ready website foundations](/insights/building-your-website-for-llms) become practical. If an audit shows weak source quality, unclear service pages, blocked crawlers, or thin proof, the fix usually sits in the content system and site structure beyond the measurement tool.
+This is where [AI-ready website foundations](/insights/building-your-website-for-llms) become practical. If an audit shows weak source quality, unclear service pages, blocked crawlers, or thin proof, the fix usually sits in the content system and site structure.
 
 ## Check whether AI systems can access the site
 
-If answer engines have limited access to important pages, the visibility audit will keep finding gaps that need technical investigation as well as content work. Check crawlability, indexability, robots.txt, CDN settings, WAF rules, server responses, and whether key pages are available as text.
+If answer engines have limited access to important pages, the audit will keep finding gaps. Check crawlability, indexability, robots.txt, CDN settings, WAF rules, server responses, and whether key pages are available as text.
 
 OpenAI separates its crawlers by job. `OAI-SearchBot` is used for search products, `GPTBot` is used for model training, and `ChatGPT-User` supports user-triggered requests ([OpenAI](https://developers.openai.com/api/docs/bots)). Perplexity also separates `PerplexityBot`, which supports website surfacing in Perplexity search results, from `Perplexity-User`, which handles user-triggered fetches, and it recommends using current published IP ranges when configuring WAF rules ([Perplexity](https://docs.perplexity.ai/docs/resources/perplexity-crawlers)).
 
-Those distinctions matter because a business may choose different access rules for search visibility, training, and live user retrieval. Treating every AI crawler as one category can create noisy conclusions.
+Those distinctions matter because a business may choose different access rules for search visibility, training, and live user retrieval. Treating every AI crawler as one category creates noisy conclusions.
 
-Infrastructure data is more reliable than a one-off answer check. Cloudflare's AI Crawl Control can monitor AI crawler activity, set crawler-level rules, monitor robots.txt compliance, and inspect crawler behaviour through its dashboard ([Cloudflare](https://developers.cloudflare.com/ai-crawl-control/)). Similar checks can come from server logs, CDN logs, Search Console, and analytics data.
+Infrastructure data is more reliable than a one-off answer check. Cloudflare's AI Crawl Control can monitor AI crawler activity, set crawler-level rules, monitor robots.txt compliance, and inspect crawler behaviour through its dashboard ([Cloudflare](https://developers.cloudflare.com/ai-crawl-control/)). Server logs, CDN logs, Search Console, and analytics data can fill in the same picture.
 
-When the audit finds access issues, link the measurement finding to the likely cause. A key service page may be missing from the index. Useful proof may be hidden in images, scripts, PDFs, or inaccessible components. A WAF rule may block a crawler needed for retrieval. robots.txt may allow one class of access while blocking another. The page may load for humans while returning poor text to crawlers. Internal links may also make priority pages harder to discover.
+When the audit finds access issues, link the finding to the likely cause. A key service page may be missing from the index. Useful proof may be hidden in images, scripts, PDFs, or inaccessible components. A WAF rule may block a crawler needed for retrieval. robots.txt may allow one class of access while blocking another. The page may load for humans while returning poor text to crawlers. Internal links may also make priority pages harder to discover.
 
 If the issue is structure, the repair may sit with [website design](/services/website-design) alongside content work. If the issue is search interpretation, internal linking, citations, or topic coverage, it belongs in [SEO](/services/seo).
 
 ## Use Google data carefully
 
-Google measurement needs its own handling because Google AI features sit inside Search rather than in a clean standalone report. Google says sites appearing in AI Overviews and AI Mode are included in overall Search Console traffic, specifically within the Performance report's Web search type ([Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)).
+Google measurement needs its own handling because AI features sit inside Search rather than in a standalone report. Google says sites appearing in AI Overviews and AI Mode are included in overall Search Console traffic, specifically within the Performance report's Web search type ([Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)).
 
-Use Search Console as broad Search performance data, not as a dedicated AI Overview tracker. Watch query groups, landing pages, impressions, clicks, country, device, and topic-level movement. Pair it with manual AI feature checks, analytics, and lead data.
+Use Search Console as broad Search performance data, not as a dedicated AI Overview tracker. Watch query groups, landing pages, impressions, clicks, country, device, and topic movement. Pair it with manual AI feature checks, analytics, and lead data.
 
 For Google-focused context, read our article on [AI Overviews and SEO](/insights/google-sge-and-seo). The terminology has moved from SGE into AI Overviews and AI Mode, so use current language when reporting or briefing internal teams.
 
-Practical Google checks should focus on branded query movement, impressions and clicks for comparison topics, local searches, proof-seeking searches, and pages that gain impressions while losing clicks. Look closely at queries where Google compresses generic information into an answer, then compare them with pages that still earn clicks because they add proof, examples, pricing context, or local detail.
+Practical Google checks should focus on branded query movement, comparison topics, local searches, proof-seeking searches, and pages that gain impressions while losing clicks. Look closely at queries where Google compresses generic information into an answer, then compare them with pages that still earn clicks because they add proof, examples, pricing context, or local detail.
 
 The useful question is whether the pages that matter are still being discovered, understood, and chosen across the query groups that influence revenue.
 
 ## Look for referral and lead-quality signals
 
-AI visibility reaches beyond a search report. Some buyers will click a cited source. Others will remember the brand and search later. Some will arrive through referrals from answer engines. Some will mention in an enquiry that they already compared providers before contacting you.
+AI visibility reaches beyond a search report. Some buyers click a cited source. Others remember the brand and search later. Some arrive through answer-engine referrals or mention in an enquiry that they already compared providers.
 
-Track the signals that show better-informed demand. That includes identifiable referral traffic from answer engines, server log events from AI crawlers and user-triggered fetches, branded search increases after content or PR activity, enquiries that mention specific services or case studies, higher conversion rates on service and proof pages, and sales calls where prospects arrive with better context.
+Track signals that show better-informed demand: identifiable referral traffic from answer engines, server log events from AI crawlers and user-triggered fetches, branded search increases after content or PR activity, enquiries that mention specific services or case studies, higher conversion rates on service and proof pages, and sales calls where prospects arrive with better context.
 
-This is where the commercial view matters. A site can lose some low-value informational clicks while gaining better-qualified enquiries. Every traffic decline still deserves investigation, and visibility should be judged against the work the website is meant to do, which is build trust, clarify fit, and help the right buyer take action.
+A site can lose some low-value informational clicks while gaining better-qualified enquiries. Every traffic decline still deserves investigation, but visibility should be judged against the work the website is meant to do: build trust, clarify fit, and help the right buyer take action.
 
 ## Place llms.txt in the low-confidence layer
 
-An `llms.txt` file can be useful as a maintained support asset. It can clarify priority pages, canonical URLs, service language, and machine-readable context. Keep it in a supporting role while citations, crawler logs, referrals, branded demand, and lead quality do the heavier measurement work.
+An `llms.txt` file can clarify priority pages, canonical URLs, service language, and machine-readable context. Keep it in a supporting role while citations, crawler logs, referrals, branded demand, and lead quality do the heavier measurement work.
 
 The evidence is still cautious. Ahrefs analysed 137,189 websites with valid `llms.txt` files and found that 97% received no requests during May 2026 ([Ahrefs](https://ahrefs.com/blog/llmstxt-study/)). Contentful also argues that there is not yet validated evidence that `llms.txt` reliably improves AI citation frequency, referral traffic, or answer inclusion ([Contentful](https://www.contentful.com/blog/llms-txt-search-visibility/)).
 
-For measurement, that puts `llms.txt` in the low-confidence layer. Record whether the file exists, whether it is current, whether it is requested, and whether it points to the strongest pages. Then keep watching actual citations, crawler logs, referrals, branded demand, and lead quality.
+For measurement, `llms.txt` belongs in the low-confidence layer. Record whether the file exists, whether it's current, whether it's requested, and whether it points to the strongest pages. Then keep watching actual citations, crawler logs, referrals, branded demand, and lead quality.
 
 Off Piste's own [`llms.txt`](/llms.txt) and [`llms-full.txt`](/llms-full.txt) are examples of support files. They're useful housekeeping alongside crawlable pages, clear service content, structured proof, accessible HTML, and earned authority.
 
 ## Turn the audit into fixes
 
-The value of the audit is the repair map. Every finding should point to an action type.
+The value of the audit is the repair map. Every finding should point to an action.
 
 | Finding | Fix path |
 | --- | --- |
@@ -152,16 +152,16 @@ The value of the audit is the repair map. Every finding should point to an actio
 | Crawler logs show blocked access | Review robots.txt, WAF rules, CDN settings, and bot-specific controls |
 | Enquiries are low quality despite mentions | Refine positioning, service boundaries, pricing context, and next steps |
 
-The overlap between accessibility, search, and AI visibility is strongest when structure is the problem. Clear headings, descriptive links, text alternatives, readable content, and logical page sections help people and machines understand the same page. Our guide to [website accessibility and SEO](/insights/website-accessibility-and-seo) covers that foundation in more detail.
+The overlap between accessibility, search, and AI visibility is strongest when structure is the problem. Clear headings, descriptive links, text alternatives, readable content, and logical sections help people and machines understand the same page. Our guide to [website accessibility and SEO](/insights/website-accessibility-and-seo) covers that foundation in more detail.
 
-Some fixes are content-led. Some are technical. Some are positioning decisions that need sharper service language. Measurement is useful because it stops the team guessing which kind of problem they have.
+Some fixes are content-led. Some are technical. Some are positioning decisions that need sharper service language. Measurement stops the team guessing which problem they have.
 
 ## Set a review rhythm
 
-Repeat the audit on a cadence the business can maintain. Monthly is enough for most service businesses. Fortnightly can make sense during a launch, repositioning, technical migration, or active content campaign.
+Repeat the audit on a cadence the business can maintain. Monthly is enough for most service businesses. Fortnightly can make sense during a launch, repositioning, migration, or active content campaign.
 
-Use the same prompt set, the same logging fields, and the same commercial signals. Add new prompts only when buyer behaviour changes or a new service matters. Keep a short notes field for model changes, website updates, PR mentions, new reviews, and major search shifts.
+Use the same prompt set, logging fields, and commercial signals. Add new prompts only when buyer behaviour changes or a new service matters. Keep a short notes field for model changes, website updates, PR mentions, reviews, and major search shifts.
 
-Act when the evidence repeats across more than one signal. A single odd answer is a watch item. A repeated omission across buyer prompts, missing citations for priority pages, blocked crawler evidence, and weak enquiries is a business problem worth fixing.
+Act when the evidence repeats across more than one signal. A single odd answer is a watch item. Repeated omissions, missing citations for priority pages, blocked crawler evidence, and weak enquiries are business problems worth fixing.
 
-The decision rule is simple. Measure prompts to spot the issue. Use citations and source checks to understand the evidence gap. Use crawler logs and analytics to confirm access and demand. Use lead quality to decide whether the visibility is helping the right buyers move closer to you.
+The decision rule is simple. Measure prompts to spot the issue. Use citations and source checks to understand the evidence gap. Use crawler logs and analytics to confirm access and demand. Use lead quality to decide whether visibility is moving the right buyers closer.
