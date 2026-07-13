@@ -37,7 +37,7 @@ That means the first layer of LLM readiness is still good web publishing:
 9. Optional llms.txt and markdown support
 10. Measurement across visibility, leads, and commercial quality
 
-Google's generative AI guidance also emphasises unique, valuable, expert-led content that goes beyond common knowledge ([Google Search Central](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)). That is important because generic content gives answer systems little reason to cite or trust one business over another.
+Google's generative AI guidance also emphasises unique, valuable, expert-led content that goes beyond common knowledge ([Google Search Central](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)). That's important because generic content gives answer systems little reason to cite or trust one business over another.
 
 For Off Piste, this is where [website design](/services/website-design) and [SEO](/services/seo) overlap. Site architecture, page templates, content structure, technical search foundations, and measurement all shape whether a business is legible to people and machines.
 
@@ -146,15 +146,15 @@ There are three related support formats worth separating.
 
 `llms.txt` is the compact guide. It should stay concise enough to scan and maintain.
 
-`llms-full.txt` is the fuller reference. It can compile company context, services, audience fit, canonical URLs, and usage notes into one machine-readable document. It is useful when the team can keep it current, while evidence for universal agent preference remains limited.
+`llms-full.txt` is the fuller reference. It can compile company context, services, audience fit, canonical URLs, and usage notes into one machine-readable document. It's useful when the team can keep it current, while evidence for universal agent preference remains limited.
 
-Page-level markdown exports give individual pages a clean text version. They can be useful for internal tools, retrieval systems, and agents that can request markdown. They are only worth doing when the site can generate them reliably and keep them in sync with the canonical HTML.
+Page-level markdown exports give individual pages a clean text version. They can be useful for internal tools, retrieval systems, and agents that can request markdown. They're only worth doing when the site can generate them reliably and keep them in sync with the canonical HTML.
 
 ### Why it matters commercially
 
 The commercial value is accuracy. AI systems can only work with the evidence they can retrieve and interpret. If your offer is vague, your service pages are thin, your proof is scattered, or your crawler rules are inconsistent, the system has less to use when a buyer asks who to trust.
 
-Machine-readable summaries help when they are grounded in strong pages. They can clarify what the business does, who it serves, what pages are canonical, and which claims should not be inferred from old content. That is useful operational housekeeping, especially for a business whose positioning has changed.
+Machine-readable summaries help when they are grounded in strong pages. They can clarify what the business does, who it serves, what pages are canonical, and which claims should not be inferred from old content. That's useful operational housekeeping, especially for a business whose positioning has changed.
 
 Proof still carries the weight. Case studies, named services, outcomes, process, authorship, dates, credentials, FAQs, and third-party references give search systems and buyers something real to evaluate. The support files should point to that evidence and keep the important paths clear.
 
