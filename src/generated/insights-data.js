@@ -1,5 +1,20 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "how-to-measure-ai-search-visibility",
+    "title": "How to Measure AI Search Visibility",
+    "description": "A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.",
+    "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
+    "date": "2026-07-13",
+    "displayDate": "July 13, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "SEO",
+      "AI"
+    ],
+    "imageAlt": "How to Measure AI Search Visibility",
+    "url": "/insights/how-to-measure-ai-search-visibility"
+  },
+  {
     "slug": "what-makes-a-good-tradie-website",
     "title": "What Makes a Good Plumber, Electrician, or Builder Website?",
     "description": "What separates a tradie website that generates leads from one that sits idle. Structure, content, trust signals, local SEO, and conversion elements explained.",
