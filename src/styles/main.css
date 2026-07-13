@@ -3321,6 +3321,54 @@ body[data-page-type="insight"][data-theme="light"] .insight-article__quote {
   margin-top: 0.85rem;
 }
 
+.insight-article__body-inner table {
+  display: block;
+  width: 100%;
+  max-width: min(100%, 58rem);
+  overflow-x: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(0.82rem, 0.95vw, 0.94rem);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.66);
+  scrollbar-width: thin;
+}
+
+.insight-article__body-inner table th,
+.insight-article__body-inner table td {
+  min-width: 8.5rem;
+  padding: 0.75rem 0.85rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.insight-article__body-inner table th {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.insight-article__body-inner table th:first-child,
+.insight-article__body-inner table td:first-child {
+  min-width: 10rem;
+}
+
+body[data-page-type="insight"][data-theme="light"] .insight-article__body-inner table {
+  color: rgba(18, 18, 18, 0.66);
+}
+
+body[data-page-type="insight"][data-theme="light"] .insight-article__body-inner table th,
+body[data-page-type="insight"][data-theme="light"] .insight-article__body-inner table td {
+  border-bottom-color: rgba(18, 18, 18, 0.12);
+}
+
+body[data-page-type="insight"][data-theme="light"] .insight-article__body-inner table th {
+  color: rgba(18, 18, 18, 0.88);
+  background: rgba(18, 18, 18, 0.045);
+}
+
 .insight-article__sub-title {
   max-width: 34rem;
   font-family: "Neue Montreal", "Helvetica Neue", Arial, sans-serif;

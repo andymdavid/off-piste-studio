@@ -33,6 +33,7 @@ Supported markdown in the body:
 - `## Heading`
 - plain paragraphs
 - `- list items`
+- markdown tables when comparison is useful and every column has a short, scannable label
 - `> blockquotes`
 
 Then run:
