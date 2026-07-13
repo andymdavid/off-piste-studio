@@ -3313,8 +3313,27 @@ body[data-page-type="insight"][data-theme="light"] .insight-article__quote {
   color: rgba(18, 18, 18, 0.62);
 }
 
+.insight-article__body-inner ul,
+.insight-article__body-inner ol {
+  max-width: 46rem;
+  padding-left: 1.45rem;
+  list-style-position: outside;
+}
+
 .insight-article__body-inner ul {
-  padding-left: 1.3rem;
+  list-style-type: disc;
+}
+
+.insight-article__body-inner ol {
+  list-style-type: decimal;
+}
+
+.insight-article__body-inner li::marker {
+  color: rgba(255, 255, 255, 0.46);
+}
+
+body[data-page-type="insight"][data-theme="light"] .insight-article__body-inner li::marker {
+  color: rgba(18, 18, 18, 0.42);
 }
 
 .insight-article__body-inner li + li {

@@ -32,7 +32,7 @@ Supported markdown in the body:
 
 - `## Heading`
 - plain paragraphs
-- `- list items`
+- `- list items` only when the point genuinely works better as a sequence, checklist, taxonomy, or parallel set
 - markdown tables when comparison is useful and every column has a short, scannable label
 - `> blockquotes`
 

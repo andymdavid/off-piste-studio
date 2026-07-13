@@ -4,24 +4,19 @@ slug: how-to-measure-ai-search-visibility
 description: A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.
 intro: AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.
 date: 2026-07-13
+updatedDate: 2026-07-13
 readTime: 13 min read
 tags: SEO, AI
 ---
 ## Start with the buyer problem
 
-The commercial question is rarely "are we visible in AI?" in the abstract. It is usually sharper than that. A buyer is asking ChatGPT, Perplexity, Google AI Overviews, AI Mode, or another answer engine who they should shortlist. Your business may be omitted, mentioned with thin proof, described in old language, or grouped with competitors that look clearer because their sites explain the offer better.
+The commercial question is rarely "are we visible in AI?" in the abstract. It's usually sharper than that. A buyer is asking ChatGPT, Perplexity, Google AI Overviews, AI Mode, or another answer engine who they should shortlist. Your business may be omitted, mentioned with thin proof, described in old language, or grouped with competitors that look clearer because their sites explain the offer better.
 
 That makes AI visibility measurement a diagnosis job before it becomes a tools job. A dashboard can be useful, but only if the team already knows what it is trying to measure. The aim is to understand whether AI systems can find the right evidence, connect it to the right buyer problem, and represent the business in a way that would help a real person make a decision.
 
-For a service business or professional firm, the audit should answer five questions.
+For a service business or professional firm, the audit should answer whether the business is mentioned for the prompts that matter, whether it's cited by name, whether the answer is accurate about services and geography, whether useful pages can be accessed, and whether AI-influenced searches or enquiries look commercially better over time.
 
-- Are we mentioned for the prompts that matter?
-- Are we cited by name or only described indirectly?
-- Is the answer accurate about our services, geography, proof, and fit?
-- Can the relevant crawlers and retrieval systems access our useful pages?
-- Do AI-influenced visits, searches, and enquiries look commercially better over time?
-
-Those questions keep the work grounded. They also stop the conversation becoming a vague score that moves around every time a model, prompt, location, or source set changes.
+That keeps the work grounded. It also stops the conversation becoming a vague score that moves around every time a model, prompt, location, or source set changes.
 
 ## Measure More Than One Score
 
@@ -109,14 +104,7 @@ Those distinctions matter because a business may choose different access rules f
 
 Infrastructure data is more reliable than a one-off answer check. Cloudflare's AI Crawl Control can monitor AI crawler activity, set crawler-level rules, monitor robots.txt compliance, and inspect crawler behaviour through its dashboard ([Cloudflare](https://developers.cloudflare.com/ai-crawl-control/)). Similar checks can come from server logs, CDN logs, Search Console, and analytics data.
 
-When the audit finds access issues, link the measurement finding to the likely cause.
-
-- A key service page is not indexed
-- Useful proof is hidden in images, scripts, PDFs, or inaccessible components
-- A WAF rule blocks a crawler needed for retrieval
-- robots.txt allows one class of access but blocks another
-- The page loads for humans but returns poor text to crawlers
-- Internal links make priority pages hard to discover
+When the audit finds access issues, link the measurement finding to the likely cause. A key service page may be missing from the index. Useful proof may be hidden in images, scripts, PDFs, or inaccessible components. A WAF rule may block a crawler needed for retrieval. robots.txt may allow one class of access while blocking another. The page may load for humans while returning poor text to crawlers. Internal links may also make priority pages harder to discover.
 
 If the issue is structure, the repair may sit with [website design](/services/website-design) alongside content work. If the issue is search interpretation, internal linking, citations, or topic coverage, it belongs in [SEO](/services/seo).
 
@@ -128,13 +116,7 @@ Use Search Console as broad Search performance data, not as a dedicated AI Overv
 
 For Google-focused context, read our article on [AI Overviews and SEO](/insights/google-sge-and-seo). The terminology has moved from SGE into AI Overviews and AI Mode, so use current language when reporting or briefing internal teams.
 
-Practical Google checks include:
-
-- Branded query movement for the business name, founders, products, and services
-- Impressions and clicks for comparison, local, and proof-seeking topics
-- Landing pages that gain impressions but lose clicks
-- Queries where Google compresses generic information into an answer
-- Pages that still earn clicks because they add proof, examples, pricing context, or local detail
+Practical Google checks should focus on branded query movement, impressions and clicks for comparison topics, local searches, proof-seeking searches, and pages that gain impressions while losing clicks. Look closely at queries where Google compresses generic information into an answer, then compare them with pages that still earn clicks because they add proof, examples, pricing context, or local detail.
 
 The useful question is whether the pages that matter are still being discovered, understood, and chosen across the query groups that influence revenue.
 
@@ -142,14 +124,7 @@ The useful question is whether the pages that matter are still being discovered,
 
 AI visibility reaches beyond a search report. Some buyers will click a cited source. Others will remember the brand and search later. Some will arrive through referrals from answer engines. Some will mention in an enquiry that they already compared providers before contacting you.
 
-Track the signals that show better-informed demand.
-
-- Referral traffic from answer engines where analytics can identify it
-- Server log events from AI crawlers and user-triggered fetches
-- Branded search increases after content or PR activity
-- Enquiries that mention specific services, case studies, articles, or comparison questions
-- Higher conversion rates on service and proof pages
-- Sales calls where prospects arrive with better context
+Track the signals that show better-informed demand. That includes identifiable referral traffic from answer engines, server log events from AI crawlers and user-triggered fetches, branded search increases after content or PR activity, enquiries that mention specific services or case studies, higher conversion rates on service and proof pages, and sales calls where prospects arrive with better context.
 
 This is where the commercial view matters. A site can lose some low-value informational clicks while gaining better-qualified enquiries. Every traffic decline still deserves investigation, and visibility should be judged against the work the website is meant to do, which is build trust, clarify fit, and help the right buyer take action.
 
@@ -161,7 +136,7 @@ The evidence is still cautious. Ahrefs analysed 137,189 websites with valid `llm
 
 For measurement, that puts `llms.txt` in the low-confidence layer. Record whether the file exists, whether it is current, whether it is requested, and whether it points to the strongest pages. Then keep watching actual citations, crawler logs, referrals, branded demand, and lead quality.
 
-Off Piste's own [`llms.txt`](/llms.txt) and [`llms-full.txt`](/llms-full.txt) are examples of support files. They are useful housekeeping alongside crawlable pages, clear service content, structured proof, accessible HTML, and earned authority.
+Off Piste's own [`llms.txt`](/llms.txt) and [`llms-full.txt`](/llms-full.txt) are examples of support files. They're useful housekeeping alongside crawlable pages, clear service content, structured proof, accessible HTML, and earned authority.
 
 ## Turn the audit into fixes
 
