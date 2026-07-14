@@ -4,6 +4,7 @@ slug: website-accessibility-and-seo
 description: Why accessibility improvements and SEO gains overlap, how structural and content changes serve both, and where to focus for the biggest commercial impact.
 intro: Accessibility and search performance share more common ground than most teams realise. The structural improvements that help assistive technology navigate a website are the same ones that help search engines understand and index it. Investing in one tends to improve the other.
 date: 2026-03-02
+updatedDate: 2026-07-14
 readTime: 10 min read
 tags: SEO, User Experience, Website Design
 cluster: Technical Website Foundations
@@ -19,6 +20,8 @@ This overlap means that many accessibility improvements deliver SEO benefits wit
 ## How structure drives discoverability
 
 The foundation of both accessibility and search performance is clean, semantic HTML. When a page uses proper heading levels in the right order, wraps navigation in nav elements, uses main and section tags appropriately, and marks up lists and tables correctly, both search engines and assistive technologies can parse the content accurately.
+
+That same structure now supports AI retrieval work too. Crawler access rules matter, but they only help when the page they expose is readable, text-based, and internally linked. Our [AI crawler access and robots.txt guide](/insights/ai-crawler-access-robots-txt-guide) covers the access-control side of that same machine-readable foundation.
 
 Heading hierarchy is one of the most common issues. Pages that skip heading levels, use headings purely for visual styling, or bury important content under incorrect heading structures create confusion for screen readers and search crawlers alike. Fixing heading order is one of the simplest changes a team can make and it improves both accessibility and indexing.
 

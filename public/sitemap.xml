@@ -331,6 +331,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://offpistestudio.com/insights/ai-crawler-access-robots-txt-guide</loc>
+    <lastmod>2026-07-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://offpistestudio.com/insights/best-website-features-for-tradies</loc>
     <lastmod>2026-07-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -338,7 +344,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/building-your-website-for-llms</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -398,7 +404,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/website-accessibility-and-seo</loc>
-    <lastmod>2026-07-13</lastmod>
+    <lastmod>2026-07-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

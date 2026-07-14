@@ -1,5 +1,28 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-crawler-access-robots-txt-guide",
+    "title": "AI Crawler Access and Robots.txt Guide for Business Websites",
+    "description": "A practical guide to AI crawler access, robots.txt, WAF rules, CDN logs, and validation checks for business websites.",
+    "intro": "AI crawler access is now a practical website decision. The useful question is which crawler does which job, what your business wants from that access, and how to check that robots.txt, CDN settings, WAF rules, and logs all tell the same story.",
+    "date": "2026-07-14",
+    "displayDate": "July 14, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Technical SEO",
+      "Website Design"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "building-your-website-for-llms",
+      "how-to-measure-ai-search-visibility",
+      "google-sge-and-seo"
+    ],
+    "imageAlt": "AI Crawler Access and Robots.txt Guide for Business Websites",
+    "url": "/insights/ai-crawler-access-robots-txt-guide"
+  },
+  {
     "slug": "how-to-measure-ai-search-visibility",
     "title": "How to Measure AI Search Visibility",
     "description": "A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.",
@@ -219,8 +242,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.",
     "date": "2026-03-08",
     "displayDate": "March 8, 2026",
-    "updatedDate": "2026-07-13",
-    "displayUpdatedDate": "July 13, 2026",
+    "updatedDate": "2026-07-14",
+    "displayUpdatedDate": "July 14, 2026",
     "readTime": "15 min read",
     "tags": [
       "SEO",
@@ -281,6 +304,8 @@ export const INSIGHT_POSTS = [
     "intro": "Accessibility and search performance share more common ground than most teams realise. The structural improvements that help assistive technology navigate a website are the same ones that help search engines understand and index it. Investing in one tends to improve the other.",
     "date": "2026-03-02",
     "displayDate": "March 2, 2026",
+    "updatedDate": "2026-07-14",
+    "displayUpdatedDate": "July 14, 2026",
     "readTime": "10 min read",
     "tags": [
       "SEO",

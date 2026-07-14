@@ -4,7 +4,7 @@ slug: building-your-website-for-llms
 description: How to make your website easier for AI search tools to understand, from crawlability and structured content to crawler access, schema, llms.txt, and measurement.
 intro: AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.
 date: 2026-03-08
-updatedDate: 2026-07-13
+updatedDate: 2026-07-14
 readTime: 15 min read
 tags: SEO, AI, Website Design
 cluster: AI Search Visibility
@@ -208,7 +208,7 @@ First, confirm the foundations. Check crawlability, indexability, page structure
 
 Second, strengthen the evidence. Update service pages, proof, pricing guidance, FAQs, author details, and internal links.
 
-Third, manage machine access. Review robots.txt, CDN rules, WAF rules, crawler logs, and AI crawler permissions.
+Third, manage machine access. Review robots.txt, CDN rules, WAF rules, crawler logs, and AI crawler permissions. If you need the operational version of that work, use our [AI crawler access and robots.txt guide](/insights/ai-crawler-access-robots-txt-guide) to separate search crawlers, training crawlers, and user-triggered fetchers before changing access rules.
 
 Fourth, add maintained support files. Create or refresh `llms.txt`, then add `llms-full.txt` or markdown exports where the team can keep them aligned with the site.
 
