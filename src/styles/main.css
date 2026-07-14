@@ -3313,6 +3313,32 @@ body[data-page-type="insight"][data-theme="light"] .insight-article__quote {
   color: rgba(18, 18, 18, 0.62);
 }
 
+.insight-article__body-inner a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration-line: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.48);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 150ms ease, text-decoration-color 150ms ease;
+}
+
+.insight-article__body-inner a:hover,
+.insight-article__body-inner a:focus-visible {
+  color: rgba(255, 255, 255, 0.98);
+  text-decoration-color: rgba(255, 255, 255, 0.76);
+}
+
+body[data-page-type="insight"][data-theme="light"] .insight-article__body-inner a {
+  color: rgba(18, 18, 18, 0.88);
+  text-decoration-color: rgba(18, 18, 18, 0.44);
+}
+
+body[data-page-type="insight"][data-theme="light"] .insight-article__body-inner a:hover,
+body[data-page-type="insight"][data-theme="light"] .insight-article__body-inner a:focus-visible {
+  color: rgba(18, 18, 18, 0.98);
+  text-decoration-color: rgba(18, 18, 18, 0.72);
+}
+
 .insight-article__body-inner ul,
 .insight-article__body-inner ol {
   max-width: 46rem;
