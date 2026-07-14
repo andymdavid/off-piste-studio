@@ -28,6 +28,8 @@ imageAlt: Short description of the image
 
 When provided, `updatedDate` appears subtly beside the original publish date on the article page and is used as `dateModified` in Article schema.
 
+For scheduled pipeline updates, `updatedDate` should use the publishing timezone date for the run, currently `Australia/Perth`.
+
 When provided, `cluster` is used to choose related posts and strengthen internal linking around the topical map.
 
 When provided, `relatedPosts` pins specific insight slugs ahead of the automatic cluster and tag matching.
@@ -48,6 +50,8 @@ Editorial pass before publishing:
 - keep a detail only when it changes the reader's understanding or decision
 - prefer concrete nouns, active verbs, and specific evidence over expansive explanation
 - if a paragraph says the same thing twice, keep the sharper version
+- link citations through descriptive source text where it reads naturally, rather than defaulting to parenthetical source-name links
+- avoid colon-led sentence breaks when a full stop creates a cleaner Lara-style rhythm
 
 Then run:
 

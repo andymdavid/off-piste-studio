@@ -4,7 +4,7 @@ slug: how-to-measure-ai-search-visibility
 description: A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.
 intro: AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.
 date: 2026-07-13
-updatedDate: 2026-07-13
+updatedDate: 2026-07-14
 readTime: 13 min read
 tags: SEO, AI
 cluster: AI Search Visibility
@@ -152,7 +152,7 @@ AI visibility reaches beyond a search report. Some buyers click a cited source. 
 
 Track signals that show better-informed demand: identifiable referral traffic from answer engines, server log events from AI crawlers and user-triggered fetches, branded search increases after content or PR activity, enquiries that mention specific services or case studies, higher conversion rates on service and proof pages, and sales calls where prospects arrive with better context.
 
-SparkToro's 2026 zero-click research is useful context here because it reinforces a practical reporting problem: many search journeys never become a clean organic session, so sessions alone understate visibility and influence ([SparkToro](https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/)). Use that as context, then bring the report back to citations, branded demand, referral quality, and leads.
+[SparkToro's 2026 zero-click research](https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/) is useful context because it reinforces a practical reporting problem. Many search journeys never become a clean organic session, so sessions alone understate visibility and influence. Use that as context, then bring the report back to citations, branded demand, referral quality, and leads.
 
 A site can lose some low-value informational clicks while gaining better-qualified enquiries. Every traffic decline still deserves investigation, but visibility should be judged against the work the website is meant to do: build trust, clarify fit, and help the right buyer take action.
 
