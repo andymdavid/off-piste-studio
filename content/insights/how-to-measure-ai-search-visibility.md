@@ -4,7 +4,7 @@ slug: how-to-measure-ai-search-visibility
 description: A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.
 intro: AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.
 date: 2026-07-13
-updatedDate: 2026-07-14
+updatedDate: 2026-07-16
 readTime: 13 min read
 tags: SEO, AI
 cluster: AI Search Visibility
@@ -180,6 +180,8 @@ The audit's value is the repair map. Every finding should point to an action.
 | Crawler logs show blocked access | Review robots.txt, WAF rules, CDN settings, and bot-specific controls |
 | Dedicated Google generative AI reports are unavailable | Keep manual Google AI feature checks and query-group reporting until the property has access |
 | Enquiries are low quality despite mentions | Refine positioning, service boundaries, pricing context, and next steps |
+
+When the audit points to weak source quality, use the [citation-worthy content framework](/insights/ai-search-citation-worthy-content) to decide what each page needs before rewriting. The repair is usually more specific proof, clearer scope, better examples, named sources, or entity signals rather than more keyword coverage.
 
 The overlap between accessibility, search, and AI visibility is strongest when structure is the problem. Clear headings, descriptive links, text alternatives, readable content, and logical sections help people and machines understand the same page. Our guide to [website accessibility and SEO](/insights/website-accessibility-and-seo) covers that foundation in more detail.
 

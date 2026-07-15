@@ -4,7 +4,7 @@ slug: building-your-website-for-llms
 description: How to make your website easier for AI search tools to understand, from crawlability and structured content to crawler access, schema, llms.txt, and measurement.
 intro: AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.
 date: 2026-03-08
-updatedDate: 2026-07-14
+updatedDate: 2026-07-16
 readTime: 15 min read
 tags: SEO, AI, Website Design
 cluster: AI Search Visibility
@@ -197,6 +197,8 @@ Vague brand language creates problems for both audiences. A human scanning the p
 Specific language gives buyers and models a firmer representation of the business. For example, "we combine brand strategy, website design, UX/UI, content structure, and technical SEO to help expertise-led businesses clarify value and convert the right attention into action" carries more useful meaning than a broad claim about digital experience.
 
 Proof architecture matters. Strong pages name the service, audience, problem, process, outcome, author, date, and evidence. Case studies with specific context are more useful than generic testimonials. FAQs are useful when they answer buyer questions directly rather than repeating keywords.
+
+If the audit shows that pages are accessible but too generic to trust, the next layer is [citation-worthy content](/insights/ai-search-citation-worthy-content). That work turns broad claims into supported answers, first-hand proof, source context, and examples that are easier for buyers and AI search systems to evaluate.
 
 For Google specifically, this connects to the broader shift described in our article on [AI Overviews and SEO](/insights/google-sge-and-seo). Generic information is easier to compress. Specific proof, commercial judgement, and useful comparison context are harder to replace.
 

@@ -1,5 +1,28 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-search-citation-worthy-content",
+    "title": "How to Make Website Content Worth Citing in AI Search",
+    "description": "A practical framework for making service pages, articles, and proof assets specific, evidenced, and useful enough for AI search systems and buyers to trust.",
+    "intro": "AI search rewards pages with clear claims, visible proof, and useful context. If your website sounds like everyone else, answer engines have little reason to cite it and buyers have little reason to trust it. Citation-worthy content gives both groups clearer evidence.",
+    "date": "2026-07-16",
+    "displayDate": "July 16, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy",
+      "Website Design"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "building-your-website-for-llms",
+      "how-to-measure-ai-search-visibility",
+      "ai-crawler-access-robots-txt-guide"
+    ],
+    "imageAlt": "How to Make Website Content Worth Citing in AI Search",
+    "url": "/insights/ai-search-citation-worthy-content"
+  },
+  {
     "slug": "ai-crawler-access-robots-txt-guide",
     "title": "AI Crawler Access and Robots.txt Guide for Business Websites",
     "description": "A practical guide to AI crawler access, robots.txt, WAF rules, CDN logs, and validation checks for business websites.",
@@ -29,8 +52,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
     "date": "2026-07-13",
     "displayDate": "July 13, 2026",
-    "updatedDate": "2026-07-14",
-    "displayUpdatedDate": "July 14, 2026",
+    "updatedDate": "2026-07-16",
+    "displayUpdatedDate": "July 16, 2026",
     "readTime": "13 min read",
     "tags": [
       "SEO",
@@ -242,8 +265,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.",
     "date": "2026-03-08",
     "displayDate": "March 8, 2026",
-    "updatedDate": "2026-07-14",
-    "displayUpdatedDate": "July 14, 2026",
+    "updatedDate": "2026-07-16",
+    "displayUpdatedDate": "July 16, 2026",
     "readTime": "15 min read",
     "tags": [
       "SEO",
