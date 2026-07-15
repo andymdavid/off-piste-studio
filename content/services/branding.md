@@ -1,19 +1,19 @@
 ---
-title: Brand Identity Design for Small Business
+title: Brand Identity Design for Growing Businesses
 slug: branding
-description: Professional brand identity design for small businesses. Logo, colour palette, typography, and brand guidelines. Build a brand that stands out and earns trust.
+description: Brand identity design for growing businesses that need sharper positioning, stronger recognition, and a more credible market presence.
 intro: Your brand is more than a logo — it is the first impression customers get and the reason they remember you. We design cohesive brand identities that communicate what your business stands for and set you apart in a crowded market.
-keywords: brand identity design, small business branding, logo design perth, branding agency, brand guidelines
+keywords: brand identity design, branding agency perth, logo design perth, brand guidelines
 faqs: [{"q":"How much does brand identity design cost?","a":"Our brand identity packages start from $2,500 AUD and go up depending on scope. A basic package includes logo, colour palette, and typography. A full package adds brand guidelines, social media templates, and stationery design. We provide a clear quote after an initial consultation."},{"q":"How long does the branding process take?","a":"A typical brand identity project takes 3 to 5 weeks from kickoff to final delivery. This includes time for discovery, concept development, feedback rounds, and production of final files and guidelines."},{"q":"What is included in a brand identity package?","a":"Our standard package includes a primary logo, logo variations, colour palette, typography selection, and a brand guidelines document. Extended packages include social media templates, email signatures, business card design, and letterhead."},{"q":"Do I need a full rebrand or just a refresh?","a":"If your current brand still represents your business but looks dated, a brand refresh may be enough — updating colours, typography, and cleaning up the logo. If your business has changed direction, outgrown its original identity, or the brand no longer connects with your audience, a full rebrand is the better investment."},{"q":"Can you design a logo on its own?","a":"We can, but we always recommend investing in a full brand identity rather than a standalone logo. A logo without supporting brand elements like colour, typography, and usage guidelines will lack consistency across your marketing. The result is a brand that feels disjointed."},{"q":"Will I own the final brand assets?","a":"Yes. Once the project is complete and paid for, you own all final brand assets outright. We provide all files in the formats you need — vector, PNG, and web-ready — along with a brand guidelines document so anyone working on your marketing can use them correctly."}]
 ---
 
-## Why brand identity matters for small business
+## Why brand identity matters for growing businesses
 
 Every interaction a customer has with your business builds a perception. Your logo, your colours, the fonts on your website, the look of your social media posts — these all contribute to how people feel about your business before they ever speak to you.
 
 A strong brand identity creates recognition and trust. It tells potential customers that you are professional, established, and worth their time. A weak or inconsistent brand does the opposite. It creates doubt.
 
-For small businesses competing against larger companies with bigger budgets, a well-designed brand identity is one of the most cost-effective ways to level the playing field. It signals credibility and helps you stand out in a market full of generic competitors.
+For growing businesses competing in crowded markets, a well-designed brand identity is one of the most effective ways to signal credibility before the sales conversation starts. It helps the right people understand what you stand for and why you are worth taking seriously.
 
 ## What is included in our branding packages
 

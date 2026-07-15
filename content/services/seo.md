@@ -1,9 +1,9 @@
 ---
-title: Local SEO Services for Small Business
+title: Local SEO and Search Visibility Services
 slug: seo
-description: Local SEO services to help small businesses rank higher in Google. Google Business Profile, keyword strategy, on-page optimisation, and local citations.
-intro: Most small businesses rely on local customers finding them through search. We set up and optimise your online presence so your business appears when people in your area search for what you do.
-keywords: local seo services, seo perth, small business seo, google business profile, local search optimisation
+description: Local SEO and search visibility services for businesses that need stronger Google rankings, clearer service pages, and better qualified enquiries.
+intro: Search visibility is how buyers find, compare, and trust businesses before they make contact. We optimise your website and local search presence so the right people can find what you do and understand why you are credible.
+keywords: local seo services, seo perth, search visibility, google business profile, local search optimisation
 faqs: [{"q":"How much do local SEO services cost?","a":"Our one-time local SEO setup starts from $1,500 AUD and includes Google Business Profile optimisation, on-page SEO, and local citations. Ongoing monthly SEO packages start from $500 per month and include content updates, reporting, and continued optimisation."},{"q":"How long does it take to see results from SEO?","a":"SEO is not instant. Most businesses start seeing improvements in local rankings within 4 to 12 weeks, depending on competition and the current state of their website. Consistent effort over 3 to 6 months delivers the strongest results."},{"q":"Do I need ongoing SEO or is a one-time setup enough?","a":"A one-time setup gives you a solid foundation — optimised pages, Google Business Profile, and local citations. But SEO is competitive. If your competitors are investing in ongoing SEO and you are not, they will eventually outrank you. Ongoing SEO keeps your content fresh, your rankings stable, and your lead flow growing."},{"q":"What is a Google Business Profile and why does it matter?","a":"Google Business Profile is the free listing that appears in Google Maps and local search results. For local businesses, it is often the first thing potential customers see. An optimised profile with accurate information, photos, and reviews significantly increases your chances of being found and contacted."},{"q":"Can you guarantee first page rankings?","a":"No reputable SEO provider can guarantee specific rankings. Google's algorithm considers hundreds of factors, many outside anyone's control. What we can guarantee is that we follow proven best practices, provide transparent reporting, and focus our efforts on the keywords and areas that matter most to your business."},{"q":"Do you work with businesses outside Perth?","a":"Yes. While many of our clients are Perth-based, local SEO principles apply to any location. We work with small businesses across Australia to improve their visibility in their local area."}]
 ---
 
@@ -11,7 +11,7 @@ faqs: [{"q":"How much do local SEO services cost?","a":"Our one-time local SEO s
 
 When someone searches for a service in their area — "plumber near me" or "accountant in Perth" — Google returns a mix of local results, map listings, and organic results. Local SEO is the process of optimising your business to appear in those results.
 
-For small businesses, local SEO is one of the highest-return marketing investments available. Unlike paid advertising, where leads stop the moment you stop spending, SEO builds an asset. A well-optimised website and Google Business Profile continue to bring in leads month after month.
+For service-led businesses, local SEO is one of the highest-return marketing investments available. Unlike paid advertising, where leads stop the moment you stop spending, SEO builds an asset. A well-optimised website and Google Business Profile continue to bring in qualified enquiries month after month.
 
 The businesses that show up on the first page of local search results get the vast majority of clicks. If your business is buried on page two or three, most potential customers will never find you. They will call your competitor instead.
 
@@ -85,7 +85,7 @@ If your current website was not built with SEO in mind, we can audit the site an
 
 ## Ongoing SEO vs one-time setup
 
-A one-time SEO setup gives your business a strong foundation. This includes Google Business Profile optimisation, on-page SEO for your key pages, local citations, and technical fixes. For many small businesses in low-competition markets, this can be enough to start ranking.
+A one-time SEO setup gives your business a strong foundation. This includes Google Business Profile optimisation, on-page SEO for your key pages, local citations, and technical fixes. For businesses in lower-competition markets, this can be enough to start ranking.
 
 However, SEO is a competitive landscape. Your competitors are also working on their rankings. Google regularly updates its algorithm. And the businesses that invest consistently in SEO are the ones that maintain and grow their positions over time.
 

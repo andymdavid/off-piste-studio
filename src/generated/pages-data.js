@@ -184,26 +184,26 @@ export const INDUSTRY_PAGES = [
 export const SERVICE_PAGES = [
   {
     "slug": "branding",
-    "title": "Brand Identity Design for Small Business",
-    "description": "Professional brand identity design for small businesses. Logo, colour palette, typography, and brand guidelines. Build a brand that stands out and earns trust.",
+    "title": "Brand Identity Design for Growing Businesses",
+    "description": "Brand identity design for growing businesses that need sharper positioning, stronger recognition, and a more credible market presence.",
     "intro": "Your brand is more than a logo — it is the first impression customers get and the reason they remember you. We design cohesive brand identities that communicate what your business stands for and set you apart in a crowded market.",
-    "keywords": "brand identity design, small business branding, logo design perth, branding agency, brand guidelines",
+    "keywords": "brand identity design, branding agency perth, logo design perth, brand guidelines",
     "url": "/services/branding"
   },
   {
     "slug": "seo",
-    "title": "Local SEO Services for Small Business",
-    "description": "Local SEO services to help small businesses rank higher in Google. Google Business Profile, keyword strategy, on-page optimisation, and local citations.",
-    "intro": "Most small businesses rely on local customers finding them through search. We set up and optimise your online presence so your business appears when people in your area search for what you do.",
-    "keywords": "local seo services, seo perth, small business seo, google business profile, local search optimisation",
+    "title": "Local SEO and Search Visibility Services",
+    "description": "Local SEO and search visibility services for businesses that need stronger Google rankings, clearer service pages, and better qualified enquiries.",
+    "intro": "Search visibility is how buyers find, compare, and trust businesses before they make contact. We optimise your website and local search presence so the right people can find what you do and understand why you are credible.",
+    "keywords": "local seo services, seo perth, search visibility, google business profile, local search optimisation",
     "url": "/services/seo"
   },
   {
     "slug": "website-design",
-    "title": "Website Design for Small Business",
-    "description": "Professional website design for small businesses. Fast, mobile-first websites with lead capture, local SEO, and clear service pages. Built to convert visitors into customers.",
-    "intro": "Your website is the first impression most customers will have of your business. We design fast, professional websites for small businesses that earn trust, capture leads, and rank on Google — delivered in 2 to 4 weeks.",
-    "keywords": "website design for small business, small business web design, professional website design",
+    "title": "Strategic Website Design for Growing Businesses",
+    "description": "Strategic website design for growing businesses that need clearer positioning, stronger trust signals, search foundations, and better enquiry quality.",
+    "intro": "Your website is often the first serious test of your business. We design fast, credible websites for growing businesses that need to earn trust, explain their value clearly, and turn attention into qualified enquiries.",
+    "keywords": "strategic website design, professional website design, website design perth",
     "url": "/services/website-design"
   },
   {

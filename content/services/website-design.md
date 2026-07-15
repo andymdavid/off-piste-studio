@@ -1,15 +1,15 @@
 ---
-title: Website Design for Small Business
+title: Strategic Website Design for Growing Businesses
 slug: website-design
-description: Professional website design for small businesses. Fast, mobile-first websites with lead capture, local SEO, and clear service pages. Built to convert visitors into customers.
-intro: Your website is the first impression most customers will have of your business. We design fast, professional websites for small businesses that earn trust, capture leads, and rank on Google — delivered in 2 to 4 weeks.
-keywords: website design for small business, small business web design, professional website design
+description: Strategic website design for growing businesses that need clearer positioning, stronger trust signals, search foundations, and better enquiry quality.
+intro: Your website is often the first serious test of your business. We design fast, credible websites for growing businesses that need to earn trust, explain their value clearly, and turn attention into qualified enquiries.
+keywords: strategic website design, professional website design, website design perth
 faqs: [{"q":"How much does a small business website cost?","a":"Our website design packages start from $5,000 AUD. The final cost depends on the number of pages, features, and complexity. We provide a clear quote upfront with no hidden fees."},{"q":"How long does it take to build a website?","a":"Most small business websites are completed within 2 to 4 weeks from kickoff. We provide a project timeline upfront so you always know where things stand."},{"q":"Do you design for mobile?","a":"Every website we build is mobile-first. More than 60 percent of web traffic comes from mobile devices, so your site needs to look and work great on phones and tablets."},{"q":"Will my website rank on Google?","a":"We build every site with on-page SEO foundations — optimised title tags, meta descriptions, heading structure, page speed, and local keyword targeting. For businesses that want to grow their rankings further, we also offer ongoing local SEO packages."},{"q":"What do I need to provide?","a":"We handle the design, development, and can write the copy for you. All we need is a short briefing call to understand your business, services, and goals. If you have photos, brand assets, or existing content, we will work with those too."},{"q":"Do you offer ongoing support?","a":"Yes. After launch we offer support and maintenance packages. Whether you need content updates, new pages, or ongoing SEO work, we are available to help your site grow with your business."}]
 ---
 
 ## Websites that work as hard as you do
 
-Most small business websites are either outdated, too slow, or built on templates that do not convert. We design websites specifically for businesses that rely on a steady stream of new customers — tradies, clinics, professional firms, and service businesses.
+Most underperforming websites are outdated, too slow, unclear, or built around templates that do not support the way the business actually sells. We design websites for businesses that rely on trust, clarity, and a steady stream of qualified enquiries.
 
 Every site we build is engineered for one outcome: more leads.
 
@@ -47,9 +47,9 @@ We build your site with clean, fast code. Every page is optimised for speed, SEO
 
 We handle the launch, set up Google Search Console and Analytics, and make sure everything is working. After launch, we are available for ongoing support, updates, and growth.
 
-## Built for local businesses
+## Built for service-led businesses
 
-We understand the needs of small businesses because that is who we work with. Your customers are searching Google for services in their area. Your website needs to show up, look professional, and make it easy to get in touch.
+Your customers are searching, comparing, and making judgement calls before they speak to you. Your website needs to show up, look credible, explain the offer clearly, and make it easy to take the next step.
 
 - Service pages that target what your customers are searching for
 - Suburb and location pages for local SEO
@@ -75,7 +75,7 @@ We build with modern, lightweight code that loads in under two seconds. No plugi
 
 ## What your website investment gets you
 
-A professional website is not an expense. It is the highest-return marketing investment most small businesses can make.
+A professional website is not just a design expense. It is one of the highest-return commercial assets a service-led business can build.
 
 Consider the maths. If your website generates five enquiries per month and you close two of them at an average job value of $1,000, that is $2,000 per month in revenue directly attributable to your website. Over a year, that is $24,000 from a one-time investment of a few thousand dollars.
 
