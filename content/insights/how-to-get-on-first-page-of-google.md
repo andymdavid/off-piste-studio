@@ -82,7 +82,7 @@ Google uses mobile-first indexing, which means it primarily uses the mobile vers
 
 Schema markup is code that helps Google understand the context of your content. For local businesses, LocalBusiness schema tells Google your business name, address, phone number, hours, service area, and more in a structured format. This can improve how your site appears in search results, including rich snippets with ratings, hours, and pricing information.
 
-Most business owners do not need to implement schema themselves. A web designer or [SEO service](/services/seo) should include it as standard.
+Most business owners do not need to implement schema themselves. A web designer or [SEO service](/resources) should include it as standard.
 
 ## Create content that answers real questions
 
@@ -163,4 +163,4 @@ If you are starting from zero, here is the priority order.
 
 Do these consistently for six to twelve months and your visibility will be fundamentally different from where it is today. The first page of Google is not reserved for big businesses with big budgets. It is earned by businesses that show up consistently with a well-built website, strong local signals, and genuine value for their customers.
 
-If you want a website built from the ground up for local search performance, [talk to us about a site that is designed to rank](/services/website-design).
+If you want a website built from the ground up for local search performance, [talk to us about a site that is designed to rank](/work).

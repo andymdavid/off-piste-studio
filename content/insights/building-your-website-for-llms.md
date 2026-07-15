@@ -41,7 +41,7 @@ That means the first layer of LLM readiness is still good web publishing:
 
 Google's generative AI guidance also emphasises unique, valuable, expert-led content that goes beyond common knowledge ([Google Search Central](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)). That's important because generic content gives answer systems little reason to cite or trust one business over another.
 
-For Off Piste, this is where [website design](/services/website-design) and [SEO](/services/seo) overlap. Site architecture, page templates, content structure, technical search foundations, and measurement all shape whether a business is legible to people and machines.
+For Off Piste, this is where [website design](/work) and [SEO](/resources) overlap. Site architecture, page templates, content structure, technical search foundations, and measurement all shape whether a business is legible to people and machines.
 
 ## Crawler access comes before llms.txt
 

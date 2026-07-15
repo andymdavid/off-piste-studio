@@ -113,7 +113,7 @@ Infrastructure data is more reliable than a one-off answer check. Cloudflare's A
 
 When the audit finds access issues, link the finding to the likely cause. A key service page may be missing from the index. Useful proof may be hidden in images, scripts, PDFs, or inaccessible components. A WAF rule may block a crawler needed for retrieval. robots.txt may allow one class of access while blocking another. The page may load for humans while returning poor text to crawlers. Internal links may also make priority pages harder to discover. For the setup decisions behind those findings, use the [AI crawler access and robots.txt guide](/insights/ai-crawler-access-robots-txt-guide) to separate each crawler's role before changing policy.
 
-If the issue is structure, the repair may sit with [website design](/services/website-design) alongside content work. If the issue is search interpretation, internal linking, citations, or topic coverage, it belongs in [SEO](/services/seo).
+If the issue is structure, the repair may sit with [website design](/work) alongside content work. If the issue is search interpretation, internal linking, citations, or topic coverage, it belongs in [SEO](/resources).
 
 ## Use Google data carefully
 

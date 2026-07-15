@@ -246,13 +246,9 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
   if (page._type === 'industry') {
     const related = getRelatedIndustries(page.slug, allIndustries, 4);
     const locs = getDeterministicLocations(allLocations, 4);
-    const svcs = allServices.slice(0, 4);
 
     if (related.length) {
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">We also build websites for</h3><div class="page-links__list">${createIndustryHubLinksHtml(related)}</div></div>`);
-    }
-    if (svcs.length) {
-      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Our services</h3><div class="page-links__list">${svcs.map(p => `<a href="/services/${p.slug}" class="page-links__link">${escapeHtml(p.title)}</a>`).join('')}</div></div>`);
     }
     if (locs.length) {
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">Serving businesses in</h3><div class="page-links__list">${createLocationHubLinksHtml(locs)}</div></div>`);
@@ -273,13 +269,9 @@ function createInternalLinksHtml(page, allIndustries, allServices, allLocations)
 
   if (page._type === 'location') {
     const inds = getDeterministicIndustries(allIndustries, 6);
-    const svcs = allServices.slice(0, 4);
 
     if (inds.length) {
       sections.push(`<div class="page-links__group"><h3 class="page-links__label">Industries we serve in ${escapeHtml(page.location || '')}</h3><div class="page-links__list">${createIndustryHubLinksHtml(inds)}</div></div>`);
-    }
-    if (svcs.length) {
-      sections.push(`<div class="page-links__group"><h3 class="page-links__label">Our services</h3><div class="page-links__list">${svcs.map(p => `<a href="/services/${p.slug}" class="page-links__link">${escapeHtml(p.title)}</a>`).join('')}</div></div>`);
     }
   }
 
@@ -398,7 +390,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
       <div class="container">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
-        <a href="/contact" class="page-hero__button">Let's Chat</a>
+        <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="page-hero__button">Book a Discovery Call</a>
         ${projectSlideshowHtml}
       </div>
     </section>
@@ -436,7 +428,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
         <div class="page-cta__content">
           <h2 class="page-cta__heading">Ready to get more leads for your ${escapeHtml(page.industry.toLowerCase())} business?</h2>
           <p class="page-cta__text">Get in touch to discuss your project. We'll show you what a high-performing website looks like for your industry.</p>
-          <a href="/contact" class="page-cta__button">Let's Chat</a>
+          <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="page-cta__button">Book a Discovery Call</a>
         </div>
       </div>
     </section>
@@ -500,6 +492,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <meta name="description" content="${escapeHtml(page.description)}">
+  <meta name="robots" content="noindex, follow">
   <title>${escapeHtml(page.title)} | Off Piste Studio</title>
   <link rel="canonical" href="https://offpistestudio.com/services/${escapeHtml(page.slug)}">
   <meta property="og:type" content="website">
@@ -551,7 +544,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
       <div class="container">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
-        <a href="/contact" class="page-hero__button">Let's Chat</a>
+        <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="page-hero__button">Book a Discovery Call</a>
         ${projectSlideshowHtml}
       </div>
     </section>
@@ -589,7 +582,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
         <div class="page-cta__content">
           <h2 class="page-cta__heading">Ready to get started?</h2>
           <p class="page-cta__text">Get in touch and we'll walk you through how it works.</p>
-          <a href="/contact" class="page-cta__button">Let's Chat</a>
+          <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="page-cta__button">Book a Discovery Call</a>
         </div>
       </div>
     </section>
@@ -706,7 +699,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
       <div class="container">
         <h1 class="page-hero__title">${escapeHtml(page.title)}</h1>
         <p class="page-hero__intro">${escapeHtml(page.intro)}</p>
-        <a href="/contact" class="page-hero__button">Let's Chat</a>
+        <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="page-hero__button">Book a Discovery Call</a>
         ${projectSlideshowHtml}
       </div>
     </section>
@@ -725,7 +718,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
         <div class="page-cta__content">
           <h2 class="page-cta__heading">Need a website for your ${escapeHtml(page.location)} business?</h2>
           <p class="page-cta__text">We build websites for local businesses in ${escapeHtml(page.location)} and across ${escapeHtml(page.region || 'Perth')}. Get in touch to discuss your project.</p>
-          <a href="/contact" class="page-cta__button">Let's Chat</a>
+          <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="page-cta__button">Book a Discovery Call</a>
         </div>
       </div>
     </section>

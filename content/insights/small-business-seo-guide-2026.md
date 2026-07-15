@@ -28,7 +28,7 @@ For small businesses, authority is built gradually through legitimate means. Loc
 
 A technically sound website is the foundation everything else rests on. This means fast load times, mobile-friendly design, clean URL structures, proper use of heading tags, working internal links, and no crawl errors blocking search engines from accessing your content.
 
-Think of technical SEO as the plumbing of your website. Nobody notices it when it works, but when it breaks, nothing else functions properly. A [well-built website](/services/website-design) handles these technical requirements from the start.
+Think of technical SEO as the plumbing of your website. Nobody notices it when it works, but when it breaks, nothing else functions properly. A [well-built website](/work) handles these technical requirements from the start.
 
 ## How AI has changed search
 
@@ -112,7 +112,7 @@ Rankings are a means to an end, not the end itself. The goal is qualified leads 
 
 ### SEO is not a one-time project
 
-Effective [SEO](/services/seo) is an ongoing investment, not a box you tick once. The competitive landscape changes. Algorithms evolve. New competitors enter the market. Content needs updating. Technical issues need monitoring.
+Effective [SEO](/resources) is an ongoing investment, not a box you tick once. The competitive landscape changes. Algorithms evolve. New competitors enter the market. Content needs updating. Technical issues need monitoring.
 
 Businesses that treat SEO as a continuous effort consistently outperform those that do a burst of activity and then stop. The results compound over time, but only if the work continues.
 

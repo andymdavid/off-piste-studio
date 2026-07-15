@@ -64,9 +64,9 @@ When the system is coherent, every touchpoint reinforces the same story. The pro
 
 Most businesses do not need a complete rebrand to start seeing the commercial benefits of better design. The highest-impact starting points tend to be the places where the most revenue is at stake.
 
-- Review your highest-traffic landing pages for clarity, hierarchy, and conversion friction. A [professionally designed website](/services/website-design) addresses these issues from the start. These are the pages doing the most commercial work and they deserve the most attention.
+- Review your highest-traffic landing pages for clarity, hierarchy, and conversion friction. A [professionally designed website](/work) addresses these issues from the start. These are the pages doing the most commercial work and they deserve the most attention.
 - Look at your proposals and pitch materials. If they do not match the quality of your website, you are losing credibility at the moment it matters most.
 - Audit the post-sale experience. If onboarding, reporting, or support materials feel like a step down from the sales experience, that is a retention risk.
-- Assess whether your [brand](/services/branding) still reflects the business you are today. Many growing companies have outgrown their original identity and are presenting a version of themselves that no longer matches their capability or ambition.
+- Assess whether your [brand](/work) still reflects the business you are today. Many growing companies have outgrown their original identity and are presenting a version of themselves that no longer matches their capability or ambition.
 
 The businesses that get the most from design are the ones that treat it as an ongoing investment in how they are perceived, understood, and trusted. That investment shows up directly in revenue.

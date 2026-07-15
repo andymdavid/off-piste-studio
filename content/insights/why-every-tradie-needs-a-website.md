@@ -84,7 +84,7 @@ You do not need a complex website. Trades websites work best when they are simpl
 
 **Contact on every page.** Your phone number and a contact form should be accessible from every page on the site. A sticky click-to-call button on mobile is particularly important for trades because most of your customers are searching from their phone.
 
-**Local SEO foundations.** Your business name, address, and service areas should be clearly stated. Each suburb or area you serve can be mentioned. This helps Google connect your website to local searches in those areas. Pair your website with a properly set up [Google Business Profile](/services/seo) and you cover both the organic results and the map pack.
+**Local SEO foundations.** Your business name, address, and service areas should be clearly stated. Each suburb or area you serve can be mentioned. This helps Google connect your website to local searches in those areas. Pair your website with a properly set up [Google Business Profile](/resources) and you cover both the organic results and the map pack.
 
 ## Common objections and why they do not hold up
 

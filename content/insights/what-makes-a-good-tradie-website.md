@@ -90,7 +90,7 @@ If you offer a workmanship guarantee, a punctuality guarantee, or a fixed-price 
 
 ## Local SEO elements built into the site
 
-A tradie website without local [SEO](/services/seo) is like a shopfront with no sign. The site might be excellent, but nobody can find it.
+A tradie website without local [SEO](/resources) is like a shopfront with no sign. The site might be excellent, but nobody can find it.
 
 ### Location pages for your service areas
 

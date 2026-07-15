@@ -36,7 +36,7 @@ function scanDir(dirName, contentDirName = null) {
 }
 
 // Core pages (in project root)
-const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'contact.html', 'pricing.html', 'tools.html'];
+const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'pricing.html', 'tools.html'];
 
 const entries = [];
 
@@ -72,9 +72,6 @@ function addScannedPages(dirName, pathPrefix, contentDirName, changefreq, priori
     });
   }
 }
-
-// Service pages - priority 0.9
-addScannedPages('services', 'services', 'content/services', 'weekly', '0.9');
 
 // Industry pages - priority 0.8
 addScannedPages('industries', 'industries', 'content/industries', 'weekly', '0.8');

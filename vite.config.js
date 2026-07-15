@@ -33,7 +33,6 @@ export default defineConfig({
         work: resolve(__dirname, 'work.html'),
         about: resolve(__dirname, 'about.html'),
         resources: resolve(__dirname, 'resources.html'),
-        contact: resolve(__dirname, 'contact.html'),
         tools: resolve(__dirname, 'tools.html'),
         pricing: resolve(__dirname, 'pricing.html'),
         industries: resolve(__dirname, 'industries.html'),

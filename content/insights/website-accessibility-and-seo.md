@@ -76,6 +76,6 @@ The most effective approach is to focus on the changes that deliver the biggest 
 - Add meaningful alt text to images that carry content. Decorative images should have empty alt attributes so assistive technology skips them.
 - Improve contrast ratios, focus states, and keyboard navigation on high-intent pages like service pages, contact forms, and pricing pages. These are the pages where usability issues cost the most.
 - Label all form inputs properly and ensure error messages are clear and associated with the relevant field.
-- Run a Lighthouse or axe audit to identify the most critical issues and prioritise based on page importance and severity. If you are not sure where to start, a [professional website build](/services/website-design) includes accessibility compliance from day one, and an [SEO audit](/services/seo) can identify the technical issues holding your site back.
+- Run a Lighthouse or axe audit to identify the most critical issues and prioritise based on page importance and severity. If you are not sure where to start, a [professional website build](/work) includes accessibility compliance from day one, and an [SEO audit](/resources) can identify the technical issues holding your site back.
 
 Accessibility is not a one-off project. It is an ongoing standard that should be part of every design and development decision. The businesses that build it into their process from the start will have stronger search performance, wider reach, and a more reliable buying journey for every visitor.

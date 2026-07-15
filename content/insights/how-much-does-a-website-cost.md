@@ -40,7 +40,7 @@ A simple brochure site with a contact form is straightforward. Add a booking sys
 
 ### SEO and performance
 
-A website that is built with [search engine optimisation](/services/seo) from the start costs more than one that ignores it. But a site without SEO is a site that relies entirely on paid traffic or word of mouth to get visitors. Building SEO into the foundation — site structure, page speed, metadata, schema markup, local SEO signals — is significantly cheaper than retrofitting it later.
+A website that is built with [search engine optimisation](/resources) from the start costs more than one that ignores it. But a site without SEO is a site that relies entirely on paid traffic or word of mouth to get visitors. Building SEO into the foundation — site structure, page speed, metadata, schema markup, local SEO signals — is significantly cheaper than retrofitting it later.
 
 ### Ongoing maintenance
 
@@ -124,6 +124,6 @@ The most common cause of delays is content. If the business owner needs to provi
 
 A website is one of the few marketing investments that can pay for itself repeatedly. The right site, built properly, generates leads and revenue for years with minimal ongoing cost.
 
-For most small businesses in [Melbourne](/locations), [Sydney](/locations), Perth, or anywhere in Australia, the sweet spot is $3,000 to $10,000 for a [professionally designed website](/services/website-design) that looks credible, ranks in Google, and makes it easy for customers to get in touch.
+For most small businesses in [Melbourne](/locations), [Sydney](/locations), Perth, or anywhere in Australia, the sweet spot is $3,000 to $10,000 for a [professionally designed website](/work) that looks credible, ranks in Google, and makes it easy for customers to get in touch.
 
 The businesses that treat their website as an expense to minimise tend to get minimal results. The ones that treat it as an investment in their most visible sales tool tend to see returns that dwarf the initial cost. The question is not whether you can afford a good website. It is whether your business can afford to keep operating without one.

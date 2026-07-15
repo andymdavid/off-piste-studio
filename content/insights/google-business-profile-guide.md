@@ -110,7 +110,7 @@ Your Google Business Profile and your website are not separate channels. They re
 
 Your website provides the depth that your GBP listing cannot. When someone clicks through from your profile to your site, they should find a fast, well-designed experience that matches the credibility established by your reviews and listing. A strong profile that leads to a weak website loses the conversion.
 
-Equally, your website supports your GBP ranking. Google uses your site content to understand what your business does, where it operates, and how authoritative it is in your space. A website with well-structured [local SEO](/services/seo) content, proper schema markup, and consistent business information strengthens every local signal.
+Equally, your website supports your GBP ranking. Google uses your site content to understand what your business does, where it operates, and how authoritative it is in your space. A website with well-structured [local SEO](/resources) content, proper schema markup, and consistent business information strengthens every local signal.
 
 For businesses operating in [Perth](/locations), the combination of an optimised GBP and a fast, well-built website is the foundation of local visibility. Businesses in [Brisbane](/locations) and other Australian cities benefit from the same approach. The map pack is competitive in every metro area, and the businesses that invest in both assets consistently outperform those that focus on one or the other.
 

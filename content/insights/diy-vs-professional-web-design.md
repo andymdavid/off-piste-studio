@@ -68,7 +68,7 @@ DIY websites are not always the wrong choice. There are situations where they wo
 
 For most established small businesses, professional web design delivers a better return. Here is when it makes the strongest case.
 
-**Your website is a primary source of leads.** If customers find you through Google, your website is your most important marketing asset. A professionally designed site with proper [SEO](/services/seo) will outperform a DIY build in search rankings, conversion rate, and total lead volume. The difference in leads almost always exceeds the difference in cost.
+**Your website is a primary source of leads.** If customers find you through Google, your website is your most important marketing asset. A professionally designed site with proper [SEO](/resources) will outperform a DIY build in search rankings, conversion rate, and total lead volume. The difference in leads almost always exceeds the difference in cost.
 
 **You are in a competitive market.** If your competitors have professional websites, a DIY site puts you at an immediate disadvantage. Customers compare businesses side by side. The one that looks more established and trustworthy gets the call. In competitive markets like [legal services](/industries/lawyers), [dental practices](/industries/dentists), and trades, presentation directly affects how many enquiries you receive.
 
@@ -112,6 +112,6 @@ Can I honestly finish it? Half-built websites are worse than no website. If ther
 
 DIY website builders are good tools. They are not good substitutes for professional web design in most business contexts.
 
-If your website matters to your revenue — and for most small businesses in [Perth](/locations), [Sydney](/locations), or [Melbourne](/locations) it does — the professional route delivers a better site, more leads, and a stronger return on investment. The upfront cost is higher, but the total cost of ownership, including your time and the revenue implications, almost always favours the [professionally built option](/services/website-design).
+If your website matters to your revenue — and for most small businesses in [Perth](/locations), [Sydney](/locations), or [Melbourne](/locations) it does — the professional route delivers a better site, more leads, and a stronger return on investment. The upfront cost is higher, but the total cost of ownership, including your time and the revenue implications, almost always favours the [professionally built option](/work).
 
 The best investment is not the cheapest one. It is the one that pays for itself the fastest and keeps paying after that.

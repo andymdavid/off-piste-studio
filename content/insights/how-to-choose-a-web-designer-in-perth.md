@@ -60,7 +60,7 @@ Years of working in this industry have made certain warning signs unmistakable.
 
 **Ownership restrictions.** Some designers build on proprietary platforms or retain ownership of the site in ways that make it difficult or expensive to leave. Before signing anything, confirm that you will own the code, the design files, and the domain. If the designer hosts the site, clarify what happens if you want to move.
 
-**No discussion of SEO or performance.** A website that looks good but cannot be found in search and loads slowly on mobile is not fit for purpose. If the designer does not mention [SEO](/services/seo), page speed, or accessibility without being asked, they are likely not thinking about those things.
+**No discussion of SEO or performance.** A website that looks good but cannot be found in search and loads slowly on mobile is not fit for purpose. If the designer does not mention [SEO](/resources), page speed, or accessibility without being asked, they are likely not thinking about those things.
 
 **Unrealistically low pricing.** A custom-designed, well-built small business website takes significant time and skill to produce. If someone is quoting a fraction of what everyone else charges, they are either cutting corners you cannot see yet or they are going to upsell you on essentials that should have been included from the start.
 
@@ -108,6 +108,6 @@ Once you have shortlisted two or three designers, the decision usually comes dow
 
 Do you trust their process? Do they seem genuinely interested in understanding your business, or are they eager to start building before they know what they are building for? Is their communication clear and responsive? Do their past clients have good things to say about the experience, not just the final product?
 
-The best [website design](/services/website-design) relationships are partnerships. You bring the business knowledge. They bring the design and technical expertise. When both sides are invested, the result is a site that works commercially, not just visually.
+The best [website design](/work) relationships are partnerships. You bring the business knowledge. They bring the design and technical expertise. When both sides are invested, the result is a site that works commercially, not just visually.
 
 Choose the designer who asks the best questions, not the one who gives the most impressive presentation. The questions reveal how they think, and how they think determines what they build.

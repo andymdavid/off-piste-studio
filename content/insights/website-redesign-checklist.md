@@ -34,7 +34,7 @@ On the other hand, let go of content that exists only because someone thought th
 
 This is where most small business redesigns go wrong. The new site launches, it looks great, and within a few weeks organic traffic drops by 30 to 50 percent. It happens because nobody planned the migration properly.
 
-An [SEO](/services/seo) migration plan should be completed before any design or development work starts. It is not an afterthought.
+An [SEO](/resources) migration plan should be completed before any design or development work starts. It is not an afterthought.
 
 ### Map every existing URL
 
@@ -90,7 +90,7 @@ Having worked through dozens of small business redesigns, the same mistakes come
 
 **Trying to do everything at once.** A redesign does not need to include every feature the business has ever wanted. Launch with a strong foundation and add functionality over time based on real user behaviour and business needs.
 
-**Choosing a designer based on price alone.** The cheapest option almost always costs more in the long run through lost leads, poor performance, and the need for another redesign sooner than expected. A [professionally designed website](/services/website-design) pays for itself through better conversion and stronger credibility.
+**Choosing a designer based on price alone.** The cheapest option almost always costs more in the long run through lost leads, poor performance, and the need for another redesign sooner than expected. A [professionally designed website](/work) pays for itself through better conversion and stronger credibility.
 
 ## The launch is not the finish line
 

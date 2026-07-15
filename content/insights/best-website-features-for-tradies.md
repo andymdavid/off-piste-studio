@@ -36,7 +36,7 @@ Each service you offer should have its own page. If you are a plumber, you shoul
 
 Why does this matter? Because Google ranks pages, not websites. A dedicated page for "hot water system repair Perth" has a far better chance of ranking for that search than a generic services page that mentions hot water in passing. And when a customer lands on a page that specifically addresses their problem, they are more likely to trust that you can solve it.
 
-This is foundational [SEO](/services/seo) for any trades business. More pages targeting specific services and locations means more opportunities to appear in search results.
+This is foundational [SEO](/resources) for any trades business. More pages targeting specific services and locations means more opportunities to appear in search results.
 
 ## Google reviews displayed on your site
 
@@ -122,4 +122,4 @@ The best tradie websites are not complicated. They are focused. Every feature se
 
 If your website has these features working properly, you have a lead generation system, not just a website. If it is missing any of them, that is where the leads are leaking out.
 
-We build [websites for trades businesses](/services/website-design) across [Sydney](/locations), [Melbourne](/locations), Perth, and Australia-wide. Every site includes the features covered here because they are the features that work. If your current site is not generating the leads you expected, the issue is almost certainly in the details — and the details are fixable.
+We build [websites for trades businesses](/work) across [Sydney](/locations), [Melbourne](/locations), Perth, and Australia-wide. Every site includes the features covered here because they are the features that work. If your current site is not generating the leads you expected, the issue is almost certainly in the details — and the details are fixable.

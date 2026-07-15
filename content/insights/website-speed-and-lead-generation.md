@@ -44,7 +44,7 @@ Google has been explicit that page speed is a ranking factor. Core Web Vitals ar
 
 This does not mean speed is the only factor. Relevance, authority, and content quality still dominate. But when two pages are comparable in those areas, the faster one gets the edge. In competitive local markets like [Perth](/locations) and [Brisbane](/locations), where multiple businesses are targeting the same keywords, that edge matters.
 
-For [local SEO](/services/seo) specifically, speed is even more important because mobile performance weighs heavily. Local searches are overwhelmingly mobile. A homeowner searching for a [plumber](/industries/plumbers) at 7 PM on a weeknight is on their phone, probably on cellular data, and has zero patience for a slow site.
+For [local SEO](/resources) specifically, speed is even more important because mobile performance weighs heavily. Local searches are overwhelmingly mobile. A homeowner searching for a [plumber](/industries/plumbers) at 7 PM on a weeknight is on their phone, probably on cellular data, and has zero patience for a slow site.
 
 ## What slows websites down
 
@@ -112,7 +112,7 @@ A fast site creates a subconscious impression of competence. When a page loads i
 
 Form submissions, phone calls, and booking requests all decrease as page speed degrades. Not because the visitor consciously decides the business is bad, but because the friction accumulates. Each slow page, each delayed interaction, each layout jump erodes the momentum that leads to a conversion.
 
-A [well-built website](/services/website-design) treats speed as a design decision, not an afterthought. Performance is not something you optimise after the site is built. It is something you build into the foundation from the start.
+A [well-built website](/work) treats speed as a design decision, not an afterthought. Performance is not something you optimise after the site is built. It is something you build into the foundation from the start.
 
 ## The bottom line
 

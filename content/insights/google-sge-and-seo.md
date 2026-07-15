@@ -23,7 +23,7 @@ The most affected queries are informational ones. "What is," "how to," and defin
 
 Transactional and commercial queries have been less disrupted. When someone is comparing products, looking for a service provider, or ready to make a buying decision, Google still tends to surface traditional results. These are harder to summarise because they involve subjective judgement, pricing, availability, and trust.
 
-Local searches have also held up reasonably well. Google still relies on map packs and local business listings for queries with geographic intent. For businesses like [plumbers](/industries/plumbers), [electricians](/industries/electricians), and [dentists](/industries/dentists), [local SEO](/services/seo) remains one of the most reliable sources of inbound leads.
+Local searches have also held up reasonably well. Google still relies on map packs and local business listings for queries with geographic intent. For businesses like [plumbers](/industries/plumbers), [electricians](/industries/electricians), and [dentists](/industries/dentists), [local SEO](/resources) remains one of the most reliable sources of inbound leads.
 
 The pattern is clear. The more generic and easily summarised the content, the more likely it is to lose clicks. The more specific, commercial, or experience-driven, the more resilient it is.
 

@@ -124,7 +124,7 @@ The implementation question for a developer or hosting provider is concrete.
 - Are blocked events logged in a way the SEO or marketing team can review?
 - Does the rule still work after the CDN or security product updates?
 
-This is where [technical SEO and AI search readiness](/services/seo) overlaps with [website design and technical implementation](/services/website-design). The policy is only useful when the site architecture and infrastructure enforce it accurately.
+This is where [technical SEO and AI search readiness](/resources) overlaps with [website design and technical implementation](/work). The policy is only useful when the site architecture and infrastructure enforce it accurately.
 
 ## llms.txt is a supporting clarity file
 
