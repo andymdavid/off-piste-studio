@@ -23,6 +23,29 @@ export const INSIGHT_POSTS = [
     "url": "/insights/ai-search-citation-worthy-content"
   },
   {
+    "slug": "how-ai-search-understands-your-business",
+    "title": "How AI Search Understands Your Business",
+    "description": "A practical entity-trust audit for making your business easier for AI search tools, Google, and buyers to identify, describe, compare, and recommend accurately.",
+    "intro": "AI search can only represent your business accurately when the web gives it a consistent story. Your website, profiles, reviews, schema, proof, and third-party mentions all need to make the business easy to identify, understand, and trust.",
+    "date": "2026-07-16",
+    "displayDate": "July 16, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy",
+      "Website Design"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "building-your-website-for-llms",
+      "how-to-measure-ai-search-visibility",
+      "ai-search-citation-worthy-content"
+    ],
+    "imageAlt": "How AI Search Understands Your Business",
+    "url": "/insights/how-ai-search-understands-your-business"
+  },
+  {
     "slug": "ai-crawler-access-robots-txt-guide",
     "title": "AI Crawler Access and Robots.txt Guide for Business Websites",
     "description": "A practical guide to AI crawler access, robots.txt, WAF rules, CDN logs, and validation checks for business websites.",

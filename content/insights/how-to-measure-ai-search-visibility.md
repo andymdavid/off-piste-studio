@@ -101,6 +101,8 @@ The gaps matter.
 
 This is where [AI-ready website foundations](/insights/building-your-website-for-llms) become practical. If an audit shows weak source quality, unclear service pages, blocked crawlers, or thin proof, the fix usually sits in the content system and site structure.
 
+If the pattern is inaccurate representation, use the [AI entity trust audit](/insights/how-ai-search-understands-your-business) before changing the whole content plan. It separates business identity, service clarity, profile consistency, schema, proof, third-party corroboration, and access issues.
+
 ## Check whether AI systems can access the site
 
 If answer engines have limited access to important pages, the audit will keep finding gaps. Check crawlability, indexability, robots.txt, CDN settings, WAF rules, server responses, and whether key pages are available as text.

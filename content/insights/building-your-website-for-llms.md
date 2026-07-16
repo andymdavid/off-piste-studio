@@ -200,6 +200,8 @@ Proof architecture matters. Strong pages name the service, audience, problem, pr
 
 If the audit shows that pages are accessible but too generic to trust, the next layer is [citation-worthy content](/insights/ai-search-citation-worthy-content). That work turns broad claims into supported answers, first-hand proof, source context, and examples that are easier for buyers and AI search systems to evaluate.
 
+If the audit shows that AI systems understand the category but misread the business, the repair path is different. Use the [AI entity trust audit](/insights/how-ai-search-understands-your-business) to check whether the name, services, audience, locations, profiles, proof, and third-party sources tell one consistent story.
+
 For Google specifically, this connects to the broader shift described in our article on [AI Overviews and SEO](/insights/google-sge-and-seo). Generic information is easier to compress. Specific proof, commercial judgement, and useful comparison context are harder to replace.
 
 ## Getting started

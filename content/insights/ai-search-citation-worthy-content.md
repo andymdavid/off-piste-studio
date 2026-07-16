@@ -30,6 +30,8 @@ A citation-worthy page has several jobs at once. It should help a human decide w
 
 That is why citation-worthiness belongs inside a broader [AI-ready website foundation](/insights/building-your-website-for-llms). Crawlability, structured content, internal links, schema, and machine-readable support files all help systems understand a site. They work best when the underlying pages contain evidence worth understanding.
 
+When the issue is business representation rather than page evidence, start with the [AI entity trust audit](/insights/how-ai-search-understands-your-business). It checks whether owned pages, profiles, reviews, schema, third-party mentions, and access rules support the same business story.
+
 ## What the platforms actually say
 
 Google's guidance keeps the foundation grounded. Its documentation for AI Overviews and AI Mode says the same SEO fundamentals apply to AI features in Search, and that a page must be indexed and eligible to appear in Search with a snippet to be shown as a supporting link. It also says there are no additional technical requirements for those AI features, and no special AI markup is required. That comes from Google's current guide to [AI features and your website](https://developers.google.com/search/docs/appearance/ai-features).
