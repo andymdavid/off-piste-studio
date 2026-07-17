@@ -381,7 +381,7 @@ function createIndustryHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-insight-mobile-byline-v71">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
   ${fontsHtml}
 </head>
 <body data-page-type="industry" data-page-slug="${escapeHtml(page.slug)}">
@@ -536,7 +536,7 @@ function createServiceHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-insight-mobile-byline-v71">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
   ${fontsHtml}
 </head>
 <body data-page-type="service" data-page-slug="${escapeHtml(page.slug)}">
@@ -692,7 +692,7 @@ function createLocationHtml(page, allIndustries, allServices, allLocations) {
     ]
   }
   </script>
-  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-insight-mobile-byline-v71">
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
   ${fontsHtml}
 </head>
 <body data-page-type="location" data-page-slug="${escapeHtml(page.slug)}">

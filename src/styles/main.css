@@ -3775,7 +3775,7 @@ body[data-page-type="insight"] .related-posts > .container {
 }
 
 .related-posts__card .insight-card__link {
-  min-height: 100%;
+  min-height: clamp(18rem, 25vw, 23rem);
   padding: 1rem;
 }
 
@@ -3786,6 +3786,11 @@ body[data-page-type="insight"] .related-posts > .container {
 
 .related-posts__card .insight-card__description {
   color: var(--related-posts-muted);
+}
+
+.related-posts__card .insight-card__tags {
+  max-height: calc((1.35rem * 2) + 0.38rem);
+  overflow: hidden;
 }
 
 .related-posts__card .insight-card__meta {
@@ -4800,27 +4805,65 @@ body[data-page-type="about"] .about__logo-cell:nth-child(n + 5) {
 }
 
 body[data-page-type="about"] .about__logo {
+  --about-logo-x: 0%;
   width: auto;
   max-width: 70%;
   max-height: 4.7rem;
   opacity: 0.72;
   filter: none;
+  transform: translateX(var(--about-logo-x));
   transition: opacity 280ms ease, transform 280ms ease;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="0"] {
+  --about-logo-x: 11.5%;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="1"] {
+  --about-logo-x: 9.5%;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="2"] {
+  --about-logo-x: 11%;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="3"] {
+  --about-logo-x: 14.5%;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="4"] {
+  --about-logo-x: 18%;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="5"] {
+  --about-logo-x: 8.5%;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="6"] {
+  --about-logo-x: 12.5%;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="7"] {
+  --about-logo-x: 16.5%;
+}
+
+body[data-page-type="about"] .about__logo[data-logo-index="8"] {
+  --about-logo-x: 22%;
 }
 
 body[data-page-type="about"] .about__logo-cell:hover .about__logo {
   opacity: 0.96;
-  transform: translateY(-0.15rem);
+  transform: translateX(var(--about-logo-x)) translateY(-0.15rem);
 }
 
 body[data-page-type="about"] .about__logo.is-swapping-out {
   opacity: 0;
-  transform: translateY(8px);
+  transform: translateX(var(--about-logo-x)) translateY(8px);
 }
 
 body[data-page-type="about"] .about__logo.is-swapping-in {
   opacity: 0;
-  transform: translateY(-8px);
+  transform: translateX(var(--about-logo-x)) translateY(-8px);
 }
 
 body[data-page-type="about"][data-theme="light"] .about__logo {
@@ -5116,20 +5159,35 @@ body[data-page-type="about"] .services-alt__item:last-child {
 
   body[data-page-type="about"] .about__logo-row {
     min-height: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background-image:
+      linear-gradient(
+        to right,
+        transparent calc(50% - 0.5px),
+        var(--about-divider) calc(50% - 0.5px),
+        var(--about-divider) calc(50% + 0.5px),
+        transparent calc(50% + 0.5px)
+      );
+    background-repeat: no-repeat;
   }
 
   body[data-page-type="about"] .about__logo-cell {
     min-height: 8.25rem;
     border-left: 0;
-    border-top: 1px solid var(--site-divider);
+    border-top: 1px solid var(--about-divider);
   }
 
-  body[data-page-type="about"] .about__logo-cell:first-child {
+  body[data-page-type="about"] .about__logo-cell:nth-child(-n + 2) {
     border-top: 0;
   }
 
   body[data-page-type="about"] .about__logo-cell:nth-child(5) {
-    border-top: 1px solid var(--site-divider);
+    border-top: 1px solid var(--about-divider);
+  }
+
+  body[data-page-type="about"] .about__logo {
+    max-width: 88%;
+    max-height: 5.75rem;
   }
 
   body[data-page-type="about"] .about__headline,
@@ -8276,9 +8334,18 @@ body[data-duplicate-nav-open="true"] .duplicate-nav-overlay {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   }
 
+  .duplicate-header.is-open .duplicate-header__nav {
+    max-width: 22rem;
+    padding: 0.55rem 1rem 0.75rem;
+  }
+
   .duplicate-header__row {
     justify-content: space-between;
     gap: 1rem;
+  }
+
+  .duplicate-header__brand {
+    gap: 0.36rem;
   }
 
   .duplicate-header__mark {
@@ -8287,7 +8354,21 @@ body[data-duplicate-nav-open="true"] .duplicate-nav-overlay {
   }
 
   .duplicate-header__brand-text {
-    font-size: 1.05rem;
+    font-size: 1.18rem;
+  }
+
+  .duplicate-header__menu-inner {
+    padding-top: 1.05rem;
+  }
+
+  .duplicate-header__menu-link {
+    gap: 0.75rem;
+    padding: 0.42rem 0;
+  }
+
+  .duplicate-header__menu-label {
+    font-size: 1.08rem;
+    line-height: 1.05;
   }
 }
 
