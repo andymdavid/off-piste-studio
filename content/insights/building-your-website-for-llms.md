@@ -4,7 +4,7 @@ slug: building-your-website-for-llms
 description: How to make your website easier for AI search tools to understand, from crawlability and structured content to crawler access, schema, llms.txt, and measurement.
 intro: AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.
 date: 2026-03-08
-updatedDate: 2026-07-16
+updatedDate: 2026-07-19
 readTime: 15 min read
 tags: SEO, AI, Website Design
 cluster: AI Search Visibility
@@ -175,6 +175,8 @@ Beyond `llms.txt`, broader publishing decisions shape how well your site works f
 Clean HTML and accessible structure come first. Semantic elements, heading order, descriptive links, useful alt text, readable copy, and labelled forms all make a page easier to parse. They also help people navigate the site with less friction.
 
 The overlap with [website accessibility and SEO](/insights/website-accessibility-and-seo) is direct. The same structural clarity that helps assistive technology move through a page also helps crawlers and extraction systems understand what each section means.
+
+For the implementation layer, use our [structured content for AI search guide](/insights/structured-content-ai-search-guide) to audit page anatomy, schema alignment, proof blocks, internal links, metadata, and agent-readable interaction patterns.
 
 ### Schema markup
 

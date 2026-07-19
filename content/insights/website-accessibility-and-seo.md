@@ -4,7 +4,7 @@ slug: website-accessibility-and-seo
 description: Why accessibility improvements and SEO gains overlap, how structural and content changes serve both, and where to focus for the biggest commercial impact.
 intro: Accessibility and search performance share more common ground than most teams realise. The structural improvements that help assistive technology navigate a website are the same ones that help search engines understand and index it. Investing in one tends to improve the other.
 date: 2026-03-02
-updatedDate: 2026-07-14
+updatedDate: 2026-07-19
 readTime: 10 min read
 tags: SEO, User Experience, Website Design
 cluster: Technical Website Foundations
@@ -22,6 +22,8 @@ This overlap means that many accessibility improvements deliver SEO benefits wit
 The foundation of both accessibility and search performance is clean, semantic HTML. When a page uses proper heading levels in the right order, wraps navigation in nav elements, uses main and section tags appropriately, and marks up lists and tables correctly, both search engines and assistive technologies can parse the content accurately.
 
 That same structure now supports AI retrieval work too. Crawler access rules matter, but they only help when the page they expose is readable, text-based, and internally linked. Our [AI crawler access and robots.txt guide](/insights/ai-crawler-access-robots-txt-guide) covers the access-control side of that same machine-readable foundation.
+
+When the brief is broader than accessibility, our [structured content for AI search guide](/insights/structured-content-ai-search-guide) shows how semantic HTML, metadata, schema, proof blocks, internal links, and labelled interactions work together as page architecture.
 
 Heading hierarchy is one of the most common issues. Pages that skip heading levels, use headings purely for visual styling, or bury important content under incorrect heading structures create confusion for screen readers and search crawlers alike. Fixing heading order is one of the simplest changes a team can make and it improves both accessibility and indexing.
 
@@ -76,6 +78,6 @@ The most effective approach is to focus on the changes that deliver the biggest 
 - Add meaningful alt text to images that carry content. Decorative images should have empty alt attributes so assistive technology skips them.
 - Improve contrast ratios, focus states, and keyboard navigation on high-intent pages like service pages, contact forms, and pricing pages. These are the pages where usability issues cost the most.
 - Label all form inputs properly and ensure error messages are clear and associated with the relevant field.
-- Run a Lighthouse or axe audit to identify the most critical issues and prioritise based on page importance and severity. If you are not sure where to start, a [professional website build](/work) includes accessibility compliance from day one, and an [SEO audit](/resources) can identify the technical issues holding your site back.
+- Run a Lighthouse or axe audit to identify the most critical issues and prioritise based on page importance and severity. If you're reviewing accessibility as part of a wider site rebuild, a [professional website build](/services/website-design) can include accessibility from day one, and an [SEO audit](/services/seo) can identify the technical issues holding your site back.
 
 Accessibility is not a one-off project. It is an ongoing standard that should be part of every design and development decision. The businesses that build it into their process from the start will have stronger search performance, wider reach, and a more reliable buying journey for every visitor.

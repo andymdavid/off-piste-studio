@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "structured-content-ai-search-guide",
+    "title": "Structured Content for AI Search: How to Make Your Website Easier for Search Engines, AI Agents, and Buyers to Understand",
+    "description": "A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.",
+    "intro": "A capable business can still be hard to understand online when its pages hide services, proof, dates, authorship, location facts, and next steps inside vague copy or fragile layouts. Structured content makes that meaning easier for buyers and machines to inspect.",
+    "date": "2026-07-19",
+    "displayDate": "July 19, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Technical SEO",
+      "Website Design",
+      "Content Strategy"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "building-your-website-for-llms",
+      "website-accessibility-and-seo",
+      "how-ai-search-understands-your-business"
+    ],
+    "imageAlt": "Structured Content for AI Search: How to Make Your Website Easier for Search Engines, AI Agents, and Buyers to Understand",
+    "url": "/insights/structured-content-ai-search-guide"
+  },
+  {
     "slug": "ai-search-citation-worthy-content",
     "title": "How to Make Website Content Worth Citing in AI Search",
     "description": "A practical framework for making service pages, articles, and proof assets specific, evidenced, and useful enough for AI search systems and buyers to trust.",
@@ -288,8 +312,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.",
     "date": "2026-03-08",
     "displayDate": "March 8, 2026",
-    "updatedDate": "2026-07-16",
-    "displayUpdatedDate": "July 16, 2026",
+    "updatedDate": "2026-07-19",
+    "displayUpdatedDate": "July 19, 2026",
     "readTime": "15 min read",
     "tags": [
       "SEO",
@@ -350,8 +374,8 @@ export const INSIGHT_POSTS = [
     "intro": "Accessibility and search performance share more common ground than most teams realise. The structural improvements that help assistive technology navigate a website are the same ones that help search engines understand and index it. Investing in one tends to improve the other.",
     "date": "2026-03-02",
     "displayDate": "March 2, 2026",
-    "updatedDate": "2026-07-14",
-    "displayUpdatedDate": "July 14, 2026",
+    "updatedDate": "2026-07-19",
+    "displayUpdatedDate": "July 19, 2026",
     "readTime": "10 min read",
     "tags": [
       "SEO",
