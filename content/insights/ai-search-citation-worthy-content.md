@@ -8,7 +8,7 @@ date: 2026-07-16
 readTime: 12 min read
 tags: SEO, AI, Content Strategy, Website Design
 cluster: AI Search Visibility
-relatedPosts: building-your-website-for-llms, how-to-measure-ai-search-visibility, ai-crawler-access-robots-txt-guide
+relatedPosts: google-sge-and-seo, building-your-website-for-llms, how-to-measure-ai-search-visibility
 ---
 ## Strong source material earns attention
 

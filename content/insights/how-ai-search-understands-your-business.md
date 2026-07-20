@@ -9,7 +9,7 @@ readTime: 12 min read
 tags: SEO, AI, Content Strategy, Website Design
 cluster: AI Search Visibility
 subcluster: Entity Trust and Brand Signals
-relatedPosts: building-your-website-for-llms, how-to-measure-ai-search-visibility, ai-search-citation-worthy-content
+relatedPosts: google-sge-and-seo, building-your-website-for-llms, ai-search-citation-worthy-content
 ---
 <!--
 SERP check record, July 2026:

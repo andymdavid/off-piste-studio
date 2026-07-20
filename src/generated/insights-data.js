@@ -16,8 +16,8 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
+      "google-sge-and-seo",
       "building-your-website-for-llms",
-      "website-accessibility-and-seo",
       "how-ai-search-understands-your-business"
     ],
     "imageAlt": "Structured Content for AI Search: How to Make Your Website Easier for Search Engines, AI Agents, and Buyers to Understand",
@@ -39,9 +39,9 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
+      "google-sge-and-seo",
       "building-your-website-for-llms",
-      "how-to-measure-ai-search-visibility",
-      "ai-crawler-access-robots-txt-guide"
+      "how-to-measure-ai-search-visibility"
     ],
     "imageAlt": "How to Make Website Content Worth Citing in AI Search",
     "url": "/insights/ai-search-citation-worthy-content"
@@ -62,8 +62,8 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
+      "google-sge-and-seo",
       "building-your-website-for-llms",
-      "how-to-measure-ai-search-visibility",
       "ai-search-citation-worthy-content"
     ],
     "imageAlt": "How AI Search Understands Your Business",
@@ -331,23 +331,26 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "google-sge-and-seo",
-    "title": "Google Search Generative Experience (SGE) and SEO: Navigating the New Search Landscape",
-    "description": "How Google's AI Overviews change organic traffic, which content gets cited versus compressed, and what businesses should do to stay visible in AI-driven search.",
-    "intro": "Google now generates AI-powered answers at the top of most search results. That changes how traffic is earned, which content stays valuable, and where businesses should focus their energy. The companies that treat this as a visibility shift will be better positioned than those waiting for things to go back to normal.",
+    "title": "Google AI Overviews and SEO: What AI Mode Means for Search Visibility",
+    "description": "How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.",
+    "intro": "Google's AI search features have moved on from the old SGE label. AI Overviews and AI Mode now change how some searches are answered, how clicks are earned, and how businesses should judge visibility. The practical response is stronger search foundations, clearer evidence, and better measurement.",
     "date": "2026-03-06",
     "displayDate": "March 6, 2026",
-    "readTime": "11 min read",
+    "updatedDate": "2026-07-21",
+    "displayUpdatedDate": "July 21, 2026",
+    "readTime": "12 min read",
     "tags": [
       "SEO",
-      "AI"
+      "AI",
+      "Content Strategy"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "how-to-measure-ai-search-visibility",
       "building-your-website-for-llms",
-      "small-business-seo-guide-2026"
+      "ai-search-citation-worthy-content"
     ],
-    "imageAlt": "Google Search Generative Experience (SGE) and SEO: Navigating the New Search Landscape",
+    "imageAlt": "Google AI Overviews and SEO: What AI Mode Means for Search Visibility",
     "url": "/insights/google-sge-and-seo"
   },
   {

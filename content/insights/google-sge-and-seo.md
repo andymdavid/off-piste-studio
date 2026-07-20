@@ -1,82 +1,118 @@
 ---
-title: Google Search Generative Experience (SGE) and SEO: Navigating the New Search Landscape
+title: Google AI Overviews and SEO: What AI Mode Means for Search Visibility
 slug: google-sge-and-seo
-description: How Google's AI Overviews change organic traffic, which content gets cited versus compressed, and what businesses should do to stay visible in AI-driven search.
-intro: Google now generates AI-powered answers at the top of most search results. That changes how traffic is earned, which content stays valuable, and where businesses should focus their energy. The companies that treat this as a visibility shift will be better positioned than those waiting for things to go back to normal.
+description: How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.
+intro: Google's AI search features have moved on from the old SGE label. AI Overviews and AI Mode now change how some searches are answered, how clicks are earned, and how businesses should judge visibility. The practical response is stronger search foundations, clearer evidence, and better measurement.
 date: 2026-03-06
-readTime: 11 min read
-tags: SEO, AI
+updatedDate: 2026-07-21
+readTime: 12 min read
+tags: SEO, AI, Content Strategy
 cluster: AI Search Visibility
-relatedPosts: how-to-measure-ai-search-visibility, building-your-website-for-llms, small-business-seo-guide-2026
+subcluster: Google Search and AI Overviews
+relatedPosts: how-to-measure-ai-search-visibility, building-your-website-for-llms, ai-search-citation-worthy-content
 ---
-## What AI Overviews actually do
+## SGE became AI Overviews and AI Mode
 
-Google's AI Overviews, previously called the Search Generative Experience (SGE), place a synthesised answer directly at the top of the results page. The answer is generated from multiple sources and presented before any organic listings appear.
+Search Generative Experience, or SGE, was the early label. The live business issue is now Google's AI Overviews and AI Mode. They are part of Google Search, they can change how information is summarized, and they can affect which pages earn attention before a buyer reaches the traditional organic results.
 
-This is different from featured snippets. Featured snippets pulled a passage from one page and linked to it prominently. AI Overviews draw from several sources, blend the information together, and often satisfy the query without the user needing to click through to any website at all.
+Search behaviour varies by query. Google says AI Overviews are shown when its systems decide they add value beyond classic Search, and that they often do not trigger. AI Mode is built for more exploratory questions, comparisons, and follow-up research. The useful question for a business is whether Google can find, understand, trust, and cite the pages that explain your expertise when a buyer is researching.
 
-For many informational queries, the AI Overview is now the first and sometimes the only thing a user reads. That has obvious implications for any business relying on organic search traffic.
+This is where Google-specific SEO sits inside the wider AI discovery problem. If you're working on the broader website foundation for answer engines, start with our guide to [building your website for LLMs](/insights/building-your-website-for-llms). This article stays closer to Google Search, AI Overviews, AI Mode, and the reporting that now sits in Search Console.
 
-## The traffic impact is real and uneven
+## What AI Overviews and AI Mode actually do
 
-The most affected queries are informational ones. "What is," "how to," and definition-style searches are now largely answered in the overview itself. If your content strategy has been built around capturing top-of-funnel searches with basic explainer content, that traffic is already declining.
+AI Overviews give searchers a generated summary inside Google Search with links that support or extend the answer. They tend to appear when Google thinks a synthesized response can help the searcher understand a complex topic faster.
 
-Transactional and commercial queries have been less disrupted. When someone is comparing products, looking for a service provider, or ready to make a buying decision, Google still tends to surface traditional results. These are harder to summarise because they involve subjective judgement, pricing, availability, and trust.
+AI Mode is a more exploratory AI search experience. A person can ask a longer question, compare options, and continue the research through follow-up prompts. For business owners, the important shift is that the query can become broader than the exact words typed into the box.
 
-Local searches have also held up reasonably well. Google still relies on map packs and local business listings for queries with geographic intent. For businesses like [plumbers](/industries/plumbers), [electricians](/industries/electricians), and [dentists](/industries/dentists), [local SEO](/resources) remains one of the most reliable sources of inbound leads.
+Google explains that AI Overviews and AI Mode may use [query fan-out](https://developers.google.com/search/docs/appearance/ai-features), where the system issues multiple related searches across subtopics and data sources before forming a response. A buyer asking one commercial question can therefore trigger retrieval around services, pricing, locations, proof, comparisons, risks, and definitions.
 
-The pattern is clear. The more generic and easily summarised the content, the more likely it is to lose clicks. The more specific, commercial, or experience-driven, the more resilient it is.
+That makes isolated keyword pages weaker. Strong supporting pages, clear internal links, accurate service information, and visible proof help Google connect the business to the different parts of the buyer's question. A website with one thin service page and a few generic blog posts gives Google less to work with than a site that explains who it serves, what it does, what evidence supports the claim, and how a buyer should compare options.
 
-## What gets cited and what gets compressed
+## The eligibility foundation
 
-AI Overviews do link to sources. The question is whether your content is the kind that gets cited or the kind that gets absorbed and compressed into a generated paragraph.
+Google's guidance is direct. The same SEO foundations apply to AI features in Search, and [Google's AI features documentation](https://developers.google.com/search/docs/appearance/ai-features) says there are no additional requirements for appearing in AI Overviews or AI Mode. To be eligible as a supporting link, a page needs to be indexed and eligible to appear in Google Search with a snippet.
 
-Content that gets compressed tends to be generic. If ten websites all answer the same question in roughly the same way, the AI has no reason to send a user to any one of them. It just synthesises the shared answer and moves on.
+That matters because a lot of AI search advice makes the work sound more exotic than it is. Google requires normal Search eligibility, not a special AI markup layer, new machine-readable AI text files, or special schema.org structured data for these features.
 
-Content that gets cited tends to have something the AI cannot easily replicate. Original research, proprietary data, named frameworks, specific case studies, and strong editorial perspective all give the model a reason to reference the source. If your page adds something that the summary cannot fully capture, it earns the link.
+The operational foundation is still familiar. Googlebot needs to crawl important pages, those pages need to be indexable, and useful content needs to appear as visible text. Headings, internal links, and page structure should clarify the subject. Structured data should match the visible content. The website should be fast, accessible, and technically sound. The content itself needs useful expertise rather than another version of the common answer.
 
-> The standard for visibility has shifted from "does this page answer the question" to "does this page add something the generated answer cannot."
+For implementation detail, use the [structured content guide](/insights/structured-content-ai-search-guide) and the [AI crawler access guide](/insights/ai-crawler-access-robots-txt-guide). The strategic point is simpler. Google AI visibility is built on Search eligibility, snippet eligibility, content quality, and clear website architecture.
 
-## Practical strategy for businesses right now
+<div class="insight-article__callout">
+  <strong>Google AI search visibility stack</strong>
+  <ol>
+    <li>Crawlability and indexability</li>
+    <li>Snippet eligibility and visible text</li>
+    <li>Helpful, expert-led content</li>
+    <li>Evidence, authorship, and commercial proof</li>
+    <li>Structured data that matches the page</li>
+    <li>Descriptive internal links</li>
+    <li>Search Console reporting</li>
+    <li>Qualified traffic, enquiries, and revenue signals</li>
+  </ol>
+</div>
 
-The response to this shift is not to abandon content. It is to raise the bar on what you publish and rethink how you measure its value.
+## How traffic impact should be read
 
-### Audit your content for summarisability
+AI search does change traffic expectations, but the effect is uneven. Generic informational queries are more exposed to summarization. If a page only explains a basic definition or repeats a standard how-to answer, the generated response may satisfy the searcher without a click.
 
-Look at your existing pages and ask whether an AI could fully replace each one with a paragraph. If the answer is yes, that page is vulnerable. Deprioritise or consolidate pages that exist only to capture a keyword with a surface-level answer.
+Commercial, local, branded, and decision-heavy searches behave differently. A buyer comparing agencies, checking a service provider, reviewing a quote, or looking for proof still needs judgement. They may click later, search the brand by name, visit a service page, read case studies, or ask a more specific follow-up question. The influence can move away from a neat organic session and into a messier path toward trust.
 
-### Invest in bottom-of-funnel and mid-funnel content
+The market context is worth taking seriously. SparkToro and Similarweb reported that in the first four months of 2026, less than one third of Google searches sent a click, with 68.01% ending without a click in their US panel data. Their [2026 zero-click research](https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/) should be treated as clickstream context rather than proof that every query, industry, or AI feature loses traffic in the same way.
 
-Pages that help people make decisions are harder to summarise and more commercially valuable. Comparison guides, pricing context, case studies with measurable outcomes, and service pages with clear differentiation all perform well in this environment.
+For operators, the takeaway is practical. Organic sessions alone are a weaker measure of search influence. Look at branded demand, qualified enquiries, conversion rate on high-intent pages, assisted leads, sales conversations, and whether buyers arrive already understanding the offer.
 
-### Build topical authority through depth
+## What gets cited, represented, or compressed
 
-Publishing twenty shallow articles on adjacent topics is less effective than publishing five thorough pieces that demonstrate genuine expertise. Search engines are getting better at evaluating whether a site has real depth on a subject. A few strong pages with original thinking will outperform a large volume of generic ones.
+AI Overviews can show links, but generic content is easy to compress because the same answer exists across many sites. Google has little reason to surface a business page if it only repeats the category average.
 
-### Build brand demand
+Pages become more useful when they contain evidence that helps a buyer decide. That includes original examples, named expertise, current pricing context, service boundaries, comparison judgement, process detail, client outcomes, local context, and clear authorship. These details make the page harder to flatten into a generic paragraph.
 
-When people search for your business by name, AI Overviews are irrelevant. Branded search is the most resilient traffic source because it reflects direct intent. Investing in brand awareness through design, positioning, partnerships, and word-of-mouth creates a channel that no algorithm change can take away.
+The same principle applies to business representation. If Google and other answer systems see inconsistent service language, thin profiles, weak internal links, and little third-party proof, the business can be described too broadly or omitted from comparison answers. Our guides to [citation-worthy AI search content](/insights/ai-search-citation-worthy-content) and [how AI search understands your business](/insights/how-ai-search-understands-your-business) cover those support jobs in more depth.
 
-### Use structured data to increase citation chances
+## What to measure now
 
-Schema markup helps search engines understand what your content is, who wrote it, and how it should be categorised. Pages with strong structured data are more likely to be referenced as sources in AI-generated answers. This includes article schema, FAQ schema, organisation schema, and review schema where appropriate.
+Measurement changed in June 2026. Google announced [Search Generative AI performance reports in Search Console](https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports) on 3 June 2026. The reports give dedicated views of impressions in generative AI features on Search, including AI Overviews and AI Mode, as well as generative AI features in Discover.
 
-### Measure what actually matters
+Google said the reports were rolling out to a subset of websites first. The [Search Console generative AI performance report help page](https://support.google.com/webmasters/answer/16984139?hl=en) also notes that a property may not see the report yet because access is rolling out over time or because the site has not received enough impressions in eligible features. Search Labs experiments are excluded.
 
-If your reporting is still focused on organic sessions as the primary metric, you are measuring a shrinking number and drawing the wrong conclusions. Better indicators include branded search volume, lead quality, conversion rate on high-intent pages, and revenue per visit. These tell you whether your content is doing commercial work, regardless of how many raw sessions it drives.
+Use the report for what it can answer. It can show whether your URLs appeared in supported generative AI features, which pages received impressions, and how visibility changed by country, device, and date. Pair that with manual review and sales context to judge whether the answer represented the business well, whether the citation was persuasive, whether a buyer later searched your brand, and whether the lead was commercially useful.
 
-## This is bigger than Google
+| Old SEO reporting habit | Better AI search reading |
+| --- | --- |
+| Track rankings for one keyword | Track topic groups, buyer questions, and page eligibility |
+| Watch organic sessions only | Add generative AI impressions, branded demand, and high-intent page performance |
+| Treat every click drop as a loss | Separate informational compression from commercial influence |
+| Count mentions as success | Review citation quality, accuracy, and buyer usefulness |
+| Report channel volume alone | Connect visibility to enquiries, sales notes, and lead quality |
 
-AI Overviews are one expression of a broader shift. Perplexity, ChatGPT with search, and other answer engines are all moving in the same direction. Users are increasingly comfortable getting synthesised answers and only clicking through when they need more depth or want to evaluate a specific provider.
+For a full reporting framework, use our guide on [how to measure AI search visibility](/insights/how-to-measure-ai-search-visibility). The Google report is now one useful layer in the measurement system.
 
-That means the playbook described here applies beyond Google. Any content strategy that depends on being the first result for a generic informational query is going to face pressure across all of these platforms.
+## Practical strategy for businesses
 
-The businesses that will perform best are the ones building genuine authority, recognisable brands, and content that earns trust through specificity and experience. That kind of work compounds over time and holds its value regardless of how search interfaces evolve.
+Start with the same foundations you would expect from serious [small business SEO](/insights/small-business-seo-guide-2026). Make the site crawlable, indexable, fast, accessible, and easy to navigate. Make sure the business's important services, locations, industries, proof, and authorship are visible in text.
 
-## Where this leaves you
+Then raise the quality of the content system. A useful page should help a buyer make a better decision, beyond answering a keyword. Service pages need clear inclusions, exclusions, process, proof, and pricing context where appropriate. Articles need original judgement, examples, and links to supporting pages. Case studies need enough detail to show what changed and why it mattered.
 
-The shift toward AI-generated search results is not a temporary experiment. It is the direction search is heading across every major platform. Businesses that respond by raising the quality and commercial focus of their content will gain ground. Those that keep publishing generic pages will gradually lose visibility.
+Internal links matter because AI Mode can expand one question into several retrieval paths. A page about SEO strategy should connect to measurement, site structure, content evidence, and crawler access where those topics support the buyer's problem. Descriptive links tell both people and search systems why the next page matters.
 
-The fundamentals have not changed. Clear positioning, strong proof, genuine expertise, and a well-built website still win. What has changed is that the bar for earning traffic from search is higher, and the reward for doing this work well is greater because fewer competitors will bother.
+Use schema as a clarification layer. Structured data can help define articles, organizations, local businesses, reviews, FAQs, and services when it accurately reflects the visible page. Treat it as support for a clear page rather than a separate AI visibility hack.
 
-If you are rethinking your content strategy or want to understand how your current site holds up in this new landscape, that is exactly the kind of work we do.
+This is also where search and website work overlap. If the issue is strategy, topic coverage, internal linking, and measurement, it belongs in [SEO planning](/services/seo). If the issue is page architecture, proof presentation, accessibility, performance, or content templates, it belongs in [website design](/services/website-design).
+
+## How this differs from ChatGPT Search and Perplexity
+
+Google AI Overviews and AI Mode are built into Google Search. ChatGPT Search, Perplexity, and other answer engines use different crawlers, retrieval systems, indexes, and source policies. The same content quality principles often carry across, but the access controls and diagnostics are different.
+
+OpenAI separates crawlers for different purposes in its [crawler documentation](https://developers.openai.com/api/docs/bots), including search, training-related crawling, and user-triggered fetching. Perplexity also documents separate agents for search surfacing and user-triggered fetches in its [crawler documentation](https://docs.perplexity.ai/docs/resources/perplexity-crawlers). Infrastructure tools can help teams monitor and control that activity. Cloudflare, for example, describes AI Crawl Control as a way to monitor AI crawler activity, set crawler-level policies, and track robots.txt compliance in its [AI Crawl Control documentation](https://developers.cloudflare.com/ai-crawl-control/).
+
+That belongs beside Google SEO. For Google AI features, the main controls are still Googlebot access, Search eligibility, snippet controls, content quality, and Search Console reporting. For broader answer engines, crawler policy and retrieval diagnostics need their own review.
+
+## Where this leaves the website and SEO decision
+
+The work is still SEO, content, and website quality. The bar is higher because Google can answer more questions inside the results, expand a query into related retrieval tasks, and show source links only when they help the response.
+
+For a business, the durable response is to make the website easier to understand and harder to compress. Explain the offer clearly. Show proof. Connect related pages. Keep technical foundations clean. Measure influence through visibility, citations, qualified visits, branded demand, and real sales outcomes.
+
+Google's AI search features reward the discipline good websites already needed. Clear pages, strong proof, and sound measurement give the business a better chance of being understood when search becomes more compressed.

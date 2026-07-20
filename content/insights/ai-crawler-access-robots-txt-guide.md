@@ -31,11 +31,11 @@ These differences matter commercially. A business that blocks all AI user agents
 
 Google needs separate handling because Google AI Overviews and AI Mode are part of Google Search.
 
-Google says pages are eligible for AI Overviews and AI Mode through normal Search eligibility. A page needs to be indexed and eligible to show with a snippet. Google also says there are no additional technical requirements, no special schema.org structured data, and no new AI text files required to appear in those features. That is the current position in [Google's AI features and your website documentation](https://developers.google.com/search/docs/appearance/ai-features), checked on 14 July 2026.
+Google says pages are eligible for AI Overviews and AI Mode through normal Search eligibility. A page needs to be indexed and eligible to show with a snippet. Google also says there are no additional technical requirements, no special schema.org structured data, and no new AI text files required to appear in those features. That is the current position in [Google's AI features and your website documentation](https://developers.google.com/search/docs/appearance/ai-features), checked on 14 July 2026. For the Google-specific SEO implications, use our refreshed guide to [Google AI Overviews and SEO](/insights/google-sge-and-seo).
 
 Technical setup still matters. It's familiar Search work. Googlebot needs access to crawl and index useful pages. Important content needs to be visible in the page. Snippet controls need deliberate settings. Structured data should match the visible content and support standard Search understanding.
 
-`Google-Extended` is a different control. Google describes it as a product token for controlling whether site content may help improve certain Google AI products. Treat it separately from Googlebot, Google Search indexing, and AI Overview eligibility. For broader Google context, see our guide to [Google AI search context](/insights/google-sge-and-seo). Its original title still references SGE, but the practical issue now is AI Overviews and AI Mode.
+`Google-Extended` is a different control. Google describes it as a product token for controlling whether site content may help improve certain Google AI products. Treat it separately from Googlebot, Google Search indexing, and AI Overview eligibility. For broader Google context, see our guide to [Google AI search context](/insights/google-sge-and-seo).
 
 ## How to decide what to allow, block, or monitor
 
