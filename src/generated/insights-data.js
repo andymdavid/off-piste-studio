@@ -1,5 +1,27 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-visibility-tools-evaluation-guide",
+    "title": "How to Evaluate AI Visibility Tools Before You Buy One",
+    "description": "A practical guide to judging AI visibility tools, trackers, dashboards, and AEO reports before you trust the numbers or spend the budget.",
+    "intro": "AI visibility tools can be useful, but only when you know what their numbers mean. The best reports help you make better decisions about prompts, citations, entity clarity, technical access, content priorities, and lead quality.",
+    "date": "2026-07-22",
+    "displayDate": "July 22, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "how-to-measure-ai-search-visibility",
+      "building-your-website-for-llms",
+      "google-sge-and-seo"
+    ],
+    "imageAlt": "How to Evaluate AI Visibility Tools Before You Buy One",
+    "url": "/insights/ai-visibility-tools-evaluation-guide"
+  },
+  {
     "slug": "structured-content-ai-search-guide",
     "title": "Structured Content for AI Search: How to Make Your Website Easier for Search Engines, AI Agents, and Buyers to Understand",
     "description": "A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.",
