@@ -1,5 +1,28 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "chatgpt-search-visibility-business-guide",
+    "title": "How to Show Up in ChatGPT Search: A Practical Visibility Guide for Service Businesses",
+    "description": "Improve ChatGPT Search visibility with crawler access, clear source material, entity consistency, structured pages, and measured prompt testing.",
+    "intro": "ChatGPT Search visibility improves when your public pages can be reached, your business is easy to identify, your proof is specific, and your prompts are measured against the way buyers actually ask for help.",
+    "date": "2026-07-23",
+    "displayDate": "July 23, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy",
+      "Technical SEO"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "ai-crawler-access-robots-txt-guide",
+      "how-ai-search-understands-your-business",
+      "how-to-measure-ai-search-visibility"
+    ],
+    "imageAlt": "How to Show Up in ChatGPT Search: A Practical Visibility Guide for Service Businesses",
+    "url": "/insights/chatgpt-search-visibility-business-guide"
+  },
+  {
     "slug": "ai-visibility-tools-evaluation-guide",
     "title": "How to Evaluate AI Visibility Tools Before You Buy One",
     "description": "A practical guide to judging AI visibility tools, trackers, dashboards, and AEO reports before you trust the numbers or spend the budget.",
