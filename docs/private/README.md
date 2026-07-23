@@ -58,3 +58,14 @@ Keep stale-prone working detail in run docs.
 Create the first run from the template for the `AI Strategy and Use Case Selection` cluster inside `ai-trust-business-capability`.
 
 The first run should focus on keyword and evidence research before choosing whether to refresh existing overlap content or draft a new article.
+
+## Current Schedule
+
+The live Off Piste blog pipeline is scheduled in Wingman Autopilot as `Off Piste Blog Pipeline`.
+
+Current cadence:
+
+- Daily at 7:00 AM `Australia/Perth`.
+- Cron expression: `0 7 * * *`.
+
+The schedule itself lives in the Wingman scheduler database, not in the pipeline definition JSON.
