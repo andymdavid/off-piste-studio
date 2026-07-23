@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-workflow-automation-business-systems-guide",
+    "title": "AI Workflow Automation for Business: How to Decide What to Automate First",
+    "description": "A practical guide to choosing AI workflow automation opportunities, preparing inputs, setting human review gates, and connecting website enquiries, CRM records, documents, and internal handoffs safely.",
+    "intro": "AI workflow automation works best when the business has a clear process, reliable inputs, useful source material, and review gates that protect customers, data, and commercial judgement.",
+    "date": "2026-07-24",
+    "displayDate": "July 24, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Workflow Automation",
+      "Internal Systems",
+      "Business Strategy",
+      "Website Design"
+    ],
+    "cluster": "AI Workflow Automation and Internal Systems",
+    "relatedPosts": [
+      "website-redesign-checklist",
+      "structured-content-ai-search-guide",
+      "building-your-website-for-llms"
+    ],
+    "imageAlt": "AI Workflow Automation for Business: How to Decide What to Automate First",
+    "url": "/insights/ai-workflow-automation-business-systems-guide"
+  },
+  {
     "slug": "chatgpt-search-visibility-business-guide",
     "title": "How to Show Up in ChatGPT Search: A Practical Visibility Guide for Service Businesses",
     "description": "Improve ChatGPT Search visibility with crawler access, clear source material, entity consistency, structured pages, and measured prompt testing.",
