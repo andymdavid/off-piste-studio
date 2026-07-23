@@ -69,3 +69,17 @@ Current cadence:
 - Cron expression: `0 7 * * *`.
 
 The schedule itself lives in the Wingman scheduler database, not in the pipeline definition JSON.
+
+## Topic Selection
+
+The scheduled run passes `territory: auto` and `cluster: auto`.
+
+The pipeline starts with a selector step that:
+
+- Reads active territories from `territories/README.md`.
+- Reads each active territory's `map.md` for durable subclusters.
+- Checks existing `content/insights/` frontmatter for cluster counts and recency.
+- Uses weighted random selection so missing, thin, and underused clusters are more likely to be chosen.
+- Still allows manual runs to force a specific territory or cluster.
+
+The selector is designed to avoid long runs of posts from one cluster while keeping editorial judgement in the later research and review steps.
