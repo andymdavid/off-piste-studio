@@ -24,6 +24,29 @@ export const INSIGHT_POSTS = [
     "url": "/insights/ai-workflow-automation-business-systems-guide"
   },
   {
+    "slug": "search-intent-decision-stage-content-guide",
+    "title": "Search Intent and Decision-Stage Content: How to Choose the Pages That Create Qualified Demand",
+    "description": "A practical guide to mapping search intent, SERP shape, buyer questions, page type, proof, internal links, and conversion paths before creating or refreshing content.",
+    "intro": "Some keywords bring buyers who are comparing options, testing fit, checking cost, or deciding who to trust. Others bring traffic with no buying job attached. Search intent work helps you tell the difference before you spend time writing another page.",
+    "date": "2026-07-24",
+    "displayDate": "July 24, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "SEO",
+      "Content Strategy",
+      "AI",
+      "Website Design"
+    ],
+    "cluster": "Search Intent and Decision-Stage Content",
+    "relatedPosts": [
+      "small-business-seo-guide-2026",
+      "google-sge-and-seo",
+      "ai-search-citation-worthy-content"
+    ],
+    "imageAlt": "Search Intent and Decision-Stage Content: How to Choose the Pages That Create Qualified Demand",
+    "url": "/insights/search-intent-decision-stage-content-guide"
+  },
+  {
     "slug": "chatgpt-search-visibility-business-guide",
     "title": "How to Show Up in ChatGPT Search: A Practical Visibility Guide for Service Businesses",
     "description": "Improve ChatGPT Search visibility with crawler access, clear source material, entity consistency, structured pages, and measured prompt testing.",

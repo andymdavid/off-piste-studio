@@ -64,6 +64,8 @@ For an [electrician](/industries/electricians), that means separate pages for re
 
 This structure gives Google specific pages to rank for specific searches. A page titled "Switchboard Upgrades in Joondalup" has a far better chance of ranking for that search than a generic services page.
 
+When the choice is less obvious, map the query to the buyer's decision before creating a URL. The [search intent and decision-stage content guide](/insights/search-intent-decision-stage-content-guide) explains when a query belongs on a service page, article, pricing guide, comparison page, location page, or Google Business Profile task.
+
 ### On-page SEO fundamentals
 
 Every page on your site should have a unique title tag that includes the service and location ("Emergency Plumber Perth — 24/7 Same Day Service"), a meta description that entices clicks, a clear H1 heading, and structured content with subheadings that use relevant terms naturally.
@@ -93,6 +95,8 @@ Think about the questions your customers ask you regularly. "How much does it co
 Write a thorough, helpful page answering each question. Not a 200-word blog post — a genuine, detailed resource that provides real value. Google rewards depth and quality. A 1,000-word article that thoroughly answers a question will outrank a shallow 300-word post every time.
 
 For [accountants](/industries/accountants), this might mean guides on tax deductions for specific industries, explanations of business structures, or breakdowns of ATO compliance requirements. For [dentists](/industries/dentists), it could be content about different treatment options, cost guides, or oral health advice. Each piece of content is a new doorway into your website from Google.
+
+Prioritise questions that show a real buying decision, such as cost, fit, timing, comparison, risk, or local availability. Those pages tend to support enquiries more directly than broad educational topics.
 
 ## Build local backlinks
 
@@ -161,6 +165,4 @@ If you are starting from zero, here is the priority order.
 5. Publish one piece of genuinely useful content per month that answers a question your customers frequently ask.
 6. Earn local backlinks through directories, associations, and community involvement.
 
-Do these consistently for six to twelve months and your visibility will be fundamentally different from where it is today. The first page of Google is not reserved for big businesses with big budgets. It is earned by businesses that show up consistently with a well-built website, strong local signals, and genuine value for their customers.
-
-If you want a website built from the ground up for local search performance, [talk to us about a site that is designed to rank](/work).
+Do these consistently for six to twelve months and your visibility will be fundamentally different from where it is today. The first page of Google is earned by businesses that show up consistently with a well-built website, strong local signals, and genuine value for their customers.

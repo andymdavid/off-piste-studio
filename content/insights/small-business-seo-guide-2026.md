@@ -80,6 +80,8 @@ Your most important content is your service pages and location pages. These are 
 
 A service page should not just describe what you do. It should explain who it is for, what the process looks like, what outcomes the client can expect, and why your approach is different from the alternatives. That level of detail serves both the search engine and the prospective customer.
 
+If you're unsure which searches deserve service pages, articles, pricing guides, or comparison content, use the [search intent and decision-stage content guide](/insights/search-intent-decision-stage-content-guide) before adding more pages.
+
 ### Build topical depth, not volume
 
 Publishing fifty thin blog posts on loosely related topics does not build authority. Publishing ten substantial articles that demonstrate genuine expertise on your core topics does.
