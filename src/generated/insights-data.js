@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-assisted-content-workflow-expertise-guide",
+    "title": "How to Use AI for Content Without Losing Your Expertise",
+    "description": "A practical AI-assisted content workflow for expert-led businesses that need drafts to stay accurate, sourced, specific, on-brand, and safe to publish.",
+    "intro": "AI can make content production faster, but it can't decide what your business should stand behind. A useful workflow lets AI help with structure, synthesis, and drafting while experts still own the claims, evidence, voice, and final judgement.",
+    "date": "2026-07-25",
+    "displayDate": "July 25, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Content Strategy",
+      "Brand Voice",
+      "Workflow Automation",
+      "Website Design"
+    ],
+    "cluster": "AI Content, Voice, and Expertise",
+    "relatedPosts": [
+      "ai-search-citation-worthy-content",
+      "structured-content-ai-search-guide",
+      "ai-workflow-automation-business-systems-guide"
+    ],
+    "imageAlt": "How to Use AI for Content Without Losing Your Expertise",
+    "url": "/insights/ai-assisted-content-workflow-expertise-guide"
+  },
+  {
     "slug": "ai-workflow-automation-business-systems-guide",
     "title": "AI Workflow Automation for Business: How to Decide What to Automate First",
     "description": "A practical guide to choosing AI workflow automation opportunities, preparing inputs, setting human review gates, and connecting website enquiries, CRM records, documents, and internal handoffs safely.",
