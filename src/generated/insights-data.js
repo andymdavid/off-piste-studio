@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "measure-ai-workflow-automation-roi-reliability",
+    "title": "How to Measure AI Workflow Automation ROI and Reliability",
+    "description": "A practical framework for measuring AI workflow automation through verified outcomes, reliability, review effort, total cost, and clear scale, fix, or stop decisions.",
+    "intro": "A live AI workflow earns further investment when the business can verify the outcome, see the hidden review work, account for the full cost, and explain what happens when the system fails.",
+    "date": "2026-07-27",
+    "displayDate": "July 27, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "AI",
+      "Workflow Automation",
+      "Internal Systems",
+      "Business Strategy",
+      "AI Governance"
+    ],
+    "cluster": "AI Workflow Automation and Internal Systems",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "ai-assisted-content-workflow-expertise-guide",
+      "website-redesign-checklist"
+    ],
+    "imageAlt": "How to Measure AI Workflow Automation ROI and Reliability",
+    "url": "/insights/measure-ai-workflow-automation-roi-reliability"
+  },
+  {
     "slug": "ai-assisted-content-workflow-expertise-guide",
     "title": "How to Use AI for Content Without Losing Your Expertise",
     "description": "A practical AI-assisted content workflow for expert-led businesses that need drafts to stay accurate, sourced, specific, on-brand, and safe to publish.",

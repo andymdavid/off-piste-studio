@@ -238,6 +238,8 @@ Review the first month closely. Look for recurring failure patterns. Are form fi
 
 Those findings show where the system needs better inputs, boundaries, or ownership.
 
+Use the full guide to [measuring AI workflow automation ROI and reliability](/insights/measure-ai-workflow-automation-roi-reliability) when you need a baseline, precise metric definitions, total-cost formulas, acceptance criteria, and evidence for a scale, fix, or stop decision.
+
 ## How to choose the first workflow
 
 Choose the first AI workflow by business consequence.
