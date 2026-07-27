@@ -135,6 +135,8 @@ If credible first-party figures aren't available, don't invent a case study. Use
 
 ## Measure review and exceptions as part of the system
 
+Measurement sits inside a wider governance decision. The [AI governance policy and review checklist](/insights/ai-governance-policy-checklist-growing-businesses) covers the use register, ownership, risk tier, approval, and incident route that should exist before a workflow scales.
+
 Human review isn't an external tax on the automation. It's one of the workflow steps. Measure who reviews, which cases they see, how long review takes, what they change, and what they escalate.
 
 Use full review where the consequence demands it. For lower-risk work, use a representative sample that covers normal cases, edge cases, different input sources, different times, and recent system changes. Increase coverage after a prompt, model, integration, source, or policy change. Increase it again when failure severity rises or a new exception pattern appears.

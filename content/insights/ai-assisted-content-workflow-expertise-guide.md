@@ -55,6 +55,8 @@ The workflow should keep the input and output visible. If the team can't see wha
 
 ## Where humans must stay in control
 
+When AI use extends beyond one content process, the [AI governance policy and review checklist](/insights/ai-governance-policy-checklist-growing-businesses) provides the business-wide register, ownership, risk tiers, and escalation rules around this workflow.
+
 The expert owns the point of view. The editor owns the public standard. AI can assist both. People decide what the business believes, promises, recommends, and publishes.
 
 McKinsey's [2025 State of AI survey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai) is relevant here because it links stronger AI outcomes with redesigned workflows and defined processes for when model outputs need human validation. The practical lesson is that mature AI use is operational. Teams decide where AI helps, where review happens, and which outputs need a person before they become real.

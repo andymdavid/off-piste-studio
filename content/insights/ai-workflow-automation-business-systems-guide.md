@@ -43,6 +43,8 @@ The practical reading is simple. AI workflow automation redesigns repeatable wor
 
 ## Start with workflows that have repeatable shape
 
+Once an idea moves into testing, register it within an [AI governance policy and review process](/insights/ai-governance-policy-checklist-growing-businesses) so ownership, data boundaries, approval, incidents, and later changes remain visible.
+
 The first suitable workflow is rarely the flashiest one. It's usually the workflow with repeated inputs, repeated decisions, a clear output format, and enough volume to matter.
 
 Good candidates often include:

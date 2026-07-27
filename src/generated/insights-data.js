@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-governance-policy-checklist-growing-businesses",
+    "title": "AI Governance for Growing Businesses: A Practical Policy and Review Checklist",
+    "description": "Build a practical AI governance policy with an AI use register, clear owners, risk tiers, human review, data rules, incident handling, and a repeatable review cadence.",
+    "intro": "AI governance gives a growing business a practical way to know where AI is being used, who owns each decision, what information is involved, and when a use should be approved, changed, or stopped.",
+    "date": "2026-07-27",
+    "displayDate": "July 27, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "AI",
+      "AI Governance",
+      "Business Strategy",
+      "Privacy",
+      "Internal Systems"
+    ],
+    "cluster": "AI Governance, Risk, and Trust",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "measure-ai-workflow-automation-roi-reliability",
+      "ai-assisted-content-workflow-expertise-guide"
+    ],
+    "imageAlt": "AI Governance for Growing Businesses: A Practical Policy and Review Checklist",
+    "url": "/insights/ai-governance-policy-checklist-growing-businesses"
+  },
+  {
     "slug": "measure-ai-workflow-automation-roi-reliability",
     "title": "How to Measure AI Workflow Automation ROI and Reliability",
     "description": "A practical framework for measuring AI workflow automation through verified outcomes, reliability, review effort, total cost, and clear scale, fix, or stop decisions.",
