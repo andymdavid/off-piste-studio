@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-customer-experience-human-handoff-guide",
+    "title": "AI Customer Experience: How to Design a Safe Human Handoff",
+    "description": "Design customer-facing AI that knows when to answer, assist, collect, route, or stop, with clear disclosure, privacy boundaries, and a context-rich human handoff.",
+    "intro": "A useful AI customer experience does more than answer quickly. It gives the system a clear role, protects the customer's information, and carries the conversation forward when a person needs to take over.",
+    "date": "2026-07-28",
+    "displayDate": "July 28, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "AI",
+      "Customer Experience",
+      "Website Design",
+      "Workflow Automation",
+      "AI Governance"
+    ],
+    "cluster": "AI and Customer Experience",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "ai-governance-policy-checklist-growing-businesses",
+      "measure-ai-workflow-automation-roi-reliability"
+    ],
+    "imageAlt": "AI Customer Experience: How to Design a Safe Human Handoff",
+    "url": "/insights/ai-customer-experience-human-handoff-guide"
+  },
+  {
     "slug": "ai-governance-policy-checklist-growing-businesses",
     "title": "AI Governance for Growing Businesses: A Practical Policy and Review Checklist",
     "description": "Build a practical AI governance policy with an AI use register, clear owners, risk tiers, human review, data rules, incident handling, and a repeatable review cadence.",
