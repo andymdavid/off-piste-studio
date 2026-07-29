@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "organization-schema-service-business-guide",
+    "title": "Organization Schema for Service Businesses: A Practical Entity Identity Guide",
+    "description": "Learn how to choose Organization or LocalBusiness schema, map verified business facts into JSON-LD, validate the result, and keep it accurate.",
+    "intro": "Organization schema works best as a governed declaration of business facts. This guide shows service businesses how to choose a type, build accurate JSON-LD, deploy it, validate the rendered result, and keep it current.",
+    "date": "2026-07-30",
+    "displayDate": "July 30, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Technical SEO",
+      "Website Design",
+      "Content Strategy"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "structured-content-ai-search-guide",
+      "ai-search-citation-worthy-content"
+    ],
+    "imageAlt": "Organization Schema for Service Businesses: A Practical Entity Identity Guide",
+    "url": "/insights/organization-schema-service-business-guide"
+  },
+  {
     "slug": "ai-customer-experience-human-handoff-guide",
     "title": "AI Customer Experience: How to Design a Safe Human Handoff",
     "description": "Design customer-facing AI that knows when to answer, assist, collect, route, or stop, with clear disclosure, privacy boundaries, and a context-rich human handoff.",

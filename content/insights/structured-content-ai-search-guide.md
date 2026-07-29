@@ -81,7 +81,7 @@ Use schema as a confirmation layer. The visible page should make the fact clear.
 
 | Schema type | Use when | Avoid when |
 | --- | --- | --- |
-| Organization | The site needs clear business identity, logo, profiles, and contact facts | The business details are inconsistent or missing from visible pages |
+| [Organization](/insights/organization-schema-service-business-guide) | The site needs clear business identity, logo, profiles, and contact facts | The business details are inconsistent or missing from visible pages |
 | LocalBusiness | The page shows local business details, address, service area, opening hours, or local profile context | The business is remote-only or location facts are vague |
 | Service | A service page clearly defines the offer, audience, area, and scope | The page only has broad marketing copy |
 | Article | A dated article has author, title, image, publish date, and update governance | The content is a thin announcement with no durable article value |
