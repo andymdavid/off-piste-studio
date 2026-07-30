@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-ready-knowledge-base-business-guide",
+    "title": "AI-Ready Knowledge Base: How to Prepare Business Knowledge for Reliable AI",
+    "description": "Learn how to turn scattered business information into an authoritative, permission-aware and maintainable knowledge base for reliable AI retrieval.",
+    "intro": "An AI assistant can only retrieve what the business has made clear, current and safe to use. This guide shows you how to scope, audit, govern and test an AI-ready knowledge base before connecting it to a live workflow.",
+    "date": "2026-07-31",
+    "displayDate": "July 31, 2026",
+    "readTime": "15 min read",
+    "tags": [
+      "AI",
+      "Knowledge Management",
+      "Internal Systems",
+      "AI Governance",
+      "Workflow Automation"
+    ],
+    "cluster": "Knowledge, Data, and Business Memory",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "ai-governance-policy-checklist-growing-businesses",
+      "measure-ai-workflow-automation-roi-reliability"
+    ],
+    "imageAlt": "AI-Ready Knowledge Base: How to Prepare Business Knowledge for Reliable AI",
+    "url": "/insights/ai-ready-knowledge-base-business-guide"
+  },
+  {
     "slug": "organization-schema-service-business-guide",
     "title": "Organization Schema for Service Businesses: A Practical Entity Identity Guide",
     "description": "Learn how to choose Organization or LocalBusiness schema, map verified business facts into JSON-LD, validate the result, and keep it accurate.",
