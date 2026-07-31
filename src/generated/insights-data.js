@@ -24,6 +24,29 @@ export const INSIGHT_POSTS = [
     "url": "/insights/ai-ready-knowledge-base-business-guide"
   },
   {
+    "slug": "organic-traffic-not-generating-leads-intent-audit",
+    "title": "Why Organic Traffic Is Not Generating Leads: A Search Intent Content Audit",
+    "description": "A practical audit for finding why organic visibility produces too few qualified leads, using Search Console, GA4, SERP, page-role, proof, and conversion-path evidence.",
+    "intro": "Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.",
+    "date": "2026-07-31",
+    "displayDate": "July 31, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "SEO",
+      "Content Strategy",
+      "Analytics",
+      "Website Design"
+    ],
+    "cluster": "Search Intent and Decision-Stage Content",
+    "relatedPosts": [
+      "search-intent-decision-stage-content-guide",
+      "how-much-does-a-website-cost",
+      "ai-search-citation-worthy-content"
+    ],
+    "imageAlt": "Why Organic Traffic Is Not Generating Leads: A Search Intent Content Audit",
+    "url": "/insights/organic-traffic-not-generating-leads-intent-audit"
+  },
+  {
     "slug": "organization-schema-service-business-guide",
     "title": "Organization Schema for Service Businesses: A Practical Entity Identity Guide",
     "description": "Learn how to choose Organization or LocalBusiness schema, map verified business facts into JSON-LD, validate the result, and keep it accurate.",

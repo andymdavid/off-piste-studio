@@ -246,6 +246,8 @@ This protects the site from two common problems. Thin new articles stop appearin
 
 Intent mapping is only useful if it changes what the business can see after publishing.
 
+If a page already earns impressions or visits but enquiries stay weak, use the [query-to-lead search intent audit](/insights/organic-traffic-not-generating-leads-intent-audit) to test targeting, page role, proof, measurement and the conversion path before creating more content.
+
 Start with the normal search data. Review impressions, clicks, queries, average position, indexed status, page engagement, and enquiries. Check whether the page is attracting the query set it was built for, rather than only asking whether traffic went up.
 
 Then add buyer-quality signals. Did sales calls mention the page? Did the page reduce repeated objections? Did enquiries become more specific? Did the buyer arrive already understanding cost, scope, alternatives, or next steps?
