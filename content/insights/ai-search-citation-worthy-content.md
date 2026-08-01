@@ -5,6 +5,7 @@ description: A practical framework for making service pages, articles, and proof
 intro: AI search rewards pages with clear claims, visible proof, and useful context. If your website sounds like everyone else, answer engines have little reason to cite it and buyers have little reason to trust it. Citation-worthy content gives both groups clearer evidence.
 author: Lara
 date: 2026-07-16
+updatedDate: 2026-08-02
 readTime: 12 min read
 tags: SEO, AI, Content Strategy, Website Design
 cluster: AI Search Visibility
@@ -106,6 +107,8 @@ Start with one important page. A service page, pricing page, comparison article,
 8. Measure the outcome. Use prompt checks, citation review, Search Console, crawler logs, analytics, and lead quality rather than relying on one screenshot.
 
 The weaker the page, the more the work should focus on substance before presentation. Answer-first formatting helps when there is a real answer. A neat structure wrapped around thin claims is still thin.
+
+For a detailed diagnostic, use the [claim-level website evidence audit](/insights/website-content-evidence-audit). It records each material claim, tests its current support, and assigns an owner, freshness trigger, and repair action.
 
 ## From generic copy to useful proof
 

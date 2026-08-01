@@ -5,6 +5,7 @@ description: A practical AI-assisted content workflow for expert-led businesses 
 intro: AI can make content production faster, but it can't decide what your business should stand behind. A useful workflow lets AI help with structure, synthesis, and drafting while experts still own the claims, evidence, voice, and final judgement.
 author: Lara
 date: 2026-07-25
+updatedDate: 2026-08-02
 readTime: 13 min read
 tags: AI, Content Strategy, Brand Voice, Workflow Automation, Website Design
 cluster: AI Content, Voice, and Expertise
@@ -206,6 +207,8 @@ Before publishing an AI-assisted article, check that it has:
 - accurate internal links and a logical next step
 - clear author, date, metadata, and update trigger
 - no inflated claims, hidden assumptions, or unsupported statistics
+
+Use the [claim-level website evidence audit](/insights/website-content-evidence-audit) as the evidence-check method when an editor needs to test exact wording, source support, risk, ownership, and freshness before approval.
 
 If the workflow exposes deeper gaps, fix those too. Sometimes the article points to the real issue. The business may need stronger [SEO strategy](/services/seo) because useful expertise is disconnected from discoverability, internal links, or measurement. It may need [website design](/services/website-design) because service pages, proof, forms, and publishing structure are too weak to support the content system.
 

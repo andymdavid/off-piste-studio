@@ -5,6 +5,7 @@ description: A practical audit for finding why organic visibility produces too f
 intro: Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.
 author: Lara
 date: 2026-07-31
+updatedDate: 2026-08-02
 readTime: 14 min read
 tags: SEO, Content Strategy, Analytics, Website Design
 cluster: Search Intent and Decision-Stage Content
@@ -139,7 +140,7 @@ Google's guidance on [helpful, reliable, people-first content](https://developer
 
 For a service page, proof might include scope boundaries, process detail, relevant examples, practitioner experience and the conditions behind an outcome. For pricing content, it might include inclusions, cost drivers, exclusions and a current date. For a comparison, it needs credible trade-offs rather than a conclusion engineered to sell one option.
 
-When this review exposes vague claims or unsupported assertions, use the method for [strengthening evidence and citation-worthy claims](/insights/ai-search-citation-worthy-content). Keep the repair tied to the decision. More words don't compensate for missing proof.
+When intent and page role are sound but the proof is weak, use the [claim-level website evidence audit](/insights/website-content-evidence-audit) to test each assertion and assign a repair. The broader guide to [citation-worthy content](/insights/ai-search-citation-worthy-content) explains the evidence principles behind that work. Keep the repair tied to the decision. More words don't compensate for missing proof.
 
 ## Keep the conversion path intact after the click
 

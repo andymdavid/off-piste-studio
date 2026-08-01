@@ -1,5 +1,28 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "website-content-evidence-audit",
+    "title": "How to Audit Website Claims and Their Evidence",
+    "description": "A practical claim-level audit for finding weak, stale, or unsupported evidence across your website and assigning the right repair.",
+    "intro": "A credible page can unravel when a buyer asks what supports its strongest claims. A claim-level evidence audit helps you find weak, stale, or unsupported statements and give each one a clear repair, owner, and review trigger.",
+    "date": "2026-08-02",
+    "displayDate": "August 2, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy",
+      "Website Design"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "ai-search-citation-worthy-content",
+      "structured-content-ai-search-guide",
+      "how-to-measure-ai-search-visibility"
+    ],
+    "imageAlt": "How to Audit Website Claims and Their Evidence",
+    "url": "/insights/website-content-evidence-audit"
+  },
+  {
     "slug": "ai-ready-knowledge-base-business-guide",
     "title": "AI-Ready Knowledge Base: How to Prepare Business Knowledge for Reliable AI",
     "description": "Learn how to turn scattered business information into an authoritative, permission-aware and maintainable knowledge base for reliable AI retrieval.",
@@ -30,6 +53,8 @@ export const INSIGHT_POSTS = [
     "intro": "Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.",
     "date": "2026-07-31",
     "displayDate": "July 31, 2026",
+    "updatedDate": "2026-08-02",
+    "displayUpdatedDate": "August 2, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -149,6 +174,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI can make content production faster, but it can't decide what your business should stand behind. A useful workflow lets AI help with structure, synthesis, and drafting while experts still own the claims, evidence, voice, and final judgement.",
     "date": "2026-07-25",
     "displayDate": "July 25, 2026",
+    "updatedDate": "2026-08-02",
+    "displayUpdatedDate": "August 2, 2026",
     "readTime": "13 min read",
     "tags": [
       "AI",
@@ -289,6 +316,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI search rewards pages with clear claims, visible proof, and useful context. If your website sounds like everyone else, answer engines have little reason to cite it and buyers have little reason to trust it. Citation-worthy content gives both groups clearer evidence.",
     "date": "2026-07-16",
     "displayDate": "July 16, 2026",
+    "updatedDate": "2026-08-02",
+    "displayUpdatedDate": "August 2, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
