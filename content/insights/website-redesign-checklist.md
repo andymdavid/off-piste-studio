@@ -88,6 +88,8 @@ Having worked through dozens of small business redesigns, the same mistakes come
 
 **Launching without analytics.** Before the old site goes offline, make sure the new site has tracking properly configured. Losing historical data or launching without conversion tracking means you cannot measure whether the redesign actually worked.
 
+**Rebuilding the same weak enquiry route.** A redesign should test whether the form collects the facts your team needs, where each submission goes, and what reaches the CRM. If qualification needs more than a static form, map an [AI-assisted website intake route](/insights/ai-lead-qualification-website-intake-guide) before choosing the tool.
+
 **Trying to do everything at once.** A redesign does not need to include every feature the business has ever wanted. Launch with a strong foundation and add functionality over time based on real user behaviour and business needs.
 
 **Choosing a designer based on price alone.** The cheapest option almost always costs more in the long run through lost leads, poor performance, and the need for another redesign sooner than expected. A [professionally designed website](/work) pays for itself through better conversion and stronger credibility.

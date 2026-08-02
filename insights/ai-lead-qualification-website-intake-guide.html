@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Design an AI-assisted website intake route with clear qualification rules, a useful CRM handoff, accessible fallback, and tests before launch.">
+  <title>How to Design AI Lead Qualification for Your Website | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/ai-lead-qualification-website-intake-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "How to Design AI Lead Qualification for Your Website",
+        "description": "Design an AI-assisted website intake route with clear qualification rules, a useful CRM handoff, accessible fallback, and tests before launch.",
+        "datePublished": "2026-08-02",
+        "dateModified": "2026-08-02",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/ai-lead-qualification-website-intake-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "How to Design AI Lead Qualification for Your Website", "item": "https://offpistestudio.com/insights/ai-lead-qualification-website-intake-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="ai-lead-qualification-website-intake-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>AI</span><span>Website Design</span><span>Lead Qualification</span><span>Workflow Automation</span><span>CRM</span></div><p class="insight-article__read-time">15 min read</p></div>
+          <h1 class="insight-article__title">How to Design AI Lead Qualification for Your Website</h1>
+          <p class="insight-article__intro">AI lead qualification works best when the website collects the right facts, rules handle predictable decisions, AI has a bounded role, and people retain judgement over consequential outcomes.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 2, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/ai-lead-qualification-website-intake-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/ai-lead-qualification-website-intake-guide&text=How%20to%20Design%20AI%20Lead%20Qualification%20for%20Your%20Website" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/ai-lead-qualification-website-intake-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Source check record, 2 August 2026 AWST:
+- OAIC guidance remains live. It was published 21 October 2024 and updated 17 January 2025. Privacy Act coverage depends on the organisation and activity.
+- Guidance for AI Adoption: Implementation practices remains available as version 1.0, October 2025. It presents six responsible AI practices.
+- NIST AI 600-1 was published 26 July 2024 and its publication record was updated 8 April 2026.
+- The W3C WAI Forms Tutorial was updated 27 March 2026.
+- Typeform documentation checked 2 August 2026 shows generated questions, editable scoring rules, score-based endings, redirects, follow-up messages, and CRM integrations. It is cited only as a capability example.
+- The service-business qualification model and journey architecture are Off Piste synthesis. No performance result is claimed.
+-->
+<h2 class="insight-article__section-title">Start with the enquiry problem</h2>
+<p>A promising enquiry reaches your website with an unclear brief. The form asks for a name, email address, and message. Your team replies with the same questions it asks every new prospect, then copies the answers into a CRM. Another enquiry sits untouched because nobody can tell who owns it.</p>
+<p>AI lead qualification is a journey design problem. Collect enough context, apply transparent rules, pass a usable record to the right person, and recover when the system can&#39;t proceed.</p>
+<p>Define the operational problem first. It may be incomplete enquiries, repeated discovery questions, slow assignment, poor CRM context, or inconsistent treatment of similar requests. Record what happens now, including completion, response time, rework, routing errors, and enquiries incorrectly rejected. That baseline keeps the project tied to an observable problem without assuming AI will improve it.</p>
+<p>If enquiry handling is only one of several candidates, first use the broader framework for <a href="/insights/ai-workflow-automation-business-systems-guide">deciding which workflow to automate</a>. This guide begins once website intake is the chosen route.</p>
+<h2 class="insight-article__section-title">Decide whether the journey needs AI</h2>
+<p>A static form is often the right interface when the questions and outcomes are predictable. Rules can adapt later questions, score supplied answers, and route a submission without asking a model to interpret anything. AI becomes useful when people describe varied situations in their own words and a bounded summary or category would reduce genuine work.</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Best fit</th>
+<th>Data risk</th>
+<th>Accessibility work</th>
+<th>Maintenance</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Static form</td>
+<td>stable questions and one destination</td>
+<td>lower</td>
+<td>familiar controls and errors</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Adaptive form</td>
+<td>known branches and eligibility rules</td>
+<td>lower to moderate</td>
+<td>focus, progress, and hidden-field behaviour</td>
+<td>moderate</td>
+</tr>
+<tr>
+<td>AI-assisted chat</td>
+<td>varied language and useful follow-up questions</td>
+<td>higher</td>
+<td>conversation state, keyboard use, timeouts, and fallback</td>
+<td>high</td>
+</tr>
+<tr>
+<td>AI behind the form</td>
+<td>structured intake with a summary or category</td>
+<td>moderate</td>
+<td>form remains primary</td>
+<td>moderate</td>
+</tr>
+</tbody></table>
+<p>Current form products show that these layers can remain separate. Typeform&#39;s <a href="https://help.typeform.com/hc/en-us/articles/16740552859796-Use-AI-to-score-and-qualify-leads">lead qualification workflow documentation</a> describes AI-generated questions alongside editable scoring rules, score-based endings, redirects, and follow-up workflows. The documentation establishes that the pattern exists, while offering no independent evidence of higher conversions or revenue.</p>
+<p>Choose the least complex approach that handles the variation you actually see. If postcode, service type, and timeframe determine the next step, rules are easier to test and explain. If a paragraph needs to be condensed into a factual brief for a consultant, a model may have a narrow supporting job.</p>
+<h2 class="insight-article__section-title">Map the route before choosing a tool</h2>
+<p>Draw the whole journey from the visitor&#39;s first choice to the team&#39;s next action. Include the website, validation, rules, any model task, the CRM, the receiving person, and the fallback. A tool demo rarely shows all those joins.</p>
+<figure class="insight-article__figure">
+  <svg viewBox="0 0 1120 620" role="img" aria-labelledby="intake-route-title intake-route-desc">
+    <title id="intake-route-title">AI-assisted website intake route</title>
+    <desc id="intake-route-desc">A visitor chooses a form or disclosed conversation. Inputs are validated, deterministic rules run, and bounded AI may create a summary. The CRM receives a traceable record for human review and routing. Validation, model, or integration failure returns to correction or a manual route.</desc>
+    <rect x="20" y="20" width="1080" height="580" rx="24" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"/>
+    <text x="55" y="70" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2a24">Keep every qualification step visible and recoverable</text>
+    <g font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#1f2a24">
+      <rect x="45" y="130" width="125" height="76" rx="12" fill="#dcebdc" stroke="#1f2a24" stroke-width="2"/><text x="108" y="159">Visitor chooses</text><text x="108" y="181">a route</text>
+      <rect x="205" y="95" width="135" height="76" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="273" y="124">Accessible</text><text x="273" y="146">form</text>
+      <rect x="205" y="205" width="135" height="76" rx="12" fill="#fff5cc" stroke="#1f2a24" stroke-width="2"/><text x="273" y="234">Disclosed</text><text x="273" y="256">conversation</text>
+      <rect x="380" y="130" width="125" height="76" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="443" y="159">Validate and</text><text x="443" y="181">allow correction</text>
+      <rect x="545" y="130" width="125" height="76" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="608" y="159">Apply known</text><text x="608" y="181">rules</text>
+      <rect x="710" y="130" width="125" height="76" rx="12" fill="#fff5cc" stroke="#1f2a24" stroke-width="2"/><text x="773" y="159">Bounded AI</text><text x="773" y="181">task if needed</text>
+      <rect x="875" y="130" width="125" height="76" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="938" y="159">CRM record</text><text x="938" y="181">with provenance</text>
+      <rect x="875" y="300" width="125" height="76" rx="12" fill="#dcebdc" stroke="#1f2a24" stroke-width="2"/><text x="938" y="329">Human review</text><text x="938" y="351">and next step</text>
+      <rect x="380" y="455" width="455" height="82" rx="12" fill="#f3d6d0" stroke="#1f2a24" stroke-width="2"/><text x="608" y="487">Correction, accessible form, or manual processing</text><text x="608" y="511">when validation, model, CRM, or transfer fails</text>
+    </g>
+    <g stroke="#1f2a24" stroke-width="3" fill="none"><path d="M170 168L205 133M170 168L205 243M340 133L380 168M340 243L380 168M505 168h40M670 168h40M835 168h40M938 206v94"/><path d="M443 206v249M773 206v249M938 376v79M835 496h103"/></g>
+  </svg>
+  <figcaption>Off Piste website intake architecture. The model task is optional. Every failure path preserves correction or manual processing.</figcaption>
+</figure>
+
+<p>For each connector, define the payload, success signal, timeout response, and alert owner. A completed chat isn&#39;t a completed handoff if its CRM write failed.</p>
+<h2 class="insight-article__section-title">Collect only the context qualification requires</h2>
+<p>Start with the decision your team needs to make. Work backwards to the minimum facts that support it.</p>
+<p>For an expert-led service business, useful facts may include the requested outcome, service or project scope, location, timing, readiness, constraints, and preferred contact method. Budget, authority, need, and timing can contribute, but BANT isn&#39;t a complete model for every service. Location, risk, required expertise, and whether the client can supply essential inputs may matter more. This is Off Piste&#39;s strategic synthesis, not a universal scoring standard.</p>
+<p>Separate three kinds of data.</p>
+<ul>
+<li>Required facts are necessary to provide or route the requested service.</li>
+<li>Optional context helps the team prepare but doesn&#39;t block submission.</li>
+<li>Sensitive or high-risk information should be excluded unless there is a defined need, lawful handling, and an appropriate protected channel.</li>
+</ul>
+<p>The <a href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products">OAIC guidance on commercially available AI</a> says privacy obligations apply to personal information entered into and generated by AI where the Privacy Act applies. It also treats inferred information about an identifiable person as personal information, calls for necessity, due diligence, accuracy controls, and human oversight, and recommends that organisations don&#39;t enter personal or sensitive information into publicly available generative AI tools as a matter of best practice.</p>
+<p>Privacy Act coverage and other sector duties vary. Confirm your organisation&#39;s position and obtain specialist advice for sensitive data, regulated services, or decisions with a significant effect.</p>
+<p>The <a href="https://www.w3.org/WAI/tutorials/forms/">W3C WAI Forms Tutorial</a> recommends asking only for information required to complete the process. It also covers explicit labels, instructions, validation, notifications, logical multi-step forms, and manageable time limits. Apply those requirements to both the form and conversational route. Let people review and correct captured facts before submission.</p>
+<h2 class="insight-article__section-title">Separate rules, model assistance and human decisions</h2>
+<p>Qualification becomes hard to govern when a single AI score hides several different decisions. Assign each task to the simplest responsible layer and record the reason for the route.</p>
+<table>
+<thead>
+<tr>
+<th>Information or decision</th>
+<th>Owner</th>
+<th>Evidence kept</th>
+<th>Failure response</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Visitor&#39;s scope, suburb, timing, and contact choice</td>
+<td>visitor, with validation</td>
+<td>original answers and corrections</td>
+<td>ask again or save for manual follow-up</td>
+</tr>
+<tr>
+<td>Service area, minimum scope, required field, and duplicate checks</td>
+<td>deterministic rules</td>
+<td>rule version and matched condition</td>
+<td>show the applicable next step or queue for review</td>
+</tr>
+<tr>
+<td>Summary, intent category, or missing-context suggestion</td>
+<td>bounded model</td>
+<td>source answers, output, model version, and uncertainty</td>
+<td>discard output and pass original answers</td>
+</tr>
+<tr>
+<td>Ambiguous fit, exception, sensitive case, or consequential rejection</td>
+<td>named person</td>
+<td>review decision and reason</td>
+<td>contact the visitor or use the manual route</td>
+</tr>
+</tbody></table>
+<p>Rules should own conditions you can state in advance. A model can summarise the visitor&#39;s own words, suggest a category from an approved list, or flag that a required fact appears to be missing. It shouldn&#39;t invent facts, silently change answers, or issue an irreversible acceptance or rejection.</p>
+<p>Keep any service facts and eligibility rules in an owned source. The guide to building an <a href="/insights/ai-ready-knowledge-base-business-guide">AI-ready knowledge base</a> explains how to prepare approved, current material for reliable retrieval and answers.</p>
+<p>A score can order human review, but the contributing fields and weights should be visible. Give a person authority to overturn the route. Give the visitor a way to correct the information behind it. The Australian Government&#39;s October 2025 <a href="https://www.industry.gov.au/sites/default/files/2025-10/guidance-for-ai-adoption-implementation-practices.pdf">Guidance for AI Adoption implementation practices</a> organises responsible adoption around accountability, impact assessment, risk management, transparency, testing and monitoring, and meaningful human control. Translate those practices into named owners and approval gates for this route. Use the broader <a href="/insights/ai-governance-policy-checklist-growing-businesses">AI governance checklist</a> for organisation-wide controls.</p>
+<h2 class="insight-article__section-title">Design the CRM handoff as a usable record</h2>
+<p>The CRM record should let a person understand what the visitor wants, what the system did, and what must happen next without reading a polished summary as if it were the source.</p>
+<p>At minimum, capture the original answers, validated fields, deterministic rule outcomes and rule version, any model summary with its source and uncertainty, the visitor&#39;s consent state, the route taken, timestamps, failure or exception flags, and the next action with an owner.</p>
+<p>Store the model summary beside the original input. Mark inferred categories as inferences. If the CRM can&#39;t accept the full payload, retain a secure linked record or reduce the automation&#39;s role. Keep uncertainty visible and auditable.</p>
+<p>The receiving queue must confirm that it accepted the record. If it doesn&#39;t, preserve the enquiry and alert an owner. The detailed design for escalation, context transfer, and customer expectations sits in the guide to a <a href="/insights/ai-customer-experience-human-handoff-guide">safe human handoff</a>.</p>
+<h2 class="insight-article__section-title">Build privacy, disclosure and accessibility into the route</h2>
+<p>Tell visitors when they&#39;re interacting with AI, what it can do, why you need their information, how it will be used, and how they can choose another route. The OAIC guidance specifically calls for public-facing AI such as chatbots to be clearly identified and for privacy notices to explain AI use.</p>
+<p>Make that disclosure useful at the point of choice. A short message might explain that the assistant can collect service details and prepare an enquiry for the team, can&#39;t approve work or provide a final quote, and will save chosen details for follow-up. The wording must match the actual system and privacy notice.</p>
+<p>Keep a comparable non-AI form or human route visible at the point of choice and throughout the conversation. Preserve keyboard operation, visible focus, programmatic labels, clear errors, announced status changes, progress information, and a way to extend or avoid timeouts. When a conversation fails, retain permitted answers with the visitor&#39;s agreement or let them restart without losing access to the service.</p>
+<p>Review the supplier before sending live enquiry data. Check where data travels, who can access it, whether prompts and outputs train another model, how deletion and retention work, what security controls apply, and how a model or service change is communicated. Record the decision and review it when the supplier, purpose, or data changes.</p>
+<h2 class="insight-article__section-title">Test the journey before live enquiries depend on it</h2>
+<p>Test the route against written acceptance cases that include normal use, edge cases, and failure. The <a href="https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence">NIST Generative AI Profile</a> supports documented evaluation, monitoring, incident processes, human intervention, and management of systems that depart from intended behaviour.</p>
+<p>Your pre-launch set should include:</p>
+<ol>
+<li>A clear service fit with complete information.</li>
+<li>A clear non-fit that receives an accurate, respectful next step and can request review.</li>
+<li>An ambiguous request that reaches a person without a fabricated conclusion.</li>
+<li>Missing, contradictory, or corrected information.</li>
+<li>Sensitive information the system isn&#39;t approved to process.</li>
+<li>Prompt injection, abusive text, and instructions to ignore the qualification boundary.</li>
+<li>Model refusal, timeout, unavailable knowledge, and malformed output.</li>
+<li>CRM failure, duplicate records, and an unaccepted team transfer.</li>
+<li>Keyboard-only, screen-reader, zoom, mobile, slow-connection, and timeout tasks.</li>
+<li>The complete non-AI route, including confirmation and recovery.</li>
+</ol>
+<p>For each case, record the expected result, actual result, evidence, owner, and release decision. Define stop conditions before launch. Examples include a consequential false rejection, personal information crossing an unapproved boundary, a broken fallback, or a CRM failure that loses the original enquiry.</p>
+<h2 class="insight-article__section-title">Measure qualified outcomes and operating effort</h2>
+<p>A successful submission is only one signal. Measure whether the route produces correct, usable outcomes and how much work it creates.</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Check</th>
+<th>Owner or intervention trigger</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Completion</td>
+<td>visitor reaches a confirmed next step</td>
+<td>journey owner reviews unusual abandonment</td>
+</tr>
+<tr>
+<td>Routing accuracy</td>
+<td>sampled records reached the correct queue</td>
+<td>process owner investigates misroutes</td>
+</tr>
+<tr>
+<td>False rejection</td>
+<td>suitable enquiries were incorrectly screened out</td>
+<td>human review pauses the rejecting rule</td>
+</tr>
+<tr>
+<td>Handoff success</td>
+<td>CRM and receiving queue accepted usable context</td>
+<td>integration owner handles failed transfers</td>
+</tr>
+<tr>
+<td>Correction rate</td>
+<td>visitor or staff changed captured facts or summaries</td>
+<td>content or model owner inspects the cause</td>
+</tr>
+<tr>
+<td>Response time</td>
+<td>elapsed time to the promised human action</td>
+<td>queue owner addresses missed expectations</td>
+</tr>
+<tr>
+<td>Review effort</td>
+<td>staff time to verify, repair, or re-enter records</td>
+<td>workflow owner checks whether automation adds work</td>
+</tr>
+<tr>
+<td>Privacy incident</td>
+<td>data crossed an unapproved purpose or system boundary</td>
+<td>incident owner pauses and investigates</td>
+</tr>
+<tr>
+<td>Accessibility failure</td>
+<td>a person couldn&#39;t complete, correct, or exit</td>
+<td>website owner fixes the route before expansion</td>
+</tr>
+</tbody></table>
+<p>Set your baseline and review cadence before release. Don&#39;t choose benchmark values from vendor claims. Compare your route with its own previous process and verify a sample of outcomes. The full framework for total cost, exceptions, verified outcomes, and scale, fix, or stop decisions is in the guide to <a href="/insights/measure-ai-workflow-automation-roi-reliability">measuring AI workflow ROI and reliability</a>.</p>
+<h2 class="insight-article__section-title">Choose the smallest reliable version</h2>
+<p>The first version may be an accessible form with better fields, deterministic routing, and a CRM payload. That can solve the enquiry problem without a conversational interface. A later version might add a bounded summary after you have enough real submissions to test it safely.</p>
+<p>Write down the visitor choice, required facts, rules, optional model task, human-reserved decisions, CRM payload, fallback, owners, and acceptance cases. If any part has no owner or recovery path, reduce the scope before launch.</p>
+<p>Choose the smallest route your team can observe, correct, and maintain. When that route spans form design, service content, accessibility, analytics, and CRM integration, <a href="/services/website-design">design the website and its supporting systems as one journey</a>.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/ai-workflow-automation-business-systems-guide" class="insight-card__link" aria-label="Read AI Workflow Automation for Business: How to Decide What to Automate First">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI</span><span>Workflow Automation</span><span>Internal Systems</span><span>Business Strategy</span><span>Website Design</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">AI Workflow Automation for Business: How to Decide What to Automate First</h3>
+        <p class="insight-card__description">A practical guide to choosing AI workflow automation opportunities, preparing inputs, setting human review gates, and connecting website enquiries, CRM records, documents, and internal handoffs safely.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/ai-customer-experience-human-handoff-guide" class="insight-card__link" aria-label="Read AI Customer Experience: How to Design a Safe Human Handoff">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>14 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI</span><span>Customer Experience</span><span>Website Design</span><span>Workflow Automation</span><span>AI Governance</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">AI Customer Experience: How to Design a Safe Human Handoff</h3>
+        <p class="insight-card__description">Design customer-facing AI that knows when to answer, assist, collect, route, or stop, with clear disclosure, privacy boundaries, and a context-rich human handoff.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/ai-ready-knowledge-base-business-guide" class="insight-card__link" aria-label="Read AI-Ready Knowledge Base: How to Prepare Business Knowledge for Reliable AI">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>15 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI</span><span>Knowledge Management</span><span>Internal Systems</span><span>AI Governance</span><span>Workflow Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">AI-Ready Knowledge Base: How to Prepare Business Knowledge for Reliable AI</h3>
+        <p class="insight-card__description">Learn how to turn scattered business information into an authoritative, permission-aware and maintainable knowledge base for reliable AI retrieval.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

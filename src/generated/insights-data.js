@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-lead-qualification-website-intake-guide",
+    "title": "How to Design AI Lead Qualification for Your Website",
+    "description": "Design an AI-assisted website intake route with clear qualification rules, a useful CRM handoff, accessible fallback, and tests before launch.",
+    "intro": "AI lead qualification works best when the website collects the right facts, rules handle predictable decisions, AI has a bounded role, and people retain judgement over consequential outcomes.",
+    "date": "2026-08-02",
+    "displayDate": "August 2, 2026",
+    "readTime": "15 min read",
+    "tags": [
+      "AI",
+      "Website Design",
+      "Lead Qualification",
+      "Workflow Automation",
+      "CRM"
+    ],
+    "cluster": "AI-Enabled Websites and Lead Journeys",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "ai-customer-experience-human-handoff-guide",
+      "ai-ready-knowledge-base-business-guide"
+    ],
+    "imageAlt": "How to Design AI Lead Qualification for Your Website",
+    "url": "/insights/ai-lead-qualification-website-intake-guide"
+  },
+  {
     "slug": "website-content-evidence-audit",
     "title": "How to Audit Website Claims and Their Evidence",
     "description": "A practical claim-level audit for finding weak, stale, or unsupported evidence across your website and assigning the right repair.",

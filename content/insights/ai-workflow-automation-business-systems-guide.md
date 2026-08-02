@@ -138,7 +138,7 @@ A service business receives a website enquiry. Today, the workflow might look li
 
 The form sends an email. Someone reads it between meetings. They copy the details into the CRM. They skim the website or memory for the right service angle. They write a reply. If the enquiry is unclear, they ask follow-up questions. If the customer sounds urgent, they try to respond quickly. If the team is busy, the message waits.
 
-AI can help, but only when the intake layer is designed.
+AI can help, but only when the intake layer is designed. The detailed guide to [AI lead qualification for a website](/insights/ai-lead-qualification-website-intake-guide) shows how to divide that layer across accessible intake, deterministic rules, bounded model tasks, CRM context, and human judgement.
 
 <figure class="insight-article__figure">
   <svg viewBox="0 0 980 430" role="img" aria-labelledby="ai-workflow-title ai-workflow-desc">
