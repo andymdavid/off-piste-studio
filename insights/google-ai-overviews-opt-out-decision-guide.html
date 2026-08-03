@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="A practical guide to Google's generative AI control, its traffic trade-offs and the evidence you need before opting out.">
+  <title>How to Decide Whether to Opt Out of Google AI Overviews | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/google-ai-overviews-opt-out-decision-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "How to Decide Whether to Opt Out of Google AI Overviews",
+        "description": "A practical guide to Google's generative AI control, its traffic trade-offs and the evidence you need before opting out.",
+        "datePublished": "2026-08-03",
+        "dateModified": "2026-08-03",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/google-ai-overviews-opt-out-decision-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "How to Decide Whether to Opt Out of Google AI Overviews", "item": "https://offpistestudio.com/insights/google-ai-overviews-opt-out-decision-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="google-ai-overviews-opt-out-decision-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO</span><span>AI</span><span>Content Strategy</span><span>Technical SEO</span></div><p class="insight-article__read-time">13 min read</p></div>
+          <h1 class="insight-article__title">How to Decide Whether to Opt Out of Google AI Overviews</h1>
+          <p class="insight-article__intro">Google now gives some Search Console owners a direct choice about whether their site can appear in AI Overviews, AI Mode and covered generative features in Discover. Before you exclude your content, measure the visibility at stake, identify the risk you're trying to solve and choose the control that actually matches it.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 3, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/google-ai-overviews-opt-out-decision-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/google-ai-overviews-opt-out-decision-guide&text=How%20to%20Decide%20Whether%20to%20Opt%20Out%20of%20Google%20AI%20Overviews" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/google-ai-overviews-opt-out-decision-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Source and search validation completed 3 August 2026 in Australia/Perth.
+
+Live SERP sample:
+- Queries checked: should I opt out of Google AI Overviews, Google AI Overviews opt out website, Search Console generative AI control, exclude website from Google AI Mode, Google AI Overview opt out traffic impact, Google AI search control vs Google-Extended, nosnippet vs Google AI opt out.
+- Observed shape: official Google help and product documentation, fresh publisher-control coverage, tactical SEO explainers and user questions about turning AI results off. The publisher decision and the searcher's interface preference are separate intents.
+- Google Search Console control and report help pages, Google Search Central AI feature and snippet documentation, and the UK CMA announcement were checked 3 August 2026.
+- The Search Console control and report were still documented as rolling out to a subset of website owners. Availability may differ by property.
+
+Editorial boundaries:
+- The recommendation for expertise-led service businesses is Off Piste judgement, not Google guidance.
+- No universal traffic effect is claimed.
+-->
+
+<h2 class="insight-article__section-title">Your choice now affects a measurable source of visibility</h2>
+<p>If your Search Console property has the new Search generative AI control, you can choose whether Google&#39;s covered generative Search features may show links to your site and use its content to help ground their responses. Excluding the site means giving up impressions and traffic from those experiences. It doesn&#39;t mean turning AI Overviews off for searchers.</p>
+<p>That makes this a visibility and governance decision, not a technical tidy-up. The right answer depends on what your content does for the business, how much exposure it currently receives, what risk you need to control and whether a narrower setting would solve the problem.</p>
+<p>If you need the platform mechanics first, read our guide to <a href="/insights/google-sge-and-seo">Google AI Overviews, AI Mode and SEO</a>. This guide focuses on the next decision. Should your site remain eligible, should you improve the source, or is exclusion justified?</p>
+<p>For most expertise-led service businesses, Off Piste&#39;s working default is to stay included while measuring the result. That&#39;s our judgement based on the documented visibility trade-off. A business that relies on being discovered and trusted usually needs a clear reason to surrender a possible route to its website.</p>
+<h2 class="insight-article__section-title">What the Search generative AI control covers</h2>
+<p>Google&#39;s <a href="https://support.google.com/webmasters/answer/16908024?hl=en">Search generative AI control documentation</a> currently names three covered experiences. They are AI Overviews, AI Mode and generative AI features in Google Discover. The control sits under Settings in Search Console and is still rolling out to a subset of website owners, so you may not see it yet.</p>
+<p>Include is the default for properties. A property with a parent property inherits the closest manually configured parent choice by default, though an owner can override that choice for the child property. That hierarchy matters when a company has a domain property alongside URL-prefix properties for a subdomain, section or protocol. Record the property you changed and check whether a more specific property overrides it.</p>
+<p>When you choose Exclude, Google says the site&#39;s links and content won&#39;t be visible to users in the covered features or used as an input to ground those responses. Google says a change generally takes a few days, with exclusion expected within one or two days after the control goes live, though caching and propagation can take longer.</p>
+<p>These details are volatile. Check the help page and your own interface on the day you act. Keep a screenshot of the property, setting and change date so the next reviewer knows what was changed.</p>
+<h2 class="insight-article__section-title">What opting out can change</h2>
+<p>The immediate consequence is clear. Google&#39;s documentation says an excluded site won&#39;t receive impressions or traffic from the covered generative features. Content from other sites remains available, so exclusion doesn&#39;t remove the generative result or prevent a competitor from becoming a supporting source.</p>
+<p>Google also says the setting isn&#39;t used as a ranking or inclusion signal for other parts of Search. That is different from claiming there can never be an indirect commercial effect. You may still lose a discovery path, an assisted visit or a branded search that began with an AI result. The size of that loss will differ by site and cannot be inferred from a generic industry percentage.</p>
+<p>The choice doesn&#39;t control AI training. Google directs owners to Google-Extended for that separate purpose. It also doesn&#39;t override participation choices for services such as Merchant Center or Google Ads, and it doesn&#39;t stop Google using site content to power Search more broadly.</p>
+<p>Ordinary Search eligibility remains its own issue. Google&#39;s guidance on <a href="https://developers.google.com/search/docs/appearance/ai-features">AI features and website eligibility</a> says a supporting page must be indexed and eligible to appear in Search with a snippet. Inclusion creates eligibility, not a promise that Google will show the page.</p>
+<h2 class="insight-article__section-title">Choose the control that matches your concern</h2>
+<p>A broad opt-out is a poor substitute for naming the problem. Is the concern generative Search visibility, training, a sensitive passage, snippet length or all Search appearances? The controls act at different levels.</p>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>AI feature visibility</th>
+<th>Ordinary Search</th>
+<th>Training</th>
+<th>Granularity</th>
+<th>Likely traffic consequence</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Include</td>
+<td>Eligible for covered features</td>
+<td>No direct change</td>
+<td>No control</td>
+<td>Search Console property</td>
+<td>Keeps possible generative impressions and visits</td>
+</tr>
+<tr>
+<td>Exclude</td>
+<td>Removes site from covered features</td>
+<td>Not a ranking or inclusion signal elsewhere</td>
+<td>No control</td>
+<td>Search Console property, with inheritance</td>
+<td>Loses covered generative impressions and visits</td>
+</tr>
+<tr>
+<td><code>nosnippet</code></td>
+<td>Removes snippet eligibility, including supporting-link eligibility</td>
+<td>Result may appear without a text or video snippet</td>
+<td>No control</td>
+<td>Page</td>
+<td>Can weaken Search presentation and remove AI eligibility</td>
+</tr>
+<tr>
+<td><code>data-nosnippet</code></td>
+<td>Prevents marked page sections being used in snippets</td>
+<td>Page can remain eligible with other text</td>
+<td>No control</td>
+<td>HTML section</td>
+<td>Narrower effect depends on remaining eligible text</td>
+</tr>
+<tr>
+<td><code>max-snippet</code></td>
+<td>Limits the amount of text available for snippets</td>
+<td>Limits snippet length</td>
+<td>No control</td>
+<td>Page</td>
+<td>May constrain previews and AI use without excluding the page from Search</td>
+</tr>
+<tr>
+<td>Google-Extended</td>
+<td>No direct control over Search appearance</td>
+<td>No direct change</td>
+<td>Limits use for specified Gemini training and grounding uses</td>
+<td>Crawler token in robots.txt</td>
+<td>Not designed to remove Search traffic</td>
+</tr>
+<tr>
+<td><code>noindex</code></td>
+<td>Removes the page from Search and its AI features after processing</td>
+<td>Removes the page from Google Search</td>
+<td>No complete training policy by itself</td>
+<td>Page</td>
+<td>Gives up ordinary and generative Search visibility</td>
+</tr>
+</tbody></table>
+<p>Google&#39;s <a href="https://developers.google.com/search/docs/appearance/snippet">snippet control documentation</a> defines <code>nosnippet</code>, <code>max-snippet</code> and <code>data-nosnippet</code>. These are preview controls, not clean equivalents to the new property setting. Googlebot access in robots.txt, Google-Extended and user-triggered crawlers also serve different purposes. Our <a href="/insights/ai-crawler-access-robots-txt-guide">AI crawler access and robots.txt guide</a> explains those boundaries in more detail.</p>
+<p>Treat the table as a starting taxonomy, then verify the current documentation before implementation. A directive that solves one use case may create a larger visibility loss elsewhere.</p>
+<h2 class="insight-article__section-title">Measure your current exposure before changing the setting</h2>
+<p>Owners with access can use Google&#39;s <a href="https://support.google.com/webmasters/answer/16984139?hl=en">Generative AI performance report</a> to see impressions for supported features. The report can group data by page, country, device and date. It was still rolling out to a subset of owners when checked on 3 August 2026, and a property may also lack the report if it hasn&#39;t received enough eligible impressions.</p>
+<p>Start with a stable baseline that reflects your normal sales cycle. Four to eight weeks is often more useful than a few noisy days, though seasonal or low-volume businesses may need longer. Export the report if available and record the pages, countries and devices producing impressions. Keep ordinary Search Console performance, analytics and lead records beside it.</p>
+<p>Our framework for <a href="/insights/how-to-measure-ai-search-visibility">measuring AI search visibility</a> separates exposure from commercial value. At minimum, record generative impressions, organic landing-page visits, branded searches, qualified enquiries and lead quality. Note campaigns, site releases, seasonality and ranking changes that could distort the comparison.</p>
+<div class="insight-article__callout">
+  <strong>How to review a setting change</strong>
+  <ol>
+    <li><strong>Baseline.</strong> Record the property, setting, pages, impressions, visits and qualified outcomes across a stable period.</li>
+    <li><strong>Change.</strong> Save the date, owner, reason and screenshot. Avoid unrelated site changes where practical.</li>
+    <li><strong>Propagation.</strong> Allow for the documented processing delay and mark the comparison period accordingly.</li>
+    <li><strong>Review.</strong> Compare visibility and commercial outcomes while accounting for seasonality, campaigns and other Search changes.</li>
+  </ol>
+  <p>A movement after the setting change is an observation. It isn't automatically proof that the setting caused every difference.</p>
+</div>
+
+<p>If you don&#39;t have the dedicated report, don&#39;t pretend you have a clean baseline. Document the gap. Use ordinary performance data, manual observations and commercial outcomes, then postpone an irreversible-looking policy decision unless the risk demands immediate action.</p>
+<h2 class="insight-article__section-title">When exclusion is a defensible choice</h2>
+<p>Exclusion can be reasonable when the business can name a material conflict that visibility does not outweigh. The evidence threshold should rise with the likely commercial cost.</p>
+<p>A publisher may have licensing obligations that prohibit a defined use of its work. A membership business may find that generative exposure undermines a paid-access model. A site may contain sensitive material that should remain searchable in ordinary results but not be used to ground covered generative features. A company may also document repeated, material misrepresentation that creates regulatory, safety or customer harm and cannot be addressed quickly enough at the source.</p>
+<p>A defensible decision needs evidence. Record the affected content, the obligation or harm, examples, current exposure, alternative controls considered and the expected cost of exclusion. Assign a decision owner and a review date. Ask the appropriate adviser to assess legal or contractual obligations instead of inferring them from a Search setting.</p>
+<p>The regulatory background is also specific. On 3 June 2026, the UK Competition and Markets Authority announced a <a href="https://www.gov.uk/government/news/cma-secures-fairer-deal-for-publishers-and-improves-google-search-services-in-uk">UK conduct requirement giving publishers stronger control over content used in Google&#39;s AI search features</a>. That explains important UK publisher context. It doesn&#39;t establish that every market, website or business has the same legal position.</p>
+<h2 class="insight-article__section-title">When improving the source is the stronger response</h2>
+<p>An inaccurate or unhelpful summary may expose a weakness in the source page. Exclusion can remove the site from the covered features, but it won&#39;t correct vague claims, conflicting service details, thin proof or poor page structure for buyers and ordinary Search.</p>
+<p>Start by identifying the exact statement at risk. Our <a href="/insights/website-content-evidence-audit">website claim and evidence audit</a> gives each material claim a source, owner, status and repair action. If a claim is unsupported, prove it, soften it, qualify it or remove it. If the evidence is sound but hidden, make it visible near the claim.</p>
+<p>Then inspect the page&#39;s hierarchy. Clear headings, descriptive links, visible text and accurate structured data help people and search systems understand what the page says. Use the <a href="/insights/structured-content-ai-search-guide">structured content guide</a> when page clarity is the repair, or consider <a href="/services/website-design">website design support</a> when templates and proof presentation are blocking the work.</p>
+<p>Improvement strengthens the owned source without guaranteeing a citation. Buyers get better information whether or not Google shows the page in a generative result.</p>
+<h2 class="insight-article__section-title">Make the decision with a review date</h2>
+<p>Use a short decision path and keep the evidence attached to it.</p>
+<ol>
+<li>Name the business goal. Decide whether discovery, licensing, accuracy, access or another obligation is driving the review.</li>
+<li>Check the exact Search Console property, inherited setting and current report access.</li>
+<li>Measure existing generative exposure and the commercial value of the pages involved.</li>
+<li>Identify the content-level risk and test whether a narrower control or source repair would address it.</li>
+<li>Estimate what exclusion gives up, including covered impressions, visits and possible assisted discovery.</li>
+<li>Choose an owner, record the decision and set a review date tied to evidence or a platform change.</li>
+</ol>
+<p>For an expertise-led service business, retain inclusion when the main goal is qualified discovery and there is no documented licensing, sensitivity or material accuracy conflict. Improve and measure when the source is weak or the evidence is incomplete. Exclude when a defined risk outweighs the visibility and narrower controls cannot solve it.</p>
+<p>Bring scattered evidence into one baseline, property policy and monitoring plan. Our <a href="/services/seo">SEO work</a> can help if you need an independent view. Whatever you decide, set the next review date. Revisit the setting after a stable measurement window and whenever Google changes the control, report scope or covered features.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/google-sge-and-seo" class="insight-card__link" aria-label="Read Google AI Overviews and SEO: What AI Mode Means for Search Visibility">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO</span><span>AI</span><span>Content Strategy</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Google AI Overviews and SEO: What AI Mode Means for Search Visibility</h3>
+        <p class="insight-card__description">How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/how-to-measure-ai-search-visibility" class="insight-card__link" aria-label="Read How to Measure AI Search Visibility">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO</span><span>AI</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">How to Measure AI Search Visibility</h3>
+        <p class="insight-card__description">A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/ai-crawler-access-robots-txt-guide" class="insight-card__link" aria-label="Read AI Crawler Access and Robots.txt Guide for Business Websites">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>14 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO</span><span>AI</span><span>Technical SEO</span><span>Website Design</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">AI Crawler Access and Robots.txt Guide for Business Websites</h3>
+        <p class="insight-card__description">A practical guide to AI crawler access, robots.txt, WAF rules, CDN logs, and validation checks for business websites.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

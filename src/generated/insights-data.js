@@ -1,5 +1,28 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-ai-overviews-opt-out-decision-guide",
+    "title": "How to Decide Whether to Opt Out of Google AI Overviews",
+    "description": "A practical guide to Google's generative AI control, its traffic trade-offs and the evidence you need before opting out.",
+    "intro": "Google now gives some Search Console owners a direct choice about whether their site can appear in AI Overviews, AI Mode and covered generative features in Discover. Before you exclude your content, measure the visibility at stake, identify the risk you're trying to solve and choose the control that actually matches it.",
+    "date": "2026-08-03",
+    "displayDate": "August 3, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy",
+      "Technical SEO"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "google-sge-and-seo",
+      "how-to-measure-ai-search-visibility",
+      "ai-crawler-access-robots-txt-guide"
+    ],
+    "imageAlt": "How to Decide Whether to Opt Out of Google AI Overviews",
+    "url": "/insights/google-ai-overviews-opt-out-decision-guide"
+  },
+  {
     "slug": "ai-lead-qualification-website-intake-guide",
     "title": "How to Design AI Lead Qualification for Your Website",
     "description": "Design an AI-assisted website intake route with clear qualification rules, a useful CRM handoff, accessible fallback, and tests before launch.",
