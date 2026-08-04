@@ -27,6 +27,8 @@ AI Mode is a more exploratory AI search experience. A person can ask a longer qu
 
 Google explains that AI Overviews and AI Mode may use [query fan-out](https://developers.google.com/search/docs/appearance/ai-features), where the system issues multiple related searches across subtopics and data sources before forming a response. A buyer asking one commercial question can therefore trigger retrieval around services, pricing, locations, proof, comparisons, risks, and definitions.
 
+If you need to turn that mechanism into page decisions, use our framework to [plan content around Google AI Mode query fan-out](/insights/google-ai-mode-query-fan-out-content-planning). It maps one buyer journey to existing pages, evidence, internal links and selective content changes without treating inferred subqueries as Google's retrieval trace.
+
 That makes isolated keyword pages weaker. Strong supporting pages, clear internal links, accurate service information, and visible proof help Google connect the business to the different parts of the buyer's question. A website with one thin service page and a few generic blog posts gives Google less to work with than a site that explains who it serves, what it does, what evidence supports the claim, and how a buyer should compare options.
 
 ## The eligibility foundation

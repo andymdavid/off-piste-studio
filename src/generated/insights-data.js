@@ -1,5 +1,27 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-ai-mode-query-fan-out-content-planning",
+    "title": "How to Plan Content for Google AI Mode Query Fan-Out",
+    "description": "Map one complex Google AI Mode research journey into query families, page roles, evidence, internal links and measured content decisions.",
+    "intro": "One complex buyer question can lead Google AI Mode across several related searches. A useful content plan maps those likely research jobs to the pages, proof and next steps your website already has, then fixes only the gaps that matter.",
+    "date": "2026-08-04",
+    "displayDate": "August 4, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "google-sge-and-seo",
+      "search-intent-decision-stage-content-guide",
+      "how-to-measure-ai-search-visibility"
+    ],
+    "imageAlt": "How to Plan Content for Google AI Mode Query Fan-Out",
+    "url": "/insights/google-ai-mode-query-fan-out-content-planning"
+  },
+  {
     "slug": "google-ai-overviews-opt-out-decision-guide",
     "title": "How to Decide Whether to Opt Out of Google AI Overviews",
     "description": "A practical guide to Google's generative AI control, its traffic trade-offs and the evidence you need before opting out.",

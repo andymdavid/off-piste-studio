@@ -379,6 +379,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://offpistestudio.com/insights/google-ai-mode-query-fan-out-content-planning</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://offpistestudio.com/insights/google-ai-overviews-opt-out-decision-guide</loc>
     <lastmod>2026-08-03</lastmod>
     <changefreq>weekly</changefreq>
@@ -392,7 +398,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/google-sge-and-seo</loc>
-    <lastmod>2026-07-20</lastmod>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
