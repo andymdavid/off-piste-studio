@@ -14544,7 +14544,7 @@ body[data-page-type="resources"] .insights-index__filter-row {
   align-items: center !important;
   justify-content: space-between !important;
   gap: 1rem !important;
-  min-height: 5.75rem !important;
+  min-height: 4.75rem !important;
   padding: 0 1rem !important;
   border-left: 1px solid var(--resources-divider) !important;
   border-right: 1px solid var(--resources-divider) !important;
@@ -14575,34 +14575,91 @@ body[data-page-type="resources"] .insights-index__filters {
 }
 
 body[data-page-type="resources"] .insights-index__filters {
-  display: flex !important;
   flex: 0 1 auto !important;
-  justify-content: flex-end !important;
   margin-left: auto !important;
   min-width: 0 !important;
 }
 
-body[data-page-type="resources"] .insights-index__filters .work-hero__filter-tags {
-  justify-content: flex-end !important;
-  min-width: 0 !important;
+body[data-page-type="resources"] .insights-index__filter-control {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+body[data-page-type="resources"] .insights-index__filter-label {
+  color: var(--page-text-muted);
+  font-family: var(--font-primary);
+  font-size: 0.75rem;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+body[data-page-type="resources"] .insights-index__select-wrap {
+  position: relative;
+  display: block;
+  min-width: 12.5rem;
+}
+
+body[data-page-type="resources"] .insights-index__select {
+  width: 100%;
+  min-height: 2.65rem;
+  padding: 0.65rem 2.5rem 0.65rem 0.85rem;
+  appearance: none;
+  border: 1px solid var(--resources-divider);
+  border-radius: 0;
+  background: var(--page-bg);
+  color: var(--page-text);
+  font-family: var(--font-primary);
+  font-size: 0.8rem;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+body[data-page-type="resources"] .insights-index__select:hover,
+body[data-page-type="resources"] .insights-index__select:focus-visible {
+  border-color: var(--page-text-muted);
+}
+
+body[data-page-type="resources"] .insights-index__select:focus-visible {
+  outline: 1px solid var(--page-text);
+  outline-offset: 2px;
+}
+
+body[data-page-type="resources"] .insights-index__select-icon {
+  position: absolute;
+  top: 50%;
+  right: 0.85rem;
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%);
+  color: var(--page-text-muted);
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
   body[data-page-type="resources"] .insights-index__filter-row {
-    align-items: flex-start !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    min-height: 5.75rem !important;
+    min-height: 4.75rem !important;
     padding: 1rem !important;
   }
 
   body[data-page-type="resources"] .insights-index__filters {
-    justify-content: flex-start !important;
-    margin-left: 0 !important;
-    width: 100% !important;
+    margin-left: auto !important;
   }
 
-  body[data-page-type="resources"] .insights-index__filters .work-hero__filter-tags {
-    justify-content: flex-start !important;
+  body[data-page-type="resources"] .insights-index__filter-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  body[data-page-type="resources"] .insights-index__select-wrap {
+    min-width: min(11rem, 48vw);
   }
 }

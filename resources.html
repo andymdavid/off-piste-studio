@@ -99,9 +99,14 @@
       <div class="container">
         <div class="projects__filter-row insights-index__filter-row">
           <h1 class="insights-index__label">Insights</h1>
-          <div class="work-hero__filters insights-index__filters" aria-label="Filter insights">
-            <span class="work-hero__filter-label">Filter by</span>
-            <div class="work-hero__filter-tags" data-insights-filters></div>
+          <div class="insights-index__filters">
+            <label class="insights-index__filter-control">
+              <span class="insights-index__filter-label">Filter by</span>
+              <span class="insights-index__select-wrap">
+                <select class="insights-index__select" data-insights-filter aria-label="Filter insights by topic"></select>
+                <svg class="insights-index__select-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </label>
           </div>
         </div>
         <div class="projects__list" data-insights-list></div>

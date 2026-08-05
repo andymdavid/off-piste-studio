@@ -1358,24 +1358,39 @@ function renderInsightsGrid(insightsList, posts, options = {}) {
 
 function initInsightsList() {
   const insightsList = document.querySelector('[data-insights-list]');
-  const filtersRoot = document.querySelector('[data-insights-filters]');
+  const filterSelect = document.querySelector('[data-insights-filter]');
 
   if (!insightsList) return;
 
   insightsList.classList.add('insights-index__grid');
   renderInsightsGrid(insightsList, INSIGHT_POSTS, { limitRows: true });
 
-  if (!filtersRoot) return;
+  if (!filterSelect) return;
 
-  const uniqueTags = [...new Set(INSIGHT_POSTS.flatMap(post => post.tags))].sort((a, b) => a.localeCompare(b));
-  const filters = ['all', ...uniqueTags];
+  const filters = [
+    { value: 'all', label: 'All insights', tags: [] },
+    { value: 'ai-automation', label: 'AI & Automation', tags: ['AI', 'AI Governance', 'Workflow Automation', 'Internal Systems', 'Knowledge Management', 'CRM'] },
+    { value: 'seo-search', label: 'SEO & Search', tags: ['SEO', 'Technical SEO', 'Analytics', 'Performance', 'Local Business', 'Perth'] },
+    { value: 'content-brand', label: 'Content & Brand', tags: ['Content Strategy', 'Brand Design', 'Brand Voice', 'Business Strategy'] },
+    { value: 'websites-ux', label: 'Websites & UX', tags: ['Website Design', 'User Experience', 'Privacy'] },
+    { value: 'growth-leads', label: 'Growth & Leads', tags: ['Lead Generation', 'Lead Qualification', 'Customer Experience', 'Pricing'] },
+    { value: 'small-business', label: 'Small Business', tags: ['Small Business', 'Trades'] }
+  ];
 
   filters.forEach(filter => {
-    const button = document.createElement('button');
-    button.className = `work-hero__filter${filter === 'all' ? ' is-active' : ''}`;
-    button.dataset.filter = filter;
-    button.textContent = filter === 'all' ? 'Show All' : filter;
-    filtersRoot.appendChild(button);
+    const option = document.createElement('option');
+    option.value = filter.value;
+    option.textContent = filter.label;
+    filterSelect.appendChild(option);
+  });
+
+  filterSelect.addEventListener('change', () => {
+    const selectedFilter = filters.find(filter => filter.value === filterSelect.value) || filters[0];
+    const posts = selectedFilter.value === 'all'
+      ? INSIGHT_POSTS
+      : INSIGHT_POSTS.filter(post => post.tags.some(tag => selectedFilter.tags.includes(tag)));
+
+    renderInsightsGrid(insightsList, posts, { limitRows: selectedFilter.value === 'all' });
   });
 }
 
