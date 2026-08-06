@@ -4,12 +4,14 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "test:insight-visuals": "node --test scripts/render-insight-visual.test.mjs",
+    "verify:insight-visuals": "node scripts/verify-insight-visuals.mjs",
     "sync:insights": "node scripts/generate-insights.mjs",
     "sync:pages": "node scripts/generate-pages.mjs",
     "sync:sitemap": "node scripts/generate-sitemap.mjs",
     "sync": "npm run sync:insights && npm run sync:pages && npm run sync:sitemap",
     "dev": "npm run sync && vite",
-    "build": "npm run sync && vite build",
+    "build": "npm run sync && npm run verify:insight-visuals && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
