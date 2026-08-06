@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-use-case-prioritisation-framework-business",
+    "title": "A Practical Framework for Prioritising Business AI Use Cases",
+    "description": "A practical framework for comparing AI use cases, screening risk and readiness, and choosing the right first pilot for your business.",
+    "intro": "Prioritise AI use cases by clearing hard privacy, safety, readiness, and ownership gates, then compare value, evidence, effort, risk, and learning speed.",
+    "date": "2026-08-06",
+    "displayDate": "August 6, 2026",
+    "readTime": "15 min read",
+    "tags": [
+      "AI",
+      "AI Strategy",
+      "Business Strategy",
+      "AI Governance",
+      "Internal Systems"
+    ],
+    "cluster": "AI Strategy and Use Case Selection",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "ai-governance-policy-checklist-growing-businesses",
+      "ai-ready-knowledge-base-business-guide"
+    ],
+    "imageAlt": "A Practical Framework for Prioritising Business AI Use Cases",
+    "url": "/insights/ai-use-case-prioritisation-framework-business"
+  },
+  {
     "slug": "citation-worthy-original-research-business-data",
     "title": "How to Turn Business Data Into Citation-Worthy Original Research",
     "description": "Turn business data or customer access into a defensible original study with a clear method, honest limits, and a durable research page.",
