@@ -102,30 +102,21 @@ AI can suggest cleaning rules, help draft code, group text for human review, or 
 
 The worked benchmark below is synthetic demonstration data. It does not describe Off Piste clients, projects, outcomes, or the wider market. Its only purpose is to show the path from source table to chart to bounded interpretation.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 980 540" role="img" aria-labelledby="synthetic-chart-title synthetic-chart-desc">
-    <title id="synthetic-chart-title">Synthetic website evidence benchmark</title>
-    <desc id="synthetic-chart-desc">In a synthetic sample of 40 pages, 12 had sourced proof, 18 had unsourced proof claims, and 10 made no proof claim.</desc>
-    <rect x="20" y="20" width="940" height="500" rx="22" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <g font-family="Arial, sans-serif" fill="#1f2a24">
-      <text x="60" y="70" font-size="25" font-weight="700">Synthetic website evidence benchmark</text>
-      <text x="60" y="100" font-size="15">Demonstration only. Not Off Piste, client, project, outcome, or market data.</text>
-      <text x="60" y="135" font-size="14">Question: What evidence status appears beside the main proof claim?</text>
-      <text x="60" y="160" font-size="14">Synthetic sample: 40 service pages. Illustrative period: June 2026.</text>
-    </g>
-    <g font-family="Arial, sans-serif" fill="#1f2a24">
-      <text x="250" y="235" text-anchor="end" font-size="16">Sourced proof</text>
-      <rect x="270" y="205" width="240" height="42" fill="#648b73"></rect><text x="525" y="233" font-size="16" font-weight="700">12</text>
-      <text x="250" y="315" text-anchor="end" font-size="16">Unsourced proof claim</text>
-      <rect x="270" y="285" width="360" height="42" fill="#d49a55"></rect><text x="645" y="313" font-size="16" font-weight="700">18</text>
-      <text x="250" y="395" text-anchor="end" font-size="16">No proof claim</text>
-      <rect x="270" y="365" width="200" height="42" fill="#aab5ae"></rect><text x="485" y="393" font-size="16" font-weight="700">10</text>
-      <text x="60" y="470" font-size="14">Metric: one coded evidence status per page. Exclusions: none. Missing values: none.</text>
-      <text x="60" y="494" font-size="14">Source: synthetic demonstration table below.</text>
-    </g>
-  </svg>
-  <figcaption>Synthetic demonstration chart. Eighteen of 40 invented cases contain an unsourced proof claim. The chart is not evidence about Off Piste clients, projects, outcomes, or the wider market.</figcaption>
-</figure>
+```insight-visual
+{
+  "type": "ranked-bars",
+  "title": "Unsourced proof claims form the largest group",
+  "max": 40,
+  "items": [
+    { "label": "Unsourced proof claim", "value": 18, "display": "18 pages · 45%" },
+    { "label": "Sourced proof", "value": 12, "display": "12 pages · 30%" },
+    { "label": "No proof claim", "value": 10, "display": "10 pages · 25%" }
+  ],
+  "source": "Synthetic demonstration dataset created for this article. 40 invented service pages from an illustrative June 2026 period. No missing values or exclusions."
+}
+```
+
+The chart is a demonstration of presentation and bounded interpretation. It isn't evidence about Off Piste clients, projects, outcomes, or the wider market.
 
 | Synthetic case group | Pages | Share | Definition |
 | --- | ---: | ---: | --- |
@@ -154,32 +145,7 @@ If the study exists to support a website claim, [audit the evidence behind that 
 
 Publish the complete record at one stable URL. Derivative articles, presentations, social posts, and outreach should point back to that page so the finding keeps its method and limitations.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 980 650" role="img" aria-labelledby="research-wireframe-title research-wireframe-desc">
-    <title id="research-wireframe-title">Canonical research page wireframe</title>
-    <desc id="research-wireframe-desc">A research page begins with the finding and study identity, then presents method, sample, accessible chart and source table, limitations, download, authorship, licence, version, corrections, and citation instructions.</desc>
-    <rect x="20" y="20" width="940" height="610" rx="22" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <g font-family="Arial, sans-serif" fill="#1f2a24">
-      <text x="60" y="70" font-size="25" font-weight="700">Canonical research page</text>
-      <rect x="60" y="100" width="860" height="82" rx="10" fill="#ffffff" stroke="#1f2a24" stroke-width="2"></rect>
-      <text x="85" y="132" font-size="18" font-weight="700">Executive finding and study identity</text><text x="85" y="158" font-size="14">Question, scope, author, publication date, version</text>
-      <rect x="60" y="205" width="410" height="108" rx="10" fill="#dce8df" stroke="#1f2a24" stroke-width="2"></rect>
-      <text x="85" y="238" font-size="17" font-weight="700">Method and sample</text><text x="85" y="264" font-size="14">Corpus, period, measures, exclusions</text><text x="85" y="287" font-size="14">Missing data, uncertainty, review</text>
-      <rect x="510" y="205" width="410" height="108" rx="10" fill="#dce8df" stroke="#1f2a24" stroke-width="2"></rect>
-      <text x="535" y="238" font-size="17" font-weight="700">Accessible result</text><text x="535" y="264" font-size="14">Self-sufficient chart and caption</text><text x="535" y="287" font-size="14">Source table and text interpretation</text>
-      <rect x="60" y="337" width="860" height="70" rx="10" fill="#ffffff" stroke="#1f2a24" stroke-width="2"></rect>
-      <text x="85" y="369" font-size="17" font-weight="700">Limitations and safe downloads</text><text x="85" y="392" font-size="14">Claim boundary, privacy-reviewed files, licence, format</text>
-      <rect x="60" y="431" width="270" height="118" rx="10" fill="#ffffff" stroke="#1f2a24" stroke-width="2"></rect>
-      <text x="85" y="466" font-size="16" font-weight="700">Record</text><text x="85" y="493" font-size="14">Version and dates</text><text x="85" y="518" font-size="14">Change history</text>
-      <rect x="355" y="431" width="270" height="118" rx="10" fill="#ffffff" stroke="#1f2a24" stroke-width="2"></rect>
-      <text x="380" y="466" font-size="16" font-weight="700">Accountability</text><text x="380" y="493" font-size="14">Author and interests</text><text x="380" y="518" font-size="14">Correction route</text>
-      <rect x="650" y="431" width="270" height="118" rx="10" fill="#ffffff" stroke="#1f2a24" stroke-width="2"></rect>
-      <text x="675" y="466" font-size="16" font-weight="700">Reuse</text><text x="675" y="493" font-size="14">Citation format</text><text x="675" y="518" font-size="14">Licence and canonical URL</text>
-      <text x="60" y="594" font-size="14">Text equivalent: the same labelled sequence appears in the surrounding article.</text>
-    </g>
-  </svg>
-  <figcaption>A research-specific page keeps the finding, method, underlying table, limitations, identity, reuse terms, and maintenance record together. Source: Off Piste publication model.</figcaption>
-</figure>
+This page structure isn't a data visualisation. Its value comes from keeping the finding, method, underlying table, limitations, identity, reuse terms, and maintenance record together, so it is clearer as page guidance than as a diagram.
 
 Lead with the executive finding and study identity. Follow with the methodology and sample, accessible charts, source tables, bounded interpretation, and limitations. Offer a download only after checking that the file is safe, understandable, and licensed for its intended reuse.
 
