@@ -1,5 +1,5 @@
 ---
-title: Organization Schema for Service Businesses: A Practical Entity Identity Guide
+title: How to Optimise Organisation Schema for Your Service Business
 slug: organization-schema-service-business-guide
 description: Learn how to choose Organization or LocalBusiness schema, map verified business facts into JSON-LD, validate the result, and keep it accurate.
 intro: Organization schema works best as a governed declaration of business facts. This guide shows service businesses how to choose a type, build accurate JSON-LD, deploy it, validate the rendered result, and keep it current.

@@ -1,5 +1,5 @@
 ---
-title: AI Customer Experience: How to Design a Safe Human Handoff
+title: Designing a Safe Human Handoff for AI Customers
 slug: ai-customer-experience-human-handoff-guide
 description: Design customer-facing AI that knows when to answer, assist, collect, route, or stop, with clear disclosure, privacy boundaries, and a context-rich human handoff.
 intro: A useful AI customer experience does more than answer quickly. It gives the system a clear role, protects the customer's information, and carries the conversation forward when a person needs to take over.

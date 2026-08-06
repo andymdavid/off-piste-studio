@@ -1,5 +1,5 @@
 ---
-title: Search Intent and Decision-Stage Content: How to Choose the Pages That Create Qualified Demand
+title: Using Search Intent to Create More Qualified Demand
 slug: search-intent-decision-stage-content-guide
 description: A practical guide to mapping search intent, SERP shape, buyer questions, page type, proof, internal links, and conversion paths before creating or refreshing content.
 intro: Some keywords bring buyers who are comparing options, testing fit, checking cost, or deciding who to trust. Others bring traffic with no buying job attached. Search intent work helps you tell the difference before you spend time writing another page.

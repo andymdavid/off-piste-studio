@@ -1,5 +1,5 @@
 ---
-title: AI Governance for Growing Businesses: A Practical Policy and Review Checklist
+title: A Practical AI Governance Policy for Growing Businesses
 slug: ai-governance-policy-checklist-growing-businesses
 description: Build a practical AI governance policy with an AI use register, clear owners, risk tiers, human review, data rules, incident handling, and a repeatable review cadence.
 intro: AI governance gives a growing business a practical way to know where AI is being used, who owns each decision, what information is involved, and when a use should be approved, changed, or stopped.

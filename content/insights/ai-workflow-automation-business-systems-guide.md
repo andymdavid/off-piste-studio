@@ -1,5 +1,5 @@
 ---
-title: AI Workflow Automation for Business: How to Decide What to Automate First
+title: Choosing Which Business Workflows to Automate First
 slug: ai-workflow-automation-business-systems-guide
 description: A practical guide to choosing AI workflow automation opportunities, preparing inputs, setting human review gates, and connecting website enquiries, CRM records, documents, and internal handoffs safely.
 intro: AI workflow automation works best when the business has a clear process, reliable inputs, useful source material, and review gates that protect customers, data, and commercial judgement.

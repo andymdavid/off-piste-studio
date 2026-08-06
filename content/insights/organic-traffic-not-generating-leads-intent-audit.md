@@ -1,5 +1,5 @@
 ---
-title: Why Organic Traffic Is Not Generating Leads: A Search Intent Content Audit
+title: Why Your Organic Traffic Is Not Generating Leads
 slug: organic-traffic-not-generating-leads-intent-audit
 description: A practical audit for finding why organic visibility produces too few qualified leads, using Search Console, GA4, SERP, page-role, proof, and conversion-path evidence.
 intro: Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.

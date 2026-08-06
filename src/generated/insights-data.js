@@ -141,7 +141,7 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "ai-ready-knowledge-base-business-guide",
-    "title": "AI-Ready Knowledge Base: How to Prepare Business Knowledge for Reliable AI",
+    "title": "How to Prepare Business Knowledge for Reliable AI",
     "description": "Learn how to turn scattered business information into an authoritative, permission-aware and maintainable knowledge base for reliable AI retrieval.",
     "intro": "An AI assistant can only retrieve what the business has made clear, current and safe to use. This guide shows you how to scope, audit, govern and test an AI-ready knowledge base before connecting it to a live workflow.",
     "date": "2026-07-31",
@@ -160,12 +160,12 @@ export const INSIGHT_POSTS = [
       "ai-governance-policy-checklist-growing-businesses",
       "measure-ai-workflow-automation-roi-reliability"
     ],
-    "imageAlt": "AI-Ready Knowledge Base: How to Prepare Business Knowledge for Reliable AI",
+    "imageAlt": "How to Prepare Business Knowledge for Reliable AI",
     "url": "/insights/ai-ready-knowledge-base-business-guide"
   },
   {
     "slug": "organic-traffic-not-generating-leads-intent-audit",
-    "title": "Why Organic Traffic Is Not Generating Leads: A Search Intent Content Audit",
+    "title": "Why Your Organic Traffic Is Not Generating Leads",
     "description": "A practical audit for finding why organic visibility produces too few qualified leads, using Search Console, GA4, SERP, page-role, proof, and conversion-path evidence.",
     "intro": "Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.",
     "date": "2026-07-31",
@@ -185,12 +185,12 @@ export const INSIGHT_POSTS = [
       "how-much-does-a-website-cost",
       "ai-search-citation-worthy-content"
     ],
-    "imageAlt": "Why Organic Traffic Is Not Generating Leads: A Search Intent Content Audit",
+    "imageAlt": "Why Your Organic Traffic Is Not Generating Leads",
     "url": "/insights/organic-traffic-not-generating-leads-intent-audit"
   },
   {
     "slug": "organization-schema-service-business-guide",
-    "title": "Organization Schema for Service Businesses: A Practical Entity Identity Guide",
+    "title": "How to Optimise Organisation Schema for Your Service Business",
     "description": "Learn how to choose Organization or LocalBusiness schema, map verified business facts into JSON-LD, validate the result, and keep it accurate.",
     "intro": "Organization schema works best as a governed declaration of business facts. This guide shows service businesses how to choose a type, build accurate JSON-LD, deploy it, validate the rendered result, and keep it current.",
     "date": "2026-07-30",
@@ -209,12 +209,12 @@ export const INSIGHT_POSTS = [
       "structured-content-ai-search-guide",
       "ai-search-citation-worthy-content"
     ],
-    "imageAlt": "Organization Schema for Service Businesses: A Practical Entity Identity Guide",
+    "imageAlt": "How to Optimise Organisation Schema for Your Service Business",
     "url": "/insights/organization-schema-service-business-guide"
   },
   {
     "slug": "ai-customer-experience-human-handoff-guide",
-    "title": "AI Customer Experience: How to Design a Safe Human Handoff",
+    "title": "Designing a Safe Human Handoff for AI Customers",
     "description": "Design customer-facing AI that knows when to answer, assist, collect, route, or stop, with clear disclosure, privacy boundaries, and a context-rich human handoff.",
     "intro": "A useful AI customer experience does more than answer quickly. It gives the system a clear role, protects the customer's information, and carries the conversation forward when a person needs to take over.",
     "date": "2026-07-28",
@@ -233,12 +233,12 @@ export const INSIGHT_POSTS = [
       "ai-governance-policy-checklist-growing-businesses",
       "measure-ai-workflow-automation-roi-reliability"
     ],
-    "imageAlt": "AI Customer Experience: How to Design a Safe Human Handoff",
+    "imageAlt": "Designing a Safe Human Handoff for AI Customers",
     "url": "/insights/ai-customer-experience-human-handoff-guide"
   },
   {
     "slug": "ai-governance-policy-checklist-growing-businesses",
-    "title": "AI Governance for Growing Businesses: A Practical Policy and Review Checklist",
+    "title": "A Practical AI Governance Policy for Growing Businesses",
     "description": "Build a practical AI governance policy with an AI use register, clear owners, risk tiers, human review, data rules, incident handling, and a repeatable review cadence.",
     "intro": "AI governance gives a growing business a practical way to know where AI is being used, who owns each decision, what information is involved, and when a use should be approved, changed, or stopped.",
     "date": "2026-07-27",
@@ -257,7 +257,7 @@ export const INSIGHT_POSTS = [
       "measure-ai-workflow-automation-roi-reliability",
       "ai-assisted-content-workflow-expertise-guide"
     ],
-    "imageAlt": "AI Governance for Growing Businesses: A Practical Policy and Review Checklist",
+    "imageAlt": "A Practical AI Governance Policy for Growing Businesses",
     "url": "/insights/ai-governance-policy-checklist-growing-businesses"
   },
   {
@@ -312,7 +312,7 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "ai-workflow-automation-business-systems-guide",
-    "title": "AI Workflow Automation for Business: How to Decide What to Automate First",
+    "title": "Choosing Which Business Workflows to Automate First",
     "description": "A practical guide to choosing AI workflow automation opportunities, preparing inputs, setting human review gates, and connecting website enquiries, CRM records, documents, and internal handoffs safely.",
     "intro": "AI workflow automation works best when the business has a clear process, reliable inputs, useful source material, and review gates that protect customers, data, and commercial judgement.",
     "date": "2026-07-24",
@@ -331,12 +331,12 @@ export const INSIGHT_POSTS = [
       "structured-content-ai-search-guide",
       "building-your-website-for-llms"
     ],
-    "imageAlt": "AI Workflow Automation for Business: How to Decide What to Automate First",
+    "imageAlt": "Choosing Which Business Workflows to Automate First",
     "url": "/insights/ai-workflow-automation-business-systems-guide"
   },
   {
     "slug": "search-intent-decision-stage-content-guide",
-    "title": "Search Intent and Decision-Stage Content: How to Choose the Pages That Create Qualified Demand",
+    "title": "Using Search Intent to Create More Qualified Demand",
     "description": "A practical guide to mapping search intent, SERP shape, buyer questions, page type, proof, internal links, and conversion paths before creating or refreshing content.",
     "intro": "Some keywords bring buyers who are comparing options, testing fit, checking cost, or deciding who to trust. Others bring traffic with no buying job attached. Search intent work helps you tell the difference before you spend time writing another page.",
     "date": "2026-07-24",
@@ -354,12 +354,12 @@ export const INSIGHT_POSTS = [
       "google-sge-and-seo",
       "ai-search-citation-worthy-content"
     ],
-    "imageAlt": "Search Intent and Decision-Stage Content: How to Choose the Pages That Create Qualified Demand",
+    "imageAlt": "Using Search Intent to Create More Qualified Demand",
     "url": "/insights/search-intent-decision-stage-content-guide"
   },
   {
     "slug": "chatgpt-search-visibility-business-guide",
-    "title": "How to Show Up in ChatGPT Search: A Practical Visibility Guide for Service Businesses",
+    "title": "Improving ChatGPT Search Visibility for Service Businesses",
     "description": "Improve ChatGPT Search visibility with crawler access, clear source material, entity consistency, structured pages, and measured prompt testing.",
     "intro": "ChatGPT Search visibility improves when your public pages can be reached, your business is easy to identify, your proof is specific, and your prompts are measured against the way buyers actually ask for help.",
     "date": "2026-07-23",
@@ -377,7 +377,7 @@ export const INSIGHT_POSTS = [
       "how-ai-search-understands-your-business",
       "how-to-measure-ai-search-visibility"
     ],
-    "imageAlt": "How to Show Up in ChatGPT Search: A Practical Visibility Guide for Service Businesses",
+    "imageAlt": "Improving ChatGPT Search Visibility for Service Businesses",
     "url": "/insights/chatgpt-search-visibility-business-guide"
   },
   {
@@ -404,7 +404,7 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "structured-content-ai-search-guide",
-    "title": "Structured Content for AI Search: How to Make Your Website Easier for Search Engines, AI Agents, and Buyers to Understand",
+    "title": "Structuring Your Website for AI Search",
     "description": "A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.",
     "intro": "A capable business can still be hard to understand online when its pages hide services, proof, dates, authorship, location facts, and next steps inside vague copy or fragile layouts. Structured content makes that meaning easier for buyers and machines to inspect.",
     "date": "2026-07-19",
@@ -423,7 +423,7 @@ export const INSIGHT_POSTS = [
       "building-your-website-for-llms",
       "how-ai-search-understands-your-business"
     ],
-    "imageAlt": "Structured Content for AI Search: How to Make Your Website Easier for Search Engines, AI Agents, and Buyers to Understand",
+    "imageAlt": "Structuring Your Website for AI Search",
     "url": "/insights/structured-content-ai-search-guide"
   },
   {
@@ -659,7 +659,7 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "diy-vs-professional-web-design",
-    "title": "DIY Website vs Professional Web Design — What's the Real Cost?",
+    "title": "The Real Cost of Building Your Own Website",
     "description": "Squarespace and Wix look cheap until you count the hidden costs. We compare DIY website builders to professional web design for Australian small businesses.",
     "intro": "DIY website builders like Squarespace and Wix have made it possible for anyone to put a website online in a weekend. But \"possible\" and \"effective\" are not the same thing. The real cost of a website is not what you pay upfront — it is the revenue it generates or fails to generate over the life of your business.",
     "date": "2026-03-14",
@@ -671,7 +671,7 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "Website Investment And Selection",
     "relatedPosts": [],
-    "imageAlt": "DIY Website vs Professional Web Design — What's the Real Cost?",
+    "imageAlt": "The Real Cost of Building Your Own Website",
     "url": "/insights/diy-vs-professional-web-design"
   },
   {
@@ -694,7 +694,7 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "why-every-tradie-needs-a-website",
-    "title": "Why Every Tradie Needs a Website (Not Just a Facebook Page)",
+    "title": "Why Every Tradie Still Needs Their Own Website",
     "description": "A Facebook page is not a website. Tradies who rely on social media alone are losing jobs to competitors with a proper online presence.",
     "intro": "Most tradies start with a Facebook page because it is free and easy. But a Facebook page is not a website, and the difference between the two is costing trades businesses real money. The businesses that invest in a proper website consistently get more enquiries, better jobs, and stronger local visibility than those relying on social media alone.",
     "date": "2026-03-10",
@@ -707,7 +707,7 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "Trades Website Lead Generation",
     "relatedPosts": [],
-    "imageAlt": "Why Every Tradie Needs a Website (Not Just a Facebook Page)",
+    "imageAlt": "Why Every Tradie Still Needs Their Own Website",
     "url": "/insights/why-every-tradie-needs-a-website"
   },
   {
@@ -736,7 +736,7 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "google-sge-and-seo",
-    "title": "Google AI Overviews and SEO: What AI Mode Means for Search Visibility",
+    "title": "What Google AI Mode Means for Search Visibility",
     "description": "How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.",
     "intro": "Google's AI search features have moved on from the old SGE label. AI Overviews and AI Mode now change how some searches are answered, how clicks are earned, and how businesses should judge visibility. The practical response is stronger search foundations, clearer evidence, and better measurement.",
     "date": "2026-03-06",
@@ -755,7 +755,7 @@ export const INSIGHT_POSTS = [
       "building-your-website-for-llms",
       "ai-search-citation-worthy-content"
     ],
-    "imageAlt": "Google AI Overviews and SEO: What AI Mode Means for Search Visibility",
+    "imageAlt": "What Google AI Mode Means for Search Visibility",
     "url": "/insights/google-sge-and-seo"
   },
   {

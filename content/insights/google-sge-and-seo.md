@@ -1,5 +1,5 @@
 ---
-title: Google AI Overviews and SEO: What AI Mode Means for Search Visibility
+title: What Google AI Mode Means for Search Visibility
 slug: google-sge-and-seo
 description: How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.
 intro: Google's AI search features have moved on from the old SGE label. AI Overviews and AI Mode now change how some searches are answered, how clicks are earned, and how businesses should judge visibility. The practical response is stronger search foundations, clearer evidence, and better measurement.

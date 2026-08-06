@@ -1,5 +1,5 @@
 ---
-title: AI-Ready Knowledge Base: How to Prepare Business Knowledge for Reliable AI
+title: How to Prepare Business Knowledge for Reliable AI
 slug: ai-ready-knowledge-base-business-guide
 description: Learn how to turn scattered business information into an authoritative, permission-aware and maintainable knowledge base for reliable AI retrieval.
 intro: An AI assistant can only retrieve what the business has made clear, current and safe to use. This guide shows you how to scope, audit, govern and test an AI-ready knowledge base before connecting it to a live workflow.

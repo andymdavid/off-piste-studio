@@ -1,5 +1,5 @@
 ---
-title: Structured Content for AI Search: How to Make Your Website Easier for Search Engines, AI Agents, and Buyers to Understand
+title: Structuring Your Website for AI Search
 slug: structured-content-ai-search-guide
 description: A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.
 intro: A capable business can still be hard to understand online when its pages hide services, proof, dates, authorship, location facts, and next steps inside vague copy or fragile layouts. Structured content makes that meaning easier for buyers and machines to inspect.

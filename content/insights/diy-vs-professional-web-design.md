@@ -1,5 +1,5 @@
 ---
-title: DIY Website vs Professional Web Design — What's the Real Cost?
+title: The Real Cost of Building Your Own Website
 slug: diy-vs-professional-web-design
 description: Squarespace and Wix look cheap until you count the hidden costs. We compare DIY website builders to professional web design for Australian small businesses.
 intro: DIY website builders like Squarespace and Wix have made it possible for anyone to put a website online in a weekend. But "possible" and "effective" are not the same thing. The real cost of a website is not what you pay upfront — it is the revenue it generates or fails to generate over the life of your business.

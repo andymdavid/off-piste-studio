@@ -1,5 +1,5 @@
 ---
-title: How to Show Up in ChatGPT Search: A Practical Visibility Guide for Service Businesses
+title: Improving ChatGPT Search Visibility for Service Businesses
 slug: chatgpt-search-visibility-business-guide
 description: Improve ChatGPT Search visibility with crawler access, clear source material, entity consistency, structured pages, and measured prompt testing.
 intro: ChatGPT Search visibility improves when your public pages can be reached, your business is easy to identify, your proof is specific, and your prompts are measured against the way buyers actually ask for help.
