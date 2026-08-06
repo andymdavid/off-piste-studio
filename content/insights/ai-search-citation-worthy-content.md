@@ -53,7 +53,7 @@ Most weak pages fail because they stop at the bottom of the hierarchy. They make
 | Sourced claim | A claim linked to a credible report, standard, or platform document | More reliable, but still mostly borrowed authority |
 | Interpreted claim | The business explains what a source means for a specific buyer decision | Stronger because it adds judgement |
 | First-hand proof | A project example, method, audit finding, client pattern, or before-and-after detail | Useful because it shows experience rather than summary |
-| Original data | Benchmarks, internal analysis, survey results, log review, or measurement from the business's own work | Strong because it gives the page something competitors cannot copy quickly |
+| Original data | Benchmarks, internal analysis, survey results, log review, or measurement from the business's own work | Strong because it gives the page something competitors cannot copy quickly. Use a [practical original research workflow](/insights/citation-worthy-original-research-business-data) to turn that source material into a defensible public study. |
 | Third-party validation | Reviews, awards, expert references, partner listings, independent coverage, or cited external profiles | Strong when it confirms the business from outside its own site |
 
 The best pages move up the hierarchy without pretending that every claim needs a white paper. A pricing page might use explicit inclusions, range logic, and project examples. A service page might use process detail, proof points, named tools, and client outcomes. An article might use platform documentation, research context, and a clear opinion about what the evidence means.

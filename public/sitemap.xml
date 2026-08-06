@@ -20,7 +20,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/resources</loc>
-    <lastmod>2026-07-17</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -338,7 +338,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/ai-search-citation-worthy-content</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -373,6 +373,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://offpistestudio.com/insights/citation-worthy-original-research-business-data</loc>
+    <lastmod>2026-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://offpistestudio.com/insights/diy-vs-professional-web-design</loc>
     <lastmod>2026-07-15</lastmod>
     <changefreq>weekly</changefreq>
@@ -380,7 +386,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/google-ai-mode-query-fan-out-content-planning</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -398,7 +404,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/google-sge-and-seo</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-08-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -482,7 +488,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/website-content-evidence-audit</loc>
-    <lastmod>2026-08-01</lastmod>
+    <lastmod>2026-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

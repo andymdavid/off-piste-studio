@@ -126,6 +126,8 @@ E-E-A-T can help you ask whether experience, expertise, authority, and trust are
 
 ## Assign a precise remediation action
 
+When an important claim has no defensible source, the right repair may be to create first-party evidence. A [business-data research workflow](/insights/citation-worthy-original-research-business-data) can help you decide whether a benchmark, survey, interview study, or operational analysis is proportionate and publishable.
+
 Each weak row needs one primary action. Choose the action from what the evidence permits.
 
 - **Keep** when current evidence supports the exact wording and the owner accepts the review trigger.

@@ -1,5 +1,29 @@
 export const INSIGHT_POSTS = [
   {
+    "slug": "citation-worthy-original-research-business-data",
+    "title": "How to Turn Business Data Into Citation-Worthy Original Research",
+    "description": "Turn business data or customer access into a defensible original study with a clear method, honest limits, and a durable research page.",
+    "intro": "Credible research starts with a decision worth informing, a method that can support the claim, visible limits, and a stable source readers can inspect.",
+    "date": "2026-08-06",
+    "displayDate": "August 6, 2026",
+    "readTime": "16 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy",
+      "Original Research",
+      "Data"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "ai-search-citation-worthy-content",
+      "website-content-evidence-audit",
+      "structured-content-ai-search-guide"
+    ],
+    "imageAlt": "How to Turn Business Data Into Citation-Worthy Original Research",
+    "url": "/insights/citation-worthy-original-research-business-data"
+  },
+  {
     "slug": "google-ai-mode-query-fan-out-content-planning",
     "title": "How to Plan Content for Google AI Mode Query Fan-Out",
     "description": "Map one complex Google AI Mode research journey into query families, page roles, evidence, internal links and measured content decisions.",
