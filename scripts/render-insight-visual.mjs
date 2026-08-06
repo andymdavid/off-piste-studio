@@ -38,9 +38,7 @@ function parseSpec(source, kind) {
 }
 
 function renderVisualHeader(spec) {
-  const label = spec.label ? `<p class="insight-visual__label">${escapeHtml(spec.label)}</p>` : '';
-  const summary = spec.summary ? `<p class="insight-visual__summary">${escapeHtml(spec.summary)}</p>` : '';
-  return `<header class="insight-visual__header">${label}<div class="insight-visual__heading"><h3 class="insight-visual__title">${escapeHtml(spec.title)}</h3>${summary}</div></header>`;
+  return `<header class="insight-visual__header"><h3 class="insight-visual__title">${escapeHtml(spec.title)}</h3></header>`;
 }
 
 function renderHeadlineStat(spec) {
@@ -116,17 +114,6 @@ function renderStackedBars(spec) {
   return `<ul class="insight-visual__legend">${legend}</ul><ol class="insight-visual__stacks">${rows}</ol>`;
 }
 
-function renderDecisionFlow(spec) {
-  const gates = requireItems(spec.gates, 'decision-flow', 2, 5).map((gate, index) => {
-    const title = requireText(gate.title, `decision-flow gate ${index + 1} title`);
-    const question = requireText(gate.question, `decision-flow gate ${index + 1} question`);
-    const fail = requireText(gate.fail, `decision-flow gate ${index + 1} fail outcome`);
-    return `<li class="insight-visual__gate"><div class="insight-visual__gate-card"><span>Gate ${index + 1}</span><h4>${escapeHtml(title)}</h4><p>${escapeHtml(question)}</p></div><div class="insight-visual__gate-exit"><span>No</span><strong>${escapeHtml(fail)}</strong></div></li>`;
-  }).join('');
-  const success = requireText(spec.success, 'decision-flow success outcome');
-  return `<div class="insight-visual__flow"><ol>${gates}</ol><div class="insight-visual__flow-success"><span>All gates pass</span><strong>${escapeHtml(success)}</strong></div></div>`;
-}
-
 function renderMatrix(spec) {
   const items = requireItems(spec.items, 'matrix', 4, 4).map((item, index) => {
     const title = requireText(item.title, `matrix item ${index + 1} title`);
@@ -138,37 +125,30 @@ function renderMatrix(spec) {
   return `<div class="insight-visual__matrix-wrap"><p class="insight-visual__axis insight-visual__axis--y">${escapeHtml(yAxis)}</p><div class="insight-visual__matrix">${items}</div><p class="insight-visual__axis insight-visual__axis--x">${escapeHtml(xAxis)}</p></div>`;
 }
 
-function renderLayers(spec) {
-  const items = requireItems(spec.items, 'layers', 2, 5).map((item, index) => {
-    const title = requireText(item.title, `layer ${index + 1} title`);
-    const description = item.description ? `<p>${escapeHtml(item.description)}</p>` : '';
-    return `<li style="--layer-offset:${index}rem"><span>${String(index + 1).padStart(2, '0')}</span><div><h4>${escapeHtml(title)}</h4>${description}</div></li>`;
-  }).join('');
-  return `<ol class="insight-visual__layers">${items}</ol>`;
-}
-
 const visualRenderers = {
   'headline-stat': renderHeadlineStat,
   'ranked-bars': renderRankedBars,
   'grouped-bars': renderGroupedBars,
   'stacked-bars': renderStackedBars,
-  'decision-flow': renderDecisionFlow,
-  matrix: renderMatrix,
-  layers: renderLayers
+  matrix: renderMatrix
 };
 
 export function renderInsightVisual(source) {
   const spec = parseSpec(source, 'insight-visual');
   const type = requireText(spec.type, 'type');
   const title = requireText(spec.title, 'title');
+  if (title.length > 90) throw new Error('Insight visual title must be 90 characters or fewer.');
+  if (spec.label || spec.eyebrow || spec.summary) {
+    throw new Error('Insight visuals use one direct title. Move labels, eyebrows, and summaries into the surrounding article.');
+  }
   const renderBody = visualRenderers[type];
-  if (!renderBody) throw new Error(`Unsupported insight visual type "${type}". Use headline-stat, ranked-bars, grouped-bars, stacked-bars, decision-flow, matrix, or layers.`);
+  if (!renderBody) throw new Error(`Unsupported insight visual type "${type}". Use headline-stat, ranked-bars, grouped-bars, stacked-bars, or matrix.`);
 
   const isDataVisual = ['headline-stat', 'ranked-bars', 'grouped-bars', 'stacked-bars'].includes(type);
   if (isDataVisual && !spec.source) throw new Error(`${type} requires a source.`);
   const sourceLine = spec.source ? `<p class="insight-visual__source">Source: ${escapeHtml(spec.source)}</p>` : '';
-  const caption = spec.caption ? `<figcaption class="insight-visual__caption">${escapeHtml(spec.caption)}</figcaption>` : '';
-  return `<figure class="insight-visual insight-visual--${type}" aria-label="${escapeHtml(title)}">${renderVisualHeader({ ...spec, title })}<div class="insight-visual__body">${renderBody(spec)}</div>${sourceLine}${caption}</figure>\n`;
+  if (spec.caption) throw new Error('Insight visuals do not use internal captions. Move the explanation into the surrounding article.');
+  return `<figure class="insight-visual insight-visual--${type}" aria-label="${escapeHtml(title)}">${renderVisualHeader({ ...spec, title })}<div class="insight-visual__body">${renderBody(spec)}</div>${sourceLine}</figure>\n`;
 }
 
 function renderPracticeModule(spec) {

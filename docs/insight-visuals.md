@@ -1,10 +1,10 @@
 # Insight visual and editorial modules
 
-The article system separates data visualisation, conceptual diagrams, and editorial modules. Do not turn an ordinary list into a graphic.
+The article system separates data visualisation, a tightly constrained decision matrix, and editorial modules. Do not turn an ordinary list, table, process, or hierarchy into a graphic.
 
-Before using an `insight-visual`, identify the pattern being encoded and explain what becomes easier to understand visually. If there is no numeric pattern, branch, axis, or layered relationship, use prose or an `insight-module` instead.
+Before using an `insight-visual`, identify the pattern being encoded and explain what becomes easier to understand visually. If there is no numeric pattern or pair of meaningful axes, use prose or an `insight-module` instead.
 
-All components require a concise `title`. Visuals may also use `label`, `summary`, `source`, and `caption`. Text is escaped and cannot contain HTML or Markdown.
+Every visual requires one concise, direct `title`. Do not add an eyebrow, label, internal summary, or caption. Put context and interpretation in the surrounding article. Data visuals also require a named `source`. Text is escaped and cannot contain HTML or Markdown.
 
 ## Data visualisations
 
@@ -17,7 +17,6 @@ Use `headline-stat` for one to three important sourced findings.
 ```insight-visual
 {
   "type": "headline-stat",
-  "label": "The adoption gap",
   "title": "Support has grown faster than company policy",
   "unit": "%",
   "items": [
@@ -90,27 +89,7 @@ Use `stacked-bars` for part-to-whole comparisons or distributions. Each row is n
 }
 ```
 
-## Concept diagrams
-
-Concept diagrams require a real spatial relationship. They are not substitutes for numbered lists.
-
-### Decision flow
-
-Use `decision-flow` when each gate has a distinct failure route and passing all gates produces an outcome.
-
-```insight-visual
-{
-  "type": "decision-flow",
-  "label": "Opportunity screen",
-  "title": "Hard gates keep unsafe ideas out of the scorecard",
-  "gates": [
-    { "title": "Problem", "question": "Is the business problem clear?", "fail": "Clarify the problem" },
-    { "title": "Exposure", "question": "Is the risk acceptable?", "fail": "Redesign or reject" },
-    { "title": "Readiness", "question": "Can the team operate it safely?", "fail": "Repair foundations" }
-  ],
-  "success": "Score the viable candidate"
-}
-```
+## Decision matrix
 
 ### Matrix
 
@@ -127,22 +106,6 @@ Use `matrix` only when two meaningful axes produce four distinct decision areas.
     { "title": "Redesign", "description": "High value with excessive risk" },
     { "title": "Defer", "description": "Foundations need work" },
     { "title": "Reject", "description": "Weak value with high risk" }
-  ]
-}
-```
-
-### Layers
-
-Use `layers` when the reader needs to understand a hierarchy or stack of dependent foundations. Do not use it for chronological steps.
-
-```insight-visual
-{
-  "type": "layers",
-  "title": "Reliable AI rests on maintained business foundations",
-  "items": [
-    { "title": "Source knowledge", "description": "Current and authoritative material" },
-    { "title": "Retrieval and rules", "description": "Controlled access and clear boundaries" },
-    { "title": "Customer experience", "description": "Useful answers and safe escalation" }
   ]
 }
 ```
@@ -184,10 +147,11 @@ Editorial modules create reading rhythm but are not graphics. Use the separate `
 ## Selection rules
 
 - Use a data visual only when verified numeric values are available.
-- Use a concept diagram only for a branch, axis, hierarchy, feedback loop, or relationship that prose cannot show as clearly.
+- Use a matrix only when two meaningful axes create four distinct decision areas.
+- Keep processes, branches, hierarchies, lists, and table-like comparisons in prose or editorial modules unless they receive bespoke art direction outside the automated pipeline.
 - Use an editorial module for advice, examples, or takeaways.
 - Use ordinary prose for everything else.
 - Introduce why the component matters in the preceding prose.
-- Titles state the finding or decision, not the format.
+- Visual titles state the finding or decision directly, without a separate eyebrow, label, summary, or caption.
 - Sources name the publication and relevant date or edition.
 - Never use raw SVG, manual coordinates, decorative diagrams, stock imagery, or legacy brand colours.

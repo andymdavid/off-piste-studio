@@ -84,24 +84,7 @@ Privacy deserves an early, explicit screen. The [OAIC guidance for commercially 
 
 That screen may disqualify the proposed form of a use case while leaving room for a safer design. A support assistant could work on approved public documentation before it touches customer records. A lead tool could collect only the fields needed to route an enquiry. A model that would make a consequential decision about a person may need specialist privacy and legal review before any pilot.
 
-The sequence matters because it prevents an attractive total from hiding an unacceptable dependency.
-
-```insight-visual
-{
-  "type": "decision-flow",
-  "label": "Opportunity screen",
-  "title": "Hard gates keep unsafe ideas out of the scorecard",
-  "summary": "A candidate reaches comparative scoring only after the problem, exposure, and operating foundations are acceptable.",
-  "gates": [
-    { "title": "Problem", "question": "Is the user, friction, outcome, baseline, and owner clear?", "fail": "Clarify the problem" },
-    { "title": "Exposure", "question": "Are privacy, safety, legal, and customer-trust risks acceptable?", "fail": "Redesign or reject" },
-    { "title": "Readiness", "question": "Are knowledge, data, ownership, measurement, and reversibility adequate?", "fail": "Repair foundations or defer" }
-  ],
-  "success": "Score the viable candidate",
-  "source": "Off Piste framework informed by NIST AI RMF 1.0, the NIST AI RMF Playbook, Australian Government Guidance for AI Adoption v1.0, and OAIC privacy guidance. Accessed 6 August 2026.",
-  "caption": "A weighted total becomes useful after mandatory constraints have been resolved."
-}
-```
+The sequence matters because it prevents an attractive total from hiding an unacceptable dependency. Comparative scoring begins only after the problem, exposure, and operating foundations are acceptable.
 
 ## Score viable candidates with evidence and judgement
 
@@ -148,9 +131,7 @@ The matrix below is useful for discussing default action after the hard gates. I
 ```insight-visual
 {
   "type": "matrix",
-  "label": "Portfolio decision",
   "title": "High value earns a pilot when risk is bounded",
-  "summary": "The matrix guides discussion after hard gates and doesn't replace them.",
   "xAxis": "Delivery and trust risk increases",
   "yAxis": "Expected business value increases",
   "items": [
@@ -159,10 +140,11 @@ The matrix below is useful for discussing default action after the hard gates. I
     { "title": "Defer", "description": "Repair knowledge, process, ownership, integration, or measurement first." },
     { "title": "Reject", "description": "Stop when value is weak and risk remains high." }
   ],
-  "source": "Off Piste prioritisation model informed by NIST AI RMF 1.0, Australian Government Guidance for AI Adoption v1.0, and OAIC privacy guidance. Accessed 6 August 2026.",
-  "caption": "Build and buy sit inside a viable route. A failed hard gate can override any quadrant."
+  "source": "Off Piste prioritisation model informed by NIST AI RMF 1.0, Australian Government Guidance for AI Adoption v1.0, and OAIC privacy guidance. Accessed 6 August 2026."
 }
 ```
+
+The matrix guides discussion after hard gates and doesn't replace them. Build and buy sit inside a viable route. A failed hard gate can override any quadrant.
 
 ## Compare a worked business portfolio
 

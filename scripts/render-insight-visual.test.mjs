@@ -7,9 +7,7 @@ const fixtures = [
   { type: 'ranked-bars', title: 'Ranking', items: [{ label: 'One', value: 70 }, { label: 'Two', value: 30 }], source: 'Survey' },
   { type: 'grouped-bars', title: 'Change', series: [{ key: 'a', label: 'A' }, { key: 'b', label: 'B' }], items: [{ label: 'One', values: { a: 20, b: 40 } }, { label: 'Two', values: { a: 30, b: 50 } }], source: 'Survey' },
   { type: 'stacked-bars', title: 'Composition', series: [{ key: 'a', label: 'A' }, { key: 'b', label: 'B' }], items: [{ label: 'One', values: { a: 20, b: 80 } }, { label: 'Two', values: { a: 40, b: 60 } }], source: 'Survey' },
-  { type: 'decision-flow', title: 'Decision', gates: [{ title: 'One', question: 'Ready?', fail: 'Stop' }, { title: 'Two', question: 'Safe?', fail: 'Redesign' }], success: 'Proceed' },
-  { type: 'matrix', title: 'Matrix', xAxis: 'Exposure', yAxis: 'Impact', items: [{ title: 'One' }, { title: 'Two' }, { title: 'Three' }, { title: 'Four' }] },
-  { type: 'layers', title: 'Layers', items: [{ title: 'One' }, { title: 'Two' }] }
+  { type: 'matrix', title: 'Matrix', xAxis: 'Exposure', yAxis: 'Impact', items: [{ title: 'One' }, { title: 'Two' }, { title: 'Three' }, { title: 'Four' }] }
 ];
 
 test('renders every approved visual type', () => {
@@ -52,10 +50,13 @@ test('escapes authored text', () => {
 
 test('rejects generic, malformed and unsourced graphics', () => {
   assert.throws(() => renderInsightVisual('{'), /Invalid insight-visual JSON/);
-  for (const type of ['metrics', 'process', 'comparison']) {
+  for (const type of ['metrics', 'process', 'comparison', 'decision-flow', 'layers']) {
     assert.throws(() => renderInsightVisual(JSON.stringify({ type, title: 'Legacy' })), /Unsupported insight visual type/);
   }
   assert.throws(() => renderInsightVisual(JSON.stringify({ type: 'ranked-bars', title: 'No source', items: [{ label: 'One', value: 1 }, { label: 'Two', value: 2 }] })), /requires a source/);
   assert.throws(() => renderInsightVisual(JSON.stringify({ type: 'ranked-bars', title: 'Bad value', source: 'Survey', items: [{ label: 'One', value: '1' }, { label: 'Two', value: 2 }] })), /must be a non-negative number/);
-  assert.throws(() => renderInsightVisual(JSON.stringify({ type: 'decision-flow', title: 'No branch', gates: [{ title: 'One', question: 'Ready?' }, { title: 'Two', question: 'Safe?', fail: 'Stop' }], success: 'Proceed' })), /fail outcome/);
+  for (const field of ['label', 'eyebrow', 'summary']) {
+    assert.throws(() => renderInsightVisual(JSON.stringify({ ...fixtures[0], [field]: 'Extra heading' })), /one direct title/);
+  }
+  assert.throws(() => renderInsightVisual(JSON.stringify({ ...fixtures[0], caption: 'Internal explanation' })), /do not use internal captions/);
 });
