@@ -59,35 +59,7 @@ Check the implementation before drawing a conclusion. Submit the form, make a te
 
 The audit follows one chain of evidence while keeping the reporting systems distinct.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 1120 430" role="img" aria-labelledby="query-lead-title query-lead-desc">
-    <title id="query-lead-title">Query-to-lead audit flow</title>
-    <desc id="query-lead-desc">A query-to-lead audit flow that follows an organic search query through the landing page, page role, proof, next action, tracked event, and qualified lead.</desc>
-    <rect x="20" y="20" width="1080" height="390" rx="24" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <g font-family="Arial, sans-serif" fill="#1f2a24">
-      <text x="60" y="72" font-size="26" font-weight="700">Follow the evidence from visibility to lead quality</text>
-      <text x="60" y="105" font-size="16">Each hand-off can explain the gap. Test it before choosing the repair.</text>
-    </g>
-    <g fill="#ffffff" stroke="#1f2a24" stroke-width="3">
-      <rect x="52" y="158" width="128" height="105" rx="14"></rect><rect x="200" y="158" width="128" height="105" rx="14"></rect>
-      <rect x="348" y="158" width="128" height="105" rx="14"></rect><rect x="496" y="158" width="128" height="105" rx="14"></rect>
-      <rect x="644" y="158" width="128" height="105" rx="14"></rect><rect x="792" y="158" width="128" height="105" rx="14"></rect>
-      <rect x="940" y="158" width="128" height="105" rx="14" fill="#fff5cc"></rect>
-    </g>
-    <g font-family="Arial, sans-serif" fill="#1f2a24" text-anchor="middle">
-      <text x="116" y="200" font-size="17" font-weight="700">Query</text><text x="116" y="229" font-size="13">Search Console</text>
-      <text x="264" y="200" font-size="17" font-weight="700">Landing page</text><text x="264" y="229" font-size="13">organic entry</text>
-      <text x="412" y="200" font-size="17" font-weight="700">Page role</text><text x="412" y="229" font-size="13">decision served</text>
-      <text x="560" y="200" font-size="17" font-weight="700">Proof</text><text x="560" y="229" font-size="13">risk reduced</text>
-      <text x="708" y="200" font-size="17" font-weight="700">Next action</text><text x="708" y="229" font-size="13">path works</text>
-      <text x="856" y="200" font-size="17" font-weight="700">Key event</text><text x="856" y="229" font-size="13">GA4 records</text>
-      <text x="1004" y="194" font-size="17" font-weight="700">Qualified</text><text x="1004" y="218" font-size="17" font-weight="700">lead</text><text x="1004" y="242" font-size="13">CRM confirms</text>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" fill="none"><path d="M180 210 H200 M328 210 H348 M476 210 H496 M624 210 H644 M772 210 H792 M920 210 H940"></path></g>
-    <g font-family="Arial, sans-serif" fill="#1f2a24"><text x="60" y="329" font-size="17" font-weight="700">Working rule</text><text x="60" y="360" font-size="15">Compare patterns across systems. Keep the limits and uncertainty visible.</text></g>
-  </svg>
-  <figcaption>A useful audit follows the buyer's path from the query that created visibility to the evidence that confirms lead quality.</figcaption>
-</figure>
+Follow each query through its landing page, page role, proof, next action, tracked event, and eventual lead quality.
 
 In Search Console, review queries and pages together. The [Performance report documents clicks, impressions, click-through rate and average position](https://support.google.com/webmasters/answer/7576553?hl=en). Group related queries by the decision they imply, then identify the landing pages receiving those clicks.
 

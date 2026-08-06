@@ -56,55 +56,6 @@ Access also matters. OpenAI documents separate crawlers for different jobs, incl
 
 Think of the business entity as the centre of a map. Around it sit the sources that teach people and systems what the business is.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 920 560" role="img" aria-labelledby="entity-trust-map-title entity-trust-map-desc">
-    <title id="entity-trust-map-title">Entity trust map</title>
-    <desc id="entity-trust-map-desc">Diagram showing the business entity at the centre, connected to website pages, schema, profiles, reviews, proof assets, third-party mentions, crawler access, and AI search retrieval.</desc>
-    <rect x="20" y="20" width="880" height="520" rx="28" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <circle cx="460" cy="280" r="88" fill="#1f2a24"></circle>
-    <text x="460" y="264" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="700">Business</text>
-    <text x="460" y="296" text-anchor="middle" fill="#ffffff" font-size="20">entity</text>
-    <g fill="#ffffff" stroke="#1f2a24" stroke-width="3">
-      <rect x="90" y="76" width="210" height="76" rx="18"></rect>
-      <rect x="356" y="56" width="208" height="76" rx="18"></rect>
-      <rect x="626" y="76" width="204" height="76" rx="18"></rect>
-      <rect x="90" y="242" width="210" height="76" rx="18"></rect>
-      <rect x="626" y="242" width="204" height="76" rx="18"></rect>
-      <rect x="90" y="408" width="210" height="76" rx="18"></rect>
-      <rect x="356" y="428" width="208" height="76" rx="18"></rect>
-      <rect x="626" y="408" width="204" height="76" rx="18"></rect>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" stroke-linecap="round">
-      <path d="M300 114 L390 230"></path>
-      <path d="M460 132 L460 192"></path>
-      <path d="M626 114 L530 230"></path>
-      <path d="M300 280 L372 280"></path>
-      <path d="M626 280 L548 280"></path>
-      <path d="M300 446 L392 330"></path>
-      <path d="M460 428 L460 368"></path>
-      <path d="M626 446 L528 330"></path>
-    </g>
-    <g fill="#1f2a24" font-size="18" font-weight="700">
-      <text x="195" y="108" text-anchor="middle">Owned pages</text>
-      <text x="195" y="134" text-anchor="middle" font-size="15" font-weight="500">Home, about, services</text>
-      <text x="460" y="88" text-anchor="middle">Structured data</text>
-      <text x="460" y="114" text-anchor="middle" font-size="15" font-weight="500">Organization, sameAs</text>
-      <text x="728" y="108" text-anchor="middle">Local profiles</text>
-      <text x="728" y="134" text-anchor="middle" font-size="15" font-weight="500">GBP, directories</text>
-      <text x="195" y="274" text-anchor="middle">Proof assets</text>
-      <text x="195" y="300" text-anchor="middle" font-size="15" font-weight="500">Cases, reviews, results</text>
-      <text x="728" y="274" text-anchor="middle">Third-party mentions</text>
-      <text x="728" y="300" text-anchor="middle" font-size="15" font-weight="500">Coverage, partners, citations</text>
-      <text x="195" y="440" text-anchor="middle">Crawler access</text>
-      <text x="195" y="466" text-anchor="middle" font-size="15" font-weight="500">Robots, WAF, logs</text>
-      <text x="460" y="460" text-anchor="middle">Measurement</text>
-      <text x="460" y="486" text-anchor="middle" font-size="15" font-weight="500">Prompts, reports, leads</text>
-      <text x="728" y="440" text-anchor="middle">AI retrieval</text>
-      <text x="728" y="466" text-anchor="middle" font-size="15" font-weight="500">Search, answers, citations</text>
-    </g>
-  </svg>
-  <figcaption>Entity trust map based on Off Piste's audit model, informed by Google structured data guidance, Google Business Profile guidance, OpenAI crawler documentation, and Perplexity crawler documentation.</figcaption>
-</figure>
 
 The owned website usually does the heaviest work. The homepage should make the business category and positioning obvious. The about page should clarify who is behind the work and why they are credible. Service pages should name the work in language buyers use. Location pages should be specific where geography matters. Proof pages should show what supports the claims.
 

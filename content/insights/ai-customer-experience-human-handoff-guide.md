@@ -43,39 +43,21 @@ For each moment, record the customer goal, consequence of an error, permissions 
 | Route | send the request to the right person or process | preserve intent and permitted context |
 | Stop | pause when risk, uncertainty, or permissions exceed the design | make the alternate route immediate and usable |
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 900 600" role="img" aria-labelledby="role-title role-desc">
-    <title id="role-title">Where AI should answer, assist, collect, route, or stop</title>
-    <desc id="role-desc">A two-axis matrix plots customer-facing AI roles by consequence of error and need for human judgement. Answer and collect sit in lower-risk areas, assist and route require increasing controls, and stop occupies the highest-consequence, highest-judgement area.</desc>
-    <rect x="20" y="20" width="860" height="560" rx="24" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"/>
-    <text x="55" y="70" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2a24">Choose the role from the customer moment</text>
-    <g transform="translate(190 115)" font-family="Arial, sans-serif" fill="#1f2a24">
-      <rect width="590" height="350" fill="#ffffff" stroke="#1f2a24" stroke-width="3"/>
-      <line x1="295" y1="0" x2="295" y2="350" stroke="#1f2a24" stroke-width="2"/>
-      <line x1="0" y1="175" x2="590" y2="175" stroke="#1f2a24" stroke-width="2"/>
-      <rect x="8" y="183" width="279" height="159" rx="14" fill="#dcebdc"/>
-      <rect x="303" y="183" width="279" height="159" rx="14" fill="#fff5cc"/>
-      <rect x="8" y="8" width="279" height="159" rx="14" fill="#fff5cc"/>
-      <rect x="303" y="8" width="279" height="159" rx="14" fill="#f3d6d0"/>
-      <g font-size="22" font-weight="700">
-        <text x="30" y="225">Answer</text><text x="30" y="267">Collect</text>
-        <text x="325" y="225">Assist</text><text x="325" y="267">Route</text>
-        <text x="30" y="50">Route early</text>
-        <text x="325" y="50">Stop</text>
-      </g>
-      <g font-size="15">
-        <text x="30" y="295">Stable facts and minimum intake</text>
-        <text x="325" y="295">Controlled help with a clear exit</text>
-        <text x="30" y="80">Urgency or sensitivity can raise risk</text>
-        <text x="325" y="80">A person owns the next decision</text>
-      </g>
-    </g>
-    <text x="408" y="510" font-family="Arial, sans-serif" font-size="16" fill="#1f2a24">Need for human judgement →</text>
-    <text transform="translate(82 415) rotate(-90)" font-family="Arial, sans-serif" font-size="16" fill="#1f2a24">Consequence of error →</text>
-    <text x="190" y="548" font-family="Arial, sans-serif" font-size="14" fill="#1f2a24">Decision notes: data sensitivity, reversibility, urgency, and permissions</text>
-  </svg>
-  <figcaption>Off Piste customer-moment boundary model. The position can change when the data, audience, action, or consequence changes.</figcaption>
-</figure>
+```insight-visual
+{
+  "type": "matrix",
+  "title": "Customer risk determines where AI should help or stop",
+  "xAxis": "Need for human judgement increases",
+  "yAxis": "Consequence of error increases",
+  "items": [
+    { "title": "Route early", "description": "Urgency or sensitivity raises the need for human ownership." },
+    { "title": "Stop", "description": "A person owns the next decision." },
+    { "title": "Answer or collect", "description": "Use stable facts and collect only the minimum intake." },
+    { "title": "Assist or route", "description": "Provide controlled help with a clear exit." }
+  ],
+  "source": "Off Piste customer-moment boundary model informed by NIST guidance."
+}
+```
 
 The [NIST Generative AI Profile](https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence) supports defining the specific tasks a system will perform, documenting knowledge limits and human oversight, and evaluating output against known evidence. That makes the role a design constraint, not a label added after launch.
 
@@ -134,30 +116,6 @@ A safe handoff transfers responsibility and permitted context. A button that sen
 6. Set an expectation for channel and timing without making a promise the team cannot keep.
 7. Provide a recovery route if the transfer fails or the customer cannot use the proposed channel.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 980 500" role="img" aria-labelledby="handoff-title handoff-desc">
-    <title id="handoff-title">A context-rich AI-to-human handoff</title>
-    <desc id="handoff-desc">A linear flow moves from AI disclosure and intent capture through a trigger, consent and data boundary, context transfer, human acceptance, and expectation setting. A fallback branch provides a recovery channel if the transfer is not accepted.</desc>
-    <rect x="20" y="20" width="940" height="460" rx="24" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"/>
-    <text x="55" y="70" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2a24">Carry intent and permitted context into the human channel</text>
-    <g font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#1f2a24">
-      <rect x="45" y="125" width="115" height="72" rx="12" fill="#dcebdc" stroke="#1f2a24" stroke-width="2"/><text x="103" y="154">Disclose AI</text><text x="103" y="176">and purpose</text>
-      <rect x="180" y="125" width="115" height="72" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="238" y="154">Capture</text><text x="238" y="176">intent</text>
-      <rect x="315" y="125" width="115" height="72" rx="12" fill="#fff5cc" stroke="#1f2a24" stroke-width="2"/><text x="373" y="154">Handoff</text><text x="373" y="176">trigger</text>
-      <rect x="450" y="125" width="115" height="72" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="508" y="154">Consent and</text><text x="508" y="176">data boundary</text>
-      <rect x="585" y="125" width="115" height="72" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="643" y="154">Transfer</text><text x="643" y="176">context</text>
-      <rect x="720" y="125" width="115" height="72" rx="12" fill="#dcebdc" stroke="#1f2a24" stroke-width="2"/><text x="778" y="154">Human</text><text x="778" y="176">accepts</text>
-      <rect x="855" y="125" width="80" height="72" rx="12" fill="#dcebdc" stroke="#1f2a24" stroke-width="2"/><text x="895" y="154">Set</text><text x="895" y="176">expectation</text>
-      <rect x="655" y="325" width="245" height="76" rx="12" fill="#f3d6d0" stroke="#1f2a24" stroke-width="2"/><text x="778" y="356">Transfer not accepted</text><text x="778" y="378">Offer a usable recovery channel</text>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" fill="none">
-      <path d="M160 161h20M295 161h20M430 161h20M565 161h20M700 161h20M835 161h20"/>
-      <path d="M778 197v128"/>
-    </g>
-    <text x="790" y="270" font-family="Arial, sans-serif" font-size="14" fill="#1f2a24">No acceptance</text>
-  </svg>
-  <figcaption>Off Piste handoff model. Consent requirements and permitted data depend on the organisation, purpose, and applicable obligations.</figcaption>
-</figure>
 
 The difference is visible in the journey.
 

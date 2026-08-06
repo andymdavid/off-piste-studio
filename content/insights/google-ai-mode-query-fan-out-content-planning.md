@@ -44,46 +44,7 @@ Normal Search foundations still apply. Google's [AI feature eligibility requirem
 
 That boundary keeps the work focused on a useful, connected website built around a real decision, rather than speculation about a hidden retrieval system.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 980 610" role="img" aria-labelledby="fanout-map-title fanout-map-desc">
-    <title id="fanout-map-title">Query fan-out content map</title>
-    <desc id="fanout-map-desc">One buyer question branches into related research jobs and reconnects to service, comparison, proof, location and conversion pages.</desc>
-    <rect x="20" y="20" width="940" height="570" rx="22" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <g font-family="Arial, sans-serif" fill="#1f2a24">
-      <text x="60" y="70" font-size="25" font-weight="700">Query fan-out content map</text>
-      <text x="60" y="100" font-size="15">Off Piste planning model, not a trace of Google's hidden queries</text>
-      <rect x="260" y="130" width="460" height="72" rx="14" fill="#ffffff" stroke="#1f2a24" stroke-width="3"></rect>
-      <text x="490" y="158" text-anchor="middle" font-size="16" font-weight="700">How do I choose an SEO partner in Perth?</text>
-      <text x="490" y="182" text-anchor="middle" font-size="14">I need leads, reporting and website help</text>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" fill="none">
-      <path d="M490 202 L490 235"></path>
-      <path d="M120 235 L860 235"></path>
-      <path d="M120 235 L120 266"></path><path d="M268 235 L268 266"></path><path d="M416 235 L416 266"></path>
-      <path d="M564 235 L564 266"></path><path d="M712 235 L712 266"></path><path d="M860 235 L860 266"></path>
-    </g>
-    <g font-family="Arial, sans-serif" text-anchor="middle" fill="#1f2a24">
-      <g><rect x="58" y="266" width="124" height="64" rx="10" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="120" y="294" font-size="15" font-weight="700">Fit</text><text x="120" y="315" font-size="12">Services and scope</text></g>
-      <g><rect x="206" y="266" width="124" height="64" rx="10" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="268" y="294" font-size="15" font-weight="700">Cost</text><text x="268" y="315" font-size="12">Budget drivers</text></g>
-      <g><rect x="354" y="266" width="124" height="64" rx="10" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="416" y="294" font-size="15" font-weight="700">Proof</text><text x="416" y="315" font-size="12">Cases and reviews</text></g>
-      <g><rect x="502" y="266" width="124" height="64" rx="10" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="564" y="294" font-size="15" font-weight="700">Process</text><text x="564" y="315" font-size="12">Work and reporting</text></g>
-      <g><rect x="650" y="266" width="124" height="64" rx="10" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="712" y="294" font-size="15" font-weight="700">Location</text><text x="712" y="315" font-size="12">Perth relevance</text></g>
-      <g><rect x="798" y="266" width="124" height="64" rx="10" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="860" y="294" font-size="15" font-weight="700">Next step</text><text x="860" y="315" font-size="12">Audit or enquiry</text></g>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" fill="none">
-      <path d="M120 330 L120 376 L490 410"></path><path d="M268 330 L268 376 L490 410"></path><path d="M416 330 L416 376 L490 410"></path>
-      <path d="M564 330 L564 376 L490 410"></path><path d="M712 330 L712 376 L490 410"></path><path d="M860 330 L860 376 L490 410"></path>
-    </g>
-    <g font-family="Arial, sans-serif" fill="#1f2a24" text-anchor="middle">
-      <rect x="105" y="430" width="150" height="68" rx="10" fill="#dce8df" stroke="#1f2a24" stroke-width="2"></rect><text x="180" y="458" font-size="14" font-weight="700">Service page</text><text x="180" y="480" font-size="12">Fit and next step</text>
-      <rect x="285" y="430" width="150" height="68" rx="10" fill="#dce8df" stroke="#1f2a24" stroke-width="2"></rect><text x="360" y="458" font-size="14" font-weight="700">Decision guide</text><text x="360" y="480" font-size="12">Cost and comparison</text>
-      <rect x="465" y="430" width="150" height="68" rx="10" fill="#dce8df" stroke="#1f2a24" stroke-width="2"></rect><text x="540" y="458" font-size="14" font-weight="700">Proof asset</text><text x="540" y="480" font-size="12">Case and evidence</text>
-      <rect x="645" y="430" width="150" height="68" rx="10" fill="#dce8df" stroke="#1f2a24" stroke-width="2"></rect><text x="720" y="458" font-size="14" font-weight="700">Location page</text><text x="720" y="480" font-size="12">Local relevance</text>
-      <rect x="310" y="526" width="360" height="44" rx="10" fill="#1f2a24"></rect><text x="490" y="553" font-size="15" font-weight="700" fill="#fff">Descriptive links reconnect the journey</text>
-    </g>
-  </svg>
-  <figcaption>A useful fan-out map connects the questions behind a decision to the pages and evidence that can answer them. Source: Off Piste planning model based on Google's documented query fan-out.</figcaption>
-</figure>
+Map the related research jobs around the buyer’s central question, then reconnect each one to the service, comparison, proof, location, or conversion page that can answer it.
 
 ## Choose one commercially important research journey
 
@@ -183,29 +144,7 @@ Treat reporting as one layer. Compare generative impressions with conventional S
 
 Independent evidence is useful when its limits stay attached. The under-review preprint [Measuring Google AI Overviews](https://arxiv.org/abs/2605.14021) studied 55,393 trending queries across 19 categories during a 40-day window in 2026. Within that sample, AI Overview activation varied by query form and nearly 30 per cent of cited domains did not appear in the co-displayed first-page results. That doesn't establish the same pattern for every local or commercial query, and it doesn't prove a page change caused a citation.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 980 390" role="img" aria-labelledby="validation-loop-title validation-loop-desc">
-    <title id="validation-loop-title">Planning and validation loop</title>
-    <desc id="validation-loop-desc">A loop from buyer question and search results research through page changes, measurement and revision.</desc>
-    <rect x="20" y="20" width="940" height="350" rx="22" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <g font-family="Arial, sans-serif" fill="#1f2a24">
-      <text x="60" y="70" font-size="25" font-weight="700">Planning and validation loop</text>
-      <text x="60" y="100" font-size="15">Revise the model when buyer evidence or search behaviour changes</text>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" fill="none">
-      <path d="M180 200 L280 200"></path><path d="M400 200 L500 200"></path><path d="M620 200 L720 200"></path>
-      <path d="M840 240 C840 320 120 320 120 240"></path>
-      <path d="M270 190 L280 200 L270 210"></path><path d="M490 190 L500 200 L490 210"></path><path d="M710 190 L720 200 L710 210"></path><path d="M130 250 L120 240 L110 250"></path>
-    </g>
-    <g font-family="Arial, sans-serif" text-anchor="middle" fill="#1f2a24">
-      <rect x="60" y="145" width="120" height="110" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="120" y="180" font-size="15" font-weight="700">Question</text><text x="120" y="204" font-size="12">Buyer evidence</text><text x="120" y="224" font-size="12">and SERP review</text>
-      <rect x="280" y="145" width="120" height="110" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="340" y="180" font-size="15" font-weight="700">Hypothesis</text><text x="340" y="204" font-size="12">Query families</text><text x="340" y="224" font-size="12">and page map</text>
-      <rect x="500" y="145" width="120" height="110" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"></rect><text x="560" y="180" font-size="15" font-weight="700">Implement</text><text x="560" y="204" font-size="12">Pages, proof</text><text x="560" y="224" font-size="12">and links</text>
-      <rect x="720" y="145" width="120" height="110" rx="12" fill="#dce8df" stroke="#1f2a24" stroke-width="2"></rect><text x="780" y="180" font-size="15" font-weight="700">Review</text><text x="780" y="204" font-size="12">Visibility, answers</text><text x="780" y="224" font-size="12">and enquiries</text>
-    </g>
-  </svg>
-  <figcaption>Query fan-out planning stays useful when the map is treated as a testable model that changes with evidence. Source: Off Piste planning model.</figcaption>
-</figure>
+Treat the map as a testable loop: research the buyer question and search results, change the relevant pages, measure what happens, then revise the model.
 
 Set a review date after a stable measurement period. Keep the map when pages and evidence still match the buyer's journey. Revise it when sales questions, result patterns, service scope or reporting show that a role has changed.
 

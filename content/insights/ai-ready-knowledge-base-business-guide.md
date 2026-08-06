@@ -41,34 +41,6 @@ The [NIST definition of retrieval-augmented generation](https://csrc.nist.gov/gl
 
 For an operator, the important part is the chain of control. Source systems contain working records. An approved corpus exposes the material suitable for the use case. Retrieval finds evidence the user is allowed to access. The model forms an answer from that evidence. A citation lets a person inspect the source. Human review or escalation catches cases the evidence cannot settle. Feedback then leads to a source correction, a better retrieval rule or a narrower system boundary.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 1120 500" role="img" aria-labelledby="knowledge-flow-title knowledge-flow-desc">
-    <title id="knowledge-flow-title">Business knowledge flow for an AI assistant</title>
-    <desc id="knowledge-flow-desc">Business source systems flow through an approved corpus and permission-aware retrieval into an answer with citations. Human review and feedback return corrections to source maintenance.</desc>
-    <rect x="20" y="20" width="1080" height="460" rx="26" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <g fill="#ffffff" stroke="#1f2a24" stroke-width="3">
-      <rect x="55" y="142" width="180" height="110" rx="16"></rect>
-      <rect x="275" y="142" width="180" height="110" rx="16"></rect>
-      <rect x="495" y="142" width="180" height="110" rx="16"></rect>
-      <rect x="715" y="142" width="180" height="110" rx="16"></rect>
-      <rect x="935" y="142" width="130" height="110" rx="16"></rect>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" fill="none" stroke-linecap="round">
-      <path d="M235 197 H275"></path><path d="M455 197 H495"></path><path d="M675 197 H715"></path><path d="M895 197 H935"></path>
-      <path d="M1000 252 V355 H365 V252"></path>
-    </g>
-    <g fill="#1f2a24" font-family="Arial, sans-serif" text-anchor="middle">
-      <text x="560" y="77" font-size="27" font-weight="700">Business knowledge becomes a controlled loop</text>
-      <text x="145" y="181" font-size="19" font-weight="700">Source systems</text><text x="145" y="211" font-size="15">documents, CRM, policies</text>
-      <text x="365" y="181" font-size="19" font-weight="700">Approved corpus</text><text x="365" y="211" font-size="15">authority and lifecycle</text>
-      <text x="585" y="174" font-size="19" font-weight="700">Permission-aware</text><text x="585" y="202" font-size="19" font-weight="700">retrieval</text><text x="585" y="230" font-size="15">right evidence, right user</text>
-      <text x="805" y="181" font-size="19" font-weight="700">Answer and citation</text><text x="805" y="211" font-size="15">supported response</text>
-      <text x="1000" y="174" font-size="18" font-weight="700">Review</text><text x="1000" y="201" font-size="18" font-weight="700">or escalate</text>
-      <text x="682" y="389" font-size="17" font-weight="700">Feedback updates the source, access rule or system boundary</text>
-    </g>
-  </svg>
-  <figcaption>The durable asset is a controlled knowledge loop. The model and retrieval product can change while authority, access, evidence and ownership remain visible.</figcaption>
-</figure>
 
 Grounding gives the system better evidence. It does not guarantee an accurate answer. The business still needs to test what retrieval found, what the model said and what happens when evidence is missing.
 

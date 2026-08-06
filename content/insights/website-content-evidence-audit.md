@@ -90,35 +90,21 @@ Google currently says that established Search fundamentals still apply to AI Ove
 
 Use risk to decide repair order. Cross the claim's commercial importance with the cost of being wrong. Commercial importance reflects how strongly the statement influences a decision. Error cost reflects potential harm to the reader, client, business, or regulator.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 900 610" role="img" aria-labelledby="evidence-risk-title evidence-risk-desc">
-    <title id="evidence-risk-title">Evidence risk matrix</title>
-    <desc id="evidence-risk-desc">A four-quadrant framework crossing commercial importance with the cost of being wrong.</desc>
-    <rect x="130" y="35" width="700" height="500" rx="18" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <line x1="480" y1="35" x2="480" y2="535" stroke="#1f2a24" stroke-width="3"></line>
-    <line x1="130" y1="285" x2="830" y2="285" stroke="#1f2a24" stroke-width="3"></line>
-    <rect x="480" y="35" width="350" height="250" fill="#ffd9cf"></rect>
-    <rect x="130" y="35" width="350" height="250" fill="#fff5cc"></rect>
-    <rect x="480" y="285" width="350" height="250" fill="#e1f0df"></rect>
-    <g font-family="Arial, sans-serif" fill="#1f2a24" text-anchor="middle">
-      <text x="305" y="125" font-size="24" font-weight="700">Check carefully</text>
-      <text x="305" y="160" font-size="16">High error cost</text>
-      <text x="305" y="185" font-size="16">Lower commercial influence</text>
-      <text x="655" y="125" font-size="24" font-weight="700">Repair first</text>
-      <text x="655" y="160" font-size="16">High error cost</text>
-      <text x="655" y="185" font-size="16">High commercial influence</text>
-      <text x="305" y="380" font-size="24" font-weight="700">Maintain</text>
-      <text x="305" y="415" font-size="16">Lower error cost</text>
-      <text x="305" y="440" font-size="16">Lower commercial influence</text>
-      <text x="655" y="380" font-size="24" font-weight="700">Improve next</text>
-      <text x="655" y="415" font-size="16">Lower error cost</text>
-      <text x="655" y="440" font-size="16">High commercial influence</text>
-      <text x="480" y="585" font-size="18" font-weight="700">Commercial importance increases →</text>
-    </g>
-    <text x="38" y="320" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#1f2a24" transform="rotate(-90 38 320)">Cost of being wrong increases →</text>
-  </svg>
-  <figcaption>Off Piste evidence-risk framework. Use judgement and record why a claim sits in its quadrant.</figcaption>
-</figure>
+```insight-visual
+{
+  "type": "matrix",
+  "title": "Repair commercially important claims with a high error cost first",
+  "xAxis": "Commercial importance increases",
+  "yAxis": "Cost of being wrong increases",
+  "items": [
+    { "title": "Check carefully", "description": "High error cost with lower commercial influence." },
+    { "title": "Repair first", "description": "High error cost with high commercial influence." },
+    { "title": "Maintain", "description": "Lower error cost with lower commercial influence." },
+    { "title": "Improve next", "description": "Lower error cost with high commercial influence." }
+  ],
+  "source": "Off Piste evidence-risk framework."
+}
+```
 
 A high-importance, high-error claim should be repaired before a low-impact line deep in an old article. Credentials, safety advice, legal obligations, quantified outcomes, guarantees, and strong competitor comparisons often belong near the top.
 

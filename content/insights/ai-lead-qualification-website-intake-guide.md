@@ -48,27 +48,6 @@ Choose the least complex approach that handles the variation you actually see. I
 
 Draw the whole journey from the visitor's first choice to the team's next action. Include the website, validation, rules, any model task, the CRM, the receiving person, and the fallback. A tool demo rarely shows all those joins.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 1120 620" role="img" aria-labelledby="intake-route-title intake-route-desc">
-    <title id="intake-route-title">AI-assisted website intake route</title>
-    <desc id="intake-route-desc">A visitor chooses a form or disclosed conversation. Inputs are validated, deterministic rules run, and bounded AI may create a summary. The CRM receives a traceable record for human review and routing. Validation, model, or integration failure returns to correction or a manual route.</desc>
-    <rect x="20" y="20" width="1080" height="580" rx="24" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"/>
-    <text x="55" y="70" font-family="Arial, sans-serif" font-size="24" font-weight="700" fill="#1f2a24">Keep every qualification step visible and recoverable</text>
-    <g font-family="Arial, sans-serif" font-size="15" text-anchor="middle" fill="#1f2a24">
-      <rect x="45" y="130" width="125" height="76" rx="12" fill="#dcebdc" stroke="#1f2a24" stroke-width="2"/><text x="108" y="159">Visitor chooses</text><text x="108" y="181">a route</text>
-      <rect x="205" y="95" width="135" height="76" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="273" y="124">Accessible</text><text x="273" y="146">form</text>
-      <rect x="205" y="205" width="135" height="76" rx="12" fill="#fff5cc" stroke="#1f2a24" stroke-width="2"/><text x="273" y="234">Disclosed</text><text x="273" y="256">conversation</text>
-      <rect x="380" y="130" width="125" height="76" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="443" y="159">Validate and</text><text x="443" y="181">allow correction</text>
-      <rect x="545" y="130" width="125" height="76" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="608" y="159">Apply known</text><text x="608" y="181">rules</text>
-      <rect x="710" y="130" width="125" height="76" rx="12" fill="#fff5cc" stroke="#1f2a24" stroke-width="2"/><text x="773" y="159">Bounded AI</text><text x="773" y="181">task if needed</text>
-      <rect x="875" y="130" width="125" height="76" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="938" y="159">CRM record</text><text x="938" y="181">with provenance</text>
-      <rect x="875" y="300" width="125" height="76" rx="12" fill="#dcebdc" stroke="#1f2a24" stroke-width="2"/><text x="938" y="329">Human review</text><text x="938" y="351">and next step</text>
-      <rect x="380" y="455" width="455" height="82" rx="12" fill="#f3d6d0" stroke="#1f2a24" stroke-width="2"/><text x="608" y="487">Correction, accessible form, or manual processing</text><text x="608" y="511">when validation, model, CRM, or transfer fails</text>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" fill="none"><path d="M170 168L205 133M170 168L205 243M340 133L380 168M340 243L380 168M505 168h40M670 168h40M835 168h40M938 206v94"/><path d="M443 206v249M773 206v249M938 376v79M835 496h103"/></g>
-  </svg>
-  <figcaption>Off Piste website intake architecture. The model task is optional. Every failure path preserves correction or manual processing.</figcaption>
-</figure>
 
 For each connector, define the payload, success signal, timeout response, and alert owner. A completed chat isn't a completed handoff if its CRM write failed.
 

@@ -56,37 +56,6 @@ Use the most specific accurate type that fits the real operation. Schema.org def
 
 An online or non-location-dependent professional service firm can often use `Organization`, or a relevant subtype supported by its actual business model. A business with a customer-facing physical location may fit `LocalBusiness`. Google's [LocalBusiness structured data guide](https://developers.google.com/search/docs/appearance/structured-data/local-business) says to use the most specific applicable subtype and follow its local business fields as well as the inherited organisation properties.
 
-<figure class="insight-article__figure">
-  <svg viewBox="0 0 920 620" role="img" aria-labelledby="org-type-title org-type-desc">
-    <title id="org-type-title">Organization schema type decision tree</title>
-    <desc id="org-type-desc">Decision tree showing when a service business should use Organization, LocalBusiness, or a more specific LocalBusiness subtype.</desc>
-    <rect x="20" y="20" width="880" height="580" rx="28" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"></rect>
-    <g fill="#ffffff" stroke="#1f2a24" stroke-width="3">
-      <rect x="280" y="62" width="360" height="76" rx="18"></rect>
-      <rect x="280" y="214" width="360" height="76" rx="18"></rect>
-      <rect x="72" y="442" width="320" height="88" rx="18"></rect>
-      <rect x="528" y="442" width="320" height="88" rx="18"></rect>
-    </g>
-    <g stroke="#1f2a24" stroke-width="3" fill="none" stroke-linecap="round">
-      <path d="M460 138 L460 214"></path>
-      <path d="M460 290 L460 350 L232 350 L232 442"></path>
-      <path d="M460 350 L688 350 L688 442"></path>
-    </g>
-    <g fill="#1f2a24" font-family="sans-serif" text-anchor="middle">
-      <text x="460" y="94" font-size="21" font-weight="700">Does the business depend on a</text>
-      <text x="460" y="121" font-size="21" font-weight="700">real local presence?</text>
-      <text x="460" y="246" font-size="21" font-weight="700">Does an accurate, specific</text>
-      <text x="460" y="273" font-size="21" font-weight="700">LocalBusiness subtype apply?</text>
-      <text x="232" y="474" font-size="22" font-weight="700">No</text>
-      <text x="232" y="505" font-size="18">Use Organization or an accurate subtype</text>
-      <text x="688" y="474" font-size="22" font-weight="700">Yes</text>
-      <text x="688" y="505" font-size="18">Use the most specific local subtype</text>
-      <text x="330" y="340" font-size="17" font-weight="700">No local fit</text>
-      <text x="590" y="340" font-size="17" font-weight="700">Local fit</text>
-    </g>
-  </svg>
-  <figcaption>Choose the most specific accurate type that matches how the business operates and what its website can support. Based on Google LocalBusiness guidance and Schema.org type definitions.</figcaption>
-</figure>
 
 Service-area status alone doesn't make every remote consultancy a `LocalBusiness`. Check eligibility and how the business actually meets customers. Multi-location groups usually need a distinct node and stable `@id` for each location. Practitioner, parent-brand, franchise and complex ownership structures need case-specific modelling. A universal snippet can collapse genuinely different entities.
 

@@ -35,7 +35,6 @@ The process can stay proportionate. An internal tool that tidies non-sensitive n
 
 The [NIST Generative AI Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) applies Govern, Map, Measure, and Manage functions to generative AI risks. The public summary of [ISO/IEC 42001](https://www.iso.org/standard/42001) describes an AI management system that is established, implemented, maintained, and continually improved. They support a connected loop of ownership, context, evidence, action, and review.
 
-<figure class="insight-article__figure"><svg viewBox="0 0 960 320" role="img" aria-labelledby="loop-title loop-desc"><title id="loop-title">Off Piste AI governance operating loop</title><desc id="loop-desc">Inventory, assess, approve, operate, monitor, and change or retire form a continuous loop. Material changes return a use case to assessment.</desc><rect x="20" y="20" width="920" height="280" rx="24" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"/><text x="55" y="68" font-family="Arial" font-size="24" font-weight="700" fill="#1f2a24">A decision stays governed after approval</text><g font-family="Arial" font-size="16" text-anchor="middle" fill="#1f2a24"><rect x="45" y="110" width="125" height="65" rx="12" fill="#dcebdc" stroke="#1f2a24" stroke-width="2"/><text x="108" y="150">Inventory</text><rect x="195" y="110" width="125" height="65" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="258" y="150">Assess</text><rect x="345" y="110" width="125" height="65" rx="12" fill="#fff5cc" stroke="#1f2a24" stroke-width="2"/><text x="408" y="150">Approve</text><rect x="495" y="110" width="125" height="65" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="558" y="150">Operate</text><rect x="645" y="110" width="125" height="65" rx="12" fill="#fff" stroke="#1f2a24" stroke-width="2"/><text x="708" y="150">Monitor</text><rect x="795" y="110" width="125" height="65" rx="12" fill="#f3d6d0" stroke="#1f2a24" stroke-width="2"/><text x="858" y="137">Change</text><text x="858" y="158">or retire</text></g><g stroke="#1f2a24" stroke-width="3"><path d="M170 143h25M320 143h25M470 143h25M620 143h25M770 143h25"/><path d="M858 180v58H258v-58" fill="none"/></g><text x="558" y="268" font-family="Arial" font-size="15" text-anchor="middle" fill="#1f2a24">Material changes return to assessment</text></svg><figcaption>Off Piste operating model informed by NIST and ISO lifecycle principles.</figcaption></figure>
 
 ## Start with an AI use register
 
@@ -75,7 +74,21 @@ The Off Piste model considers consequence, data sensitivity, customer exposure, 
 | High | personal information, customer interaction, or material consequence | due diligence, specialist input, full approval, disclosure, fallback, incident plan |
 | Excluded | HR, credit, health, legal, safety, or rights-affecting decisions without specialist review | hold for specialist review |
 
-<figure class="insight-article__figure"><svg viewBox="0 0 820 520" role="img" aria-labelledby="risk-title risk-desc"><title id="risk-title">Off Piste four-tier AI use-case risk matrix</title><desc id="risk-desc">Higher consequence or more sensitive data moves a use from low to moderate, high, then excluded or specialist review, increasing approval, review, monitoring, and escalation.</desc><rect x="20" y="20" width="780" height="480" rx="24" fill="#f6f2e8" stroke="#1f2a24" stroke-width="3"/><text x="55" y="68" font-family="Arial" font-size="23" font-weight="700" fill="#1f2a24">More consequence or sensitive data means more control</text><g transform="translate(175 100)" font-family="Arial" fill="#1f2a24"><rect width="260" height="165" fill="#dcebdc" stroke="#1f2a24" stroke-width="3"/><rect x="260" width="260" height="165" fill="#f3d6d0" stroke="#1f2a24" stroke-width="3"/><rect y="165" width="260" height="165" fill="#fff" stroke="#1f2a24" stroke-width="3"/><rect x="260" y="165" width="260" height="165" fill="#fff5cc" stroke="#1f2a24" stroke-width="3"/><g text-anchor="middle"><text x="130" y="70" font-size="24" font-weight="700">High</text><text x="130" y="100" font-size="15">specialist input</text><text x="390" y="70" font-size="22" font-weight="700">Excluded</text><text x="390" y="100" font-size="15">specialist review</text><text x="130" y="235" font-size="24" font-weight="700">Low</text><text x="130" y="265" font-size="15">register and sample</text><text x="390" y="235" font-size="24" font-weight="700">Moderate</text><text x="390" y="265" font-size="15">test and approve</text></g></g><text x="320" y="468" font-family="Arial" font-size="16" fill="#1f2a24">Consequence and customer exposure →</text><text transform="translate(72 380) rotate(-90)" font-family="Arial" font-size="16" fill="#1f2a24">Data sensitivity →</text></svg><figcaption>Off Piste management aid informed by Australian Government, OAIC, NIST, and ACSC guidance.</figcaption></figure>
+```insight-visual
+{
+  "type": "matrix",
+  "title": "More consequence or sensitive data requires more control",
+  "xAxis": "Consequence and customer exposure increases",
+  "yAxis": "Data sensitivity increases",
+  "items": [
+    { "title": "High", "description": "Require specialist input and full approval." },
+    { "title": "Excluded", "description": "Hold for specialist review." },
+    { "title": "Low", "description": "Register the use and sample its output." },
+    { "title": "Moderate", "description": "Test, approve and monitor the use." }
+  ],
+  "source": "Off Piste management aid informed by Australian Government, OAIC, NIST and ACSC guidance."
+}
+```
 
 ## Write rules people can use during real work
 
