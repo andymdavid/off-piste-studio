@@ -1,93 +1,193 @@
-# Insight visual blocks
+# Insight visual and editorial modules
 
-New insight graphics use structured `insight-visual` blocks. The site generator turns the JSON into responsive, accessible HTML that follows the Off Piste article design system.
+The article system separates data visualisation, conceptual diagrams, and editorial modules. Do not turn an ordinary list into a graphic.
 
-Use a visual only when it makes a relationship, sequence, comparison, or small body of evidence materially easier to understand. Keep ordinary explanation as prose. Do not add raw SVG, manual coordinates, decorative diagrams, or generic stock imagery.
+Before using an `insight-visual`, identify the pattern being encoded and explain what becomes easier to understand visually. If there is no numeric pattern, branch, axis, or layered relationship, use prose or an `insight-module` instead.
 
-Every block requires `type` and `title`. Optional shared fields are `eyebrow`, `summary`, `source`, and `caption`. Text is escaped by the renderer and cannot contain HTML or Markdown.
+All components require a concise `title`. Visuals may also use `label`, `summary`, `source`, and `caption`. Text is escaped and cannot contain HTML or Markdown.
 
-## Metrics
+## Data visualisations
 
-Use for two to four important figures from a consistent evidence base.
+Data types require real values and a named source. The renderer calculates proportions; authors never supply CSS dimensions or coordinates.
+
+### Headline statistic
+
+Use `headline-stat` for one to three important sourced findings.
 
 ```insight-visual
 {
-  "type": "metrics",
-  "eyebrow": "What the evidence shows",
+  "type": "headline-stat",
+  "label": "The adoption gap",
   "title": "Support has grown faster than company policy",
-  "summary": "The strongest figures establish the gap before the article explains it.",
+  "unit": "%",
   "items": [
-    { "value": "87%", "label": "receive organisational support", "detail": "Moderate or strong support" },
-    { "value": "28%", "label": "have changed formal processes" },
-    { "value": "60%", "label": "expect stable or growing teams" }
+    { "value": 87, "label": "receive organisational support" },
+    { "value": 28, "label": "report changed formal processes" }
   ],
-  "source": "Named report, survey and date"
+  "source": "Named survey, edition and date"
 }
 ```
 
-Never invent a metric. The source must support every figure shown.
+### Ranked horizontal bars
 
-## Process
-
-Use for a genuine sequence or lifecycle. Each item requires `title`; `description` is optional.
+Use `ranked-bars` to compare values across categories. `value` must be numeric. `display` controls the written value; `max` is optional and otherwise derived from the largest value.
 
 ```insight-visual
 {
-  "type": "process",
-  "eyebrow": "Operating model",
-  "title": "A reliable workflow has four control points",
+  "type": "ranked-bars",
+  "title": "Peer learning now leads formal training",
+  "unit": "%",
+  "max": 100,
   "items": [
-    { "title": "Define the decision", "description": "State what the workflow may decide and what remains human." },
-    { "title": "Prepare the evidence", "description": "Give the system current, authoritative source material." },
-    { "title": "Review the output", "description": "Test accuracy before the result reaches a customer." },
-    { "title": "Monitor the outcome", "description": "Track exceptions, corrections and changing source material." }
-  ]
+    { "label": "Peer learning", "value": 70 },
+    { "label": "Leadership recommendations", "value": 16 }
+  ],
+  "source": "Named survey, edition and date"
 }
 ```
 
-## Comparison
+### Grouped bars
 
-Use for two or three parallel categories with genuinely comparable points.
+Use `grouped-bars` for two or three series compared across the same categories, including year-over-year change.
 
 ```insight-visual
 {
-  "type": "comparison",
-  "eyebrow": "Where the difference sits",
-  "title": "The same traffic can serve different jobs",
-  "columns": [
-    { "title": "Research intent", "items": ["Explains the problem", "Builds confidence", "Supports later comparison"] },
-    { "title": "Decision intent", "items": ["Clarifies the offer", "Resolves practical risk", "Creates a next step"] }
-  ]
+  "type": "grouped-bars",
+  "title": "Peer learning grew while formal direction declined",
+  "unit": "%",
+  "max": 100,
+  "series": [
+    { "key": "previous", "label": "2025" },
+    { "key": "current", "label": "2026" }
+  ],
+  "items": [
+    { "label": "Peer learning", "values": { "previous": 24, "current": 70 } },
+    { "label": "Leadership recommendations", "values": { "previous": 32, "current": 16 } }
+  ],
+  "source": "Named survey, edition and date"
 }
 ```
 
-## Matrix
+### Stacked proportions
 
-Use only when two axes create four meaningful quadrants. Provide exactly four useful items; extra items are ignored by the renderer.
+Use `stacked-bars` for part-to-whole comparisons or distributions. Each row is normalised to 100% by the renderer.
+
+```insight-visual
+{
+  "type": "stacked-bars",
+  "title": "Support differs by company stage",
+  "unit": "%",
+  "series": [
+    { "key": "strong", "label": "Strong" },
+    { "key": "moderate", "label": "Moderate" },
+    { "key": "minimal", "label": "Minimal or none" }
+  ],
+  "items": [
+    { "label": "Early stage", "values": { "strong": 64, "moderate": 23, "minimal": 13 } },
+    { "label": "Growth stage", "values": { "strong": 59, "moderate": 34, "minimal": 7 } }
+  ],
+  "source": "Named survey, edition and date"
+}
+```
+
+## Concept diagrams
+
+Concept diagrams require a real spatial relationship. They are not substitutes for numbered lists.
+
+### Decision flow
+
+Use `decision-flow` when each gate has a distinct failure route and passing all gates produces an outcome.
+
+```insight-visual
+{
+  "type": "decision-flow",
+  "label": "Opportunity screen",
+  "title": "Hard gates keep unsafe ideas out of the scorecard",
+  "gates": [
+    { "title": "Problem", "question": "Is the business problem clear?", "fail": "Clarify the problem" },
+    { "title": "Exposure", "question": "Is the risk acceptable?", "fail": "Redesign or reject" },
+    { "title": "Readiness", "question": "Can the team operate it safely?", "fail": "Repair foundations" }
+  ],
+  "success": "Score the viable candidate"
+}
+```
+
+### Matrix
+
+Use `matrix` only when two meaningful axes produce four distinct decision areas. Item order is top-left, top-right, bottom-left, bottom-right.
 
 ```insight-visual
 {
   "type": "matrix",
-  "eyebrow": "Prioritisation",
-  "title": "Consequence and exposure determine the control level",
-  "xAxis": "Customer exposure increases",
-  "yAxis": "Consequence increases",
+  "title": "Value and risk determine the default route",
+  "xAxis": "Risk increases",
+  "yAxis": "Value increases",
   "items": [
-    { "title": "High", "description": "Specialist input and approval" },
-    { "title": "Restricted", "description": "Do not proceed without specialist review" },
-    { "title": "Low", "description": "Register and sample outputs" },
-    { "title": "Moderate", "description": "Test and approve before use" }
+    { "title": "Pilot", "description": "High value with bounded risk" },
+    { "title": "Redesign", "description": "High value with excessive risk" },
+    { "title": "Defer", "description": "Foundations need work" },
+    { "title": "Reject", "description": "Weak value with high risk" }
   ]
 }
 ```
 
-The item order is top-left, top-right, bottom-left, bottom-right on larger screens. On narrow screens the same reading order becomes a vertical list.
+### Layers
 
-## Editorial checks
+Use `layers` when the reader needs to understand a hierarchy or stack of dependent foundations. Do not use it for chronological steps.
 
-- The preceding prose must introduce why the visual matters.
-- The visual should add scanning or relational value rather than repeat a nearby list.
-- Titles should state the insight, not merely name the format.
-- Labels should be short enough to remain readable on mobile.
-- Source lines should name the source and relevant date or edition.
-- A build failure caused by visual JSON must be fixed before publishing.
+```insight-visual
+{
+  "type": "layers",
+  "title": "Reliable AI rests on maintained business foundations",
+  "items": [
+    { "title": "Source knowledge", "description": "Current and authoritative material" },
+    { "title": "Retrieval and rules", "description": "Controlled access and clear boundaries" },
+    { "title": "Customer experience", "description": "Useful answers and safe escalation" }
+  ]
+}
+```
+
+## Editorial modules
+
+Editorial modules create reading rhythm but are not graphics. Use the separate `insight-module` fence.
+
+### In practice
+
+```insight-module
+{
+  "type": "practice",
+  "label": "In practice",
+  "title": "Start with the decision the team needs to make",
+  "intro": "A useful review asks a small number of concrete questions.",
+  "items": [
+    "Name the outcome and owner",
+    "Record the evidence and uncertainty",
+    "Define a stop condition"
+  ]
+}
+```
+
+### Key takeaways
+
+```insight-module
+{
+  "type": "takeaways",
+  "label": "Key takeaways",
+  "title": "What the evidence changes",
+  "items": [
+    { "title": "Screen before scoring", "body": "A failed hard gate overrides an attractive total." },
+    { "title": "Expose uncertainty", "body": "Confidence belongs beside every estimate." }
+  ]
+}
+```
+
+## Selection rules
+
+- Use a data visual only when verified numeric values are available.
+- Use a concept diagram only for a branch, axis, hierarchy, feedback loop, or relationship that prose cannot show as clearly.
+- Use an editorial module for advice, examples, or takeaways.
+- Use ordinary prose for everything else.
+- Introduce why the component matters in the preceding prose.
+- Titles state the finding or decision, not the format.
+- Sources name the publication and relevant date or edition.
+- Never use raw SVG, manual coordinates, decorative diagrams, stock imagery, or legacy brand colours.

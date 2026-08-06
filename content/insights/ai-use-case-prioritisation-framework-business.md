@@ -88,16 +88,16 @@ The sequence matters because it prevents an attractive total from hiding an unac
 
 ```insight-visual
 {
-  "type": "process",
-  "eyebrow": "Opportunity screen",
+  "type": "decision-flow",
+  "label": "Opportunity screen",
   "title": "Hard gates keep unsafe ideas out of the scorecard",
-  "summary": "Each candidate moves through a fixed sequence before comparative scoring begins.",
-  "items": [
-    { "title": "Define the problem", "description": "Name the user, friction, outcome, baseline, owner, and why AI may help." },
-    { "title": "Check hard gates", "description": "Test strategic fit, privacy, safety, trust, readiness, ownership, and reversibility." },
-    { "title": "Choose the response", "description": "Score, redesign, defer, seek specialist review, or reject the candidate." },
-    { "title": "Score viable options", "description": "Compare value, confidence, effort, learning speed, and residual risk consistently." }
+  "summary": "A candidate reaches comparative scoring only after the problem, exposure, and operating foundations are acceptable.",
+  "gates": [
+    { "title": "Problem", "question": "Is the user, friction, outcome, baseline, and owner clear?", "fail": "Clarify the problem" },
+    { "title": "Exposure", "question": "Are privacy, safety, legal, and customer-trust risks acceptable?", "fail": "Redesign or reject" },
+    { "title": "Readiness", "question": "Are knowledge, data, ownership, measurement, and reversibility adequate?", "fail": "Repair foundations or defer" }
   ],
+  "success": "Score the viable candidate",
   "source": "Off Piste framework informed by NIST AI RMF 1.0, the NIST AI RMF Playbook, Australian Government Guidance for AI Adoption v1.0, and OAIC privacy guidance. Accessed 6 August 2026.",
   "caption": "A weighted total becomes useful after mandatory constraints have been resolved."
 }
@@ -148,7 +148,7 @@ The matrix below is useful for discussing default action after the hard gates. I
 ```insight-visual
 {
   "type": "matrix",
-  "eyebrow": "Portfolio decision",
+  "label": "Portfolio decision",
   "title": "High value earns a pilot when risk is bounded",
   "summary": "The matrix guides discussion after hard gates and doesn't replace them.",
   "xAxis": "Delivery and trust risk increases",

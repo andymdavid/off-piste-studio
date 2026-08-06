@@ -1,7 +1,7 @@
 import { mkdirSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { resolve, basename } from 'path';
 import { marked } from 'marked';
-import { renderInsightVisual } from './render-insight-visual.mjs';
+import { renderInsightModule, renderInsightVisual } from './render-insight-visual.mjs';
 
 const rootDir = resolve('.');
 const contentDir = resolve(rootDir, 'content/insights');
@@ -62,6 +62,7 @@ const renderer = {
   },
   code({ text, lang }) {
     if (lang === 'insight-visual') return renderInsightVisual(text);
+    if (lang === 'insight-module') return renderInsightModule(text);
 
     const languageClass = lang ? ` class="language-${escapeHtml(lang)}"` : '';
     return `<pre><code${languageClass}>${escapeHtml(text)}</code></pre>\n`;
