@@ -48,6 +48,29 @@ export const INSIGHT_POSTS = [
     "url": "/insights/citation-worthy-original-research-business-data"
   },
   {
+    "slug": "third-party-brand-signals-ai-search-audit",
+    "title": "How to Audit Third Party Business Signals",
+    "description": "Audit and correct third party business profiles, listings, reviews, and references with a practical source-of-truth and priority framework.",
+    "intro": "Build one approved business record, find the public sources that contradict it, and correct the signals that matter most to buyers and search platforms.",
+    "date": "2026-08-06",
+    "displayDate": "August 6, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Content Strategy",
+      "Brand Strategy"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "organization-schema-service-business-guide",
+      "google-business-profile-guide"
+    ],
+    "imageAlt": "How to Audit Third Party Business Signals",
+    "url": "/insights/third-party-brand-signals-ai-search-audit"
+  },
+  {
     "slug": "google-ai-mode-query-fan-out-content-planning",
     "title": "How to Plan Content for Google AI Mode Query Fan-Out",
     "description": "Map one complex Google AI Mode research journey into query families, page roles, evidence, internal links and measured content decisions.",
