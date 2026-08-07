@@ -7,6 +7,7 @@ const rootDir = resolve('.');
 const contentDir = resolve(rootDir, 'content/insights');
 const insightsDir = resolve(rootDir, 'insights');
 const generatedDir = resolve(rootDir, 'src/generated');
+const INSIGHT_TOPICS = ['AI & Automation', 'SEO & Search', 'Content & Brand', 'Websites & UX', 'Growth & Leads', 'Small Business'];
 
 function escapeHtml(value) {
   return value
@@ -78,6 +79,14 @@ function renderMarkdown(markdown) {
 function parseListValue(value) {
   if (!value) return [];
   return value.split(',').map(item => item.trim()).filter(Boolean);
+}
+
+function validateTopics(value, slug) {
+  const topics = parseListValue(value);
+  if (topics.length < 1 || topics.length > 2) throw new Error(`${slug} requires one or two topics.`);
+  const invalid = topics.filter(topic => !INSIGHT_TOPICS.includes(topic));
+  if (invalid.length) throw new Error(`${slug} has unsupported topics: ${invalid.join(', ')}.`);
+  return topics;
 }
 
 const headerHtml = `
@@ -157,7 +166,7 @@ function getRelatedPosts(post, allPosts, count = 3) {
 }
 
 function createRelatedPostCardHtml(post) {
-  const tagsHtml = post.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('');
+  const tagsHtml = post.topics.map(topic => `<span>${escapeHtml(topic)}</span>`).join('');
 
   return `<article class="related-posts__card insight-card">
     <a href="/insights/${escapeHtml(post.slug)}" class="insight-card__link" aria-label="Read ${escapeHtml(post.title)}">
@@ -178,7 +187,7 @@ function createRelatedPostCardHtml(post) {
 }
 
 function createArticleHtml(post, allPosts) {
-  const tagsHtml = post.tags.map(tag => `<span>${escapeHtml(tag)}</span>`).join('');
+  const tagsHtml = post.topics.map(topic => `<span>${escapeHtml(topic)}</span>`).join('');
   const updatedDateHtml = post.displayUpdatedDate
     ? ` <span class="insight-article__updated-date">(Updated ${escapeHtml(post.displayUpdatedDate)})</span>`
     : '';
@@ -278,9 +287,10 @@ const posts = readdirSync(contentDir)
   .map(file => {
     const { data, body } = parseFrontmatter(readFileSync(resolve(contentDir, file), 'utf8'));
     const tags = parseListValue(data.tags);
+    const slug = data.slug || basename(file, '.md');
 
     return {
-      slug: data.slug || basename(file, '.md'),
+      slug,
       title: data.title,
       description: data.description,
       intro: data.intro,
@@ -290,6 +300,7 @@ const posts = readdirSync(contentDir)
       displayUpdatedDate: data.updatedDate ? formatDate(data.updatedDate) : undefined,
       readTime: data.readTime,
       tags,
+      topics: validateTopics(data.topics, slug),
       cluster: data.cluster || undefined,
       relatedPosts: parseListValue(data.relatedPosts),
       image: data.image || undefined,
@@ -310,5 +321,5 @@ const clientPosts = posts.map(({ html, ...post }) => ({
 
 writeFileSync(
   resolve(generatedDir, 'insights-data.js'),
-  `export const INSIGHT_POSTS = ${JSON.stringify(clientPosts, null, 2)};\n`
+  `export const INSIGHT_TOPICS = ${JSON.stringify(INSIGHT_TOPICS, null, 2)};\n\nexport const INSIGHT_POSTS = ${JSON.stringify(clientPosts, null, 2)};\n`
 );

@@ -8,6 +8,7 @@ date: 2026-07-31
 updatedDate: 2026-08-02
 readTime: 14 min read
 tags: SEO, Content Strategy, Analytics, Website Design
+topics: SEO & Search, Growth & Leads
 cluster: Search Intent and Decision-Stage Content
 relatedPosts: search-intent-decision-stage-content-guide, how-much-does-a-website-cost, ai-search-citation-worthy-content
 ---

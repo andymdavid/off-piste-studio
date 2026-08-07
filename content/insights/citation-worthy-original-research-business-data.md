@@ -7,6 +7,7 @@ author: Lara
 date: 2026-08-06
 readTime: 16 min read
 tags: SEO, AI, Content Strategy, Original Research, Data
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 relatedPosts: ai-search-citation-worthy-content, website-content-evidence-audit, structured-content-ai-search-guide
 ---

@@ -1,6 +1,6 @@
 // Off Piste Studio - Main JavaScript
 import '../styles/tools.css';
-import { INSIGHT_POSTS } from '../generated/insights-data.js';
+import { INSIGHT_POSTS, INSIGHT_TOPICS } from '../generated/insights-data.js';
 
 // Scale footer brand to fill the horizontal space available to it.
 function scaleFooterBrand() {
@@ -1303,7 +1303,7 @@ function createInsightCard(post, index = 0) {
             <span>${post.readTime}</span>
           </div>
           <div class="insight-card__tags">
-            ${post.tags.map(tag => `<span>${tag}</span>`).join('')}
+            ${post.topics.map(topic => `<span>${topic}</span>`).join('')}
           </div>
         </div>
         <h3 class="insight-card__title">${post.title}</h3>
@@ -1368,13 +1368,8 @@ function initInsightsList() {
   if (!filterSelect) return;
 
   const filters = [
-    { value: 'all', label: 'All insights', tags: [] },
-    { value: 'ai-automation', label: 'AI & Automation', tags: ['AI', 'AI Governance', 'Workflow Automation', 'Internal Systems', 'Knowledge Management', 'CRM'] },
-    { value: 'seo-search', label: 'SEO & Search', tags: ['SEO', 'Technical SEO', 'Analytics', 'Performance', 'Local Business', 'Perth'] },
-    { value: 'content-brand', label: 'Content & Brand', tags: ['Content Strategy', 'Brand Design', 'Brand Voice', 'Business Strategy'] },
-    { value: 'websites-ux', label: 'Websites & UX', tags: ['Website Design', 'User Experience', 'Privacy'] },
-    { value: 'growth-leads', label: 'Growth & Leads', tags: ['Lead Generation', 'Lead Qualification', 'Customer Experience', 'Pricing'] },
-    { value: 'small-business', label: 'Small Business', tags: ['Small Business', 'Trades'] }
+    { value: 'all', label: 'All insights' },
+    ...INSIGHT_TOPICS.map(topic => ({ value: topic, label: topic }))
   ];
 
   filters.forEach(filter => {
@@ -1388,7 +1383,7 @@ function initInsightsList() {
     const selectedFilter = filters.find(filter => filter.value === filterSelect.value) || filters[0];
     const posts = selectedFilter.value === 'all'
       ? INSIGHT_POSTS
-      : INSIGHT_POSTS.filter(post => post.tags.some(tag => selectedFilter.tags.includes(tag)));
+      : INSIGHT_POSTS.filter(post => post.topics.includes(selectedFilter.value));
 
     renderInsightsGrid(insightsList, posts, { limitRows: selectedFilter.value === 'all' });
   });

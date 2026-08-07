@@ -7,6 +7,7 @@ author: Lara
 date: 2026-07-16
 readTime: 12 min read
 tags: SEO, AI, Content Strategy, Website Design
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 subcluster: Entity Trust and Brand Signals
 relatedPosts: google-sge-and-seo, building-your-website-for-llms, ai-search-citation-worthy-content

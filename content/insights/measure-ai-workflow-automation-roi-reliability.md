@@ -7,6 +7,7 @@ author: Lara
 date: 2026-07-27
 readTime: 14 min read
 tags: AI, Workflow Automation, Internal Systems, Business Strategy, AI Governance
+topics: AI & Automation
 cluster: AI Workflow Automation and Internal Systems
 relatedPosts: ai-workflow-automation-business-systems-guide, ai-assisted-content-workflow-expertise-guide, website-redesign-checklist
 ---

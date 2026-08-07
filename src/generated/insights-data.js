@@ -1,3 +1,12 @@
+export const INSIGHT_TOPICS = [
+  "AI & Automation",
+  "SEO & Search",
+  "Content & Brand",
+  "Websites & UX",
+  "Growth & Leads",
+  "Small Business"
+];
+
 export const INSIGHT_POSTS = [
   {
     "slug": "ai-use-case-prioritisation-framework-business",
@@ -13,6 +22,9 @@ export const INSIGHT_POSTS = [
       "Business Strategy",
       "AI Governance",
       "Internal Systems"
+    ],
+    "topics": [
+      "AI & Automation"
     ],
     "cluster": "AI Strategy and Use Case Selection",
     "relatedPosts": [
@@ -38,6 +50,10 @@ export const INSIGHT_POSTS = [
       "Original Research",
       "Data"
     ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "ai-search-citation-worthy-content",
@@ -61,6 +77,10 @@ export const INSIGHT_POSTS = [
       "Content Strategy",
       "Brand Strategy"
     ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "how-ai-search-understands-your-business",
@@ -82,6 +102,10 @@ export const INSIGHT_POSTS = [
       "SEO",
       "AI",
       "Content Strategy"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
@@ -105,6 +129,10 @@ export const INSIGHT_POSTS = [
       "AI",
       "Content Strategy",
       "Technical SEO"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
@@ -130,6 +158,10 @@ export const INSIGHT_POSTS = [
       "Workflow Automation",
       "CRM"
     ],
+    "topics": [
+      "AI & Automation",
+      "Growth & Leads"
+    ],
     "cluster": "AI-Enabled Websites and Lead Journeys",
     "relatedPosts": [
       "ai-workflow-automation-business-systems-guide",
@@ -152,6 +184,10 @@ export const INSIGHT_POSTS = [
       "AI",
       "Content Strategy",
       "Website Design"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
@@ -176,6 +212,9 @@ export const INSIGHT_POSTS = [
       "Internal Systems",
       "AI Governance",
       "Workflow Automation"
+    ],
+    "topics": [
+      "AI & Automation"
     ],
     "cluster": "Knowledge, Data, and Business Memory",
     "relatedPosts": [
@@ -202,6 +241,10 @@ export const INSIGHT_POSTS = [
       "Analytics",
       "Website Design"
     ],
+    "topics": [
+      "SEO & Search",
+      "Growth & Leads"
+    ],
     "cluster": "Search Intent and Decision-Stage Content",
     "relatedPosts": [
       "search-intent-decision-stage-content-guide",
@@ -225,6 +268,10 @@ export const INSIGHT_POSTS = [
       "Technical SEO",
       "Website Design",
       "Content Strategy"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
@@ -250,6 +297,10 @@ export const INSIGHT_POSTS = [
       "Workflow Automation",
       "AI Governance"
     ],
+    "topics": [
+      "AI & Automation",
+      "Growth & Leads"
+    ],
     "cluster": "AI and Customer Experience",
     "relatedPosts": [
       "ai-workflow-automation-business-systems-guide",
@@ -274,6 +325,9 @@ export const INSIGHT_POSTS = [
       "Privacy",
       "Internal Systems"
     ],
+    "topics": [
+      "AI & Automation"
+    ],
     "cluster": "AI Governance, Risk, and Trust",
     "relatedPosts": [
       "ai-workflow-automation-business-systems-guide",
@@ -297,6 +351,9 @@ export const INSIGHT_POSTS = [
       "Internal Systems",
       "Business Strategy",
       "AI Governance"
+    ],
+    "topics": [
+      "AI & Automation"
     ],
     "cluster": "AI Workflow Automation and Internal Systems",
     "relatedPosts": [
@@ -324,6 +381,10 @@ export const INSIGHT_POSTS = [
       "Workflow Automation",
       "Website Design"
     ],
+    "topics": [
+      "Content & Brand",
+      "AI & Automation"
+    ],
     "cluster": "AI Content, Voice, and Expertise",
     "relatedPosts": [
       "ai-search-citation-worthy-content",
@@ -348,6 +409,9 @@ export const INSIGHT_POSTS = [
       "Business Strategy",
       "Website Design"
     ],
+    "topics": [
+      "AI & Automation"
+    ],
     "cluster": "AI Workflow Automation and Internal Systems",
     "relatedPosts": [
       "website-redesign-checklist",
@@ -370,6 +434,10 @@ export const INSIGHT_POSTS = [
       "Content Strategy",
       "AI",
       "Website Design"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Growth & Leads"
     ],
     "cluster": "Search Intent and Decision-Stage Content",
     "relatedPosts": [
@@ -394,6 +462,10 @@ export const INSIGHT_POSTS = [
       "Content Strategy",
       "Technical SEO"
     ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "ai-crawler-access-robots-txt-guide",
@@ -415,6 +487,10 @@ export const INSIGHT_POSTS = [
       "SEO",
       "AI",
       "Content Strategy"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
@@ -439,6 +515,10 @@ export const INSIGHT_POSTS = [
       "Technical SEO",
       "Website Design",
       "Content Strategy"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
@@ -465,6 +545,10 @@ export const INSIGHT_POSTS = [
       "Content Strategy",
       "Website Design"
     ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "google-sge-and-seo",
@@ -487,6 +571,10 @@ export const INSIGHT_POSTS = [
       "AI",
       "Content Strategy",
       "Website Design"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
@@ -511,6 +599,10 @@ export const INSIGHT_POSTS = [
       "Technical SEO",
       "Website Design"
     ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "building-your-website-for-llms",
@@ -534,6 +626,10 @@ export const INSIGHT_POSTS = [
       "SEO",
       "AI"
     ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "building-your-website-for-llms",
@@ -555,6 +651,10 @@ export const INSIGHT_POSTS = [
       "Website Design",
       "Trades"
     ],
+    "topics": [
+      "Small Business",
+      "Websites & UX"
+    ],
     "cluster": "Trades Website Lead Generation",
     "relatedPosts": [],
     "imageAlt": "What Makes a Good Plumber, Electrician, or Builder Website?",
@@ -573,6 +673,10 @@ export const INSIGHT_POSTS = [
       "SEO",
       "Performance"
     ],
+    "topics": [
+      "Websites & UX",
+      "SEO & Search"
+    ],
     "cluster": "Technical Website Foundations",
     "relatedPosts": [],
     "imageAlt": "Website Speed and Why It Matters for Lead Generation",
@@ -589,6 +693,9 @@ export const INSIGHT_POSTS = [
     "tags": [
       "Website Design",
       "Small Business"
+    ],
+    "topics": [
+      "Websites & UX"
     ],
     "cluster": "Commercial Website Strategy",
     "relatedPosts": [],
@@ -607,6 +714,9 @@ export const INSIGHT_POSTS = [
       "SEO",
       "Small Business"
     ],
+    "topics": [
+      "SEO & Search"
+    ],
     "cluster": "Search Strategy",
     "relatedPosts": [],
     "imageAlt": "The Small Business Owner's Guide to SEO in 2026",
@@ -622,6 +732,10 @@ export const INSIGHT_POSTS = [
     "readTime": "13 min read",
     "tags": [
       "SEO",
+      "Small Business"
+    ],
+    "topics": [
+      "SEO & Search",
       "Small Business"
     ],
     "cluster": "Local Search Visibility",
@@ -641,6 +755,10 @@ export const INSIGHT_POSTS = [
       "Website Design",
       "Perth"
     ],
+    "topics": [
+      "Websites & UX",
+      "Small Business"
+    ],
     "cluster": "Website Investment And Selection",
     "relatedPosts": [],
     "imageAlt": "How to Choose a Web Designer in Perth",
@@ -657,6 +775,10 @@ export const INSIGHT_POSTS = [
     "tags": [
       "Website Design",
       "Pricing"
+    ],
+    "topics": [
+      "Websites & UX",
+      "Small Business"
     ],
     "cluster": "Website Investment And Selection",
     "relatedPosts": [],
@@ -675,6 +797,10 @@ export const INSIGHT_POSTS = [
       "SEO",
       "Local Business"
     ],
+    "topics": [
+      "SEO & Search",
+      "Small Business"
+    ],
     "cluster": "Local Search Visibility",
     "relatedPosts": [],
     "imageAlt": "Google Business Profile Optimisation Guide for Local Businesses",
@@ -690,6 +816,10 @@ export const INSIGHT_POSTS = [
     "readTime": "11 min read",
     "tags": [
       "Website Design",
+      "Small Business"
+    ],
+    "topics": [
+      "Websites & UX",
       "Small Business"
     ],
     "cluster": "Website Investment And Selection",
@@ -710,6 +840,10 @@ export const INSIGHT_POSTS = [
       "Trades",
       "Lead Generation"
     ],
+    "topics": [
+      "Small Business",
+      "Websites & UX"
+    ],
     "cluster": "Trades Website Lead Generation",
     "relatedPosts": [],
     "imageAlt": "Best Website Features for Tradies That Actually Get Leads",
@@ -727,6 +861,10 @@ export const INSIGHT_POSTS = [
       "SEO",
       "Website Design",
       "Trades"
+    ],
+    "topics": [
+      "Small Business",
+      "Websites & UX"
     ],
     "cluster": "Trades Website Lead Generation",
     "relatedPosts": [],
@@ -747,6 +885,10 @@ export const INSIGHT_POSTS = [
       "SEO",
       "AI",
       "Website Design"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
@@ -772,6 +914,10 @@ export const INSIGHT_POSTS = [
       "AI",
       "Content Strategy"
     ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "how-to-measure-ai-search-visibility",
@@ -793,6 +939,9 @@ export const INSIGHT_POSTS = [
       "Brand Design",
       "Website Design"
     ],
+    "topics": [
+      "Websites & UX"
+    ],
     "cluster": "Commercial Website Strategy",
     "relatedPosts": [],
     "imageAlt": "How Does Design Impact Revenue?",
@@ -812,6 +961,10 @@ export const INSIGHT_POSTS = [
       "SEO",
       "User Experience",
       "Website Design"
+    ],
+    "topics": [
+      "Websites & UX",
+      "SEO & Search"
     ],
     "cluster": "Technical Website Foundations",
     "relatedPosts": [],

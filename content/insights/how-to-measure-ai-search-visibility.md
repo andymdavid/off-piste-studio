@@ -7,6 +7,7 @@ date: 2026-07-13
 updatedDate: 2026-07-16
 readTime: 13 min read
 tags: SEO, AI
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 relatedPosts: building-your-website-for-llms, google-sge-and-seo, small-business-seo-guide-2026
 ---

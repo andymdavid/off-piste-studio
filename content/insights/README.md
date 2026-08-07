@@ -13,6 +13,7 @@ intro: Intro paragraph shown under the article title
 date: 2026-03-09
 readTime: 6 min read
 tags: SEO, AI
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 ---
 ```
@@ -31,6 +32,8 @@ When provided, `updatedDate` appears subtly beside the original publish date on 
 For scheduled pipeline updates, `updatedDate` should use the publishing timezone date for the run, currently `Australia/Perth`.
 
 When provided, `cluster` is used to choose related posts and strengthen internal linking around the topical map.
+
+`topics` controls the labels shown on article cards and the searchable Insights filters. Every post requires one or two values chosen from `AI & Automation`, `SEO & Search`, `Content & Brand`, `Websites & UX`, `Growth & Leads`, and `Small Business`. Keep granular `tags` for related-post matching; do not display them as filters.
 
 When provided, `relatedPosts` pins specific insight slugs ahead of the automatic cluster and tag matching.
 

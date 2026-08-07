@@ -7,6 +7,7 @@ author: Lara
 date: 2026-07-22
 readTime: 11 min read
 tags: SEO, AI, Content Strategy
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 relatedPosts: how-to-measure-ai-search-visibility, building-your-website-for-llms, google-sge-and-seo
 ---

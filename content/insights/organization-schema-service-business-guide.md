@@ -7,6 +7,7 @@ author: Lara
 date: 2026-07-30
 readTime: 13 min read
 tags: SEO, AI, Technical SEO, Website Design, Content Strategy
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 subcluster: Entity Trust and Brand Signals
 relatedPosts: how-ai-search-understands-your-business, structured-content-ai-search-guide, ai-search-citation-worthy-content

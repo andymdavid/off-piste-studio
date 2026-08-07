@@ -7,6 +7,7 @@ author: Lara
 date: 2026-08-02
 readTime: 14 min read
 tags: SEO, AI, Content Strategy, Website Design
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 relatedPosts: ai-search-citation-worthy-content, structured-content-ai-search-guide, how-to-measure-ai-search-visibility
 ---

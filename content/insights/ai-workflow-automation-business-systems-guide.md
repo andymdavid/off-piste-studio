@@ -7,6 +7,7 @@ author: Lara
 date: 2026-07-24
 readTime: 13 min read
 tags: AI, Workflow Automation, Internal Systems, Business Strategy, Website Design
+topics: AI & Automation
 cluster: AI Workflow Automation and Internal Systems
 relatedPosts: website-redesign-checklist, structured-content-ai-search-guide, building-your-website-for-llms
 ---

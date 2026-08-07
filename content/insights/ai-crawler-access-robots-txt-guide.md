@@ -6,6 +6,7 @@ intro: AI crawler access is now a practical website decision. The useful questio
 date: 2026-07-14
 readTime: 14 min read
 tags: SEO, AI, Technical SEO, Website Design
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 relatedPosts: building-your-website-for-llms, how-to-measure-ai-search-visibility, google-sge-and-seo
 ---

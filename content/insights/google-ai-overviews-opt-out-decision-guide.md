@@ -7,6 +7,7 @@ author: Lara
 date: 2026-08-03
 readTime: 13 min read
 tags: SEO, AI, Content Strategy, Technical SEO
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 relatedPosts: google-sge-and-seo, how-to-measure-ai-search-visibility, ai-crawler-access-robots-txt-guide
 ---

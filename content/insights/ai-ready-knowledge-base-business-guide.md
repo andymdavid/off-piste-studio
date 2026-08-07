@@ -7,6 +7,7 @@ author: Lara
 date: 2026-07-31
 readTime: 15 min read
 tags: AI, Knowledge Management, Internal Systems, AI Governance, Workflow Automation
+topics: AI & Automation
 cluster: Knowledge, Data, and Business Memory
 relatedPosts: ai-workflow-automation-business-systems-guide, ai-governance-policy-checklist-growing-businesses, measure-ai-workflow-automation-roi-reliability
 ---

@@ -7,6 +7,7 @@ date: 2026-03-06
 updatedDate: 2026-07-21
 readTime: 12 min read
 tags: SEO, AI, Content Strategy
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 subcluster: Google Search and AI Overviews
 relatedPosts: how-to-measure-ai-search-visibility, building-your-website-for-llms, ai-search-citation-worthy-content

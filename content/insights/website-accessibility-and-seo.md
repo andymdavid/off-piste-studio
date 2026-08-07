@@ -7,6 +7,7 @@ date: 2026-03-02
 updatedDate: 2026-07-19
 readTime: 10 min read
 tags: SEO, User Experience, Website Design
+topics: Websites & UX, SEO & Search
 cluster: Technical Website Foundations
 ---
 ## Why accessibility and SEO overlap

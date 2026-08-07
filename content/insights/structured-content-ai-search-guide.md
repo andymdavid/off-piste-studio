@@ -7,6 +7,7 @@ author: Lara
 date: 2026-07-19
 readTime: 14 min read
 tags: SEO, AI, Technical SEO, Website Design, Content Strategy
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 relatedPosts: google-sge-and-seo, building-your-website-for-llms, how-ai-search-understands-your-business
 ---

@@ -7,6 +7,7 @@ author: Lara
 date: 2026-08-06
 readTime: 15 min read
 tags: AI, AI Strategy, Business Strategy, AI Governance, Internal Systems
+topics: AI & Automation
 cluster: AI Strategy and Use Case Selection
 relatedPosts: ai-workflow-automation-business-systems-guide, ai-governance-policy-checklist-growing-businesses, ai-ready-knowledge-base-business-guide
 ---

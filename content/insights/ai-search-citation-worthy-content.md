@@ -8,6 +8,7 @@ date: 2026-07-16
 updatedDate: 2026-08-02
 readTime: 12 min read
 tags: SEO, AI, Content Strategy, Website Design
+topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 relatedPosts: google-sge-and-seo, building-your-website-for-llms, how-to-measure-ai-search-visibility
 ---

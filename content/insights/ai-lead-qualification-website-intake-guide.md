@@ -7,6 +7,7 @@ author: Lara
 date: 2026-08-02
 readTime: 15 min read
 tags: AI, Website Design, Lead Qualification, Workflow Automation, CRM
+topics: AI & Automation, Growth & Leads
 cluster: AI-Enabled Websites and Lead Journeys
 relatedPosts: ai-workflow-automation-business-systems-guide, ai-customer-experience-human-handoff-guide, ai-ready-knowledge-base-business-guide
 ---
