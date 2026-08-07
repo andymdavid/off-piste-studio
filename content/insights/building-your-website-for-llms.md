@@ -4,7 +4,7 @@ slug: building-your-website-for-llms
 description: How to make your website easier for AI search tools to understand, from crawlability and structured content to crawler access, schema, llms.txt, and measurement.
 intro: AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.
 date: 2026-03-08
-updatedDate: 2026-07-19
+updatedDate: 2026-08-08
 readTime: 15 min read
 tags: SEO, AI, Website Design
 topics: SEO & Search, AI & Automation
@@ -50,7 +50,7 @@ Before adding support files, decide what AI systems may access and why. Differen
 
 OpenAI separates `OAI-SearchBot` for ChatGPT search, `GPTBot` for training-related crawling, and `ChatGPT-User` for user-triggered actions. Its crawler documentation gives each crawler separate robots.txt handling ([OpenAI](https://developers.openai.com/api/docs/bots)).
 
-Perplexity makes a similar distinction. `PerplexityBot` supports website surfacing in Perplexity search results, while `Perplexity-User` handles user-triggered fetches. Perplexity also recommends using its current published IP ranges when teams manage access through a WAF or firewall ([Perplexity](https://docs.perplexity.ai/docs/resources/perplexity-crawlers)).
+Perplexity makes a similar distinction. `PerplexityBot` supports website surfacing in Perplexity search results, while `Perplexity-User` handles user-triggered fetches. [Perplexity's crawler documentation](https://docs.perplexity.ai/docs/resources/perplexity-crawlers) also recommends using its current published IP ranges when teams manage access through a WAF or firewall. The [Perplexity search visibility guide](/insights/perplexity-search-visibility-business-guide) turns that platform-specific access check into a wider diagnosis of absence, inaccurate representation, weak citations, and poor commercial outcomes.
 
 Infrastructure teams now have more operational tooling for this. Cloudflare's AI Crawl Control lets site owners monitor AI crawler activity, set crawler-level allow or block rules, monitor robots.txt compliance, and explore pay-per-crawl options ([Cloudflare](https://developers.cloudflare.com/ai-crawl-control/)).
 

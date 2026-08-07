@@ -5,6 +5,7 @@ description: Improve ChatGPT Search visibility with crawler access, clear source
 intro: ChatGPT Search visibility improves when your public pages can be reached, your business is easy to identify, your proof is specific, and your prompts are measured against the way buyers actually ask for help.
 author: Lara
 date: 2026-07-23
+updatedDate: 2026-08-08
 readTime: 12 min read
 tags: SEO, AI, Content Strategy, Technical SEO
 topics: SEO & Search, AI & Automation
@@ -55,7 +56,7 @@ For a service business, the first access check is practical.
 
 If you want the full access-control workflow, use the [AI crawler access and robots.txt guide](/insights/ai-crawler-access-robots-txt-guide). This article only needs the first decision: can the system reach the pages that should help a buyer understand the business?
 
-Other answer engines show why platform-specific checks matter. Perplexity documents `PerplexityBot` for surfacing and linking websites in search results, with separate user-triggered access patterns in its [crawler documentation](https://docs.perplexity.ai/docs/resources/perplexity-crawlers). That's a comparison point, not proof of how ChatGPT ranks anything. It supports the operational rule that AI visibility work needs named crawler checks.
+Other answer engines show why platform-specific checks matter. Perplexity documents `PerplexityBot` for surfacing and linking websites in search results, with separate user-triggered access patterns in its [crawler documentation](https://docs.perplexity.ai/docs/resources/perplexity-crawlers). That's a comparison point, not proof of how ChatGPT ranks anything. Use the [Perplexity search visibility diagnostic](/insights/perplexity-search-visibility-business-guide) when that platform is the actual problem. AI visibility work needs named crawler checks.
 
 ## Step 2: make the business easy to identify
 

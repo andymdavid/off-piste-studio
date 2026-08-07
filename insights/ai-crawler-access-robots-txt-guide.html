@@ -19,7 +19,7 @@
         "headline": "AI Crawler Access and Robots.txt Guide for Business Websites",
         "description": "A practical guide to AI crawler access, robots.txt, WAF rules, CDN logs, and validation checks for business websites.",
         "datePublished": "2026-07-14",
-        "dateModified": "2026-07-14",
+        "dateModified": "2026-08-08",
         "author": { "@type": "Person", "name": "Lara" },
         "publisher": {
           "@type": "Organization",
@@ -83,7 +83,7 @@
           <p class="insight-article__intro">AI crawler access is now a practical website decision. The useful question is which crawler does which job, what your business wants from that access, and how to check that robots.txt, CDN settings, WAF rules, and logs all tell the same story.</p>
         </div></section>
         <section class="insight-article__byline"><div class="insight-article__byline-inner">
-          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">July 14, 2026</p></div></div>
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">July 14, 2026 <span class="insight-article__updated-date">(Updated August 8, 2026)</span></p></div></div>
           <div class="insight-article__share">
             <p class="insight-article__share-label">Share</p>
             <div class="insight-article__share-buttons">
@@ -101,7 +101,7 @@
 <p>Crawler access also sits inside a wider set of <a href="/insights/building-your-website-for-llms">AI-ready website foundations</a>. A page still needs clear content, crawlable HTML, useful internal links, accessible structure, current evidence, and strong service language. Access can make retrieval possible. Citation, ranking, recommendation, traffic, and leads still depend on relevance, evidence, and trust.</p>
 <h2 class="insight-article__section-title">Search crawlers, training crawlers, and user-triggered fetchers do different jobs</h2>
 <p>OpenAI&#39;s crawler documentation separates <code>OAI-SearchBot</code>, <code>GPTBot</code>, and <code>ChatGPT-User</code>. <code>OAI-SearchBot</code> is used for search products. <code>GPTBot</code> is used for training-related crawling. <code>ChatGPT-User</code> supports certain user actions in ChatGPT and Custom GPTs, and OpenAI says it is not used for automatic web crawling or to determine whether content may appear in Search. OpenAI also says site owners should use <code>OAI-SearchBot</code> in robots.txt for managing Search opt-outs and automatic crawl, while user-triggered <code>ChatGPT-User</code> requests may not follow robots.txt in the same way because they are initiated by a user. Those distinctions come from the current <a href="https://developers.openai.com/api/docs/bots">OpenAI crawler documentation</a>, checked on 14 July 2026.</p>
-<p>Perplexity makes a similar split. <code>PerplexityBot</code> supports surfacing websites in Perplexity search results. <code>Perplexity-User</code> supports user actions inside Perplexity and is not used for web crawling or training. Perplexity also publishes IP address sources and says WAF configurations should use the current official endpoints as the source of truth. That guidance is in the current <a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers">Perplexity crawler documentation</a>, checked on 14 July 2026.</p>
+<p>Perplexity makes a similar split. <code>PerplexityBot</code> supports surfacing websites in Perplexity search results. <code>Perplexity-User</code> supports user actions inside Perplexity and is not used for web crawling or training. Perplexity also publishes IP address sources and says WAF configurations should use the current official endpoints as the source of truth. That guidance is in the current <a href="https://docs.perplexity.ai/docs/resources/perplexity-crawlers">Perplexity crawler documentation</a>, rechecked on 8 August 2026. If access works but the business is still absent or represented poorly, continue with the <a href="/insights/perplexity-search-visibility-business-guide">Perplexity search visibility diagnostic</a>.</p>
 <p>These differences matter commercially. A business that blocks all AI user agents may also block the fetchers that answer a buyer&#39;s live question. A business that allows everything without a policy may permit training access it never intended. A clean robots.txt file can also be undermined by a WAF rule that blocks the same crawler at the infrastructure layer.</p>
 <h2 class="insight-article__section-title">Google AI visibility still starts with normal Search eligibility</h2>
 <p>Google needs separate handling because Google AI Overviews and AI Mode are part of Google Search.</p>
@@ -224,8 +224,7 @@ Disallow: /
 
 # Default rule for other crawlers
 User-agent: *
-Allow: /
-</code></pre>
+Allow: /</code></pre>
 <p>The example separates search visibility, training access, user-triggered retrieval, and Google AI product controls. A different business could make different choices.</p>
 <p>Robots.txt is a directive for crawlers that choose to comply. Private content still needs authentication. AI answer inclusion still depends on the system&#39;s judgement. Weak pages, missing proof, confusing service language, inaccessible content, and thin internal links still need content and technical work.</p>
 <p>For content to be useful after access is granted, the page still needs <a href="/insights/website-accessibility-and-seo">crawlable and machine-readable website structure</a>. Clean HTML, logical headings, descriptive links, and text-based evidence make the crawler access decision worth something.</p>

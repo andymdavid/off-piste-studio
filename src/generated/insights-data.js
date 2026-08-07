@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "perplexity-search-visibility-business-guide",
+    "title": "Improving Perplexity Search Visibility for Service Businesses",
+    "description": "A practical diagnosis for service businesses that are absent, inaccurately represented, or weakly cited in Perplexity search.",
+    "intro": "Perplexity search visibility starts with a clear diagnosis. Check whether the right pages are accessible, the business is represented accurately, the cited evidence is useful, and any resulting visit has a sensible next step.",
+    "date": "2026-08-08",
+    "displayDate": "August 8, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Perplexity",
+      "AI Search",
+      "SEO",
+      "Technical SEO",
+      "Content Strategy",
+      "Service Businesses"
+    ],
+    "topics": [
+      "AI & Automation",
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "ai-crawler-access-robots-txt-guide",
+      "how-ai-search-understands-your-business",
+      "how-to-measure-ai-search-visibility"
+    ],
+    "imageAlt": "Improving Perplexity Search Visibility for Service Businesses",
+    "url": "/insights/perplexity-search-visibility-business-guide"
+  },
+  {
     "slug": "ai-use-case-prioritisation-framework-business",
     "title": "A Practical Framework for Prioritising Business AI Use Cases",
     "description": "A practical framework for comparing AI use cases, screening risk and readiness, and choosing the right first pilot for your business.",
@@ -455,6 +484,8 @@ export const INSIGHT_POSTS = [
     "intro": "ChatGPT Search visibility improves when your public pages can be reached, your business is easy to identify, your proof is specific, and your prompts are measured against the way buyers actually ask for help.",
     "date": "2026-07-23",
     "displayDate": "July 23, 2026",
+    "updatedDate": "2026-08-08",
+    "displayUpdatedDate": "August 8, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
@@ -592,6 +623,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI crawler access is now a practical website decision. The useful question is which crawler does which job, what your business wants from that access, and how to check that robots.txt, CDN settings, WAF rules, and logs all tell the same story.",
     "date": "2026-07-14",
     "displayDate": "July 14, 2026",
+    "updatedDate": "2026-08-08",
+    "displayUpdatedDate": "August 8, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -619,8 +652,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
     "date": "2026-07-13",
     "displayDate": "July 13, 2026",
-    "updatedDate": "2026-07-16",
-    "displayUpdatedDate": "July 16, 2026",
+    "updatedDate": "2026-08-08",
+    "displayUpdatedDate": "August 8, 2026",
     "readTime": "13 min read",
     "tags": [
       "SEO",
@@ -878,8 +911,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI tools now summarise, cite, and recommend businesses from the evidence they can find online. Your website has to be clear enough for people to trust and structured enough for search systems, answer engines, and assistants to understand without guessing.",
     "date": "2026-03-08",
     "displayDate": "March 8, 2026",
-    "updatedDate": "2026-07-19",
-    "displayUpdatedDate": "July 19, 2026",
+    "updatedDate": "2026-08-08",
+    "displayUpdatedDate": "August 8, 2026",
     "readTime": "15 min read",
     "tags": [
       "SEO",

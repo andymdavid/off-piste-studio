@@ -4,7 +4,7 @@ slug: how-to-measure-ai-search-visibility
 description: A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.
 intro: AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.
 date: 2026-07-13
-updatedDate: 2026-07-16
+updatedDate: 2026-08-08
 readTime: 13 min read
 tags: SEO, AI
 topics: SEO & Search, AI & Automation
@@ -57,7 +57,7 @@ Use six groups.
 | Diagnostic | "Why is my [problem] not converting leads?" | Whether your expertise is connected to the problem |
 | Proof-seeking | "Show examples of [business] work or results" | Case studies, reviews, cited sources |
 
-Run each prompt across the platforms that matter for your buyers. For some businesses that means ChatGPT, Perplexity, Google AI Overviews, AI Mode, and Microsoft Copilot. For others, Google plus one answer engine is enough.
+Run each prompt across the platforms that matter for your buyers. For some businesses that means ChatGPT, Perplexity, Google AI Overviews, AI Mode, and Microsoft Copilot. For others, Google plus one answer engine is enough. When Perplexity is the problem surface, use the [Perplexity-specific visibility diagnostic](/insights/perplexity-search-visibility-business-guide) before expanding the measurement programme.
 
 Test more than the brand name. Branded prompts show whether the system understands you. Unbranded and comparison prompts show whether it considers you before the buyer has chosen you.
 

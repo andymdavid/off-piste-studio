@@ -4,6 +4,7 @@ slug: ai-crawler-access-robots-txt-guide
 description: A practical guide to AI crawler access, robots.txt, WAF rules, CDN logs, and validation checks for business websites.
 intro: AI crawler access is now a practical website decision. The useful question is which crawler does which job, what your business wants from that access, and how to check that robots.txt, CDN settings, WAF rules, and logs all tell the same story.
 date: 2026-07-14
+updatedDate: 2026-08-08
 readTime: 14 min read
 tags: SEO, AI, Technical SEO, Website Design
 topics: SEO & Search, AI & Automation
@@ -24,7 +25,7 @@ Crawler access also sits inside a wider set of [AI-ready website foundations](/i
 
 OpenAI's crawler documentation separates `OAI-SearchBot`, `GPTBot`, and `ChatGPT-User`. `OAI-SearchBot` is used for search products. `GPTBot` is used for training-related crawling. `ChatGPT-User` supports certain user actions in ChatGPT and Custom GPTs, and OpenAI says it is not used for automatic web crawling or to determine whether content may appear in Search. OpenAI also says site owners should use `OAI-SearchBot` in robots.txt for managing Search opt-outs and automatic crawl, while user-triggered `ChatGPT-User` requests may not follow robots.txt in the same way because they are initiated by a user. Those distinctions come from the current [OpenAI crawler documentation](https://developers.openai.com/api/docs/bots), checked on 14 July 2026.
 
-Perplexity makes a similar split. `PerplexityBot` supports surfacing websites in Perplexity search results. `Perplexity-User` supports user actions inside Perplexity and is not used for web crawling or training. Perplexity also publishes IP address sources and says WAF configurations should use the current official endpoints as the source of truth. That guidance is in the current [Perplexity crawler documentation](https://docs.perplexity.ai/docs/resources/perplexity-crawlers), checked on 14 July 2026.
+Perplexity makes a similar split. `PerplexityBot` supports surfacing websites in Perplexity search results. `Perplexity-User` supports user actions inside Perplexity and is not used for web crawling or training. Perplexity also publishes IP address sources and says WAF configurations should use the current official endpoints as the source of truth. That guidance is in the current [Perplexity crawler documentation](https://docs.perplexity.ai/docs/resources/perplexity-crawlers), rechecked on 8 August 2026. If access works but the business is still absent or represented poorly, continue with the [Perplexity search visibility diagnostic](/insights/perplexity-search-visibility-business-guide).
 
 These differences matter commercially. A business that blocks all AI user agents may also block the fetchers that answer a buyer's live question. A business that allows everything without a policy may permit training access it never intended. A clean robots.txt file can also be undermined by a WAF rule that blocks the same crawler at the infrastructure layer.
 
