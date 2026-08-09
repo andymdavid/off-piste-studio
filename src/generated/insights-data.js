@@ -820,14 +820,18 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "google-business-profile-guide",
-    "title": "Google Business Profile Optimisation Guide for Local Businesses",
-    "description": "How to optimise your Google Business Profile for local search. Covers setup, categories, photos, reviews, posts, and how GBP works with your website.",
-    "intro": "Your Google Business Profile is often the first thing a potential customer sees. For local businesses, it can drive more enquiries than the website itself. This guide covers how to set it up properly, optimise it for local search, and avoid the mistakes that cost visibility.",
+    "title": "Google Business Profile Optimisation for Local Visibility",
+    "description": "A practical, evidence-led guide to Google Business Profile eligibility, categories, service areas, reviews, posts, website alignment, and measurement.",
+    "intro": "A useful Google Business Profile makes your business easier to understand and easier to choose. This guide shows local businesses what to fix first, what Google documents, and how to measure the profile through customer actions.",
     "date": "2026-03-16",
     "displayDate": "March 16, 2026",
-    "readTime": "12 min read",
+    "updatedDate": "2026-08-09",
+    "displayUpdatedDate": "August 9, 2026",
+    "readTime": "13 min read",
     "tags": [
       "SEO",
+      "Local SEO",
+      "Google Business Profile",
       "Local Business"
     ],
     "topics": [
@@ -835,8 +839,12 @@ export const INSIGHT_POSTS = [
       "Small Business"
     ],
     "cluster": "Local Search Visibility",
-    "relatedPosts": [],
-    "imageAlt": "Google Business Profile Optimisation Guide for Local Businesses",
+    "relatedPosts": [
+      "how-to-get-on-first-page-of-google",
+      "third-party-brand-signals-ai-search-audit",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "Google Business Profile Optimisation for Local Visibility",
     "url": "/insights/google-business-profile-guide"
   },
   {

@@ -1,134 +1,143 @@
 ---
-title: Google Business Profile Optimisation Guide for Local Businesses
+title: Google Business Profile Optimisation for Local Visibility
 slug: google-business-profile-guide
-description: How to optimise your Google Business Profile for local search. Covers setup, categories, photos, reviews, posts, and how GBP works with your website.
-intro: Your Google Business Profile is often the first thing a potential customer sees. For local businesses, it can drive more enquiries than the website itself. This guide covers how to set it up properly, optimise it for local search, and avoid the mistakes that cost visibility.
+description: A practical, evidence-led guide to Google Business Profile eligibility, categories, service areas, reviews, posts, website alignment, and measurement.
+intro: A useful Google Business Profile makes your business easier to understand and easier to choose. This guide shows local businesses what to fix first, what Google documents, and how to measure the profile through customer actions.
+author: Lara
 date: 2026-03-16
-readTime: 12 min read
-tags: SEO, Local Business
+updatedDate: 2026-08-09
+readTime: 13 min read
+tags: SEO, Local SEO, Google Business Profile, Local Business
 topics: SEO & Search, Small Business
 cluster: Local Search Visibility
+subcluster: Local Search and Google Business Profile
+relatedPosts: how-to-get-on-first-page-of-google, third-party-brand-signals-ai-search-audit, organization-schema-service-business-guide
 ---
-## Why your Google Business Profile matters more than you think
+<!--
+Source check record, 9 August 2026 AWST:
+- Checked Google Business Profile guidance for local ranking, business representation, service areas, posts, and performance.
+- Checked Google Maps fake engagement policy, ACCC online review guidance, and Google Search Central structured-data guidance.
+- Profile fields, verification options, policies, and performance metrics can change. Recheck the linked primary sources before a future material refresh.
+-->
+## A useful profile works within local search
 
-For most local businesses, Google Business Profile is the single most important digital asset after the website itself. When someone searches for a service in their area, the map pack appears above the organic results. That map pack is powered by Google Business Profile listings.
+Google Business Profile can help a nearby customer understand what you do, where you operate, and whether your business looks credible enough to contact. It can't guarantee a place in the map pack, and it can't make geography irrelevant.
 
-The businesses that appear in that top three get the calls. The ones that do not get overlooked, regardless of how good their website is or how long they have been operating.
+Google says its local results are mainly based on [relevance, distance, and prominence](https://support.google.com/business/answer/7091). Relevance is how well a profile matches the search. Distance considers how far the business is from the location used in the search. Prominence reflects how well known the business is, with Google citing factors such as links, articles, directories, and review information.
 
-This is especially true for service-based industries. When a homeowner searches for a [plumber](/industries/plumbers) or an [electrician](/industries/electricians), the map pack is where most clicks happen. The searcher sees a name, a star rating, a distance, and maybe a photo. That is the entire decision-making window for a large portion of local searches.
+You can make the profile accurate and specific, build genuine customer proof, and support it with a useful website. The searcher's location remains fixed, so no responsible provider can promise a particular local position. Focus on clearer visibility for relevant searches and a better decision experience when the profile appears. Qualified calls, website visits, bookings, and direction requests show whether that visibility produces business value.
 
-Getting this right is not complicated, but it does require attention to detail. Most businesses set up their profile once and never touch it again. That is a missed opportunity.
+## Confirm eligibility before optimising fields
 
-## Setting up your profile correctly
+Optimisation starts with representing a real, eligible business correctly. Google's [guidelines for representing a business](https://support.google.com/business/answer/3038177) say the profile should reflect the business as it is known in the real world. Use the real business name shown on signage, stationery, and other branding. Adding services, locations, or marketing claims to the name can create policy risk if those words aren't part of the genuine name.
 
-If you have not already claimed your Google Business Profile, that is the first step. Go to business.google.com and follow the verification process. Google will typically verify your business via postcard, phone, or email depending on the category.
+Under the same [business representation guidelines](https://support.google.com/business/answer/3038177), Google generally permits one profile per business or location. Separate practitioners and departments have additional conditions, so check the applicable policy before creating another listing. Virtual offices and addresses where the business has no genuine customer-facing presence aren't a shortcut to more coverage.
 
-Once verified, the setup decisions you make have a direct impact on how and where you appear in search.
+Claim the existing profile where one already exists instead of making a duplicate. Complete the verification process Google offers for that business. Available methods vary, and Google determines which options appear, so don't plan around receiving verification by a particular channel.
 
-### Business name
+Before changing anything, record the current profile name, ownership, category, address or service area, phone number, website, hours, and verification state. This gives you a clean baseline and reduces the chance that a well-meant edit creates a larger problem.
 
-Use your actual registered business name. Do not stuff keywords into it. Google penalises profiles that add descriptors like "Best Plumber Perth" or "Affordable Dentist Melbourne" to their business name. It might seem like a shortcut, but it risks suspension.
+## Choose categories and services for accurate relevance
 
-### Primary category
+The primary category should be the most specific available category that accurately describes the core business. A plumbing business should choose the closest genuine plumbing category, not a broad category chosen because it appears to cover more searches.
 
-This is the single most important field in your profile. Your primary category tells Google what your business is, and it is the strongest signal for which searches trigger your listing.
+Google advises businesses to use [as few categories as needed to describe the core business](https://support.google.com/business/answer/3038177). Additional categories are useful when they represent another meaningful part of the operation. They aren't a place to list every individual service or a neighbouring trade the business sometimes coordinates.
 
-Choose the most specific category available. If you are a residential electrician, "Electrician" is better than "Contractor." If you are a cosmetic dentist, "Cosmetic Dentist" is better than "Dentist." Google offers hundreds of categories, so take the time to find the one that best matches your core service.
+Use the services field, business description, hours, contact routes, and other applicable fields to make the offer easier to understand. Complete information can help Google match a business with relevant searches, according to its [local ranking guidance](https://support.google.com/business/answer/7091). It also prevents customers from having to guess whether you provide the service they need.
 
-### Secondary categories
+Treat wording as public information, not as a container for repeated keywords. Describe the work in the language customers recognise, keep claims specific, and make sure important details agree with what the website and team can substantiate.
 
-You can add up to nine additional categories. Use these to cover other services you offer, but do not add categories that are only tangentially related. A plumber who also does gas fitting should add "Gas Fitter." A plumber adding "Bathroom Renovation" is reasonable. A plumber adding "Home Builder" is a stretch that dilutes relevance.
+## Configure storefront and service areas correctly
 
-### Service area
+A storefront serves customers at its business address during stated hours. A service-area business travels to customers and doesn't receive them at its address. A hybrid business does both. The correct setup follows the way the business actually operates.
 
-If you travel to customers rather than having them come to you, set up your profile as a service-area business. Define the suburbs or regions you cover. Be honest about your actual service area rather than trying to cover the entire city. Google is increasingly good at detecting when a business claims a service area it does not genuinely serve.
+If customers don't visit your address, Google's [service-area guidance](https://support.google.com/business/answer/9157481) says to remove the address from public display and configure service areas instead. A hybrid business can show its staffed customer-facing address and define the areas it serves. A location shouldn't be presented as a storefront merely to gain a map point.
 
-## Photos that actually help
+The [service-area rules](https://support.google.com/business/answer/9157481) allow up to 20 service areas and advise that the overall boundary should generally remain within about two hours' driving time from the business base. Service areas help customers understand coverage, but adding distant suburbs doesn't overcome distance in local ranking.
 
-Businesses with photos on their profile receive significantly more engagement than those without. But not all photos are equal.
+For a business with several real branches, assess each location against Google's eligibility rules before creating profiles. Each profile should correspond to a genuine operation, not an attempt to manufacture local presence.
 
-The photos that matter most are the ones that help a potential customer understand what it is like to work with you. Completed projects, your team at work, your premises if customers visit, and your vehicles or equipment if relevant.
+## Make the profile complete enough to support a decision
 
-Stock photos do nothing. Blurry phone shots do very little. Invest in a set of decent photos that show real work and real people. Update them regularly. Google rewards profiles that are actively maintained with photos, and customers notice when the most recent photo is three years old.
+A complete profile should answer the practical questions a customer has before making contact. Is the business open? Does it offer the required service? Does it work in the customer's area? Is there a suitable way to call, book, or visit? Do the photos and reviews show a credible operation?
 
-For businesses like [dentists](/industries/dentists) and [lawyers](/industries/lawyers), where the environment matters to the customer's comfort level, interior photos of the practice or office can directly influence whether someone books an appointment or keeps scrolling.
+Keep regular and special hours current. Select relevant attributes that accurately describe access, ownership, facilities, or service options where Google makes them available. Check that the phone number and website reach the right destination.
 
-### Photo specifications
+Use real photos that reduce uncertainty. Depending on the business, that might include the premises, team, completed work, vehicles, equipment, or the customer environment. Photos can help someone assess the business, and Google's [local ranking guidance](https://support.google.com/business/answer/7091) recommends adding them. Google doesn't state that frequent uploads create a direct ranking boost, so add an image when it makes the profile more useful, not to simulate activity.
 
-Upload photos at a minimum of 720 pixels wide. Use real images, not graphics or logos in the photo section. Your logo belongs in the designated logo field. Cover photos should represent your business clearly at a glance. Google may choose which photo to display prominently, but having a strong set gives it better options.
+Avoid stock imagery that could misrepresent the work and don't publish customer, property, or project images without the appropriate permission. Accuracy and trust are more valuable than volume.
 
-## The review strategy
+## Build a review process customers can trust
 
-Reviews are the second most important ranking factor for local search, after relevance. They also directly influence click-through rates. A business with 4.8 stars and 200 reviews will get chosen over a business with 5 stars and 3 reviews almost every time.
+Reviews give prospective customers evidence from people who have used the business. Google's [local ranking guidance](https://support.google.com/business/answer/7091) says more reviews and positive ratings can help local ranking, but that doesn't make review count, response speed, or review velocity a guaranteed formula.
 
-### How to get more reviews
+Ask customers through a consistent, neutral process. A direct review link sent after the relevant experience can remove friction. The request should allow an honest response and should go to customers on the same basis, rather than only to people expected to leave a favourable rating.
 
-The most effective approach is the simplest one. Ask every satisfied customer to leave a review, and make it easy for them.
+Google Maps requires contributions to reflect genuine experiences and prohibits [fake engagement, incentives, selective solicitation, and rating manipulation](https://support.google.com/contributionpolicy/answer/7400114). Don't buy reviews, ask staff or connected parties to pose as customers, offer a reward for a positive rating, or discourage dissatisfied customers from using the same review route.
 
-Create a direct review link from your Google Business Profile and share it via text message, email, or a printed card after completing a job. The fewer steps between the request and the review form, the higher the completion rate.
+Australian businesses also need to consider the [ACCC's guidance on online reviews](https://www.accc.gov.au/consumers/advertising-and-promotions/online-reviews-for-product-and-services). Fake or misleading reviews can breach Australian Consumer Law. Incentives and the selective presentation of reviews can also mislead consumers when the conditions or selection aren't made clear.
 
-Timing matters. Ask when the customer is most satisfied, which is usually right after a job is completed successfully or a positive outcome is delivered. Do not wait a week. The impulse to leave a review fades quickly.
+Respond when a reply will help. Thank customers without exposing personal details. For criticism, acknowledge the issue calmly, correct material inaccuracies where appropriate, and move account-specific resolution to a private channel. A professional response can help a reader judge the business, but it shouldn't be described as a confirmed ranking tactic.
 
-### How to handle negative reviews
+## Use posts to communicate current information
 
-Respond to every negative review promptly, professionally, and without defensiveness. Acknowledge the concern, offer to resolve it offline, and keep the response brief. Potential customers read negative reviews, but they also read how the business responds. A calm, professional reply to a complaint often builds more trust than the complaint erodes.
+Business Profile posts are a customer communication tool. Google currently supports [update, offer, and event posts](https://support.google.com/business/answer/7342169). They can carry timely information, explain an offer, announce an event, or direct a customer to a relevant page.
 
-Never argue publicly. Never offer incentives for review removal. Never create fake positive reviews to bury negative ones. Google is increasingly sophisticated at detecting manipulation, and the penalties are severe.
+Standard posts don't expire after seven days. Google's [post management guidance](https://support.google.com/business/answer/7342169) says posts older than six months are archived unless a date range has been set. Offers and events should use accurate dates and terms so customers can understand when they apply.
 
-## Google Posts: the underused feature
+Publish when there is something useful to communicate. A seasonal hours reminder, a new service, a current offer, or a relevant project update can earn attention. There is no documented basis for promising that weekly posting itself improves ranking.
 
-Google Posts allow you to publish short updates directly on your profile. They appear in your listing and give you another way to communicate with people who find you in search.
+## Give guidance and hypotheses different weight
 
-Most local businesses ignore this feature entirely, which means using it gives you an edge.
+Local search advice often mixes Google's public guidance with observations from practitioners. Both can inform testing, but they carry different levels of certainty.
 
-Effective post types include project completions with photos, seasonal offers, business updates, and short tips relevant to your industry. Posts expire after seven days for standard posts, so consistency matters. Publishing one post per week keeps the profile active and signals to Google that the business is engaged.
+| Google guidance | Practitioner hypotheses |
+| --- | --- |
+| Represent the real business accurately | Publishing a post every week boosts rank |
+| Complete applicable information and verify the profile | Uploading fresh photos on a schedule boosts rank |
+| Choose specific categories that describe the core business | Matching every address abbreviation exactly boosts rank |
+| Use genuine reviews and follow contribution policy | Responding to every review boosts rank |
+| Keep customer-facing facts current | Adding schema directly lifts the profile's position |
 
-Posts are also a good place to link back to specific pages on your website. If you have a new case study or service page, a Google Post can drive qualified traffic directly to it.
+Posts, photos, responses, and structured data can each serve a customer, operational, or website role. Give each task a clear purpose and measure its outcome before treating it as a ranking tactic.
 
-## Common mistakes that cost visibility
+## Connect the profile with website proof
 
-### Inconsistent business information
+The profile gives a customer a concise view of the business. The website has room to substantiate the services, locations, expertise, process, and reasons to enquire. When someone clicks through, the landing page should continue the same story and make the next action clear.
 
-Your business name, address, and phone number need to be identical everywhere they appear online. Your website, your Google Business Profile, your directory listings, and your social profiles should all match exactly. Inconsistencies confuse Google and weaken your local search signals.
+Use relevant service or location pages as the profile destination where the feature permits it and where the page genuinely matches the action. For the wider relationship between local listings, service pages, technical health, and authority, use the [first-page Google guide](/insights/how-to-get-on-first-page-of-google).
 
-This includes formatting. If your address is "Suite 4, 120 St Georges Terrace" on your website, it should not be "Ste 4, 120 St Georges Tce" on your GBP. Consistency down to the abbreviation level matters.
+Core business facts should be materially consistent across the profile, website, directories, and other trusted sources. That means they should identify the same business and not contradict each other. It doesn't mean every source must use identical address abbreviations. If ownership, names, locations, or contact details have drifted across platforms, work through the [third-party business signals audit](/insights/third-party-brand-signals-ai-search-audit).
 
-### Ignoring the Q&A section
+Structured data can help Google understand the content of a page, but Google's [structured-data guidance](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data) says it must describe visible content and doesn't guarantee a rich result or another Search feature. Google doesn't document LocalBusiness schema as a direct Business Profile ranking lift. The [organisation schema guide](/insights/organization-schema-service-business-guide) covers implementation when structured representation is the actual task.
 
-Anyone can ask a question on your Google Business Profile, and anyone can answer. If you are not monitoring this, strangers may be answering questions about your business inaccurately. Check it regularly and answer questions yourself with accurate, helpful information.
+## Measure customer actions and maintain material facts
 
-### Not using attributes
+Maintenance should follow real business changes and customer needs. Update hours, services, closures, address details, and contact information as soon as the underlying fact changes. Review policy alerts, customer questions, and reviews often enough to keep the public record accurate.
 
-Google offers business attributes like "Women-owned," "Wheelchair accessible," and various service-specific options. These appear on your profile and can influence whether someone chooses your business. Fill in every relevant attribute.
+Google's [Business Profile performance guidance](https://support.google.com/business/answer/9918094) describes metrics that can include the searches used to find the profile, views, calls, website clicks, directions, bookings, and other interactions. Availability depends on the profile and feature. Definitions and attribution windows vary, so don't add unlike metrics together or treat every action as a confirmed lead.
 
-### Setting and forgetting business hours
+The useful operating rhythm separates urgent factual maintenance from slower performance interpretation.
 
-Incorrect business hours are one of the most common complaints in local search. If your hours change seasonally, update them. If you have special holiday hours, set them in advance. A customer who drives to a business listed as open and finds it closed is unlikely to return.
+```insight-module
+{
+  "type": "practice",
+  "label": "In practice",
+  "title": "Maintain facts when they change and review outcomes monthly",
+  "intro": "Use activity to keep the public record useful, then judge outcomes through the metrics Google actually reports.",
+  "items": [
+    "Update hours, services, address, contact details, and closures as soon as the underlying fact changes",
+    "Check new reviews, customer questions, and policy issues often enough to respond accurately",
+    "Review applicable searches, views, calls, and website clicks each month",
+    "Record material website and profile changes so later performance shifts have context"
+  ]
+}
+```
 
-## How GBP and your website work together
+Look for patterns across several periods rather than reacting to one movement. Compare the search themes with the services you want to sell. Check whether calls and website visits are producing qualified enquiries in your own CRM or enquiry records. Note major profile, website, staffing, seasonality, or campaign changes so a later shift has context.
 
-Your Google Business Profile and your website are not separate channels. They reinforce each other, and the strongest local search presence comes from treating them as part of one system.
+## Prioritise the next action the evidence supports
 
-Your website provides the depth that your GBP listing cannot. When someone clicks through from your profile to your site, they should find a fast, well-designed experience that matches the credibility established by your reviews and listing. A strong profile that leads to a weak website loses the conversion.
+Start with policy and accuracy. Confirm that the profile is eligible, owned, verified, correctly categorised, and configured for the way customers reach the business. Then improve the information and proof that help a customer decide. Build a compliant review process, use posts for genuinely current communication, and review performance against qualified enquiries.
 
-Equally, your website supports your GBP ranking. Google uses your site content to understand what your business does, where it operates, and how authoritative it is in your space. A website with well-structured [local SEO](/resources) content, proper schema markup, and consistent business information strengthens every local signal.
-
-For businesses operating in [Perth](/locations), the combination of an optimised GBP and a fast, well-built website is the foundation of local visibility. Businesses in [Brisbane](/locations) and other Australian cities benefit from the same approach. The map pack is competitive in every metro area, and the businesses that invest in both assets consistently outperform those that focus on one or the other.
-
-### Schema markup for local businesses
-
-Adding LocalBusiness schema to your website helps Google connect your site to your GBP listing. Include your business name, address, phone number, opening hours, and service area in structured data format. This gives Google explicit confirmation of the information on your profile and strengthens the association between the two.
-
-## Maintaining your profile over time
-
-A Google Business Profile is not a set-and-forget asset. The businesses that consistently rank in the map pack are the ones that treat their profile as an active marketing channel.
-
-Weekly or fortnightly tasks should include publishing a Google Post, responding to any new reviews, checking the Q&A section, and uploading new photos when available. Monthly tasks should include reviewing your insights data to understand how people are finding and interacting with your listing, and adjusting your approach based on what the data shows.
-
-Google rewards active, well-maintained profiles. A listing that was set up three years ago and never updated will gradually lose ground to competitors who are putting in the work consistently.
-
-## The bottom line
-
-Your Google Business Profile is free to set up and free to maintain. For local businesses, it is one of the highest-return marketing activities available. The businesses that take it seriously, keeping their information accurate, collecting reviews consistently, publishing posts regularly, and ensuring their website reinforces their local presence, will dominate the map pack in their area.
-
-The ones that treat it as an afterthought will keep wondering why the phone is not ringing.
+Routine profile maintenance can stay with the business under one owner and a simple review rhythm. Fix an incorrect fact immediately. Improve a weak decision path deliberately. Investigate a visibility change across the profile, website, competition, and location. If that diagnosis exposes thin local pages, weak website proof, authority gaps, unclear attribution, or a broader search strategy problem, a considered [SEO engagement](/services/seo) may be useful.

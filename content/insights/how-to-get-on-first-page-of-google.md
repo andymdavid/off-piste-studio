@@ -19,21 +19,9 @@ You cannot control distance. But you can significantly influence relevance and p
 
 ## Start with your Google Business Profile
 
-Your Google Business Profile (GBP) is the single most important factor in local search visibility. It is the listing that appears in the map pack — the box with three local businesses that shows up at the top of most local searches. That map pack gets more clicks than any other section of the results page for local queries.
+Your profile is the business listing that can appear in Google Search and Maps. Get the fundamentals right by representing the real business accurately, choosing relevant categories, configuring the address or service area correctly, and keeping customer-facing details current.
 
-Here is how to optimise it properly.
-
-**Claim and verify your listing.** If you have not already, go to business.google.com and claim your business. Google will verify your ownership, usually by sending a postcard to your business address or through a phone verification.
-
-**Complete every field.** Fill in your business name (exactly as it appears in the real world — do not stuff keywords into it), address, phone number, website, hours, and business category. Choose your primary category carefully. If you are a plumber, your primary category should be "Plumber," not "Home Improvement" or "Contractor." Add secondary categories for specific services.
-
-**Write a thorough business description.** Use the full 750 characters. Describe what you do, who you serve, and where you operate. Include your key services and service areas naturally.
-
-**Add photos regularly.** Businesses with photos get significantly more engagement than those without. Upload photos of your work, your team, your premises, and your vehicles. Add new photos regularly — Google notices activity and freshness.
-
-**Post updates.** GBP allows you to publish posts similar to social media updates. Use these to share completed projects, seasonal offers, or service updates. Regular posting signals to Google that the business is active.
-
-**Get reviews consistently.** This deserves its own section.
+The [Google Business Profile optimisation guide](/insights/google-business-profile-guide) covers eligibility, categories, service areas, reviews, posts, website alignment, and measurement against Google's current guidance. Use it for profile-level work, then return here for the wider website, content, and authority system needed to compete across local and organic results.
 
 ## Build a steady stream of Google reviews
 

@@ -63,7 +63,7 @@ Local SEO is about being visible when people in your area search for the service
 
 For businesses like [plumbers](/industries/plumbers), [electricians](/industries/electricians), and [dentists](/industries/dentists), local SEO is where the majority of leads come from. Appearing in the map pack for relevant searches in your service area is worth more than ranking nationally for a generic industry term.
 
-The local SEO fundamentals in 2026 are the same as they have been for years, but execution matters more because competition has increased. A fully optimised Google Business Profile with consistent reviews, a website with genuine local content, and accurate directory listings are the baseline. Businesses that go further with location-specific service pages, local case studies, and community content build a meaningful advantage.
+The local SEO fundamentals in 2026 are the same as they have been for years, but execution matters more because competition has increased. Use the [Google Business Profile optimisation guide](/insights/google-business-profile-guide) to check eligibility, categories, service areas, reviews, posts, and measurement against current platform guidance. The website and wider local-search strategy then need genuine local proof, accurate business facts, useful service pages, and authority that a profile alone cannot supply.
 
 ### National SEO
 
