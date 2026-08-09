@@ -9,6 +9,34 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "article-schema-authorship-dates-guide",
+    "title": "Article Schema That Keeps Authorship and Dates Accurate",
+    "description": "Learn how to map article facts into accurate JSON-LD, govern authors and dates, validate rendered markup, and maintain the publishing template.",
+    "intro": "Article schema becomes unreliable when the page, CMS and JSON-LD disagree about who wrote an article or when it changed. This guide shows how to govern those facts and keep the rendered output accurate.",
+    "date": "2026-08-10",
+    "displayDate": "August 10, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Article Schema",
+      "Structured Data",
+      "Technical SEO",
+      "Authorship",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "structured-content-ai-search-guide",
+      "organization-schema-service-business-guide",
+      "ai-search-citation-worthy-content"
+    ],
+    "imageAlt": "Article Schema That Keeps Authorship and Dates Accurate",
+    "url": "/insights/article-schema-authorship-dates-guide"
+  },
+  {
     "slug": "perplexity-search-visibility-business-guide",
     "title": "Improving Perplexity Search Visibility for Service Businesses",
     "description": "A practical diagnosis for service businesses that are absent, inaccurately represented, or weakly cited in Perplexity search.",
