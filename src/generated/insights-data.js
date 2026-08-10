@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "evidence-maintenance-content-refresh-guide",
+    "title": "Keeping Website Evidence Accurate After Publication",
+    "description": "Build a practical evidence maintenance system for reviewing sources, correcting claims, recording meaningful changes, and retiring unreliable content.",
+    "intro": "Published evidence can become unreliable even when nobody edits the page. A clear maintenance system helps your team spot change, verify support, and make honest updates.",
+    "date": "2026-08-11",
+    "displayDate": "August 11, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "Content Governance",
+      "Evidence Maintenance",
+      "Citation Maintenance",
+      "Source Freshness",
+      "Editorial Corrections",
+      "AI Search"
+    ],
+    "topics": [
+      "AI & Automation",
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Evidence-Led Content and Citation-Worthiness",
+    "relatedPosts": [
+      "ai-search-citation-worthy-content",
+      "website-content-evidence-audit",
+      "article-schema-authorship-dates-guide"
+    ],
+    "imageAlt": "Keeping Website Evidence Accurate After Publication",
+    "url": "/insights/evidence-maintenance-content-refresh-guide"
+  },
+  {
     "slug": "article-schema-authorship-dates-guide",
     "title": "Article Schema That Keeps Authorship and Dates Accurate",
     "description": "Learn how to map article facts into accurate JSON-LD, govern authors and dates, validate rendered markup, and maintain the publishing template.",

@@ -397,6 +397,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://offpistestudio.com/insights/evidence-maintenance-content-refresh-guide</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://offpistestudio.com/insights/google-ai-mode-query-fan-out-content-planning</loc>
     <lastmod>2026-08-07</lastmod>
     <changefreq>weekly</changefreq>
