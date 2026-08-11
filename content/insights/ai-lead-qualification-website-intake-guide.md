@@ -5,6 +5,7 @@ description: Design an AI-assisted website intake route with clear qualification
 intro: AI lead qualification works best when the website collects the right facts, rules handle predictable decisions, AI has a bounded role, and people retain judgement over consequential outcomes.
 author: Lara
 date: 2026-08-02
+updatedDate: 2026-08-11
 readTime: 15 min read
 tags: AI, Website Design, Lead Qualification, Workflow Automation, CRM
 topics: AI & Automation, Growth & Leads
@@ -31,6 +32,8 @@ Define the operational problem first. It may be incomplete enquiries, repeated d
 If enquiry handling is only one of several candidates, first use the broader framework for [deciding which workflow to automate](/insights/ai-workflow-automation-business-systems-guide). This guide begins once website intake is the chosen route.
 
 ## Decide whether the journey needs AI
+
+A separate comparison guide can help you [compare chatbot, guided form, live chat and simpler routes](/insights/ai-chatbot-vs-guided-form-live-chat-website) before you commit to an interface. This guide continues once you have chosen an AI-assisted intake route and need to design its qualification and handoff.
 
 A static form is often the right interface when the questions and outcomes are predictable. Rules can adapt later questions, score supplied answers, and route a submission without asking a model to interpret anything. AI becomes useful when people describe varied situations in their own words and a bounded summary or category would reduce genuine work.
 
