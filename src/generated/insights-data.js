@@ -9,6 +9,34 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "evaluate-sources-website-content-guide",
+    "title": "How to Evaluate Sources for Your Website Content",
+    "description": "A practical method for checking whether a source genuinely supports a website claim before you publish it.",
+    "intro": "A credible publisher and a polished report don't prove that a source supports the words you want to publish. Source approval starts with the exact claim, then tests where the evidence came from, what it measured, and where its limits sit.",
+    "date": "2026-08-13",
+    "displayDate": "August 13, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "Source Evaluation",
+      "Evidence Quality",
+      "Content Strategy",
+      "AI Search",
+      "Content Governance"
+    ],
+    "topics": [
+      "AI & Automation",
+      "SEO & Search"
+    ],
+    "cluster": "Evidence-Led Content and Citation-Worthiness",
+    "relatedPosts": [
+      "ai-search-citation-worthy-content",
+      "website-content-evidence-audit",
+      "citation-worthy-original-research-business-data"
+    ],
+    "imageAlt": "How to Evaluate Sources for Your Website Content",
+    "url": "/insights/evaluate-sources-website-content-guide"
+  },
+  {
     "slug": "ai-chatbot-vs-guided-form-live-chat-website",
     "title": "Choosing Between Website Chatbots, Guided Forms and Live Chat",
     "description": "Compare static forms, guided forms, AI chatbots, live chat and hybrid website enquiry routes using customer needs, operating constraints and qualified outcomes.",

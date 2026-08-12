@@ -108,7 +108,7 @@ The workflow needs enough structure for a team to repeat it without turning ever
 2. Assemble the source pack. Owner: editor or researcher. Input: approved claims, sources, internal examples, exclusions, related posts, voice notes. Output: source pack. Gate: the pack is complete enough to draft from.
 3. Use AI for structure or draft support. Owner: drafter. Input: source pack and instructions. Output: outline, section notes, or rough draft. Gate: the draft is checked against the source pack before editing continues.
 4. Complete expert review. Owner: subject-matter expert. Input: draft and claims list. Output: corrected argument, added nuance, removed weak claims. Gate: the expert can stand behind the point of view.
-5. Check evidence and facts. Owner: editor. Input: source URLs, citations, statistics, platform claims, internal examples. Output: supported draft. Gate: every factual claim that needs support has a reliable source or is removed.
+5. Check evidence and facts. Owner: editor. Input: source URLs, citations, statistics, platform claims, internal examples. Output: supported draft. Gate: every factual claim that needs support has passed the [source evaluation and selection check](/insights/evaluate-sources-website-content-guide) or is removed.
 6. Edit for voice and specificity. Owner: editor or brand lead. Input: supported draft, voice notes, examples. Output: human final draft. Gate: the page sounds like the business, uses concrete examples, and avoids filler.
 7. Publish, structure, and measure. Owner: publisher or marketer. Input: approved final draft, metadata, internal links, schema, next step. Output: live page and measurement record. Gate: the page is readable, linked, dated, and ready for review after launch.
 

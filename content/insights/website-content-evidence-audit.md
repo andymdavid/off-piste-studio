@@ -75,7 +75,7 @@ Triggers work better when they reflect how facts change. Review a platform claim
 
 ## Test whether the evidence supports the exact claim
 
-A link beside a sentence is only the beginning. Open the evidence and compare it with the words on the page.
+A link beside a sentence is only the beginning. Open the evidence and compare it with the words on the page. If a row needs verification or replacement, use the [pre-publication source evaluation method](/insights/evaluate-sources-website-content-guide) to trace the original evidence and record why it supports the revised claim.
 
 First, ask whether the source actually says what the claim says. Check the population, location, time period, conditions, and measurement method. Look for qualifiers that disappeared during drafting. Words such as may, can, observed, eligible, and on average carry important limits.
 

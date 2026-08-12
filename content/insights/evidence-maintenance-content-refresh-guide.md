@@ -80,7 +80,7 @@ Review the page claim and its evidence together. Read the surrounding paragraph 
 
 Then inspect provenance. The [W3C Data on the Web Best Practices](https://www.w3.org/TR/dwbp/) recommends providing provenance information and citing original sources so data consumers can assess origin and trustworthiness. For a service-business page, that means preserving a traceable route to the original publisher where one is available. A summary article may remain readable while the primary standard or dataset gives the stronger support.
 
-Check the publication date and method as part of the same decision. An older source isn't automatically wrong. A newer source isn't automatically stronger. Ask whether the method measures the thing your claim describes and whether the source's scope matches your audience.
+Check the publication date and method as part of the same decision. An older source can remain sound. A new source can still be weaker. Ask whether the method measures the thing your claim describes and whether the source's scope matches your audience. When replacement evidence needs a full approval decision, return to the [source evaluation workflow](/insights/evaluate-sources-website-content-guide) before changing the claim.
 
 This combined check matters because a citation can remain live while its meaning changes. Use the following prompt when a register row comes up for review.
 
