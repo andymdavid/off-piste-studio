@@ -84,7 +84,7 @@ Use schema as a confirmation layer. The visible page should make the fact clear.
 | --- | --- | --- |
 | [Organization](/insights/organization-schema-service-business-guide) | The site needs clear business identity, logo, profiles, and contact facts | The business details are inconsistent or missing from visible pages |
 | LocalBusiness | The page shows local business details, address, service area, opening hours, or local profile context | The business is remote-only or location facts are vague |
-| Service | A service page clearly defines the offer, audience, area, and scope | The page only has broad marketing copy |
+| [Service](/insights/service-schema-service-pages-guide) | A service page clearly defines the offer, audience, area, and scope | The page only has broad marketing copy |
 | [Article](/insights/article-schema-authorship-dates-guide) | A dated article has governed authorship, title, image, publish date and meaningful update history | The visible page and structured data disagree or the content has no durable article value |
 | FAQPage | The page contains genuine visible questions and answers | FAQs are added only to target snippets or repeat keywords |
 | Review | Reviews are visible, genuine, and follow the platform's rules | Reviews are copied, hidden, unsupported, or selectively misleading |

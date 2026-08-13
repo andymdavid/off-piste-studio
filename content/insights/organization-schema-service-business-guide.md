@@ -138,6 +138,8 @@ Google recommends placing Organization information on the homepage or a single p
 
 Use a stable CMS field set or site template as the source. Give one implementation owner responsibility for the primary organisation node. SEO plugins, theme code, tag managers and custom components can each emit schema. Running several without coordination can produce duplicate nodes with conflicting names, URLs or identifiers.
 
+Individual service pages can reference that governed identity instead of copying its facts into each template. The [Service schema implementation guide](/insights/service-schema-service-pages-guide) shows how a page-level Service node can use the stable provider `@id` while keeping the offer and provider as distinct parts of one graph.
+
 A durable deployment sequence is short.
 
 1. Approve the canonical facts and entity type.

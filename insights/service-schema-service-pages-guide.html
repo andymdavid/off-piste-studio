@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Learn how to map visible service-page facts into connected Service JSON-LD, validate the graph, and keep it accurate as the offer changes.">
+  <title>Service Schema for Accurate Service Pages | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/service-schema-service-pages-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Service Schema for Accurate Service Pages",
+        "description": "Learn how to map visible service-page facts into connected Service JSON-LD, validate the graph, and keep it accurate as the offer changes.",
+        "datePublished": "2026-08-14",
+        "dateModified": "2026-08-14",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/service-schema-service-pages-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Service Schema for Accurate Service Pages", "item": "https://offpistestudio.com/insights/service-schema-service-pages-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="service-schema-service-pages-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span><span>AI &amp; Automation</span></div><p class="insight-article__read-time">11 min read</p></div>
+          <h1 class="insight-article__title">Service Schema for Accurate Service Pages</h1>
+          <p class="insight-article__intro">Service schema markup is useful when it describes a clear offer and connects it to the right provider. This guide shows how to map visible service-page facts into a maintainable graph without inventing prices, locations or search benefits.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 14, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/service-schema-service-pages-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/service-schema-service-pages-guide&text=Service%20Schema%20for%20Accurate%20Service%20Pages" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/service-schema-service-pages-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Primary-source review record, accessed 14 August 2026 in Australia/Perth:
+- Schema.org Service type and property definitions.
+- Google Search Central introduction to structured data markup.
+- Google Search Central AI features and your website.
+- Google Search Central LocalBusiness structured data.
+- Schema.org Validator.
+
+Implementation check:
+- The current Off Piste insight and page generators do not emit one shared stable provider @id.
+- The worked graph therefore uses an explicitly fictional business and provider ID rather than presenting the live Off Piste output as a reusable implementation.
+-->
+<h2 class="insight-article__section-title">Start with the page facts</h2>
+<p>A service page can name an offer while leaving important details unresolved. The heading says “strategy”, the body describes several different engagements, the footer names the provider, and a location appears only in a testimonial. Adding Service schema markup at that point would encode the ambiguity rather than solve it.</p>
+<p>Start with the page a buyer can read. It should identify the service, who provides it, what the engagement covers and any location or commercial terms that matter. Our guide to <a href="/insights/structured-content-ai-search-guide">structuring a page for search and AI systems</a> covers that wider page anatomy. Service schema has the narrower job of describing the service that the page already makes clear.</p>
+<p>Google&#39;s introduction to <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data">how structured data markup works</a> says structured data should describe the page it appears on. It can make a page eligible for a supported search feature, but valid markup doesn&#39;t guarantee that Google will show one. Every field in the graph therefore needs a visible source on the page.</p>
+<h2 class="insight-article__section-title">Give the Service node one clear job</h2>
+<p><a href="https://schema.org/Service">Schema.org defines <code>Service</code></a> as a service provided by an organisation or person. Its vocabulary includes <code>serviceType</code>, <code>provider</code>, <code>areaServed</code>, <code>offers</code> and <code>hasOfferCatalog</code>. Those properties let a page identify an offer, connect it to its provider and describe supported coverage or commercial structure.</p>
+<p>Vocabulary support and Google feature support are separate questions. <code>Service</code> is a valid Schema.org type, but Google doesn&#39;t document a standalone Service rich result. Don&#39;t use it to promise rankings, rich snippets, Knowledge Panels, Maps visibility, Business Profile gains or AI citations.</p>
+<p>AI search doesn&#39;t change that boundary. Google&#39;s current <a href="https://developers.google.com/search/docs/appearance/ai-features">guidance for AI features and websites</a> says no special Schema.org markup is required for AI Overviews or AI Mode. The ordinary foundations still apply, including crawlable content and structured data that matches visible text.</p>
+<p>The practical goal is accuracy. A Service node gives parsers a consistent expression of a service page&#39;s facts. It doesn&#39;t create facts the business hasn&#39;t published.</p>
+<h2 class="insight-article__section-title">Connect the service to its provider</h2>
+<p>The service and the business perform different jobs in a connected graph. A <code>Service</code> node describes the page-specific offer. An <code>Organization</code> or eligible <code>LocalBusiness</code> node describes the provider&#39;s identity and business or location facts. Schema.org&#39;s <code>provider</code> property accepts an organisation or person, so the Service node can reference the provider rather than repeating its details.</p>
+<p>Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/local-business">LocalBusiness structured data documentation</a> focuses on business and location information such as the business type, address and opening hours. Those are provider facts. They aren&#39;t a substitute for a Service node that identifies what an individual service page offers.</p>
+<p>Use a stable provider <code>@id</code> only when the site already emits and governs that identifier. The same ID should refer to the same entity across the site. Our <a href="/insights/organization-schema-service-business-guide">Organization schema implementation guide</a> explains how to choose and maintain that provider node. If no governed provider ID exists, establish it in the publishing template before referencing it from service pages.</p>
+<p>That distinction prevents a common implementation problem. Copying the full provider object into every service template gives names, URLs and locations more places to drift. A reference keeps the service page connected to one maintained identity.</p>
+<h2 class="insight-article__section-title">Map visible claims to schema properties</h2>
+<p>Consider a fictional Australian consultancy called Southbank Strategy Studio. Its service page visibly offers a “Website positioning workshop”, says the studio provides it to businesses in Western Australia, and lists a fixed workshop fee of AUD 2,400. The example is fictional, but the evidence rule is real.</p>
+<p><code>name</code> should match the service named in the H1 or service heading. <code>serviceType</code> can express the recognised type of service in plain text. <code>provider</code> should reference the studio&#39;s governed ID. <code>areaServed</code> can state Western Australia because the page clearly states that coverage. An <code>Offer</code> can carry the fee only because the same price and currency are visible to a reader.</p>
+<p>If the page says “contact us for a proposal”, don&#39;t invent a price. If delivery is available in Perth but the page never says so, don&#39;t add Perth for local relevance. Ratings and reviews belong only when the page shows genuine, policy-compliant evidence for the marked-up item. A complete-looking graph with unsupported fields is less reliable than a smaller truthful graph.</p>
+<p>The same rule applies to offer catalogues. Schema.org defines <a href="https://schema.org/hasOfferCatalog"><code>hasOfferCatalog</code></a> as a relationship to an <code>OfferCatalog</code>. Use it when the visible page presents a real set of service options that the business maintains. A page about one workshop usually needs one Service and, when appropriate, one Offer. It doesn&#39;t need a catalogue created for markup completeness.</p>
+<p>JSON-LD can&#39;t repair an unclear heading, hidden condition or unusable interaction. Fix those issues in the page and template first. The <a href="/insights/website-accessibility-and-seo">website accessibility and SEO guide</a> explains why semantic headings, labels and readable text matter to people and machines.</p>
+<h2 class="insight-article__section-title">Build a connected JSON-LD example</h2>
+<p>The graph below is copy-adaptable, not copy-ready. Southbank Strategy Studio and its URLs are explicitly fictional. Assume the page visibly contains the service name, description, Western Australia coverage and AUD 2,400 fee. Assume the separate organisation implementation already emits <code>https://www.example-studio.test/#organization</code> as the stable ID for this provider.</p>
+<pre><code class="language-html">&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@graph&quot;: [
+    {
+      &quot;@type&quot;: &quot;WebPage&quot;,
+      &quot;@id&quot;: &quot;https://www.example-studio.test/services/website-positioning-workshop#webpage&quot;,
+      &quot;url&quot;: &quot;https://www.example-studio.test/services/website-positioning-workshop&quot;,
+      &quot;name&quot;: &quot;Website Positioning Workshop&quot;,
+      &quot;mainEntity&quot;: {
+        &quot;@id&quot;: &quot;https://www.example-studio.test/services/website-positioning-workshop#service&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Service&quot;,
+      &quot;@id&quot;: &quot;https://www.example-studio.test/services/website-positioning-workshop#service&quot;,
+      &quot;name&quot;: &quot;Website Positioning Workshop&quot;,
+      &quot;serviceType&quot;: &quot;Website positioning workshop&quot;,
+      &quot;description&quot;: &quot;A facilitated positioning workshop for service businesses preparing a website project.&quot;,
+      &quot;provider&quot;: {
+        &quot;@id&quot;: &quot;https://www.example-studio.test/#organization&quot;
+      },
+      &quot;areaServed&quot;: {
+        &quot;@type&quot;: &quot;AdministrativeArea&quot;,
+        &quot;name&quot;: &quot;Western Australia&quot;
+      },
+      &quot;offers&quot;: {
+        &quot;@type&quot;: &quot;Offer&quot;,
+        &quot;price&quot;: &quot;2400&quot;,
+        &quot;priceCurrency&quot;: &quot;AUD&quot;,
+        &quot;url&quot;: &quot;https://www.example-studio.test/services/website-positioning-workshop&quot;
+      }
+    },
+    {
+      &quot;@type&quot;: &quot;Organization&quot;,
+      &quot;@id&quot;: &quot;https://www.example-studio.test/#organization&quot;,
+      &quot;name&quot;: &quot;Southbank Strategy Studio&quot;,
+      &quot;url&quot;: &quot;https://www.example-studio.test/&quot;
+    }
+  ]
+}
+&lt;/script&gt;</code></pre>
+<p>The <code>WebPage</code> identifies the canonical page and points to the Service as its main entity. The Service carries the facts specific to this offer. Its <code>provider</code> resolves to the same organisation node used elsewhere. The offer describes a visible fee without implying availability, discounts or conditions that the page doesn&#39;t state.</p>
+<p>Adapt the smallest accurate graph. Remove <code>offers</code> when the page doesn&#39;t publish a price or other real offer detail. Remove <code>areaServed</code> when coverage isn&#39;t explicit. Change the provider type only when the business model and governed provider record support that choice.</p>
+<h2 class="insight-article__section-title">Validate what the graph says</h2>
+<p>Validation needs more than one tool because each check answers a different question. Begin with the rendered canonical page, since that&#39;s the version a crawler and buyer receive. Parse the JSON-LD, then use the <a href="https://validator.schema.org/">Schema.org Validator</a> to check vocabulary and relationships. That result doesn&#39;t establish eligibility for a Google feature or prove that the business claims are true.</p>
+<p>Check Google&#39;s documentation separately for any search feature you expect to test. Service isn&#39;t a documented standalone Google rich-result type, so a missing Service preview isn&#39;t an implementation failure. After deployment, inspect the live HTML again and confirm the intended node, IDs and canonical URL survived the publishing path.</p>
+<p>The order matters because a green syntax result can distract from a wrong price, stale location or unresolved provider reference. Use this pre-publication check against the final page and record what changed.</p>
+<aside class="insight-module insight-module--practice" aria-label="Validate the page before trusting the markup"><header><p class="insight-module__label">In practice</p><h3>Validate the page before trusting the markup</h3></header><div class="insight-module__body"><p class="insight-module__intro">Run each check against the rendered canonical page and record what changed.</p><ul class="insight-module__list"><li>Confirm every marked-up fact appears clearly on the page</li><li>Parse the JSON-LD and resolve every referenced ID</li><li>Check Schema.org vocabulary in the Schema.org Validator</li><li>Test Google eligibility only for features Google documents</li><li>Recheck the live page after deployment</li></ul></div></aside>
+<h2 class="insight-article__section-title">Maintain schema with the service page</h2>
+<p>Service schema becomes stale when the page changes without the graph. Give editorial ownership to service names, descriptions, coverage and offer wording. Give the commercial owner responsibility for prices, packages and availability. Give the technical owner responsibility for template mapping, stable IDs and rendered output.</p>
+<p>Define refresh triggers in the same place as the content record. Review the graph when a service is renamed, merged, removed or split into packages. Review it when coverage or pricing changes, when the provider ID pattern changes, or when a new component starts emitting structured data. Remove the Service node when its canonical page is retired unless another current page becomes the authoritative home for that service.</p>
+<p>The vocabulary and platform rules also move. Review the official Schema.org Service definitions and Google&#39;s structured data policies at least annually, then review sooner when either source or the service-page template changes. Record the access date so the next owner knows which rules informed the implementation.</p>
+<h2 class="insight-article__section-title">Audit one valuable service page first</h2>
+<p>Start with a service page that influences real enquiries. Read its visible claims, inspect the template output and find the provider node it references. Then compare every schema field with the final page. One focused audit usually reveals whether the gap sits in the content, the template or ongoing governance.</p>
+<p>If the page can&#39;t express one service cleanly or the template can&#39;t render a connected graph, the next job is <a href="/services/website-design">service-page and website template design</a>. If the page is clear but validation, duplication or policy ownership is weak, use an <a href="/services/seo">SEO and structured-data audit</a> to govern the implementation.</p>
+<p>The right first result isn&#39;t a longer graph. It&#39;s one valuable service page whose visible offer, provider relationship and structured data all say the same thing.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/structured-content-ai-search-guide" class="insight-card__link" aria-label="Read Structuring Your Website for AI Search">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>14 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Structuring Your Website for AI Search</h3>
+        <p class="insight-card__description">A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/organization-schema-service-business-guide" class="insight-card__link" aria-label="Read How to Optimise Organisation Schema for Your Service Business">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">How to Optimise Organisation Schema for Your Service Business</h3>
+        <p class="insight-card__description">Learn how to choose Organization or LocalBusiness schema, map verified business facts into JSON-LD, validate the result, and keep it accurate.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/website-accessibility-and-seo" class="insight-card__link" aria-label="Read Website Accessibility and SEO">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>10 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>Websites &amp; UX</span><span>SEO &amp; Search</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Website Accessibility and SEO</h3>
+        <p class="insight-card__description">Why accessibility improvements and SEO gains overlap, how structural and content changes serve both, and where to focus for the biggest commercial impact.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

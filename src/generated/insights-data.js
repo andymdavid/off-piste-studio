@@ -9,6 +9,34 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "service-schema-service-pages-guide",
+    "title": "Service Schema for Accurate Service Pages",
+    "description": "Learn how to map visible service-page facts into connected Service JSON-LD, validate the graph, and keep it accurate as the offer changes.",
+    "intro": "Service schema markup is useful when it describes a clear offer and connects it to the right provider. This guide shows how to map visible service-page facts into a maintainable graph without inventing prices, locations or search benefits.",
+    "date": "2026-08-14",
+    "displayDate": "August 14, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Service Schema",
+      "Structured Data",
+      "JSON-LD",
+      "Service Pages",
+      "Schema Validation"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "structured-content-ai-search-guide",
+      "organization-schema-service-business-guide",
+      "website-accessibility-and-seo"
+    ],
+    "imageAlt": "Service Schema for Accurate Service Pages",
+    "url": "/insights/service-schema-service-pages-guide"
+  },
+  {
     "slug": "evaluate-sources-website-content-guide",
     "title": "How to Evaluate Sources for Your Website Content",
     "description": "A practical method for checking whether a source genuinely supports a website claim before you publish it.",

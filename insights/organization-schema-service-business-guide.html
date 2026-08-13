@@ -235,14 +235,14 @@ Primary-source review record, accessed 30 July 2026 in Australia/Perth:
     &quot;https://www.linkedin.com/company/example-strategy-studio&quot;
   ]
 }
-&lt;/script&gt;
-</code></pre>
+&lt;/script&gt;</code></pre>
 <p>The <code>name</code> and <code>description</code> need matching visible copy. The <code>url</code> and <code>@id</code> follow the canonical domain. The logo URL must resolve to the current public asset. The contact details belong on the contact page and need an owner. The LinkedIn URL belongs only if that fictional company profile exists, represents the same entity and stays current.</p>
 <p>For an eligible local business, change <code>@type</code> to the most specific accurate <code>LocalBusiness</code> subtype. Add the primary phone and a supported <code>PostalAddress</code> at the local entity level. Location-dependent implementations may also need fields such as opening hours, geo coordinates or price range according to Google&#39;s current LocalBusiness guidance. Never invent a storefront address or opening hours to complete a template.</p>
 <p>Separate locations should not overwrite one another. Complex practitioner, department, franchise or parent-company relationships deserve a modelling decision before code is generated.</p>
 <h2 class="insight-article__section-title">Place and deploy the markup once</h2>
 <p>Google recommends placing Organization information on the homepage or a single page that describes the organisation, such as the about page. It doesn&#39;t need to be repeated on every page. JSON-LD must appear in the rendered HTML that crawlers can access.</p>
 <p>Use a stable CMS field set or site template as the source. Give one implementation owner responsibility for the primary organisation node. SEO plugins, theme code, tag managers and custom components can each emit schema. Running several without coordination can produce duplicate nodes with conflicting names, URLs or identifiers.</p>
+<p>Individual service pages can reference that governed identity instead of copying its facts into each template. The <a href="/insights/service-schema-service-pages-guide">Service schema implementation guide</a> shows how a page-level Service node can use the stable provider <code>@id</code> while keeping the offer and provider as distinct parts of one graph.</p>
 <p>A durable deployment sequence is short.</p>
 <ol>
 <li>Approve the canonical facts and entity type.</li>
