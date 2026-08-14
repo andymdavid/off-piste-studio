@@ -9,6 +9,33 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "monitor-ai-knowledge-base-quality-guide",
+    "title": "How to Monitor AI Knowledge Base Quality",
+    "description": "Learn how to detect retrieval failures, unsupported answers, stale sources and access problems in a live AI knowledge base, then route each issue to the right repair.",
+    "intro": "A live AI knowledge base can keep producing fluent answers while its sources, questions and permissions change around it. This guide shows you how to find quality drift, diagnose the failing layer and decide whether to monitor, fix or narrow the system.",
+    "date": "2026-08-15",
+    "displayDate": "August 15, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Knowledge Management",
+      "RAG Evaluation",
+      "AI Governance",
+      "Internal Systems"
+    ],
+    "topics": [
+      "AI & Automation"
+    ],
+    "cluster": "Knowledge, Data, and Business Memory",
+    "relatedPosts": [
+      "ai-ready-knowledge-base-business-guide",
+      "measure-ai-workflow-automation-roi-reliability",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "How to Monitor AI Knowledge Base Quality",
+    "url": "/insights/monitor-ai-knowledge-base-quality-guide"
+  },
+  {
     "slug": "service-schema-service-pages-guide",
     "title": "Service Schema for Accurate Service Pages",
     "description": "Learn how to map visible service-page facts into connected Service JSON-LD, validate the graph, and keep it accurate as the offer changes.",

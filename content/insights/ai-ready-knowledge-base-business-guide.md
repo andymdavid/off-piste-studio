@@ -135,6 +135,8 @@ Apply that distinction in a human-readable test record.
 
 Add adversarial cases. Ask for an expired price, use an old service name, pose an ambiguous question, request another customer's information and combine two policies that conflict. Include a question outside the approved scope. Record the expected source, permission result, answer behaviour and escalation for each case.
 
+After launch, carry these cases into a recurring [AI knowledge base quality monitoring practice](/insights/monitor-ai-knowledge-base-quality-guide) so source changes, retrieval drift and unsupported answers lead to an owned repair and retest.
+
 Grounding can reduce unsupported answers by supplying relevant evidence. Reliability still depends on what was retrieved, how the answer used it, human review and source maintenance. That's our synthesis of the NIST risk-management guidance and Microsoft's evaluation model. Neither a knowledge base nor RAG eliminates errors.
 
 For customer-facing answers, test the route to a person as carefully as the generated response. The [safe human handoff guide](/insights/ai-customer-experience-human-handoff-guide) covers missing evidence, customer frustration and high-consequence escalation in that interaction.
