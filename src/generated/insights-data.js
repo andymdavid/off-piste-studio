@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-ai-overviews-traffic-drop-diagnostic",
+    "title": "Diagnosing a Google Traffic Drop After AI Overviews",
+    "description": "Diagnose whether AI Overviews contributed to a fall in Google organic clicks, then choose a repair that matches the evidence.",
+    "intro": "A fall in Google clicks can coincide with AI Overviews without being caused by them. This diagnostic shows you how to align Search Console, analytics, ranking, demand and conversion evidence before changing content or search controls.",
+    "date": "2026-08-16",
+    "displayDate": "August 16, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Google Search Console",
+      "Analytics",
+      "AI Overviews",
+      "Traffic Diagnosis"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility / Google Search and AI Overviews",
+    "relatedPosts": [
+      "google-sge-and-seo",
+      "how-to-measure-ai-search-visibility",
+      "google-ai-overviews-opt-out-decision-guide"
+    ],
+    "imageAlt": "Diagnosing a Google Traffic Drop After AI Overviews",
+    "url": "/insights/google-ai-overviews-traffic-drop-diagnostic"
+  },
+  {
     "slug": "monitor-ai-knowledge-base-quality-guide",
     "title": "How to Monitor AI Knowledge Base Quality",
     "description": "Learn how to detect retrieval failures, unsupported answers, stale sources and access problems in a live AI knowledge base, then route each issue to the right repair.",

@@ -42,6 +42,8 @@ The higher levels are slower to collect, but more useful. Screenshots can start 
 
 Dedicated Google reporting now gives teams a stronger Google-specific layer. It works best beside prompts, citations, crawler logs, analytics, and commercial signals.
 
+When that reporting reveals falling clicks or CTR, the [AI Overviews traffic-drop diagnostic](/insights/google-ai-overviews-traffic-drop-diagnostic) shows how to investigate the anomaly without treating feature exposure as proof of cause.
+
 ## Build a prompt set around buyer decisions
 
 Start with prompts a real buyer would use before they know what to buy or who to trust. Keep the set small enough to repeat monthly. A bloated prompt library becomes hard to maintain and easy to over-interpret.

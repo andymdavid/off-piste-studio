@@ -60,6 +60,8 @@ For implementation detail, use the [structured content guide](/insights/structur
 
 AI search does change traffic expectations, but the effect is uneven. Generic informational queries are more exposed to summarization. If a page only explains a basic definition or repeats a standard how-to answer, the generated response may satisfy the searcher without a click.
 
+If clicks or CTR have already fallen, use the [AI Overviews traffic-drop diagnostic](/insights/google-ai-overviews-traffic-drop-diagnostic) to test reporting, ranking, demand, query exposure and conversion evidence before choosing a repair.
+
 Commercial, local, branded, and decision-heavy searches behave differently. A buyer comparing agencies, checking a service provider, reviewing a quote, or looking for proof still needs judgement. They may click later, search the brand by name, visit a service page, read case studies, or ask a more specific follow-up question. The influence can move away from a neat organic session and into a messier path toward trust.
 
 The market context is worth taking seriously. SparkToro and Similarweb reported that in the first four months of 2026, less than one third of Google searches sent a click, with 68.01% ending without a click in their US panel data. Their [2026 zero-click research](https://sparktoro.com/blog/in-2026-less-than-one-third-of-google-searches-still-send-a-click/) should be treated as clickstream context rather than proof that every query, industry, or AI feature loses traffic in the same way.
