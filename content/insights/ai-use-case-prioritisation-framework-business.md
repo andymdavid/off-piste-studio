@@ -125,6 +125,8 @@ The total helps order attention. The evidence behind it determines the route.
 
 Build and buy are delivery choices within an otherwise viable route. Compare durable factors such as differentiation, data control, integration depth, assurance needs, switching cost, internal capability, and total ownership. A vendor demo doesn't settle those questions.
 
+After a use case passes these gates, use the [business AI delivery model guide](/insights/build-buy-hybrid-ai-business-decision-guide) to compare buying, configuring, integrating, custom-building or deferring the capability.
+
 Once an idea advances, add it to an [AI governance register and review process](/insights/ai-governance-policy-checklist-growing-businesses). Customer-facing candidates also need clear escalation, accessibility, transparency, and a [safe human handoff](/insights/ai-customer-experience-human-handoff-guide).
 
 The matrix below is useful for discussing default action after the hard gates. It shows why theoretical upside isn't enough when delivery and trust exposure remain poorly controlled.

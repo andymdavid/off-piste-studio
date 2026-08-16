@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "build-buy-hybrid-ai-business-decision-guide",
+    "title": "Choosing the Right Delivery Model for Business AI",
+    "description": "Compare buy, configure, integrate, custom-build and defer routes for an approved business AI use case using fit, control, evidence and ownership cost.",
+    "intro": "Once an AI use case earns a pilot, the next decision is how to source, integrate and own it. This guide helps you choose a delivery model through evidence, ongoing cost and exit planning.",
+    "date": "2026-08-17",
+    "displayDate": "August 17, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "AI Strategy",
+      "Build vs Buy",
+      "AI Procurement",
+      "Vendor Evaluation",
+      "Systems Integration",
+      "Total Cost of Ownership"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Small Business"
+    ],
+    "cluster": "AI Strategy and Use Case Selection",
+    "relatedPosts": [
+      "ai-use-case-prioritisation-framework-business",
+      "ai-governance-policy-checklist-growing-businesses",
+      "measure-ai-workflow-automation-roi-reliability"
+    ],
+    "imageAlt": "Choosing the Right Delivery Model for Business AI",
+    "url": "/insights/build-buy-hybrid-ai-business-decision-guide"
+  },
+  {
     "slug": "google-ai-overviews-traffic-drop-diagnostic",
     "title": "Diagnosing a Google Traffic Drop After AI Overviews",
     "description": "Diagnose whether AI Overviews contributed to a fall in Google organic clicks, then choose a repair that matches the evidence.",
