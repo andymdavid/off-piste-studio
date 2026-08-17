@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="A practical guide to preserving evidence, containing harm, tracing live AI workflow failures, assigning repairs and testing the business outcome before reopening.">
+  <title>Diagnosing Failures in Live AI Workflows | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/ai-workflow-automation-failure-diagnostic-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Diagnosing Failures in Live AI Workflows",
+        "description": "A practical guide to preserving evidence, containing harm, tracing live AI workflow failures, assigning repairs and testing the business outcome before reopening.",
+        "datePublished": "2026-08-18",
+        "dateModified": "2026-08-18",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/ai-workflow-automation-failure-diagnostic-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Diagnosing Failures in Live AI Workflows", "item": "https://offpistestudio.com/insights/ai-workflow-automation-failure-diagnostic-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="ai-workflow-automation-failure-diagnostic-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>AI &amp; Automation</span></div><p class="insight-article__read-time">12 min read</p></div>
+          <h1 class="insight-article__title">Diagnosing Failures in Live AI Workflows</h1>
+          <p class="insight-article__intro">When an AI-assisted workflow produces the wrong customer, CRM or operational outcome, a structured trace can reveal which boundary failed and who should repair it.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 18, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/ai-workflow-automation-failure-diagnostic-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/ai-workflow-automation-failure-diagnostic-guide&text=Diagnosing%20Failures%20in%20Live%20AI%20Workflows" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/ai-workflow-automation-failure-diagnostic-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Primary sources accessed 18 August 2026 in Australia/Perth:
+- NIST AI 600-1, Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile.
+- Australian Department of Industry, Science and Resources, Guidance for AI Adoption: Implementation Practices.
+- NIST AI RMF Playbook.
+- Microsoft Learn, Monitoring Generative AI applications.
+- Microsoft Azure Well-Architected Framework, Architecture strategies for designing a monitoring system.
+
+The enquiry-to-CRM example is hypothetical. It does not represent a client incident.
+-->
+<h2 class="insight-article__section-title">When a successful run still creates a failed outcome</h2>
+<p>A website enquiry arrives at 9:04 am. The automation marks the run as complete, creates a CRM record and sends the lead to a follow-up queue. By lunch, the sales owner discovers that the record has the wrong service, the customer&#39;s message is missing and no task was assigned.</p>
+<p>The run completed technically. The intended business outcome still failed.</p>
+<p>That gap is where AI workflow troubleshooting begins. An operator needs to preserve the case, prevent further damage and follow one unit of work across every boundary. The useful question is specific. Where did the actual result first diverge from the expected result?</p>
+<p>This guide starts after launch. If the workflow was never mapped, bounded or given a clear owner, return to the guide for <a href="/insights/ai-workflow-automation-business-systems-guide">mapping and bounding an AI workflow</a>. If it is live and something has gone wrong, keep the failing case intact and trace it before changing the system.</p>
+<h2 class="insight-article__section-title">Preserve the failing case before changing anything</h2>
+<p>A retry can overwrite an error. A prompt edit can make the original output impossible to reproduce. A manual CRM correction can hide the value the integration actually wrote. Capture the evidence first.</p>
+<p>Start with the expected business outcome. That might be a complete CRM record, an accurate draft for human review, one customer response or an approval task assigned to the correct person. Compare the observed result with that expectation in plain language.</p>
+<p>The Australian Government&#39;s <a href="https://www.industry.gov.au/sites/default/files/2025-10/guidance-for-ai-adoption-implementation-practices.pdf">Guidance for AI Adoption implementation practices</a> places acceptance criteria, testing, ongoing monitoring and meaningful human control across implementation. For an operator, that means a failure record needs both sides of the comparison. Record what happened and what an authorised person expected to happen.</p>
+<p>The <a href="https://airc.nist.gov/docs/AI_RMF_Playbook.pdf">NIST AI RMF Playbook</a> recommends maintaining histories and audit logs that help people investigate possible errors. It also identifies reported errors, complaints, overrides, escalations and accountable go or no-go decisions as useful evidence of oversight.</p>
+<p>This record matters most before a retry or correction changes the evidence.</p>
+<aside class="insight-module insight-module--practice" aria-label="Preserve the evidence before you retry"><header><p class="insight-module__label">In practice</p><h3>Preserve the evidence before you retry</h3></header><div class="insight-module__body"><p class="insight-module__intro">Record the failing unit of work before a retry, edit or manual correction changes the evidence.</p><ul class="insight-module__list"><li>Save the original trigger, input and expected business outcome</li><li>Record the workflow version, time and correlation identifier</li><li>Keep rule decisions, model output, retrieved sources and tool responses</li><li>Capture side effects, human overrides, complaints and escalation decisions</li></ul></div></aside>
+<p>Keep sensitive customer data inside the organisation&#39;s approved access and retention controls. Preserve only what the investigation needs.</p>
+<h2 class="insight-article__section-title">Contain the outcome before finding the cause</h2>
+<p>Containment reduces the immediate consequence while the cause remains uncertain. It should be quick, controlled and reversible where possible.</p>
+<p>Pause the affected route when it can keep sending wrong messages, creating duplicate records or exposing information. Disable the specific side effect if the rest of the workflow can run safely. Move new cases to a named manual queue. Mark affected records to prevent repeated action. Tell the people handling customers which temporary process now applies.</p>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">NIST Generative AI Profile</a> recommends response and recovery procedures for newly identified risks. Its Manage 2.4 guidance calls for assigned responsibilities and mechanisms to disengage or deactivate systems whose outcomes conflict with intended use. It also calls for communication, escalation and remediation procedures around that decision.</p>
+<p>Containment is separate from repair. Switching to manual handling protects the next customer. Diagnosis still needs to locate the original failure in the form, a rule, the model, a vendor connection, the CRM or the follow-up queue.</p>
+<p>Treat material privacy, security or customer harm through the organisation&#39;s incident process. The <a href="/insights/ai-governance-policy-checklist-growing-businesses">AI governance policy guide</a> covers stop authority, accountability and escalation. Seek qualified privacy, security or legal advice when the consequence requires it.</p>
+<h2 class="insight-article__section-title">Trace one unit of work through every boundary</h2>
+<p>Choose one failed unit of work and give it a correlation identifier. This can be the platform&#39;s request ID, the form submission ID or an internal incident ID carried through the investigation. Its purpose is to connect events that different systems store separately.</p>
+<p>Follow that identifier through the workflow in order.</p>
+<ol>
+<li>Confirm that the trigger fired once, at the expected time, with the expected workflow version.</li>
+<li>Compare the original input with the data the next step received.</li>
+<li>Record each deterministic rule and the branch it selected.</li>
+<li>Inspect the model instruction, permitted context, retrieved sources and returned output.</li>
+<li>Check the request sent to each tool or integration and the response it returned.</li>
+<li>Verify the side effect in the system of record, such as the CRM record, email or task.</li>
+<li>Confirm that the correct human queue received enough context to act.</li>
+</ol>
+<p>At every boundary, ask four questions. What entered? What decision ran? What left? What should have left?</p>
+<p>Microsoft&#39;s guidance on <a href="https://learn.microsoft.com/en-us/ai/playbook/technology-guidance/generative-ai/mlops-in-openai/monitoring/monitoring">monitoring generative AI applications</a> describes logs as records of events, traces as the path a request takes through components and metrics as numerical measures observed over time. In operator language, logs tell you what one step recorded. A trace connects the steps for one case. Metrics show whether a pattern is growing across many cases.</p>
+<p>The Azure Well-Architected guidance on <a href="https://learn.microsoft.com/en-au/azure/well-architected/operational-excellence/observability">designing a monitoring system</a> defines correlation IDs as unique identifiers that connect related events across components. It also recommends tying telemetry to user flows and business objectives. A green completion count needs confirmation from the final CRM record, customer response or approved task.</p>
+<h2 class="insight-article__section-title">Match the symptom to the failing layer</h2>
+<p>Start with the visible symptom. Then inspect the narrowest evidence that can confirm where the case diverged. This keeps a missing CRM update from becoming an unnecessary prompt rewrite.</p>
+<table>
+<thead>
+<tr>
+<th>Symptom</th>
+<th>Check</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Did not trigger</td>
+<td>Event receipt, filter and workflow version</td>
+<td>Automation owner</td>
+</tr>
+<tr>
+<td>Wrong input</td>
+<td>Form payload, field mapping and permissions</td>
+<td>Website or data owner</td>
+</tr>
+<tr>
+<td>Wrong classification</td>
+<td>Rule result, model context and expected label</td>
+<td>Workflow owner</td>
+</tr>
+<tr>
+<td>Unsupported answer</td>
+<td>Retrieved sources and claim support</td>
+<td>Knowledge owner</td>
+</tr>
+<tr>
+<td>Duplicate action</td>
+<td>Retry policy, idempotency key and prior write</td>
+<td>Integration owner</td>
+</tr>
+<tr>
+<td>Missing CRM update</td>
+<td>API request, response and field schema</td>
+<td>CRM owner</td>
+</tr>
+<tr>
+<td>Stuck approval</td>
+<td>Queue rule, assignee and notification</td>
+<td>Process owner</td>
+</tr>
+<tr>
+<td>Lost handoff</td>
+<td>Context passed, acknowledgement and fallback</td>
+<td>Customer owner</td>
+</tr>
+<tr>
+<td>Rising exceptions</td>
+<td>Version changes and grouped failure cases</td>
+<td>Workflow owner</td>
+</tr>
+</tbody></table>
+<p>The named owner is the person accountable for investigating that boundary. They may need a vendor or specialist to make the change.</p>
+<p>When the evidence points to stale retrieval, missing sources, permission filters or unsupported answers, use the specialist guide to <a href="/insights/monitor-ai-knowledge-base-quality-guide">monitor AI knowledge base quality</a>. When a customer-facing escalation loses context or loops, use the <a href="/insights/ai-customer-experience-human-handoff-guide">human handoff guide</a>. Those repairs need their own tests.</p>
+<h2 class="insight-article__section-title">Work through an enquiry to CRM failure</h2>
+<p>Consider a hypothetical workflow based on the bounded intake design in the guide to <a href="/insights/ai-lead-qualification-website-intake-guide">AI lead qualification for a website</a>.</p>
+<p>A prospect submits a form for a website redesign. The form creates submission <code>ENQ-1842</code>. A validation rule confirms the required fields. A model classifies the enquiry and drafts a summary. An integration creates a CRM record. A routing rule assigns the follow-up task.</p>
+<p>One hard failure is easy to see. The CRM API rejects the write because the service value falls outside its allowed options. The trace shows a failed response, no record ID and no follow-up task. The failing boundary sits between the integration mapping and the CRM schema. The CRM and integration owners can repair that mapping and test the rejected value again.</p>
+<p>A silent business failure is harder. The API accepts the write and the platform reports success. The model classified the project as SEO because the prospect mentioned search traffic, even though the selected service was website design. The CRM record exists, but the wrong team receives it.</p>
+<p>The trace reveals that the original form value was correct. The model output changed the service category. The integration then wrote that output exactly as designed. The first divergence occurred at the classification boundary, so rebuilding the CRM connection would not fix the cause.</p>
+<p>The workflow owner can decide that an explicit form selection should take priority over model classification. The model can still summarise ambiguity or flag a possible secondary need. The test then needs to prove that the original service choice survives the full path and reaches the correct queue.</p>
+<h2 class="insight-article__section-title">Assign the repair at the boundary that failed</h2>
+<p>Ownership should follow the control that first produced the wrong state.</p>
+<p>A website owner repairs unclear fields, validation and journey context. A knowledge owner fixes stale or conflicting source material. A workflow owner changes deterministic rules and approval boundaries. An AI implementation owner changes model instructions, context or permitted actions. An integration owner repairs authentication, retries and field mappings. A CRM owner changes schemas, required values and duplicate controls. A process owner fixes queue capacity, responsibility and escalation.</p>
+<p>Some incidents expose a design problem across several boundaries. A vague form creates weak input. Service content leaves the model without a firm source. The CRM lacks a field for the decision. The follow-up queue lacks a fallback. That pattern needs a joined redesign rather than isolated tool changes.</p>
+<p>When the cause crosses forms, service content, analytics, CRM structure, integrations and customer follow-up, it becomes a <a href="/services/website-design">website and connected systems design</a> problem. The repair should make the entire customer path easier to inspect and own.</p>
+<p>After the immediate fix, improve detection. Microsoft&#39;s <a href="https://learn.microsoft.com/en-au/azure/well-architected/operational-excellence/observability">monitoring-system guidance</a> recommends actionable alerts with clear owners, actions and scope. It also recommends health signals tied to business and user flows. An alert such as “workflow failed” is too vague. An alert that says “CRM write rejected for ENQ-1842, no follow-up task created, integration owner assigned” gives someone a decision they can act on.</p>
+<h2 class="insight-article__section-title">Retest the business outcome before reopening</h2>
+<p>Reproduce the original case in a controlled environment where possible. Verify the repaired boundary, then follow the test all the way to the business record. A successful model response is incomplete evidence when the CRM, customer message or human task remains wrong.</p>
+<p>Retest a small, deliberate set of cases.</p>
+<ul>
+<li>the original failing input</li>
+<li>a normal case that already worked</li>
+<li>an edge case near the repaired rule</li>
+<li>a retry that must not create a duplicate action</li>
+<li>a failed dependency that must enter the fallback route</li>
+<li>a customer-facing exception that must reach a person with context</li>
+</ul>
+<p>Record the workflow version, test evidence, remaining limits, repair owner and reopening authority. Keep the manual route active until the named owner accepts the result. If the evidence remains insufficient, narrow the workflow&#39;s scope or keep it paused.</p>
+<p>Once the workflow is stable, <a href="/insights/measure-ai-workflow-automation-roi-reliability">measure reliability after the fix</a>. That review can track verified outcomes, exceptions, human review effort and the later decision to scale, fix or stop.</p>
+<p>A recoverable AI workflow makes its boundaries visible. It preserves the failing case, limits the immediate consequence and shows who owns the next test. That gives the team a defensible reason to reopen the workflow or a clear reason to redesign it before another customer becomes the test case.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/ai-workflow-automation-business-systems-guide" class="insight-card__link" aria-label="Read Choosing Which Business Workflows to Automate First">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Choosing Which Business Workflows to Automate First</h3>
+        <p class="insight-card__description">A practical guide to choosing AI workflow automation opportunities, preparing inputs, setting human review gates, and connecting website enquiries, CRM records, documents, and internal handoffs safely.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/measure-ai-workflow-automation-roi-reliability" class="insight-card__link" aria-label="Read How to Measure AI Workflow Automation ROI and Reliability">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>14 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">How to Measure AI Workflow Automation ROI and Reliability</h3>
+        <p class="insight-card__description">A practical framework for measuring AI workflow automation through verified outcomes, reliability, review effort, total cost, and clear scale, fix, or stop decisions.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/monitor-ai-knowledge-base-quality-guide" class="insight-card__link" aria-label="Read How to Monitor AI Knowledge Base Quality">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">How to Monitor AI Knowledge Base Quality</h3>
+        <p class="insight-card__description">Learn how to detect retrieval failures, unsupported answers, stale sources and access problems in a live AI knowledge base, then route each issue to the right repair.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

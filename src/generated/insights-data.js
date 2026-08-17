@@ -9,6 +9,34 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-workflow-automation-failure-diagnostic-guide",
+    "title": "Diagnosing Failures in Live AI Workflows",
+    "description": "A practical guide to preserving evidence, containing harm, tracing live AI workflow failures, assigning repairs and testing the business outcome before reopening.",
+    "intro": "When an AI-assisted workflow produces the wrong customer, CRM or operational outcome, a structured trace can reveal which boundary failed and who should repair it.",
+    "date": "2026-08-18",
+    "displayDate": "August 18, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "AI",
+      "Workflow Automation",
+      "Internal Systems",
+      "AI Reliability",
+      "Incident Response",
+      "Observability"
+    ],
+    "topics": [
+      "AI & Automation"
+    ],
+    "cluster": "AI Workflow Automation and Internal Systems",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "measure-ai-workflow-automation-roi-reliability",
+      "monitor-ai-knowledge-base-quality-guide"
+    ],
+    "imageAlt": "Diagnosing Failures in Live AI Workflows",
+    "url": "/insights/ai-workflow-automation-failure-diagnostic-guide"
+  },
+  {
     "slug": "build-buy-hybrid-ai-business-decision-guide",
     "title": "Choosing the Right Delivery Model for Business AI",
     "description": "Compare buy, configure, integrate, custom-build and defer routes for an approved business AI use case using fit, control, evidence and ownership cost.",
