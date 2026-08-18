@@ -87,6 +87,8 @@ Schema.org defines [`sameAs` as a URL that unambiguously indicates the same enti
 
 Use a profile when it clearly represents the same organisation, is controlled or reliably maintained, and agrees with the canonical facts. A current LinkedIn company page or verified review profile may pass. An old directory record, a founder's personal profile, a reseller page or a loosely related association page may fail.
 
+Keep people as governed identities in their own right. When an author, founder, or employee needs a canonical page and a stable relationship back to this organisation node, use the [expert profile and Person schema implementation guide](/insights/person-schema-expert-profile-page-guide).
+
 Before adding a URL, check that:
 
 - the organisation is the subject of the page

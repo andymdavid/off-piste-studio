@@ -37,6 +37,35 @@ export const INSIGHT_POSTS = [
     "url": "/insights/ai-workflow-automation-failure-diagnostic-guide"
   },
   {
+    "slug": "person-schema-expert-profile-page-guide",
+    "title": "Building Expert Profile Pages with Person Schema",
+    "description": "Build an expert profile page with visible evidence, ProfilePage and Person structured data, stable identifiers, connected authorship, and clear ownership.",
+    "intro": "An expert profile should give readers and search systems one accurate, maintained account of a person's role, work, and authorship. This guide shows how to build that page and connect it across the site.",
+    "date": "2026-08-18",
+    "displayDate": "August 18, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Person Schema",
+      "ProfilePage",
+      "Structured Data",
+      "Authorship",
+      "Entity Trust",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "article-schema-authorship-dates-guide",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "Building Expert Profile Pages with Person Schema",
+    "url": "/insights/person-schema-expert-profile-page-guide"
+  },
+  {
     "slug": "build-buy-hybrid-ai-business-decision-guide",
     "title": "Choosing the Right Delivery Model for Business AI",
     "description": "Compare buy, configure, integrate, custom-build and defer routes for an approved business AI use case using fit, control, evidence and ownership cost.",

@@ -148,7 +148,7 @@ Ask eligible customers honestly and consistently, allow their own sentiment, and
 
 Schema follows reconciliation. Google says [Organization structured data can help it understand administrative details and disambiguate an organisation](https://developers.google.com/search/docs/appearance/structured-data/organization). The same documentation defines `sameAs` as a page on another website with additional information, such as a social or review profile. It does not say that `sameAs` transfers authority or repairs a contradictory source.
 
-Once facts and selected profiles are approved, use the [Organization schema implementation guide](/insights/organization-schema-service-business-guide) to encode and validate them. Structured data should match the visible site and maintained public reality. Google does not guarantee a search feature or Knowledge Panel because markup exists.
+Once facts and selected profiles are approved, use the [Organization schema implementation guide](/insights/organization-schema-service-business-guide) to encode and validate business facts. For a founder, author, or employee, the [expert profile and Person schema guide](/insights/person-schema-expert-profile-page-guide) shows how approved external profiles can support one maintained on-site identity. Structured data should match the visible site and maintained public reality. Google does not guarantee a search feature or Knowledge Panel because markup exists.
 
 ## Earn corroboration where evidence is thin
 

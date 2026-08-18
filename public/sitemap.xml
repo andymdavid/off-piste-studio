@@ -374,7 +374,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/article-schema-authorship-dates-guide</loc>
-    <lastmod>2026-08-09</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -458,7 +458,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/how-ai-search-understands-your-business</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -512,13 +512,19 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/organization-schema-service-business-guide</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/perplexity-search-visibility-business-guide</loc>
     <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://offpistestudio.com/insights/person-schema-expert-profile-page-guide</loc>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -548,7 +554,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/third-party-brand-signals-ai-search-audit</loc>
-    <lastmod>2026-08-07</lastmod>
+    <lastmod>2026-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
