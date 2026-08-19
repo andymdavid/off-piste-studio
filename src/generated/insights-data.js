@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-business-profile-not-showing-diagnostic-guide",
+    "title": "Why Your Google Business Profile Isn't Showing",
+    "description": "Diagnose why a Google Business Profile is absent, restricted, duplicated, pending, or weak for local discovery searches, then choose the right recovery action.",
+    "intro": "A missing Google Business Profile can be a policy, ownership, processing, ranking, or measurement problem. This guide helps you identify the actual failure state before making another change.",
+    "date": "2026-08-20",
+    "displayDate": "August 20, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "SEO",
+      "Local SEO",
+      "Google Business Profile",
+      "Google Maps",
+      "Local Search",
+      "Search Diagnostics",
+      "Small Business"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Small Business"
+    ],
+    "cluster": "Local Search Visibility",
+    "relatedPosts": [
+      "google-business-profile-guide",
+      "how-to-get-on-first-page-of-google",
+      "third-party-brand-signals-ai-search-audit"
+    ],
+    "imageAlt": "Why Your Google Business Profile Isn't Showing",
+    "url": "/insights/google-business-profile-not-showing-diagnostic-guide"
+  },
+  {
     "slug": "ai-workflow-automation-failure-diagnostic-guide",
     "title": "Diagnosing Failures in Live AI Workflows",
     "description": "A practical guide to preserving evidence, containing harm, tracing live AI workflow failures, assigning repairs and testing the business outcome before reopening.",

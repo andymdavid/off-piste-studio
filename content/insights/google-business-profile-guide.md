@@ -25,6 +25,8 @@ Google Business Profile can help a nearby customer understand what you do, where
 
 Google says its local results are mainly based on [relevance, distance, and prominence](https://support.google.com/business/answer/7091). Relevance is how well a profile matches the search. Distance considers how far the business is from the location used in the search. Prominence reflects how well known the business is, with Google citing factors such as links, articles, directories, and review information.
 
+If a profile is absent, has disappeared, is restricted, or only appears for its business name, start with the [Google Business Profile visibility diagnostic](/insights/google-business-profile-not-showing-diagnostic-guide) before changing its fields.
+
 You can make the profile accurate and specific, build genuine customer proof, and support it with a useful website. The searcher's location remains fixed, so no responsible provider can promise a particular local position. Focus on clearer visibility for relevant searches and a better decision experience when the profile appears. Qualified calls, website visits, bookings, and direction requests show whether that visibility produces business value.
 
 ## Confirm eligibility before optimising fields
