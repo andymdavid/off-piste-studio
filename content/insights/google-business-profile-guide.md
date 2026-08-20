@@ -119,6 +119,8 @@ Maintenance should follow real business changes and customer needs. Update hours
 
 Google's [Business Profile performance guidance](https://support.google.com/business/answer/9918094) describes metrics that can include the searches used to find the profile, views, calls, website clicks, directions, bookings, and other interactions. Availability depends on the profile and feature. Definitions and attribution windows vary, so don't add unlike metrics together or treat every action as a confirmed lead.
 
+For a complete reporting method, use the guide to [measuring Google Business Profile performance through qualified leads](/insights/measure-google-business-profile-performance-qualified-leads). It connects profile activity with GA4, Search Console and business records without treating an interaction as revenue.
+
 The useful operating rhythm separates urgent factual maintenance from slower performance interpretation.
 
 ```insight-module

@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "measure-google-business-profile-performance-qualified-leads",
+    "title": "Measure Google Business Profile Performance Through Qualified Leads",
+    "description": "Build a Google Business Profile report that connects Search and Maps visibility with website actions, qualified enquiries, and revenue.",
+    "intro": "Profile views, calls and website clicks can all move without answering the commercial question. This guide shows you how to connect Google Business Profile activity with website behaviour and business records so the report measures qualified demand.",
+    "date": "2026-08-21",
+    "displayDate": "August 21, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "SEO",
+      "Local SEO",
+      "Google Business Profile",
+      "Google Maps",
+      "Analytics",
+      "Lead Attribution",
+      "Local Search Reporting"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Growth & Leads"
+    ],
+    "cluster": "Local Search Visibility / Local Search and Google Business Profile",
+    "relatedPosts": [
+      "google-business-profile-guide",
+      "google-business-profile-not-showing-diagnostic-guide",
+      "organic-traffic-not-generating-leads-intent-audit"
+    ],
+    "imageAlt": "Measure Google Business Profile Performance Through Qualified Leads",
+    "url": "/insights/measure-google-business-profile-performance-qualified-leads"
+  },
+  {
     "slug": "google-business-profile-not-showing-diagnostic-guide",
     "title": "Why Your Google Business Profile Isn't Showing",
     "description": "Diagnose why a Google Business Profile is absent, restricted, duplicated, pending, or weak for local discovery searches, then choose the right recovery action.",

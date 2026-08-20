@@ -23,6 +23,8 @@ Your profile is the business listing that can appear in Google Search and Maps. 
 
 The [Google Business Profile optimisation guide](/insights/google-business-profile-guide) covers eligibility, categories, service areas, reviews, posts, website alignment, and measurement against Google's current guidance. Use it for profile-level work, then return here for the wider website, content, and authority system needed to compete across local and organic results.
 
+When the profile is active and the question becomes commercial impact, use the framework for [measuring Google Business Profile performance through qualified leads](/insights/measure-google-business-profile-performance-qualified-leads). It keeps Search and Maps exposure, profile interactions, website actions and revenue evidence separate.
+
 If the profile is missing, restricted, duplicated, pending, or visible only for the business name, use the [Business Profile visibility diagnostic](/insights/google-business-profile-not-showing-diagnostic-guide) to identify the failure state before doing more optimisation work.
 
 ## Build a steady stream of Google reviews

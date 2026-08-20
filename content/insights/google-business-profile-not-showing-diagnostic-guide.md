@@ -81,6 +81,8 @@ The commercial question is larger than whether one person saw a map result. You 
 
 Google's [Business Profile performance definitions](https://support.google.com/business/answer/9918094?hl=en) cover applicable measures such as search terms, views on Search and Maps, calls, website clicks, directions, messages, and bookings. Metric availability varies by profile and feature. A view is exposure. A call or click is an interaction. Neither proves that a qualified lead or sale occurred.
 
+Once visibility is established, the guide to [measuring Business Profile performance through qualified leads](/insights/measure-google-business-profile-performance-qualified-leads) shows how to join these interactions with GA4, Search Console and business records.
+
 Compare several periods and keep seasonality, campaigns, closures, and major profile or website changes in view. Search Console can show whether local landing pages lost search exposure. Analytics can show what profile visitors did after reaching the website. Google also documents a [Business Profile connection to Google Analytics](https://support.google.com/analytics/answer/16930347), subject to the current account and property setup. Your CRM or enquiry log provides the final check on lead quality.
 
 The repair should follow the failure the evidence supports. The loudest metric in one interface may point somewhere else.
