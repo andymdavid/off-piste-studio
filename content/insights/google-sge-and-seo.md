@@ -36,6 +36,8 @@ That makes isolated keyword pages weaker. Strong supporting pages, clear interna
 
 Google's guidance is direct. The same SEO foundations apply to AI features in Search, and [Google's AI features documentation](https://developers.google.com/search/docs/appearance/ai-features) says there are no additional requirements for appearing in AI Overviews or AI Mode. To be eligible as a supporting link, a page needs to be indexed and eligible to appear in Google Search with a snippet.
 
+If an eligible page is still absent while competitors appear, start by [diagnosing missing AI Overview citations](/insights/google-ai-overviews-not-citing-website-diagnostic) before choosing a repair.
+
 That matters because a lot of AI search advice makes the work sound more exotic than it is. Google requires normal Search eligibility, not a special AI markup layer, new machine-readable AI text files, or special schema.org structured data for these features.
 
 The operational foundation is still familiar. Googlebot needs to crawl important pages, those pages need to be indexable, and useful content needs to appear as visible text. Headings, internal links, and page structure should clarify the subject. Structured data should match the visible content. The website should be fast, accessible, and technically sound. The content itself needs useful expertise rather than another version of the common answer.

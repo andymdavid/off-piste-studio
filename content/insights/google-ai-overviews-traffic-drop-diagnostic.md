@@ -23,6 +23,8 @@ The same chart could reflect lower search demand, a tracking change, a lost grou
 
 This guide helps you decide which explanation has enough support to act on. For more context on the search features, read [what Google AI Mode means for search visibility](/insights/google-sge-and-seo). Here, we're turning a traffic anomaly into a defensible diagnosis.
 
+If the site never appears among supporting links, start by [diagnosing absence from supporting links before analysing click loss](/insights/google-ai-overviews-not-citing-website-diagnostic). That's a pre-click selection problem, separate from a traffic-change investigation.
+
 ## Start with a comparison window you can defend
 
 Choose the business question before opening a report. Are you investigating fewer clicks, lower click-through rate, fewer qualified visits or lost enquiries? Each question needs different evidence.

@@ -9,6 +9,37 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-ai-overviews-not-citing-website-diagnostic",
+    "title": "Why Your Website Isn't Cited in Google AI Overviews",
+    "description": "Diagnose why an eligible website is absent from Google AI Overview supporting links, then choose the narrowest evidenced repair.",
+    "intro": "Seeing competitors cited in a Google AI Overview while your website is absent can point to several different problems. This diagnostic separates result variation, eligibility, query fit, source value and business clarity so you can test the cause before changing the site.",
+    "date": "2026-08-21",
+    "displayDate": "August 21, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "SEO",
+      "AI",
+      "Google Search",
+      "AI Overviews",
+      "AI Mode",
+      "Traffic Diagnosis",
+      "Technical SEO",
+      "Content Strategy"
+    ],
+    "topics": [
+      "AI & Automation",
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Google Search and AI Overviews",
+    "relatedPosts": [
+      "google-sge-and-seo",
+      "google-ai-mode-query-fan-out-content-planning",
+      "ai-search-citation-worthy-content"
+    ],
+    "imageAlt": "Why Your Website Isn't Cited in Google AI Overviews",
+    "url": "/insights/google-ai-overviews-not-citing-website-diagnostic"
+  },
+  {
     "slug": "measure-google-business-profile-performance-qualified-leads",
     "title": "Measure Google Business Profile Performance Through Qualified Leads",
     "description": "Build a Google Business Profile report that connects Search and Maps visibility with website actions, qualified enquiries, and revenue.",
