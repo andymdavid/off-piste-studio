@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-readiness-assessment-growing-business",
+    "title": "AI Readiness Assessment for Growing Businesses",
+    "description": "Assess whether a business area is ready for useful, governed and measurable AI, then identify the first prerequisite to repair.",
+    "intro": "Assess AI readiness through evidence across ownership, process, knowledge, people, governance, technology and measurement before choosing a use case or pilot.",
+    "date": "2026-08-23",
+    "displayDate": "August 23, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "AI Readiness",
+      "AI Strategy",
+      "Business Strategy",
+      "AI Governance",
+      "Internal Systems"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Small Business"
+    ],
+    "cluster": "AI Strategy and Use Case Selection",
+    "relatedPosts": [
+      "ai-use-case-prioritisation-framework-business",
+      "ai-ready-knowledge-base-business-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "AI Readiness Assessment for Growing Businesses",
+    "url": "/insights/ai-readiness-assessment-growing-business"
+  },
+  {
     "slug": "google-ai-overviews-not-citing-website-diagnostic",
     "title": "Why Your Website Isn't Cited in Google AI Overviews",
     "description": "Diagnose why an eligible website is absent from Google AI Overview supporting links, then choose the narrowest evidenced repair.",
