@@ -156,6 +156,8 @@ The broader [structured-content guide](/insights/structured-content-ai-search-gu
 
 Passing a syntax test proves that a parser can read the code. It doesn't prove that the entity model is true. Google's documented workflow includes validation, deployment, URL Inspection and crawl-access checks. Treat factual review as a separate gate.
 
+When duplicate nodes or conflicting identifiers extend beyond the business page, follow the [site-wide structured data audit workflow](/insights/structured-data-schema-audit-guide) before changing individual templates.
+
 1. Parse the JSON-LD and fix malformed JSON, invalid nesting and type errors.
 2. Run Google's Rich Results Test and review critical errors and relevant warnings. Organization markup may not produce a dedicated rich result preview.
 3. Inspect the live rendered URL. Confirm the final HTML contains the intended node once.

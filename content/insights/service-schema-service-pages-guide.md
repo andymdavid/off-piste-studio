@@ -120,6 +120,8 @@ Adapt the smallest accurate graph. Remove `offers` when the page doesn't publish
 
 Validation needs more than one tool because each check answers a different question. Begin with the rendered canonical page, since that's the version a crawler and buyer receive. Parse the JSON-LD, then use the [Schema.org Validator](https://validator.schema.org/) to check vocabulary and relationships. That result doesn't establish eligibility for a Google feature or prove that the business claims are true.
 
+If several service templates disagree or another plugin emits a second provider, use the [site-wide structured data audit](/insights/structured-data-schema-audit-guide) to establish the affected set and repair owner.
+
 Check Google's documentation separately for any search feature you expect to test. Service isn't a documented standalone Google rich-result type, so a missing Service preview isn't an implementation failure. After deployment, inspect the live HTML again and confirm the intended node, IDs and canonical URL survived the publishing path.
 
 The order matters because a green syntax result can distract from a wrong price, stale location or unresolved provider reference. Use this pre-publication check against the final page and record what changed.

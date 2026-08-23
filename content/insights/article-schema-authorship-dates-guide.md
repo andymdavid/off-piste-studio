@@ -110,6 +110,8 @@ Evidence review belongs in this decision. If revised research materially strengt
 
 ## Validate the rendered page
 
+When the mismatch appears across templates or testing tools disagree, begin with the [site-wide structured data audit](/insights/structured-data-schema-audit-guide) to separate source, rendering, eligibility and indexed-state defects.
+
 Validation should follow the publishing path that crawlers receive. A CMS preview or source field can look correct while the final template emits stale values.
 
 1. Open the deployed page and inspect its rendered HTML. Confirm the visible headline, byline, publication date, modified date and canonical URL.

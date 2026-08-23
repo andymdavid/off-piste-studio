@@ -173,6 +173,7 @@ Editorial boundaries:
 <p>Generate article references from one author record in the CMS rather than copying a full Person object into every article. That keeps role changes, profile migrations, and name updates together. Test representative pages whenever the model changes.</p>
 <h2 class="insight-article__section-title">Validate the page and its relationships</h2>
 <p>Validation needs to cover the reader-facing page, the markup, and the references between templates. Google&#39;s ProfilePage deployment guidance recommends validating markup, testing deployed pages with URL Inspection, ensuring Google can access them, and keeping sitemaps current.</p>
+<p>If Person identifiers or author relationships drift across several templates, use the <a href="/insights/structured-data-schema-audit-guide">site-wide structured data audit</a> to map the graph and assign the repair before editing one profile.</p>
 <ol>
 <li>Review the visible profile with the person and the fact owners. Remove unsupported claims and confirm consent for personal details, images, credentials, and links.</li>
 <li>Check the canonical URL, indexability, internal links, and rendered HTML. The profile should be accessible without login and focused on one affiliated person.</li>

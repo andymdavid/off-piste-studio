@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Audit rendered schema markup across your website, diagnose why tools disagree, assign repairs and verify structured data fixes after deployment.">
+  <title>A Practical Structured Data Audit for Your Website | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/structured-data-schema-audit-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "A Practical Structured Data Audit for Your Website",
+        "description": "Audit rendered schema markup across your website, diagnose why tools disagree, assign repairs and verify structured data fixes after deployment.",
+        "datePublished": "2026-08-23",
+        "dateModified": "2026-08-23",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/structured-data-schema-audit-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "A Practical Structured Data Audit for Your Website", "item": "https://offpistestudio.com/insights/structured-data-schema-audit-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="structured-data-schema-audit-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span><span>AI &amp; Automation</span></div><p class="insight-article__read-time">13 min read</p></div>
+          <h1 class="insight-article__title">A Practical Structured Data Audit for Your Website</h1>
+          <p class="insight-article__intro">A structured data audit follows the evidence from visible business facts through CMS data and rendered markup to the state Google can fetch, index and assess.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 23, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/structured-data-schema-audit-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/structured-data-schema-audit-guide&text=A%20Practical%20Structured%20Data%20Audit%20for%20Your%20Website" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/structured-data-schema-audit-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Primary sources checked 23 August 2026 in Australia/Perth:
+- Google Search Central, General structured data guidelines.
+- Google Search Console Help, Fix structured data issues.
+- Google Search Console Help, Rich Results Test.
+- Schema.org, Markup Validator.
+- Google Search Central, Generate structured data with JavaScript.
+- Google Search Central, AI features and your website.
+
+Editorial boundaries:
+- The audit sample, defect classes, prioritisation method and fictional examples are Off Piste's practical workflow, not a Google scoring system.
+- Passing a validator does not guarantee indexing, a rich result, rankings, a Knowledge Panel, an AI citation or a recommendation.
+- Tool interfaces and supported search features change. Check the current documentation while conducting an audit.
+-->
+
+<h2 class="insight-article__section-title">When valid markup still leaves you uncertain</h2>
+<p>A website redesign goes live. The SEO plugin reports no problems, but Search Console shows an Article warning. A service page passes one validator and appears absent from another. The homepage now contains two Organization nodes with different identifiers. Nobody is sure whether the cause sits in the copy, a CMS field, the template or Google&#39;s last crawl.</p>
+<p>Opening another testing tool won&#39;t resolve that uncertainty on its own. A useful structured data audit follows one claim through four states. What can a visitor see? What does the CMS or source record contain? What graph reaches the rendered page? What can Google currently fetch and what has it indexed?</p>
+<p>These states matter because syntax is only one test. Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies">general structured data guidelines</a> require markup to describe the page it appears on, represent visible content and follow technical and quality rules. Google also makes clear that correctly marked-up content isn&#39;t guaranteed a rich result. Validity, factual agreement, policy compliance, feature eligibility, indexing and display selection are separate judgements.</p>
+<p>The wider guide to <a href="/insights/structured-content-ai-search-guide">structuring a website for AI search</a> explains the relationship between semantic HTML, metadata, schema, proof and internal links. This guide takes the next job. It diagnoses an existing implementation and routes each repair to its owner.</p>
+<h2 class="insight-article__section-title">Define the audit sample before opening a validator</h2>
+<p>Choose a representative page from every template that emits structured data. Start with the homepage, a service page, an article and an expert profile where those templates exist. Add pages that are commercially important, recently changed or named in a Search Console issue. A random collection of URLs can hide template-wide defects.</p>
+<p>If a template has meaningful variants, sample them. A service page with a price, one without a price and one created before the latest CMS update may produce different graphs. Likewise, one clean article doesn&#39;t prove that older author records or migrated dates render correctly.</p>
+<p>Record the sample before investigation begins. This keeps a single alarming warning from displacing a defect that affects every high-value service page.</p>
+<table>
+<thead>
+<tr>
+<th>URL or template</th>
+<th>Intended subject</th>
+<th>Why it matters</th>
+<th>Signal to investigate</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Homepage</td>
+<td>Primary business</td>
+<td>Identity used across the site</td>
+<td>Duplicate Organization IDs</td>
+<td>Technical lead</td>
+</tr>
+<tr>
+<td>Service template</td>
+<td>Visible service offer</td>
+<td>Supports enquiries</td>
+<td>Provider reference missing</td>
+<td>Service owner</td>
+</tr>
+<tr>
+<td>Article template</td>
+<td>Article, author and publisher</td>
+<td>Publishing integrity</td>
+<td>Date warning in Search Console</td>
+<td>Editor</td>
+</tr>
+<tr>
+<td>Profile template</td>
+<td>Expert and profile page</td>
+<td>Connects authorship evidence</td>
+<td>Person ID changes by page</td>
+<td>Content lead</td>
+</tr>
+</tbody></table>
+<p>Search Console groups affected items by issue, which is useful evidence about reach. Google&#39;s <a href="https://support.google.com/webmasters/answer/13300208?hl=en">structured data issue workflow</a> recommends inspecting representative pages, testing the live URL and fixing all instances of a template problem before starting validation. Treat the report as one route into the sample, not a complete inventory of everything Schema.org can express.</p>
+<h2 class="insight-article__section-title">Check the facts people can actually see</h2>
+<p>Read each sampled page before reading its JSON-LD. Write down the name of the business, service, author, date, location and any material claim the markup is meant to describe. Confirm those facts against an approved business record where one exists.</p>
+<p>Imagine a fictional consultancy called Northbank Advisory. Its visible footer and approved profile use that trading name. An old theme component emits “Northbank Consulting Pty Ltd”, while a plugin emits a second Organization with a discontinued phone number. Both blocks may be readable JSON. The audit finding is still a factual and governance conflict.</p>
+<p>Ask the business to approve its canonical identity before a developer chooses between competing names. If that identity remains disputed, use the <a href="/insights/how-ai-search-understands-your-business">business entity and trust audit</a> first. Code should express an agreed fact rather than settle a commercial or legal disagreement.</p>
+<p>Visible structure also needs attention. Accurate JSON-LD doesn&#39;t compensate for an article with no byline, a service that never appears in the copy or a location hidden from visitors. When headings, labels, link text and page meaning are unclear, the repair belongs in <a href="/insights/website-accessibility-and-seo">accessible semantic website structure</a> as well as the markup.</p>
+<p>For every property that matters, record three things in plain language. State the rendered value, point to the visible or approved evidence and name who can approve a correction. This is the factual baseline for the technical inspection.</p>
+<h2 class="insight-article__section-title">Inspect source HTML and rendered output separately</h2>
+<p>View source tells you what the server returned initially. The rendered DOM tells you what exists after scripts and page components have run. A CMS field tells you what an editor entered. They&#39;re related, but none is proof of the others.</p>
+<p>Start by searching the initial response for <code>application/ld+json</code>, Microdata or RDFa. Then inspect the final DOM in browser developer tools. Count the nodes, copy the rendered blocks and compare their values with the factual baseline. Look for markup that appears twice, disappears during hydration or changes after a component loads.</p>
+<p>Google&#39;s guidance on <a href="https://developers.google.com/search/docs/appearance/structured-data/generate-structured-data-with-javascript">JavaScript-generated structured data</a> confirms that dynamically generated markup can be processed. It recommends testing the implementation with the Rich Results Test and checking the rendered HTML through URL Inspection. That makes the deployed output the audit evidence. A correct tag-manager rule or CMS preview isn&#39;t enough if the final page omits the node or a crawler can&#39;t retrieve its dependencies.</p>
+<p>When the results differ, capture the exact URL, test time, source block, rendered block and fetch result. A developer can act on that evidence. “Schema isn&#39;t detected” doesn&#39;t say whether the code was absent from source, injected late, removed by hydration, blocked during fetch or simply outside a tool&#39;s supported feature set.</p>
+<h2 class="insight-article__section-title">Use each testing tool for the question it answers</h2>
+<p>Tool disagreement often reflects a difference in scope or state. Use each result to answer its own question.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Question it answers</th>
+<th>What it cannot prove</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Source HTML</td>
+<td>What did the server return before scripts ran?</td>
+<td>What remained after rendering</td>
+</tr>
+<tr>
+<td>Rendered HTML</td>
+<td>What graph exists after the page runs?</td>
+<td>What Google has indexed</td>
+</tr>
+<tr>
+<td>Schema.org Markup Validator</td>
+<td>Can the vocabulary and graph be extracted?</td>
+<td>Google feature eligibility</td>
+</tr>
+<tr>
+<td>Rich Results Test</td>
+<td>Does the fetched page contain supported rich-result markup and relevant errors or warnings?</td>
+<td>Support for every Schema.org type</td>
+</tr>
+<tr>
+<td>URL Inspection</td>
+<td>Can Google access the live or indexed URL, and what state does it report?</td>
+<td>That a rich result will be shown</td>
+</tr>
+<tr>
+<td>Search Console report</td>
+<td>Which detected issue groups and affected items does Google report?</td>
+<td>A complete vocabulary audit</td>
+</tr>
+</tbody></table>
+<p>The <a href="https://schema.org/docs/validator.html">Schema.org Markup Validator documentation</a> says the tool extracts JSON-LD, RDFa and Microdata and presents a graph of the results. It can also evaluate dynamically generated markup. Use it to inspect vocabulary relationships and syntax without interpreting silence about a Google feature as a failure.</p>
+<p>Google&#39;s <a href="https://support.google.com/webmasters/answer/7445569?hl=en">Rich Results Test documentation</a> describes a different purpose. The test checks which Google rich-result types it finds on a public URL or code sample, reports crawl status, and shows detected items, errors and warnings. It also lets you inspect rendered HTML. It isn&#39;t a universal Schema.org validator.</p>
+<p>A Service node can therefore appear coherently in the Schema.org graph without producing a dedicated rich-result preview. A live test may also see a fix before the indexed result changes. Record which version each tool examined and what question you asked before treating the results as contradictory.</p>
+<h2 class="insight-article__section-title">Read the site as one connected entity graph</h2>
+<p>Page-by-page validation can miss a site-wide identity problem. Search the rendered sample for every <code>@id</code>, then map which nodes define an entity and which nodes refer to it.</p>
+<p>Return to Northbank Advisory. Its homepage defines <code>https://northbank.example/#organization</code>. Article pages identify the publisher as <code>https://northbank.example/#publisher</code>. Service pages embed a complete provider object with no <code>@id</code>. Those pages contain plausible values, but they don&#39;t express one consistently referenced provider.</p>
+<p>The repair is to approve one stable identity and make the relevant templates refer to it. The <a href="/insights/organization-schema-service-business-guide">Organization schema implementation guide</a> covers canonical business facts, stable identifiers and duplicate provider nodes. The <a href="/insights/service-schema-service-pages-guide">Service schema guide</a> covers connecting an accurate service offer to that provider without copying unsupported claims.</p>
+<p>Apply the same relationship check to publishing. Byline, Article author and expert profile should identify the same person where that is the intended model. Route article byline, publisher and date defects to the <a href="/insights/article-schema-authorship-dates-guide">Article schema guide</a>. Route disconnected authors, weak profile evidence and unstable Person identifiers to the <a href="/insights/person-schema-expert-profile-page-guide">expert profile and Person schema guide</a>.</p>
+<p>Consolidate nodes only when the evidence shows they describe the same entity. A parent company, local branch, practitioner and brand may be genuinely distinct. The audit should expose the modelling decision and its evidence while preserving those distinctions.</p>
+<h2 class="insight-article__section-title">Classify the defect before choosing the repair</h2>
+<p>The same symptom can have several causes. “Markup not detected” might be an empty required CMS field, a conditional template bug, client-side rendering failure, blocked fetch, unsupported rich-result type or an indexed version that predates the fix. Assign a defect class only after comparing the visible facts, source, rendered DOM and Google-facing evidence.</p>
+<table>
+<thead>
+<tr>
+<th>Defect class</th>
+<th>Typical evidence</th>
+<th>Likely owner</th>
+<th>Verification</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Content</td>
+<td>Visible fact is missing, stale or unsupported</td>
+<td>Editor or business owner</td>
+<td>Approved page and markup agree</td>
+</tr>
+<tr>
+<td>CMS data</td>
+<td>Correct field is empty or mapped inconsistently</td>
+<td>CMS owner</td>
+<td>Sample records render consistently</td>
+</tr>
+<tr>
+<td>Template logic</td>
+<td>Duplicate or wrong nodes recur by page type</td>
+<td>Developer</td>
+<td>Multiple template samples pass</td>
+</tr>
+<tr>
+<td>Rendering</td>
+<td>Markup appears late, changes or disappears</td>
+<td>Developer</td>
+<td>Deployed rendered DOM is stable</td>
+</tr>
+<tr>
+<td>Crawler access</td>
+<td>Live fetch can&#39;t retrieve the page or resources</td>
+<td>SEO and developer</td>
+<td>Live inspection succeeds</td>
+</tr>
+<tr>
+<td>Feature eligibility</td>
+<td>Valid type isn&#39;t supported for the expected display</td>
+<td>SEO lead</td>
+<td>Current feature documentation checked</td>
+</tr>
+<tr>
+<td>Stale indexing</td>
+<td>Live page is fixed but indexed state is older</td>
+<td>SEO lead</td>
+<td>Recrawl and report state monitored</td>
+</tr>
+</tbody></table>
+<p>Give the repair owner a precise handoff. Include the affected URL or template, the observed output, the expected output, the evidence for that expectation, the suspected owning layer and the method that will verify the deployed fix. Attach the smallest relevant snippets rather than a screenshot with no fetch state or URL.</p>
+<p>This classification keeps content teams from repeatedly editing copy to solve a rendering defect. It also keeps developers from changing a template before the business approves the fact it should publish.</p>
+<h2 class="insight-article__section-title">Prioritise by reach, risk and commercial importance</h2>
+<p>Fix misleading, hidden or policy-sensitive claims first. A false rating, unavailable offer or wrong business identity deserves attention even when it affects one page. Next, address defects repeated across important templates. Then handle warnings and useful enhancements that leave the page accurate.</p>
+<p>Consider two fictional findings. One article carries a recommended image warning. Every service page also emits a discontinued phone number in a duplicate provider node. The second issue has wider reach, exposes a stale business fact and affects pages close to enquiry. It should normally be repaired first, even if the warning is more visible in a dashboard.</p>
+<p>Avoid inventing a weighted score that implies more precision than the evidence supports. Record reach as the affected template set, risk as the consequence of leaving the statement live and importance as the page&#39;s role in a real customer journey. Add confidence when the cause is uncertain. The team can then see why a high-reach template defect outranks an isolated enhancement.</p>
+<h2 class="insight-article__section-title">Verify the deployed fix and the indexed state</h2>
+<p>Retest the public URL after deployment. Inspect the visible page and rendered graph again, then sample other pages using the same template. A fix on the example URL isn&#39;t complete if the shared template still fails for records with missing authors, optional prices or legacy fields.</p>
+<p>Run the relevant live tests and keep the output with the issue record. Use URL Inspection and request indexing when it is appropriate for the changed page. For a Search Console issue group, start <strong>Validate fix</strong> only after all known affected instances are corrected. Google&#39;s <a href="https://support.google.com/webmasters/answer/13300208?hl=en">fix structured data issues guidance</a> explains that validation checks pages in the issue group and can fail when an affected instance remains unresolved.</p>
+<p>Keep three statuses separate in reporting. The deployed page can be fixed. Google can recrawl and index the new version later. Google can then decide whether and how to display an eligible result. A passed live test proves neither the indexed state nor future presentation.</p>
+<p>This boundary also matters for AI search. Google&#39;s current <a href="https://developers.google.com/search/docs/appearance/ai-features">AI features guidance</a> says there is no special Schema.org markup required for AI Overviews or AI Mode. Normal Search technical requirements still apply, and structured data should match visible text. An accurate graph can improve clarity and governance, but don&#39;t report it as a guarantee of rankings, Knowledge Panels, AI citations or recommendations.</p>
+<h2 class="insight-article__section-title">Turn the audit into a governed repair plan</h2>
+<p>An audit is useful when every finding ends in a decision. Isolated content or CMS mismatches can often be corrected internally once an owner approves the source fact. Known entity problems can move into the linked Organization, Service, Article or Person implementation guide. Template-wide duplication, crawl uncertainty and Search Console reporting may need a coordinated <a href="/services/seo">technical SEO audit</a>. Weak CMS modelling, hydration problems and inconsistent page architecture may need <a href="/services/website-design">website design and development</a>.</p>
+<p>Keep the evidence record after the repair. It becomes the regression sample for the next redesign, plugin update or CMS migration. Give each critical template an editorial owner for meaning and a technical owner for output. Review stable identifiers and visible facts when the business changes, not whenever a validator changes colour.</p>
+<p>Fix what is false or risky, repair what repeats at scale, document what is ineligible for a hoped-for feature and monitor what is waiting for recrawl. That&#39;s how a structured data audit turns uncertain warnings into owned website work.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/structured-content-ai-search-guide" class="insight-card__link" aria-label="Read Structuring Your Website for AI Search">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>14 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Structuring Your Website for AI Search</h3>
+        <p class="insight-card__description">A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/organization-schema-service-business-guide" class="insight-card__link" aria-label="Read How to Optimise Organisation Schema for Your Service Business">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">How to Optimise Organisation Schema for Your Service Business</h3>
+        <p class="insight-card__description">Learn how to choose Organization or LocalBusiness schema, map verified business facts into JSON-LD, validate the result, and keep it accurate.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/article-schema-authorship-dates-guide" class="insight-card__link" aria-label="Read Article Schema That Keeps Authorship and Dates Accurate">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Article Schema That Keeps Authorship and Dates Accurate</h3>
+        <p class="insight-card__description">Learn how to map article facts into accurate JSON-LD, govern authors and dates, validate rendered markup, and maintain the publishing template.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

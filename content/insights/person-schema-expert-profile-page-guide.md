@@ -135,6 +135,8 @@ Generate article references from one author record in the CMS rather than copyin
 
 Validation needs to cover the reader-facing page, the markup, and the references between templates. Google's ProfilePage deployment guidance recommends validating markup, testing deployed pages with URL Inspection, ensuring Google can access them, and keeping sitemaps current.
 
+If Person identifiers or author relationships drift across several templates, use the [site-wide structured data audit](/insights/structured-data-schema-audit-guide) to map the graph and assign the repair before editing one profile.
+
 1. Review the visible profile with the person and the fact owners. Remove unsupported claims and confirm consent for personal details, images, credentials, and links.
 2. Check the canonical URL, indexability, internal links, and rendered HTML. The profile should be accessible without login and focused on one affiliated person.
 3. Inspect the rendered JSON-LD. Confirm its claims appear visibly and its canonical URL, ProfilePage `@id`, Person `@id`, and organisation `@id` are consistent.

@@ -380,7 +380,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/article-schema-authorship-dates-guide</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -536,7 +536,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/organization-schema-service-business-guide</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -548,7 +548,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/person-schema-expert-profile-page-guide</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -560,7 +560,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/service-schema-service-pages-guide</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -572,7 +572,13 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/structured-content-ai-search-guide</loc>
-    <lastmod>2026-08-13</lastmod>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://offpistestudio.com/insights/structured-data-schema-audit-guide</loc>
+    <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

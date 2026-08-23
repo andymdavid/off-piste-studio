@@ -38,6 +38,35 @@ export const INSIGHT_POSTS = [
     "url": "/insights/ai-readiness-assessment-growing-business"
   },
   {
+    "slug": "structured-data-schema-audit-guide",
+    "title": "A Practical Structured Data Audit for Your Website",
+    "description": "Audit rendered schema markup across your website, diagnose why tools disagree, assign repairs and verify structured data fixes after deployment.",
+    "intro": "A structured data audit follows the evidence from visible business facts through CMS data and rendered markup to the state Google can fetch, index and assess.",
+    "date": "2026-08-23",
+    "displayDate": "August 23, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "Structured Data",
+      "Schema Markup",
+      "Technical SEO",
+      "Schema Validation",
+      "Search Console",
+      "JSON-LD"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "structured-content-ai-search-guide",
+      "organization-schema-service-business-guide",
+      "article-schema-authorship-dates-guide"
+    ],
+    "imageAlt": "A Practical Structured Data Audit for Your Website",
+    "url": "/insights/structured-data-schema-audit-guide"
+  },
+  {
     "slug": "google-ai-overviews-not-citing-website-diagnostic",
     "title": "Why Your Website Isn't Cited in Google AI Overviews",
     "description": "Diagnose why an eligible website is absent from Google AI Overview supporting links, then choose the narrowest evidenced repair.",

@@ -130,6 +130,8 @@ For SEO work, this belongs inside technical search foundations rather than isola
 
 ## A practical audit for existing pages
 
+If warnings, duplicate JSON-LD or conflicting tool results span several templates, use the [practical structured data audit](/insights/structured-data-schema-audit-guide) to inspect rendered output, classify the defect and verify the deployed repair.
+
 Start with pages that carry commercial weight. Homepage, core service pages, location pages, pricing pages, case studies, contact flows, and high-traffic articles are usually better targets than low-value blog posts.
 
 1. Read the page like a buyer. Ask whether the service, audience, proof, location, price logic, risks, and next step are clear without prior knowledge.
