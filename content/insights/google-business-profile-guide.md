@@ -5,7 +5,7 @@ description: A practical, evidence-led guide to Google Business Profile eligibil
 intro: A useful Google Business Profile makes your business easier to understand and easier to choose. This guide shows local businesses what to fix first, what Google documents, and how to measure the profile through customer actions.
 author: Lara
 date: 2026-03-16
-updatedDate: 2026-08-09
+updatedDate: 2026-08-25
 readTime: 13 min read
 tags: SEO, Local SEO, Google Business Profile, Local Business
 topics: SEO & Search, Small Business
@@ -18,6 +18,7 @@ Source check record, 9 August 2026 AWST:
 - Checked Google Business Profile guidance for local ranking, business representation, service areas, posts, and performance.
 - Checked Google Maps fake engagement policy, ACCC online review guidance, and Google Search Central structured-data guidance.
 - Profile fields, verification options, policies, and performance metrics can change. Recheck the linked primary sources before a future material refresh.
+- Added the reciprocal review-workflow link on 25 August 2026 AWST after rechecking the linked Google review and ACCC policy sources.
 -->
 ## A useful profile works within local search
 
@@ -74,6 +75,8 @@ Avoid stock imagery that could misrepresent the work and don't publish customer,
 Reviews give prospective customers evidence from people who have used the business. Google's [local ranking guidance](https://support.google.com/business/answer/7091) says more reviews and positive ratings can help local ranking, but that doesn't make review count, response speed, or review velocity a guaranteed formula.
 
 Ask customers through a consistent, neutral process. A direct review link sent after the relevant experience can remove friction. The request should allow an honest response and should go to customers on the same basis, rather than only to people expected to leave a favourable rating.
+
+For request timing, neutral templates, ownership, privacy and escalation, use the guide to [building a compliant Google review workflow](/insights/google-review-request-response-workflow-local-business).
 
 Google Maps requires contributions to reflect genuine experiences and prohibits [fake engagement, incentives, selective solicitation, and rating manipulation](https://support.google.com/contributionpolicy/answer/7400114). Don't buy reviews, ask staff or connected parties to pose as customers, offer a reward for a positive rating, or discourage dissatisfied customers from using the same review route.
 

@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-review-request-response-workflow-local-business",
+    "title": "A Compliant Google Review Workflow for Local Businesses",
+    "description": "Build a compliant Google review workflow with neutral requests, clear timing, privacy-safe responses and practical escalation rules.",
+    "intro": "A reliable review process makes it easy for customers to share a genuine experience and gives your team a safe way to respond. This guide covers the request moment, Google review links and QR codes, neutral templates, response routes and practical measures.",
+    "date": "2026-08-25",
+    "displayDate": "August 25, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Google Business Profile",
+      "Google Reviews",
+      "Local SEO",
+      "Review Management",
+      "Online Review Policy",
+      "Customer Experience",
+      "Australia"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Small Business"
+    ],
+    "cluster": "Local Search and Google Business Profile",
+    "relatedPosts": [
+      "google-business-profile-guide",
+      "google-business-profile-not-showing-diagnostic-guide",
+      "measure-google-business-profile-performance-qualified-leads"
+    ],
+    "imageAlt": "A Compliant Google Review Workflow for Local Businesses",
+    "url": "/insights/google-review-request-response-workflow-local-business"
+  },
+  {
     "slug": "ai-readiness-assessment-growing-business",
     "title": "AI Readiness Assessment for Growing Businesses",
     "description": "Assess whether a business area is ready for useful, governed and measurable AI, then identify the first prerequisite to repair.",
@@ -1261,8 +1291,8 @@ export const INSIGHT_POSTS = [
     "intro": "A useful Google Business Profile makes your business easier to understand and easier to choose. This guide shows local businesses what to fix first, what Google documents, and how to measure the profile through customer actions.",
     "date": "2026-03-16",
     "displayDate": "March 16, 2026",
-    "updatedDate": "2026-08-09",
-    "displayUpdatedDate": "August 9, 2026",
+    "updatedDate": "2026-08-25",
+    "displayUpdatedDate": "August 25, 2026",
     "readTime": "13 min read",
     "tags": [
       "SEO",
