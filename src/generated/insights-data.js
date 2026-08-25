@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-assisted-content-quality-audit-guide",
+    "title": "A Practical Quality Audit for AI-Assisted Content",
+    "description": "Audit AI-assisted content before publication and make a defensible pass, revise, or reject decision based on purpose, evidence, voice, privacy, and ownership.",
+    "intro": "A polished AI-assisted draft can still contain weak thinking, unsupported claims, exposed information, or nobody willing to own the final decision. A practical quality audit finds those problems before they become public.",
+    "date": "2026-08-26",
+    "displayDate": "August 26, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "AI",
+      "Content Quality",
+      "Editorial Review",
+      "Content Governance",
+      "Brand Voice",
+      "Fact Checking"
+    ],
+    "topics": [
+      "Content & Brand",
+      "AI & Automation"
+    ],
+    "cluster": "AI Content, Voice, and Expertise",
+    "relatedPosts": [
+      "ai-assisted-content-workflow-expertise-guide",
+      "website-content-evidence-audit",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "A Practical Quality Audit for AI-Assisted Content",
+    "url": "/insights/ai-assisted-content-quality-audit-guide"
+  },
+  {
     "slug": "google-review-request-response-workflow-local-business",
     "title": "A Compliant Google Review Workflow for Local Businesses",
     "description": "Build a compliant Google review workflow with neutral requests, clear timing, privacy-safe responses and practical escalation rules.",
