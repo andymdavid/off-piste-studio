@@ -1,11 +1,11 @@
 ---
-title: How to Make Website Content Worth Citing in AI Search
+title: Citation-Worthy Content for AI Search: A Practical Guide
 slug: ai-search-citation-worthy-content
-description: A practical framework for making service pages, articles, and proof assets specific, evidenced, and useful enough for AI search systems and buyers to trust.
-intro: AI search rewards pages with clear claims, visible proof, and useful context. If your website sounds like everyone else, answer engines have little reason to cite it and buyers have little reason to trust it. Citation-worthy content gives both groups clearer evidence.
+description: Learn how to create citation-worthy content for AI search using clear claims, first-hand proof, credible sources, and a practical page framework.
+intro: Citation-worthy content gives AI search systems a clear, evidenced answer they can extract and buyers a useful source they can trust. This guide shows service businesses how to strengthen claims, proof, sources, page structure, and measurement without relying on AI-specific tricks.
 author: Lara
 date: 2026-07-16
-updatedDate: 2026-08-02
+updatedDate: 2026-08-26
 readTime: 12 min read
 tags: SEO, AI, Content Strategy, Website Design
 topics: SEO & Search, AI & Automation
