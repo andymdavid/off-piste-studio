@@ -356,7 +356,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/ai-search-citation-worthy-content</loc>
-    <lastmod>2026-08-12</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -405,6 +405,12 @@
   <url>
     <loc>https://offpistestudio.com/insights/building-your-website-for-llms</loc>
     <lastmod>2026-08-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://offpistestudio.com/insights/business-rebrand-entity-search-migration-guide</loc>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -482,13 +488,13 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/google-sge-and-seo</loc>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/how-ai-search-understands-your-business</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -584,7 +590,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/structured-content-ai-search-guide</loc>
-    <lastmod>2026-08-23</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -596,7 +602,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/third-party-brand-signals-ai-search-audit</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-08-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

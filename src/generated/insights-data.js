@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "business-rebrand-entity-search-migration-guide",
+    "title": "How to Rebrand Without Losing Search Visibility",
+    "description": "Plan a business rebrand across your website, domain, Google Business Profile, schema, external profiles, and post-launch search checks.",
+    "intro": "A rebrand changes the evidence that search engines, AI systems, profiles, and buyers use to recognise your business. This guide shows you how to carry one approved identity across every important source.",
+    "date": "2026-08-27",
+    "displayDate": "August 27, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "Business Rebrand",
+      "Entity Migration",
+      "Domain Migration",
+      "Google Business Profile",
+      "Organisation Schema",
+      "Search Visibility"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "third-party-brand-signals-ai-search-audit",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "How to Rebrand Without Losing Search Visibility",
+    "url": "/insights/business-rebrand-entity-search-migration-guide"
+  },
+  {
     "slug": "ai-assisted-content-quality-audit-guide",
     "title": "A Practical Quality Audit for AI-Assisted Content",
     "description": "Audit AI-assisted content before publication and make a defensible pass, revise, or reject decision based on purpose, evidence, voice, privacy, and ownership.",
@@ -1057,13 +1086,13 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "ai-search-citation-worthy-content",
-    "title": "How to Make Website Content Worth Citing in AI Search",
-    "description": "A practical framework for making service pages, articles, and proof assets specific, evidenced, and useful enough for AI search systems and buyers to trust.",
-    "intro": "AI search rewards pages with clear claims, visible proof, and useful context. If your website sounds like everyone else, answer engines have little reason to cite it and buyers have little reason to trust it. Citation-worthy content gives both groups clearer evidence.",
+    "title": "Citation-Worthy Content for AI Search: A Practical Guide",
+    "description": "Learn how to create citation-worthy content for AI search using clear claims, first-hand proof, credible sources, and a practical page framework.",
+    "intro": "Citation-worthy content gives AI search systems a clear, evidenced answer they can extract and buyers a useful source they can trust. This guide shows service businesses how to strengthen claims, proof, sources, page structure, and measurement without relying on AI-specific tricks.",
     "date": "2026-07-16",
     "displayDate": "July 16, 2026",
-    "updatedDate": "2026-08-02",
-    "displayUpdatedDate": "August 2, 2026",
+    "updatedDate": "2026-08-26",
+    "displayUpdatedDate": "August 26, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
@@ -1081,7 +1110,7 @@ export const INSIGHT_POSTS = [
       "building-your-website-for-llms",
       "how-to-measure-ai-search-visibility"
     ],
-    "imageAlt": "How to Make Website Content Worth Citing in AI Search",
+    "imageAlt": "Citation-Worthy Content for AI Search: A Practical Guide",
     "url": "/insights/ai-search-citation-worthy-content"
   },
   {
@@ -1147,8 +1176,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
     "date": "2026-07-13",
     "displayDate": "July 13, 2026",
-    "updatedDate": "2026-08-26",
-    "displayUpdatedDate": "August 26, 2026",
+    "updatedDate": "2026-08-08",
+    "displayUpdatedDate": "August 8, 2026",
     "readTime": "13 min read",
     "tags": [
       "SEO",
@@ -1437,9 +1466,9 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "google-sge-and-seo",
-    "title": "What Google AI Mode Means for Search Visibility",
-    "description": "How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.",
-    "intro": "Google's AI search features have moved on from the old SGE label. AI Overviews and AI Mode now change how some searches are answered, how clicks are earned, and how businesses should judge visibility. The practical response is stronger search foundations, clearer evidence, and better measurement.",
+    "title": "Google SGE and SEO: What AI Overviews Mean Now",
+    "description": "Google SGE is now AI Overviews and AI Mode. Learn what the shift means for SEO, snippets, citations, clicks, and practical website improvements.",
+    "intro": "Google SGE, short for Search Generative Experience, became AI Overviews and AI Mode. The names changed, but the SEO question remains commercial: can Google understand, trust, and cite your website when buyers research a service? This guide explains the impact on snippets, clicks, citations, and the practical improvements worth making now.",
     "date": "2026-03-06",
     "displayDate": "March 6, 2026",
     "updatedDate": "2026-07-21",
@@ -1460,7 +1489,7 @@ export const INSIGHT_POSTS = [
       "building-your-website-for-llms",
       "ai-search-citation-worthy-content"
     ],
-    "imageAlt": "What Google AI Mode Means for Search Visibility",
+    "imageAlt": "Google SGE and SEO: What AI Overviews Mean Now",
     "url": "/insights/google-sge-and-seo"
   },
   {

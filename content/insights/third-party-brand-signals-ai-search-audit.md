@@ -170,7 +170,7 @@ ChatGPT Search can display [inline citations and a Sources panel](https://help.o
 
 Use the full [AI search visibility measurement guide](/insights/how-to-measure-ai-search-visibility) to record representation, citations, referral visits, and lead quality without treating a small prompt set as the market. Keep source corrections in the same change log so the team can see what changed without forcing causal conclusions.
 
-Schedule another source review after a rebrand, move, merger, new service, retired service, senior-team change, acquisition, or major new profile. A stable business can use a periodic review. A changing business needs event-driven checks as well.
+Schedule another source review after a move, merger, new service, retired service, senior-team change, acquisition, or major new profile. For a planned identity change, use the [business rebrand migration guide](/insights/business-rebrand-entity-search-migration-guide) to sequence the website, profiles, redirects, and outside corrections around one approved record. A stable business can use a periodic review. A changing business needs event-driven checks as well.
 
 ## Decide who owns the remaining problem
 
