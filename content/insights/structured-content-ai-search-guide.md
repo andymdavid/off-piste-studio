@@ -56,6 +56,12 @@ Google's separate [generative AI optimisation guidance](https://developers.googl
 
 Structure still matters. It should help a buyer and a search system understand real content more accurately, instead of decorating weak content with technical labels.
 
+## How featured snippets relate to AI content structure
+
+Featured snippets and AI search both benefit from content that answers a specific question clearly, then supports the answer with useful context. A concise definition beneath a descriptive heading, followed by steps, a table, an example, or evidence, gives Google a passage it can evaluate for a featured snippet and gives AI systems a self-contained section they can interpret accurately.
+
+The relationship is structural, not a guarantee of visibility. Featured snippets are a Google Search presentation format, while AI Overviews and AI Mode can combine several sources into a generated response. Neither requires special AI schema. The same sound page design helps both: use question-led headings where they match real buyer needs, answer directly in visible text, keep claims and proof close together, and add structured data only when it matches what the page shows.
+
 ## The page anatomy AI search can work with
 
 The strongest pages make their meaning inspectable early.
