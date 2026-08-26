@@ -1,8 +1,8 @@
 ---
-title: What Google AI Mode Means for Search Visibility
+title: Google SGE and SEO: What AI Overviews Mean Now
 slug: google-sge-and-seo
-description: How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.
-intro: Google's AI search features have moved on from the old SGE label. AI Overviews and AI Mode now change how some searches are answered, how clicks are earned, and how businesses should judge visibility. The practical response is stronger search foundations, clearer evidence, and better measurement.
+description: Google SGE is now AI Overviews and AI Mode. Learn what the shift means for SEO, snippets, citations, clicks, and practical website improvements.
+intro: Google SGE, short for Search Generative Experience, became AI Overviews and AI Mode. The names changed, but the SEO question remains commercial: can Google understand, trust, and cite your website when buyers research a service? This guide explains the impact on snippets, clicks, citations, and the practical improvements worth making now.
 date: 2026-03-06
 updatedDate: 2026-07-21
 readTime: 12 min read
@@ -15,6 +15,8 @@ relatedPosts: how-to-measure-ai-search-visibility, building-your-website-for-llm
 ## SGE became AI Overviews and AI Mode
 
 Search Generative Experience, or SGE, was the early label. The live business issue is now Google's AI Overviews and AI Mode. They are part of Google Search, they can change how information is summarized, and they can affect which pages earn attention before a buyer reaches the traditional organic results.
+
+If you are researching SGE SEO, there is no separate optimisation system to buy or implement. The relevant work is current [SEO planning](/services/seo): make important pages eligible for Search, answer the buyer's real question, support claims with visible evidence, and connect services, proof, and useful guidance with descriptive internal links.
 
 Search behaviour varies by query. Google says AI Overviews are shown when its systems decide they add value beyond classic Search, and that they often do not trigger. AI Mode is built for more exploratory questions, comparisons, and follow-up research. The useful question for a business is whether Google can find, understand, trust, and cite the pages that explain your expertise when a buyer is researching.
 
