@@ -1147,8 +1147,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
     "date": "2026-07-13",
     "displayDate": "July 13, 2026",
-    "updatedDate": "2026-08-08",
-    "displayUpdatedDate": "August 8, 2026",
+    "updatedDate": "2026-08-26",
+    "displayUpdatedDate": "August 26, 2026",
     "readTime": "13 min read",
     "tags": [
       "SEO",

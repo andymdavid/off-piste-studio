@@ -4,7 +4,7 @@ slug: how-to-measure-ai-search-visibility
 description: A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.
 intro: AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.
 date: 2026-07-13
-updatedDate: 2026-08-08
+updatedDate: 2026-08-26
 readTime: 13 min read
 tags: SEO, AI
 topics: SEO & Search, AI & Automation
@@ -195,6 +195,12 @@ Some fixes are content-led. Some are technical. Some are positioning decisions t
 ## Set a review rhythm
 
 Repeat the audit on a cadence the business can maintain. Monthly is enough for most service businesses. Fortnightly can make sense during a launch, repositioning, migration, or active content campaign.
+
+### Can you A/B test content for AI visibility?
+
+A conventional A/B test is rarely reliable for AI visibility because answer engines may see different variants at different times, and their outputs also change with the platform, prompt, location, model, and source set. If you control a large group of comparable pages, you can test one clearly defined change on a treatment group while leaving a matched control group unchanged, then compare citation, mention, and qualified-traffic trends over the same period.
+
+Most service businesses will get a clearer result from a time-based test. Record a baseline across the same prompt set, citations, crawler access, Search Console visibility, referrals, and lead-quality signals; make one focused content change; then repeat the checks on the same cadence. Treat movement across several signals as evidence, not a single answer or impression change as proof.
 
 Use the same prompt set, logging fields, and commercial signals. Add new prompts only when buyer behaviour changes or a new service matters. Keep a short notes field for model changes, website updates, PR mentions, reviews, and major search shifts.
 
