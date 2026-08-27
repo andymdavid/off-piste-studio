@@ -86,6 +86,8 @@ That differs from saying schema guarantees AI visibility. It doesn't. Google is 
 
 Use schema as a confirmation layer. The visible page should make the fact clear. The schema should describe the same fact in a machine-readable way.
 
+When budget or template capacity is limited, use [the service-business schema prioritisation framework](/insights/schema-markup-priorities-service-business) to decide which identity, page and offer types deserve implementation first.
+
 | Schema type | Use when | Avoid when |
 | --- | --- | --- |
 | [Organization](/insights/organization-schema-service-business-guide) | The site needs clear business identity, logo, profiles, and contact facts | The business details are inconsistent or missing from visible pages |

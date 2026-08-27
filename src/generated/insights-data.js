@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "schema-markup-priorities-service-business",
+    "title": "Schema Markup Priorities for a Service Business",
+    "description": "Decide which schema markup your service business should fund first using visible evidence, Google support, template reach, commercial value and maintenance ownership.",
+    "intro": "A service business rarely needs every schema type recommended by a plugin or generic checklist. A useful backlog starts with the facts the site can prove and the templates the team can maintain.",
+    "date": "2026-08-28",
+    "displayDate": "August 28, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Schema Markup",
+      "Structured Data",
+      "Technical SEO",
+      "Schema Prioritisation",
+      "Service Businesses",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "structured-content-ai-search-guide",
+      "structured-data-schema-audit-guide",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "Schema Markup Priorities for a Service Business",
+    "url": "/insights/schema-markup-priorities-service-business"
+  },
+  {
     "slug": "business-rebrand-entity-search-migration-guide",
     "title": "How to Rebrand Without Losing Search Visibility",
     "description": "Plan a business rebrand across your website, domain, Google Business Profile, schema, external profiles, and post-launch search checks.",
@@ -1176,8 +1205,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
     "date": "2026-07-13",
     "displayDate": "July 13, 2026",
-    "updatedDate": "2026-08-08",
-    "displayUpdatedDate": "August 8, 2026",
+    "updatedDate": "2026-08-26",
+    "displayUpdatedDate": "August 26, 2026",
     "readTime": "13 min read",
     "tags": [
       "SEO",
