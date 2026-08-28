@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Learn how to build accessible breadcrumbs and matching BreadcrumbList JSON-LD from one maintained site hierarchy.">
+  <title>Breadcrumb Schema That Reflects Your Site Hierarchy | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/breadcrumb-schema-site-hierarchy-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Breadcrumb Schema That Reflects Your Site Hierarchy",
+        "description": "Learn how to build accessible breadcrumbs and matching BreadcrumbList JSON-LD from one maintained site hierarchy.",
+        "datePublished": "2026-08-29",
+        "dateModified": "2026-08-29",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/breadcrumb-schema-site-hierarchy-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Breadcrumb Schema That Reflects Your Site Hierarchy", "item": "https://offpistestudio.com/insights/breadcrumb-schema-site-hierarchy-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="breadcrumb-schema-site-hierarchy-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span><span>Websites &amp; UX</span></div><p class="insight-article__read-time">12 min read</p></div>
+          <h1 class="insight-article__title">Breadcrumb Schema That Reflects Your Site Hierarchy</h1>
+          <p class="insight-article__intro">Breadcrumb schema works when the visible trail and the machine-readable trail describe the same place. This guide shows how to choose that path, build it accessibly, generate it once and keep it accurate.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 29, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/breadcrumb-schema-site-hierarchy-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/breadcrumb-schema-site-hierarchy-guide&text=Breadcrumb%20Schema%20That%20Reflects%20Your%20Site%20Hierarchy" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/breadcrumb-schema-site-hierarchy-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Primary sources checked 29 August 2026 in Australia/Perth:
+- Google Search Central, Breadcrumb structured data.
+- Google Search Central, General structured data guidelines.
+- Schema.org, BreadcrumbList.
+- W3C WAI-ARIA Authoring Practices Guide, Breadcrumb Pattern.
+- Google Search Console Help, Rich Results Test.
+- Google Search Console Help, Rich result report overview.
+
+Editorial boundaries:
+- The fictional Coastline Electrical example is illustrative.
+- The one-source generation pattern is Off Piste field practice, not a Google or Schema.org requirement.
+- Correct structured data does not guarantee search presentation, rankings, click-through rate, AI citations or entity understanding.
+-->
+
+<h2 class="insight-article__section-title">A breadcrumb is a claim about where a page belongs</h2>
+<p>A marketing team chooses breadcrumb schema from its technical SEO backlog. The developer asks for the parent of a commercial solar page. Marketing calls it a service. The website navigation places it under solutions. The CMS treats it as a child of electrical services. That small schema task has exposed an information architecture decision.</p>
+<p>Breadcrumb schema is the common phrase. <code>BreadcrumbList</code> is the Schema.org type used to express the ordered trail. Google&#39;s current <a href="https://developers.google.com/search/docs/appearance/structured-data/breadcrumb">Breadcrumb structured data documentation</a> says breadcrumb markup helps categorise page information in search results. It recommends a typical user path rather than a mechanical copy of the URL structure.</p>
+<p>The implementation job begins after the type has been selected. If you&#39;re still deciding which markup deserves investment, use <a href="/insights/schema-markup-priorities-service-business">the service-business schema prioritisation framework</a>. If you need the wider relationship between visible copy, semantic HTML and metadata, start with <a href="/insights/structured-content-ai-search-guide">the structured content guide</a>.</p>
+<p>Here, the requirement is narrower. Choose a path a visitor would recognise, show it on the page, express the same order in JSON-LD and give the templates one maintained hierarchy to use. Correct markup can create eligibility for Google&#39;s breadcrumb presentation. Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies">general structured data guidelines</a> make clear that correct markup does not guarantee a search feature will appear.</p>
+<h2 class="insight-article__section-title">Choose the path a visitor would recognise</h2>
+<p>Start with the site&#39;s information architecture and the route that helps someone understand the page. A fictional electrical company might place its commercial solar page in this trail:</p>
+<p>Home &gt; Services &gt; Commercial Solar</p>
+<p>That path tells a visitor that Commercial Solar is an offer within the Services area. The page URL might be <code>/solutions/energy/commercial-solar</code>, but those folders don&#39;t automatically make Solutions and Energy useful breadcrumb levels. URL structure can reflect routing history, a migration or a technical grouping that has little meaning to a buyer.</p>
+<p>Test each proposed level by asking whether it is a real destination, whether its label is familiar and whether moving up one level helps the visitor continue their task. Service pages usually belong beneath a useful services hub. A location page might belong beneath Locations. An industry page may sit under Industries if that hub contains a genuine browsing route. An insight should use the editorial hierarchy readers can navigate, not every category stored in the CMS.</p>
+<p>The canonical trail should be stable enough to maintain. If three teams give the same page three different parents, the commercial consequence is wider than a schema warning. Internal links, navigation labels, analytics groupings and ownership are likely to drift too.</p>
+<h2 class="insight-article__section-title">Build the visible breadcrumb first</h2>
+<p>The structured data describes a relationship that should make sense to people. Build the visible component first so the hierarchy can be reviewed in the browser before it is encoded for search systems.</p>
+<p>The <a href="https://www.w3.org/WAI/ARIA/apg/patterns/breadcrumb/">W3C WAI-ARIA breadcrumb pattern</a> places the trail in a navigation landmark with an accessible label. It identifies the current page with <code>aria-current=&quot;page&quot;</code> when the final item is represented by a link. An ordered list also communicates that the sequence matters.</p>
+<pre><code class="language-html">&lt;nav aria-label=&quot;Breadcrumb&quot;&gt;
+  &lt;ol&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.coastlineelectrical.example/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://www.coastlineelectrical.example/services/&quot;&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span aria-current=&quot;page&quot;&gt;Commercial Solar&lt;/span&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+<p>The separators can be added through CSS so assistive technology does not announce decorative characters as part of every label. Keep link wording concise and recognisable. The final item is plain text here because it already represents the current page. If your design makes it a link, apply <code>aria-current=&quot;page&quot;</code> to that link.</p>
+<p>This is one application of a wider semantic navigation discipline. <a href="/insights/website-accessibility-and-seo">Website accessibility and SEO</a> covers landmarks, labels, headings and usable interactions across the rest of the site.</p>
+<h2 class="insight-article__section-title">Express the same hierarchy in BreadcrumbList JSON-LD</h2>
+<p>Once the visible trail is agreed, map the same items into JSON-LD. <a href="https://schema.org/BreadcrumbList">Schema.org defines BreadcrumbList</a> as an <code>ItemList</code> made from ordered <code>ListItem</code> entries. Google&#39;s feature documentation sets the requirements for eligibility in its breadcrumb presentation.</p>
+<p>Google currently requires a <code>BreadcrumbList</code> with at least two <code>ListItem</code> entries. Each entry needs a <code>position</code>, starting at 1, and a displayed <code>name</code> unless the <code>item</code> is expressed as a named Thing. The <code>item</code> identifies the page represented by that level. Google says it may be omitted for the final entry, in which case the containing page URL is used.</p>
+<p>This complete JSON-LD example matches the visible Coastline Electrical trail:</p>
+<pre><code class="language-html">&lt;script type=&quot;application/ld+json&quot;&gt;
+{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;BreadcrumbList&quot;,
+  &quot;itemListElement&quot;: [
+    {
+      &quot;@type&quot;: &quot;ListItem&quot;,
+      &quot;position&quot;: 1,
+      &quot;name&quot;: &quot;Home&quot;,
+      &quot;item&quot;: &quot;https://www.coastlineelectrical.example/&quot;
+    },
+    {
+      &quot;@type&quot;: &quot;ListItem&quot;,
+      &quot;position&quot;: 2,
+      &quot;name&quot;: &quot;Services&quot;,
+      &quot;item&quot;: &quot;https://www.coastlineelectrical.example/services/&quot;
+    },
+    {
+      &quot;@type&quot;: &quot;ListItem&quot;,
+      &quot;position&quot;: 3,
+      &quot;name&quot;: &quot;Commercial Solar&quot;
+    }
+  ]
+}
+&lt;/script&gt;</code></pre>
+<p>Use absolute canonical URLs for linked levels. Keep positions sequential and keep names aligned with the visible labels. Omitting <code>item</code> from the final entry follows Google&#39;s current example and requirements. Schema.org permits broader modelling choices, but Google feature eligibility should be checked against Google&#39;s current documentation at deployment time.</p>
+<p>BreadcrumbList can sit alongside other accurate page markup. On a service page, the breadcrumb describes hierarchy while Service markup describes the offer and provider. <a href="/insights/service-schema-service-pages-guide">The Service schema guide</a> covers that separate relationship.</p>
+<h2 class="insight-article__section-title">Generate both outputs from one maintained source</h2>
+<p>Handwriting an HTML trail and a separate JSON-LD array creates two places for labels and URLs to go stale. A more dependable pattern is to maintain one ordered collection and let the template render both outputs from it. That&#39;s implementation practice, not a Google requirement.</p>
+<p>The source might be a CMS parent field, route metadata or a governed hierarchy map. It needs a clear owner and enough information to provide the label, canonical URL and current-page state. The rendering logic can be platform-neutral:</p>
+<pre><code class="language-text">trail = resolveBreadcrumbs(currentPage)
+
+render visible navigation from trail
+  create a labelled nav and ordered list
+  link every item except the current page
+  mark the current page with aria-current
+
+render BreadcrumbList from trail
+  map each item to ListItem
+  set position from its order, starting at 1
+  copy the visible label into name
+  copy the canonical URL into item, except for the final entry</code></pre>
+<p>The shared source needs rules. Decide what happens when a parent is unpublished, when a label changes, when a canonical URL moves or when a landing page belongs to no useful hierarchy. A template should opt out when it cannot produce a truthful trail. Inventing a fallback parent simply to keep the JSON-LD valid hides an architecture problem and can mislead visitors.</p>
+<p>Ownership matters here. Content may control labels, product or marketing may control parent relationships and development may control rendering. A change process that names all three responsibilities prevents an innocent CMS edit from creating conflicting output across hundreds of pages.</p>
+<h2 class="insight-article__section-title">Publish multiple trails for genuine routes</h2>
+<p>Google supports multiple breadcrumb trails for one page when there are genuinely different ways to navigate to it. A commercial solar page could reasonably be reached through Services &gt; Commercial Solar and Industries &gt; Property Management &gt; Commercial Solar if both routes exist as useful, visible browsing paths.</p>
+<p>In JSON-LD, those routes are expressed as two separate <code>BreadcrumbList</code> objects in an array. Each list keeps its own positions and describes a complete path to the same page. Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/breadcrumb#multiple-breadcrumb-trail">multiple breadcrumb trail example</a> shows this structure directly.</p>
+<p>Publishing both requires more than two possible keyword groupings. Each intermediate page should exist, each route should help a visitor and the relationship should remain owned when navigation changes. If the second route exists only to add “property management solar” to the markup, it isn&#39;t a useful trail.</p>
+<p>Most service sites benefit from one canonical trail per page because it simplifies navigation and governance. Use a second trail when the information architecture supports two real discovery paths and the team can keep both accurate.</p>
+<h2 class="insight-article__section-title">Test rendered pages across the template set</h2>
+<p>Source files can look correct while the deployed page contains stale data, duplicate generators or a client-side rendering fault. Google&#39;s <a href="https://support.google.com/webmasters/answer/7445569?hl=en">Rich Results Test guidance</a> explains that the tool checks supported structured data in rendered output. Test the public URL when possible and test code before deployment when the page isn&#39;t live.</p>
+<p>One passing page isn&#39;t evidence that every template works. Choose representative service, location, industry, resource and insight URLs that participate in the system. Check a shallow trail, a deeper trail, a renamed parent and any template with separate SEO tooling. Confirm canonical URLs and inspect whether a plugin and the site generator are both emitting BreadcrumbList.</p>
+<p>The sequence matters because it follows one hierarchy claim from the human-facing page into rendered markup and then across the deployed template set.</p>
+<aside class="insight-module insight-module--practice" aria-label="Check the trail before you scale it"><header><p class="insight-module__label">In practice</p><h3>Check the trail before you scale it</h3></header><div class="insight-module__body"><p class="insight-module__intro">Validate one truthful trail from its visible links through to live reporting.</p><ul class="insight-module__list"><li>Confirm the visible links, labels, order and current page</li><li>Inspect rendered JSON-LD for the same ordered items</li><li>Run representative URLs through the Rich Results Test</li><li>Check every participating template for duplicates and stale values</li><li>Monitor Search Console after deployment and after template changes</li></ul></div></aside>
+<p>Critical errors in the test need correction before rollout. Non-critical warnings still deserve review because they may reveal incomplete data. A valid result confirms supported syntax and properties for the tested output. It doesn&#39;t prove that Google has indexed the page or that a breadcrumb presentation will appear.</p>
+<h2 class="insight-article__section-title">Use Search Console as monitoring evidence</h2>
+<p>After deployment, use Search Console to check what Google reports across affected pages. Google&#39;s <a href="https://support.google.com/webmasters/answer/7552505?hl=en-GB">rich result report overview</a> explains that reports group valid and invalid items and allow site owners to validate a fix. Breadcrumbs are one of the supported report types.</p>
+<p>A repeated error across many URLs usually points to shared template logic or shared source data. One stale label may belong to a page record. Missing <code>item</code> values on intermediate levels may come from the hierarchy resolver. Duplicate objects may come from two active generators. Search Console can surface the pattern, but the implementation still has to be traced through the CMS and rendered page.</p>
+<p>Allow for crawling and indexing time after a release. An unchanged report may mean Google hasn&#39;t recrawled the affected pages yet. Recheck after navigation changes, CMS migrations, route changes and SEO plugin updates because each can alter the hierarchy or add another generator.</p>
+<p>When tools disagree or the fault spans several templates, move into <a href="/insights/structured-data-schema-audit-guide">the structured data audit workflow</a>. If the work needs rollout evidence and continuing ownership, <a href="/services/seo">technical SEO governance</a> can connect template checks, Search Console findings and maintenance.</p>
+<h2 class="insight-article__section-title">A reliable breadcrumb starts with a reliable hierarchy</h2>
+<p>Breadcrumb schema implementation is straightforward once the path is settled. The difficult part is deciding where the page belongs and keeping the visible trail, internal navigation, canonical URLs and JSON-LD aligned.</p>
+<p>If the hierarchy is clear, store it once, render it in both places and test representative templates. If it isn&#39;t clear, resolve the information architecture before scaling the markup. That may require <a href="/services/website-design">website design and development</a> work across navigation, CMS fields and shared components.</p>
+<p>A reliable system gives visitors a recognisable route, maintainers a clear source and search systems an accurate description of the page.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/schema-markup-priorities-service-business" class="insight-card__link" aria-label="Read Schema Markup Priorities for a Service Business">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Schema Markup Priorities for a Service Business</h3>
+        <p class="insight-card__description">Decide which schema markup your service business should fund first using visible evidence, Google support, template reach, commercial value and maintenance ownership.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/structured-content-ai-search-guide" class="insight-card__link" aria-label="Read Structuring Your Website for AI Search">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>14 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Structuring Your Website for AI Search</h3>
+        <p class="insight-card__description">A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/structured-data-schema-audit-guide" class="insight-card__link" aria-label="Read A Practical Structured Data Audit for Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">A Practical Structured Data Audit for Your Website</h3>
+        <p class="insight-card__description">Audit rendered schema markup across your website, diagnose why tools disagree, assign repairs and verify structured data fixes after deployment.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

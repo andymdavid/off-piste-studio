@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "breadcrumb-schema-site-hierarchy-guide",
+    "title": "Breadcrumb Schema That Reflects Your Site Hierarchy",
+    "description": "Learn how to build accessible breadcrumbs and matching BreadcrumbList JSON-LD from one maintained site hierarchy.",
+    "intro": "Breadcrumb schema works when the visible trail and the machine-readable trail describe the same place. This guide shows how to choose that path, build it accessibly, generate it once and keep it accurate.",
+    "date": "2026-08-29",
+    "displayDate": "August 29, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Breadcrumb Schema",
+      "BreadcrumbList",
+      "Structured Data",
+      "JSON-LD",
+      "Technical SEO",
+      "Website Accessibility",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "schema-markup-priorities-service-business",
+      "structured-content-ai-search-guide",
+      "structured-data-schema-audit-guide"
+    ],
+    "imageAlt": "Breadcrumb Schema That Reflects Your Site Hierarchy",
+    "url": "/insights/breadcrumb-schema-site-hierarchy-guide"
+  },
+  {
     "slug": "schema-markup-priorities-service-business",
     "title": "Schema Markup Priorities for a Service Business",
     "description": "Decide which schema markup your service business should fund first using visible evidence, Google support, template reach, commercial value and maintenance ownership.",

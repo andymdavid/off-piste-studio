@@ -96,7 +96,7 @@ When budget or template capacity is limited, use [the service-business schema pr
 | [Article](/insights/article-schema-authorship-dates-guide) | A dated article has governed authorship, title, image, publish date and meaningful update history | The visible page and structured data disagree or the content has no durable article value |
 | FAQPage | The page contains genuine visible questions and answers | FAQs are added only to target snippets or repeat keywords |
 | Review | Reviews are visible, genuine, and follow the platform's rules | Reviews are copied, hidden, unsupported, or selectively misleading |
-| BreadcrumbList | The page sits inside a useful site hierarchy | Breadcrumbs differ from the real navigation path |
+| [BreadcrumbList](/insights/breadcrumb-schema-site-hierarchy-guide) | The page sits inside a useful site hierarchy | Breadcrumbs differ from the real navigation path |
 
 Google's [article structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/article) is especially useful for governance. It shows the kind of metadata that can be exposed for article pages, including headline, images, author, publish date, and modified date. The implementation lesson is simple. Keep the visible byline, frontmatter, schema, and page history aligned.
 

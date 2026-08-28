@@ -70,7 +70,7 @@ Once the identity choice is made, [the Organization schema implementation guide]
 
 After business identity, look for templates with repeatable visible evidence and reliable ownership. A type deployed across a governed template can produce more consistent coverage than handcrafted markup on isolated pages.
 
-BreadcrumbList is a strong candidate when the page already shows a meaningful hierarchy. Google's [Breadcrumb documentation](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb) recommends representing a typical user path rather than mechanically copying the URL. The template should draw both the visible trail and the structured data from a maintained hierarchy.
+BreadcrumbList is a strong candidate when the page already shows a meaningful hierarchy. Google's [Breadcrumb documentation](https://developers.google.com/search/docs/appearance/structured-data/breadcrumb) recommends representing a typical user path rather than mechanically copying the URL. Once it has earned a place in the backlog, use [the breadcrumb schema implementation guide](/insights/breadcrumb-schema-site-hierarchy-guide) to build the visible trail and structured data from a maintained hierarchy.
 
 Article belongs on genuine editorial templates with governed titles, bylines, publish dates, meaningful update dates and images. It is worth prioritising when the publishing process can keep those fields aligned. [The Article schema guide](/insights/article-schema-authorship-dates-guide) covers authorship, publisher identity and date governance after that template decision has been made.
 
