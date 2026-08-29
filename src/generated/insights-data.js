@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-ready-brand-voice-guide-content-system",
+    "title": "Building an AI Ready Brand Voice System",
+    "description": "Build an AI ready brand voice system with approved examples, observable writing rules, regression tests, governance, and clear ownership.",
+    "intro": "Consistent AI-assisted writing comes from an owned voice system. It tells people and tools what good writing looks like, tests whether the rules work, and protects facts and approval from style decisions.",
+    "date": "2026-08-29",
+    "displayDate": "August 29, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Brand Voice",
+      "Content Strategy",
+      "AI Content Style Guide",
+      "Editorial Governance",
+      "Content Testing"
+    ],
+    "topics": [
+      "Content & Brand",
+      "AI & Automation"
+    ],
+    "cluster": "AI Content, Voice, and Expertise",
+    "relatedPosts": [
+      "ai-assisted-content-workflow-expertise-guide",
+      "ai-assisted-content-quality-audit-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "Building an AI Ready Brand Voice System",
+    "url": "/insights/ai-ready-brand-voice-guide-content-system"
+  },
+  {
     "slug": "breadcrumb-schema-site-hierarchy-guide",
     "title": "Breadcrumb Schema That Reflects Your Site Hierarchy",
     "description": "Learn how to build accessible breadcrumbs and matching BreadcrumbList JSON-LD from one maintained site hierarchy.",
