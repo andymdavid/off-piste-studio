@@ -36,7 +36,7 @@ function scanDir(dirName, contentDirName = null) {
 }
 
 // Core pages (in project root)
-const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'pricing.html', 'tools.html'];
+const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'pricing.html', 'tools.html', 'locations.html'];
 
 const entries = [];
 
