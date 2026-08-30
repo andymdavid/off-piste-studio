@@ -83,7 +83,7 @@ The inventory will usually contain several source groups.
 
 Capture the page URL rather than recording only a domain name. Note the observed fact exactly enough to verify the discrepancy. Identify who owns the source and whether the business can edit it, request a change, claim it, or only monitor it.
 
-The inventory becomes useful when another person can understand why a change was requested and later verify whether it happened.
+The inventory becomes useful when another person can understand why a change was requested and later verify whether it happened. If a contradiction appears in a Google Knowledge Panel, carry the relevant source record into the [panel correction and verification workflow](/insights/fix-incorrect-google-knowledge-panel-business-guide).
 
 ```insight-module
 {

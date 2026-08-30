@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "fix-incorrect-google-knowledge-panel-business-guide",
+    "title": "Fix Incorrect Information in a Google Knowledge Panel",
+    "description": "Identify a wrong Google Knowledge Panel, trace the affected fact and submit an evidence-backed correction without confusing it with a Business Profile.",
+    "intro": "A wrong Knowledge Panel is visible in seconds, but the correction route depends on the result type, the affected entity and the source behind the displayed fact. This guide shows you how to diagnose the panel, prepare evidence and use the route Google currently provides.",
+    "date": "2026-08-31",
+    "displayDate": "August 31, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Google Knowledge Panel",
+      "Entity Trust",
+      "Brand Signals",
+      "Knowledge Graph",
+      "Search Visibility",
+      "Entity Correction"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "third-party-brand-signals-ai-search-audit",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "Fix Incorrect Information in a Google Knowledge Panel",
+    "url": "/insights/fix-incorrect-google-knowledge-panel-business-guide"
+  },
+  {
     "slug": "ai-ready-brand-voice-guide-content-system",
     "title": "Building an AI Ready Brand Voice System",
     "description": "Build an AI ready brand voice system with approved examples, observable writing rules, regression tests, governance, and clear ownership.",
