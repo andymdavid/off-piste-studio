@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "local-business-schema-locations-service-areas-guide",
+    "title": "LocalBusiness Schema for Real Locations and Service Areas",
+    "description": "Build accurate, privacy-safe LocalBusiness schema for a storefront, service-area or hybrid business, or several staffed locations.",
+    "intro": "Model storefronts, service areas, hybrid operations and staffed branches with facts your team can prove and maintain, while keeping private addresses private.",
+    "date": "2026-09-01",
+    "displayDate": "September 1, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "LocalBusiness Schema",
+      "Structured Data",
+      "JSON-LD",
+      "Local SEO",
+      "Service Area Businesses",
+      "Multi-location SEO",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "organization-schema-service-business-guide",
+      "service-schema-service-pages-guide",
+      "structured-data-schema-audit-guide"
+    ],
+    "imageAlt": "LocalBusiness Schema for Real Locations and Service Areas",
+    "url": "/insights/local-business-schema-locations-service-areas-guide"
+  },
+  {
     "slug": "fix-incorrect-google-knowledge-panel-business-guide",
     "title": "Fix Incorrect Information in a Google Knowledge Panel",
     "description": "Identify a wrong Google Knowledge Panel, trace the affected fact and submit an evidence-backed correction without confusing it with a Business Profile.",
