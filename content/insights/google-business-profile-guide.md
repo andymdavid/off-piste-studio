@@ -50,6 +50,8 @@ Use the services field, business description, hours, contact routes, and other a
 
 Treat wording as public information, not as a container for repeated keywords. Describe the work in the language customers recognise, keep claims specific, and make sure important details agree with what the website and team can substantiate.
 
+For the full selection method, including additional categories, unavailable options, the separate services editor and pre-edit safeguards, use the guide to [choosing Google Business Profile categories and services](/insights/google-business-profile-categories-services-guide).
+
 ## Configure storefront and service areas correctly
 
 A storefront serves customers at its business address during stated hours. A service-area business travels to customers and doesn't receive them at its address. A hybrid business does both. The correct setup follows the way the business actually operates.

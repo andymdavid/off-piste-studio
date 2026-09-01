@@ -69,7 +69,7 @@ This is Off Piste's diagnostic interpretation of Google's documented model. Goog
 
 If the profile appears for the exact business name, you have evidence that it exists publicly. If it remains absent for relevant service searches, the question has moved from profile existence to local discovery.
 
-Relevance describes how well the profile matches the search. Accurate categories and detailed business information can improve Google's understanding. Distance describes how far the business is from the searcher. A wider service area tells customers where the business works, but it does not move the business or override distance. Prominence reflects how well known the business is, with Google citing signals such as links and reviews.
+Relevance describes how well the profile matches the search. Accurate categories and detailed business information can improve Google's understanding. If diagnosis identifies an inaccurate, overly broad or unsupported category, use the guide to [choosing Google Business Profile categories and services](/insights/google-business-profile-categories-services-guide) before editing the live profile. Distance describes how far the business is from the searcher. A wider service area tells customers where the business works, but it does not move the business or override distance. Prominence reflects how well known the business is, with Google citing signals such as links and reviews.
 
 Google also states that there is [no way to request or pay for a better organic local ranking](https://support.google.com/business/answer/7091?hl=en). No category, review target, service-area setting, profile edit, or SEO engagement can guarantee a position.
 

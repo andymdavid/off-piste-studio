@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-business-profile-categories-services-guide",
+    "title": "Choosing Google Business Profile Categories and Services",
+    "description": "Choose accurate Google Business Profile categories, separate them from services, and govern a live category change with evidence.",
+    "intro": "Categories describe the business. Services explain what it offers. This guide shows eligible local businesses how to make both choices accurately, prepare for a live edit, and review the result through qualified enquiries.",
+    "date": "2026-09-02",
+    "displayDate": "September 2, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Google Business Profile",
+      "Local SEO",
+      "Business Categories",
+      "Profile Services",
+      "Local Search Governance",
+      "Australia"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Small Business"
+    ],
+    "cluster": "Local Search and Google Business Profile",
+    "relatedPosts": [
+      "google-business-profile-guide",
+      "google-business-profile-not-showing-diagnostic-guide",
+      "measure-google-business-profile-performance-qualified-leads"
+    ],
+    "imageAlt": "Choosing Google Business Profile Categories and Services",
+    "url": "/insights/google-business-profile-categories-services-guide"
+  },
+  {
     "slug": "local-business-schema-locations-service-areas-guide",
     "title": "LocalBusiness Schema for Real Locations and Service Areas",
     "description": "Build accurate, privacy-safe LocalBusiness schema for a storefront, service-area or hybrid business, or several staffed locations.",
