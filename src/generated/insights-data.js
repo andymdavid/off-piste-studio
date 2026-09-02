@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-personalisation-website-lead-journey-guide",
+    "title": "Designing Trustworthy AI Personalisation for Website Lead Journeys",
+    "description": "Choose static, rule-based, declared-preference or bounded AI website personalisation with practical privacy, accessibility, testing and fallback controls.",
+    "intro": "Useful personalisation begins with a specific visitor decision. Greater complexity earns its place only when the business can justify the data, operate the system and preserve a clear fallback.",
+    "date": "2026-09-02",
+    "displayDate": "September 2, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Website Personalisation",
+      "Website Design",
+      "Lead Journeys",
+      "Privacy",
+      "Customer Experience"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Websites & UX"
+    ],
+    "cluster": "AI-Enabled Websites and Lead Journeys",
+    "relatedPosts": [
+      "ai-chatbot-vs-guided-form-live-chat-website",
+      "ai-lead-qualification-website-intake-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "Designing Trustworthy AI Personalisation for Website Lead Journeys",
+    "url": "/insights/ai-personalisation-website-lead-journey-guide"
+  },
+  {
     "slug": "google-business-profile-categories-services-guide",
     "title": "Choosing Google Business Profile Categories and Services",
     "description": "Choose accurate Google Business Profile categories, separate them from services, and govern a live category change with evidence.",
