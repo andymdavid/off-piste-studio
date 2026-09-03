@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-workflow-pre-launch-testing-guide",
+    "title": "How to Test an AI Workflow Before Launch",
+    "description": "Build acceptance criteria, representative test cases and a controlled release plan for an AI workflow across tools, handoffs, permissions and recovery.",
+    "intro": "A convincing demo shows that an AI workflow can work. A release test shows whether the complete business process is useful, controlled and recoverable enough to face real work.",
+    "date": "2026-09-04",
+    "displayDate": "September 4, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Workflow Automation",
+      "AI Testing",
+      "Acceptance Criteria",
+      "AI Reliability",
+      "Internal Systems",
+      "Human Oversight"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Growth & Leads"
+    ],
+    "cluster": "AI Workflow Automation and Internal Systems",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "measure-ai-workflow-automation-roi-reliability",
+      "ai-workflow-automation-failure-diagnostic-guide"
+    ],
+    "imageAlt": "How to Test an AI Workflow Before Launch",
+    "url": "/insights/ai-workflow-pre-launch-testing-guide"
+  },
+  {
     "slug": "ai-personalisation-website-lead-journey-guide",
     "title": "Designing Trustworthy AI Personalisation for Website Lead Journeys",
     "description": "Choose static, rule-based, declared-preference or bounded AI website personalisation with practical privacy, accessibility, testing and fallback controls.",
