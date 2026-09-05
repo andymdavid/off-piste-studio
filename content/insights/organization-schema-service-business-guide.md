@@ -166,7 +166,7 @@ When duplicate nodes or conflicting identifiers extend beyond the business page,
 6. Search the rendered output for duplicate Organization or LocalBusiness nodes and conflicting `@id` values.
 7. Use Search Console URL Inspection after deployment and record warnings that require human judgement.
 
-Google's guidelines make clear that compliant markup can remain ineligible for a visible feature, and a test tool cannot identify every policy or factual problem. Valid code is the start of review.
+Google's guidelines make clear that compliant markup can remain ineligible for a visible feature, and a test tool cannot identify every policy or factual problem. That distinction is especially important for [self-serving Review and AggregateRating markup](/insights/review-schema-service-business-mistakes-guide) on a business's own Organization node. Valid code is the start of review.
 
 After deployment, use the [AI search visibility measurement guide](/insights/how-to-measure-ai-search-visibility) to watch representation and qualified discovery over time. Don't attribute a visibility change to schema alone. Content, links, profile changes, crawl state, demand and platform behaviour move at the same time.
 

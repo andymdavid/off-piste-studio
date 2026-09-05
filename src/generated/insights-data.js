@@ -9,6 +9,37 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "review-schema-service-business-mistakes-guide",
+    "title": "Review Schema Rules for Service Businesses",
+    "description": "Understand when Review and AggregateRating markup is eligible for Google stars, diagnose self-serving review schema and repair inherited service-business implementations.",
+    "intro": "Google review-star eligibility depends on the reviewed entity, control of the page and visible evidence. A valid JSON-LD block and a green test result answer narrower technical questions.",
+    "date": "2026-09-05",
+    "displayDate": "September 5, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Review Schema",
+      "AggregateRating",
+      "Structured Data",
+      "LocalBusiness Schema",
+      "Organization Schema",
+      "Google Rich Results",
+      "Schema Validation",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "schema-markup-priorities-service-business",
+      "local-business-schema-locations-service-areas-guide",
+      "structured-data-schema-audit-guide"
+    ],
+    "imageAlt": "Review Schema Rules for Service Businesses",
+    "url": "/insights/review-schema-service-business-mistakes-guide"
+  },
+  {
     "slug": "ai-workflow-pre-launch-testing-guide",
     "title": "How to Test an AI Workflow Before Launch",
     "description": "Build acceptance criteria, representative test cases and a controlled release plan for an AI workflow across tools, handoffs, permissions and recovery.",
