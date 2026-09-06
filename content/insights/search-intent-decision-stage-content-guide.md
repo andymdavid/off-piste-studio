@@ -5,6 +5,7 @@ description: A practical guide to mapping search intent, SERP shape, buyer quest
 intro: Some keywords bring buyers who are comparing options, testing fit, checking cost, or deciding who to trust. Others bring traffic with no buying job attached. Search intent work helps you tell the difference before you spend time writing another page.
 author: Lara
 date: 2026-07-24
+updatedDate: 2026-09-07
 readTime: 14 min read
 tags: SEO, Content Strategy, AI, Website Design
 topics: SEO & Search, Growth & Leads
@@ -168,6 +169,8 @@ This is also a commercial filter. A query with no clear page role, proof require
 Not every query needs a new URL.
 
 A refresh is usually right when an existing page already owns the same buyer job. If the old page ranks for the target query, answers the same decision, has the right conversion path, and only needs stronger proof, structure, dates, examples, or internal links, improve the existing page.
+
+When the unresolved question is which URL should own a query family, use the implementation guide for [choosing the right page to target a keyword](/insights/service-page-vs-blog-post-search-intent-guide). It tests the current owner, required proof, supporting roles, and the appropriate repair before another page is commissioned.
 
 A new page is usually right when the search has a different job. That might mean a different buyer question, page format, evidence need, internal link role, or conversion path.
 

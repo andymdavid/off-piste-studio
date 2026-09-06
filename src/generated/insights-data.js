@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "service-page-vs-blog-post-search-intent-guide",
+    "title": "Choosing the Right Page to Target a Keyword",
+    "description": "Decide whether a keyword belongs to a service page, article, pricing guide, comparison page, local page, case study, or an existing URL.",
+    "intro": "A useful keyword can still be assigned to the wrong page. This guide helps you name one URL as the primary owner, give adjacent pages clear supporting roles, and choose the right repair before another brief is written.",
+    "date": "2026-09-07",
+    "displayDate": "September 7, 2026",
+    "readTime": "9 min read",
+    "tags": [
+      "SEO",
+      "Search Intent",
+      "Content Strategy",
+      "Keyword Mapping",
+      "Content Cannibalisation",
+      "Website Architecture"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "Search Intent and Decision-Stage Content",
+    "relatedPosts": [
+      "search-intent-decision-stage-content-guide",
+      "organic-traffic-not-generating-leads-intent-audit",
+      "how-much-does-a-website-cost"
+    ],
+    "imageAlt": "Choosing the Right Page to Target a Keyword",
+    "url": "/insights/service-page-vs-blog-post-search-intent-guide"
+  },
+  {
     "slug": "review-schema-service-business-mistakes-guide",
     "title": "Review Schema Rules for Service Businesses",
     "description": "Understand when Review and AggregateRating markup is eligible for Google stars, diagnose self-serving review schema and repair inherited service-business implementations.",
@@ -1051,8 +1080,8 @@ export const INSIGHT_POSTS = [
     "intro": "Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.",
     "date": "2026-07-31",
     "displayDate": "July 31, 2026",
-    "updatedDate": "2026-08-02",
-    "displayUpdatedDate": "August 2, 2026",
+    "updatedDate": "2026-09-07",
+    "displayUpdatedDate": "September 7, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -1247,6 +1276,8 @@ export const INSIGHT_POSTS = [
     "intro": "Some keywords bring buyers who are comparing options, testing fit, checking cost, or deciding who to trust. Others bring traffic with no buying job attached. Search intent work helps you tell the difference before you spend time writing another page.",
     "date": "2026-07-24",
     "displayDate": "July 24, 2026",
+    "updatedDate": "2026-09-07",
+    "displayUpdatedDate": "September 7, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",

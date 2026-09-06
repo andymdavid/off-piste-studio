@@ -5,7 +5,7 @@ description: A practical audit for finding why organic visibility produces too f
 intro: Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.
 author: Lara
 date: 2026-07-31
-updatedDate: 2026-08-02
+updatedDate: 2026-09-07
 readTime: 14 min read
 tags: SEO, Content Strategy, Analytics, Website Design
 topics: SEO & Search, Growth & Leads
@@ -158,6 +158,8 @@ Use the pattern across measures to choose the next investigation. This matrix of
 Prioritise a repair when commercial relevance is high, the evidence is strong, effort is proportionate and the likely buyer impact is clear. That may mean retargeting one page, consolidating overlapping articles, adding decision proof, creating the missing commercial page, repairing a key event or simplifying one form.
 
 For the illustrative pricing group, the evidence may support a focused sequence. Clarify the article's educational role, add a useful pricing explanation, link to the matching service with fit criteria, repair any event issue and review qualified enquiries over the next full buying cycle. If the live SERP and query data show a distinct pricing decision that the article cannot serve cleanly, then create the dedicated page.
+
+When two existing URLs still appear to compete for that decision, use the [keyword-to-page ownership guide](/insights/service-page-vs-blog-post-search-intent-guide) to choose one primary owner and decide whether to differentiate, retarget, merge, or create a missing page.
 
 ## Record the repair and measurement window
 
