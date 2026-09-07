@@ -1469,16 +1469,20 @@ export const INSIGHT_POSTS = [
   {
     "slug": "how-to-measure-ai-search-visibility",
     "title": "How to Measure AI Search Visibility",
-    "description": "A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.",
+    "description": "A practical framework for measuring AI search visibility with Google's generative AI report, citations, analytics, and lead-quality evidence.",
     "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
     "date": "2026-07-13",
     "displayDate": "July 13, 2026",
-    "updatedDate": "2026-08-26",
-    "displayUpdatedDate": "August 26, 2026",
-    "readTime": "13 min read",
+    "updatedDate": "2026-09-07",
+    "displayUpdatedDate": "September 7, 2026",
+    "readTime": "15 min read",
     "tags": [
       "SEO",
-      "AI"
+      "AI",
+      "Google Search Console",
+      "AI Overviews",
+      "AI Mode",
+      "Measurement"
     ],
     "topics": [
       "SEO & Search",
@@ -1486,9 +1490,9 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
-      "building-your-website-for-llms",
       "google-sge-and-seo",
-      "small-business-seo-guide-2026"
+      "google-ai-overviews-traffic-drop-diagnostic",
+      "google-ai-overviews-not-citing-website-diagnostic"
     ],
     "imageAlt": "How to Measure AI Search Visibility",
     "url": "/insights/how-to-measure-ai-search-visibility"
