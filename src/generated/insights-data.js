@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-customer-experience-audit-guide",
+    "title": "How to Audit a Live AI Customer Experience",
+    "description": "Audit a live AI customer journey with real evidence, diagnose the broken layer and decide whether to scale, repair, narrow or stop.",
+    "intro": "A polished conversation can still leave a customer with the wrong answer, a dead end, or more work. This guide shows you how to audit one live AI journey, trace the failure, and make an owned decision about what happens next.",
+    "date": "2026-09-09",
+    "displayDate": "September 9, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "AI",
+      "Customer Experience",
+      "AI Auditing",
+      "Customer Journey",
+      "AI Governance",
+      "Quality Assurance",
+      "Human Oversight"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Websites & UX"
+    ],
+    "cluster": "AI and Customer Experience",
+    "relatedPosts": [
+      "ai-customer-experience-human-handoff-guide",
+      "monitor-ai-knowledge-base-quality-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "How to Audit a Live AI Customer Experience",
+    "url": "/insights/ai-customer-experience-audit-guide"
+  },
+  {
     "slug": "service-page-vs-blog-post-search-intent-guide",
     "title": "Choosing the Right Page to Target a Keyword",
     "description": "Decide whether a keyword belongs to a service page, article, pricing guide, comparison page, local page, case study, or an existing URL.",
