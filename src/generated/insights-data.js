@@ -1797,17 +1797,21 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "google-sge-and-seo",
-    "title": "Google SGE and SEO: What AI Overviews Mean Now",
-    "description": "Google SGE is now AI Overviews and AI Mode. Learn what the shift means for SEO, snippets, citations, clicks, and practical website improvements.",
-    "intro": "Google SGE, short for Search Generative Experience, became AI Overviews and AI Mode. The names changed, but the SEO question remains commercial: can Google understand, trust, and cite your website when buyers research a service? This guide explains the impact on snippets, clicks, citations, and the practical improvements worth making now.",
+    "title": "What Google AI Overviews and AI Mode Mean for SEO",
+    "description": "Learn what Google AI Overviews and AI Mode mean for SEO, source visibility, reporting and the website priorities that matter now.",
+    "intro": "Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?",
     "date": "2026-03-06",
     "displayDate": "March 6, 2026",
-    "updatedDate": "2026-07-21",
-    "displayUpdatedDate": "July 21, 2026",
+    "updatedDate": "2026-09-10",
+    "displayUpdatedDate": "September 10, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
       "AI",
+      "Google Search",
+      "AI Overviews",
+      "AI Mode",
+      "Google SGE",
       "Content Strategy"
     ],
     "topics": [
@@ -1817,10 +1821,10 @@ export const INSIGHT_POSTS = [
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "how-to-measure-ai-search-visibility",
-      "building-your-website-for-llms",
-      "ai-search-citation-worthy-content"
+      "google-ai-overviews-not-citing-website-diagnostic",
+      "google-ai-mode-query-fan-out-content-planning"
     ],
-    "imageAlt": "Google SGE and SEO: What AI Overviews Mean Now",
+    "imageAlt": "What Google AI Overviews and AI Mode Mean for SEO",
     "url": "/insights/google-sge-and-seo"
   },
   {
