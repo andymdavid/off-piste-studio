@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "connected-schema-graph-service-business-guide",
+    "title": "Build a Connected Schema Graph Across Your Website",
+    "description": "Plan stable schema identities and relationships across website templates so your structured data stays connected, accurate and maintainable.",
+    "intro": "Once a business has chosen useful schema types, the harder job is making them describe the same services, people and provider across every template. A connected graph gives that implementation a shared contract.",
+    "date": "2026-09-10",
+    "displayDate": "September 10, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Connected Schema Graph",
+      "Structured Data",
+      "JSON-LD",
+      "Schema @id",
+      "Technical SEO",
+      "Website Architecture",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "schema-markup-priorities-service-business",
+      "structured-data-schema-audit-guide",
+      "structured-content-ai-search-guide"
+    ],
+    "imageAlt": "Build a Connected Schema Graph Across Your Website",
+    "url": "/insights/connected-schema-graph-service-business-guide"
+  },
+  {
     "slug": "ai-customer-experience-audit-guide",
     "title": "How to Audit a Live AI Customer Experience",
     "description": "Audit a live AI customer journey with real evidence, diagnose the broken layer and decide whether to scale, repair, narrow or stop.",
