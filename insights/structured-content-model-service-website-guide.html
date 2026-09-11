@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Plan reusable CMS content types, fields, relationships and validation before a service website redesign, migration or template build.">
+  <title>Build a Structured Content Model for Your Website | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/structured-content-model-service-website-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Build a Structured Content Model for Your Website",
+        "description": "Plan reusable CMS content types, fields, relationships and validation before a service website redesign, migration or template build.",
+        "datePublished": "2026-09-12",
+        "dateModified": "2026-09-12",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/structured-content-model-service-website-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Build a Structured Content Model for Your Website", "item": "https://offpistestudio.com/insights/structured-content-model-service-website-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="structured-content-model-service-website-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>Websites &amp; UX</span><span>SEO &amp; Search</span></div><p class="insight-article__read-time">12 min read</p></div>
+          <h1 class="insight-article__title">Build a Structured Content Model for Your Website</h1>
+          <p class="insight-article__intro">A website rebuild gets harder when important business facts are trapped in page copy. A structured content model gives services, people, locations, proof and publishing details a reliable shape before templates are designed.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">September 12, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/structured-content-model-service-website-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/structured-content-model-service-website-guide&text=Build%20a%20Structured%20Content%20Model%20for%20Your%20Website" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/structured-content-model-service-website-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Dedicated content-model SERP check completed 12 September 2026 in Australia/Perth.
+Queries: structured content model website, content modeling for websites, CMS content model example, service website content model, structured content fields for service pages, how to model reusable website content.
+Intent: educational and implementation planning, with readers seeking definitions, examples, fields and reusable CMS patterns.
+Result types: government publishing guidance, CMS vendor explainers and documentation, agency guides, templates, practitioner articles and forum discussions. Schema-specific documentation appeared mainly where queries drifted towards structured data.
+Recurring terminology: content types, fields or attributes, relationships, reusable content, validation, components, structured content and presentation independence.
+AI Overview presence: not observable in the available search interface, so no presence or absence is claimed.
+Access date: 12 September 2026, Australia/Perth.
+
+Contentful is used for modelling vocabulary, not evidence of search outcomes. The field-contract framework, acceptance sequence and fictional advisory-firm example are Off Piste practice. No content model, schema implementation or JSON-LD format guarantees rankings, rich results or AI citations.
+-->
+<h2 class="insight-article__section-title">Plan the rebuild around reusable facts</h2>
+<p>Imagine an advisory firm preparing to replace its website. Its service names sit in navigation settings, page headings and brochures. Consultant biographies have been copied into articles and service pages. Location details differ between the contact page and the footer. Proof lives inside rich-text blocks, so nobody can reliably find every claim that depends on it.</p>
+<p>The pages may still look coherent, but the content has no agreed source of truth. A change to one consultant, office or service becomes a search through templates and pasted copy. Migration requires people to interpret old pages one by one. New components inherit whichever wording happened to be available first.</p>
+<p>A content model changes the unit of planning. It identifies the business facts that deserve their own records, the fields that describe them and the relationships that let templates assemble them. Do that work before developers encode old inconsistencies in new templates.</p>
+<p>This article focuses on the CMS planning layer. Our broader guide to <a href="/insights/structured-content-ai-search-guide">structuring a website for search and AI systems</a> covers the full relationship between visible pages, semantic HTML, metadata, schema, proof and links.</p>
+<h2 class="insight-article__section-title">What a website content model actually controls</h2>
+<p>Three related ideas are often called structured content.</p>
+<p>In a CMS, structured content means reusable records made from defined types, fields and references. A Service record might hold a name, summary, audience, proof references and responsible person. <a href="https://www.contentful.com/blog/structured-content-ai/">Contentful&#39;s explanation of structured content</a> uses this architecture vocabulary to distinguish reusable content from copy shaped for one page or channel. It&#39;s useful modelling guidance from a CMS vendor rather than independent evidence of better rankings.</p>
+<p>On the visible page, structure means the semantic HTML and hierarchy generated by templates. A CMS field doesn&#39;t help a reader merely because it exists. The template still has to render it well. The <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">W3C guidance on headings</a> explains that heading levels communicate page organisation and that a logical hierarchy supports navigation and comprehension.</p>
+<p>Structured data is another output. <a href="https://schema.org/docs/datamodel.html">Schema.org&#39;s data model</a> provides types and properties for describing entities and their relationships. It isn&#39;t a replacement for the CMS model. Editorial and business needs should determine the records first, then eligible visible facts can map to an external vocabulary.</p>
+<p>A useful content model controls what records exist, what fields they contain, how records relate, what rules keep them valid and who owns each fact. It can supply several outputs while leaving layout to the component system.</p>
+<p>The American search phrase <strong>content modeling</strong> describes the same planning discipline. In this guide, we use Australian spelling for the work itself.</p>
+<h2 class="insight-article__section-title">Start with reusable business facts</h2>
+<p>Begin with a content inventory based on business facts rather than reproducing the current sitemap as content types. Ask where a fact originates, where it appears, how often it changes and who may change it.</p>
+<p>For the fictional advisory firm, seven candidates emerge.</p>
+<ul>
+<li><strong>Organisation</strong> holds the maintained business name, logo, contact details and profiles. It earns independence because those facts appear across the site. Our <a href="/insights/organization-schema-service-business-guide">organisation identity guide</a> covers the downstream schema implementation.</li>
+<li><strong>Service</strong> defines one offer, its audience, scope, outcomes and supporting evidence. It appears on a dedicated page and in related cards, navigation and calls to action.</li>
+<li><strong>Person</strong> stores a consultant&#39;s name, role, biography, expertise and profile image once, then lets services and articles reference that record.</li>
+<li><strong>Location</strong> represents a real office or governed service area rather than a line pasted into multiple pages. Location and privacy decisions need their own rules.</li>
+<li><strong>Article</strong> owns its headline, summary, author, publish date and meaningful update history. That makes the visible byline, metadata and downstream Article markup easier to align.</li>
+<li><strong>Proof</strong> represents a review, case example, credential or other evidence that has its own source, approval status and usage constraints.</li>
+<li><strong>Call to action</strong> deserves a record only when the same meaningful next step is deliberately reused. Creating a record for every button label would add editorial work without improving control.</li>
+</ul>
+<p>Independence has a cost. Every type adds references, permissions and decisions for editors. A proposed record should earn its place through genuine reuse, separate ownership, distinct validation or a lifecycle that differs from the page around it.</p>
+<h2 class="insight-article__section-title">Give every field a contract</h2>
+<p>A field name alone doesn&#39;t tell an editor what belongs there or a developer what to render. Off Piste&#39;s recommended practice is to give each reusable field a small contract. Record its purpose, shape, rule, destination and owner before implementation.</p>
+<p>This compact service example keeps the decisions visible without tying them to a particular CMS.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Shape and rule</th>
+<th>Output and owner</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Service name</td>
+<td>Short text, required and unique</td>
+<td>Page H1, cards and metadata. Service owner</td>
+</tr>
+<tr>
+<td>Summary</td>
+<td>Plain text, required, with editorial length guidance</td>
+<td>Page introduction and cards. Content lead</td>
+</tr>
+<tr>
+<td>Audience</td>
+<td>References to approved audience terms</td>
+<td>Fit section and relevant listings. Service owner</td>
+</tr>
+<tr>
+<td>Outcomes</td>
+<td>Repeatable short statements with evidence checks</td>
+<td>Visible outcomes section. Service owner</td>
+</tr>
+<tr>
+<td>Evidence</td>
+<td>References to approved proof records</td>
+<td>Proof modules. Content lead</td>
+</tr>
+<tr>
+<td>Delivery locations</td>
+<td>Optional location references</td>
+<td>Availability copy. Operations owner</td>
+</tr>
+<tr>
+<td>Responsible person</td>
+<td>Optional Person reference with active status</td>
+<td>Expert module. Practice lead</td>
+</tr>
+<tr>
+<td>Primary next step</td>
+<td>One approved CTA reference</td>
+<td>Page action. Marketing owner</td>
+</tr>
+</tbody></table>
+<p>Schema mapping comes after the visible content decision. First ask whether the fact is useful to a buyer and maintainable by the business. Then use the <a href="/insights/schema-markup-priorities-service-business">schema prioritisation framework</a> to decide which visible facts justify structured-data implementation. When the Service record is ready, the <a href="/insights/service-schema-service-pages-guide">Service schema guide</a> covers property-level markup.</p>
+<p>The contract matters because it gives design, development and editorial teams the same acceptance criteria. Before a field reaches the build, the team should be able to test it consistently.</p>
+<aside class="insight-module insight-module--practice" aria-label="A field is ready when its contract is testable"><header><p class="insight-module__label">In practice</p><h3>A field is ready when its contract is testable</h3></header><div class="insight-module__body"><p class="insight-module__intro">Review each proposed field against the same implementation questions before the template build begins.</p><ul class="insight-module__list"><li>Name the business fact the field stores</li><li>Set its data shape and validation rule</li><li>Identify every visible and machine-readable output</li><li>Assign the person responsible for keeping it accurate</li><li>Test what happens when the value is missing or changes</li></ul></div></aside>
+<h2 class="insight-article__section-title">Model relationships before templates</h2>
+<p>Relationships are where a set of fields becomes a useful model. The advisory firm&#39;s Service can reference its responsible Person, relevant Locations, approved Proof and related Articles. The page template can then select current records rather than asking an editor to paste biographies, office details and case summaries into one rich-text field.</p>
+<p>Make those references intentional. A service-to-person relationship might mean “responsible expert”, while an article-to-person relationship means “author”. A generic “related content” field hides that difference and leaves every template to guess what the connection means.</p>
+<p>Relationships can also support more relevant internal links. A service page can lead to evidence and explanatory articles because those relationships were editorially chosen. An article can guide a reader towards the service it genuinely supports. Automatic matching can still help, but it shouldn&#39;t replace the strongest maintained connections.</p>
+<p>Later, governed records can feed linked data. The <a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1 Recommendation</a> defines linked data as identifiable nodes connected through properties and identifiers. The CMS record and JSON-LD node aren&#39;t automatically the same object, but a reliable record gives templates a consistent source. When the model is settled, use the <a href="/insights/connected-schema-graph-service-business-guide">connected schema graph guide</a> to define stable IDs and cross-template graph rules.</p>
+<h2 class="insight-article__section-title">Separate facts from presentation choices</h2>
+<p>Store durable meaning in the content model and let components decide how to present it. “Plain-language service summary” is a content field. “Two-column hero text” is a layout instruction and belongs in the component system.</p>
+<p>That separation lets one summary appear as an introduction on the service page, concise text in a related-service card and a source for carefully written metadata. It also lets a redesign change visual hierarchy without forcing editors to migrate the underlying business fact again.</p>
+<p>Formatted text still has a role. An article body, nuanced service explanation or case narrative needs links, lists and editorial rhythm. Use structured fields when the value has a distinct meaning, needs validation, is reused or must be selected independently. Use rich text for developed thought that belongs together.</p>
+<p>Templates remain responsible for accessible output. If a design promotes a styled paragraph as though it were a heading, the CMS model hasn&#39;t solved the semantic problem. Heading fields and component rules should generate a logical hierarchy in line with the <a href="https://www.w3.org/WAI/tutorials/page-structure/headings/">W3C&#39;s page-structure guidance</a>.</p>
+<p>This boundary is central to <a href="/services/website-design">website design that joins CMS architecture with maintainable components</a>. Editors need enough flexibility to communicate clearly, while the system protects the facts and hierarchy the website depends on.</p>
+<h2 class="insight-article__section-title">Set validation and editorial ownership</h2>
+<p>Validation should prevent meaningful defects while keeping routine publishing efficient. Require a field when an entry needs the value to perform its job. Add format checks for URLs, dates and identifiers. Use controlled vocabularies where a consistent classification powers filters or templates. Check that references point to active, approved records.</p>
+<p>Some rules are contextual. A service may operate without a physical location, so forcing a location reference would produce false information. A consultant profile may need an approval state before it can appear publicly. A private operating address shouldn&#39;t become public merely because a location record exists.</p>
+<p>Ownership makes these rules sustainable. Marketing may govern organisation details, a practice lead may own service scope, operations may maintain locations, and a content lead may control article history and proof approval. Record a review path for facts that cross those boundaries.</p>
+<p>Visible content and machine-readable output should draw from the same governed fact. Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies">general structured data guidelines</a> require structured data to represent the main visible content and warn that valid markup doesn&#39;t guarantee a search feature. Every JSON-LD claim should also appear on the page.</p>
+<p>The same restraint applies to AI search. Google says <a href="https://developers.google.com/search/docs/appearance/ai-features">AI Overviews and AI Mode use normal Search foundations</a>, with no special AI file or special schema required. A good model makes accurate reuse possible. It doesn&#39;t cause a ranking, citation or recommendation.</p>
+<p>When governance exposes conflicting indexing, markup or search requirements, a focused <a href="/services/seo">SEO review</a> can help resolve the policy and validation work without turning the CMS into a collection of speculative fields.</p>
+<h2 class="insight-article__section-title">Test the model against real publishing tasks</h2>
+<p>Don&#39;t approve the model from a diagram alone. Put it through the work an editor and template must actually perform.</p>
+<ol>
+<li>Create a service with its required name, summary, audience and next step. Confirm that the editor understands every field without a separate explanation.</li>
+<li>Assign an existing person, location and proof record. Check that each relationship has a precise meaning and rejects inactive or inappropriate records.</li>
+<li>Render the service page and its listing card. Confirm that headings, summaries, links and missing optional sections behave correctly.</li>
+<li>Generate the title and description inputs from governed content, while preserving editorial control where automated text would be weak.</li>
+<li>Emit only eligible JSON-LD that matches the visible page. Test a service without a location rather than inventing one to satisfy a template.</li>
+<li>Change a shared fact once. Confirm that every intended output updates and that historical content doesn&#39;t change where it should remain fixed.</li>
+<li>Deactivate a person who leaves. The page should remove or replace the relationship without deleting authored articles or producing a broken module.</li>
+</ol>
+<p>Test the editor experience as seriously as the front end. Clear labels, help text and useful error messages often determine whether the content remains governed six months later. Permissions and review states should reflect real responsibility without turning a minor correction into an approval maze.</p>
+<p>Once the model and templates are deployed, use a <a href="/insights/structured-data-schema-audit-guide">structured data audit</a> to inspect rendered markup, compare it with visible content and route defects to the correct owner. Build validation and live validation answer different questions, so both matter.</p>
+<h2 class="insight-article__section-title">A stronger model makes the next build easier</h2>
+<p>A structured content model gives migration decisions a stable centre. Services, people, locations, proof and publishing details can be managed as facts with known relationships instead of rediscovered inside pages whenever the design changes.</p>
+<p>Before approving the templates, choose one representative field and ask four questions. What business fact does it store? Who keeps it accurate? What validation protects it? Which visible and justified machine-readable outputs use it? If the team can&#39;t answer all four, the field contract or template system still needs work.</p>
+<p>That is the practical approval test. A stronger model makes the website easier to build because its meaning, rules and responsibilities have already been agreed.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/structured-content-ai-search-guide" class="insight-card__link" aria-label="Read Structuring Your Website for AI Search">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>14 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Structuring Your Website for AI Search</h3>
+        <p class="insight-card__description">A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/connected-schema-graph-service-business-guide" class="insight-card__link" aria-label="Read Build a Connected Schema Graph Across Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>11 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>Websites &amp; UX</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Build a Connected Schema Graph Across Your Website</h3>
+        <p class="insight-card__description">Plan stable schema identities and relationships across website templates so your structured data stays connected, accurate and maintainable.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/schema-markup-priorities-service-business" class="insight-card__link" aria-label="Read Schema Markup Priorities for a Service Business">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Schema Markup Priorities for a Service Business</h3>
+        <p class="insight-card__description">Decide which schema markup your service business should fund first using visible evidence, Google support, template reach, commercial value and maintenance ownership.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

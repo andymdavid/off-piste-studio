@@ -25,7 +25,7 @@ That makes it a natural implementation layer beneath a broader [AI-ready website
 
 ## What structured content means now
 
-Structured content used to be treated as a publishing workflow issue. Teams broke content into reusable fields, then used those fields across pages, feeds, apps, and campaigns. That still matters, but AI search has made the front-end version commercially sharper.
+Structured content used to be treated as a publishing workflow issue. Teams broke content into reusable fields, then used those fields across pages, feeds, apps, and campaigns. That still matters, but AI search has made the front-end version commercially sharper. If you're planning those records during a redesign or migration, use our guide to [building a structured content model for your website](/insights/structured-content-model-service-website-guide).
 
 For a business website, structured content now means the page exposes its meaning through several aligned layers.
 

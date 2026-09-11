@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "structured-content-model-service-website-guide",
+    "title": "Build a Structured Content Model for Your Website",
+    "description": "Plan reusable CMS content types, fields, relationships and validation before a service website redesign, migration or template build.",
+    "intro": "A website rebuild gets harder when important business facts are trapped in page copy. A structured content model gives services, people, locations, proof and publishing details a reliable shape before templates are designed.",
+    "date": "2026-09-12",
+    "displayDate": "September 12, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Content Modelling",
+      "Structured Content",
+      "CMS Architecture",
+      "Content Types",
+      "CMS Fields",
+      "Website Architecture",
+      "Content Governance"
+    ],
+    "topics": [
+      "Websites & UX",
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "structured-content-ai-search-guide",
+      "connected-schema-graph-service-business-guide",
+      "schema-markup-priorities-service-business"
+    ],
+    "imageAlt": "Build a Structured Content Model for Your Website",
+    "url": "/insights/structured-content-model-service-website-guide"
+  },
+  {
     "slug": "connected-schema-graph-service-business-guide",
     "title": "Build a Connected Schema Graph Across Your Website",
     "description": "Plan stable schema identities and relationships across website templates so your structured data stays connected, accurate and maintainable.",
