@@ -121,6 +121,8 @@ The approver should verify the decision record rather than rely on a polished de
 
 Approval covers a specific configuration and context. After launch, [measure AI workflow ROI and reliability](/insights/measure-ai-workflow-automation-roi-reliability) with verified outcomes, exception logs, review effort, and scale, fix, or stop criteria.
 
+When approval involves a third-party product, use the [AI vendor due diligence checklist](/insights/ai-vendor-due-diligence-checklist-growing-businesses) to connect supplier evidence, contract terms, acceptance tests, and unresolved gaps to the decision.
+
 ## Operate governance as a review loop
 
 Review the inventory regularly and immediately after a serious incident or material change. A new model, vendor term, integration, prompt, knowledge source, data category, audience, or customer complaint can change the risk. Previous approval does not silently extend to a different system.

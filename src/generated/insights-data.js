@@ -9,6 +9,38 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-vendor-due-diligence-checklist-growing-businesses",
+    "title": "The AI Vendor Due Diligence Checklist for Growing Businesses",
+    "description": "Use this AI vendor due diligence checklist to assess supplier evidence, product risks, contract terms, testing, monitoring, and exit before approval.",
+    "intro": "A practical AI vendor review connects a defined use and data flow to evidence you can inspect, conditions you can enforce, and a clear decision to approve, pilot, escalate, or reject.",
+    "date": "2026-09-12",
+    "displayDate": "September 12, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "AI Governance",
+      "AI Procurement",
+      "Vendor Evaluation",
+      "Vendor Risk",
+      "Data Privacy",
+      "Cybersecurity",
+      "Contract Review",
+      "Acceptance Testing"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Small Business"
+    ],
+    "cluster": "AI Governance, Risk, and Trust",
+    "relatedPosts": [
+      "ai-governance-policy-checklist-growing-businesses",
+      "build-buy-hybrid-ai-business-decision-guide",
+      "ai-workflow-pre-launch-testing-guide"
+    ],
+    "imageAlt": "The AI Vendor Due Diligence Checklist for Growing Businesses",
+    "url": "/insights/ai-vendor-due-diligence-checklist-growing-businesses"
+  },
+  {
     "slug": "structured-content-model-service-website-guide",
     "title": "Build a Structured Content Model for Your Website",
     "description": "Plan reusable CMS content types, fields, relationships and validation before a service website redesign, migration or template build.",
