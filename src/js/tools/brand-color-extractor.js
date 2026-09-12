@@ -97,7 +97,7 @@ function init() {
 
     // Update refine link with extracted colours
     const colorParams = extractedColors.map(c => rgbToHex(c.r, c.g, c.b).slice(1)).join(',');
-    refineLink.href = `/tools/color-palette.html?colors=${colorParams}`;
+    refineLink.href = `/tools/color-palette?colors=${colorParams}`;
   }
 
   // Drag and drop

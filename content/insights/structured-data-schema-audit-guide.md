@@ -36,6 +36,8 @@ These states matter because syntax is only one test. Google's [general structure
 
 The wider guide to [structuring a website for AI search](/insights/structured-content-ai-search-guide) explains the relationship between semantic HTML, metadata, schema, proof and internal links. This guide takes the next job. It diagnoses an existing implementation and routes each repair to its owner.
 
+If the business is choosing what to fund before implementation, use [the service-business schema prioritisation framework](/insights/schema-markup-priorities-service-business) to scope the backlog first.
+
 ## Define the audit sample before opening a validator
 
 Choose a representative page from every template that emits structured data. Start with the homepage, a service page, an article and an expert profile where those templates exist. Add pages that are commercially important, recently changed or named in a Search Console issue. A random collection of URLs can hide template-wide defects.

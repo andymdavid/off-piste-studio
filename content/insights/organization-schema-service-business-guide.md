@@ -58,7 +58,7 @@ Use the most specific accurate type that fits the real operation. Schema.org def
 An online or non-location-dependent professional service firm can often use `Organization`, or a relevant subtype supported by its actual business model. A business with a customer-facing physical location may fit `LocalBusiness`. Google's [LocalBusiness structured data guide](https://developers.google.com/search/docs/appearance/structured-data/local-business) says to use the most specific applicable subtype and follow its local business fields as well as the inherited organisation properties.
 
 
-Service-area status alone doesn't make every remote consultancy a `LocalBusiness`. Check eligibility and how the business actually meets customers. Multi-location groups usually need a distinct node and stable `@id` for each location. Practitioner, parent-brand, franchise and complex ownership structures need case-specific modelling. A universal snippet can collapse genuinely different entities.
+Service-area status alone doesn't make every remote consultancy a `LocalBusiness`. Check eligibility and how the business actually meets customers. Once that choice is approved, use the [LocalBusiness location and service-area implementation guide](/insights/local-business-schema-locations-service-areas-guide) to protect private addresses and model storefronts, hybrid operations and genuine staffed branches. Practitioner, parent-brand, franchise and complex ownership structures need case-specific modelling. A universal snippet can collapse genuinely different entities.
 
 ## Choose fields by evidence and purpose
 
@@ -166,7 +166,7 @@ When duplicate nodes or conflicting identifiers extend beyond the business page,
 6. Search the rendered output for duplicate Organization or LocalBusiness nodes and conflicting `@id` values.
 7. Use Search Console URL Inspection after deployment and record warnings that require human judgement.
 
-Google's guidelines make clear that compliant markup can remain ineligible for a visible feature, and a test tool cannot identify every policy or factual problem. Valid code is the start of review.
+Google's guidelines make clear that compliant markup can remain ineligible for a visible feature, and a test tool cannot identify every policy or factual problem. That distinction is especially important for [self-serving Review and AggregateRating markup](/insights/review-schema-service-business-mistakes-guide) on a business's own Organization node. Valid code is the start of review.
 
 After deployment, use the [AI search visibility measurement guide](/insights/how-to-measure-ai-search-visibility) to watch representation and qualified discovery over time. Don't attribute a visibility change to schema alone. Content, links, profile changes, crawl state, demand and platform behaviour move at the same time.
 

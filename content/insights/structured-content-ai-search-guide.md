@@ -25,7 +25,7 @@ That makes it a natural implementation layer beneath a broader [AI-ready website
 
 ## What structured content means now
 
-Structured content used to be treated as a publishing workflow issue. Teams broke content into reusable fields, then used those fields across pages, feeds, apps, and campaigns. That still matters, but AI search has made the front-end version commercially sharper.
+Structured content used to be treated as a publishing workflow issue. Teams broke content into reusable fields, then used those fields across pages, feeds, apps, and campaigns. That still matters, but AI search has made the front-end version commercially sharper. If you're planning those records during a redesign or migration, use our guide to [building a structured content model for your website](/insights/structured-content-model-service-website-guide).
 
 For a business website, structured content now means the page exposes its meaning through several aligned layers.
 
@@ -86,6 +86,8 @@ That differs from saying schema guarantees AI visibility. It doesn't. Google is 
 
 Use schema as a confirmation layer. The visible page should make the fact clear. The schema should describe the same fact in a machine-readable way.
 
+When budget or template capacity is limited, use [the service-business schema prioritisation framework](/insights/schema-markup-priorities-service-business) to decide which identity, page and offer types deserve implementation first.
+
 | Schema type | Use when | Avoid when |
 | --- | --- | --- |
 | [Organization](/insights/organization-schema-service-business-guide) | The site needs clear business identity, logo, profiles, and contact facts | The business details are inconsistent or missing from visible pages |
@@ -94,7 +96,7 @@ Use schema as a confirmation layer. The visible page should make the fact clear.
 | [Article](/insights/article-schema-authorship-dates-guide) | A dated article has governed authorship, title, image, publish date and meaningful update history | The visible page and structured data disagree or the content has no durable article value |
 | FAQPage | The page contains genuine visible questions and answers | FAQs are added only to target snippets or repeat keywords |
 | Review | Reviews are visible, genuine, and follow the platform's rules | Reviews are copied, hidden, unsupported, or selectively misleading |
-| BreadcrumbList | The page sits inside a useful site hierarchy | Breadcrumbs differ from the real navigation path |
+| [BreadcrumbList](/insights/breadcrumb-schema-site-hierarchy-guide) | The page sits inside a useful site hierarchy | Breadcrumbs differ from the real navigation path |
 
 Google's [article structured data documentation](https://developers.google.com/search/docs/appearance/structured-data/article) is especially useful for governance. It shows the kind of metadata that can be exposed for article pages, including headline, images, author, publish date, and modified date. The implementation lesson is simple. Keep the visible byline, frontmatter, schema, and page history aligned.
 

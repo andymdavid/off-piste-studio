@@ -9,6 +9,420 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "structured-content-model-service-website-guide",
+    "title": "Build a Structured Content Model for Your Website",
+    "description": "Plan reusable CMS content types, fields, relationships and validation before a service website redesign, migration or template build.",
+    "intro": "A website rebuild gets harder when important business facts are trapped in page copy. A structured content model gives services, people, locations, proof and publishing details a reliable shape before templates are designed.",
+    "date": "2026-09-12",
+    "displayDate": "September 12, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Content Modelling",
+      "Structured Content",
+      "CMS Architecture",
+      "Content Types",
+      "CMS Fields",
+      "Website Architecture",
+      "Content Governance"
+    ],
+    "topics": [
+      "Websites & UX",
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "structured-content-ai-search-guide",
+      "connected-schema-graph-service-business-guide",
+      "schema-markup-priorities-service-business"
+    ],
+    "imageAlt": "Build a Structured Content Model for Your Website",
+    "url": "/insights/structured-content-model-service-website-guide"
+  },
+  {
+    "slug": "connected-schema-graph-service-business-guide",
+    "title": "Build a Connected Schema Graph Across Your Website",
+    "description": "Plan stable schema identities and relationships across website templates so your structured data stays connected, accurate and maintainable.",
+    "intro": "Once a business has chosen useful schema types, the harder job is making them describe the same services, people and provider across every template. A connected graph gives that implementation a shared contract.",
+    "date": "2026-09-10",
+    "displayDate": "September 10, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Connected Schema Graph",
+      "Structured Data",
+      "JSON-LD",
+      "Schema @id",
+      "Technical SEO",
+      "Website Architecture",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "schema-markup-priorities-service-business",
+      "structured-data-schema-audit-guide",
+      "structured-content-ai-search-guide"
+    ],
+    "imageAlt": "Build a Connected Schema Graph Across Your Website",
+    "url": "/insights/connected-schema-graph-service-business-guide"
+  },
+  {
+    "slug": "ai-customer-experience-audit-guide",
+    "title": "How to Audit a Live AI Customer Experience",
+    "description": "Audit a live AI customer journey with real evidence, diagnose the broken layer and decide whether to scale, repair, narrow or stop.",
+    "intro": "A polished conversation can still leave a customer with the wrong answer, a dead end, or more work. This guide shows you how to audit one live AI journey, trace the failure, and make an owned decision about what happens next.",
+    "date": "2026-09-09",
+    "displayDate": "September 9, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "AI",
+      "Customer Experience",
+      "AI Auditing",
+      "Customer Journey",
+      "AI Governance",
+      "Quality Assurance",
+      "Human Oversight"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Websites & UX"
+    ],
+    "cluster": "AI and Customer Experience",
+    "relatedPosts": [
+      "ai-customer-experience-human-handoff-guide",
+      "monitor-ai-knowledge-base-quality-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "How to Audit a Live AI Customer Experience",
+    "url": "/insights/ai-customer-experience-audit-guide"
+  },
+  {
+    "slug": "service-page-vs-blog-post-search-intent-guide",
+    "title": "Choosing the Right Page to Target a Keyword",
+    "description": "Decide whether a keyword belongs to a service page, article, pricing guide, comparison page, local page, case study, or an existing URL.",
+    "intro": "A useful keyword can still be assigned to the wrong page. This guide helps you name one URL as the primary owner, give adjacent pages clear supporting roles, and choose the right repair before another brief is written.",
+    "date": "2026-09-07",
+    "displayDate": "September 7, 2026",
+    "readTime": "9 min read",
+    "tags": [
+      "SEO",
+      "Search Intent",
+      "Content Strategy",
+      "Keyword Mapping",
+      "Content Cannibalisation",
+      "Website Architecture"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "Search Intent and Decision-Stage Content",
+    "relatedPosts": [
+      "search-intent-decision-stage-content-guide",
+      "organic-traffic-not-generating-leads-intent-audit",
+      "how-much-does-a-website-cost"
+    ],
+    "imageAlt": "Choosing the Right Page to Target a Keyword",
+    "url": "/insights/service-page-vs-blog-post-search-intent-guide"
+  },
+  {
+    "slug": "review-schema-service-business-mistakes-guide",
+    "title": "Review Schema Rules for Service Businesses",
+    "description": "Understand when Review and AggregateRating markup is eligible for Google stars, diagnose self-serving review schema and repair inherited service-business implementations.",
+    "intro": "Google review-star eligibility depends on the reviewed entity, control of the page and visible evidence. A valid JSON-LD block and a green test result answer narrower technical questions.",
+    "date": "2026-09-05",
+    "displayDate": "September 5, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Review Schema",
+      "AggregateRating",
+      "Structured Data",
+      "LocalBusiness Schema",
+      "Organization Schema",
+      "Google Rich Results",
+      "Schema Validation",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "schema-markup-priorities-service-business",
+      "local-business-schema-locations-service-areas-guide",
+      "structured-data-schema-audit-guide"
+    ],
+    "imageAlt": "Review Schema Rules for Service Businesses",
+    "url": "/insights/review-schema-service-business-mistakes-guide"
+  },
+  {
+    "slug": "ai-workflow-pre-launch-testing-guide",
+    "title": "How to Test an AI Workflow Before Launch",
+    "description": "Build acceptance criteria, representative test cases and a controlled release plan for an AI workflow across tools, handoffs, permissions and recovery.",
+    "intro": "A convincing demo shows that an AI workflow can work. A release test shows whether the complete business process is useful, controlled and recoverable enough to face real work.",
+    "date": "2026-09-04",
+    "displayDate": "September 4, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Workflow Automation",
+      "AI Testing",
+      "Acceptance Criteria",
+      "AI Reliability",
+      "Internal Systems",
+      "Human Oversight"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Growth & Leads"
+    ],
+    "cluster": "AI Workflow Automation and Internal Systems",
+    "relatedPosts": [
+      "ai-workflow-automation-business-systems-guide",
+      "measure-ai-workflow-automation-roi-reliability",
+      "ai-workflow-automation-failure-diagnostic-guide"
+    ],
+    "imageAlt": "How to Test an AI Workflow Before Launch",
+    "url": "/insights/ai-workflow-pre-launch-testing-guide"
+  },
+  {
+    "slug": "ai-personalisation-website-lead-journey-guide",
+    "title": "Designing Trustworthy AI Personalisation for Website Lead Journeys",
+    "description": "Choose static, rule-based, declared-preference or bounded AI website personalisation with practical privacy, accessibility, testing and fallback controls.",
+    "intro": "Useful personalisation begins with a specific visitor decision. Greater complexity earns its place only when the business can justify the data, operate the system and preserve a clear fallback.",
+    "date": "2026-09-02",
+    "displayDate": "September 2, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Website Personalisation",
+      "Website Design",
+      "Lead Journeys",
+      "Privacy",
+      "Customer Experience"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Websites & UX"
+    ],
+    "cluster": "AI-Enabled Websites and Lead Journeys",
+    "relatedPosts": [
+      "ai-chatbot-vs-guided-form-live-chat-website",
+      "ai-lead-qualification-website-intake-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "Designing Trustworthy AI Personalisation for Website Lead Journeys",
+    "url": "/insights/ai-personalisation-website-lead-journey-guide"
+  },
+  {
+    "slug": "google-business-profile-categories-services-guide",
+    "title": "Choosing Google Business Profile Categories and Services",
+    "description": "Choose accurate Google Business Profile categories, separate them from services, and govern a live category change with evidence.",
+    "intro": "Categories describe the business. Services explain what it offers. This guide shows eligible local businesses how to make both choices accurately, prepare for a live edit, and review the result through qualified enquiries.",
+    "date": "2026-09-02",
+    "displayDate": "September 2, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Google Business Profile",
+      "Local SEO",
+      "Business Categories",
+      "Profile Services",
+      "Local Search Governance",
+      "Australia"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Small Business"
+    ],
+    "cluster": "Local Search and Google Business Profile",
+    "relatedPosts": [
+      "google-business-profile-guide",
+      "google-business-profile-not-showing-diagnostic-guide",
+      "measure-google-business-profile-performance-qualified-leads"
+    ],
+    "imageAlt": "Choosing Google Business Profile Categories and Services",
+    "url": "/insights/google-business-profile-categories-services-guide"
+  },
+  {
+    "slug": "local-business-schema-locations-service-areas-guide",
+    "title": "LocalBusiness Schema for Real Locations and Service Areas",
+    "description": "Build accurate, privacy-safe LocalBusiness schema for a storefront, service-area or hybrid business, or several staffed locations.",
+    "intro": "Model storefronts, service areas, hybrid operations and staffed branches with facts your team can prove and maintain, while keeping private addresses private.",
+    "date": "2026-09-01",
+    "displayDate": "September 1, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "LocalBusiness Schema",
+      "Structured Data",
+      "JSON-LD",
+      "Local SEO",
+      "Service Area Businesses",
+      "Multi-location SEO",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "organization-schema-service-business-guide",
+      "service-schema-service-pages-guide",
+      "structured-data-schema-audit-guide"
+    ],
+    "imageAlt": "LocalBusiness Schema for Real Locations and Service Areas",
+    "url": "/insights/local-business-schema-locations-service-areas-guide"
+  },
+  {
+    "slug": "fix-incorrect-google-knowledge-panel-business-guide",
+    "title": "Fix Incorrect Information in a Google Knowledge Panel",
+    "description": "Identify a wrong Google Knowledge Panel, trace the affected fact and submit an evidence-backed correction without confusing it with a Business Profile.",
+    "intro": "A wrong Knowledge Panel is visible in seconds, but the correction route depends on the result type, the affected entity and the source behind the displayed fact. This guide shows you how to diagnose the panel, prepare evidence and use the route Google currently provides.",
+    "date": "2026-08-31",
+    "displayDate": "August 31, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Google Knowledge Panel",
+      "Entity Trust",
+      "Brand Signals",
+      "Knowledge Graph",
+      "Search Visibility",
+      "Entity Correction"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "third-party-brand-signals-ai-search-audit",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "Fix Incorrect Information in a Google Knowledge Panel",
+    "url": "/insights/fix-incorrect-google-knowledge-panel-business-guide"
+  },
+  {
+    "slug": "ai-ready-brand-voice-guide-content-system",
+    "title": "Building an AI Ready Brand Voice System",
+    "description": "Build an AI ready brand voice system with approved examples, observable writing rules, regression tests, governance, and clear ownership.",
+    "intro": "Consistent AI-assisted writing comes from an owned voice system. It tells people and tools what good writing looks like, tests whether the rules work, and protects facts and approval from style decisions.",
+    "date": "2026-08-29",
+    "displayDate": "August 29, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Brand Voice",
+      "Content Strategy",
+      "AI Content Style Guide",
+      "Editorial Governance",
+      "Content Testing"
+    ],
+    "topics": [
+      "Content & Brand",
+      "AI & Automation"
+    ],
+    "cluster": "AI Content, Voice, and Expertise",
+    "relatedPosts": [
+      "ai-assisted-content-workflow-expertise-guide",
+      "ai-assisted-content-quality-audit-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "Building an AI Ready Brand Voice System",
+    "url": "/insights/ai-ready-brand-voice-guide-content-system"
+  },
+  {
+    "slug": "breadcrumb-schema-site-hierarchy-guide",
+    "title": "Breadcrumb Schema That Reflects Your Site Hierarchy",
+    "description": "Learn how to build accessible breadcrumbs and matching BreadcrumbList JSON-LD from one maintained site hierarchy.",
+    "intro": "Breadcrumb schema works when the visible trail and the machine-readable trail describe the same place. This guide shows how to choose that path, build it accessibly, generate it once and keep it accurate.",
+    "date": "2026-08-29",
+    "displayDate": "August 29, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Breadcrumb Schema",
+      "BreadcrumbList",
+      "Structured Data",
+      "JSON-LD",
+      "Technical SEO",
+      "Website Accessibility",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "schema-markup-priorities-service-business",
+      "structured-content-ai-search-guide",
+      "structured-data-schema-audit-guide"
+    ],
+    "imageAlt": "Breadcrumb Schema That Reflects Your Site Hierarchy",
+    "url": "/insights/breadcrumb-schema-site-hierarchy-guide"
+  },
+  {
+    "slug": "schema-markup-priorities-service-business",
+    "title": "Schema Markup Priorities for a Service Business",
+    "description": "Decide which schema markup your service business should fund first using visible evidence, Google support, template reach, commercial value and maintenance ownership.",
+    "intro": "A service business rarely needs every schema type recommended by a plugin or generic checklist. A useful backlog starts with the facts the site can prove and the templates the team can maintain.",
+    "date": "2026-08-28",
+    "displayDate": "August 28, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Schema Markup",
+      "Structured Data",
+      "Technical SEO",
+      "Schema Prioritisation",
+      "Service Businesses",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "structured-content-ai-search-guide",
+      "structured-data-schema-audit-guide",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "Schema Markup Priorities for a Service Business",
+    "url": "/insights/schema-markup-priorities-service-business"
+  },
+  {
+    "slug": "business-rebrand-entity-search-migration-guide",
+    "title": "How to Rebrand Without Losing Search Visibility",
+    "description": "Plan a business rebrand across your website, domain, Google Business Profile, schema, external profiles, and post-launch search checks.",
+    "intro": "A rebrand changes the evidence that search engines, AI systems, profiles, and buyers use to recognise your business. This guide shows you how to carry one approved identity across every important source.",
+    "date": "2026-08-27",
+    "displayDate": "August 27, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "Business Rebrand",
+      "Entity Migration",
+      "Domain Migration",
+      "Google Business Profile",
+      "Organisation Schema",
+      "Search Visibility"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "third-party-brand-signals-ai-search-audit",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "How to Rebrand Without Losing Search Visibility",
+    "url": "/insights/business-rebrand-entity-search-migration-guide"
+  },
+  {
     "slug": "ai-assisted-content-quality-audit-guide",
     "title": "A Practical Quality Audit for AI-Assisted Content",
     "description": "Audit AI-assisted content before publication and make a defensible pass, revise, or reject decision based on purpose, evidence, voice, privacy, and ownership.",
@@ -756,8 +1170,8 @@ export const INSIGHT_POSTS = [
     "intro": "Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.",
     "date": "2026-07-31",
     "displayDate": "July 31, 2026",
-    "updatedDate": "2026-08-02",
-    "displayUpdatedDate": "August 2, 2026",
+    "updatedDate": "2026-09-07",
+    "displayUpdatedDate": "September 7, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -952,6 +1366,8 @@ export const INSIGHT_POSTS = [
     "intro": "Some keywords bring buyers who are comparing options, testing fit, checking cost, or deciding who to trust. Others bring traffic with no buying job attached. Search intent work helps you tell the difference before you spend time writing another page.",
     "date": "2026-07-24",
     "displayDate": "July 24, 2026",
+    "updatedDate": "2026-09-07",
+    "displayUpdatedDate": "September 7, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -1057,13 +1473,13 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "ai-search-citation-worthy-content",
-    "title": "How to Make Website Content Worth Citing in AI Search",
-    "description": "A practical framework for making service pages, articles, and proof assets specific, evidenced, and useful enough for AI search systems and buyers to trust.",
-    "intro": "AI search rewards pages with clear claims, visible proof, and useful context. If your website sounds like everyone else, answer engines have little reason to cite it and buyers have little reason to trust it. Citation-worthy content gives both groups clearer evidence.",
+    "title": "Citation-Worthy Content for AI Search: A Practical Guide",
+    "description": "Learn how to create citation-worthy content for AI search using clear claims, first-hand proof, credible sources, and a practical page framework.",
+    "intro": "Citation-worthy content gives AI search systems a clear, evidenced answer they can extract and buyers a useful source they can trust. This guide shows service businesses how to strengthen claims, proof, sources, page structure, and measurement without relying on AI-specific tricks.",
     "date": "2026-07-16",
     "displayDate": "July 16, 2026",
-    "updatedDate": "2026-08-02",
-    "displayUpdatedDate": "August 2, 2026",
+    "updatedDate": "2026-08-26",
+    "displayUpdatedDate": "August 26, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
@@ -1081,7 +1497,7 @@ export const INSIGHT_POSTS = [
       "building-your-website-for-llms",
       "how-to-measure-ai-search-visibility"
     ],
-    "imageAlt": "How to Make Website Content Worth Citing in AI Search",
+    "imageAlt": "Citation-Worthy Content for AI Search: A Practical Guide",
     "url": "/insights/ai-search-citation-worthy-content"
   },
   {
@@ -1143,16 +1559,20 @@ export const INSIGHT_POSTS = [
   {
     "slug": "how-to-measure-ai-search-visibility",
     "title": "How to Measure AI Search Visibility",
-    "description": "A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.",
+    "description": "A practical framework for measuring AI search visibility with Google's generative AI report, citations, analytics, and lead-quality evidence.",
     "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
     "date": "2026-07-13",
     "displayDate": "July 13, 2026",
-    "updatedDate": "2026-08-08",
-    "displayUpdatedDate": "August 8, 2026",
-    "readTime": "13 min read",
+    "updatedDate": "2026-09-07",
+    "displayUpdatedDate": "September 7, 2026",
+    "readTime": "15 min read",
     "tags": [
       "SEO",
-      "AI"
+      "AI",
+      "Google Search Console",
+      "AI Overviews",
+      "AI Mode",
+      "Measurement"
     ],
     "topics": [
       "SEO & Search",
@@ -1160,9 +1580,9 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
-      "building-your-website-for-llms",
       "google-sge-and-seo",
-      "small-business-seo-guide-2026"
+      "google-ai-overviews-traffic-drop-diagnostic",
+      "google-ai-overviews-not-citing-website-diagnostic"
     ],
     "imageAlt": "How to Measure AI Search Visibility",
     "url": "/insights/how-to-measure-ai-search-visibility"
@@ -1437,17 +1857,21 @@ export const INSIGHT_POSTS = [
   },
   {
     "slug": "google-sge-and-seo",
-    "title": "What Google AI Mode Means for Search Visibility",
-    "description": "How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.",
-    "intro": "Google's AI search features have moved on from the old SGE label. AI Overviews and AI Mode now change how some searches are answered, how clicks are earned, and how businesses should judge visibility. The practical response is stronger search foundations, clearer evidence, and better measurement.",
+    "title": "What Google AI Overviews and AI Mode Mean for SEO",
+    "description": "Learn what Google AI Overviews and AI Mode mean for SEO, source visibility, reporting and the website priorities that matter now.",
+    "intro": "Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?",
     "date": "2026-03-06",
     "displayDate": "March 6, 2026",
-    "updatedDate": "2026-07-21",
-    "displayUpdatedDate": "July 21, 2026",
+    "updatedDate": "2026-09-10",
+    "displayUpdatedDate": "September 10, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
       "AI",
+      "Google Search",
+      "AI Overviews",
+      "AI Mode",
+      "Google SGE",
       "Content Strategy"
     ],
     "topics": [
@@ -1457,10 +1881,10 @@ export const INSIGHT_POSTS = [
     "cluster": "AI Search Visibility",
     "relatedPosts": [
       "how-to-measure-ai-search-visibility",
-      "building-your-website-for-llms",
-      "ai-search-citation-worthy-content"
+      "google-ai-overviews-not-citing-website-diagnostic",
+      "google-ai-mode-query-fan-out-content-planning"
     ],
-    "imageAlt": "What Google AI Mode Means for Search Visibility",
+    "imageAlt": "What Google AI Overviews and AI Mode Mean for SEO",
     "url": "/insights/google-sge-and-seo"
   },
   {
