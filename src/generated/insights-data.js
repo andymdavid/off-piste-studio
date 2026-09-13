@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "schema-markup-change-management-guide",
+    "title": "Keep Schema Markup Accurate When Search Rules Change",
+    "description": "A practical system for monitoring schema changes, deciding what to update and keeping deployed structured data accurate.",
+    "intro": "Schema maintenance starts when the markup goes live. A small system helps your team separate platform changes from site defects, make proportionate decisions and keep every affected template accurate.",
+    "date": "2026-09-14",
+    "displayDate": "September 14, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Schema Markup Maintenance",
+      "Structured Data Monitoring",
+      "Schema Deprecation",
+      "Technical SEO",
+      "Schema.org",
+      "Google Rich Results",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "schema-markup-priorities-service-business",
+      "structured-data-schema-audit-guide",
+      "connected-schema-graph-service-business-guide"
+    ],
+    "imageAlt": "Keep Schema Markup Accurate When Search Rules Change",
+    "url": "/insights/schema-markup-change-management-guide"
+  },
+  {
     "slug": "ai-vendor-due-diligence-checklist-growing-businesses",
     "title": "The AI Vendor Due Diligence Checklist for Growing Businesses",
     "description": "Use this AI vendor due diligence checklist to assess supplier evidence, product risks, contract terms, testing, monitoring, and exit before approval.",

@@ -94,6 +94,8 @@ Google's [FAQ and HowTo rich-result update](https://developers.google.com/search
 
 For most service businesses, that makes FAQPage and HowTo weak investments when the stated goal is a Google rich result. Keep useful visible FAQs and instructions when they help readers. Fund the markup only when a current, evidenced benefit justifies it.
 
+Review and AggregateRating also need an eligibility decision before they enter the backlog. A service business marking up reviews about itself as LocalBusiness or Organization is ineligible for Google's star review feature. The [review schema rules for service businesses](/insights/review-schema-service-business-mistakes-guide) explain self-serving reviews, widgets and the repair decision.
+
 Deferral should be recorded with a reason and review date. That allows the business to reconsider when its pages change or Google updates feature support, without leaving speculative work in the active build.
 
 ## Test the framework on a consultancy site
@@ -147,7 +149,7 @@ The brief should also state the expected benefit in bounded terms. That might be
 
 If markup is already deployed and tools disagree, move the problem into [the practical structured data audit](/insights/structured-data-schema-audit-guide). That workflow follows visible facts through CMS data, rendered output and Google-facing evidence. It also separates syntax, feature eligibility, indexing and display so a backlog decision does not turn into an improvised diagnosis.
 
-Review the backlog when a template, plugin, CMS model, business location or source of truth changes. Recheck volatile Google support before funding deferred types. A short, owned implementation that stays true is more valuable than a large graph nobody can explain six months later.
+Review the backlog when a template, plugin, CMS model, business location or source of truth changes. Recheck volatile Google support before funding deferred types. Once markup is live, use the [schema markup maintenance guide](/insights/schema-markup-change-management-guide) to monitor releases, classify changes and decide whether to retain, revise, remove or monitor it. A short, owned implementation that stays true is more valuable than a large graph nobody can explain six months later.
 
 ## Choose the right implementation route
 

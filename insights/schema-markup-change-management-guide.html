@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="A practical system for monitoring schema changes, deciding what to update and keeping deployed structured data accurate.">
+  <title>Keep Schema Markup Accurate When Search Rules Change | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/schema-markup-change-management-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Keep Schema Markup Accurate When Search Rules Change",
+        "description": "A practical system for monitoring schema changes, deciding what to update and keeping deployed structured data accurate.",
+        "datePublished": "2026-09-14",
+        "dateModified": "2026-09-14",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/schema-markup-change-management-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Keep Schema Markup Accurate When Search Rules Change", "item": "https://offpistestudio.com/insights/schema-markup-change-management-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="schema-markup-change-management-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span></div><p class="insight-article__read-time">12 min read</p></div>
+          <h1 class="insight-article__title">Keep Schema Markup Accurate When Search Rules Change</h1>
+          <p class="insight-article__intro">Schema maintenance starts when the markup goes live. A small system helps your team separate platform changes from site defects, make proportionate decisions and keep every affected template accurate.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">September 14, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/schema-markup-change-management-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/schema-markup-change-management-guide&text=Keep%20Schema%20Markup%20Accurate%20When%20Search%20Rules%20Change" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/schema-markup-change-management-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Dedicated schema-maintenance SERP check completed 14 September 2026 in Australia/Perth.
+Queries: schema markup maintenance, how to maintain structured data, structured data deprecation, Google retired structured data feature, schema markup change management, structured data monitoring checklist, should I remove deprecated schema markup, Schema.org version updates.
+Intent: operational and diagnostic, with readers seeking maintenance routines, monitoring tools, deprecation advice and decisions about live markup.
+Result types: Google announcements and documentation, Schema.org release records, vendor implementation and maintenance guides, support pages, community discussions, videos and generic schema tutorials. Primary sources were prominent for retirement and version queries, while broad maintenance queries also surfaced vendor material and general implementation guides.
+AI Overview presence: not observable in the available search interface, so no presence or absence is claimed. No search volume is claimed.
+Access date for SERP and volatile Google sources: 14 September 2026, Australia/Perth.
+
+Editorial boundaries:
+- The retain, revise, remove or monitor model, maintenance register and suggested cadence are Off Piste guidance, not Google or Schema.org requirements.
+- Schema.org vocabulary status, Google feature eligibility, Search Console reporting, ranking effects and visible search treatments are separate states.
+- Unsupported markup is not automatically harmful and valid markup does not guarantee a rich result, ranking or AI citation.
+-->
+
+<h2 class="insight-article__section-title">A schema launch creates an ongoing obligation</h2>
+<p>A service business launches structured data across its homepage, service pages and articles. Six months later, Google retires a search treatment, a plugin changes its output and the business updates an address. The markup still validates on some pages, Search Console stops reporting one feature, and nobody knows which event requires a release.</p>
+<p>Google can change a Search appearance without changing the underlying Schema.org vocabulary. In June 2025, Google announced that it would <a href="https://developers.google.com/search/blog/2025/06/simplifying-search-results">phase out several structured data features from Search</a>. It said the change wouldn&#39;t affect page rankings or uses of those data types outside Google Search. A later update to the same announcement removed related Search Console reporting and Rich Results Test support for several types.</p>
+<p>That distinction prevents two poor reactions. One is deleting accurate markup merely because a Google display has gone. The other is leaving misleading or broken markup live because the vocabulary term still exists.</p>
+<p>A maintenance programme gives every change the same route: confirm the source, identify the affected layer, assess the deployed impact, choose an action, test the release and close the record. It turns an alarming announcement into owned website work.</p>
+<h2 class="insight-article__section-title">Work out which layer changed</h2>
+<p>“Schema changed” is rarely precise enough to guide a decision. Start by naming the layer.</p>
+<ul>
+<li><strong>Schema.org vocabulary</strong> defines types, properties and relationships. Its <a href="https://schema.org/docs/releases.html">release history</a> records changes independently of Google Search.</li>
+<li><strong>Google feature support</strong> determines which structured data Google currently uses for specific Search appearances. The <a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery">supported structured data gallery</a> is narrower than the full Schema.org vocabulary.</li>
+<li><strong>Google policy and feature requirements</strong> determine whether a page is eligible for a supported treatment. The markup can be syntactically valid and still breach a content or quality rule.</li>
+<li><strong>Search Console reporting</strong> shows Google&#39;s reporting state for supported features and detected issues. A report can retire even while a vocabulary term remains available.</li>
+<li><strong>Business facts</strong> include names, services, people, locations, ratings and dates. They can become inaccurate without either platform publishing an update.</li>
+<li><strong>Site implementation</strong> includes CMS fields, plugins, templates, rendering and shared identifiers. A release can break output while the external rules remain unchanged.</li>
+</ul>
+<p>Schema.org explains that it develops the vocabulary incrementally through named releases and public change control. Its <a href="https://schema.org/docs/howwework.html">versioning guidance</a> generally encourages publishers to use the current vocabulary and normal, non-versioned Schema.org URLs. Stable release snapshots remain available when documentation or standards work requires a precise version.</p>
+<p>Google&#39;s rules answer a different question. Its <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies">general structured data guidelines</a> require markup to be relevant, visible, accurate and compliant, and make clear that correct implementation doesn&#39;t guarantee a rich result. Keeping these layers separate lets the team respond to the change that actually occurred.</p>
+<h2 class="insight-article__section-title">Build a small authoritative watchlist</h2>
+<p>A useful watchlist is short enough for someone to check. Start with Google&#39;s <a href="https://developers.google.com/search/updates">Search documentation update log</a>, the supported feature gallery and the documentation for types your site actually uses. Add Schema.org&#39;s release history, relevant Search Console messages and the release notes for any CMS, plugin or deployment layer that generates markup.</p>
+<p>Vendor summaries can alert you to a change, but trace their claims back to the platform documentation before changing production. Record the source URL and access date because Google feature pages, requirements and reports can change. For every relevant notice, also record the affected schema type, templates, representative URLs and next review date.</p>
+<p>Keep the watchlist focused on changes that intersect with your deployed graph, current backlog or reporting. A business using Organization, Service, BreadcrumbList and Article markup has little reason to create immediate work from an unrelated product vocabulary update.</p>
+<h2 class="insight-article__section-title">Triage the change before touching production</h2>
+<p>First, confirm the announcement or rule in its primary source. Then inventory every template and node that may be affected. Inspect representative public URLs and compare rendered JSON-LD with visible content and approved source facts. Check shared <code>@id</code> values and relationships before treating one node as isolated.</p>
+<p>Next, classify the consequence. Is the content false, prohibited or newly ineligible? Has only a display or report retired? Did a plugin change its output? Is Google looking at an older indexed version? These questions determine urgency and ownership.</p>
+<p>Use the <a href="/insights/structured-data-schema-audit-guide">practical structured data audit</a> for the detailed path through source facts, rendered output, validators and Google-facing evidence. The purpose here is to decide whether a change should enter that diagnostic workflow, not to repeat every tool check.</p>
+<p>If a property or relationship changes across the site, inspect the <a href="/insights/connected-schema-graph-service-business-guide">connected schema graph contract</a>. A local template fix can create a second organisation or person identity when shared identifiers aren&#39;t considered.</p>
+<h2 class="insight-article__section-title">Choose whether to retain revise remove or monitor</h2>
+<p>Off Piste uses four possible outcomes for change triage.</p>
+<p><strong>Retain</strong> accurate markup when it still describes the visible page and has a justified machine-readable purpose. A Google feature retirement alone doesn&#39;t prove the vocabulary is invalid or the markup is harmful.</p>
+<p><strong>Revise</strong> when a business fact, supported property, relationship, template rule or policy requirement has changed. Revisit the <a href="/insights/schema-markup-priorities-service-business">schema prioritisation framework</a> if the change alters the value, reach or ownership of the backlog.</p>
+<p><strong>Remove</strong> markup that is misleading, hidden, prohibited or no longer worth its maintenance risk. Removal should be an explicit decision about accuracy, policy or operational value, not a reflex response to a missing search treatment.</p>
+<p><strong>Monitor</strong> accurate vocabulary when a Google display or report retires and there is no immediate reason to change the page. Record what retired, what remains valid, which evidence supports the decision and what event would reopen it.</p>
+<p>This model is a decision aid, not a platform rule. Google demonstrated the need for that restraint in its 2025 retirement announcement. The named search displays and later reporting could disappear without a ranking change, while uses outside Google Search were unaffected.</p>
+<h2 class="insight-article__section-title">Test the implementation at the right levels</h2>
+<p>Testing should follow the reach of the change. Check one representative URL for each affected template and meaningful variant. Compare the rendered markup with its visible source fact. Confirm that required and recommended properties for any current Google feature still match the relevant documentation.</p>
+<p>Then test graph relationships. An updated Article template shouldn&#39;t silently change the author&#39;s <code>@id</code> or create a second publisher. A service template shouldn&#39;t replace a stable provider reference with a copied object. The graph guide provides the rules for protecting those shared connections.</p>
+<p>Choose regression samples with different risk. <a href="/insights/breadcrumb-schema-site-hierarchy-guide">Breadcrumb markup</a> is a useful lower-risk template check because it should follow visible site hierarchy. <a href="/insights/review-schema-service-business-mistakes-guide">Review markup</a> needs closer policy and evidence review because a false rating or ineligible use can mislead people.</p>
+<p>Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data">introduction to structured data</a> recommends validating during development and monitoring after deployment, including Search Console checks. Keep build validation, the live rendered page, indexed state and actual search display as separate evidence. A passing test doesn&#39;t promise that Google has recrawled the change or will show a rich result.</p>
+<h2 class="insight-article__section-title">Assign ownership before the next change arrives</h2>
+<p>Maintenance fails when everybody receives an alert and nobody owns the decision. Give one person responsibility for watching primary sources and opening a change record. Name a policy or commercial owner who can decide whether the markup remains justified. Assign technical implementation and release verification separately, even when one person performs both roles.</p>
+<p>Source data needs an owner too. If an address, author role or service description is wrong in the CMS, a template patch only masks the governance problem. The <a href="/insights/structured-content-model-service-website-guide">structured content model guide</a> shows how field contracts connect facts, validation, outputs and responsibility.</p>
+<p>As an adjustable default, Off Piste recommends a light monthly review of watched sources, quarterly regression samples for important templates and an event-triggered review after relevant platform, plugin, CMS or business changes. A small stable site may need less. A large site with frequent releases or policy-sensitive markup may need more. The cadence should follow change rate and risk, not create reporting for its own sake.</p>
+<h2 class="insight-article__section-title">Keep a maintenance register that leads to action</h2>
+<p>An alert becomes useful only when it leaves an evidence trail and a clear next step. Keep the register beside the implementation backlog or website release system, where owners can connect a source change to affected templates, a decision and verification.</p>
+<p>The register should be compact enough to maintain. These fields give the next owner enough context to understand why work was opened and what will close it.</p>
+<aside class="insight-module insight-module--practice" aria-label="Record enough evidence to close every change"><header><p class="insight-module__label">In practice</p><h3>Record enough evidence to close every change</h3></header><div class="insight-module__body"><p class="insight-module__intro">Each change record should give the next owner enough context to verify the decision.</p><ul class="insight-module__list"><li>Name the source and record the access date</li><li>Identify affected schema types templates and representative URLs</li><li>Classify the change as vocabulary platform policy reporting business fact or implementation</li><li>Record the decision owner and chosen action</li><li>Link the test evidence release and follow-up date</li></ul></div></aside>
+<p>Close the record when the chosen action is deployed and verified, or when an evidence-backed monitoring decision has a named review trigger. “No action” without a reason or follow-up date isn&#39;t a closed decision.</p>
+<h2 class="insight-article__section-title">Make maintenance part of the website operating system</h2>
+<p>Reliable schema markup connects governed facts, stable graph relationships, shared templates and current platform evidence. Treating each announcement as an isolated SEO task breaks those connections. Treating maintenance as part of normal website operations preserves them.</p>
+<p>Start with one practical decision. Who will review the watchlist, and where will they record an affected template? If that answer is unclear, establish ownership before expanding the implementation.</p>
+<p>Use <a href="/services/seo">SEO governance and audit support</a> when the decision spans monitoring, policy, Search Console and several templates. Route repairs in CMS fields, plugin behaviour, rendering or shared templates through <a href="/services/website-design">website design and development</a>. The result should be an implementation the business can still explain and trust after the next change arrives.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/schema-markup-priorities-service-business" class="insight-card__link" aria-label="Read Schema Markup Priorities for a Service Business">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Schema Markup Priorities for a Service Business</h3>
+        <p class="insight-card__description">Decide which schema markup your service business should fund first using visible evidence, Google support, template reach, commercial value and maintenance ownership.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/structured-data-schema-audit-guide" class="insight-card__link" aria-label="Read A Practical Structured Data Audit for Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">A Practical Structured Data Audit for Your Website</h3>
+        <p class="insight-card__description">Audit rendered schema markup across your website, diagnose why tools disagree, assign repairs and verify structured data fixes after deployment.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/connected-schema-graph-service-business-guide" class="insight-card__link" aria-label="Read Build a Connected Schema Graph Across Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>11 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>Websites &amp; UX</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Build a Connected Schema Graph Across Your Website</h3>
+        <p class="insight-card__description">Plan stable schema identities and relationships across website templates so your structured data stays connected, accurate and maintainable.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>
