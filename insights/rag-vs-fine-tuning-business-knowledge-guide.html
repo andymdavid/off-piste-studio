@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Choose when business knowledge belongs in prompt context, retrieval, fine tuning, or a combined AI system.">
+  <title>When Business Knowledge Needs RAG or Fine Tuning | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/rag-vs-fine-tuning-business-knowledge-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "When Business Knowledge Needs RAG or Fine Tuning",
+        "description": "Choose when business knowledge belongs in prompt context, retrieval, fine tuning, or a combined AI system.",
+        "datePublished": "2026-09-15",
+        "dateModified": "2026-09-15",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/rag-vs-fine-tuning-business-knowledge-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "When Business Knowledge Needs RAG or Fine Tuning", "item": "https://offpistestudio.com/insights/rag-vs-fine-tuning-business-knowledge-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="rag-vs-fine-tuning-business-knowledge-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>AI &amp; Automation</span><span>Small Business</span></div><p class="insight-article__read-time">13 min read</p></div>
+          <h1 class="insight-article__title">When Business Knowledge Needs RAG or Fine Tuning</h1>
+          <p class="insight-article__intro">Current facts, attributable answers and repeatable behaviour ask different things of an AI system. This guide helps you choose the least complex approach that can meet the real requirement and pass a defined evaluation.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">September 15, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/rag-vs-fine-tuning-business-knowledge-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/rag-vs-fine-tuning-business-knowledge-guide&text=When%20Business%20Knowledge%20Needs%20RAG%20or%20Fine%20Tuning" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/rag-vs-fine-tuning-business-knowledge-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Primary sources checked 14 September 2026 in Australia/Perth:
+- AWS Prescriptive Guidance, Comparing Retrieval Augmented Generation and fine-tuning.
+- Google Cloud, To tune or not to tune? A guide to leveraging your data with LLMs, published 17 May 2024.
+- NIST AI 600-1, Generative Artificial Intelligence Profile, July 2024.
+- OWASP Retrieval-Augmented Generation Security Cheat Sheet.
+- The planned Microsoft Learn comparison URL now redirects to a general Azure AI development page. It has not been used to support a material claim.
+
+All business scenarios are constructed. They do not represent client results.
+-->
+<h2 class="insight-article__section-title">The architecture choice starts with the job</h2>
+<p>A growing service business wants an internal assistant. Staff expect it to answer questions about current policies, use an approved tone and classify each request for the right team. Those requirements sound like one AI project. They&#39;re three different jobs.</p>
+<p>Current policies must come from an approved source. Answers may need citations. Tone and classification are repeatable behaviours. A short instruction can shape some of that behaviour without changing a model at all.</p>
+<p>The useful first question isn&#39;t “Should we use RAG or fine tuning?” It&#39;s “What must the system know at the moment of the request, and what must it do consistently?” If the use case, owner or decision boundary remains unclear, complete an <a href="/insights/ai-readiness-assessment-growing-business">AI readiness assessment</a> before selecting an architecture.</p>
+<p>This distinction matters because every layer creates work after launch. Retrieval needs governed sources, access rules and monitoring. Fine tuning needs suitable examples, training and regression tests. Combining them creates both sets of obligations plus an integration boundary. The architecture should earn that burden through a clear requirement.</p>
+<h2 class="insight-article__section-title">What each approach actually changes</h2>
+<h3 class="insight-article__sub-title">Prompt context supplies bounded material</h3>
+<p>Prompt context puts instructions, examples or source material into the request sent to the model. Google Cloud&#39;s <a href="https://cloud.google.com/blog/products/ai-machine-learning/to-tune-or-not-to-tune-a-guide-to-leveraging-your-data-with-llms">guidance on using business data with language models</a> describes this as the simplest way to supply static information without adapting the model.</p>
+<p>It suits a bounded task when the required material is small enough to include, stable enough to maintain and safe to send on every relevant request. A team could provide a response template, three approved examples and the details of one case. As the material grows or changes frequently, manually choosing and maintaining that context becomes a system problem of its own.</p>
+<h3 class="insight-article__sub-title">RAG finds context when the request arrives</h3>
+<p>Retrieval-augmented generation, usually shortened to RAG, searches an external collection for material relevant to the request and places the retrieved passages into the model&#39;s context. The model itself hasn&#39;t learned the latest policy. The application supplies evidence when it asks the model to answer.</p>
+<p><a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/retrieval-augmented-generation-options/rag-vs-fine-tuning.html">AWS&#39;s comparison of RAG and fine tuning</a> favours retrieval for question answering over changing documents and notes that a RAG response can reference its information source. That makes retrieval a strong starting point for current, attributable business knowledge. It doesn&#39;t make every response accurate. The source, retrieval result and generated answer still need evaluation.</p>
+<h3 class="insight-article__sub-title">Fine tuning changes learned behaviour</h3>
+<p>Supervised fine tuning trains a model on examples of desired inputs and outputs. Google Cloud gives classification and structured output as suitable examples. AWS also notes that tuning can help outputs follow an organisation&#39;s style, while requiring training expertise and taking time when documents change.</p>
+<p>That makes fine tuning a behavioural option, not a dependable filing cabinet for changing facts. It can be useful when a well-defined task repeatedly resists clear instructions and examples, and when the business has enough representative training and evaluation data. It can also be combined with retrieval, though a combined design should give each layer a separate, testable job.</p>
+<h2 class="insight-article__section-title">Choose by knowledge freshness and required behaviour</h2>
+<p>The decision becomes clearer when two requirements are considered together. One axis asks how much the answer depends on fresh, attributable knowledge. The other asks how much learned, repeatable behaviour matters beyond what a prompt and examples can reliably produce.</p>
+<figure class="insight-visual insight-visual--matrix" aria-label="Knowledge and behaviour determine the starting route"><header class="insight-visual__header"><h3 class="insight-visual__title">Knowledge and behaviour determine the starting route</h3></header><div class="insight-visual__body"><div class="insight-visual__matrix-wrap"><p class="insight-visual__axis insight-visual__axis--y">Learned behaviour increases</p><div class="insight-visual__matrix"><section class="insight-visual__quadrant" data-quadrant="1"><h4>Fine tuning</h4><p>Repeatable task behaviour dominates while source freshness stays low</p></section><section class="insight-visual__quadrant" data-quadrant="2"><h4>Combine approaches</h4><p>Current approved facts and repeatable behaviour are both material</p></section><section class="insight-visual__quadrant" data-quadrant="3"><h4>Prompt context</h4><p>Small stable context and limited behaviour change can stay in the request</p></section><section class="insight-visual__quadrant" data-quadrant="4"><h4>RAG</h4><p>Current attributable knowledge matters more than learned behaviour</p></section></div><p class="insight-visual__axis insight-visual__axis--x">Fresh attributable knowledge increases</p></div></div></figure>
+<p>This is a qualitative Off Piste framework informed by the AWS and Google Cloud guidance. It isn&#39;t a measured score or an exhaustive architecture model. Context size, permissions, model capability, latency, cost and the evaluation result can move a use case across a boundary.</p>
+<p>Start in the bottom-left when a short instruction and stable context can do the job. Move right when the system must find current evidence or show where an answer came from. Move up when repeatable task behaviour remains inadequate after good instructions and examples. Use the top-right only when the facts and behaviour are independently material.</p>
+<h2 class="insight-article__section-title">Changing policies usually point to retrieval</h2>
+<p>Consider an assistant answering staff questions about service eligibility. The policy changes several times a year, exceptions differ by service and staff must be able to open the approved source behind an answer. Retrieval gives the application a way to find the current policy at request time and show its provenance.</p>
+<p>The work sits around the model. The team must decide which policy is authoritative, remove or label superseded versions, carry permissions into retrieval and test questions where similar rules conflict. If retrieval is the starting route, the <a href="/insights/ai-ready-knowledge-base-business-guide">AI-ready knowledge base guide</a> covers that preparation without assuming that uploading files creates authority.</p>
+<p>Security belongs in the design decision too. The <a href="https://cheatsheetseries.owasp.org/cheatsheets/RAG_Security_Cheat_Sheet.html">OWASP RAG Security Cheat Sheet</a> identifies risks across document ingestion, poisoning, embedding and index integrity, inherited access controls, retrieval, source attribution and output validation. RAG redistributes risk across a pipeline. It isn&#39;t a risk-free factual fix.</p>
+<p>An evaluation should therefore include routine questions, conflicting sources, expired policies, missing evidence and users with different access rights. Check whether the right evidence was retrieved before judging the prose of the answer. A citation only helps when it opens the source that actually supports the nearby claim.</p>
+<h2 class="insight-article__section-title">Consistent behaviour can justify fine tuning</h2>
+<p>Now consider a team that classifies incoming service requests into a stable taxonomy and produces one compact JSON record for a downstream system. The categories are settled, the desired outputs can be demonstrated and the task runs often enough for small inconsistencies to create real review work.</p>
+<p>That&#39;s closer to the supervised fine-tuning use cases in Google&#39;s provider guidance. The team can assemble representative input-output pairs, hold back a test set and compare a tuned model with its prompt-only baseline. Approval should depend on task accuracy, valid output structure, performance on difficult cases and safe handling of requests outside the taxonomy.</p>
+<p>Updates still have a cost. A category change can require new examples, retraining, regression testing and a rollback path. The team needs to retain the training data, configuration, model version and evaluation result so it can explain what changed.</p>
+<p>Brand voice is less tidy than classification. Before training, build an <a href="/insights/ai-ready-brand-voice-guide-content-system">AI-ready brand voice system</a> with explicit principles, approved examples and review criteria. Prompting may prove sufficient. If it doesn&#39;t, those assets become the evidence needed to evaluate whether tuning improves behaviour rather than merely making it different.</p>
+<h2 class="insight-article__section-title">Mixed requirements need a reason for every layer</h2>
+<p>Return to the internal assistant from the opening. It must answer from current approved policies, write in a consistent service style and route each request. Retrieval has a clear job in supplying current evidence. Prompt instructions and examples can shape the answer and routing first. Fine tuning becomes a candidate only if a defined behaviour repeatedly fails and the expected improvement justifies its training and operating burden.</p>
+<p>Provider guidance from <a href="https://docs.aws.amazon.com/prescriptive-guidance/latest/retrieval-augmented-generation-options/rag-vs-fine-tuning.html">AWS</a> and <a href="https://cloud.google.com/blog/products/ai-machine-learning/to-tune-or-not-to-tune-a-guide-to-leveraging-your-data-with-llms">Google Cloud</a> confirms that retrieval and tuning can be combined. It doesn&#39;t mean a combination is automatically better. The team must test retrieval quality, answer support and behavioural consistency separately, then test the integrated system.</p>
+<p>Before approval, name the requirement served by each layer. Remove any layer whose contribution cannot be evaluated. Record which source wins when evidence conflicts, which users may retrieve it, which behaviours must remain stable and who owns changes to each part. The <a href="/insights/ai-governance-policy-checklist-growing-businesses">AI governance policy guide</a> provides a wider home for approvals, data boundaries and accountable ownership.</p>
+<h2 class="insight-article__section-title">What the decision costs after launch</h2>
+<p>Retrieval creates a source operation. Someone must approve additions and removals, preserve access rules, detect ingestion failures and retest questions affected by a policy change. The <a href="/insights/monitor-ai-knowledge-base-quality-guide">AI knowledge base monitoring guide</a> separates source, retrieval, response and access failures so the right owner can repair them.</p>
+<p>Fine tuning creates a model-change operation. Someone must curate examples, manage training data, record model and configuration versions, compare releases against a stable test set and decide when a behavioural change warrants retraining. A supplier changing model availability or tuning support can also force a new evaluation.</p>
+<p>A combined system adds interaction risk. Better retrieval can still produce a poor answer if tuned behaviour overrules an evidence boundary. A better classifier can still route a request incorrectly when the input falls outside its training examples. Incidents need enough retained evidence to tell whether the source, retrieval, prompt, tuned behaviour or integration failed.</p>
+<p>The <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">NIST Generative AI Profile</a> supports documenting data origins, system changes, evaluation, monitoring and accountable risk responses across the lifecycle. It doesn&#39;t endorse one architecture. It does make a useful operator point visible. Architecture approval is also approval of an ongoing evidence and ownership model.</p>
+<p>Our default is to start with the least complex pattern that can pass a defined evaluation. That&#39;s an Off Piste synthesis of the guidance, not a universal technical rule. Simplicity is valuable because it reduces change paths and makes failures easier to isolate. It stops being valuable when the simpler design cannot meet a material freshness, attribution, permission or behaviour requirement.</p>
+<h2 class="insight-article__section-title">Write the pilot brief before choosing the stack</h2>
+<p>A useful pilot brief makes the decision inspectable before products and implementation detail take over.</p>
+<ol>
+<li>Name one bounded use case, its users and the decision or action the output supports.</li>
+<li>List the approved knowledge sources, their owners, update rhythm and required attribution.</li>
+<li>Define the response or task behaviour that must remain consistent, using examples.</li>
+<li>Record access boundaries, sensitive material, refusal rules and human escalation.</li>
+<li>Build an evaluation set with routine, difficult, outdated, conflicting and out-of-scope cases.</li>
+<li>Set pass criteria and hard failure limits for retrieval, supported answers, behaviour and access.</li>
+<li>Choose the simplest starting pattern that can meet those criteria, then name the job of every component.</li>
+<li>Assign owners for source changes, model changes, incidents and the stop or rollback decision.</li>
+</ol>
+<p>Once the pattern is clear, the <a href="/insights/build-buy-hybrid-ai-business-decision-guide">AI delivery model guide</a> can help decide whether to buy, configure, integrate or custom-build the capability. That&#39;s a sourcing choice, separate from deciding how knowledge and behaviour should enter the system.</p>
+<p>An AI systems discovery or architecture workshop is useful when the brief exposes unresolved boundaries. Its output should be one bounded use case, knowledge and behaviour requirements, a justified pattern decision, an evidence plan, controls and a pilot brief the business can approve or decline.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/ai-ready-knowledge-base-business-guide" class="insight-card__link" aria-label="Read How to Prepare Business Knowledge for Reliable AI">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>15 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">How to Prepare Business Knowledge for Reliable AI</h3>
+        <p class="insight-card__description">Learn how to turn scattered business information into an authoritative, permission-aware and maintainable knowledge base for reliable AI retrieval.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/build-buy-hybrid-ai-business-decision-guide" class="insight-card__link" aria-label="Read Choosing the Right Delivery Model for Business AI">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI &amp; Automation</span><span>Small Business</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Choosing the Right Delivery Model for Business AI</h3>
+        <p class="insight-card__description">Compare buy, configure, integrate, custom-build and defer routes for an approved business AI use case using fit, control, evidence and ownership cost.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/ai-ready-brand-voice-guide-content-system" class="insight-card__link" aria-label="Read Building an AI Ready Brand Voice System">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>Content &amp; Brand</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Building an AI Ready Brand Voice System</h3>
+        <p class="insight-card__description">Build an AI ready brand voice system with approved examples, observable writing rules, regression tests, governance, and clear ownership.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

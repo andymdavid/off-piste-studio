@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "rag-vs-fine-tuning-business-knowledge-guide",
+    "title": "When Business Knowledge Needs RAG or Fine Tuning",
+    "description": "Choose when business knowledge belongs in prompt context, retrieval, fine tuning, or a combined AI system.",
+    "intro": "Current facts, attributable answers and repeatable behaviour ask different things of an AI system. This guide helps you choose the least complex approach that can meet the real requirement and pass a defined evaluation.",
+    "date": "2026-09-15",
+    "displayDate": "September 15, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "RAG",
+      "Fine Tuning",
+      "Prompt Engineering",
+      "Business Knowledge",
+      "AI Architecture",
+      "AI Governance"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Small Business"
+    ],
+    "cluster": "Knowledge, Data, and Business Memory",
+    "relatedPosts": [
+      "ai-ready-knowledge-base-business-guide",
+      "build-buy-hybrid-ai-business-decision-guide",
+      "ai-ready-brand-voice-guide-content-system"
+    ],
+    "imageAlt": "When Business Knowledge Needs RAG or Fine Tuning",
+    "url": "/insights/rag-vs-fine-tuning-business-knowledge-guide"
+  },
+  {
     "slug": "schema-markup-change-management-guide",
     "title": "Keep Schema Markup Accurate When Search Rules Change",
     "description": "A practical system for monitoring schema changes, deciding what to update and keeping deployed structured data accurate.",

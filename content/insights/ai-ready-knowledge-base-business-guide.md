@@ -40,6 +40,8 @@ An AI-ready knowledge base is a governed body of business knowledge that a syste
 
 The [NIST definition of retrieval-augmented generation](https://csrc.nist.gov/glossary/term/retrieval_augmented_generation) describes a generative AI model paired with a separate retrieval system or knowledge base. A user asks a question, the system finds relevant information and supplies it to the model as context for the response. This approach is usually shortened to RAG.
 
+If you're still deciding whether business knowledge belongs in prompt context, retrieval or model adaptation, use the [RAG and fine tuning comparison](/insights/rag-vs-fine-tuning-business-knowledge-guide) before preparing the corpus.
+
 For an operator, the important part is the chain of control. Source systems contain working records. An approved corpus exposes the material suitable for the use case. Retrieval finds evidence the user is allowed to access. The model forms an answer from that evidence. A citation lets a person inspect the source. Human review or escalation catches cases the evidence cannot settle. Feedback then leads to a source correction, a better retrieval rule or a narrower system boundary.
 
 
