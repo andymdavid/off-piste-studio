@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-customer-feedback-analysis-guide",
+    "title": "Using AI for Traceable Customer Feedback Analysis",
+    "description": "Analyse surveys, tickets, reviews, calls and interviews with AI while preserving privacy, traceability, minority signals and human ownership.",
+    "intro": "AI can organise a large customer-feedback corpus quickly. A useful analysis still needs to show which records support each theme, where the evidence conflicts, what remains uncertain and who will decide what happens next.",
+    "date": "2026-09-16",
+    "displayDate": "September 16, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "AI",
+      "Customer Experience",
+      "Customer Feedback",
+      "Voice of Customer",
+      "Qualitative Research",
+      "AI Governance",
+      "Data Privacy"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Growth & Leads"
+    ],
+    "cluster": "AI and Customer Experience",
+    "relatedPosts": [
+      "ai-governance-policy-checklist-growing-businesses",
+      "ai-customer-experience-audit-guide",
+      "ai-customer-experience-human-handoff-guide"
+    ],
+    "imageAlt": "Using AI for Traceable Customer Feedback Analysis",
+    "url": "/insights/ai-customer-feedback-analysis-guide"
+  },
+  {
     "slug": "rag-vs-fine-tuning-business-knowledge-guide",
     "title": "When Business Knowledge Needs RAG or Fine Tuning",
     "description": "Choose when business knowledge belongs in prompt context, retrieval, fine tuning, or a combined AI system.",
