@@ -39,6 +39,35 @@ export const INSIGHT_POSTS = [
     "url": "/insights/ai-customer-feedback-analysis-guide"
   },
   {
+    "slug": "credible-client-case-study-evidence-guide",
+    "title": "How to Write a Credible Client Case Study",
+    "description": "A practical framework for client case studies with clear metrics, careful attribution, appropriate permission, and defensible claims.",
+    "intro": "A credible client case study lets a buyer see what changed, how it was measured, what your team contributed and where the result has limits. Build that evidence record before turning the engagement into a story.",
+    "date": "2026-09-16",
+    "displayDate": "September 16, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "Client Case Studies",
+      "First-Party Evidence",
+      "Claim Substantiation",
+      "Attribution",
+      "Client Consent",
+      "Content Governance"
+    ],
+    "topics": [
+      "Content & Brand",
+      "SEO & Search"
+    ],
+    "cluster": "Evidence-Led Content and Citation-Worthiness",
+    "relatedPosts": [
+      "ai-search-citation-worthy-content",
+      "website-content-evidence-audit",
+      "evidence-maintenance-content-refresh-guide"
+    ],
+    "imageAlt": "How to Write a Credible Client Case Study",
+    "url": "/insights/credible-client-case-study-evidence-guide"
+  },
+  {
     "slug": "rag-vs-fine-tuning-business-knowledge-guide",
     "title": "When Business Knowledge Needs RAG or Fine Tuning",
     "description": "Choose when business knowledge belongs in prompt context, retrieval, fine tuning, or a combined AI system.",
