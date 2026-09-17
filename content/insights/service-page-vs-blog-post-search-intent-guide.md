@@ -5,6 +5,7 @@ description: Decide whether a keyword belongs to a service page, article, pricin
 intro: A useful keyword can still be assigned to the wrong page. This guide helps you name one URL as the primary owner, give adjacent pages clear supporting roles, and choose the right repair before another brief is written.
 author: Lara
 date: 2026-09-07
+updatedDate: 2026-09-18
 readTime: 9 min read
 tags: SEO, Search Intent, Content Strategy, Keyword Mapping, Content Cannibalisation, Website Architecture
 topics: SEO & Search, Content & Brand
@@ -57,7 +58,7 @@ The Australian desktop web sample completed on 6 September 2026 used the six que
 
 ## Build a defensible evidence sheet
 
-Create one row for each query family, not every tiny wording variation. Google advises site owners that there are [no extra technical requirements or special optimisations for AI features](https://developers.google.com/search/docs/fundamentals/ai-features) and explains that AI experiences may use related searches across subtopics. A new URL still needs a distinct user job. Changing a modifier is not enough reason to publish another page.
+Create one row for each query family, not every tiny wording variation. If the families have not yet been found and prioritised across the site, start with the [decision-stage content gap analysis](/insights/decision-stage-content-gap-analysis), then return here to assign the chosen family to one owner. Google advises site owners that there are [no extra technical requirements or special optimisations for AI features](https://developers.google.com/search/docs/fundamentals/ai-features) and explains that AI experiences may use related searches across subtopics. A new URL still needs a distinct user job. Changing a modifier is not enough reason to publish another page.
 
 Use this structure before anyone writes a brief.
 

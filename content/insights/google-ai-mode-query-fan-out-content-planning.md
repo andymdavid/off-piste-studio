@@ -5,6 +5,7 @@ description: Map one complex Google AI Mode research journey into query families
 intro: One complex buyer question can lead Google AI Mode across several related searches. A useful content plan maps those likely research jobs to the pages, proof and next steps your website already has, then fixes only the gaps that matter.
 author: Lara
 date: 2026-08-04
+updatedDate: 2026-09-18
 readTime: 13 min read
 tags: SEO, AI, Content Strategy
 topics: SEO & Search, AI & Automation
@@ -109,7 +110,7 @@ Create a page only when the missing job is material and deserves a durable desti
 
 Seek third-party corroboration when independent evidence carries the claim. Reviews, professional credentials, partner listings and credible coverage can support reputation or identity claims more convincingly than first-party copy alone.
 
-The right response to a coverage gap is often a stronger join or better evidence rather than another page.
+The right response to a coverage gap is often a stronger join or better evidence rather than another page. Compare the mapped query families with the existing site through the [decision-stage content gap analysis](/insights/decision-stage-content-gap-analysis) before turning them into a publishing plan.
 
 ## Strengthen structure and evidence where the role is right
 

@@ -5,7 +5,7 @@ description: A practical guide to mapping search intent, SERP shape, buyer quest
 intro: Some keywords bring buyers who are comparing options, testing fit, checking cost, or deciding who to trust. Others bring traffic with no buying job attached. Search intent work helps you tell the difference before you spend time writing another page.
 author: Lara
 date: 2026-07-24
-updatedDate: 2026-09-07
+updatedDate: 2026-09-18
 readTime: 14 min read
 tags: SEO, Content Strategy, AI, Website Design
 topics: SEO & Search, Growth & Leads
@@ -167,6 +167,8 @@ This is also a commercial filter. A query with no clear page role, proof require
 ## Decide whether to refresh or create
 
 Not every query needs a new URL.
+
+Before making that choice across a whole content library, use the [decision-stage content gap analysis](/insights/decision-stage-content-gap-analysis) to test buyer questions, current owners, proof and conversion paths, then prioritise the smallest useful repair.
 
 A refresh is usually right when an existing page already owns the same buyer job. If the old page ranks for the target query, answers the same decision, has the right conversion path, and only needs stronger proof, structure, dates, examples, or internal links, improve the existing page.
 

@@ -5,7 +5,7 @@ description: A practical audit for finding why organic visibility produces too f
 intro: Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.
 author: Lara
 date: 2026-07-31
-updatedDate: 2026-09-07
+updatedDate: 2026-09-18
 readTime: 14 min read
 tags: SEO, Content Strategy, Analytics, Website Design
 topics: SEO & Search, Growth & Leads
@@ -37,6 +37,8 @@ The worked example is illustrative. It does not represent a client result.
 Your SEO report shows more impressions, better rankings and a steady stream of organic sessions. The enquiry pipeline tells a different story. Forms are quiet, calls are poorly matched, or the leads want work you don't provide.
 
 A useful organic journey needs several parts to align. The query has to express a decision your business can serve. The ranking page and its proof have to support that decision. The next action has to work, tracking needs to capture it, and the resulting enquiry still has to meet the business's qualification rules.
+
+If the diagnosis reveals missing comparison, cost, fit, risk, proof or next-step coverage across several pages, the [decision-stage content gap analysis](/insights/decision-stage-content-gap-analysis) turns those findings into a prioritised repair backlog.
 
 This is a diagnostic job. If you're planning pages before they exist, use the broader framework for [mapping search queries to buyer decisions](/insights/search-intent-decision-stage-content-guide). Here, we're starting with pages that already receive visibility or visits and asking where qualified demand breaks down.
 

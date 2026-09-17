@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "decision-stage-content-gap-analysis",
+    "title": "How to Find Content Gaps That Cost Qualified Leads",
+    "description": "Find weak or missing decision-stage content, test it against search and sales evidence, and build a prioritised repair backlog.",
+    "intro": "A competitor keyword export shows where another site ranks. Buyer relevance, current ownership and available proof determine whether that difference deserves a repair. This audit turns possible gaps into specific, evidence-led work.",
+    "date": "2026-09-18",
+    "displayDate": "September 18, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "Content Gap Analysis",
+      "Decision Stage Content",
+      "Content Strategy",
+      "Competitor Research",
+      "Buyer Journey",
+      "Lead Generation",
+      "Content Audit"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Growth & Leads"
+    ],
+    "cluster": "Search Intent and Decision-Stage Content",
+    "relatedPosts": [
+      "search-intent-decision-stage-content-guide",
+      "service-page-vs-blog-post-search-intent-guide",
+      "organic-traffic-not-generating-leads-intent-audit"
+    ],
+    "imageAlt": "How to Find Content Gaps That Cost Qualified Leads",
+    "url": "/insights/decision-stage-content-gap-analysis"
+  },
+  {
     "slug": "ai-customer-feedback-analysis-guide",
     "title": "Using AI for Traceable Customer Feedback Analysis",
     "description": "Analyse surveys, tickets, reviews, calls and interviews with AI while preserving privacy, traceability, minority signals and human ownership.",
@@ -254,6 +284,8 @@ export const INSIGHT_POSTS = [
     "intro": "A useful keyword can still be assigned to the wrong page. This guide helps you name one URL as the primary owner, give adjacent pages clear supporting roles, and choose the right repair before another brief is written.",
     "date": "2026-09-07",
     "displayDate": "September 7, 2026",
+    "updatedDate": "2026-09-18",
+    "displayUpdatedDate": "September 18, 2026",
     "readTime": "9 min read",
     "tags": [
       "SEO",
@@ -1182,6 +1214,8 @@ export const INSIGHT_POSTS = [
     "intro": "One complex buyer question can lead Google AI Mode across several related searches. A useful content plan maps those likely research jobs to the pages, proof and next steps your website already has, then fixes only the gaps that matter.",
     "date": "2026-08-04",
     "displayDate": "August 4, 2026",
+    "updatedDate": "2026-09-18",
+    "displayUpdatedDate": "September 18, 2026",
     "readTime": "13 min read",
     "tags": [
       "SEO",
@@ -1319,8 +1353,8 @@ export const INSIGHT_POSTS = [
     "intro": "Rankings and organic sessions can rise while useful enquiries stay flat. This audit follows the evidence from the search query to the landing page, tracked action and qualified lead so you can fix the right part of the journey.",
     "date": "2026-07-31",
     "displayDate": "July 31, 2026",
-    "updatedDate": "2026-09-07",
-    "displayUpdatedDate": "September 7, 2026",
+    "updatedDate": "2026-09-18",
+    "displayUpdatedDate": "September 18, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -1515,8 +1549,8 @@ export const INSIGHT_POSTS = [
     "intro": "Some keywords bring buyers who are comparing options, testing fit, checking cost, or deciding who to trust. Others bring traffic with no buying job attached. Search intent work helps you tell the difference before you spend time writing another page.",
     "date": "2026-07-24",
     "displayDate": "July 24, 2026",
-    "updatedDate": "2026-09-07",
-    "displayUpdatedDate": "September 7, 2026",
+    "updatedDate": "2026-09-18",
+    "displayUpdatedDate": "September 18, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
