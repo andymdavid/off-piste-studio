@@ -901,10 +901,12 @@ export const INSIGHT_POSTS = [
   {
     "slug": "google-ai-overviews-traffic-drop-diagnostic",
     "title": "Diagnosing a Google Traffic Drop After AI Overviews",
-    "description": "Diagnose whether AI Overviews contributed to a fall in Google organic clicks, then choose a repair that matches the evidence.",
-    "intro": "A fall in Google clicks can coincide with AI Overviews without being caused by them. This diagnostic shows you how to align Search Console, analytics, ranking, demand and conversion evidence before changing content or search controls.",
+    "description": "Diagnose whether AI Overviews or AI Mode contributed to a fall in Google organic clicks, then choose a repair that matches the evidence.",
+    "intro": "A fall in Google clicks can coincide with AI Overviews or AI Mode without proving either feature caused it. This diagnostic checks reporting integrity, exposure, Search Console, analytics and conversion evidence before any content or control change.",
     "date": "2026-08-16",
     "displayDate": "August 16, 2026",
+    "updatedDate": "2026-09-19",
+    "displayUpdatedDate": "September 19, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
@@ -912,6 +914,7 @@ export const INSIGHT_POSTS = [
       "Google Search Console",
       "Analytics",
       "AI Overviews",
+      "AI Mode",
       "Traffic Diagnosis"
     ],
     "topics": [

@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <meta name="description" content="Diagnose whether AI Overviews contributed to a fall in Google organic clicks, then choose a repair that matches the evidence.">
+  <meta name="description" content="Diagnose whether AI Overviews or AI Mode contributed to a fall in Google organic clicks, then choose a repair that matches the evidence.">
   <title>Diagnosing a Google Traffic Drop After AI Overviews | Off Piste Studio</title>
   <link rel="canonical" href="https://offpistestudio.com/insights/google-ai-overviews-traffic-drop-diagnostic">
   <script type="application/ld+json">
@@ -17,9 +17,9 @@
       {
         "@type": "Article",
         "headline": "Diagnosing a Google Traffic Drop After AI Overviews",
-        "description": "Diagnose whether AI Overviews contributed to a fall in Google organic clicks, then choose a repair that matches the evidence.",
+        "description": "Diagnose whether AI Overviews or AI Mode contributed to a fall in Google organic clicks, then choose a repair that matches the evidence.",
         "datePublished": "2026-08-16",
-        "dateModified": "2026-08-16",
+        "dateModified": "2026-09-19",
         "author": { "@type": "Person", "name": "Lara" },
         "publisher": {
           "@type": "Organization",
@@ -80,10 +80,10 @@
         <section class="insight-article__hero"><div class="insight-article__hero-inner">
           <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span><span>AI &amp; Automation</span></div><p class="insight-article__read-time">12 min read</p></div>
           <h1 class="insight-article__title">Diagnosing a Google Traffic Drop After AI Overviews</h1>
-          <p class="insight-article__intro">A fall in Google clicks can coincide with AI Overviews without being caused by them. This diagnostic shows you how to align Search Console, analytics, ranking, demand and conversion evidence before changing content or search controls.</p>
+          <p class="insight-article__intro">A fall in Google clicks can coincide with AI Overviews or AI Mode without proving either feature caused it. This diagnostic checks reporting integrity, exposure, Search Console, analytics and conversion evidence before any content or control change.</p>
         </div></section>
         <section class="insight-article__byline"><div class="insight-article__byline-inner">
-          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 16, 2026</p></div></div>
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 16, 2026 <span class="insight-article__updated-date">(Updated September 19, 2026)</span></p></div></div>
           <div class="insight-article__share">
             <p class="insight-article__share-label">Share</p>
             <div class="insight-article__share-buttons">
@@ -95,7 +95,7 @@
         </div></section>
         <section class="insight-article__body"><div class="insight-article__body-inner">
           <!--
-Sources accessed 16 August 2026 in Australia/Perth.
+Sources accessed 19 September 2026 in Australia/Perth.
 The professional-services example is illustrative and does not represent client results.
 -->
 <h2 class="insight-article__section-title">Treat the traffic drop as evidence to investigate</h2>
@@ -103,7 +103,9 @@ The professional-services example is illustrative and does not represent client 
 <p>The same chart could reflect lower search demand, a tracking change, a lost group of queries, an indexing fault, stronger competitors or a shift in which searches Google counts as impressions. If leads fell while sessions stayed steady, the problem may sit on the landing page rather than the results page.</p>
 <p>This guide helps you decide which explanation has enough support to act on. For more context on the search features, read <a href="/insights/google-sge-and-seo">what Google AI Mode means for search visibility</a>. Here, we&#39;re turning a traffic anomaly into a defensible diagnosis.</p>
 <p>If the site never appears among supporting links, start by <a href="/insights/google-ai-overviews-not-citing-website-diagnostic">diagnosing absence from supporting links before analysing click loss</a>. That&#39;s a pre-click selection problem, separate from a traffic-change investigation.</p>
-<h2 class="insight-article__section-title">Start with a comparison window you can defend</h2>
+<h2 class="insight-article__section-title">Check reporting integrity before interpreting the drop</h2>
+<p>Start with known faults in the reporting layer. <a href="https://support.google.com/webmasters/answer/6211453">Google&#39;s Search Console anomaly log</a> records that a logging error reduced reported generative AI Search impressions from 13 to 17 August 2026. Google restored the missing data on 21 August and says the fault affected reporting rather than search performance. A dip in that interval reflects the reporting error rather than evidence of lower visibility.</p>
+<p><a href="https://developers.google.com/search/updates">Google&#39;s documentation update dated 16 June 2025</a> also says AI Mode data counts towards the totals in the standard Search Console Performance report. Overall Web totals therefore include AI Mode data. Compare the dedicated generative AI report with the standard report, analytics and commercial outcomes rather than subtracting one total from another.</p>
 <p>Choose the business question before opening a report. Are you investigating fewer clicks, lower click-through rate, fewer qualified visits or lost enquiries? Each question needs different evidence.</p>
 <p>Use like-for-like periods long enough to reduce daily noise. Compare the same weekdays and account for seasonality. Exclude the newest incomplete data. Search Console dates use Pacific Time, while analytics and CRM systems may use the business time zone. Record those definitions rather than pretending their daily totals should align perfectly.</p>
 <p>Annotate anything that could change the result, including a site release, migration, analytics update, campaign, outage, core update, service change or unusual brand activity. If the decline started on a release date, that deserves investigation before a broad theory about AI search.</p>
@@ -114,13 +116,12 @@ The professional-services example is illustrative and does not represent client 
 <p>Falling impressions point elsewhere first. Search demand may have declined, rankings may have moved, relevant pages may have dropped from the index, or the site may no longer cover the queries Google associates with the topic. A stable site-wide average position can conceal a sharp loss in one commercially important query group, so don&#39;t stop at the headline metric.</p>
 <p>Stable organic sessions with fewer leads move the investigation again. Check landing-page engagement, form completion, calls, booking journeys and lead quality. Our <a href="/insights/organic-traffic-not-generating-leads-intent-audit">organic intent audit</a> covers that conversion problem in more depth.</p>
 <p>AI Overviews remain a credible source of CTR pressure. In <a href="https://www.pewresearch.org/short-reads/2025/07/22/google-users-are-less-likely-to-click-on-links-when-an-ai-summary-appears-in-the-results/">Pew Research Center&#39;s observed browsing study</a>, traditional results received clicks in 8% of visits with an AI summary and 15% without one. Links cited inside the summary received clicks in 1% of visits with an AI summary. The study used March 2025 browsing data from 900 US adults across 68,879 Google searches, with result pages collected in April.</p>
-<p>Those aggregate results make the hypothesis worth testing. Site-level evidence still has to establish the cause. The shared scale below shows the observed gap.</p>
-<figure class="insight-visual insight-visual--grouped-bars" aria-label="Traditional result clicks fell when AI summaries appeared"><header class="insight-visual__header"><h3 class="insight-visual__title">Traditional result clicks fell when AI summaries appeared</h3></header><div class="insight-visual__body"><ul class="insight-visual__legend"><li><span class="insight-visual__swatch" data-series="1"></span>Traditional result</li><li><span class="insight-visual__swatch" data-series="2"></span>AI summary citation</li></ul><ol class="insight-visual__grouped-bars"><li class="insight-visual__bar-group"><span class="insight-visual__group-label">AI summary shown</span><div class="insight-visual__group-bars"><div class="insight-visual__group-bar"><span class="insight-visual__bar" data-series="1" style="--bar-size:40.0000%"></span><strong>8% of visits</strong><span class="sr-only">Traditional result</span></div><div class="insight-visual__group-bar"><span class="insight-visual__bar" data-series="2" style="--bar-size:5.0000%"></span><strong>1% of visits</strong><span class="sr-only">AI summary citation</span></div></div></li><li class="insight-visual__bar-group"><span class="insight-visual__group-label">No AI summary</span><div class="insight-visual__group-bars"><div class="insight-visual__group-bar"><span class="insight-visual__bar" data-series="1" style="--bar-size:75.0000%"></span><strong>15% of visits</strong><span class="sr-only">Traditional result</span></div><div class="insight-visual__group-bar"><span class="insight-visual__bar" data-series="2" style="--bar-size:0.0000%"></span><strong>0% of visits</strong><span class="sr-only">AI summary citation</span></div></div></li></ol></div><p class="insight-visual__source">Source: Pew Research Center, July 2025</p></figure>
+<p>Those aggregate observations make the hypothesis worth testing. They do not establish why an individual site&#39;s clicks changed.</p>
 <p>Ahrefs has also found a substantial correlation between AI Overview presence and lower position-one CTR. Its <a href="https://ahrefs.com/blog/ai-overviews-reduce-clicks-update/">February 2026 analysis of December 2025 data</a> compared 150,000 AI Overview keywords with 150,000 informational keywords without one and estimated a 58% lower average CTR for the top-ranking page when an AI Overview appeared. Query mix, intent and the comparison method matter, so use this as behavioural context rather than a loss rate to apply to your website.</p>
 <p>An August 2026 <a href="https://arxiv.org/abs/2608.04831">preprint by Chapekis, Lieb and co-authors</a>, presented at IC2S2 2026, analysed the same scale of observed panel browsing. Its mixed-effects model found AI Overviews remained associated with fewer outbound clicks after accounting for panelist effects and query attributes. It remains an association from a bounded US panel, not a causal estimate for every query or business.</p>
 <h2 class="insight-article__section-title">Use Google&#39;s AI report as exposure evidence</h2>
-<p>Google launched dedicated Search Generative AI performance reports in June 2026. The <a href="https://support.google.com/webmasters/answer/16984139?hl=en">Search Console report documentation</a> says the Search report covers impressions from AI Overviews and AI Mode. It can group those impressions by page, country, date and device.</p>
-<p>Access is still rolling out to a subset of properties, and a property may also lack enough impressions to show the report. The current report centres on impressions. It doesn&#39;t provide the counterfactual click total you would have received without the feature.</p>
+<p><a href="https://support.google.com/webmasters/answer/16984139?hl=en">Google&#39;s report documentation, accessed 19 September 2026</a>, says the generative AI performance insights reached all websites worldwide on 31 August 2026 and that the report covers impressions from AI Overviews and AI Mode. It groups those impressions by page, country, date and device.</p>
+<p>The same help page retains language that access is rolling out over time. It also says a property may lack the report because it has too few generative AI impressions or has been excluded from the features. Report absence leaves exposure unresolved. The report is limited to impressions. It omits triggering queries, clicks, separate feature attribution and the counterfactual clicks the site would have received without the feature.</p>
 <p>If you have access, use the report to identify when exposure changed and which pages, countries and devices were involved. Then compare those pages with their wider Web performance, analytics sessions and conversions. An increase in generative AI impressions alongside stable position and lower CTR strengthens the exposure hypothesis. It still needs dated observations of the relevant results pages and control for other changes.</p>
 <p>If the report is absent, build query groups around pages most likely to trigger AI Overviews. Sample the live results on recorded dates, locations and devices. Compare those groups with less-exposed branded, local or decision-stage queries. This is sampled evidence, so keep the observation conditions beside it.</p>
 <p>For an ongoing programme that also covers prompts, citations, crawler access and commercial outcomes, use the wider guide to <a href="/insights/how-to-measure-ai-search-visibility">measuring AI search visibility</a>.</p>
@@ -134,7 +135,7 @@ The professional-services example is illustrative and does not represent client 
 <li>Review dated results pages. Record AI Overviews and other features, competitor movement, title changes and the apparent intent of the result set.</li>
 <li>Cross-check sessions and conversions. Establish whether the loss stops at the click, continues into qualified traffic or begins after the visit.</li>
 </ol>
-<p>Google says its generative AI features use the core Search ranking and quality systems. Its <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">guidance for generative AI features</a> keeps indexed, snippet-eligible pages as the technical baseline. Eligibility doesn&#39;t guarantee crawling, indexing, inclusion or traffic, but it means normal search faults remain live suspects.</p>
+<p>Google says AI Overviews and AI Mode use the foundations of Search and may use query fan-out to run related searches across subtopics and data sources. Its <a href="https://developers.google.com/search/docs/appearance/ai-features">guidance for AI features and websites</a> says there are no extra technical requirements or special AI-only optimisations. A supporting page must be indexed and eligible for a Search snippet. Eligibility doesn&#39;t guarantee crawling, indexing, inclusion or traffic, which keeps ordinary search faults among the live suspects.</p>
 <p>If ranking or indexability has moved, work through the <a href="/insights/small-business-seo-guide-2026">small business SEO baseline</a> before assigning the decline to AI Overviews.</p>
 <h2 class="insight-article__section-title">Build the case at query and page level</h2>
 <p>Site-wide organic traffic is too broad for causal attribution. Group queries by buyer job and likely exposure. An expert-led firm might separate definition searches, problem diagnosis, service comparisons, branded searches, local searches and proof-seeking questions.</p>
@@ -142,21 +143,22 @@ The professional-services example is illustrative and does not represent client 
 <p>Consider an illustrative case. A consultancy compares four complete weeks before and after a suspected change. Its informational query group holds broadly steady for impressions and position, while CTR and landing-page sessions fall. Branded and service comparison groups remain stable. Dated checks repeatedly find AI Overviews on the affected informational searches. That evidence supports an AI-related CTR hypothesis with moderate confidence. It doesn&#39;t show that every lost click came from the feature, and it doesn&#39;t yet establish a commercial loss.</p>
 <p>The firm then finds that those pages rarely assisted enquiries. The diagnosis changes the priority. The traffic loss is real, but repairing decision-stage coverage may matter more than recovering every informational visit.</p>
 <h2 class="insight-article__section-title">Choose the repair that matches the evidence</h2>
-<p>If the affected pages lack original evidence, clear sourcing or useful proof, strengthen what makes them worth citing. The <a href="/insights/ai-search-citation-worthy-content">citation-worthy content framework</a> helps turn unsupported explanation into material a reader or search system can verify.</p>
+<p>If impressions exist but the business remains absent from sampled supporting links, use the <a href="/insights/google-ai-overviews-not-citing-website-diagnostic">AI Overview citation diagnostic</a> to test query fit, source value, eligibility and entity clarity.</p>
 <p>If the query analysis reveals missing buyer questions, build connected coverage rather than expanding one page without a plan. Use <a href="/insights/google-ai-mode-query-fan-out-content-planning">query fan-out content planning</a> to map research, comparison, proof and action needs across the right pages.</p>
-<p>If indexing, parsing or page relationships are weak, repair the technical foundation with the <a href="/insights/structured-content-ai-search-guide">structured content guide</a>. If rankings fell, treat it as an SEO diagnosis. Improving headings for AI search won&#39;t solve lost authority, an indexing fault or a weaker result.</p>
-<p>Only consider exclusion controls after the evidence identifies a genuine control question. Removing content from AI features can also remove search visibility and should be weighed against the value of inclusion. The <a href="/insights/google-ai-overviews-opt-out-decision-guide">AI Overviews opt-out decision guide</a> explains that trade-off.</p>
+<p>When the gap sits close to a purchase decision, use the <a href="/insights/decision-stage-content-gap-analysis">decision-stage content gap analysis</a> to prioritise the missing coverage by commercial consequence.</p>
+<p>If indexing, parsing or page relationships are weak, treat the finding as an SEO problem. Improving headings for AI search won&#39;t solve lost authority, an indexing fault or a weaker result. When the diagnosed constraint is the template, page structure or experience, the repair may require <a href="/services/website-design">website design</a> rather than another content edit.</p>
+<p>Only consider exclusion controls after the evidence identifies a genuine control question. <a href="https://blog.google/products-and-platforms/products/search/new-controls-website-owners/">Google&#39;s website-owner announcement</a> says opting out removes traffic and impressions from the covered generative AI features. The <a href="/insights/google-ai-overviews-opt-out-decision-guide">AI Overviews opt-out decision guide</a> explains how to weigh that consequence against the value of inclusion.</p>
 <p>Before choosing any repair, leave a record another person can challenge and rerun.</p>
 <aside class="insight-module insight-module--practice" aria-label="Record the diagnosis before choosing the repair"><header><p class="insight-module__label">In practice</p><h3>Record the diagnosis before choosing the repair</h3></header><div class="insight-module__body"><p class="insight-module__intro">A useful diagnosis leaves enough evidence for another person to review the decision.</p><ul class="insight-module__list"><li>Name the affected query and page groups</li><li>Record the comparison windows and known confounders</li><li>State the likely cause and confidence level</li><li>Estimate the conversion value exposed</li><li>Assign the next action, owner and review date</li></ul></div></aside>
 <h2 class="insight-article__section-title">Decide what the loss changes commercially</h2>
 <p>Close the investigation with a short decision. Name the likely cause, confidence, affected query and page groups, conversion value at risk, action owner and review date. Low confidence supports more measurement. A confirmed indexing fault supports technical repair. A concentrated loss of valuable decision-stage traffic supports a focused content and search response.</p>
-<p>The useful outcome is a proportionate next action supported by evidence. When the cause crosses reporting, content and technical systems, a scoped <a href="/services/seo">SEO review</a> can align the evidence and turn it into a repair plan.</p>
+<p>When the cause crosses reporting, content and technical systems, a scoped <a href="/services/seo">SEO review</a> can align the evidence and turn it into a repair plan. The evidence should determine the scale of the response.</p>
 
         </div></section>
       </div>
     </article>
     <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
-    <a href="/insights/google-sge-and-seo" class="insight-card__link" aria-label="Read What Google AI Mode Means for Search Visibility">
+    <a href="/insights/google-sge-and-seo" class="insight-card__link" aria-label="Read What Google AI Overviews and AI Mode Mean for SEO">
       <div class="insight-card__content">
         <div class="insight-card__top">
           <div class="insight-card__meta">
@@ -166,8 +168,8 @@ The professional-services example is illustrative and does not represent client 
             <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
           </div>
         </div>
-        <h3 class="insight-card__title">What Google AI Mode Means for Search Visibility</h3>
-        <p class="insight-card__description">How Google's AI Overviews and AI Mode affect SEO, visibility, clicks, citations, and measurement, and what businesses should update on their websites now.</p>
+        <h3 class="insight-card__title">What Google AI Overviews and AI Mode Mean for SEO</h3>
+        <p class="insight-card__description">Learn what Google AI Overviews and AI Mode mean for SEO, source visibility, reporting and the website priorities that matter now.</p>
       </div>
     </a>
   </article><article class="related-posts__card insight-card">
@@ -175,14 +177,14 @@ The professional-services example is illustrative and does not represent client 
       <div class="insight-card__content">
         <div class="insight-card__top">
           <div class="insight-card__meta">
-            <span>13 min read</span>
+            <span>15 min read</span>
           </div>
           <div class="insight-card__tags">
             <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
           </div>
         </div>
         <h3 class="insight-card__title">How to Measure AI Search Visibility</h3>
-        <p class="insight-card__description">A practical framework for measuring how clearly AI search tools understand, mention, cite, and recommend your business.</p>
+        <p class="insight-card__description">A practical framework for measuring AI search visibility with Google's generative AI report, citations, analytics, and lead-quality evidence.</p>
       </div>
     </a>
   </article><article class="related-posts__card insight-card">
