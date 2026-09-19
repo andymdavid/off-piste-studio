@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-content-disclosure-guide-business",
+    "title": "When Businesses Should Disclose AI Generated Content",
+    "description": "Decide when AI generated, modified, or assisted business content needs disclosure, then choose the right notice, placement, provenance record, and review.",
+    "intro": "When AI has contributed to content that is about to go public, decide what the audience needs to know about that contribution to judge the content properly. The answer will rarely be the same disclaimer every time.",
+    "date": "2026-09-20",
+    "displayDate": "September 20, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI Content Disclosure",
+      "AI Transparency",
+      "Editorial Governance",
+      "Content Provenance",
+      "AI Generated Content",
+      "Responsible AI"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Content & Brand"
+    ],
+    "cluster": "AI Content, Voice, and Expertise",
+    "relatedPosts": [
+      "ai-assisted-content-workflow-expertise-guide",
+      "ai-assisted-content-quality-audit-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "When Businesses Should Disclose AI Generated Content",
+    "url": "/insights/ai-content-disclosure-guide-business"
+  },
+  {
     "slug": "decision-stage-content-gap-analysis",
     "title": "How to Find Content Gaps That Cost Qualified Leads",
     "description": "Find weak or missing decision-stage content, test it against search and sales evidence, and build a prioritised repair backlog.",
