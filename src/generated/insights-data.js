@@ -9,6 +9,34 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-agent-memory-vs-knowledge-base-business-guide",
+    "title": "What Should Your AI Agent Remember",
+    "description": "Decide what an AI agent may remember, what it should retrieve from governed knowledge, and what must remain in an authoritative business system.",
+    "intro": "An AI agent that remembers can save time and make each interaction feel more useful. It can also preserve the wrong fact, expose one client's information to another, or quietly become a second system of record. The useful question isn't whether the agent has memory. It's what the business will allow it to retain, why, and for how long.",
+    "date": "2026-09-21",
+    "displayDate": "September 21, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI Agent Memory",
+      "Knowledge Management",
+      "AI Architecture",
+      "AI Governance",
+      "Privacy",
+      "Internal Systems"
+    ],
+    "topics": [
+      "AI & Automation"
+    ],
+    "cluster": "Knowledge, Data, and Business Memory",
+    "relatedPosts": [
+      "ai-ready-knowledge-base-business-guide",
+      "rag-vs-fine-tuning-business-knowledge-guide",
+      "ai-governance-policy-checklist-growing-businesses"
+    ],
+    "imageAlt": "What Should Your AI Agent Remember",
+    "url": "/insights/ai-agent-memory-vs-knowledge-base-business-guide"
+  },
+  {
     "slug": "ai-content-disclosure-guide-business",
     "title": "When Businesses Should Disclose AI Generated Content",
     "description": "Decide when AI generated, modified, or assisted business content needs disclosure, then choose the right notice, placement, provenance record, and review.",
