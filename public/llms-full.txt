@@ -9,7 +9,7 @@ Compact index: https://offpistestudio.com/llms.txt
 Name: Off Piste Studio
 Website: https://offpistestudio.com/
 Type: AI-native design and technology studio
-Base location: City Beach, Perth, Western Australia
+Base location: Leederville, WA, Australia 6007
 Availability: Australia, New Zealand and international remote clients where collaboration is a good fit
 Contact email: hello@offpistestudio.com
 Discovery call: https://cal.com/off-piste-studio/discovery
@@ -149,7 +149,7 @@ https://cal.com/off-piste-studio/discovery
 
 ## Availability And Location
 
-Off Piste Studio is based in City Beach, Perth, Western Australia.
+Off Piste Studio is based in Leederville, WA, Australia 6007.
 
 The studio works with clients across Australia, New Zealand and internationally where the project fit is right.
 

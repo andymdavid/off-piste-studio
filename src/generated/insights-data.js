@@ -1896,20 +1896,30 @@ export const INSIGHT_POSTS = [
   {
     "slug": "small-business-seo-guide-2026",
     "title": "The Small Business Owner's Guide to SEO in 2026",
-    "description": "A practical SEO guide for small business owners in 2026. Covers fundamentals, AI search changes, local vs national strategy, content, and realistic expectations.",
-    "intro": "SEO has changed significantly in the last two years, but the fundamentals still hold. This guide is written for business owners who want to understand what actually works in 2026, what has changed with AI-driven search, and how to build a strategy that delivers results without wasting time or money on tactics that no longer matter.",
+    "description": "A practical SEO guide for small business owners in 2026, covering foundations, AI search, local priorities, content and commercial measurement.",
+    "intro": "SEO still helps a small business become visible when potential customers are researching a problem or choosing a provider. This guide explains the foundations that matter in 2026, what Google's AI search experiences change, and how to choose work that supports enquiries instead of chasing activity for its own sake.",
     "date": "2026-03-24",
     "displayDate": "March 24, 2026",
+    "updatedDate": "2026-09-22",
+    "displayUpdatedDate": "September 22, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
-      "Small Business"
+      "Small Business",
+      "Google Search",
+      "AI Overviews",
+      "AI Mode"
     ],
     "topics": [
-      "SEO & Search"
+      "SEO & Search",
+      "AI & Automation"
     ],
     "cluster": "Search Strategy",
-    "relatedPosts": [],
+    "relatedPosts": [
+      "google-sge-and-seo",
+      "how-to-measure-ai-search-visibility",
+      "google-ai-overviews-traffic-drop-diagnostic"
+    ],
     "imageAlt": "The Small Business Owner's Guide to SEO in 2026",
     "url": "/insights/small-business-seo-guide-2026"
   },
