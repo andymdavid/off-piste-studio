@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "brand-mentions-vs-backlinks-ai-search-guide",
+    "title": "How Brand Mentions and Backlinks Support AI Search",
+    "description": "An evidence-led guide to what backlinks and brand mentions each contribute to search and AI visibility, and how to decide where to invest.",
+    "intro": "Backlinks and brand mentions do different authority-building jobs. The useful decision is which constraint your business needs to solve next, and which evidence supports that investment.",
+    "date": "2026-09-22",
+    "displayDate": "September 22, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Brand Mentions",
+      "Backlinks",
+      "AI Search Visibility",
+      "Entity Trust",
+      "Digital PR",
+      "Off-Page SEO"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "third-party-brand-signals-ai-search-audit",
+      "organization-schema-service-business-guide"
+    ],
+    "imageAlt": "How Brand Mentions and Backlinks Support AI Search",
+    "url": "/insights/brand-mentions-vs-backlinks-ai-search-guide"
+  },
+  {
     "slug": "ai-agent-memory-vs-knowledge-base-business-guide",
     "title": "What Should Your AI Agent Remember",
     "description": "Decide what an AI agent may remember, what it should retrieve from governed knowledge, and what must remain in an authoritative business system.",

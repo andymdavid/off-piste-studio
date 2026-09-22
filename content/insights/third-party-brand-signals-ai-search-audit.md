@@ -154,6 +154,8 @@ Once facts and selected profiles are approved, use the [Organization schema impl
 
 Correction removes inaccurate information. Independent support has to be earned.
 
+If the inventory is accurate and the next question is whether to pursue editorial links, broader contextual coverage, or both, use the [brand mentions and backlinks comparison](/insights/brand-mentions-vs-backlinks-ai-search-guide) to match the investment to the current constraint.
+
 A thin source inventory may reveal that the firm has few legitimate references beyond profiles it controls. Useful corroboration grows from real work. Relevant memberships can publish an accurate member record. Partners can describe an active relationship. Experts can contribute specific knowledge to an industry publication. Customers can provide genuine evidence with permission. A business can also publish [citation-worthy owned content](/insights/ai-search-citation-worthy-content) or turn defensible operational knowledge into original research that others may choose to reference.
 
 Choose opportunities because they help the intended audience verify expertise or make a decision. Avoid mass directory submissions and paid mention schemes framed as AI authority. Google names links and reviews in its local prominence guidance. It does not promise an AI recommendation because a business accumulates either one.

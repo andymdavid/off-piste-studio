@@ -60,7 +60,7 @@ Think of the business entity as the centre of a map. Around it sit the sources t
 
 The owned website usually does the heaviest work. The homepage should make the business category and positioning obvious. The about page should clarify who is behind the work and why they are credible. Service pages should name the work in language buyers use. Location pages should be specific where geography matters. Proof pages should show what supports the claims.
 
-Then the outside sources need to confirm the same story. Google Business Profile, reviews, social profiles, directories, partner pages, podcast mentions, industry articles, awards, and citations all become corroboration. They don't need identical wording, but they do need to point to the same business reality.
+Then the outside sources need to confirm the same story. Google Business Profile, reviews, social profiles, directories, partner pages, podcast mentions, industry articles, awards, and citations all become corroboration. They don't need identical wording, but they do need to point to the same business reality. When the story is clear but the authority programme is not, compare [what brand mentions and backlinks each contribute](/insights/brand-mentions-vs-backlinks-ai-search-guide) before choosing the next investment.
 
 This map also shows where the surrounding AI visibility work fits. The broader [AI-ready website foundation](/insights/building-your-website-for-llms) covers crawlability, content structure, `llms.txt`, schema, and measurement. [Citation-worthy content and proof assets](/insights/ai-search-citation-worthy-content) help the pages carry stronger evidence. [AI crawler access and robots.txt checks](/insights/ai-crawler-access-robots-txt-guide) matter when important pages cannot be retrieved.
 
@@ -97,7 +97,7 @@ The audit should produce a repair list, not a score for its own sake. A wrong se
 
 ## What to fix first
 
-Start with the facts that affect commercial understanding. The canonical business identity should be current across the site, schema, profiles, and major directories. The priority service pages should say what the business does, who it helps, where it works, and what proof supports the offer.
+Start with the facts that affect commercial understanding. The canonical business identity should be current across the site, schema, profiles, and major directories. If Google shows an old, generic or domain-based label above an organic result, use the focused guide to [fix the wrong site name in Google Search](/insights/fix-wrong-site-name-google-search-guide) before expanding the work into a wider entity audit. The priority service pages should say what the business does, who it helps, where it works, and what proof supports the offer.
 
 Next, fix the pages a buyer or answer system is most likely to use as evidence. That usually means the homepage, about page, main service pages, proof pages, pricing or scope guidance, and location pages where local intent matters. Thin evidence pages limit the whole representation layer.
 
