@@ -19,7 +19,7 @@
         "headline": "Diagnosing Failures in Live AI Workflows",
         "description": "A practical guide to preserving evidence, containing harm, tracing live AI workflow failures, assigning repairs and testing the business outcome before reopening.",
         "datePublished": "2026-08-18",
-        "dateModified": "2026-08-18",
+        "dateModified": "2026-09-24",
         "author": { "@type": "Person", "name": "Lara" },
         "publisher": {
           "@type": "Organization",
@@ -83,7 +83,7 @@
           <p class="insight-article__intro">When an AI-assisted workflow produces the wrong customer, CRM or operational outcome, a structured trace can reveal which boundary failed and who should repair it.</p>
         </div></section>
         <section class="insight-article__byline"><div class="insight-article__byline-inner">
-          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 18, 2026</p></div></div>
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">August 18, 2026 <span class="insight-article__updated-date">(Updated September 24, 2026)</span></p></div></div>
           <div class="insight-article__share">
             <p class="insight-article__share-label">Share</p>
             <div class="insight-article__share-buttons">
@@ -122,7 +122,7 @@ The enquiry-to-CRM example is hypothetical. It does not represent a client incid
 <p>Pause the affected route when it can keep sending wrong messages, creating duplicate records or exposing information. Disable the specific side effect if the rest of the workflow can run safely. Move new cases to a named manual queue. Mark affected records to prevent repeated action. Tell the people handling customers which temporary process now applies.</p>
 <p>The <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf">NIST Generative AI Profile</a> recommends response and recovery procedures for newly identified risks. Its Manage 2.4 guidance calls for assigned responsibilities and mechanisms to disengage or deactivate systems whose outcomes conflict with intended use. It also calls for communication, escalation and remediation procedures around that decision.</p>
 <p>Containment is separate from repair. Switching to manual handling protects the next customer. Diagnosis still needs to locate the original failure in the form, a rule, the model, a vendor connection, the CRM or the follow-up queue.</p>
-<p>Treat material privacy, security or customer harm through the organisation&#39;s incident process. The <a href="/insights/ai-governance-policy-checklist-growing-businesses">AI governance policy guide</a> covers stop authority, accountability and escalation. Seek qualified privacy, security or legal advice when the consequence requires it.</p>
+<p>Treat material privacy, security or customer harm through the organisation&#39;s <a href="/insights/ai-incident-response-playbook-growing-businesses">AI incident response playbook</a>. It covers activation, stop authority, impact assessment, communications and recovery approval. Seek qualified privacy, security or legal advice when the consequence requires it.</p>
 <h2 class="insight-article__section-title">Trace one unit of work through every boundary</h2>
 <p>Choose one failed unit of work and give it a correlation identifier. This can be the platform&#39;s request ID, the form submission ID or an internal incident ID carried through the investigation. Its purpose is to connect events that different systems store separately.</p>
 <p>Follow that identifier through the workflow in order.</p>

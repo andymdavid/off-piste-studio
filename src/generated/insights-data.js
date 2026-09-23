@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-incident-response-playbook-growing-businesses",
+    "title": "An AI Incident Response Playbook for Growing Businesses",
+    "description": "A practical AI incident response playbook for growing businesses covering activation, containment, evidence, communications, reporting assessment, recovery and learning.",
+    "intro": "An AI incident response plan gives a growing business a proportionate way to stop harm, preserve evidence, coordinate decisions and approve recovery when a live AI-enabled process behaves outside its intended boundaries.",
+    "date": "2026-09-24",
+    "displayDate": "September 24, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "AI",
+      "AI Governance",
+      "Incident Response",
+      "AI Risk",
+      "Business Continuity",
+      "Data Privacy",
+      "Human Oversight"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Small Business"
+    ],
+    "cluster": "AI Governance, Risk, and Trust",
+    "relatedPosts": [
+      "ai-governance-policy-checklist-growing-businesses",
+      "ai-workflow-automation-failure-diagnostic-guide",
+      "ai-workflow-pre-launch-testing-guide"
+    ],
+    "imageAlt": "An AI Incident Response Playbook for Growing Businesses",
+    "url": "/insights/ai-incident-response-playbook-growing-businesses"
+  },
+  {
     "slug": "brand-mentions-vs-backlinks-ai-search-guide",
     "title": "How Brand Mentions and Backlinks Support AI Search",
     "description": "An evidence-led guide to what backlinks and brand mentions each contribute to search and AI visibility, and how to decide where to invest.",
@@ -44,6 +74,8 @@ export const INSIGHT_POSTS = [
     "intro": "An AI agent that remembers can save time and make each interaction feel more useful. It can also preserve the wrong fact, expose one client's information to another, or quietly become a second system of record. The useful question isn't whether the agent has memory. It's what the business will allow it to retain, why, and for how long.",
     "date": "2026-09-21",
     "displayDate": "September 21, 2026",
+    "updatedDate": "2026-09-24",
+    "displayUpdatedDate": "September 24, 2026",
     "readTime": "13 min read",
     "tags": [
       "AI Agent Memory",
@@ -248,6 +280,8 @@ export const INSIGHT_POSTS = [
     "intro": "A practical AI vendor review connects a defined use and data flow to evidence you can inspect, conditions you can enforce, and a clear decision to approve, pilot, escalate, or reject.",
     "date": "2026-09-12",
     "displayDate": "September 12, 2026",
+    "updatedDate": "2026-09-24",
+    "displayUpdatedDate": "September 24, 2026",
     "readTime": "13 min read",
     "tags": [
       "AI",
@@ -904,6 +938,8 @@ export const INSIGHT_POSTS = [
     "intro": "When an AI-assisted workflow produces the wrong customer, CRM or operational outcome, a structured trace can reveal which boundary failed and who should repair it.",
     "date": "2026-08-18",
     "displayDate": "August 18, 2026",
+    "updatedDate": "2026-09-24",
+    "displayUpdatedDate": "September 24, 2026",
     "readTime": "12 min read",
     "tags": [
       "AI",
@@ -1527,6 +1563,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI governance gives a growing business a practical way to know where AI is being used, who owns each decision, what information is involved, and when a use should be approved, changed, or stopped.",
     "date": "2026-07-27",
     "displayDate": "July 27, 2026",
+    "updatedDate": "2026-09-24",
+    "displayUpdatedDate": "September 24, 2026",
     "readTime": "14 min read",
     "tags": [
       "AI",

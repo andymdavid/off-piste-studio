@@ -5,6 +5,7 @@ description: A practical guide to preserving evidence, containing harm, tracing 
 intro: When an AI-assisted workflow produces the wrong customer, CRM or operational outcome, a structured trace can reveal which boundary failed and who should repair it.
 author: Lara
 date: 2026-08-18
+updatedDate: 2026-09-24
 readTime: 12 min read
 tags: AI, Workflow Automation, Internal Systems, AI Reliability, Incident Response, Observability
 topics: AI & Automation
@@ -70,7 +71,7 @@ The [NIST Generative AI Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.60
 
 Containment is separate from repair. Switching to manual handling protects the next customer. Diagnosis still needs to locate the original failure in the form, a rule, the model, a vendor connection, the CRM or the follow-up queue.
 
-Treat material privacy, security or customer harm through the organisation's incident process. The [AI governance policy guide](/insights/ai-governance-policy-checklist-growing-businesses) covers stop authority, accountability and escalation. Seek qualified privacy, security or legal advice when the consequence requires it.
+Treat material privacy, security or customer harm through the organisation's [AI incident response playbook](/insights/ai-incident-response-playbook-growing-businesses). It covers activation, stop authority, impact assessment, communications and recovery approval. Seek qualified privacy, security or legal advice when the consequence requires it.
 
 ## Trace one unit of work through every boundary
 

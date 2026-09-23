@@ -5,6 +5,7 @@ description: Build a practical AI governance policy with an AI use register, cle
 intro: AI governance gives a growing business a practical way to know where AI is being used, who owns each decision, what information is involved, and when a use should be approved, changed, or stopped.
 author: Lara
 date: 2026-07-27
+updatedDate: 2026-09-24
 readTime: 14 min read
 tags: AI, AI Governance, Business Strategy, Privacy, Internal Systems
 topics: AI & Automation
@@ -126,6 +127,8 @@ When approval involves a third-party product, use the [AI vendor due diligence c
 ## Operate governance as a review loop
 
 Review the inventory regularly and immediately after a serious incident or material change. A new model, vendor term, integration, prompt, knowledge source, data category, audience, or customer complaint can change the risk. Previous approval does not silently extend to a different system.
+
+Before a live use causes harm or moves outside its approved boundaries, [prepare an AI incident response playbook](/insights/ai-incident-response-playbook-growing-businesses) that names activation thresholds, stop authority, evidence, communications and recovery approval.
 
 This is where ISO's continual-improvement principle and NIST's Manage function become practical. Record the change, reassess, rerun relevant tests, update limitations, and decide whether to approve, pause, redesign, or retire. The OAIC also warns against a set-and-forget approach to products involving personal information.
 

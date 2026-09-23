@@ -5,6 +5,7 @@ description: Decide what an AI agent may remember, what it should retrieve from 
 intro: An AI agent that remembers can save time and make each interaction feel more useful. It can also preserve the wrong fact, expose one client's information to another, or quietly become a second system of record. The useful question isn't whether the agent has memory. It's what the business will allow it to retain, why, and for how long.
 author: Lara
 date: 2026-09-21
+updatedDate: 2026-09-24
 readTime: 13 min read
 tags: AI Agent Memory, Knowledge Management, AI Architecture, AI Governance, Privacy, Internal Systems
 topics: AI & Automation
@@ -117,6 +118,8 @@ Agent-generated inferences need a narrower route. Label them as inferred, retain
 OWASP identifies memory poisoning as malicious data persisted to influence future sessions or users. Its security guidance calls for external inputs to be validated, memory to be scoped, and malicious content to be sanitised, expired or rejected before persistence. A retrieved document, email or user message can contain instructions that look useful to a model. It shouldn't gain write authority merely because the agent read it.
 
 Record these decisions within the wider [AI governance policy](/insights/ai-governance-policy-checklist-growing-businesses). The policy should name accountable owners and prohibited writes rather than relying on a promise that the model will be careful.
+
+If memory leaks across users, preserves a poisoned instruction or drives an unauthorised action, use the playbook to [respond when an AI memory boundary fails](/insights/ai-incident-response-playbook-growing-businesses) while the technical owner preserves evidence and traces the fault.
 
 ## Forgetting is a product requirement
 

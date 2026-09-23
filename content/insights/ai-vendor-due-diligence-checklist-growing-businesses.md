@@ -5,6 +5,7 @@ description: Use this AI vendor due diligence checklist to assess supplier evide
 intro: A practical AI vendor review connects a defined use and data flow to evidence you can inspect, conditions you can enforce, and a clear decision to approve, pilot, escalate, or reject.
 author: Lara
 date: 2026-09-12
+updatedDate: 2026-09-24
 readTime: 13 min read
 tags: AI, AI Governance, AI Procurement, Vendor Evaluation, Vendor Risk, Data Privacy, Cybersecurity, Contract Review, Acceptance Testing
 topics: AI & Automation, Small Business
@@ -144,6 +145,8 @@ This matrix is an editorial decision model, not an official classification or a 
 ## Plan for change, incidents and exit
 
 Approval remains valid only while the product, terms, configuration, data flow and use stay within the reviewed conditions. Name the live measures, supplier contact, internal incident owner, fallback and authority to pause. Record which changes trigger reassessment and what evidence must arrive before renewal.
+
+Before the product goes live, [test the supplier escalation and incident route](/insights/ai-incident-response-playbook-growing-businesses) so the business knows who can stop the use, which evidence the supplier must provide and how recovery will be approved.
 
 Measure the outcomes, exceptions, review effort and cost needed to [decide whether an AI workflow should scale, change or stop](/insights/measure-ai-workflow-automation-roi-reliability). If a failure occurs, preserve inputs, outputs, logs, configuration and supplier communication. The [live workflow failure diagnostic](/insights/ai-workflow-automation-failure-diagnostic-guide) helps separate model, data, integration, permission and operating faults.
 
