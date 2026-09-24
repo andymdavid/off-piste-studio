@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "faq-schema-service-business-decision-guide",
+    "title": "Should Service Businesses Keep FAQ Schema",
+    "description": "A current decision guide for keeping, simplifying or removing FAQPage markup after Google retired FAQ rich results.",
+    "intro": "Google has retired FAQ rich results. Service businesses now need to weigh the value of visible answers, the validity of FAQPage vocabulary and the cost of maintaining the markup before deciding what stays.",
+    "date": "2026-09-25",
+    "displayDate": "September 25, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "FAQ Schema",
+      "FAQPage",
+      "Structured Data",
+      "Google Rich Results",
+      "Schema Markup Maintenance",
+      "Technical SEO",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "structured-content-ai-search-guide",
+      "schema-markup-priorities-service-business",
+      "structured-data-schema-audit-guide"
+    ],
+    "imageAlt": "Should Service Businesses Keep FAQ Schema",
+    "url": "/insights/faq-schema-service-business-decision-guide"
+  },
+  {
     "slug": "ai-incident-response-playbook-growing-businesses",
     "title": "An AI Incident Response Playbook for Growing Businesses",
     "description": "A practical AI incident response playbook for growing businesses covering activation, containment, evidence, communications, reporting assessment, recovery and learning.",
