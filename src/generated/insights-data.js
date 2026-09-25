@@ -1843,16 +1843,20 @@ export const INSIGHT_POSTS = [
   {
     "slug": "how-ai-search-understands-your-business",
     "title": "How AI Search Understands Your Business",
-    "description": "A practical entity-trust audit for making your business easier for AI search tools, Google, and buyers to identify, describe, compare, and recommend accurately.",
-    "intro": "AI search can only represent your business accurately when the web gives it a consistent story. Your website, profiles, reviews, schema, proof, and third-party mentions all need to make the business easy to identify, understand, and trust.",
+    "description": "Diagnose the evidence gaps that cause search and AI systems to omit, confuse or misrepresent your business, then choose the right repair.",
+    "intro": "If search or an AI answer gets your business wrong, the problem may sit in your website, profiles, schema, public references or access controls. A focused audit isolates the layer that needs work and keeps each signal in its proper role.",
     "date": "2026-07-16",
     "displayDate": "July 16, 2026",
-    "readTime": "12 min read",
+    "updatedDate": "2026-09-26",
+    "displayUpdatedDate": "September 26, 2026",
+    "readTime": "11 min read",
     "tags": [
-      "SEO",
-      "AI",
-      "Content Strategy",
-      "Website Design"
+      "Entity Trust",
+      "AI Search Visibility",
+      "Business Representation",
+      "Organization Schema",
+      "Brand Signals",
+      "Knowledge Graph"
     ],
     "topics": [
       "SEO & Search",
@@ -1860,9 +1864,9 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
-      "google-sge-and-seo",
-      "building-your-website-for-llms",
-      "ai-search-citation-worthy-content"
+      "third-party-brand-signals-ai-search-audit",
+      "organization-schema-service-business-guide",
+      "brand-mentions-vs-backlinks-ai-search-guide"
     ],
     "imageAlt": "How AI Search Understands Your Business",
     "url": "/insights/how-ai-search-understands-your-business"
