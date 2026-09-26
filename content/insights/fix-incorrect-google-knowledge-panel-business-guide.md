@@ -45,7 +45,7 @@ A Google Business Profile is different. It represents a local business that serv
 
 If you own or manage that local profile, Google says you can [edit a verified Business Profile directly on Search or Maps](https://support.google.com/business/answer/3039617?hl=en-GB). Use the [Google Business Profile guide](/insights/google-business-profile-guide) for the local management route. Don't submit a Knowledge Panel correction for information you can manage in the profile.
 
-An ordinary result is usually a blue link, a site name, a URL and a snippet drawn from or related to a web page. Correct the page, its metadata or the indexing issue rather than looking for a panel claim flow.
+An ordinary result is usually a blue link, a site name, a URL and a snippet drawn from or related to a web page. If the label above that organic result is wrong, use the focused guide to [fix the site name in Google Search](/insights/fix-wrong-site-name-google-search-guide). Correct other page metadata or indexing issues rather than looking for a panel claim flow.
 
 Person panels need the same initial diagnosis, but the official source is usually the person's maintained profile page rather than an organisation About page. For a founder, author or expert, use the [expert profile and Person schema guide](/insights/person-schema-expert-profile-page-guide) after confirming which identity is mixed or incomplete.
 
@@ -113,7 +113,7 @@ Google may decline a request it can't confirm. It may also handle fields differe
 
 ## Handle merged identities and recent business changes
 
-A panel that combines two similarly named companies needs more than a wording edit. Record which title, website, profiles, images and people belong to each entity. Google's verification help directs mixed panels, wrong websites and wrong profiles to [Knowledge Panel support troubleshooting](https://support.google.com/knowledgepanel/answer/7534902?hl=en#troubleshoot).
+A panel that combines two similarly named companies needs more than a wording edit. Record which title, website, profiles, images and people belong to each entity. Google's verification help directs mixed panels, wrong websites and wrong profiles to [Knowledge Panel support troubleshooting](https://support.google.com/knowledgepanel/answer/7534902?hl=en#troubleshoot). If the same contamination appears beyond the panel, use the [cross-surface business-name confusion diagnostic](/insights/fix-ai-search-business-name-confusion-guide) before choosing each repair route.
 
 Recent name changes, mergers and domain moves often leave two plausible versions in public sources. Use the [business rebrand migration guide](/insights/business-rebrand-entity-search-migration-guide) to align the website, redirects, profiles and outside records around the approved identity. Keep the correction request focused on the panel field rather than repeating the whole migration plan.
 

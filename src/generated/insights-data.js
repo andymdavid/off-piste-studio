@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "fix-ai-search-business-name-confusion-guide",
+    "title": "Stop AI Search Confusing Your Business With Another Company",
+    "description": "Prove where search and AI systems are mixing two similarly named businesses, trace the wrong facts and choose the right correction route.",
+    "intro": "When another company’s services, reviews, people or reputation appear beside your business name, changing everything at once can make the problem harder to diagnose. Build a two-business evidence record, isolate the affected surfaces and correct the sources that own the errors.",
+    "date": "2026-09-27",
+    "displayDate": "September 27, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Business Name Confusion",
+      "Entity Disambiguation",
+      "AI Search Visibility",
+      "Entity Trust",
+      "Brand Signals",
+      "Knowledge Graph",
+      "Organization Schema"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "third-party-brand-signals-ai-search-audit",
+      "fix-incorrect-google-knowledge-panel-business-guide"
+    ],
+    "imageAlt": "Stop AI Search Confusing Your Business With Another Company",
+    "url": "/insights/fix-ai-search-business-name-confusion-guide"
+  },
+  {
     "slug": "faq-schema-service-business-decision-guide",
     "title": "Should Service Businesses Keep FAQ Schema",
     "description": "A current decision guide for keeping, simplifying or removing FAQPage markup after Google retired FAQ rich results.",

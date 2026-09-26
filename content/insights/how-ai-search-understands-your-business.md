@@ -32,7 +32,7 @@ Primary platform guidance accessed 26 September 2026:
 -->
 ## Start with the symptom you can see
 
-Your business may be missing from an AI answer, described with an old service, confused with another company or shown with the wrong location. Google may display an unexpected site name. A Knowledge Panel may repeat a stale fact. Each symptom points to a representation problem, but they don't all have the same cause or repair.
+Your business may be missing from an AI answer, described with an old service, confused with another company or shown with the wrong location. Google may display an unexpected site name. A Knowledge Panel may repeat a stale fact. Each symptom points to a representation problem, but they don't all have the same cause or repair. When two genuine organisations are being merged, use the focused guide to [stop AI search confusing your business with another company](/insights/fix-ai-search-business-name-confusion-guide).
 
 First separate two questions. Branded representation asks whether a system can identify and describe your named business accurately. Unbranded recommendation visibility asks whether it chooses your business when someone asks for a provider without naming you. A clear business record supports both, but it doesn't guarantee rankings, citations or recommendations.
 
