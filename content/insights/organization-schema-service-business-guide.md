@@ -39,6 +39,8 @@ Start with a small source-of-truth record and give each fact an approver. Google
 
 Record the public-facing name, legal name when it has a useful role, canonical website URL, stable entity ID, current logo URL, primary contact route and business address when appropriate. Add founding dates, ownership relationships or identifiers only when the business can support and maintain them. Review every proposed external profile as a separate identity claim.
 
+The approved facts also need a clear visible home. Use the [About-page implementation guide](/insights/about-page-entity-trust-ai-search-guide) to turn that record into buyer-facing content and routes to deeper evidence before encoding it.
+
 For a local or service-area business, compare those values with its real-world presentation. Google's [Business Profile representation guidelines](https://support.google.com/business/answer/3038177) call for accurate representation, precise locations and restrained category selection. Our [Google Business Profile optimisation guide](/insights/google-business-profile-guide) covers that local profile work in depth.
 
 A compact inventory should answer five questions.

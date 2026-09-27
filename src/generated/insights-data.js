@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "about-page-entity-trust-ai-search-guide",
+    "title": "Build an About Page People and Search Systems Understand",
+    "description": "Build a clear About page that identifies your business, earns buyer confidence, connects claims to evidence, and stays accurate as the company changes.",
+    "intro": "A useful About page tells a buyer who the business is, what it does, who it helps, and where to verify the claims that matter. It also gives search and AI systems a clear public account of the organisation while recognising that representation depends on wider evidence.",
+    "date": "2026-09-28",
+    "displayDate": "September 28, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "About Page",
+      "Entity Trust",
+      "AI Search Visibility",
+      "Business Representation",
+      "Brand Signals",
+      "Organization Schema",
+      "Website Content"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "organization-schema-service-business-guide",
+      "person-schema-expert-profile-page-guide"
+    ],
+    "imageAlt": "Build an About Page People and Search Systems Understand",
+    "url": "/insights/about-page-entity-trust-ai-search-guide"
+  },
+  {
     "slug": "fix-ai-search-business-name-confusion-guide",
     "title": "Stop AI Search Confusing Your Business With Another Company",
     "description": "Prove where search and AI systems are mixing two similarly named businesses, trace the wrong facts and choose the right correction route.",

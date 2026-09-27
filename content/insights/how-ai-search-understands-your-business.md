@@ -58,6 +58,8 @@ Crawler access is another separate branch. OpenAI documents different controls f
 
 Start with the pages where a buyer would verify the business. Read the homepage, about page, main service pages, location information, proof, author profiles and contact details as one record.
 
+If the About page is vague, thin or outdated while the wider business record is agreed, use the focused guide to [build an About page people and search systems understand](/insights/about-page-entity-trust-ai-search-guide). It covers visible page structure, evidence paths and maintenance without repeating this wider diagnosis.
+
 Look for disagreements that change a buying decision. The homepage may use a broad category while the service pages describe a specialist offer. An about page may name people whose expertise isn't connected to the articles they write. A location page may imply a physical office where the business only has a service area. Proof may support an old positioning rather than the current one.
 
 Fix visible facts before encoding them. If the unclear entity is a founder, author or expert, the [expert profile and Person schema guide](/insights/person-schema-expert-profile-page-guide) covers the maintained profile, authorship links and structured data. If templates, navigation or content hierarchy obscure the offer across many pages, the repair is likely [website architecture and design work](/services/website-design), not another isolated schema field.
