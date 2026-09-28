@@ -151,6 +151,8 @@ Test the editor experience as seriously as the front end. Clear labels, help tex
 
 Once the model and templates are deployed, use a [structured data audit](/insights/structured-data-schema-audit-guide) to inspect rendered markup, compare it with visible content and route defects to the correct owner. Build validation and live validation answer different questions, so both matter.
 
+If the model is moving into a redesigned site or new CMS, use the [schema migration checklist](/insights/schema-markup-website-migration-checklist) to carry those field contracts into staging acceptance, production validation and operational handover.
+
 ## A stronger model makes the next build easier
 
 A structured content model gives migration decisions a stable centre. Services, people, locations, proof and publishing details can be managed as facts with known relationships instead of rediscovered inside pages whenever the design changes.

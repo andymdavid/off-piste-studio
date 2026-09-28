@@ -39,6 +39,36 @@ export const INSIGHT_POSTS = [
     "url": "/insights/about-page-entity-trust-ai-search-guide"
   },
   {
+    "slug": "schema-markup-website-migration-checklist",
+    "title": "Keep Schema Markup Intact During a Website Migration",
+    "description": "Preserve accurate structured data through a website redesign with a practical baseline, staging checks, launch gates, production validation and handover.",
+    "intro": "A redesign can leave every page looking right while changing the structured data beneath it. This checklist gives project owners and implementers an evidence trail from the old site's schema graph to the new site's indexed output.",
+    "date": "2026-09-28",
+    "displayDate": "September 28, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Schema Markup Migration",
+      "Structured Data",
+      "Website Migration",
+      "JSON-LD",
+      "Schema Validation",
+      "Technical SEO",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "connected-schema-graph-service-business-guide",
+      "structured-data-schema-audit-guide",
+      "schema-markup-change-management-guide"
+    ],
+    "imageAlt": "Keep Schema Markup Intact During a Website Migration",
+    "url": "/insights/schema-markup-website-migration-checklist"
+  },
+  {
     "slug": "fix-ai-search-business-name-confusion-guide",
     "title": "Stop AI Search Confusing Your Business With Another Company",
     "description": "Prove where search and AI systems are mixing two similarly named businesses, trace the wrong facts and choose the right correction route.",

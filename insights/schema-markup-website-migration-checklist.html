@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Preserve accurate structured data through a website redesign with a practical baseline, staging checks, launch gates, production validation and handover.">
+  <title>Keep Schema Markup Intact During a Website Migration | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/schema-markup-website-migration-checklist">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Keep Schema Markup Intact During a Website Migration",
+        "description": "Preserve accurate structured data through a website redesign with a practical baseline, staging checks, launch gates, production validation and handover.",
+        "datePublished": "2026-09-28",
+        "dateModified": "2026-09-28",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/schema-markup-website-migration-checklist"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Keep Schema Markup Intact During a Website Migration", "item": "https://offpistestudio.com/insights/schema-markup-website-migration-checklist" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="schema-markup-website-migration-checklist">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span><span>Websites &amp; UX</span></div><p class="insight-article__read-time">11 min read</p></div>
+          <h1 class="insight-article__title">Keep Schema Markup Intact During a Website Migration</h1>
+          <p class="insight-article__intro">A redesign can leave every page looking right while changing the structured data beneath it. This checklist gives project owners and implementers an evidence trail from the old site's schema graph to the new site's indexed output.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">September 28, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/schema-markup-website-migration-checklist" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/schema-markup-website-migration-checklist&text=Keep%20Schema%20Markup%20Intact%20During%20a%20Website%20Migration" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/schema-markup-website-migration-checklist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Primary sources checked 28 September 2026 in Australia/Perth:
+- Google Search Central, Site moves and migrations.
+- Google Search Central, General structured data guidelines.
+- Google Search Central, Generate structured data with JavaScript.
+- Google Search Central, Structured data markup and testing tools.
+- Schema.org, Markup Validator.
+- Google Search Central Blog, URL Inspection API announcement, 31 January 2022.
+
+Review trigger: recheck Google's structured data testing and URL Inspection documentation when Search Console reports, supported rich-result features or testing interfaces change.
+
+This article owns the planned migration sequence from baseline to operational handover. Type selection, property-level implementation, general live-site diagnosis and ongoing change governance remain in their dedicated guides.
+-->
+<h2 class="insight-article__section-title">A redesign can silently change the facts search systems receive</h2>
+<p>A rebuilt service page can look identical to the old one while emitting a different provider ID. An article template can keep its byline and lose the author relationship in JSON-LD. A new JavaScript stack can place valid markup in the source yet fail to deliver it in the rendered page. None of those defects needs to be visible in the design review.</p>
+<p>Schema migration belongs in release control. The team needs evidence of what the current site emits, what the new templates should emit, what staging renders and what production delivers after launch.</p>
+<p>Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies">general structured data guidelines</a> require markup to represent visible content accurately and remain accessible to Google. They also make clear that valid markup doesn&#39;t guarantee a rich result. For a migration, the useful acceptance standard is accurate and intentional output, not a promised search outcome.</p>
+<p>Where URLs change, Google&#39;s <a href="https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes">site move guidance</a> recommends preparation, URL mapping, testing and continued monitoring. It also recommends changing one major thing at a time where practical. Separating a domain move, CMS replacement and redesign can make faults easier to isolate. When they must ship together, the evidence record becomes even more important.</p>
+<h2 class="insight-article__section-title">Capture the current graph before rebuilding it</h2>
+<p>Start before staging exists. Select representative pages for every template that emits structured data, then add commercially important exceptions. A sensible sample might include the homepage, one service, one location pattern, one article, one expert profile and any page with conditional review markup.</p>
+<p>For each page, record the visible facts, canonical URL, schema types, nodes, important relationships and stable <code>@id</code> values. Note whether a theme, plugin, server template, tag manager or client-side script generates the output. Assign an owner who can explain whether the current result is intentional.</p>
+<p>Inspect rendered output as well as page source when JavaScript is involved. Google&#39;s guidance on <a href="https://developers.google.com/search/docs/appearance/structured-data/generate-structured-data-with-javascript">generating structured data with JavaScript</a> says dynamically generated JSON-LD can be processed when it appears in the rendered DOM. That makes source inspection alone an incomplete baseline for a JavaScript rendering stack.</p>
+<p>Run the representative pages through the <a href="https://schema.org/docs/validator.html">Schema.org Markup Validator</a>. It extracts JSON-LD, RDFa and Microdata, displays the resulting graph and identifies syntax issues. The validator documentation also describes support for some dynamically inserted markup. Save the result or record the relevant nodes rather than relying on memory after the old site disappears.</p>
+<p>The baseline is not a demand to preserve every existing item. Use the <a href="/insights/schema-markup-priorities-service-business">schema priority framework</a> to classify output as keep, change or retire. A duplicate provider node or unsupported feature should not survive merely because it already exists. Retirement should still be a named decision rather than an accidental omission.</p>
+<p>If the site already has an agreed graph contract, bring its entity register into the baseline. The guide to <a href="/insights/connected-schema-graph-service-business-guide">building a connected schema graph</a> explains how stable IDs and relationships work across templates.</p>
+<h2 class="insight-article__section-title">Map old templates to new sources and outputs</h2>
+<p>Turn the baseline into an implementation contract. Every old template should map to a new page pattern, content source and expected output. If URLs change, include the new URL and canonical target. If the CMS changes, name the field that supplies each important visible and machine-readable fact.</p>
+<p>Keep the working record compact enough to review in a launch meeting. Combine related fields so the table also remains readable on a phone.</p>
+<table>
+<thead>
+<tr>
+<th>Page move</th>
+<th>Expected output</th>
+<th>ID decision</th>
+<th>Owner / status</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Service to service</td>
+<td>WebPage, Service, BreadcrumbList</td>
+<td>Retain provider and service</td>
+<td>Web lead / ready</td>
+</tr>
+<tr>
+<td>Location to location</td>
+<td>WebPage, location, BreadcrumbList</td>
+<td>Retain location</td>
+<td>SEO lead / check</td>
+</tr>
+<tr>
+<td>Insight to article</td>
+<td>WebPage, Article, BreadcrumbList</td>
+<td>Retain author and publisher</td>
+<td>Content lead / ready</td>
+</tr>
+</tbody></table>
+<p>A service page moving into a new component library may still need to reference the same provider and service identities. A location moving to a new URL may need a new page ID while retaining the identity of the real place. An article can preserve its URL yet lose its author relationship when a new CMS stores the byline as plain text.</p>
+<p>These are source and ownership problems as much as code problems. The guide to <a href="/insights/structured-content-model-service-website-guide">building a structured content model</a> shows how governed fields and relationships can supply both visible components and justified schema output.</p>
+<h2 class="insight-article__section-title">Test staging with the evidence each tool can provide</h2>
+<p>Each test answers a different migration question. Separate the checks so a green result cannot hide another kind of failure.</p>
+<p>Inspect the source to identify what the server or initial response contains. Inspect the rendered DOM to see what the browser produces after scripts run. Compare the rendered facts with the visible page. Then validate both vocabulary and relevant Google feature requirements.</p>
+<p>Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data">structured data testing guidance</a> directs teams to the Rich Results Test for Google-supported rich-result features and the Schema Markup Validator for general Schema.org validation. Those tools have different jobs. A Schema.org-valid graph may not meet a Google feature&#39;s requirements, while a Rich Results Test pass doesn&#39;t prove that every intended node and relationship survived the rebuild. Interfaces and supported features can change, so these tool roles were checked on 28 September 2026 in Australia/Perth.</p>
+<p>Blocked staging creates a practical limit. Code-input tests can provide an early syntax and feature check when an external tool cannot reach the environment. They don&#39;t prove that the deployed URL returns the same code, that scripts execute successfully or that crawlers can access the result. Use an accessible preview environment where security policy allows, then repeat URL-based rendered tests in production.</p>
+<p>For each representative template, retain enough evidence to compare the result with the baseline. Record the URL or fixture, test date, expected nodes, actual nodes, differences, decision and owner. Screenshots can help a launch record, but machine-readable output and a written decision are more useful than a collection of unexplained green ticks.</p>
+<h2 class="insight-article__section-title">Set the schema launch gate</h2>
+<p>The project owner needs a compact gate because validation warnings have different consequences. A missing required property for an important supported feature carries more risk than a recommendation for optional detail. An intentional ID change is materially different from a plugin silently creating another organisation.</p>
+<p>Review representative templates and priority URLs against the migration contract. Accept only the exceptions that someone has understood, owned and recorded. That lets the launch decision reflect business risk without pretending every warning must block release.</p>
+<aside class="insight-module insight-module--practice" aria-label="Launch only when the schema evidence agrees"><header><p class="insight-module__label">In practice</p><h3>Launch only when the schema evidence agrees</h3></header><div class="insight-module__body"><p class="insight-module__intro">The release record should answer these checks for the representative templates and priority URLs.</p><ul class="insight-module__list"><li>Expected nodes and relationships appear in rendered output</li><li>Visible facts agree with the markup</li><li>Stable IDs, canonicals, and mapped URLs are intentional</li><li>Google feature checks and Schema.org validation have both been interpreted</li><li>Every unresolved exception has an owner and an accepted launch decision</li></ul></div></aside>
+<h2 class="insight-article__section-title">Validate production before the old evidence disappears</h2>
+<p>Begin production checks as soon as the cutover is stable. Test the same representative pages used for staging, then test high-value URLs and conditional templates. Compare rendered output with the approved staging record rather than starting a fresh, subjective review.</p>
+<p>Where URLs changed, verify that redirects reach the mapped destination and that the new page declares the intended canonical. Confirm that IDs which use page URLs changed only where the graph contract required it. Recheck visible facts, rendered nodes and relationships with both general Schema.org validation and the relevant Google feature test.</p>
+<p>Google&#39;s site move guidance recommends monitoring both old and new sites and keeping redirects in place generally for at least a year. That wider migration work supports discovery of the new URLs, but it doesn&#39;t replace schema parity testing on the destination pages.</p>
+<p>Record each production defect with its affected template, severity, owner and immediate decision. A widespread missing provider relationship may justify a rollback or urgent template repair. A low-risk optional recommendation may enter the backlog. The release owner should make that distinction explicitly.</p>
+<p>If production output disagrees with staging or the validators produce results the team cannot explain, move into the <a href="/insights/structured-data-schema-audit-guide">structured data audit workflow</a>. That guide covers live diagnosis in depth while this checklist keeps the release decision focused.</p>
+<h2 class="insight-article__section-title">Monitor what Google has indexed and hand over ownership</h2>
+<p>Correct production HTML and Google&#39;s indexed view are different evidence states. After Google has had an opportunity to recrawl the new URLs, sample priority pages in URL Inspection and review relevant Search Console enhancement reports where they exist.</p>
+<p>Google&#39;s <a href="https://developers.google.com/search/blog/2022/01/url-inspection-api">URL Inspection API announcement</a> describes indexed-version information that includes rich-result analysis. It reports what Google has indexed rather than running a live staging test. Use it as post-launch evidence, not as a substitute for the baseline, rendered checks or production validation. This capability was reviewed on 28 September 2026 in Australia/Perth. Recheck current documentation if Google changes the interface, supported fields or inspection workflow.</p>
+<p>Compare the indexed sample with the migration record. Look for priority URLs that remain on an old canonical, expected features that no longer appear, or new templates that haven&#39;t produced the intended graph. Avoid treating one inspection as proof of every page. Sample by template and commercial importance, then investigate patterns.</p>
+<p>Finish by handing over the baseline, mapping, accepted exceptions, owners and review triggers. The guide to <a href="/insights/schema-markup-change-management-guide">keeping schema accurate when search rules change</a> turns that release record into ongoing sampling and governance.</p>
+<h2 class="insight-article__section-title">The useful outcome is a migration record the team can defend</h2>
+<p>A successful schema migration creates a defensible evidence trail from the old site&#39;s visible facts and graph to the new site&#39;s rendered and indexed output. It can&#39;t promise continued rankings, rich results or AI citations.</p>
+<p>That record lets the team say what was preserved, what changed, what was retired and who accepted each exception. It also makes the next plugin update, template change or platform rule easier to assess.</p>
+<p>When URL mapping, Search Console evidence and cross-template ownership span several teams, a scoped <a href="/services/seo">SEO migration and governance engagement</a> can establish the controls. When the defect sits in CMS fields, rendering or schema components, <a href="/services/website-design">website design and implementation support</a> can repair the source rather than repeatedly patching the output.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/connected-schema-graph-service-business-guide" class="insight-card__link" aria-label="Read Build a Connected Schema Graph Across Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>11 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>Websites &amp; UX</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Build a Connected Schema Graph Across Your Website</h3>
+        <p class="insight-card__description">Plan stable schema identities and relationships across website templates so your structured data stays connected, accurate and maintainable.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/structured-data-schema-audit-guide" class="insight-card__link" aria-label="Read A Practical Structured Data Audit for Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">A Practical Structured Data Audit for Your Website</h3>
+        <p class="insight-card__description">Audit rendered schema markup across your website, diagnose why tools disagree, assign repairs and verify structured data fixes after deployment.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/schema-markup-change-management-guide" class="insight-card__link" aria-label="Read Keep Schema Markup Accurate When Search Rules Change">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Keep Schema Markup Accurate When Search Rules Change</h3>
+        <p class="insight-card__description">A practical system for monitoring schema changes, deciding what to update and keeping deployed structured data accurate.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

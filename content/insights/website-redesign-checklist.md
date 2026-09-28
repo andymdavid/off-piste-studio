@@ -53,6 +53,8 @@ Title tags, meta descriptions, heading structures, and image alt text should not
 
 Crawl the staging site with a tool like Screaming Frog before going live. Check for broken links, missing redirects, orphaned pages, and any metadata that was lost during the build. Fixing these issues after launch is significantly more expensive in terms of lost traffic.
 
+Treat structured data as its own governed workstream. The [schema markup migration checklist](/insights/schema-markup-website-migration-checklist) covers the old-site baseline, staging evidence, launch gate and post-launch validation that a general crawl cannot provide on its own.
+
 ## The content audit
 
 A redesign is the best opportunity to get honest about your content. Most small business websites have accumulated pages over the years that no longer serve a clear purpose.
