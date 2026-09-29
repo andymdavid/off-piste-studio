@@ -148,7 +148,7 @@ Inspect the HTML a crawler receives. Confirm that the JSON-LD parses, every reus
 
 Validation confirms syntax and feature requirements. It cannot confirm that your business model is true or that ownership will keep the graph current. Record exceptions, test the relevant Google feature documentation where applicable and review the graph when a template, plugin, URL convention or source of truth changes.
 
-After deployment, use the full workflow to [audit the rendered structured data](/insights/structured-data-schema-audit-guide). It covers discovery, rendering, eligibility and monitoring while this guide stays focused on architecture.
+Protect the deployment contract with [automated schema regression tests](/insights/automated-schema-regression-testing-website-releases) for stable IDs, relationships and rendered templates. After deployment, use the full workflow to [audit the rendered structured data](/insights/structured-data-schema-audit-guide). It covers discovery, rendering, eligibility and monitoring while this guide stays focused on architecture.
 
 ## A connected graph is a governance decision
 

@@ -86,7 +86,7 @@ This model is a decision aid, not a platform rule. Google demonstrated the need 
 
 Testing should follow the reach of the change. Check one representative URL for each affected template and meaningful variant. Compare the rendered markup with its visible source fact. Confirm that required and recommended properties for any current Google feature still match the relevant documentation.
 
-Then test graph relationships. An updated Article template shouldn't silently change the author's `@id` or create a second publisher. A service template shouldn't replace a stable provider reference with a copied object. The graph guide provides the rules for protecting those shared connections.
+Then test graph relationships. An updated Article template shouldn't silently change the author's `@id` or create a second publisher. A service template shouldn't replace a stable provider reference with a copied object. The graph guide provides the rules for protecting those shared connections, while [automated schema tests](/insights/automated-schema-regression-testing-website-releases) turn approved rules into repeatable release assertions.
 
 Choose regression samples with different risk. [Breadcrumb markup](/insights/breadcrumb-schema-site-hierarchy-guide) is a useful lower-risk template check because it should follow visible site hierarchy. [Review markup](/insights/review-schema-service-business-mistakes-guide) needs closer policy and evidence review because a false rating or ineligible use can mislead people.
 

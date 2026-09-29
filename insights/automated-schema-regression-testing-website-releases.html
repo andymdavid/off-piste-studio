@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Build automated schema regression tests for JSON-LD, graph relationships, rendered templates, CI release gates and post-deployment checks.">
+  <title>Automated Schema Tests That Protect Website Releases | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/automated-schema-regression-testing-website-releases">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Automated Schema Tests That Protect Website Releases",
+        "description": "Build automated schema regression tests for JSON-LD, graph relationships, rendered templates, CI release gates and post-deployment checks.",
+        "datePublished": "2026-09-30",
+        "dateModified": "2026-09-30",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/automated-schema-regression-testing-website-releases"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Automated Schema Tests That Protect Website Releases", "item": "https://offpistestudio.com/insights/automated-schema-regression-testing-website-releases" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="automated-schema-regression-testing-website-releases">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span><span>Websites &amp; UX</span></div><p class="insight-article__read-time">12 min read</p></div>
+          <h1 class="insight-article__title">Automated Schema Tests That Protect Website Releases</h1>
+          <p class="insight-article__intro">A valid JSON-LD block can still describe the wrong author, lose an important relationship or disappear during rendering. A layered schema test contract catches those release defects before they spread across a website.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">September 30, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/automated-schema-regression-testing-website-releases" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/automated-schema-regression-testing-website-releases&text=Automated%20Schema%20Tests%20That%20Protect%20Website%20Releases" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/automated-schema-regression-testing-website-releases"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Primary sources checked 30 September 2026 in Australia/Perth:
+- Google Search Central, Generate structured data with JavaScript.
+- Google Search Central, General structured data guidelines.
+- Google Search Central, Structured data feature guide.
+- Schema.org, Markup Validator documentation.
+- W3C, JSON-LD 1.1 Recommendation.
+- Google Search Console API, UrlInspectionResult reference.
+
+Editorial boundaries:
+- Fixture selection, release severity, ownership and accepted-warning policy are Off Piste implementation judgement.
+- Automated tests protect an approved contract. They do not guarantee indexing, rankings, rich results, indexed parity or AI citations.
+- No documented general Google Rich Results Test API was found in the official documentation checked on the access date. Recheck current documentation before selecting an integration.
+
+Review triggers: recheck when Google changes structured data policies or supported features, Schema.org changes a term used by an assertion, templates or CMS models change, or URL Inspection fields and quotas change materially.
+-->
+
+<h2 class="insight-article__section-title">A valid build can still ship broken schema</h2>
+<p>A component refactor passes its unit tests. The page looks right in preview. Its JSON-LD still parses. After release, every article points to a new author ID, a service loses its provider relationship or a client-side error prevents the structured data from reaching the rendered DOM.</p>
+<p>Those are schema regressions even when the JSON is valid. Parsing proves that software can read the block. It doesn&#39;t prove that the intended nodes, relationships and facts survived the release.</p>
+<p>Google says <a href="https://developers.google.com/search/docs/appearance/structured-data/generate-structured-data-with-javascript">JavaScript-generated structured data can be processed</a> when it appears in the rendered page, and its guidance directs teams to test URLs. That makes browser output an essential layer. A source file or build artefact can&#39;t establish what a deployed browser route ultimately contains.</p>
+<p>A useful test contract follows the output through several states. Parse the JSON-LD, assert the approved graph, inspect representative rendered routes, apply a clear release gate, then sample production and Google&#39;s indexed view. Each layer answers a different question.</p>
+<h2 class="insight-article__section-title">Decide which schema behaviour deserves protection</h2>
+<p>Start with decisions the team has already approved. Tests can preserve a poor implementation, so people still need to agree which facts are true, which relationships matter and which platform rules apply.</p>
+<p>Use the <a href="/insights/schema-markup-priorities-service-business">schema prioritisation framework</a> to choose the output valuable enough to protect. A high-value provider identity used across service pages deserves stronger coverage than an optional property nobody owns. The <a href="/insights/connected-schema-graph-service-business-guide">connected schema graph contract</a> then supplies stable IDs, intended node relationships and sources of truth.</p>
+<p>For each important template, write a small contract in language an editor and developer can both review. Name the expected types, IDs, canonical URL, critical references and visible facts. Separate durable business rules from feature-specific requirements that may change.</p>
+<p>For example, an Article contract might require one Article node, its canonical <code>@id</code>, an author reference to an approved Person ID, and accurate <code>datePublished</code> and <code>dateModified</code> values. Whether that page currently meets every requirement for a particular Google presentation belongs in a separately maintained eligibility check.</p>
+<p>Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies">general structured data guidelines</a> require structured data to represent the page and visible content accurately. They also say correct markup doesn&#39;t guarantee display as a rich result. Your contract should protect truthful output without turning a passed test into a search-performance promise.</p>
+<h2 class="insight-article__section-title">Build fixtures around real content states</h2>
+<p>A single ideal record won&#39;t expose the conditions most likely to break. Build fixtures from real states that exercise conditional template logic. A useful set can include a normal record, an updated record, a legacy record and one with an allowed optional field missing.</p>
+<p>Turn evidence from a <a href="/insights/structured-data-schema-audit-guide">structured data audit into regression fixtures</a>. The audit identifies representative templates and known edge cases. The test suite preserves the approved result after the defect is understood.</p>
+<p>Article output gives a bounded example. Create one fixture with a named author and matching published and modified dates. Add an updated article where <code>dateModified</code> is later while the original <code>datePublished</code> remains stable. If legacy articles legitimately use a different author source, include one and assert its approved Person reference. The <a href="/insights/article-schema-authorship-dates-guide">Article authorship and dates guide</a> defines the domain decisions those fixtures should express.</p>
+<p>Breadcrumbs provide a second example. Include a shallow page and a deeper service or insight route. Assert consecutive positions, canonical item URLs and agreement with the visible trail. The <a href="/insights/breadcrumb-schema-site-hierarchy-guide">breadcrumb schema guide</a> explains why both outputs should come from the maintained hierarchy.</p>
+<p>Connect every fixture to governed inputs. If an author relationship fails, the useful diagnostic points toward the Person record, article field or template mapping. The guide to <a href="/insights/structured-content-model-service-website-guide">structured content models</a> shows how fields, validation and outputs can share one contract.</p>
+<p>Fixture choice is Off Piste implementation judgement. Choose records that expose meaningful variation. Near-identical samples slow the suite without increasing confidence.</p>
+<h2 class="insight-article__section-title">Turn the graph contract into deterministic assertions</h2>
+<p><a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1 defines JSON-based graph syntax</a>, including node identifiers and references between objects. That gives ordinary test tools a stable structure to parse and query.</p>
+<p>Begin with the cheapest checks. Find every <code>application/ld+json</code> block, parse each one and fail on malformed JSON. Normalise arrays, top-level objects and <code>@graph</code> collections into a node set. Then assert the rules that express your approved contract.</p>
+<p>A platform-neutral Article test can read like this:</p>
+<pre><code class="language-text">given an updated article fixture
+find the Article node by its canonical @id
+require its author reference to equal the fixture's approved Person @id
+require datePublished to equal the original publication date
+require dateModified to equal the approved update date
+require the visible byline and dates to agree with those values</code></pre>
+<p>For a breadcrumb fixture, require one BreadcrumbList, positions beginning at one with no gaps, canonical item URLs and the same order as the visible trail. For shared entities, verify that a reference points to the registered ID. A copied provider object with a new identifier should fail even if its name happens to match.</p>
+<p>Keep structural checks and current platform eligibility rules distinguishable in code and ownership. Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/search-gallery">structured data feature guide</a> documents the defined features Google currently supports. Feature assertions should cite the relevant current documentation and carry a review trigger. Your stable IDs and truthful visible facts usually change for different reasons.</p>
+<h2 class="insight-article__section-title">Test the rendered page</h2>
+<p>Build tests catch malformed JSON and incorrect graph data early. They can&#39;t catch everything a browser, component lifecycle or deployed route can change.</p>
+<p>Load representative routes with the same rendering behaviour users receive. Wait for the application&#39;s meaningful ready state, then extract JSON-LD from the DOM and run the same graph assertions. This layer can expose duplicate blocks added by two systems, JSON-LD removed during hydration, stale component props, malformed script injection and nodes that arrive too late or never arrive.</p>
+<p>Compare important values with visible elements in the same test. The article byline should identify the person referenced by the Article node. The visible breadcrumb order should agree with BreadcrumbList. A service name and provider claim should match the content a visitor can inspect.</p>
+<p>Be precise about timing. A fixed delay can hide intermittent failures and make the suite fragile. Wait for an application state you control, such as the page&#39;s content-ready signal or the element that owns the data. Then retain the rendered JSON-LD and route with a failed build so the owner can reproduce the evidence.</p>
+<h2 class="insight-article__section-title">Make failures produce clear release decisions</h2>
+<p>A test suite only protects a release when the team has agreed what failure means. Off Piste recommends assigning each assertion a blocking failure, a review-required warning or an accepted exception with an owner and review date. That severity model is implementation judgement, not a rule from Google or Schema.org.</p>
+<p>The record below keeps the gate actionable because a missing provider relationship and an optional recommendation need different responses.</p>
+<aside class="insight-module insight-module--practice" aria-label="A schema failure needs an explicit release consequence"><header><p class="insight-module__label">In practice</p><h3>A schema failure needs an explicit release consequence</h3></header><div class="insight-module__body"><p class="insight-module__intro">For each assertion, record what failed, who owns the decision, and what happens to the release.</p><ul class="insight-module__list"><li>Block when a required node, relationship, identifier, or visible fact is wrong</li><li>Require review when the rule depends on content context or changing platform guidance</li><li>Record accepted warnings with an owner and review date</li><li>Retain the fixture, rendered evidence, and test result with the release</li></ul></div></aside>
+<p>Put fast parse and graph assertions early in continuous integration. Run representative browser tests before merge or deployment when their risk justifies the time. A failure report should identify the route, fixture, assertion, expected value and actual value. “Schema test failed” isn&#39;t enough for a developer or content owner to act on.</p>
+<p>The same checks can support a larger launch gate during a redesign, while the <a href="/insights/schema-markup-website-migration-checklist">schema migration checklist</a> owns baselines, URL mapping, cutover and handover. Routine regression testing should remain useful between migrations.</p>
+<h2 class="insight-article__section-title">Use validators for the jobs they actually perform</h2>
+<p>Local assertions test your contract. External tools assess different parts of the output.</p>
+<p>The <a href="https://validator.schema.org/docs/">Schema.org Markup Validator documentation</a> describes extraction and checks for general Schema.org markup. Use it to inspect vocabulary and graph output. A clean result doesn&#39;t establish eligibility for a Google feature, agreement with visible business facts or preservation of your intended identifiers.</p>
+<p>Google&#39;s supported-feature documentation supplies current requirements for eligible search presentations. URL-based tools can help inspect deployed behaviour. As of the 30 September 2026 documentation review, we found no documented general Rich Results Test API intended as a CI dependency. That&#39;s a scoped current-documentation finding. Don&#39;t build a release design around an API that hasn&#39;t been documented for that purpose.</p>
+<p>An automated suite can retain links to validator evidence or trigger supported third-party tooling where the business accepts that dependency. Keep the core contract executable in your own test environment so a tool interface change doesn&#39;t erase the release gate.</p>
+<h2 class="insight-article__section-title">Sample production and indexed state after deployment</h2>
+<p>Continuous integration ends before real infrastructure, caching and production configuration have had their say. After deployment, run a small sample across high-value templates and meaningful variants. Fetch the production route, inspect its rendered DOM and apply the same assertions. Investigate differences from the build evidence.</p>
+<p>Google&#39;s <a href="https://developers.google.com/webmaster-tools/v1/urlInspection.index/UrlInspectionResult">URL Inspection API reference</a> describes inspection results for Google&#39;s indexed view, including rich-results analysis. It isn&#39;t a live pre-merge test. Indexed evidence arrives after deployment and depends on Google&#39;s crawl and indexing state. The API reference also documents rich-results item states, including that items with errors can&#39;t appear with rich-result features.</p>
+<p>Use indexed-state inspection as a later sample with realistic quota and timing expectations. It can reveal that Google holds an older version or reports a feature issue. It can&#39;t prove the current build will pass before release, and one inspected URL can&#39;t prove parity across a template set.</p>
+<p>Feed recurring production or indexed differences into the <a href="/insights/schema-markup-change-management-guide">schema change-management workflow</a>. Platform requirements, CMS models and rendering strategies evolve. Their approved assertions and accepted warnings need named maintenance triggers too.</p>
+<h2 class="insight-article__section-title">A useful schema test suite protects decisions</h2>
+<p>Start with one commercially important template. Approve its facts and graph contract, choose fixtures that represent genuine content states, automate the deterministic assertions and add a rendered-route check. Decide who can block, review or accept each failure before the first red build arrives.</p>
+<p>The suite won&#39;t guarantee indexing, rich results, rankings or AI citations. It will tell you whether the website still publishes the structured decisions your team approved.</p>
+<p><a href="/services/website-design">Website design and implementation support</a> can build these controls into components, CMS templates and continuous integration. <a href="/services/seo">SEO strategy and governance</a> can define the graph contract, acceptance criteria and monitoring evidence.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/structured-data-schema-audit-guide" class="insight-card__link" aria-label="Read A Practical Structured Data Audit for Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">A Practical Structured Data Audit for Your Website</h3>
+        <p class="insight-card__description">Audit rendered schema markup across your website, diagnose why tools disagree, assign repairs and verify structured data fixes after deployment.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/connected-schema-graph-service-business-guide" class="insight-card__link" aria-label="Read Build a Connected Schema Graph Across Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>11 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>Websites &amp; UX</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Build a Connected Schema Graph Across Your Website</h3>
+        <p class="insight-card__description">Plan stable schema identities and relationships across website templates so your structured data stays connected, accurate and maintainable.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/schema-markup-website-migration-checklist" class="insight-card__link" aria-label="Read Keep Schema Markup Intact During a Website Migration">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>11 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>Websites &amp; UX</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Keep Schema Markup Intact During a Website Migration</h3>
+        <p class="insight-card__description">Preserve accurate structured data through a website redesign with a practical baseline, staging checks, launch gates, production validation and handover.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

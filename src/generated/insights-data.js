@@ -9,6 +9,37 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "automated-schema-regression-testing-website-releases",
+    "title": "Automated Schema Tests That Protect Website Releases",
+    "description": "Build automated schema regression tests for JSON-LD, graph relationships, rendered templates, CI release gates and post-deployment checks.",
+    "intro": "A valid JSON-LD block can still describe the wrong author, lose an important relationship or disappear during rendering. A layered schema test contract catches those release defects before they spread across a website.",
+    "date": "2026-09-30",
+    "displayDate": "September 30, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Schema Regression Testing",
+      "Structured Data",
+      "JSON-LD",
+      "Continuous Integration",
+      "Rendered DOM Testing",
+      "Technical SEO",
+      "Release Assurance",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Structured Content and Schema",
+    "relatedPosts": [
+      "structured-data-schema-audit-guide",
+      "connected-schema-graph-service-business-guide",
+      "schema-markup-website-migration-checklist"
+    ],
+    "imageAlt": "Automated Schema Tests That Protect Website Releases",
+    "url": "/insights/automated-schema-regression-testing-website-releases"
+  },
+  {
     "slug": "about-page-entity-trust-ai-search-guide",
     "title": "Build an About Page People and Search Systems Understand",
     "description": "Build a clear About page that identifies your business, earns buyer confidence, connects claims to evidence, and stays accurate as the company changes.",

@@ -80,7 +80,7 @@ For each representative template, retain enough evidence to compare the result w
 
 The project owner needs a compact gate because validation warnings have different consequences. A missing required property for an important supported feature carries more risk than a recommendation for optional detail. An intentional ID change is materially different from a plugin silently creating another organisation.
 
-Review representative templates and priority URLs against the migration contract. Accept only the exceptions that someone has understood, owned and recorded. That lets the launch decision reflect business risk without pretending every warning must block release.
+Review representative templates and priority URLs against the migration contract. [Automate the repeatable schema checks](/insights/automated-schema-regression-testing-website-releases) for parsing, graph relationships and rendered output so the evidence can keep protecting ordinary releases after launch. Accept only the exceptions that someone has understood, owned and recorded. That lets the launch decision reflect business risk without pretending every warning must block release.
 
 ```insight-module
 {
