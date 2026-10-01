@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "schema-markup-plugin-vs-custom-code-guide",
+    "title": "Choosing the Right Schema Markup Implementation Route",
+    "description": "Compare schema plugins, CMS templates, custom server-side JSON-LD and JavaScript routes by accuracy, ownership, testing and maintenance.",
+    "intro": "The right schema implementation route is the smallest one that can publish accurate structured data from governed website facts and keep doing so after launch.",
+    "date": "2026-10-02",
+    "displayDate": "October 2, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Schema Markup",
+      "Structured Data",
+      "JSON-LD",
+      "CMS Architecture",
+      "Technical SEO",
+      "Content Governance",
+      "Google Tag Manager"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "Structured Content and Schema",
+    "relatedPosts": [
+      "schema-markup-priorities-service-business",
+      "structured-data-schema-audit-guide",
+      "structured-content-model-service-website-guide"
+    ],
+    "imageAlt": "Choosing the Right Schema Markup Implementation Route",
+    "url": "/insights/schema-markup-plugin-vs-custom-code-guide"
+  },
+  {
     "slug": "automated-schema-regression-testing-website-releases",
     "title": "Automated Schema Tests That Protect Website Releases",
     "description": "Build automated schema regression tests for JSON-LD, graph relationships, rendered templates, CI release gates and post-deployment checks.",

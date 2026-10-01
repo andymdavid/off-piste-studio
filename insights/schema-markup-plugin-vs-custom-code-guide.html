@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Compare schema plugins, CMS templates, custom server-side JSON-LD and JavaScript routes by accuracy, ownership, testing and maintenance.">
+  <title>Choosing the Right Schema Markup Implementation Route | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/schema-markup-plugin-vs-custom-code-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Choosing the Right Schema Markup Implementation Route",
+        "description": "Compare schema plugins, CMS templates, custom server-side JSON-LD and JavaScript routes by accuracy, ownership, testing and maintenance.",
+        "datePublished": "2026-10-02",
+        "dateModified": "2026-10-02",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/schema-markup-plugin-vs-custom-code-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Choosing the Right Schema Markup Implementation Route", "item": "https://offpistestudio.com/insights/schema-markup-plugin-vs-custom-code-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="schema-markup-plugin-vs-custom-code-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span><span>Websites &amp; UX</span></div><p class="insight-article__read-time">11 min read</p></div>
+          <h1 class="insight-article__title">Choosing the Right Schema Markup Implementation Route</h1>
+          <p class="insight-article__intro">The right schema implementation route is the smallest one that can publish accurate structured data from governed website facts and keep doing so after launch.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">October 2, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/schema-markup-plugin-vs-custom-code-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/schema-markup-plugin-vs-custom-code-guide&text=Choosing%20the%20Right%20Schema%20Markup%20Implementation%20Route" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/schema-markup-plugin-vs-custom-code-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Australian SERP check completed 2 October 2026 in Australia/Perth.
+Queries: schema plugin vs custom code, structured data plugin vs manual implementation, how to implement schema markup, schema markup CMS plugin, custom JSON-LD vs plugin, schema markup Google Tag Manager, best way to add structured data to a website.
+SERP shape: mixed comparison articles, plugin and vendor pages, agency guides, technical tutorials, videos, community discussions and Google documentation. Results frequently leaned towards WordPress products or GTM tutorials. The buyer's broader choice among governed implementation routes remained less consistently served.
+Australian wording: Australian results appeared for broader WordPress and SEO queries, while the comparison terminology remained largely global and platform-neutral.
+AI Overview presence: not observable in the available search interface, so no presence or absence is claimed.
+Paid search volume: no named paid keyword dataset was available, so no volume claim is made.
+Access date for platform-sensitive guidance: 2 October 2026, Australia/Perth.
+
+Primary sources checked:
+- Google Search Central, Introduction to structured data markup.
+- Google Search Central, Generate structured data with JavaScript.
+- Google Search Central, General structured data guidelines.
+- Schema.org, Schema Markup Validator documentation.
+- W3C, JSON-LD 1.1 Recommendation.
+
+Editorial boundaries:
+- The route-selection framework is Off Piste interpretation based on the named sources and the linked implementation guides.
+- No implementation route guarantees indexing, rankings, rich results or AI citations.
+- Recheck Google guidance when selecting or reviewing JavaScript, Google Tag Manager or feature-specific implementation.
+-->
+
+<h2 class="insight-article__section-title">The implementation decision starts after prioritisation</h2>
+<p>Your business has agreed which structured data deserves investment. The next question is how the website should generate it. An SEO or schema plugin may already publish a useful baseline. A CMS template could produce markup from maintained fields. A developer could build custom server-side JSON-LD. JavaScript or Google Tag Manager could add it after the page loads.</p>
+<p>That choice comes after the work covered in our <a href="/insights/schema-markup-priorities-service-business">schema markup prioritisation guide</a>. Deciding that an organisation, service or article should be described doesn&#39;t decide which system should publish the description.</p>
+<p>The implementation route should follow three things. Start with where the authoritative facts live. Then define the relationships the output must preserve. Finally, decide who can test and maintain it. This framework is Off Piste&#39;s interpretation of the implementation evidence.</p>
+<p>If the website already emits structured data, establish the current state before replacing anything. A <a href="/insights/structured-data-schema-audit-guide">structured data audit</a> can reveal useful plugin output, template dependencies, duplicate nodes and ownership gaps that aren&#39;t visible from the CMS settings screen.</p>
+<h2 class="insight-article__section-title">Judge the rendered output</h2>
+<p>Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data">introduction to structured data</a> explains that a CMS may offer settings or plugins, supports several markup formats and generally recommends JSON-LD. It also advises choosing the format that&#39;s easiest to implement and maintain at scale.</p>
+<p>Either route can be simple and robust when it fits the website. A heavily overridden plugin can be difficult to understand. A small template function fed by reliable fields can be easy to maintain.</p>
+<p>The shared standard is the published result. Google&#39;s <a href="https://developers.google.com/search/docs/appearance/structured-data/sd-policies">general structured data guidelines</a> require markup to represent the page and its visible content accurately. Correct markup still doesn&#39;t guarantee a search feature.</p>
+<p>Review what reaches the rendered page. It should express the approved facts, use the intended identifiers and relationships, and avoid conflicting output from another layer. It should also remain testable when templates, content and platform rules change. No tool name can establish those qualities on its own.</p>
+<h2 class="insight-article__section-title">What each implementation route is good at</h2>
+<h3 class="insight-article__sub-title">CMS or SEO plugins</h3>
+<p>A plugin can be a sound choice when the site uses common page types, its maintained metadata already matches the required properties and the plugin has one accountable owner. It can give editors a familiar interface and cover repeatable output without a separate development project.</p>
+<p>The evaluation starts with mapping, not the feature list. Confirm which CMS value supplies each property, whether editors must enter the same fact twice and how the plugin identifies shared entities. Inspect the output from representative pages rather than relying on a preview or marketing claim.</p>
+<p>Plugin simplicity weakens when a theme, commerce extension and SEO tool all emit overlapping schema. It also weakens when important settings live outside the content workflow or when updates can alter output without a deliberate release review. The answer may be better configuration, not replacement, if the existing generator can meet the approved contract.</p>
+<h3 class="insight-article__sub-title">Native CMS or template generation</h3>
+<p>Native generation works well when structured fields and templates already control the visible page. The same Service record can supply its heading, provider relationship and eligible structured data. A template change can then be reviewed alongside the output it affects.</p>
+<p>This route often suits a custom CMS, a component-based build or a platform with strong native field mapping. It still needs documented ownership. “Built into the CMS” isn&#39;t an acceptance test, and native features can be duplicated by an installed plugin.</p>
+<p>Template generation becomes harder when business facts remain buried in free text or inconsistent settings. In that case, the implementation problem begins with the source rather than the syntax.</p>
+<h3 class="insight-article__sub-title">Custom server-side JSON-LD</h3>
+<p>Custom server-side JSON-LD provides precise control over identifiers, conditional properties and relationships across templates. It can be appropriate when a site has governed records, a connected graph and release processes capable of protecting the output.</p>
+<p><a href="https://www.w3.org/TR/json-ld11/">JSON-LD 1.1 is a W3C Recommendation</a> with a defined data model and processing model. It isn&#39;t a proprietary plugin format. Custom generation can therefore produce portable, inspectable output, but the team owns its mapping, tests, documentation and future changes.</p>
+<p>That ownership is the cost. Custom code can faithfully automate a poor content model or preserve an outdated rule. Greater control is valuable only when someone can approve the contract and maintain the generator.</p>
+<h3 class="insight-article__sub-title">JavaScript or Google Tag Manager</h3>
+<p>Google documents <a href="https://developers.google.com/search/docs/appearance/structured-data/generate-structured-data-with-javascript">JavaScript-generated structured data</a>, including custom JavaScript and Google Tag Manager. That makes client-side delivery a valid route in defined circumstances rather than an automatic failure.</p>
+<p>It can help when server templates can&#39;t be changed promptly or when governed data is already available to the browser. The acceptance burden is higher because the team must confirm what appears after rendering, when it appears and whether another system has already emitted the same node.</p>
+<p>Google specifically recommends extracting page information with GTM variables instead of copying it into the container because duplicated data can drift from the page. A quick deployment that creates a second source of truth isn&#39;t a low-cost solution.</p>
+<p>A hybrid can be deliberate too. A plugin might own standard Article output while a controlled template layer extends the graph. That boundary has to be explicit. Each schema type and shared identifier needs one owner, even when several systems contribute to the final graph.</p>
+<h2 class="insight-article__section-title">Choose from the facts your website already holds</h2>
+<p>The most reliable generator is close to the authoritative content. If a service name, provider, location and page URL are maintained as structured CMS fields, a configurable plugin or template can map them consistently. If those facts are copied into a separate schema form, drift becomes part of the operating model.</p>
+<p>Use the <a href="/insights/structured-content-model-service-website-guide">structured content model guide</a> to assess source readiness. It explains how records, fields, relationships, validation and ownership make reusable facts dependable before any schema layer consumes them.</p>
+<p>Free-text extraction deserves caution. A script might infer a service name from a heading today, then fail when a designer changes the component. Manual JSON-LD pasted into individual pages has a similar weakness. Both approaches can pass initial validation while separating the markup from the maintained source.</p>
+<p>Before comparing tools, trace one important fact from its business owner to the visible page and the final JSON-LD. If the route requires ungoverned copies, the apparent implementation saving becomes ongoing reconciliation work.</p>
+<h2 class="insight-article__section-title">Complex relationships raise the control requirement</h2>
+<p>A basic generator may be enough for one organisation and a set of straightforward articles. Requirements change when people, services, locations and evidence need stable identities across several templates.</p>
+<p>The <a href="/insights/connected-schema-graph-service-business-guide">connected schema graph guide</a> explains how stable <code>@id</code> values and references preserve those relationships. This article&#39;s decision is narrower. Ask whether the proposed implementation can emit that approved graph without creating new versions of the same entity.</p>
+<p>Some plugins expose hooks or field mappings that meet the requirement. A native template system may already share the right records. Custom generation may be justified when neither can express the graph cleanly. Complexity supports more control only when the organisation also has the development, review and maintenance capability to use it.</p>
+<h2 class="insight-article__section-title">JavaScript and GTM need a stricter acceptance test</h2>
+<p>Source code isn&#39;t enough evidence for client-side output. Google&#39;s JavaScript guidance directs implementers to test the rendered result and notes that dynamically generated structured data can be processed. The relevant question is what the crawler can receive after rendering, not whether a tag fired in one browser session.</p>
+<p>Test representative public URLs with the actual consent, caching and deployment conditions. Inspect the rendered DOM for missing blocks, late data, stale values and duplicate nodes. Compare important properties with the visible page.</p>
+<p>The same release discipline benefits server output, but it is essential when an additional runtime and container sit between the content source and the result. Our guide to <a href="/insights/automated-schema-regression-testing-website-releases">automated schema regression testing</a> covers contracts, fixtures, rendered-browser checks and production sampling in detail.</p>
+<p>Don&#39;t use GTM merely to bypass every CMS or development constraint. Use it when the team can name the governed source, the trigger, the output owner, the duplicate-prevention rule and the migration path if the delivery layer changes.</p>
+<h2 class="insight-article__section-title">Turn the choice into an implementation brief</h2>
+<p>A buyer needs more than a recommendation to “install a plugin” or “build custom schema”. The implementation brief should make every supplier solve the same output and ownership problem. That creates a fairer comparison and gives the finished work a testable boundary.</p>
+<aside class="insight-module insight-module--practice" aria-label="Brief the output and ownership before choosing the tool"><header><p class="insight-module__label">In practice</p><h3>Brief the output and ownership before choosing the tool</h3></header><div class="insight-module__body"><p class="insight-module__intro">A useful implementation brief makes the required output, source and ongoing owner explicit.</p><ul class="insight-module__list"><li>Name the authoritative CMS fields and visible page content for every property</li><li>List the page types, entities and relationships the generator must cover</li><li>Define which layer may emit each schema type and how duplicates will be prevented</li><li>Require Schema.org validation, Google eligibility checks and rendered-DOM testing</li><li>Assign release approval, monitoring, documentation and change ownership</li></ul></div></aside>
+<p>The two validation checks serve different purposes. The <a href="https://schema.org/docs/validator.html">Schema.org Markup Validator</a> checks general Schema.org markup and vocabulary. Google documentation and testing cover current requirements for Google search features. Neither proves that the underlying business claim is true, so acceptance must also compare the output with the governed source and visible page.</p>
+<p>Ask the implementer to show evidence from normal, optional and edge-case records. A valid ideal page doesn&#39;t demonstrate correct handling of a missing field, an updated article or a relationship reused across templates.</p>
+<h2 class="insight-article__section-title">The route must remain workable after launch</h2>
+<p>Implementation cost continues after the first valid page. Plugins update. CMS fields change. Search features and guidance evolve. Developers refactor templates. Content owners alter the facts feeding the output.</p>
+<p>The <a href="/insights/schema-markup-change-management-guide">schema change-management guide</a> provides an operating model for monitoring these changes and assigning review decisions. Include that work when evaluating lifecycle fit. A route the team can&#39;t inspect or update predictably is expensive even if its initial setup was quick.</p>
+<p>Redesigns expose unclear ownership because templates, plugins and content models move at the same time. The <a href="/insights/schema-markup-website-migration-checklist">schema migration checklist</a> covers baselines, staging checks, cutover and handover. Choose a route that can travel through those events with its contract intact.</p>
+<p>Avoid invented price comparisons. A plugin licence can sit beside significant configuration and editorial work. Custom code can be small or extensive. Compare scoped work, review capability and expected maintenance against the same brief.</p>
+<h2 class="insight-article__section-title">Choose the smallest route that preserves control</h2>
+<p>A plugin or native generator can be the right answer when it draws from reliable facts, covers the approved pages and relationships, avoids duplicates and has a clear owner. Custom server-side output earns its place when genuine content-model or graph requirements exceed those capabilities and the team can maintain the extra control. JavaScript or GTM fits when its delivery constraints are understood and its rendered output is tested.</p>
+<p>Choose the smallest route that preserves the control your requirements actually need. Then document the source, owner and acceptance evidence so the decision remains understandable after the person who configured it moves on.</p>
+<p><a href="/services/website-design">Website design and implementation</a> is the relevant path when the work belongs in CMS architecture, templates or components. <a href="/services/seo">SEO strategy and governance</a> fits audits, requirements, prioritisation, validation and ongoing monitoring.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/schema-markup-priorities-service-business" class="insight-card__link" aria-label="Read Schema Markup Priorities for a Service Business">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Schema Markup Priorities for a Service Business</h3>
+        <p class="insight-card__description">Decide which schema markup your service business should fund first using visible evidence, Google support, template reach, commercial value and maintenance ownership.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/structured-data-schema-audit-guide" class="insight-card__link" aria-label="Read A Practical Structured Data Audit for Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">A Practical Structured Data Audit for Your Website</h3>
+        <p class="insight-card__description">Audit rendered schema markup across your website, diagnose why tools disagree, assign repairs and verify structured data fixes after deployment.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/structured-content-model-service-website-guide" class="insight-card__link" aria-label="Read Build a Structured Content Model for Your Website">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>Websites &amp; UX</span><span>SEO &amp; Search</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Build a Structured Content Model for Your Website</h3>
+        <p class="insight-card__description">Plan reusable CMS content types, fields, relationships and validation before a service website redesign, migration or template build.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>
