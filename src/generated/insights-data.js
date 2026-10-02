@@ -9,6 +9,39 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-ai-search-optimisation-mistakes",
+    "title": "Google AI Search Mistakes That Waste Your Budget",
+    "description": "A practical framework for deciding which Google AI search recommendations to fund, verify, defer, or stop.",
+    "intro": "An AI search proposal can sound urgent while its mechanism, evidence and commercial value remain unclear. Use this framework to decide what deserves budget before implementation or renewal.",
+    "date": "2026-10-03",
+    "displayDate": "October 3, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Google Search",
+      "AI Overviews",
+      "AI Mode",
+      "AI SEO",
+      "AEO",
+      "GEO",
+      "SEO Budget",
+      "Content Strategy",
+      "Technical SEO",
+      "Measurement"
+    ],
+    "topics": [
+      "AI & Automation",
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Google Search and AI Overviews",
+    "relatedPosts": [
+      "google-sge-and-seo",
+      "how-to-measure-ai-search-visibility",
+      "google-ai-mode-query-fan-out-content-planning"
+    ],
+    "imageAlt": "Google AI Search Mistakes That Waste Your Budget",
+    "url": "/insights/google-ai-search-optimisation-mistakes"
+  },
+  {
     "slug": "schema-markup-plugin-vs-custom-code-guide",
     "title": "Choosing the Right Schema Markup Implementation Route",
     "description": "Compare schema plugins, CMS templates, custom server-side JSON-LD and JavaScript routes by accuracy, ownership, testing and maintenance.",

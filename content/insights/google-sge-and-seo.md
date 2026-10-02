@@ -35,6 +35,8 @@ The answer is coherent coverage, rather than a page for every imagined subquery.
 
 Google's current [generative AI optimisation guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) says its AI features are rooted in core Search ranking and quality systems. Its technical guidance says a page must be indexed, eligible for a Search snippet and included in generative AI features through Search Console. Standard search requirements apply, with no AI-only markup layer, `llms.txt` file or special schema required.
 
+If a proposal still sells one of those items as a Google-specific shortcut, use our guide to [evaluating which AI search tactics deserve budget](/insights/google-ai-search-optimisation-mistakes) before approving the work.
+
 Important pages must be crawlable and indexable, with useful content visible on the page. Internal links should make related services and evidence easy to find. Structured data should agree with what a reader can see. Page experience and accessibility matter when a person follows a source link.
 
 Eligibility is only the starting point. It doesn't guarantee that Google will crawl, index, select or show a page. If an eligible site is absent while other sources appear, use the [AI Overview citation diagnostic](/insights/google-ai-overviews-not-citing-website-diagnostic) to separate an access problem from weak query fit or weak source value. If the structure itself is unclear, the [structured content guide](/insights/structured-content-ai-search-guide) shows how to repair headings, page roles, visible evidence and machine-readable support.
