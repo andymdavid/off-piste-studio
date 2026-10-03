@@ -152,6 +152,6 @@ Protect the deployment contract with [automated schema regression tests](/insigh
 
 ## A connected graph is a governance decision
 
-You can now make a concrete implementation decision. Approve the stable entities, canonical IDs, relationship contract, sources and owners before commissioning the templates. Choose `@graph`, nesting or separate items according to what the rendering stack can maintain. Keep explicit relationships and accurate visible facts whichever format you use.
+You can now make a concrete implementation decision. Approve the stable entities, canonical IDs, relationship contract, sources and owners before commissioning the templates. If the graph includes related companies or owned brands, use the [parent company, subsidiary and brand architecture guide](/insights/parent-company-subsidiary-brand-entity-search-guide) to settle their boundaries and canonical homes. Choose `@graph`, nesting or separate items according to what the rendering stack can maintain. Keep explicit relationships and accurate visible facts whichever format you use.
 
 If the difficult work is deciding scope, ownership and ongoing standards, [SEO strategy and governance](/services/seo) can turn the contract into an accountable programme. If the CMS cannot express shared identities or produces conflicting output, [website and template implementation](/services/website-design) is the practical next step.

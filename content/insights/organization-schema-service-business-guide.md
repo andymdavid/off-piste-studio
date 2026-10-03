@@ -60,7 +60,7 @@ Use the most specific accurate type that fits the real operation. Schema.org def
 An online or non-location-dependent professional service firm can often use `Organization`, or a relevant subtype supported by its actual business model. A business with a customer-facing physical location may fit `LocalBusiness`. Google's [LocalBusiness structured data guide](https://developers.google.com/search/docs/appearance/structured-data/local-business) says to use the most specific applicable subtype and follow its local business fields as well as the inherited organisation properties.
 
 
-Service-area status alone doesn't make every remote consultancy a `LocalBusiness`. Check eligibility and how the business actually meets customers. Once that choice is approved, use the [LocalBusiness location and service-area implementation guide](/insights/local-business-schema-locations-service-areas-guide) to protect private addresses and model storefronts, hybrid operations and genuine staffed branches. Practitioner, parent-brand, franchise and complex ownership structures need case-specific modelling. A universal snippet can collapse genuinely different entities.
+Service-area status alone doesn't make every remote consultancy a `LocalBusiness`. Check eligibility and how the business actually meets customers. Once that choice is approved, use the [LocalBusiness location and service-area implementation guide](/insights/local-business-schema-locations-service-areas-guide) to protect private addresses and model storefronts, hybrid operations and genuine staffed branches. Practitioner and franchise structures still need case-specific modelling. For parent companies, subsidiaries and owned brands, [approve the entity boundaries and canonical homes first](/insights/parent-company-subsidiary-brand-entity-search-guide). A universal snippet can collapse genuinely different entities.
 
 ## Choose fields by evidence and purpose
 
@@ -134,7 +134,7 @@ The `name` and `description` need matching visible copy. The `url` and `@id` fol
 
 For an eligible local business, change `@type` to the most specific accurate `LocalBusiness` subtype. Add the primary phone and a supported `PostalAddress` at the local entity level. Location-dependent implementations may also need fields such as opening hours, geo coordinates or price range according to Google's current LocalBusiness guidance. Never invent a storefront address or opening hours to complete a template.
 
-Separate locations should not overwrite one another. Complex practitioner, department, franchise or parent-company relationships deserve a modelling decision before code is generated.
+Separate locations should not overwrite one another. Complex practitioner, department or franchise relationships deserve a modelling decision before code is generated. Use the [multi-entity architecture guide](/insights/parent-company-subsidiary-brand-entity-search-guide) before generating code for parent-company, subsidiary or brand relationships.
 
 ## Place and deploy the markup once
 

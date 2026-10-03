@@ -42,6 +42,39 @@ export const INSIGHT_POSTS = [
     "url": "/insights/google-ai-search-optimisation-mistakes"
   },
   {
+    "slug": "parent-company-subsidiary-brand-entity-search-guide",
+    "title": "Structuring Parent Companies Subsidiaries and Brands for Search",
+    "description": "Decide how parent companies, subsidiaries, operating brands and departments should appear across websites, profiles and structured data.",
+    "intro": "A clear multi-entity search model gives every company and brand its own accurate public identity, then connects the relationships buyers and search systems need to understand.",
+    "date": "2026-10-03",
+    "displayDate": "October 3, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Parent Company",
+      "Subsidiary",
+      "Brand Architecture",
+      "Entity Trust",
+      "Organization Schema",
+      "parentOrganization",
+      "subOrganization",
+      "Structured Data",
+      "Google Business Profile",
+      "Website Architecture"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "organization-schema-service-business-guide",
+      "connected-schema-graph-service-business-guide"
+    ],
+    "imageAlt": "Structuring Parent Companies Subsidiaries and Brands for Search",
+    "url": "/insights/parent-company-subsidiary-brand-entity-search-guide"
+  },
+  {
     "slug": "schema-markup-plugin-vs-custom-code-guide",
     "title": "Choosing the Right Schema Markup Implementation Route",
     "description": "Compare schema plugins, CMS templates, custom server-side JSON-LD and JavaScript routes by accuracy, ownership, testing and maintenance.",
