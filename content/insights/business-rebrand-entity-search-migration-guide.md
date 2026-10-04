@@ -49,6 +49,8 @@ Start by naming the change precisely. A public brand can change while the regist
 
 Write down the approved old and new values for the public brand, company name, registered business name, domain, locations, contact details, service categories, ownership, and effective date. Name the person who can approve each value. If the team can't agree on these facts, publishing them across more channels will multiply the confusion.
 
+If a merger or acquisition leaves two established public identities to evaluate, don't force the transaction into a one-identity rebrand plan. Use the [post-acquisition search integration guide](/insights/merger-acquisition-entity-search-integration-guide) to choose what to retain, endorse, merge or retire before applying the continuity steps here.
+
 Australian businesses need to keep registry terms distinct. ASIC's [company name change process](https://www.asic.gov.au/for-business-and-companies/companies/changes-to-company-details/change-a-company-name/) applies to a registered company. ASIC's current [business name guidance](https://www.asic.gov.au/for-business-and-companies/business-names/change-business-name-details/) explains that changing details attached to a registered business name is a separate task. Moving to a different trading name may require registering another business name rather than editing the existing name into a new one.
 
 Registration is only one part of the job. Trademark, tax, contract, privacy, advertising, and ownership questions may need qualified advice. Resolve those questions before search and website teams treat a marketing decision as an authorised identity.
