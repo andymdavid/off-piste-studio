@@ -128,6 +128,8 @@ An approved model describes the intended steady state. Moving from the current e
 
 Google's [site move guidance](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) calls for URL mapping, permanent server-side redirects, testing and monitoring. It also warns that rankings can fluctuate while Google recrawls and reindexes the moved pages. Use the [business rebrand and entity migration guide](/insights/business-rebrand-entity-search-migration-guide) to sequence that work.
 
+When a merger or acquisition leaves several established public identities in play, first decide which brands, domains and profiles to retain, endorse, merge or retire. The [post-acquisition search integration guide](/insights/merger-acquisition-entity-search-integration-guide) provides that transaction-specific framework.
+
 Don't change the entity model and domain estate as an undocumented tidy-up. Record which identities continue, which are new and which genuinely end. That decision determines whether identifiers, profiles and external evidence should remain, move or be retired.
 
 ## Approve the model before implementation

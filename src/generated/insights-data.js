@@ -9,6 +9,37 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "merger-acquisition-entity-search-integration-guide",
+    "title": "Preserving Search Visibility After a Merger or Acquisition",
+    "description": "Decide what to retain, endorse, merge or retire across brands, domains, profiles and content after a merger or acquisition.",
+    "intro": "A merger or acquisition changes who owns the business, but search visibility depends on a clearer decision. Choose which public identities continue before changing the websites, profiles and evidence that buyers rely on.",
+    "date": "2026-10-04",
+    "displayDate": "October 4, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Merger and Acquisition",
+      "Post Acquisition Integration",
+      "Entity Trust",
+      "Brand Integration",
+      "Domain Migration",
+      "Google Business Profile",
+      "Search Visibility",
+      "Website Consolidation"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "parent-company-subsidiary-brand-entity-search-guide",
+      "business-rebrand-entity-search-migration-guide",
+      "how-ai-search-understands-your-business"
+    ],
+    "imageAlt": "Preserving Search Visibility After a Merger or Acquisition",
+    "url": "/insights/merger-acquisition-entity-search-integration-guide"
+  },
+  {
     "slug": "google-ai-search-optimisation-mistakes",
     "title": "Google AI Search Mistakes That Waste Your Budget",
     "description": "A practical framework for deciding which Google AI search recommendations to fund, verify, defer, or stop.",
