@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "measure-ai-customer-experience-outcomes-guide",
+    "title": "Measuring Whether AI Improves the Customer Experience",
+    "description": "A practical framework for measuring whether AI-assisted customer journeys improve resolution, effort, trust and recovery over time.",
+    "intro": "AI customer experience measurement should show whether people complete their real task with reasonable effort, informed choice and a reliable route to help. This guide turns journey evidence into a scorecard with owners, thresholds and decisions.",
+    "date": "2026-10-05",
+    "displayDate": "October 5, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Customer Experience",
+      "Customer Service Metrics",
+      "AI Measurement",
+      "Customer Effort",
+      "Human Handoff",
+      "AI Governance",
+      "Journey Analytics"
+    ],
+    "topics": [
+      "AI & Automation"
+    ],
+    "cluster": "AI and Customer Experience",
+    "relatedPosts": [
+      "ai-customer-experience-human-handoff-guide",
+      "ai-customer-experience-audit-guide",
+      "ai-customer-feedback-analysis-guide"
+    ],
+    "imageAlt": "Measuring Whether AI Improves the Customer Experience",
+    "url": "/insights/measure-ai-customer-experience-outcomes-guide"
+  },
+  {
     "slug": "merger-acquisition-entity-search-integration-guide",
     "title": "Preserving Search Visibility After a Merger or Acquisition",
     "description": "Decide what to retain, endorse, merge or retire across brands, domains, profiles and content after a merger or acquisition.",
