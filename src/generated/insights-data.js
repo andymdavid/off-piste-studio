@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "website-claim-substantiation-workflow",
+    "title": "How to Substantiate Website Claims Before Publishing",
+    "description": "A practical pre-publication workflow for checking, qualifying and approving evidence-backed website claims.",
+    "intro": "A strong website claim should survive the question that follows it. This workflow helps founders, marketers and agencies find objective claims, test their evidence and record an approval decision before the copy goes live.",
+    "date": "2026-10-07",
+    "displayDate": "October 7, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "Claim Substantiation",
+      "Marketing Claims",
+      "Content Governance",
+      "Evidence Quality",
+      "Editorial Approval",
+      "Australian Consumer Law"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility / Evidence-Led Content and Citation-Worthiness",
+    "relatedPosts": [
+      "ai-search-citation-worthy-content",
+      "evaluate-sources-website-content-guide",
+      "website-content-evidence-audit"
+    ],
+    "imageAlt": "How to Substantiate Website Claims Before Publishing",
+    "url": "/insights/website-claim-substantiation-workflow"
+  },
+  {
     "slug": "measure-ai-customer-experience-outcomes-guide",
     "title": "Measuring Whether AI Improves the Customer Experience",
     "description": "A practical framework for measuring whether AI-assisted customer journeys improve resolution, effort, trust and recovery over time.",
