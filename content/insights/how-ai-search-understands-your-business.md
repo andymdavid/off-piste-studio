@@ -108,6 +108,8 @@ Create a small, stable set of branded checks such as “What does [business] do?
 
 Pair those observations with the data you actually have. Google's current AI-feature guidance says traffic from AI Overviews and AI Mode is included in Search Console's Web performance reporting. It doesn't provide a separate diagnosis of whether a business entity is understood. Search Console, analytics, crawler logs, branded demand and lead quality each answer different questions.
 
+Once the baseline is clear, [maintain an entity-trust monitoring register](/insights/entity-trust-monitoring-search-ai-framework) with dated observations, owners, review triggers and separate commercial measures. That turns occasional checks into a repeatable governance practice without inventing a platform score.
+
 Measure corrections against the original symptom. If the problem was a stale service, check whether the cited and visible sources now state the current one. If it was mistaken identity, check the name, URL and profiles. If it was unbranded discovery, track that as a separate visibility programme rather than declaring the business record fixed or broken from one prompt.
 
 ## Choose the repair the evidence supports

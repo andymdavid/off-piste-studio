@@ -125,6 +125,8 @@ Retest the same query, country and device recorded in the baseline. Check the li
 
 Keep verified facts stable while the request is assessed. Repeatedly changing names, descriptions, profile URLs or schema makes the public record harder to reconcile. Don't assign a universal review deadline. Google describes review and update processes, but timing and outcomes vary.
 
+After logging the correction, add the affected fact and panel field to a [recurring business information monitoring register](/insights/entity-trust-monitoring-search-ai-framework). A dated observation, evidence capture and next review date make any recurrence easier to triage.
+
 A single wrong link with one clear source may remain a routine correction. Repeated failures, mixed entities and contradictions across several influential sources point to a wider entity problem. An [SEO and AI visibility strategy](/services/seo) can connect source diagnosis, platform troubleshooting and monitoring without promising control over the panel.
 
 ## Make the business easier to verify next time

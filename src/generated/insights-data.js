@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "entity-trust-monitoring-search-ai-framework",
+    "title": "Monitor Your Business Information Across Search and AI",
+    "description": "Build a practical monitoring system to keep business information accurate across your website, Google, third-party sources and sampled AI answers.",
+    "intro": "A correction, rebrand or schema update can settle your business record today. This framework helps you keep it accurate by recording the intended facts, observing the surfaces buyers use, assigning action and connecting persistent errors to commercial risk.",
+    "date": "2026-10-07",
+    "displayDate": "October 7, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Entity Trust",
+      "Business Information Monitoring",
+      "Brand Representation",
+      "AI Search Visibility",
+      "Knowledge Panel Monitoring",
+      "Search Measurement",
+      "Content Governance"
+    ],
+    "topics": [
+      "AI & Automation",
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "third-party-brand-signals-ai-search-audit",
+      "fix-incorrect-google-knowledge-panel-business-guide"
+    ],
+    "imageAlt": "Monitor Your Business Information Across Search and AI",
+    "url": "/insights/entity-trust-monitoring-search-ai-framework"
+  },
+  {
     "slug": "website-claim-substantiation-workflow",
     "title": "How to Substantiate Website Claims Before Publishing",
     "description": "A practical pre-publication workflow for checking, qualifying and approving evidence-backed website claims.",

@@ -142,6 +142,8 @@ Connect those observations to commercial measures. Watch organic landing pages, 
 
 Off Piste's operational preference is to schedule 30, 60, and 90-day reviews, then adjust the cadence to the scale and risk of the migration. Those dates are management checkpoints, not promises about Google or AI systems. Keep unresolved corrections open until the live source is verified.
 
+Carry the approved facts and unresolved items into a [recurring business information monitoring register](/insights/entity-trust-monitoring-search-ai-framework). It provides the longer-term owner, evidence trail and change triggers after the migration checkpoints end.
+
 ## Choose the work the migration actually needs
 
 The final decision follows the source of risk. A rebrand with a new domain, architecture, templates, or buyer experience needs [strategic website and migration work](/services/website-design). The site, redirect plan, content, tracking, and launch controls have to be designed as one system.

@@ -149,6 +149,8 @@ Use the [business representation diagnostic](/insights/how-ai-search-understands
 
 Representation can change at different speeds across sources. Track observations alongside commercial measures with the [AI search visibility measurement guide](/insights/how-to-measure-ai-search-visibility), but don't turn a change in one tool into a causal claim. Rankings, reviews, Knowledge Panels and AI citations aren't guaranteed outcomes of the integration plan.
 
+Keep each continuing identity in a [business information monitoring register](/insights/entity-trust-monitoring-search-ai-framework) with its canonical facts, observed surfaces, owner and event triggers. Separate records make recurring ambiguity easier to distinguish from an isolated slow update.
+
 ## Match support to the integration constraint
 
 Choose support based on the unresolved constraint. Use [SEO planning and implementation](/services/seo) when the hard part is due diligence, sequencing, redirect validation, profile reconciliation or representation monitoring.
