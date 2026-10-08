@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "leadership-change-entity-search-transition-guide",
+    "title": "Keeping Search Accurate Through a Leadership Change",
+    "description": "Coordinate website, schema, profile and search updates when a founder, CEO, director or senior expert changes while the business continues.",
+    "intro": "A leadership change can leave your website, public profiles, search results and AI answers describing different versions of the business. This guide helps you preserve the company record, change current person-to-organisation relationships and verify what buyers can see.",
+    "date": "2026-10-09",
+    "displayDate": "October 9, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Leadership Change",
+      "Entity Trust",
+      "Executive Profiles",
+      "Person Schema",
+      "Organization Schema",
+      "AI Search Visibility"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "person-schema-expert-profile-page-guide",
+      "entity-trust-monitoring-search-ai-framework"
+    ],
+    "imageAlt": "Keeping Search Accurate Through a Leadership Change",
+    "url": "/insights/leadership-change-entity-search-transition-guide"
+  },
+  {
     "slug": "entity-trust-monitoring-search-ai-framework",
     "title": "Monitor Your Business Information Across Search and AI",
     "description": "Build a practical monitoring system to keep business information accurate across your website, Google, third-party sources and sampled AI answers.",

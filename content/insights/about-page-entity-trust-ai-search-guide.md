@@ -121,7 +121,7 @@ The broader guide to [structuring a website for AI search](/insights/structured-
 
 Assign one person to approve the public business record and one implementation owner to keep the page and markup aligned. They may be the same person in a small firm. What matters is that a change has somewhere to go.
 
-Review the page after a trading-name change, rebrand, acquisition, leadership change, major service shift, new operating location or material new proof. Check the visible page first. Then update structured data and the external profiles affected by the same change.
+Review the page after a trading-name change, rebrand, acquisition, leadership change, major service shift, new operating location or material new proof. Check the visible page first. Then update structured data and the external profiles affected by the same change. When a founder, CEO or senior expert changes while the company continues, follow the [leadership change transition guide](/insights/leadership-change-entity-search-transition-guide) so the About page changes on the same governed timeline as profiles and public records.
 
 A rebrand needs a broader migration sequence than an About-page edit. Follow the [business rebrand and entity migration guide](/insights/business-rebrand-entity-search-migration-guide) when names, domains or public identity are changing together. Use the third-party signal audit when outside records need correction.
 
