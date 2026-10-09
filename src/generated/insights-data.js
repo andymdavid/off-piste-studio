@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "business-relocation-search-visibility-checklist",
+    "title": "Search Visibility Checklist for Moving Business Premises",
+    "description": "Coordinate your website, Google Business Profile, business records and monitoring when an Australian business moves to a new address.",
+    "intro": "Moving premises changes more than the address on your contact page. This checklist helps one continuing business coordinate its website, Google Business Profile, structured data, external listings and statutory records while planning for uncertain rankings and update timing.",
+    "date": "2026-10-10",
+    "displayDate": "October 10, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "Business Relocation",
+      "Local SEO",
+      "Google Business Profile",
+      "Entity Trust",
+      "Address Change",
+      "LocalBusiness Schema",
+      "Search Visibility",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "google-business-profile-guide",
+      "entity-trust-monitoring-search-ai-framework"
+    ],
+    "imageAlt": "Search Visibility Checklist for Moving Business Premises",
+    "url": "/insights/business-relocation-search-visibility-checklist"
+  },
+  {
     "slug": "leadership-change-entity-search-transition-guide",
     "title": "Keeping Search Accurate Through a Leadership Change",
     "description": "Coordinate website, schema, profile and search updates when a founder, CEO, director or senior expert changes while the business continues.",

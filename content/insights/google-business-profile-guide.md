@@ -120,7 +120,7 @@ Structured data can help Google understand the content of a page, but Google's [
 
 ## Measure customer actions and maintain material facts
 
-Maintenance should follow real business changes and customer needs. Update hours, services, closures, address details, and contact information as soon as the underlying fact changes. Review policy alerts, customer questions, and reviews often enough to keep the public record accurate.
+Maintenance should follow real business changes and customer needs. Update hours, services, closures, address details, and contact information as soon as the underlying fact changes. A premises move needs a coordinated website, profile, verification and external-record sequence, so use the [business relocation search visibility checklist](/insights/business-relocation-search-visibility-checklist) before editing the address. Review policy alerts, customer questions, and reviews often enough to keep the public record accurate.
 
 Google's [Business Profile performance guidance](https://support.google.com/business/answer/9918094) describes metrics that can include the searches used to find the profile, views, calls, website clicks, directions, bookings, and other interactions. Availability depends on the profile and feature. Definitions and attribution windows vary, so don't add unlike metrics together or treat every action as a confirmed lead.
 
