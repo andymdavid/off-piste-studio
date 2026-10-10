@@ -5,7 +5,7 @@ description: A practical framework for measuring AI search visibility with Googl
 intro: AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.
 author: Lara
 date: 2026-07-13
-updatedDate: 2026-09-07
+updatedDate: 2026-10-10
 readTime: 15 min read
 tags: SEO, AI, Google Search Console, AI Overviews, AI Mode, Measurement
 topics: SEO & Search, AI & Automation
@@ -41,7 +41,7 @@ Use four measurement levels.
 
 The higher levels are slower to collect, but more useful. Screenshots can start a conversation. Logs, citations, Search Console trends, referral traffic, and enquiry quality help decide what to change.
 
-Dedicated Google reporting now gives teams a stronger Google-specific layer. It works best beside prompts, citations, crawler logs, analytics, and commercial signals.
+Dedicated Google reporting now gives teams a stronger Google-specific layer. It works best beside prompts, citations, crawler logs, analytics, and commercial signals. The [Generative AI performance report operating guide](/insights/google-search-console-generative-ai-report-guide) covers report configuration, baseline construction and dimension-level interpretation. This article keeps ownership of the broader cross-platform scorecard.
 
 When that reporting reveals falling clicks or CTR, the [AI Overviews traffic-drop diagnostic](/insights/google-ai-overviews-traffic-drop-diagnostic) shows how to investigate the anomaly without treating feature exposure as proof of cause.
 

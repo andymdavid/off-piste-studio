@@ -5,7 +5,7 @@ description: Learn what Google AI Overviews and AI Mode mean for SEO, source vis
 intro: Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?
 author: Lara
 date: 2026-03-06
-updatedDate: 2026-09-10
+updatedDate: 2026-10-10
 readTime: 12 min read
 tags: SEO, AI, Google Search, AI Overviews, AI Mode, Google SGE, Content Strategy
 topics: SEO & Search, AI & Automation
@@ -59,7 +59,7 @@ Google's announcement on [new controls and insights for website owners](https://
 
 The control has a real tradeoff. Google says an opted-out site won't receive traffic or impressions from those generative AI features, while the choice isn't used as a ranking signal outside them. The [AI Overviews opt-out decision guide](/insights/google-ai-overviews-opt-out-decision-guide) explains how to weigh visibility, content use, measurement and commercial exposure before changing the setting.
 
-The report answers a narrower question than a complete marketing dashboard. It can show where pages appeared in Google's supported generative AI experiences. It can't tell you whether the description was persuasive, whether a later branded search was influenced by that exposure or whether a lead was worth pursuing. Our framework for [measuring AI search visibility](/insights/how-to-measure-ai-search-visibility) combines the report with citation review, prompt sampling, analytics and sales evidence.
+The report answers a narrower question than a complete marketing dashboard. It can show where pages appeared in Google's supported generative AI experiences. It can't tell you whether the description was persuasive, whether a later branded search was influenced by that exposure or whether a lead was worth pursuing. Use the [Generative AI performance report operating guide](/insights/google-search-console-generative-ai-report-guide) to configure that Google-specific baseline and interpret its page, country, date and device patterns. Our framework for [measuring AI search visibility](/insights/how-to-measure-ai-search-visibility) combines the report with citation review, prompt sampling, analytics and sales evidence.
 
 ## Traffic needs a commercial reading
 

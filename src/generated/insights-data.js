@@ -39,6 +39,36 @@ export const INSIGHT_POSTS = [
     "url": "/insights/business-relocation-search-visibility-checklist"
   },
   {
+    "slug": "google-search-console-generative-ai-report-guide",
+    "title": "Using Google Search Console’s Generative AI Performance Report",
+    "description": "Configure Google Search Console’s Generative AI performance report, build a sound baseline and turn page, country, device and date patterns into the right next investigation.",
+    "intro": "Google’s Generative AI performance report gives website owners a first-party view of exposure in supported AI search experiences. It shows where visibility exists and what deserves investigation, while queries, citations, clicks and leads require other evidence.",
+    "date": "2026-10-10",
+    "displayDate": "October 10, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "Google Search Console",
+      "Generative AI Performance Report",
+      "AI Overviews",
+      "AI Mode",
+      "SEO Measurement",
+      "Google Search",
+      "Reporting"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility / Google Search and AI Overviews",
+    "relatedPosts": [
+      "how-to-measure-ai-search-visibility",
+      "google-sge-and-seo",
+      "google-ai-overviews-traffic-drop-diagnostic"
+    ],
+    "imageAlt": "Using Google Search Console’s Generative AI Performance Report",
+    "url": "/insights/google-search-console-generative-ai-report-guide"
+  },
+  {
     "slug": "leadership-change-entity-search-transition-guide",
     "title": "Keeping Search Accurate Through a Leadership Change",
     "description": "Coordinate website, schema, profile and search updates when a founder, CEO, director or senior expert changes while the business continues.",
@@ -2303,8 +2333,8 @@ export const INSIGHT_POSTS = [
     "intro": "AI search visibility is a pattern to measure across many signals. The useful work is checking whether answer engines can find your business, describe it accurately, cite credible sources, and send better-informed buyers toward the right next step.",
     "date": "2026-07-13",
     "displayDate": "July 13, 2026",
-    "updatedDate": "2026-09-07",
-    "displayUpdatedDate": "September 7, 2026",
+    "updatedDate": "2026-10-10",
+    "displayUpdatedDate": "October 10, 2026",
     "readTime": "15 min read",
     "tags": [
       "SEO",
@@ -2612,8 +2642,8 @@ export const INSIGHT_POSTS = [
     "intro": "Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?",
     "date": "2026-03-06",
     "displayDate": "March 6, 2026",
-    "updatedDate": "2026-09-10",
-    "displayUpdatedDate": "September 10, 2026",
+    "updatedDate": "2026-10-10",
+    "displayUpdatedDate": "October 10, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
