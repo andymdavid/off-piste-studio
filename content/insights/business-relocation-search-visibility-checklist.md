@@ -31,7 +31,7 @@ The change register, sequencing, source priority and 30, 60 and 90-day review ca
 
 A customer follows yesterday's directions and arrives at the old premises. Google Maps shows the new address, but the website footer and an industry directory still show the former one. An AI answer repeats whichever version its sources support. The business is open, yet its public record looks uncertain.
 
-This guide covers one continuing business moving one operating location. Branch openings and closures, acquisitions, legal entity changes and domain moves need their own migration plan. If the move also changes the name or domain, use the broader [business rebrand migration guide](/insights/business-rebrand-entity-search-migration-guide).
+This guide covers one continuing business moving one operating location. If you're adding another staffed branch while the existing location continues, use the [new business location search visibility checklist](/insights/new-business-location-search-visibility-checklist). Closures, acquisitions, legal entity changes and domain moves need their own migration plan. If the move also changes the name or domain, use the broader [business rebrand migration guide](/insights/business-rebrand-entity-search-migration-guide).
 
 The aim is accurate continuity, not a promise of unchanged visibility. Google says local results depend mainly on [relevance, distance and prominence](https://support.google.com/business/answer/7091). A new address changes the distance between the business, its customers and its competitors. Rankings can therefore change even when every controlled update is correct.
 

@@ -9,6 +9,39 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "new-business-location-search-visibility-checklist",
+    "title": "Search Visibility Checklist for Opening a New Business Location",
+    "description": "Coordinate a new branch page, eligible Business Profile, structured data, public records and measurement when an existing business opens another real location.",
+    "intro": "Opening another branch creates a new customer-facing location record. This checklist helps a growing business classify the location, approve its facts, connect it to the parent brand and coordinate launch checks without assuming rankings, reviews or verification will transfer.",
+    "date": "2026-10-12",
+    "displayDate": "October 12, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "New Business Location",
+      "Branch Launch",
+      "Local SEO",
+      "Google Business Profile",
+      "Entity Trust",
+      "Multi-location SEO",
+      "Location Pages",
+      "LocalBusiness Schema",
+      "Search Visibility",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "business-relocation-search-visibility-checklist",
+      "local-business-schema-locations-service-areas-guide",
+      "entity-trust-monitoring-search-ai-framework"
+    ],
+    "imageAlt": "Search Visibility Checklist for Opening a New Business Location",
+    "url": "/insights/new-business-location-search-visibility-checklist"
+  },
+  {
     "slug": "business-relocation-search-visibility-checklist",
     "title": "Search Visibility Checklist for Moving Business Premises",
     "description": "Coordinate your website, Google Business Profile, business records and monitoring when an Australian business moves to a new address.",
