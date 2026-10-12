@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-content-brief-source-pack-template",
+    "title": "Build an AI Content Brief and Source Pack",
+    "description": "A copyable AI content brief and source pack for giving writers reliable strategy, evidence, expert input, privacy boundaries, ownership, and review checks before drafting.",
+    "intro": "A strong prompt can't repair a missing argument, weak evidence, unclear permissions, or nobody owning the final decision. Build the brief and source pack first so a writer can draft without inventing the strategy.",
+    "date": "2026-10-12",
+    "displayDate": "October 12, 2026",
+    "readTime": "15 min read",
+    "tags": [
+      "AI Content Brief",
+      "AI Writing Brief",
+      "Content Source Pack",
+      "Content Strategy",
+      "Editorial Governance",
+      "Evidence Based Content"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Content & Brand"
+    ],
+    "cluster": "AI Content, Voice, and Expertise",
+    "relatedPosts": [
+      "ai-assisted-content-workflow-expertise-guide",
+      "ai-assisted-content-quality-audit-guide",
+      "ai-ready-brand-voice-guide-content-system"
+    ],
+    "imageAlt": "Build an AI Content Brief and Source Pack",
+    "url": "/insights/ai-content-brief-source-pack-template"
+  },
+  {
     "slug": "new-business-location-search-visibility-checklist",
     "title": "Search Visibility Checklist for Opening a New Business Location",
     "description": "Coordinate a new branch page, eligible Business Profile, structured data, public records and measurement when an existing business opens another real location.",

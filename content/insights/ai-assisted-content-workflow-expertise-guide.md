@@ -83,6 +83,8 @@ Most generic AI content starts with too little context. The prompt asks for an a
 
 Build a source pack first. It gives AI better material and gives the reviewer something concrete to check against.
 
+When the topic is approved and the team needs a writer-ready handoff, use the [AI content brief and source pack template](/insights/ai-content-brief-source-pack-template) to record the strategy, claim-level evidence, expert input, permissions, owners, and acceptance checks before drafting starts.
+
 | Source pack item | What it should include |
 | --- | --- |
 | Audience | The reader, business type, decision stage, and prior knowledge |
