@@ -9,6 +9,37 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-workflow-change-management-regression-testing-guide",
+    "title": "Controlling Changes to a Live AI Workflow",
+    "description": "Control changes to a live AI workflow with a known-good baseline, targeted regression testing, release approval, staged rollout and a practical rollback plan.",
+    "intro": "A model, prompt or connector change can alter an entire production workflow. Treat the candidate as a controlled release so you can prove what changed, limit its reach and restore the known-good version when results move outside agreed bounds.",
+    "date": "2026-10-13",
+    "displayDate": "October 13, 2026",
+    "readTime": "14 min read",
+    "tags": [
+      "AI",
+      "Workflow Automation",
+      "Change Management",
+      "Regression Testing",
+      "AI Reliability",
+      "Version Control",
+      "Rollback Planning",
+      "Human Oversight"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Small Business"
+    ],
+    "cluster": "AI Workflow Automation and Internal Systems",
+    "relatedPosts": [
+      "ai-workflow-pre-launch-testing-guide",
+      "measure-ai-workflow-automation-roi-reliability",
+      "ai-workflow-automation-failure-diagnostic-guide"
+    ],
+    "imageAlt": "Controlling Changes to a Live AI Workflow",
+    "url": "/insights/ai-workflow-change-management-regression-testing-guide"
+  },
+  {
     "slug": "ai-content-brief-source-pack-template",
     "title": "Build an AI Content Brief and Source Pack",
     "description": "A copyable AI content brief and source pack for giving writers reliable strategy, evidence, expert input, privacy boundaries, ownership, and review checks before drafting.",
