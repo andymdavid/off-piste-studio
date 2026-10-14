@@ -9,6 +9,37 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "track-ai-assistant-traffic-ga4-guide",
+    "title": "Measure Identifiable AI Assistant Traffic in GA4",
+    "description": "Use GA4’s AI Assistant channel to validate identifiable referrals, landing pages and key events while keeping attribution claims within the evidence.",
+    "intro": "AI Assistant traffic in GA4 can show whether identifiable external assistant visits reach useful pages and complete meaningful actions. A sound review checks the native channel, source details, landing pages and key events while keeping unknown traffic and commercial attribution in their proper place.",
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "GA4",
+      "AI Assistant Traffic",
+      "AI Referrals",
+      "ChatGPT Traffic",
+      "Perplexity Traffic",
+      "Traffic Acquisition",
+      "Key Events",
+      "Attribution"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "how-to-measure-ai-search-visibility",
+      "google-search-console-generative-ai-report-guide",
+      "ai-visibility-tools-evaluation-guide"
+    ],
+    "imageAlt": "Measure Identifiable AI Assistant Traffic in GA4",
+    "url": "/insights/track-ai-assistant-traffic-ga4-guide"
+  },
+  {
     "slug": "ai-workflow-change-management-regression-testing-guide",
     "title": "Controlling Changes to a Live AI Workflow",
     "description": "Control changes to a live AI workflow with a known-good baseline, targeted regression testing, release approval, staged rollout and a practical rollback plan.",
