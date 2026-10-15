@@ -626,13 +626,19 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/google-business-profile-guide</loc>
-    <lastmod>2026-10-14</lastmod>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/google-business-profile-not-showing-diagnostic-guide</loc>
     <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://offpistestudio.com/insights/google-business-profile-service-area-business-guide</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

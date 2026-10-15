@@ -5,7 +5,7 @@ description: A practical, evidence-led guide to Google Business Profile eligibil
 intro: A useful Google Business Profile makes your business easier to understand and easier to choose. This guide shows local businesses what to fix first, what Google documents, and how to measure the profile through customer actions.
 author: Lara
 date: 2026-03-16
-updatedDate: 2026-08-25
+updatedDate: 2026-10-15
 readTime: 13 min read
 tags: SEO, Local SEO, Google Business Profile, Local Business
 topics: SEO & Search, Small Business
@@ -19,6 +19,7 @@ Source check record, 9 August 2026 AWST:
 - Checked Google Maps fake engagement policy, ACCC online review guidance, and Google Search Central structured-data guidance.
 - Profile fields, verification options, policies, and performance metrics can change. Recheck the linked primary sources before a future material refresh.
 - Added the reciprocal review-workflow link on 25 August 2026 AWST after rechecking the linked Google review and ACCC policy sources.
+- Added the service-area configuration guide link on 15 October 2026 AWST after rechecking Google's service-area and business representation guidance.
 -->
 ## A useful profile works within local search
 
@@ -59,6 +60,8 @@ A storefront serves customers at its business address during stated hours. A ser
 If customers don't visit your address, Google's [service-area guidance](https://support.google.com/business/answer/9157481) says to remove the address from public display and configure service areas instead. A hybrid business can show its staffed customer-facing address and define the areas it serves. A location shouldn't be presented as a storefront merely to gain a map point.
 
 The [service-area rules](https://support.google.com/business/answer/9157481) allow up to 20 service areas and advise that the overall boundary should generally remain within about two hours' driving time from the business base. Service areas help customers understand coverage, but adding distant suburbs doesn't overcome distance in local ranking.
+
+For the full classification, address-privacy, named-area, verification, and post-edit process, use the guide to [setting up Google Business Profile service areas](/insights/google-business-profile-service-area-business-guide).
 
 For a business with several real branches, assess each location against Google's eligibility rules before creating profiles. Each profile should correspond to a genuine operation, not an attempt to manufacture local presence.
 

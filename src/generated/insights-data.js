@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "google-business-profile-service-area-business-guide",
+    "title": "Setting Up Google Business Profile Service Areas",
+    "description": "Configure a service-area or hybrid Google Business Profile accurately, protect address privacy, and avoid false local presence.",
+    "intro": "Choose the right profile type, address setting, and named service areas for the way your business actually serves customers.",
+    "date": "2026-10-15",
+    "displayDate": "October 15, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "Google Business Profile",
+      "Local SEO",
+      "Service Area Businesses",
+      "Hybrid Businesses",
+      "Address Privacy",
+      "Local Search Governance",
+      "Australia"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Small Business"
+    ],
+    "cluster": "Local Search and Google Business Profile",
+    "relatedPosts": [
+      "google-business-profile-guide",
+      "google-business-profile-not-showing-diagnostic-guide",
+      "measure-google-business-profile-performance-qualified-leads"
+    ],
+    "imageAlt": "Setting Up Google Business Profile Service Areas",
+    "url": "/insights/google-business-profile-service-area-business-guide"
+  },
+  {
     "slug": "track-ai-assistant-traffic-ga4-guide",
     "title": "Measure Identifiable AI Assistant Traffic in GA4",
     "description": "Use GA4’s AI Assistant channel to validate identifiable referrals, landing pages and key events while keeping attribution claims within the evidence.",
@@ -2644,8 +2674,8 @@ export const INSIGHT_POSTS = [
     "intro": "A useful Google Business Profile makes your business easier to understand and easier to choose. This guide shows local businesses what to fix first, what Google documents, and how to measure the profile through customer actions.",
     "date": "2026-03-16",
     "displayDate": "March 16, 2026",
-    "updatedDate": "2026-08-25",
-    "displayUpdatedDate": "August 25, 2026",
+    "updatedDate": "2026-10-15",
+    "displayUpdatedDate": "October 15, 2026",
     "readTime": "13 min read",
     "tags": [
       "SEO",
