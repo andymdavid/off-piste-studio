@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "franchise-multi-location-entity-governance-guide",
+    "title": "Search Governance for Franchise and Multi-Location Networks",
+    "description": "Design clear ownership, access, data, page, profile, and change-control rules for a franchise or multi-location search presence.",
+    "intro": "A franchise or multi-location network needs clear control of the facts behind its listings. This guide helps central and local teams assign decision rights, maintain one governed record per location and coordinate changes across every public surface.",
+    "date": "2026-10-16",
+    "displayDate": "October 16, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "Franchise SEO",
+      "Multi-location SEO",
+      "Entity Governance",
+      "Google Business Profile",
+      "Location Pages",
+      "Content Governance",
+      "Brand Consistency"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "parent-company-subsidiary-brand-entity-search-guide",
+      "local-business-schema-locations-service-areas-guide",
+      "entity-trust-monitoring-search-ai-framework"
+    ],
+    "imageAlt": "Search Governance for Franchise and Multi-Location Networks",
+    "url": "/insights/franchise-multi-location-entity-governance-guide"
+  },
+  {
     "slug": "google-business-profile-service-area-business-guide",
     "title": "Setting Up Google Business Profile Service Areas",
     "description": "Configure a service-area or hybrid Google Business Profile accurately, protect address privacy, and avoid false local presence.",
