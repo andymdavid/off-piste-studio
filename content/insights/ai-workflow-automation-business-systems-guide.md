@@ -131,7 +131,7 @@ Use a simple trust-gate model.
 | Content | organise research and draft from named sources | check sources, claims, examples, and final wording |
 | Support | classify urgency and suggest next action | approve refunds, complaints, escalations, and sensitive replies |
 
-Logs are part of the gate. Record the source, prompt or instruction, output, reviewer, changes, approval, sent message, and system update. That gives the team a way to inspect the workflow when something works and when something goes wrong.
+Logs are part of the gate. Record the source, prompt or instruction, output, reviewer, changes, approval, sent message, and system update. The guide to [building an AI workflow audit trail](/insights/ai-workflow-observability-audit-log-guide) shows how to connect those events across one live transaction without retaining sensitive content by default.
 
 ## A practical workflow example: website enquiry to follow-up
 

@@ -9,6 +9,37 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-workflow-observability-audit-log-guide",
+    "title": "Build an Audit Trail for Every Live AI Workflow",
+    "description": "Build a practical AI workflow audit trail with correlation IDs, version records, tool and approval events, privacy controls, alerts and retention rules.",
+    "intro": "AI workflow observability is the run-level evidence that shows what happened across one business transaction. A useful audit trail connects each step without collecting more sensitive content than the team can justify.",
+    "date": "2026-10-18",
+    "displayDate": "October 18, 2026",
+    "readTime": "13 min read",
+    "tags": [
+      "AI",
+      "Workflow Automation",
+      "AI Observability",
+      "Audit Logs",
+      "AI Tracing",
+      "Production Monitoring",
+      "Internal Systems",
+      "AI Governance"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Websites & UX"
+    ],
+    "cluster": "AI Workflow Automation and Internal Systems",
+    "relatedPosts": [
+      "ai-workflow-pre-launch-testing-guide",
+      "ai-workflow-automation-failure-diagnostic-guide",
+      "ai-workflow-change-management-regression-testing-guide"
+    ],
+    "imageAlt": "Build an Audit Trail for Every Live AI Workflow",
+    "url": "/insights/ai-workflow-observability-audit-log-guide"
+  },
+  {
     "slug": "franchise-multi-location-entity-governance-guide",
     "title": "Search Governance for Franchise and Multi-Location Networks",
     "description": "Design clear ownership, access, data, page, profile, and change-control rules for a franchise or multi-location search presence.",

@@ -118,7 +118,7 @@ The approver should verify the decision record rather than rely on a polished de
 - Assign the risk tier and any specialist review.
 - Test normal cases, edge cases, known failures, and fallback.
 - Specify the human decision, review coverage, and disclosure.
-- Set monitoring thresholds, incident route, pause authority, and review date.
+- Set monitoring thresholds, incident route, pause authority, and review date. Then implement those controls through a [run-level AI workflow audit trail](/insights/ai-workflow-observability-audit-log-guide) with explicit access and retention rules.
 
 Approval covers a specific configuration and context. After launch, [measure AI workflow ROI and reliability](/insights/measure-ai-workflow-automation-roi-reliability) with verified outcomes, exception logs, review effort, and scale, fix, or stop criteria.
 
