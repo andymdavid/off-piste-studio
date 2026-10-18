@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "accessible-ai-chatbot-website-testing-guide",
+    "title": "Testing an Accessible AI Chatbot Before Launch",
+    "description": "Turn chatbot accessibility standards into practical keyboard, screen-reader, zoom, mobile, recovery and fallback tests before launch.",
+    "intro": "An accessible AI chatbot has to work as a complete conversation. Test the launcher, dialogue, changing messages, input, recovery and alternate route before anyone depends on it.",
+    "date": "2026-10-18",
+    "displayDate": "October 18, 2026",
+    "readTime": "12 min read",
+    "tags": [
+      "AI",
+      "Website Accessibility",
+      "Chatbots",
+      "WCAG",
+      "Accessibility Testing",
+      "Customer Experience"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Websites & UX"
+    ],
+    "cluster": "AI-Enabled Websites and Lead Journeys",
+    "relatedPosts": [
+      "ai-chatbot-vs-guided-form-live-chat-website",
+      "ai-workflow-pre-launch-testing-guide",
+      "website-accessibility-and-seo"
+    ],
+    "imageAlt": "Testing an Accessible AI Chatbot Before Launch",
+    "url": "/insights/accessible-ai-chatbot-website-testing-guide"
+  },
+  {
     "slug": "ai-workflow-observability-audit-log-guide",
     "title": "Build an Audit Trail for Every Live AI Workflow",
     "description": "Build a practical AI workflow audit trail with correlation IDs, version records, tool and approval events, privacy controls, alerts and retention rules.",
@@ -1813,6 +1842,8 @@ export const INSIGHT_POSTS = [
     "intro": "The best website enquiry route is the least complex option that can handle the visitor's job, recover from failure and produce useful outcomes for the business.",
     "date": "2026-08-11",
     "displayDate": "August 11, 2026",
+    "updatedDate": "2026-10-18",
+    "displayUpdatedDate": "October 18, 2026",
     "readTime": "13 min read",
     "tags": [
       "AI",
@@ -2909,8 +2940,8 @@ export const INSIGHT_POSTS = [
     "intro": "Accessibility and search performance share more common ground than most teams realise. The structural improvements that help assistive technology navigate a website are the same ones that help search engines understand and index it. Investing in one tends to improve the other.",
     "date": "2026-03-02",
     "displayDate": "March 2, 2026",
-    "updatedDate": "2026-07-19",
-    "displayUpdatedDate": "July 19, 2026",
+    "updatedDate": "2026-10-18",
+    "displayUpdatedDate": "October 18, 2026",
     "readTime": "10 min read",
     "tags": [
       "SEO",

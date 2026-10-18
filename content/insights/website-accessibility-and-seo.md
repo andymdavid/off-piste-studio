@@ -4,7 +4,7 @@ slug: website-accessibility-and-seo
 description: Why accessibility improvements and SEO gains overlap, how structural and content changes serve both, and where to focus for the biggest commercial impact.
 intro: Accessibility and search performance share more common ground than most teams realise. The structural improvements that help assistive technology navigate a website are the same ones that help search engines understand and index it. Investing in one tends to improve the other.
 date: 2026-03-02
-updatedDate: 2026-07-19
+updatedDate: 2026-10-18
 readTime: 10 min read
 tags: SEO, User Experience, Website Design
 topics: Websites & UX, SEO & Search
@@ -47,6 +47,8 @@ Images without alt text are invisible to screen readers and largely invisible to
 ### Form labels
 
 Forms without proper labels are difficult for assistive technology users to complete. They are also harder for search engines to understand. Clear, associated labels improve the usability of contact forms, search fields, and any interactive element that asks for user input.
+
+Dynamic interfaces need tests beyond labels. If a website uses AI chat, the component guide shows how to [test the chatbot's keyboard, screen-reader, zoom and recovery behaviour](/insights/accessible-ai-chatbot-website-testing-guide) across a complete conversation.
 
 ### Readable copy
 

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Turn chatbot accessibility standards into practical keyboard, screen-reader, zoom, mobile, recovery and fallback tests before launch.">
+  <title>Testing an Accessible AI Chatbot Before Launch | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/accessible-ai-chatbot-website-testing-guide">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Testing an Accessible AI Chatbot Before Launch",
+        "description": "Turn chatbot accessibility standards into practical keyboard, screen-reader, zoom, mobile, recovery and fallback tests before launch.",
+        "datePublished": "2026-10-18",
+        "dateModified": "2026-10-18",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/accessible-ai-chatbot-website-testing-guide"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Testing an Accessible AI Chatbot Before Launch", "item": "https://offpistestudio.com/insights/accessible-ai-chatbot-website-testing-guide" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="accessible-ai-chatbot-website-testing-guide">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>AI &amp; Automation</span><span>Websites &amp; UX</span></div><p class="insight-article__read-time">12 min read</p></div>
+          <h1 class="insight-article__title">Testing an Accessible AI Chatbot Before Launch</h1>
+          <p class="insight-article__intro">An accessible AI chatbot has to work as a complete conversation. Test the launcher, dialogue, changing messages, input, recovery and alternate route before anyone depends on it.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">October 18, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/accessible-ai-chatbot-website-testing-guide" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/accessible-ai-chatbot-website-testing-guide&text=Testing%20an%20Accessible%20AI%20Chatbot%20Before%20Launch" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/accessible-ai-chatbot-website-testing-guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <!--
+Source check record, accessed 18 October 2026 in Australia/Perth:
+- WCAG 2.2 remains the current W3C Recommendation. Its success criteria are testable statements, while supporting Understanding documents and techniques are informative.
+- W3C Understanding Success Criterion 4.1.3 remains live and explains how status messages can be programmatically determined without receiving focus.
+- The WAI-ARIA Authoring Practices modal dialogue pattern remains live. It is informative implementation guidance rather than a WCAG conformance requirement.
+- The Australian Human Rights Commission's Digital accessibility guidelines for disability 2025 remain live and identify WCAG 2.2 as the relevant international technical standard.
+- OAIC guidance on commercially available AI products remains live. It was published 21 October 2024 and updated 17 January 2025.
+- Australian Government Guidance for AI Adoption: Implementation Guidance dated May 2026 remains available. It connects transparency, accessibility and meaningful human control.
+- No vendor behaviour or first-party performance result is claimed. This guide covers text chat, not voice input or spoken output.
+-->
+<h2 class="insight-article__section-title">Accessibility has to cover the whole conversation</h2>
+<p>The chatbot looks ready in a desktop demo. Its launcher has a label and an automated scan reports no obvious error. Then a keyboard user opens it and loses their place. A screen reader misses the reply. At 400 per cent zoom, the message field sits behind the on-screen keyboard. A timeout clears the person&#39;s work before they can finish.</p>
+<p>Those failures sit inside the conversation, not only in the widget&#39;s static markup. The test boundary has to run from the launcher through opening, reading, typing, waiting, correcting, escalating and closing. It also includes the host page and the alternate route offered when chat cannot serve the person.</p>
+<p>This guide assumes you&#39;ve already selected a text chatbot. If you&#39;re still deciding, start by <a href="/insights/ai-chatbot-vs-guided-form-live-chat-website">choosing between a chatbot, guided form and live chat</a>. The wider page structure, content and forms still need <a href="/insights/website-accessibility-and-seo">strong website accessibility foundations</a>. Here, we&#39;re testing the conversational component and its immediate joins.</p>
+<p><a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2</a> defines testable success criteria for accessible web content across desktop and mobile devices. It also makes clear that conformance does not address every user need. The <a href="https://humanrights.gov.au/resource-hub/by-resource-type/guidelines-and-standards/guides-and-standards-disability-rights/guidelines-equal-access-digital-goods-and-services">Australian Human Rights Commission&#39;s digital accessibility guidelines</a> identify WCAG 2.2 as the relevant international technical standard for assessing digital access in Australia. An organisation should assess its own obligations and seek advice suited to its circumstances.</p>
+<h2 class="insight-article__section-title">Turn standards into observable requirements</h2>
+<p>A delivery team cannot release against “make the chatbot accessible”. It needs requirements that name a trigger, an expected behaviour, the evidence to collect and the consequence of failure.</p>
+<p>WCAG success criteria are normative requirements within the standard. W3C Understanding documents, techniques and the WAI-ARIA Authoring Practices Guide explain possible ways to meet accessibility needs, but they are informative. Your widget configuration and code are implementation choices. Keyboard runs, screen-reader output, screenshots and user observations are test evidence.</p>
+<p>Keep those layers separate. A requirement might say that activating the chat launcher by keyboard moves focus to a meaningful location inside the dialogue. The implementation might use a native button and a modal dialogue pattern. The evidence might be a recorded keyboard run in named browser and assistive-technology combinations. A single result or checklist doesn&#39;t prove WCAG conformance.</p>
+<p>Translate the relevant <a href="https://www.w3.org/TR/WCAG22/">WCAG 2.2 requirements</a> into observable outcomes for keyboard operation, focus order and visibility, names and labels, error identification, adjustable timing, text resize, reflow and status messages. Add product requirements where the standard does not prescribe the experience, such as retaining a draft when the connection fails.</p>
+<h2 class="insight-article__section-title">Make opening and closing predictable</h2>
+<p>Start with the launcher. Its accessible name should explain its purpose, and its visible label should agree with that name. A person must be able to reach and activate it using a keyboard without triggering an unexpected change.</p>
+<p>Many chat widgets open as modal dialogues. The informative <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/">WAI-ARIA modal dialogue pattern</a> says a modal needs dialogue semantics and an accessible name. Focus moves into it when it opens, <code>Tab</code> and <code>Shift+Tab</code> remain within its operable controls, and <code>Escape</code> generally closes it. When it closes, focus usually returns to the control that opened it or another logical location.</p>
+<p>Test the behaviour rather than accepting the presence of ARIA attributes as proof. Open the chat with <code>Enter</code> and <code>Space</code>. Confirm that focus lands on the dialogue heading, introductory content or first suitable control according to the content. Move forward and backward through every interactive element. Check that focus remains visible and is not hidden behind the widget edge or a sticky element. Confirm that background content is not presented as operable when the chat is modal.</p>
+<p>Then close the chat with its visible control and any documented keyboard command. Focus should return to the launcher unless the launcher&#39;s removal or the completed task makes another destination more logical. Reopen it and check whether the promised conversation state remains available.</p>
+<p>A worked acceptance case can stay simple. Given focus is on the closed launcher, when the user presses <code>Enter</code>, the named chat dialogue opens and focus moves inside it. When the user closes the dialogue, focus returns to the launcher. Failure blocks release because the person can lose their place or become trapped.</p>
+<h2 class="insight-article__section-title">Keep conversation updates perceivable and focus stable</h2>
+<p>A conversation changes while the person reads or types. Sent-message confirmation, processing states, new replies, validation errors, connection failures and completion all need to be perceivable. Moving focus to every update would interrupt reading and make typing unstable.</p>
+<p>The W3C explanation of <a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html">Status Messages under WCAG 2.2</a> covers changes that assistive technology should detect without receiving focus. It includes results, waiting states, errors and progress information. For a chatbot, that means the implementation needs programmatically determinable status behaviour for important updates while leaving the person&#39;s working position intact.</p>
+<p>Send one short message with a screen reader running. Confirm the interface indicates that it was sent. Listen for a processing state if that state matters. Confirm the reply is announced once, in a useful order, without reading the entire transcript again. Keep focus in the input unless the interaction genuinely requires a move.</p>
+<p>Repeat the test with a long reply, rapid consecutive replies and an error. Look for silence, duplicate announcements and excessive verbosity. A live region that announces every token can make a streamed answer unusable. The product team needs to decide when a response is stable enough to announce and how someone can navigate back through earlier messages.</p>
+<h2 class="insight-article__section-title">Protect reading input and recovery</h2>
+<p>People need to read the conversation and keep control of what they&#39;ve entered. Test text resizing and reflow at 200 and 400 per cent zoom where the relevant WCAG criteria apply. At narrow widths, the launcher, close control, transcript, input and send control should remain available without two-dimensional scrolling for ordinary text content.</p>
+<p>Run the same task on a small mobile viewport with the on-screen keyboard open. Check that the current message, input, error and send control stay visible or can be reached without fighting the page. Rotate the device where the experience supports both orientations. Increase text spacing and confirm that labels and controls don&#39;t overlap or disappear.</p>
+<p>Errors need a clear identification and a recovery path. Submit an empty message, exceed any disclosed input limit and simulate a network failure. The interface should explain what happened in text, associate the message with the affected input where appropriate and preserve the person&#39;s draft whenever it can. Correction should not require starting the whole conversation again.</p>
+<p>Timing needs an equally deliberate test. If inactivity will end the session or remove information, warn the person and offer enough control to extend it where required. Test what happens when the warning receives no response, when the extension is activated by keyboard and when the connection returns after interruption. A transcript or recovery option must not expose another person&#39;s conversation on a shared device.</p>
+<h2 class="insight-article__section-title">Keep disclosure privacy and human help accessible</h2>
+<p>People should be able to perceive that they&#39;re interacting with AI before relying on its answer or deciding what to disclose. The identification, privacy information and alternate route must work with the same keyboard, focus, zoom and screen-reader conditions as the conversation.</p>
+<p>The <a href="https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products">OAIC guidance on commercially available AI products</a> says public-facing AI tools such as chatbots should be clearly identified. It also recommends due diligence, privacy impact assessment, clear privacy information, testing, monitoring and human oversight when personal information is involved. Coverage depends on the organisation, activity and information handled, so obtain privacy advice for your circumstances.</p>
+<p>Check that a person can find the privacy explanation before entering personal information. Explain whether a transcript is stored, why it&#39;s used, who may receive it and how long it&#39;s kept in language that fits the actual practice. Test transcript download or deletion controls if the product offers them. Keep accessibility evidence lean so testing doesn&#39;t create a new store of personal conversation content.</p>
+<p>The Australian Government&#39;s <a href="https://www.ai.gov.au/sites/default/files/2026-05/Guidance-for-AI-adoption-implementation-guidance_0_0.pdf">Guidance for AI Adoption implementation guidance</a> asks organisations to tailor transparency to diverse audiences, including people with accessibility needs, and to preserve meaningful human control. In practice, the non-chat route must be findable and operable by the people most likely to need it.</p>
+<p>Trigger the fallback from a normal reply, an error and an unsupported request. Confirm the person can reach it without a pointer, understand whether they will contact a person or leave a message, and carry forward only the context they have agreed to share. The specialist guide covers <a href="/insights/ai-customer-experience-human-handoff-guide">designing the human handoff itself</a>. This test checks whether people can perceive and operate that route.</p>
+<h2 class="insight-article__section-title">Run the tests as real conversations</h2>
+<p>Automated scanning can detect some markup, name, contrast and structural problems. It cannot prove that focus returns logically, that a reply is announced once, that the on-screen keyboard leaves the input usable or that a failed conversation has a workable alternate route. W3C describes accessibility evaluation as a combination of automated testing and human evaluation.</p>
+<p>Choose representative tasks from real intended use. Run each from a defined starting state with keyboard-only interaction, supported screen readers and browsers, zoom or reflow, narrow mobile layouts, timing changes, errors, correction, transcript handling and fallback. Include people with relevant access needs where feasible. Their experience can reveal barriers that a standards-based test case misses.</p>
+<p>Use the same evidence discipline as <a href="/insights/ai-workflow-pre-launch-testing-guide">the wider pre-launch test and release method</a>. Record the actual result, not just pass or fail. Screenshots can show layout. A short recording can show focus order. A screen-reader log can capture announcements. A tester&#39;s observation can explain why technically present information was still hard to use.</p>
+<aside class="insight-module insight-module--practice" aria-label="Record evidence before the chatbot is released"><header><p class="insight-module__label">In practice</p><h3>Record evidence before the chatbot is released</h3></header><div class="insight-module__body"><p class="insight-module__intro">Each representative conversation should leave enough evidence for a clear release decision.</p><ul class="insight-module__list"><li>Name the user task, device, browser, assistive technology and starting state</li><li>Record the expected behaviour and what actually happened</li><li>Capture keyboard, screen-reader, zoom, mobile, timing, error and fallback results</li><li>Assign each failure an owner, severity and retest date</li><li>Release only when blockers are fixed or an accessible alternate route is verified</li></ul></div></aside>
+<h2 class="insight-article__section-title">Use failures to define the next piece of work</h2>
+<p>Sort each failure by the part of the experience that owns the fix. Vendor configuration may control dialogue semantics, status announcements or timeouts. The host page may obscure focus or break reflow. Conversation content may use unclear prompts and errors. The fallback may fail because the form, phone route or human queue is inaccessible.</p>
+<p>That ownership matters more than a vague accessibility score. Block release when a person cannot start, complete, correct or leave the interaction and no verified accessible route exists. Fix and retest bounded defects when the expected behaviour is clear. Record any accepted limitation with its owner, user impact, alternate route and review date.</p>
+<p>If the chatbot is already live, use the broader method for <a href="/insights/ai-customer-experience-audit-guide">auditing the live AI customer experience</a> to examine production journeys and ongoing controls. When failures cross the widget, host page, content and lead journey, isolated configuration changes won&#39;t be enough. The next piece of work is <a href="/services/website-design">website design that fixes the whole interaction</a>, supported by the test evidence and a named release decision.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/ai-chatbot-vs-guided-form-live-chat-website" class="insight-card__link" aria-label="Read Choosing Between Website Chatbots, Guided Forms and Live Chat">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI &amp; Automation</span><span>Websites &amp; UX</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Choosing Between Website Chatbots, Guided Forms and Live Chat</h3>
+        <p class="insight-card__description">Compare static forms, guided forms, AI chatbots, live chat and hybrid website enquiry routes using customer needs, operating constraints and qualified outcomes.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/ai-workflow-pre-launch-testing-guide" class="insight-card__link" aria-label="Read How to Test an AI Workflow Before Launch">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>13 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI &amp; Automation</span><span>Growth &amp; Leads</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">How to Test an AI Workflow Before Launch</h3>
+        <p class="insight-card__description">Build acceptance criteria, representative test cases and a controlled release plan for an AI workflow across tools, handoffs, permissions and recovery.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/website-accessibility-and-seo" class="insight-card__link" aria-label="Read Website Accessibility and SEO">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>10 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>Websites &amp; UX</span><span>SEO &amp; Search</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Website Accessibility and SEO</h3>
+        <p class="insight-card__description">Why accessibility improvements and SEO gains overlap, how structural and content changes serve both, and where to focus for the biggest commercial impact.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

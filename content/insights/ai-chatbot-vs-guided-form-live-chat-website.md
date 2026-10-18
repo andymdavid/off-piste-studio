@@ -5,6 +5,7 @@ description: Compare static forms, guided forms, AI chatbots, live chat and hybr
 intro: The best website enquiry route is the least complex option that can handle the visitor's job, recover from failure and produce useful outcomes for the business.
 author: Lara
 date: 2026-08-11
+updatedDate: 2026-10-18
 readTime: 13 min read
 tags: AI, Website Design, Lead Capture, Guided Forms, Live Chat, Customer Experience
 topics: AI & Automation, Websites & UX
@@ -100,6 +101,8 @@ Start with question predictability. Stable questions point towards a static form
 Then test the operating conditions. High data sensitivity, severe consequences of error or weak failure recovery increase the burden of a dynamic or AI route. Limited knowledge ownership makes an answer-capable chatbot fragile. Limited staffing weakens live chat promises. A polished demo can't make an unmaintainable route simple.
 
 Accessibility effort also changes with interaction complexity. A form needs good labels, instructions, validation and confirmation. A guided form adds progress and branching behaviour. Live and AI chat add message announcements, changing states, timeouts, history, focus, recovery and alternative routes. Evaluate the complete journey with people using keyboards, screen readers, zoom and mobile devices.
+
+Once a chatbot has been selected, use the specialist guide to [test the complete accessible conversation before launch](/insights/accessible-ai-chatbot-website-testing-guide), from its launcher and changing messages to recovery and the alternate route.
 
 The best choice may be a short form now and a more capable route later. Choosing less technology can be a deliberate commercial decision when it protects completion, clarity and maintainability.
 
