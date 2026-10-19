@@ -147,6 +147,8 @@ Turn each selected type into a brief that names the page or template, the visibl
 
 The brief should also state the expected benefit in bounded terms. That might be an accurate organisation identity, eligibility for a documented feature, consistent authorship data or a clearer connection between an offer and its provider. Avoid success criteria based on guaranteed ranking, rich-result or AI citation gains.
 
+Define the baseline, affected pages and commercial outcome before commissioning the backlog. The guide to [measuring schema after launch](/insights/measure-schema-markup-impact-search-console) turns those criteria into a maintain, expand, repair or stop decision.
+
 If markup is already deployed and tools disagree, move the problem into [the practical structured data audit](/insights/structured-data-schema-audit-guide). That workflow follows visible facts through CMS data, rendered output and Google-facing evidence. It also separates syntax, feature eligibility, indexing and display so a backlog decision does not turn into an improvised diagnosis.
 
 Review the backlog when a template, plugin, CMS model, business location or source of truth changes. Recheck volatile Google support before funding deferred types. Once markup is live, use the [schema markup maintenance guide](/insights/schema-markup-change-management-guide) to monitor releases, classify changes and decide whether to retain, revise, remove or monitor it. A short, owned implementation that stays true is more valuable than a large graph nobody can explain six months later.

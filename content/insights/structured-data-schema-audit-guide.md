@@ -142,6 +142,8 @@ Run the relevant live tests and keep the output with the issue record. Use URL I
 
 Keep three statuses separate in reporting. The deployed page can be fixed. Google can recrawl and index the new version later. Google can then decide whether and how to display an eligible result. A passed live test proves neither the indexed state nor future presentation.
 
+Once those states are healthy, use the [schema impact measurement framework](/insights/measure-schema-markup-impact-search-console) to compare search response and qualified outcomes. The audit establishes correctness. The measurement review decides whether the investment should be maintained, expanded, repaired or stopped.
+
 This boundary also matters for AI search. Google's current [AI features guidance](https://developers.google.com/search/docs/appearance/ai-features) says there is no special Schema.org markup required for AI Overviews or AI Mode. Normal Search technical requirements still apply, and structured data should match visible text. An accurate graph can improve clarity and governance, but don't report it as a guarantee of rankings, Knowledge Panels, AI citations or recommendations.
 
 ## Turn the audit into a governed repair plan

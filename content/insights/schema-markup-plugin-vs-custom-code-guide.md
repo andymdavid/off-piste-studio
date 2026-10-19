@@ -141,6 +141,8 @@ The two validation checks serve different purposes. The [Schema.org Markup Valid
 
 Ask the implementer to show evidence from normal, optional and edge-case records. A valid ideal page doesn't demonstrate correct handling of a missing field, an updated article or a relationship reused across templates.
 
+The brief should also assign who will [measure the schema implementation after launch](/insights/measure-schema-markup-impact-search-console). Technical acceptance establishes healthy output. A separate baseline and outcome review establishes whether the investment produced useful search and commercial evidence.
+
 ## The route must remain workable after launch
 
 Implementation cost continues after the first valid page. Plugins update. CMS fields change. Search features and guidance evolve. Developers refactor templates. Content owners alter the facts feeding the output.

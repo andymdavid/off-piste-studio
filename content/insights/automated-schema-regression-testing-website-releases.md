@@ -140,6 +140,8 @@ Use indexed-state inspection as a later sample with realistic quota and timing e
 
 Feed recurring production or indexed differences into the [schema change-management workflow](/insights/schema-markup-change-management-guide). Platform requirements, CMS models and rendering strategies evolve. Their approved assertions and accepted warnings need named maintenance triggers too.
 
+When the output remains healthy, move from release assurance to the [schema impact measurement framework](/insights/measure-schema-markup-impact-search-console). Regression tests show that the approved implementation survived. They don't establish search response, lead quality or commercial value.
+
 ## A useful schema test suite protects decisions
 
 Start with one commercially important template. Approve its facts and graph contract, choose fixtures that represent genuine content states, automate the deterministic assertions and add a rendered-route check. Decide who can block, review or accept each failure before the first red build arrives.

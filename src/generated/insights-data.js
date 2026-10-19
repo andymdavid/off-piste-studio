@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "measure-schema-markup-impact-search-console",
+    "title": "How to Measure Whether Schema Markup Is Working",
+    "description": "A practical framework for measuring schema markup through technical health, search performance and qualified business outcomes.",
+    "intro": "Valid schema is only the starting point. Measure what changed in search, on the website and in qualified enquiries before deciding whether the investment is working.",
+    "date": "2026-10-19",
+    "displayDate": "October 19, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Schema Markup",
+      "Structured Data",
+      "Google Search Console",
+      "Rich Results",
+      "SEO Measurement",
+      "Schema ROI",
+      "Technical SEO"
+    ],
+    "topics": [
+      "SEO & Search",
+      "AI & Automation"
+    ],
+    "cluster": "Structured Content and Schema",
+    "relatedPosts": [
+      "structured-data-schema-audit-guide",
+      "schema-markup-priorities-service-business",
+      "schema-markup-plugin-vs-custom-code-guide"
+    ],
+    "imageAlt": "How to Measure Whether Schema Markup Is Working",
+    "url": "/insights/measure-schema-markup-impact-search-console"
+  },
+  {
     "slug": "accessible-ai-chatbot-website-testing-guide",
     "title": "Testing an Accessible AI Chatbot Before Launch",
     "description": "Turn chatbot accessibility standards into practical keyboard, screen-reader, zoom, mobile, recovery and fallback tests before launch.",
