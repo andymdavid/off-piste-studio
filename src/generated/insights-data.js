@@ -2918,8 +2918,8 @@ export const INSIGHT_POSTS = [
     "intro": "Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?",
     "date": "2026-03-06",
     "displayDate": "March 6, 2026",
-    "updatedDate": "2026-10-10",
-    "displayUpdatedDate": "October 10, 2026",
+    "updatedDate": "2026-10-21",
+    "displayUpdatedDate": "October 21, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
@@ -2936,7 +2936,7 @@ export const INSIGHT_POSTS = [
     ],
     "cluster": "AI Search Visibility",
     "relatedPosts": [
-      "how-to-measure-ai-search-visibility",
+      "google-search-console-generative-ai-report-guide",
       "google-ai-overviews-not-citing-website-diagnostic",
       "google-ai-mode-query-fan-out-content-planning"
     ],
