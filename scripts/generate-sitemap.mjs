@@ -1,4 +1,4 @@
-import { readdirSync, statSync, writeFileSync, existsSync } from 'fs';
+import { readdirSync, readFileSync, statSync, writeFileSync, existsSync } from 'fs';
 import { resolve, basename } from 'path';
 
 const rootDir = resolve('.');
@@ -10,6 +10,14 @@ const BASE_URL = 'https://offpistestudio.com';
 
 function getLastmod(filePath) {
   try {
+    if (filePath.endsWith('.md')) {
+      const content = readFileSync(filePath, 'utf8');
+      const frontmatter = content.match(/^---\s*\n([\s\S]*?)\n---/m)?.[1] ?? '';
+      const updatedDate = frontmatter.match(/^updatedDate:\s*(\d{4}-\d{2}-\d{2})\s*$/m)?.[1];
+      const publishedDate = frontmatter.match(/^date:\s*(\d{4}-\d{2}-\d{2})\s*$/m)?.[1];
+      if (updatedDate || publishedDate) return updatedDate || publishedDate;
+    }
+
     const stat = statSync(filePath);
     return stat.mtime.toISOString().split('T')[0];
   } catch {

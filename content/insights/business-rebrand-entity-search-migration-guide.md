@@ -43,6 +43,8 @@ Consistency helps recognition, but it doesn't guarantee rankings, review retenti
 
 If the business hasn't planned a change and you are trying to diagnose inaccurate representation, start with [how search and AI systems understand the business](/insights/how-ai-search-understands-your-business). This guide begins when a change is approved or close enough to approval that the migration can be governed.
 
+If the new name is still a shortlist rather than an approved decision, first [check the business name across registers, trade marks, domains and search results](/insights/business-name-search-entity-due-diligence-guide). Migration planning shouldn't turn an unresolved candidate into the assumed identity.
+
 ## Define what is actually changing
 
 Start by naming the change precisely. A public brand can change while the registered company remains the same. A company can change its legal name while continuing to trade under an established brand. A new domain can accompany either change. An acquisition, ownership transfer, new service model, or genuinely new business raises different continuity questions again.

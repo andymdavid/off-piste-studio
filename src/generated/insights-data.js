@@ -9,6 +9,37 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "business-name-search-entity-due-diligence-guide",
+    "title": "Check a Business Name Before You Commit to It",
+    "description": "Check an Australian business or brand name across registers, trade marks, domains, social profiles and search results before you commit.",
+    "intro": "A name can pass one availability check and still create legal, commercial or search confusion. This guide helps you document the evidence before registration, design or launch.",
+    "date": "2026-10-22",
+    "displayDate": "October 22, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "Business Name Due Diligence",
+      "Brand Naming",
+      "Business Name Availability",
+      "Trade Mark Search",
+      "Domain Name",
+      "Entity Trust",
+      "Search Visibility",
+      "Business Rebrand"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "business-rebrand-entity-search-migration-guide",
+      "fix-ai-search-business-name-confusion-guide"
+    ],
+    "imageAlt": "Check a Business Name Before You Commit to It",
+    "url": "/insights/business-name-search-entity-due-diligence-guide"
+  },
+  {
     "slug": "measure-schema-markup-impact-search-console",
     "title": "How to Measure Whether Schema Markup Is Working",
     "description": "A practical framework for measuring schema markup through technical health, search performance and qualified business outcomes.",

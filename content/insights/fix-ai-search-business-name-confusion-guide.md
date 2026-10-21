@@ -125,7 +125,9 @@ Make one attributable set of corrections where practical, then record what chang
 
 ## Know when the problem has moved beyond SEO
 
-Australian business-name registration and search-platform identity resolution are different questions. ASIC can reject a proposed name it considers [identical or nearly identical to an existing registered name](https://www.asic.gov.au/for-business-and-companies/business-names/register-a-business-name/rules-for-acceptable-business-names). Registration still doesn’t establish how a search engine or AI system will separate two organisations online.
+Australian business-name registration and search-platform identity resolution are different questions. ASIC can reject a proposed name it considers [identical or nearly identical to an existing registered name](https://www.asic.gov.au/for-business-and-companies/business-names/register-a-business-name/rules-for-acceptable-business-names). Registration still doesn't establish how a search engine or AI system will separate two organisations online.
+
+Teams that haven't launched the name yet can avoid entering this repair cycle by [checking the candidate across registers, trade marks, domains and search results before committing](/insights/business-name-search-entity-due-diligence-guide). That preventative review is separate from fixing two identities that are already being conflated.
 
 Questions about trademarks, passing off, disputed rights or consumer confusion need qualified legal advice. Preserve evidence of harm and avoid making claims about the other business’s intent. An SEO diagnosis can document the records and platform behaviour. Legal rights require legal advice.
 
