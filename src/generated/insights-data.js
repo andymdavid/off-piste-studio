@@ -40,6 +40,36 @@ export const INSIGHT_POSTS = [
     "url": "/insights/business-name-search-entity-due-diligence-guide"
   },
   {
+    "slug": "fix-wrong-google-ai-overview-business-guide",
+    "title": "How to Correct a Wrong Google AI Overview",
+    "description": "Trace a false, stale or unsupported Google AI Overview claim to its source, correct the evidence you control and monitor what changes.",
+    "intro": "A wrong Google AI Overview can misstate what your business does, where it operates or whether it holds a credential. This guide helps you preserve the result, audit each claim, correct the underlying record and use Google's feedback route without promising an outcome.",
+    "date": "2026-10-22",
+    "displayDate": "October 22, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Google AI Overviews",
+      "Wrong Information",
+      "Business Representation",
+      "Citation Fidelity",
+      "Entity Trust",
+      "Google Search",
+      "Content Correction"
+    ],
+    "topics": [
+      "AI & Automation",
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility / Google Search and AI Overviews",
+    "relatedPosts": [
+      "google-sge-and-seo",
+      "google-ai-overviews-not-citing-website-diagnostic",
+      "how-ai-search-understands-your-business"
+    ],
+    "imageAlt": "How to Correct a Wrong Google AI Overview",
+    "url": "/insights/fix-wrong-google-ai-overview-business-guide"
+  },
+  {
     "slug": "measure-schema-markup-impact-search-console",
     "title": "How to Measure Whether Schema Markup Is Working",
     "description": "A practical framework for measuring schema markup through technical health, search performance and qualified business outcomes.",
@@ -2949,8 +2979,8 @@ export const INSIGHT_POSTS = [
     "intro": "Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?",
     "date": "2026-03-06",
     "displayDate": "March 6, 2026",
-    "updatedDate": "2026-10-21",
-    "displayUpdatedDate": "October 21, 2026",
+    "updatedDate": "2026-10-22",
+    "displayUpdatedDate": "October 22, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",

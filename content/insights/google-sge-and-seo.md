@@ -5,8 +5,8 @@ description: Learn what Google AI Overviews and AI Mode mean for SEO, source vis
 intro: Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?
 author: Lara
 date: 2026-03-06
-updatedDate: 2026-10-21
-checkedOn: 2026-10-21
+updatedDate: 2026-10-22
+checkedOn: 2026-10-22
 readTime: 12 min read
 tags: SEO, AI, Google Search, AI Overviews, AI Mode, Google SGE, Content Strategy
 topics: SEO & Search, AI & Automation
@@ -42,6 +42,8 @@ If a proposal still sells one of those items as a Google-specific shortcut, use 
 Important pages must be crawlable and indexable, with useful content visible on the page. Internal links should make related services and evidence easy to find. Structured data should agree with what a reader can see. Page experience and accessibility matter when a person follows a source link.
 
 Eligibility is only the starting point. It doesn't guarantee that Google will crawl, index, select or show a page. If an eligible site is absent while other sources appear, use the [AI Overview citation diagnostic](/insights/google-ai-overviews-not-citing-website-diagnostic) to separate an access problem from weak query fit or weak source value. If the structure itself is unclear, the [structured content guide](/insights/structured-content-ai-search-guide) shows how to repair headings, page roles, visible evidence and machine-readable support.
+
+If Google already shows the business but states a false, stale or unsupported fact, follow the [wrong AI Overview correction guide](/insights/fix-wrong-google-ai-overview-business-guide). It separates source repair, feedback and recrawl requests so each is used for its actual job.
 
 For a service business, a technically eligible page can enter consideration. A clear page with credible proof gives both Google and the buyer more reason to keep it there.
 
