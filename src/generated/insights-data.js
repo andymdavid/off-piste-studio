@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-client-onboarding-service-business-guide",
+    "title": "Designing AI-Assisted Client Onboarding for Service Businesses",
+    "description": "Plan AI-assisted client onboarding from approved scope to delivery readiness with clear inputs, accountable owners, accessible requests and verified completion.",
+    "intro": "A signed agreement gives onboarding a starting point. Getting ready to deliver takes accepted inputs, resolved dependencies and a person authorised to approve the next step. This guide shows where AI can assist that work and how to keep completion verifiable.",
+    "date": "2026-10-24",
+    "displayDate": "October 24, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "AI",
+      "Client Onboarding",
+      "Customer Experience",
+      "Workflow Automation",
+      "Service Businesses",
+      "Delivery Readiness"
+    ],
+    "topics": [
+      "AI & Automation",
+      "Websites & UX"
+    ],
+    "cluster": "AI and Customer Experience",
+    "relatedPosts": [
+      "ai-customer-experience-human-handoff-guide",
+      "ai-lead-qualification-website-intake-guide",
+      "measure-ai-customer-experience-outcomes-guide"
+    ],
+    "imageAlt": "Designing AI-Assisted Client Onboarding for Service Businesses",
+    "url": "/insights/ai-client-onboarding-service-business-guide"
+  },
+  {
     "slug": "business-name-search-entity-due-diligence-guide",
     "title": "Check a Business Name Before You Commit to It",
     "description": "Check an Australian business or brand name across registers, trade marks, domains, social profiles and search results before you commit.",
