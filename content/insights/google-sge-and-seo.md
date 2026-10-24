@@ -5,7 +5,7 @@ description: Learn what Google AI Overviews and AI Mode mean for SEO, source vis
 intro: Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?
 author: Lara
 date: 2026-03-06
-updatedDate: 2026-10-22
+updatedDate: 2026-10-25
 checkedOn: 2026-10-22
 readTime: 12 min read
 tags: SEO, AI, Google Search, AI Overviews, AI Mode, Google SGE, Content Strategy
@@ -46,6 +46,8 @@ Eligibility is only the starting point. It doesn't guarantee that Google will cr
 If Google already shows the business but states a false, stale or unsupported fact, follow the [wrong AI Overview correction guide](/insights/fix-wrong-google-ai-overview-business-guide). It separates source repair, feedback and recrawl requests so each is used for its actual job.
 
 For a service business, a technically eligible page can enter consideration. A clear page with credible proof gives both Google and the buyer more reason to keep it there.
+
+If important copy or links depend on JavaScript, [audit JavaScript rendering on important service pages](/insights/javascript-rendering-google-search-ai-eligibility-audit) to collect evidence and define a repair pass condition.
 
 ## Google is making source discovery more explicit
 

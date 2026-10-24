@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Audit JavaScript rendering on service pages, compare Google's inspection evidence and give developers clear repair and verification criteria.">
+  <title>Auditing JavaScript Rendering for Google Search and AI Eligibility | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/insights/javascript-rendering-google-search-ai-eligibility-audit">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Auditing JavaScript Rendering for Google Search and AI Eligibility",
+        "description": "Audit JavaScript rendering on service pages, compare Google's inspection evidence and give developers clear repair and verification criteria.",
+        "datePublished": "2026-10-25",
+        "dateModified": "2026-10-25",
+        "author": { "@type": "Person", "name": "Lara" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Off Piste Studio",
+          "logo": { "@type": "ImageObject", "url": "https://offpistestudio.com/images/off-piste-mark-transparent.png" }
+        },
+        "url": "https://offpistestudio.com/insights/javascript-rendering-google-search-ai-eligibility-audit"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://offpistestudio.com/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Auditing JavaScript Rendering for Google Search and AI Eligibility", "item": "https://offpistestudio.com/insights/javascript-rendering-google-search-ai-eligibility-audit" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="/src/styles/main.css?v=20260717-about-logo-scale-v76">
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Regular.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preload" href="/public/fonts/fonnts.com-Alfabet_Black.otf" as="font" type="font/otf" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body data-page-type="insight" data-insight-slug="javascript-rendering-google-search-ai-eligibility-audit">
+
+  <header class="duplicate-header" data-duplicate-header data-navigation-status="not-active">
+    <div class="duplicate-header__layout">
+      <nav class="duplicate-header__nav" aria-label="Primary">
+        <div class="duplicate-header__row">
+          <a href="/" class="duplicate-header__brand" data-duplicate-nav-close><img src="/images/off-piste-mark-transparent-white.webp" alt="" class="duplicate-header__mark" aria-hidden="true"><span class="duplicate-header__brand-text">Off Piste Studio</span></a>
+          <div class="duplicate-header__links"><a href="/work" class="duplicate-header__link">Work</a><a href="/pricing" class="duplicate-header__link">Pricing</a><a href="/about" class="duplicate-header__link">About</a><a href="/resources" class="duplicate-header__link">Insights</a></div>
+          <div class="duplicate-header__actions">
+            <button class="duplicate-theme-toggle" type="button" aria-label="Switch to light mode" aria-pressed="false" data-theme-toggle>
+              <svg class="duplicate-theme-toggle__icon" width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
+                <defs>
+                  <mask id="insight-theme-moon-mask">
+                    <rect x="0" y="0" width="20" height="20" fill="white"></rect>
+                    <circle class="duplicate-theme-toggle__moon-mask" cx="28" cy="-4" r="7" fill="black"></circle>
+                  </mask>
+                </defs>
+                <circle cx="10" cy="10" r="7" fill="currentColor" mask="url(#insight-theme-moon-mask)"></circle>
+              </svg>
+            </button>
+            <button class="duplicate-header__menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="duplicate-site-menu" data-duplicate-nav-toggle><span class="duplicate-header__menu-lines" aria-hidden="true"><span></span><span></span></span></button>
+          </div>
+        </div>
+        <div class="duplicate-header__menu" id="duplicate-site-menu"><div class="duplicate-header__menu-clip"><div class="duplicate-header__menu-inner"><a href="/work" class="duplicate-header__menu-link" style="--item-delay: 120ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Work</span></a><a href="/pricing" class="duplicate-header__menu-link" style="--item-delay: 185ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Pricing</span></a><a href="/about" class="duplicate-header__menu-link" style="--item-delay: 250ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">About</span></a><a href="/resources" class="duplicate-header__menu-link" style="--item-delay: 315ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Insights</span></a><a href="/tools" class="duplicate-header__menu-link" style="--item-delay: 380ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Tools</span></a><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__menu-link" style="--item-delay: 445ms" data-duplicate-nav-close><span class="duplicate-header__menu-label">Book a call</span></a></div></div></div>
+      </nav>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="duplicate-header__side-link">Book a call<svg class="duplicate-header__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17L17 7M17 7H8M17 7V16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+  </header>
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags"><span>SEO &amp; Search</span><span>Websites &amp; UX</span></div><p class="insight-article__read-time">8 min read</p></div>
+          <h1 class="insight-article__title">Auditing JavaScript Rendering for Google Search and AI Eligibility</h1>
+          <p class="insight-article__intro">Your service page can look complete in a browser while important copy or proof is missing from Google's rendered HTML. A rendering audit helps your marketing owner and developer trace the gap, repair it and verify the result.</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">October 25, 2026</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/javascript-rendering-google-search-ai-eligibility-audit" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href="https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/javascript-rendering-google-search-ai-eligibility-audit&text=Auditing%20JavaScript%20Rendering%20for%20Google%20Search%20and%20AI%20Eligibility" target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url="https://offpistestudio.com/insights/javascript-rendering-google-search-ai-eligibility-audit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <h2 class="insight-article__section-title">The service page looks complete in your browser</h2>
+<p>Imagine a commercial maintenance company&#39;s service page. Its opening definition appears immediately, but the proof block and case-study link arrive after you open a panel. A marketing owner checks the page, sees everything and approves the release. Later, Google&#39;s tested HTML contains the definition but neither the proof nor the link.</p>
+<p>This hypothetical composite illustrates an audit question. Can the content supporting your offer reach Google&#39;s rendered page without someone operating the interface? The example is invented. It makes no claim about a client incident or observed Search Console result.</p>
+<p>A JavaScript SEO audit names the missing text or destination, preserves evidence and gives a developer a repeatable pass condition. The business can then prioritise the defect by its commercial importance. Any effect on rankings needs separate evidence.</p>
+<h2 class="insight-article__section-title">What rendering establishes for Google Search</h2>
+<p>Google&#39;s <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics">JavaScript SEO basics</a> describe crawling, rendering and indexing. Google retrieves the response, executes JavaScript during rendering and processes the resulting content for indexing. Copy missing from the initial response may still appear after rendering. Its absence from server HTML starts an investigation.</p>
+<p>The connection to <a href="/insights/google-sge-and-seo">Google AI Overviews and AI Mode</a> is eligibility. Google&#39;s <a href="https://developers.google.com/search/docs/appearance/ai-features">requirements for AI feature supporting links</a> require a page to be indexed and eligible for a Search snippet. Standard SEO requirements apply, and eligibility doesn&#39;t guarantee inclusion. Google&#39;s <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">generative AI optimisation guidance</a> also directs JavaScript sites towards established technical practices.</p>
+<p>A passing rendering check establishes that the required content appeared in a recorded test. Indexing and AI citation outcomes remain separate. If rendering is healthy and supporting links remain absent, <a href="/insights/google-ai-overviews-not-citing-website-diagnostic">investigate citation selection</a> before commissioning a technical rebuild.</p>
+<h2 class="insight-article__section-title">Choose the pages and content the audit must protect</h2>
+<p>Start with templates that carry buying decisions. Include the affected service page, another page using the same template and an unaffected control where one is available. A redesign review should sample each commercially important template rather than treating the homepage as evidence for the entire site.</p>
+<p>The marketing owner needs to specify what must survive rendering. If the offer or proof is unclear to begin with, first <a href="/insights/structured-content-ai-search-guide">structure the service content and proof</a>. Marketing owns the meaning. The technical test checks whether the agreed content appears.</p>
+<p>Before testing, record the following for each sampled page.</p>
+<ul>
+<li>The full URL, template name and deployed release identifier.</li>
+<li>The exact service definition and proof text that must be present.</li>
+<li>The required destination URLs, including the case-study link&#39;s actual <code>href</code>.</li>
+<li>The tester, environment, timestamp and timezone for every capture.</li>
+<li>Inspection access, existing crawl or indexing exclusions and the intended canonical URL.</li>
+</ul>
+<p>If a firewall challenge or blocked dependency prevents retrieval, <a href="/insights/ai-crawler-access-robots-txt-guide">resolve crawler and infrastructure access</a>. If exclusion is deliberate, <a href="/insights/google-ai-overviews-opt-out-decision-guide">review the publisher inclusion decision</a> with its owner before changing anything. Keep those decisions in the audit record so developers aren&#39;t asked to undo an intentional policy.</p>
+<h2 class="insight-article__section-title">Compare what each page view can establish</h2>
+<p>Capture each view separately. The server response is the HTML returned before browser JavaScript changes it. The browser DOM is the document after scripts run. Google&#39;s inspection evidence adds another environment and may describe an earlier crawl. These observations answer different questions, so a comparison needs to retain their dates and limits.</p>
+<table>
+<thead>
+<tr>
+<th align="left">View</th>
+<th align="left">Evidence</th>
+<th align="left">Limit</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Server response</td>
+<td align="left">Status, headers, HTML, directives, canonical</td>
+<td align="left">Precedes JavaScript changes</td>
+</tr>
+<tr>
+<td align="left">Browser DOM</td>
+<td align="left">Text and link destinations before interaction</td>
+<td align="left">Shows your session only</td>
+</tr>
+<tr>
+<td align="left">Indexed inspection</td>
+<td align="left">Crawl details, selected canonical, available HTML</td>
+<td align="left">May be older or incomplete</td>
+</tr>
+<tr>
+<td align="left">Live inspection</td>
+<td align="left">Tested HTML, screenshot, resource details</td>
+<td align="left">Indexing and canonical selection remain pending</td>
+</tr>
+</tbody></table>
+<p>Retrieve the initial response with your browser&#39;s network tools or an HTTP client. Search the response and DOM for the agreed phrases and inspect the links as anchors with destination URLs. Confirm that each required link uses an anchor with an <code>href</code>, including where a button triggers navigation.</p>
+<p>In Search Console, inspect the exact URL. Google&#39;s <a href="https://support.google.com/webmasters/answer/9012289">URL Inspection documentation</a> distinguishes indexed information from a live test. Use <strong>View crawled page</strong> where available for indexed evidence and <strong>View tested page</strong> after a live test. Save the available HTML, screenshot and resource information. Record unavailable evidence explicitly rather than treating it as a failed test.</p>
+<p>Keep the indexed crawl time beside its evidence and the live test time beside the current result. Comparing an old crawl with today&#39;s browser can reveal a release difference. It doesn&#39;t, by itself, establish a rendering defect in today&#39;s code.</p>
+<h2 class="insight-article__section-title">Trace the missing content to a reproducible cause</h2>
+<p>Return to the composite maintenance page. The agreed proof text is “Our maintenance team supplies a written completion record after each scheduled visit.” The required anchor points to <code>/case-studies/maintenance-handover</code>. These are invented example requirements, not claims about an actual business.</p>
+<p>In the hypothetical audit, the initial response contains the service definition. A fresh browser session also lacks the proof until the panel opens. The developer observes that opening the panel initiates the request supplying both the proof and its case-study anchor. Google&#39;s live tested HTML lacks both items. Record those observations as separate captures with their actual test times when applying this method to a real page.</p>
+<p>That combination supports an interaction-dependent loading hypothesis. Google&#39;s <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/lazy-loading">lazy-loading guidance</a> says content loading shouldn&#39;t depend on actions such as scrolling or clicking because Google Search doesn&#39;t interact with the page. Check whether the text is already in the document behind a disclosure. A collapsed panel containing existing HTML is a different implementation from a panel that fetches its content only when opened.</p>
+<p>For the composite, reproduce the request trigger and change it in a test environment. If the proof and anchor then appear without opening the panel, the developer has stronger evidence that the loading condition caused the gap. Save that reproduction with the original captures.</p>
+<p>Other pages need different hypotheses. A failed content request, blocked script or JavaScript exception might interrupt the required block. Google&#39;s <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/fix-search-javascript">Search-related JavaScript troubleshooting guidance</a> supports examining rendered HTML, loading problems and JavaScript errors. Connect each error to the missing content before assigning it priority. Prioritise errors with a reproducible connection to the missing content.</p>
+<p>Also compare directives and canonical declarations before and after rendering. Google&#39;s JavaScript guidance advises keeping canonical values consistent. Record a conflict as a separate finding requiring investigation. Investigate indexing exclusions on their own evidence.</p>
+<h2 class="insight-article__section-title">Give each repair an owner and a pass condition</h2>
+<p>For the composite, marketing owns the required proof wording and commercial priority. The developer owns the loading behaviour and anchor implementation. The SEO owner interprets the inspection evidence and follows up on Google&#39;s indexed state. One named person should keep the finding open until its remaining checks are resolved.</p>
+<p>The repair record should identify the URL, template, release and exact required copy or destination. Link the captures with their environment, timestamp and timezone, then state the suspected cause and reproduction. Mark unresolved hypotheses explicitly. Name the implementation owner, content approver and indexed follow-up owner. Give the live pass condition and indexed review date separate fields.</p>
+<p>The composite&#39;s live pass condition is precise. The agreed proof sentence and an anchor with <code>href=&quot;/case-studies/maintenance-handover&quot;</code> must appear in Google&#39;s live rendered HTML without opening the panel. The content owner also checks that the proof remains readable and the link works for visitors.</p>
+<p>Choose the smallest repair supported by the reproduction. Loading the block during initial rendering may resolve this example. Consider server rendering or prerendering where the diagnosed delivery constraint warrants it.</p>
+<p>If missing commercial content spans important templates and the cause remains uncertain, use the collected evidence to <a href="/services/seo">scope a technical SEO diagnosis</a>. Once a shared implementation defect is confirmed, the same record can define the work to <a href="/services/website-design">repair the affected website templates</a>.</p>
+<h2 class="insight-article__section-title">Verify the release and return to the indexed evidence</h2>
+<p>Validate the release now, then return to indexed evidence after Google reprocesses the page.</p>
+<ol>
+<li>Repeat the response, DOM and live-inspection checks on the affected URL, another URL sharing its template and the control. Record the deployed release and fresh timestamps.</li>
+<li>Save before-and-after evidence for the exact text and anchor. Check status, directives and declared canonical for unintended changes.</li>
+<li>Mark live validation passed only when its content-level conditions are met. Request indexing where appropriate through Search Console.</li>
+<li>Revisit indexed information after Google reprocesses the page. Compare the recorded crawl time, available content evidence and Google-selected canonical with the intended result.</li>
+</ol>
+<p>If the indexed evidence still describes the old release, leave indexed verification pending. If relevant HTML is unavailable, record that limitation and what the available indexing information establishes.</p>
+<p>Hand over the finding with its evidence links, accepted live result, unresolved indexed checks and named follow-up owner. Before closing the release review, put an actual next review date in the record. At that review, either attach newer indexed evidence or retain the pending state with another dated check.</p>
+
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid" data-related-posts><article class="related-posts__card insight-card">
+    <a href="/insights/google-sge-and-seo" class="insight-card__link" aria-label="Read What Google AI Overviews and AI Mode Mean for SEO">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>12 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">What Google AI Overviews and AI Mode Mean for SEO</h3>
+        <p class="insight-card__description">Learn what Google AI Overviews and AI Mode mean for SEO, source visibility, reporting and the website priorities that matter now.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/google-ai-overviews-not-citing-website-diagnostic" class="insight-card__link" aria-label="Read Why Your Website Isn't Cited in Google AI Overviews">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>10 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>AI &amp; Automation</span><span>SEO &amp; Search</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Why Your Website Isn't Cited in Google AI Overviews</h3>
+        <p class="insight-card__description">Diagnose why an eligible website is absent from Google AI Overview supporting links, then choose the narrowest evidenced repair.</p>
+      </div>
+    </a>
+  </article><article class="related-posts__card insight-card">
+    <a href="/insights/structured-content-ai-search-guide" class="insight-card__link" aria-label="Read Structuring Your Website for AI Search">
+      <div class="insight-card__content">
+        <div class="insight-card__top">
+          <div class="insight-card__meta">
+            <span>14 min read</span>
+          </div>
+          <div class="insight-card__tags">
+            <span>SEO &amp; Search</span><span>AI &amp; Automation</span>
+          </div>
+        </div>
+        <h3 class="insight-card__title">Structuring Your Website for AI Search</h3>
+        <p class="insight-card__description">A practical guide to structuring pages, HTML, schema, metadata, proof, links, and interactions so people, search systems, and AI agents can understand your business more clearly.</p>
+      </div>
+    </a>
+  </article></div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
+  <footer class="footer footer--current">
+    <div class="container">
+      <div class="footer__intro-grid"><h2 class="footer__statement">Your expertise deserves a sharper digital presence.</h2><p class="footer__description">Off Piste Studio builds the websites, brand systems and content foundations that help the right people understand what you do, trust your expertise and take the next step.</p></div>
+      <div class="footer__sections">
+        <div class="footer__section footer__section--sitemap"><h3 class="footer__section-title">Sitemap</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer sitemap primary"><a href="/work" class="footer__nav-link">Work</a><a href="/about" class="footer__nav-link">About</a><a href="/pricing" class="footer__nav-link">Pricing</a></nav><nav class="footer__nav" aria-label="Footer sitemap resources"><a href="/resources" class="footer__nav-link">Insights</a><a href="/tools" class="footer__nav-link">Tools</a><a href="https://www.linkedin.com/company/off-piste-studio" class="footer__nav-link" target="_blank" rel="noopener">LinkedIn</a></nav></div></div>
+        <div class="footer__section footer__section--tools"><h3 class="footer__section-title">Tools</h3><div class="footer__link-columns"><nav class="footer__nav" aria-label="Footer tools primary"><a href="/tools" class="footer__nav-link">All Tools</a><a href="/tools/color-palette" class="footer__nav-link">Palette Generator</a><a href="/tools/contrast-checker" class="footer__nav-link">Contrast Checker</a><a href="/tools/color-converter" class="footer__nav-link">Colour Converter</a><a href="/tools/brand-color-extractor" class="footer__nav-link">Brand Colour Extractor</a></nav><nav class="footer__nav" aria-label="Footer tools secondary"><a href="/tools/palette-preview" class="footer__nav-link">Palette Previewer</a><a href="/tools/gradient-generator" class="footer__nav-link">Gradient Generator</a><a href="/tools/font-pairing" class="footer__nav-link">Font Pairing</a><a href="/tools/favicon-generator" class="footer__nav-link">Favicon Generator</a><a href="/tools/svg-to-png" class="footer__nav-link">SVG to PNG</a></nav></div></div>
+        <div class="footer__section footer__section--contact"><h3 class="footer__section-title">Work with us</h3><div class="footer__contact"><a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="footer__contact-link">Book a Discovery Call</a><a href="mailto:hello@offpistestudio.com" class="footer__contact-link">hello@offpistestudio.com</a></div></div>
+      </div>
+    </div>
+    <div class="footer__brand-wrap"><div class="container footer__bottom"><p class="footer__copyright">&copy; Off Piste Studio 2026 All Rights Reserved</p><p class="footer__location">City Beach, WA</p></div><div class="footer__brand" aria-label="Off Piste Studio"><span class="footer__brand-text" aria-hidden="true">Off Piste Studio</span></div></div>
+  </footer>
+  <script type="module" src="/src/js/main.js?v=20260709-logo-preload-v1"></script>
+</body>
+</html>

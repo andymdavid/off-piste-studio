@@ -5,6 +5,7 @@ description: Diagnose why an eligible website is absent from Google AI Overview 
 intro: Seeing competitors cited in a Google AI Overview while your website is absent can point to several different problems. This diagnostic separates result variation, eligibility, query fit, source value and business clarity so you can test the cause before changing the site.
 author: Lara
 date: 2026-08-21
+updatedDate: 2026-10-25
 readTime: 10 min read
 tags: SEO, AI, Google Search, AI Overviews, AI Mode, Traffic Diagnosis, Technical SEO, Content Strategy
 topics: AI & Automation, SEO & Search
@@ -37,6 +38,8 @@ Google's [technical requirements for AI feature supporting links](https://develo
 Inspect the exact URL in Search Console. Confirm that Google can crawl it, the intended canonical is selected and the live page returns normally. Check `noindex`, robots rules, redirects and CDN or security controls that could affect Googlebot.
 
 Then inspect snippet eligibility. Google's [snippet-control documentation](https://developers.google.com/search/docs/appearance/snippet) explains that `nosnippet` can prevent a snippet, `max-snippet` can limit its length and `data-nosnippet` can exclude selected text. If a restriction is intentional, revisit [deciding whether to limit AI Overview use](/insights/google-ai-overviews-opt-out-decision-guide).
+
+If the service copy or proof appears incomplete, [check what Google can render](/insights/javascript-rendering-google-search-ai-eligibility-audit) before assigning a template repair.
 
 The current [Search Console generative AI performance report](https://support.google.com/webmasters/answer/16984139?hl=en) reports impressions for AI Overviews and AI Mode by page, country, date and device. Dates use Pacific Time. As at 21 August 2026, Google says access remains limited to a subset of properties and a site may lack enough impressions to see it. An absent report isn't proof of ineligibility.
 

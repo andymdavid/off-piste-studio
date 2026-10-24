@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "javascript-rendering-google-search-ai-eligibility-audit",
+    "title": "Auditing JavaScript Rendering for Google Search and AI Eligibility",
+    "description": "Audit JavaScript rendering on service pages, compare Google's inspection evidence and give developers clear repair and verification criteria.",
+    "intro": "Your service page can look complete in a browser while important copy or proof is missing from Google's rendered HTML. A rendering audit helps your marketing owner and developer trace the gap, repair it and verify the result.",
+    "date": "2026-10-25",
+    "displayDate": "October 25, 2026",
+    "readTime": "8 min read",
+    "tags": [
+      "JavaScript SEO",
+      "Rendering Audit",
+      "Google Search",
+      "URL Inspection",
+      "Technical SEO",
+      "AI Overviews",
+      "Service Pages"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "google-sge-and-seo",
+      "google-ai-overviews-not-citing-website-diagnostic",
+      "structured-content-ai-search-guide"
+    ],
+    "imageAlt": "Auditing JavaScript Rendering for Google Search and AI Eligibility",
+    "url": "/insights/javascript-rendering-google-search-ai-eligibility-audit"
+  },
+  {
     "slug": "ai-client-onboarding-service-business-guide",
     "title": "Designing AI-Assisted Client Onboarding for Service Businesses",
     "description": "Plan AI-assisted client onboarding from approved scope to delivery readiness with clear inputs, accountable owners, accessible requests and verified completion.",
@@ -1667,6 +1697,8 @@ export const INSIGHT_POSTS = [
     "intro": "Seeing competitors cited in a Google AI Overview while your website is absent can point to several different problems. This diagnostic separates result variation, eligibility, query fit, source value and business clarity so you can test the cause before changing the site.",
     "date": "2026-08-21",
     "displayDate": "August 21, 2026",
+    "updatedDate": "2026-10-25",
+    "displayUpdatedDate": "October 25, 2026",
     "readTime": "10 min read",
     "tags": [
       "SEO",
@@ -2582,6 +2614,8 @@ export const INSIGHT_POSTS = [
     "intro": "A capable business can still be hard to understand online when its pages hide services, proof, dates, authorship, location facts, and next steps inside vague copy or fragile layouts. Structured content makes that meaning easier for buyers and machines to inspect.",
     "date": "2026-07-19",
     "displayDate": "July 19, 2026",
+    "updatedDate": "2026-10-25",
+    "displayUpdatedDate": "October 25, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -3008,8 +3042,8 @@ export const INSIGHT_POSTS = [
     "intro": "Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?",
     "date": "2026-03-06",
     "displayDate": "March 6, 2026",
-    "updatedDate": "2026-10-22",
-    "displayUpdatedDate": "October 22, 2026",
+    "updatedDate": "2026-10-25",
+    "displayUpdatedDate": "October 25, 2026",
     "readTime": "12 min read",
     "tags": [
       "SEO",
