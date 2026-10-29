@@ -4,6 +4,7 @@ slug: brand-mentions-vs-backlinks-ai-search-guide
 description: An evidence-led guide to what backlinks and brand mentions each contribute to search and AI visibility, and how to decide where to invest.
 intro: Backlinks and brand mentions do different authority-building jobs. The useful decision is which constraint your business needs to solve next, and which evidence supports that investment.
 author: Lara
+updatedDate: 2026-10-30
 date: 2026-09-22
 readTime: 11 min read
 tags: Brand Mentions, Backlinks, AI Search Visibility, Entity Trust, Digital PR, Off-Page SEO
@@ -107,6 +108,8 @@ Turn genuine operational knowledge into a referenceable asset. Our guides to [ci
 Then look for distribution that fits the work. A professional association may cite the research. A partner may explain the collaboration and link to the underlying method. A podcast or event page may name the expert and topic without linking. Each outcome has a different measurement trail, but each can put credible evidence in front of the right audience.
 
 Memberships and directories deserve the same relevance test. A maintained profile in a recognised trade body can clarify category and credentials. Fifty generic directory listings rarely offer the same reader value. Don't buy a package of placements merely because a report labels them AI signals.
+
+A proposal for an encyclopaedia article needs its own evidence check. Use the [Wikipedia and Wikidata eligibility guide](/insights/wikipedia-wikidata-business-eligibility-decision-guide) to assess the source rationale, contributor disclosures and review route before allocating budget.
 
 ## Measure signals and outcomes separately
 

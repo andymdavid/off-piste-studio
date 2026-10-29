@@ -9,6 +9,34 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "wikipedia-wikidata-business-eligibility-decision-guide",
+    "title": "Should Your Business Pursue Wikipedia or Wikidata",
+    "description": "Assess Wikipedia and Wikidata eligibility, evidence and paid editing proposals before committing your business budget.",
+    "intro": "Check the evidence and community rules behind a Wikipedia or Wikidata proposal, then decide whether to seek review, ask for advice or defer.",
+    "date": "2026-10-30",
+    "displayDate": "October 30, 2026",
+    "readTime": "8 min read",
+    "tags": [
+      "Wikipedia",
+      "Wikidata",
+      "Company Notability",
+      "Paid Editing",
+      "Entity Trust",
+      "Authority Investment"
+    ],
+    "topics": [
+      "SEO & Search"
+    ],
+    "cluster": "AI Search Visibility",
+    "relatedPosts": [
+      "how-ai-search-understands-your-business",
+      "third-party-brand-signals-ai-search-audit",
+      "brand-mentions-vs-backlinks-ai-search-guide"
+    ],
+    "imageAlt": "Should Your Business Pursue Wikipedia or Wikidata",
+    "url": "/insights/wikipedia-wikidata-business-eligibility-decision-guide"
+  },
+  {
     "slug": "javascript-rendering-google-search-ai-eligibility-audit",
     "title": "Auditing JavaScript Rendering for Google Search and AI Eligibility",
     "description": "Audit JavaScript rendering on service pages, compare Google's inspection evidence and give developers clear repair and verification criteria.",
@@ -895,6 +923,8 @@ export const INSIGHT_POSTS = [
     "intro": "Backlinks and brand mentions do different authority-building jobs. The useful decision is which constraint your business needs to solve next, and which evidence supports that investment.",
     "date": "2026-09-22",
     "displayDate": "September 22, 2026",
+    "updatedDate": "2026-10-30",
+    "displayUpdatedDate": "October 30, 2026",
     "readTime": "11 min read",
     "tags": [
       "Brand Mentions",
@@ -2166,6 +2196,8 @@ export const INSIGHT_POSTS = [
     "intro": "Build one approved business record, find the public sources that contradict it, and correct the signals that matter most to buyers and search platforms.",
     "date": "2026-08-06",
     "displayDate": "August 6, 2026",
+    "updatedDate": "2026-10-30",
+    "displayUpdatedDate": "October 30, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",

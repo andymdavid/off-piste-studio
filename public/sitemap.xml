@@ -500,7 +500,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/brand-mentions-vs-backlinks-ai-search-guide</loc>
-    <lastmod>2026-09-22</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -896,7 +896,7 @@
   </url>
   <url>
     <loc>https://offpistestudio.com/insights/third-party-brand-signals-ai-search-audit</loc>
-    <lastmod>2026-08-06</lastmod>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -951,6 +951,12 @@
   <url>
     <loc>https://offpistestudio.com/insights/javascript-rendering-google-search-ai-eligibility-audit</loc>
     <lastmod>2026-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://offpistestudio.com/insights/wikipedia-wikidata-business-eligibility-decision-guide</loc>
+    <lastmod>2026-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>

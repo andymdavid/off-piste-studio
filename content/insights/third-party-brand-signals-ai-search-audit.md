@@ -4,6 +4,7 @@ slug: third-party-brand-signals-ai-search-audit
 description: Audit and correct third party business profiles, listings, reviews, and references with a practical source-of-truth and priority framework.
 intro: Build one approved business record, find the public sources that contradict it, and correct the signals that matter most to buyers and search platforms.
 author: Lara
+updatedDate: 2026-10-30
 date: 2026-08-06
 readTime: 14 min read
 tags: SEO, AI, Content Strategy, Brand Strategy
@@ -153,6 +154,8 @@ Once facts and selected profiles are approved, use the [Organization schema impl
 ## Earn corroboration where evidence is thin
 
 Correction removes inaccurate information. Independent support has to be earned.
+
+If the source review leads to a Wikipedia or Wikidata proposal, assess the [separate eligibility and paid editing questions](/insights/wikipedia-wikidata-business-eligibility-decision-guide) before commissioning work.
 
 If the inventory is accurate and the next question is whether to pursue editorial links, broader contextual coverage, or both, use the [brand mentions and backlinks comparison](/insights/brand-mentions-vs-backlinks-ai-search-guide) to match the investment to the current constraint.
 
