@@ -102,6 +102,8 @@ Page-by-page validation can miss a site-wide identity problem. Search the render
 
 Return to Northbank Advisory. Its homepage defines `https://northbank.example/#organization`. Article pages identify the publisher as `https://northbank.example/#publisher`. Service pages embed a complete provider object with no `@id`. Those pages contain plausible values, but they don't express one consistently referenced provider.
 
+For confirmed conflicts between emitters, follow the [schema conflict repair guide](/insights/fix-duplicate-conflicting-schema-markup-guide) to trace ownership, reconcile facts and preserve dependent references.
+
 The repair is to approve one stable identity and make the relevant templates refer to it. The [Organization schema implementation guide](/insights/organization-schema-service-business-guide) covers canonical business facts, stable identifiers and duplicate provider nodes. The [Service schema guide](/insights/service-schema-service-pages-guide) covers connecting an accurate service offer to that provider without copying unsupported claims.
 
 Apply the same relationship check to publishing. Byline, Article author and expert profile should identify the same person where that is the intended model. Route article byline, publisher and date defects to the [Article schema guide](/insights/article-schema-authorship-dates-guide). Route disconnected authors, weak profile evidence and unstable Person identifiers to the [expert profile and Person schema guide](/insights/person-schema-expert-profile-page-guide).

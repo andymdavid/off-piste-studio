@@ -61,6 +61,8 @@ A plugin can be a sound choice when the site uses common page types, its maintai
 
 The evaluation starts with mapping, not the feature list. Confirm which CMS value supplies each property, whether editors must enter the same fact twice and how the plugin identifies shared entities. Inspect the output from representative pages rather than relying on a preview or marketing claim.
 
+When overlapping generators publish contradictory facts, [repair the conflicting schema output](/insights/fix-duplicate-conflicting-schema-markup-guide) before deciding whether the implementation route needs to change.
+
 Plugin simplicity weakens when a theme, commerce extension and SEO tool all emit overlapping schema. It also weakens when important settings live outside the content workflow or when updates can alter output without a deliberate release review. The answer may be better configuration, not replacement, if the existing generator can meet the approved contract.
 
 ### Native CMS or template generation

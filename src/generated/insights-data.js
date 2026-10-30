@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "fix-duplicate-conflicting-schema-markup-guide",
+    "title": "Fix Conflicting Schema Markup from Plugins and Themes",
+    "description": "Trace conflicting schema markup to plugins, themes and templates, reconcile business facts and verify that repairs preserve your website's graph.",
+    "intro": "A safe schema repair traces each conflicting assertion to its source, agrees the correct facts and preserves the relationships the website still needs.",
+    "date": "2026-10-31",
+    "displayDate": "October 31, 2026",
+    "readTime": "11 min read",
+    "tags": [
+      "Schema Conflict Repair",
+      "Duplicate Schema Markup",
+      "JSON-LD",
+      "Schema @id",
+      "Technical SEO",
+      "Content Governance"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Websites & UX"
+    ],
+    "cluster": "Structured Content and Schema",
+    "relatedPosts": [
+      "structured-data-schema-audit-guide",
+      "connected-schema-graph-service-business-guide",
+      "schema-markup-plugin-vs-custom-code-guide"
+    ],
+    "imageAlt": "Fix Conflicting Schema Markup from Plugins and Themes",
+    "url": "/insights/fix-duplicate-conflicting-schema-markup-guide"
+  },
+  {
     "slug": "wikipedia-wikidata-business-eligibility-decision-guide",
     "title": "Should Your Business Pursue Wikipedia or Wikidata",
     "description": "Assess Wikipedia and Wikidata eligibility, evidence and paid editing proposals before committing your business budget.",

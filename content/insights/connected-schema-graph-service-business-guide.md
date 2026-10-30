@@ -136,6 +136,8 @@ For a static site, shared data files can supply canonical provider, website and 
 
 Assign every property to the source that also drives the visible page. A service name should come from the service record. An author name should come from the governed profile. The organisation logo and contact details should come from controlled business settings. This keeps schema aligned with what buyers see.
 
+If existing emitters contradict the approved graph, use the [plugin and theme schema repair workflow](/insights/fix-duplicate-conflicting-schema-markup-guide) to reconcile their assertions and preserve useful relationships.
+
 Then inventory every system that emits structured data. Themes, SEO plugins, review widgets, CMS extensions and custom templates can all produce overlapping nodes. Decide which system owns each output. Disable or configure the others where they create a second provider, stale facts or conflicting identifiers.
 
 Roll out one representative page for each template first. Compare its visible content, canonical URL, node IDs and references with the contract. Once the pattern holds, release it across the template set. This sequence is Off Piste implementation judgement. It keeps a modelling mistake from becoming a site-wide cleanup.
