@@ -4,8 +4,8 @@ slug: third-party-brand-signals-ai-search-audit
 description: Audit and correct third party business profiles, listings, reviews, and references with a practical source-of-truth and priority framework.
 intro: Build one approved business record, find the public sources that contradict it, and correct the signals that matter most to buyers and search platforms.
 author: Lara
-updatedDate: 2026-10-30
 date: 2026-08-06
+updatedDate: 2026-11-04
 readTime: 14 min read
 tags: SEO, AI, Content Strategy, Brand Strategy
 topics: SEO & Search, AI & Automation
@@ -33,7 +33,7 @@ Editorial boundaries:
 
 Imagine a Perth advisory firm that has already found the problem. Its website says it works with construction businesses across Western Australia. LinkedIn still describes a national generalist consultancy. An industry directory lists an old trading name and phone number. A partner profile promotes a service the firm stopped delivering last year.
 
-This is a composite example, not a client case study. There is no invented visibility result attached to it. The value lies in following one contradiction through approval, prioritisation, correction, and review.
+This composite example follows a contradiction through approval, prioritisation, correction and review. It represents no client or measured visibility result.
 
 The diagnosis comes first. If you haven't established where your business is being misread, start with the wider [entity-trust audit](/insights/how-ai-search-understands-your-business). This guide starts once you know the public record has drifted and need to decide which external sources deserve attention.
 
@@ -41,11 +41,11 @@ Google documents that Business Profile and local-search information can come fro
 
 The commercial cost is easier to see than the algorithmic theory. A prospective client may encounter the old name, call the wrong number, assume the firm offers an irrelevant service, or question whether two profiles describe the same company. The audit should make that buying journey more accurate.
 
-## Treat the audit as more than citation cleanup
+## Reconcile the facts buyers use
 
 “Business citation audit” and “listing consistency” are familiar local SEO terms. They often focus on name, address, and phone details. Those facts matter, especially when a business serves a defined location. A professional-services firm also needs to reconcile its category, priority services, intended audience, locations served, contact routes, proof, and relationships between official profiles.
 
-Factual agreement does not require identical promotional copy. A LinkedIn description can suit professional readers while a partner profile explains the relationship in its own language. Both should still identify the same business, current offer, and relevant location.
+Profiles can agree on facts while using different promotional copy. A LinkedIn description can suit professional readers while a partner profile explains the relationship in its own language. Both should still identify the same business, current offer, and relevant location.
 
 Google's [local ranking guidance](https://support.google.com/business/answer/7091) says complete and accurate information helps match profiles with relevant searches. It describes prominence using information such as links and reviews, and says businesses cannot request or pay for better local ranking. That guidance applies directly to Google's local results. Using accurate external records to improve wider AI representation is a reasonable working hypothesis, not a documented ranking factor or promised outcome.
 
@@ -55,13 +55,13 @@ The composite firm's marketing lead could quickly replace every old description 
 
 Create a concise source-of-truth worksheet. Give each material fact an owner who can confirm it. Positioning may belong to a founder or strategy lead. Current services need confirmation from delivery owners. Locations and contact routes may sit with operations. Proof needs an identifiable source and permission to use it.
 
-| Canonical fact | Approved record | Evidence | Owner | Review date |
-| --- | --- | --- | --- | --- |
-| Trading and legal names | Current public name and legal relationship | Business registration and brand decision | Operations | Set after approval |
-| Category and services | Current offer in plain language | Service scope and delivery records | Service lead | Set after approval |
-| Audience and locations | Buyers and areas genuinely served | Positioning decision and operating capacity | Strategy lead | Set after approval |
-| Contact details | Current public routes | Working phone, email, and address checks | Operations | Set after approval |
-| Proof and profiles | Approved evidence and official profile URLs | Published source and access confirmation | Marketing | Set after approval |
+Record each approved fact, its supporting evidence, owner and review date. Cover these five areas.
+
+- Trading and legal names, supported by registration records and the approved brand decision.
+- Category and services, checked against current delivery records by the service lead.
+- Audience and locations, confirmed against positioning and operating capacity.
+- Contact details, tested by operations.
+- Proof and official profiles, checked by marketing for source access and permission.
 
 Google's structured-data introduction recommends providing [fewer complete and accurate properties over more inaccurate or badly formed properties](https://developers.google.com/search/docs/appearance/structured-data/intro-structured-data). That guidance is specifically about structured data. The same reconcile-first discipline is useful editorial practice for the wider source record.
 
@@ -71,7 +71,7 @@ For the composite firm, the approved truth might retain the current trading name
 
 Start with places a buyer, platform, or publisher could plausibly use. There is no universal directory list worth completing for its own sake. A relevant professional association may carry more weight for this firm than dozens of generic directories.
 
-Search the current and former business names in quotation marks. Combine each with locations, phone numbers, senior people, priority services, and old service names. Search the business domain and use `site:` searches for important platforms. Review referral data and branded Search Console queries for sources your team did not remember.
+Search the current and former business names in quotation marks. Combine each with locations, phone numbers, senior people, priority services, and old service names. Search the business domain and use `site:` searches for important platforms. Review referral data and branded Search Console queries for sources your team hasn't recorded.
 
 The inventory will usually contain several source groups.
 
@@ -82,31 +82,19 @@ The inventory will usually contain several source groups.
 - independent articles, interviews, comparisons, and coverage
 - old listings, duplicate profiles, and data aggregators that still surface in branded searches
 
+If the inventory surfaces an award invitation or paid recognition proposal, [evaluate the award entry and winner package before spending](/insights/business-awards-entry-winner-package-evaluation-guide). Verifying the public record supplies evidence for that separate purchasing decision.
+
 Capture the page URL rather than recording only a domain name. Note the observed fact exactly enough to verify the discrepancy. Identify who owns the source and whether the business can edit it, request a change, claim it, or only monitor it.
 
 The inventory becomes useful when another person can understand why a change was requested and later verify whether it happened. If a contradiction appears in a Google Knowledge Panel, carry the relevant source record into the [panel correction and verification workflow](/insights/fix-incorrect-google-knowledge-panel-business-guide).
 
-```insight-module
-{
-  "type": "practice",
-  "label": "In practice",
-  "title": "Record enough evidence to make each correction defensible",
-  "intro": "For every source, capture only what is needed to decide and verify the next action.",
-  "items": [
-    "Source URL and source owner",
-    "Observed fact and approved canonical fact",
-    "Evidence for the correction",
-    "Impact, editability, action owner, and status",
-    "Correction date and retest date"
-  ]
-}
-```
+For each correction, record the source URL and owner, observed and approved facts, and supporting evidence. Add the impact, editability, action owner and status, then record correction and retest dates.
 
 ## Prioritise contradictions by impact and control
 
 A wrong phone number on a prominent profile deserves attention before an old tagline on a directory nobody relevant appears to use. Source authority and buyer relevance determine potential impact. Control determines the repair route. These axes create four distinct decisions.
 
-The matrix below is Off Piste editorial logic. It is a workload and risk framework, not a platform ranking model. It deliberately contains no invented score.
+This Off Piste editorial matrix guides correction priorities. It doesn't model platform rankings or assign scores.
 
 ```insight-visual
 {
@@ -135,9 +123,9 @@ Avoid asking a publisher to copy a generic brand paragraph across every page. Ex
 
 Sources the business cannot edit need an escalation record. Save the request date, contact route, response, and follow-up date. If the publisher declines a reasonable correction, record that outcome. Your owned pages can clarify the current position without pretending the independent page has changed.
 
-Once the public facts are approved, update connected owned records. That may include the website, contact details, profile links, and schema. Then schedule a retest. A submitted request is not a completed correction.
+Once the public facts are approved, update connected owned records. That may include the website, contact details, profile links, and schema. Then schedule a retest. Confirm the change on the published page before closing the correction.
 
-The composite firm's evidence log now shows who approved the Western Australia positioning, when LinkedIn changed, who owns the partner-page request, what happened to the directory claim, and when each source will be checked again. That is a maintainable business record rather than a one-day cleanup.
+The composite firm's evidence log now shows who approved the Western Australia positioning, when LinkedIn changed, who owns the partner-page request, what happened to the directory claim, and when each source will be checked again. That's a record the team can maintain.
 
 ## Keep profiles, reviews, and schema accurate
 
@@ -181,10 +169,8 @@ Schedule another source review after a move, merger, new service, retired servic
 
 ## Decide who owns the remaining problem
 
-The audit ends with an ownership decision.
-
 Operations can maintain names, contact details, locations, access, and review dates. Marketing can govern profile copy, source discovery, legitimate review requests, evidence records, and publisher outreach. Service leaders need to approve what the firm actually delivers. A technical owner should update schema only after those facts are settled.
 
 If the remaining work is a handful of routine profile corrections, assign it and keep the log current. If nobody can agree on the category, audience, services, or proof, the unresolved problem is positioning and content strategy. If the facts are approved but the website cannot express or maintain them clearly, it becomes a [website structure and design problem](/services/website-design).
 
-That distinction matters. The point of this audit isn't to make every public sentence identical. It's to give buyers and platforms a current, verifiable account of the same business, with a named owner responsible for keeping it true.
+Give buyers and platforms a current, verifiable account of the business, with a named owner responsible for keeping it accurate.

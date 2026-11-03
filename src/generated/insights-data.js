@@ -9,6 +9,36 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "business-awards-entry-winner-package-evaluation-guide",
+    "title": "Evaluating Business Awards Before You Pay for Recognition",
+    "description": "Assess business award judging, entry costs and winner package rights before committing your budget or publishing recognition.",
+    "intro": "An award invitation can bring entry fees, preparation work and optional promotion costs. Check the judging, audience fit and usage rights so you're clear about what you're approving.",
+    "date": "2026-11-04",
+    "displayDate": "November 4, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "Business Awards",
+      "Award Entry",
+      "Winner Packages",
+      "Badge Licensing",
+      "Entity Trust",
+      "Authority Investment",
+      "Claim Substantiation"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "brand-mentions-vs-backlinks-ai-search-guide",
+      "third-party-brand-signals-ai-search-audit",
+      "website-claim-substantiation-workflow"
+    ],
+    "imageAlt": "Evaluating Business Awards Before You Pay for Recognition",
+    "url": "/insights/business-awards-entry-winner-package-evaluation-guide"
+  },
+  {
     "slug": "fix-duplicate-conflicting-schema-markup-guide",
     "title": "Fix Conflicting Schema Markup from Plugins and Themes",
     "description": "Trace conflicting schema markup to plugins, themes and templates, reconcile business facts and verify that repairs preserve your website's graph.",
@@ -2225,8 +2255,8 @@ export const INSIGHT_POSTS = [
     "intro": "Build one approved business record, find the public sources that contradict it, and correct the signals that matter most to buyers and search platforms.",
     "date": "2026-08-06",
     "displayDate": "August 6, 2026",
-    "updatedDate": "2026-10-30",
-    "displayUpdatedDate": "October 30, 2026",
+    "updatedDate": "2026-11-04",
+    "displayUpdatedDate": "November 4, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
