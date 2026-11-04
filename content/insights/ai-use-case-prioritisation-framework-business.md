@@ -195,6 +195,8 @@ The [AI workflow ROI and reliability guide](/insights/measure-ai-workflow-automa
 
 ## Turn the shortlist into a practical AI roadmap
 
+Once the shortlist is approved, [sequence the approved shortlist around dependencies and capacity](/insights/ai-implementation-roadmap-business-guide). The implementation guide covers shared prerequisites, reviewer availability, staged funding and the evidence needed to start the next project.
+
 A useful roadmap contains three things. It names one learning pilot, the prerequisite work that makes later candidates viable, and the ideas that have been deliberately deferred or rejected.
 
 For the composite business, the first sequence might be a bounded lead qualification pilot, clearer ownership of internal service knowledge, and privacy review before any support use case. Proposal and content assistance stay in the shortlist. Agentic action stays outside the first phase until the team has evidence that narrower assistance works and can be governed.

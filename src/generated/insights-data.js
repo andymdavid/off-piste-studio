@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "ai-implementation-roadmap-business-guide",
+    "title": "Build an AI Implementation Roadmap Around Dependencies and Capacity",
+    "description": "Turn an approved AI shortlist into a practical roadmap with shared dependencies, realistic reviewer capacity, staged funding and clear evidence gates.",
+    "intro": "An approved AI shortlist still needs a workable sequence. Map shared dependencies, confirm delivery and review capacity, and agree what evidence unlocks the next commitment.",
+    "date": "2026-11-05",
+    "displayDate": "November 5, 2026",
+    "readTime": "10 min read",
+    "tags": [
+      "AI",
+      "AI Strategy",
+      "AI Implementation",
+      "AI Roadmaps",
+      "Portfolio Planning",
+      "Resource Planning",
+      "Internal Systems"
+    ],
+    "topics": [
+      "AI & Automation"
+    ],
+    "cluster": "AI Strategy and Use Case Selection",
+    "relatedPosts": [
+      "ai-use-case-prioritisation-framework-business",
+      "ai-readiness-assessment-growing-business",
+      "measure-ai-workflow-automation-roi-reliability"
+    ],
+    "imageAlt": "Build an AI Implementation Roadmap Around Dependencies and Capacity",
+    "url": "/insights/ai-implementation-roadmap-business-guide"
+  },
+  {
     "slug": "business-awards-entry-winner-package-evaluation-guide",
     "title": "Evaluating Business Awards Before You Pay for Recognition",
     "description": "Assess business award judging, entry costs and winner package rights before committing your budget or publishing recognition.",
