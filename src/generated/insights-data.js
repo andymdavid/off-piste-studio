@@ -9,6 +9,35 @@ export const INSIGHT_TOPICS = [
 
 export const INSIGHT_POSTS = [
   {
+    "slug": "business-impersonation-search-maps-response-guide",
+    "title": "Responding to Business Impersonation in Search and Google Maps",
+    "description": "Respond to suspected business impersonation with an evidence pack, official Maps and website reporting routes, and clear customer verification.",
+    "intro": "A copied website or suspicious Maps listing can send customers to someone using your identity. Record what's happening, choose the reporting route for each surface and give customers a reliable way to verify your business.",
+    "date": "2026-11-06",
+    "displayDate": "November 6, 2026",
+    "readTime": "8 min read",
+    "tags": [
+      "Business Impersonation",
+      "Fake Websites",
+      "Google Maps",
+      "Business Redressal",
+      "Entity Trust",
+      "Customer Verification"
+    ],
+    "topics": [
+      "SEO & Search",
+      "Content & Brand"
+    ],
+    "cluster": "AI Search Visibility / Entity Trust and Brand Signals",
+    "relatedPosts": [
+      "fix-ai-search-business-name-confusion-guide",
+      "third-party-brand-signals-ai-search-audit",
+      "entity-trust-monitoring-search-ai-framework"
+    ],
+    "imageAlt": "Responding to Business Impersonation in Search and Google Maps",
+    "url": "/insights/business-impersonation-search-maps-response-guide"
+  },
+  {
     "slug": "ai-implementation-roadmap-business-guide",
     "title": "Build an AI Implementation Roadmap Around Dependencies and Capacity",
     "description": "Turn an approved AI shortlist into a practical roadmap with shared dependencies, realistic reviewer capacity, staged funding and clear evidence gates.",
@@ -614,6 +643,8 @@ export const INSIGHT_POSTS = [
     "intro": "A correction, rebrand or schema update can settle your business record today. This framework helps you keep it accurate by recording the intended facts, observing the surfaces buyers use, assigning action and connecting persistent errors to commercial risk.",
     "date": "2026-10-07",
     "displayDate": "October 7, 2026",
+    "updatedDate": "2026-11-06",
+    "displayUpdatedDate": "November 6, 2026",
     "readTime": "12 min read",
     "tags": [
       "Entity Trust",
@@ -1552,6 +1583,8 @@ export const INSIGHT_POSTS = [
     "intro": "A wrong Knowledge Panel is visible in seconds, but the correction route depends on the result type, the affected entity and the source behind the displayed fact. This guide shows you how to diagnose the panel, prepare evidence and use the route Google currently provides.",
     "date": "2026-08-31",
     "displayDate": "August 31, 2026",
+    "updatedDate": "2026-11-06",
+    "displayUpdatedDate": "November 6, 2026",
     "readTime": "11 min read",
     "tags": [
       "Google Knowledge Panel",
@@ -2284,8 +2317,8 @@ export const INSIGHT_POSTS = [
     "intro": "Build one approved business record, find the public sources that contradict it, and correct the signals that matter most to buyers and search platforms.",
     "date": "2026-08-06",
     "displayDate": "August 6, 2026",
-    "updatedDate": "2026-11-04",
-    "displayUpdatedDate": "November 4, 2026",
+    "updatedDate": "2026-11-06",
+    "displayUpdatedDate": "November 6, 2026",
     "readTime": "14 min read",
     "tags": [
       "SEO",
@@ -2793,8 +2826,8 @@ export const INSIGHT_POSTS = [
     "intro": "If search or an AI answer gets your business wrong, the problem may sit in your website, profiles, schema, public references or access controls. A focused audit isolates the layer that needs work and keeps each signal in its proper role.",
     "date": "2026-07-16",
     "displayDate": "July 16, 2026",
-    "updatedDate": "2026-09-26",
-    "displayUpdatedDate": "September 26, 2026",
+    "updatedDate": "2026-11-06",
+    "displayUpdatedDate": "November 6, 2026",
     "readTime": "11 min read",
     "tags": [
       "Entity Trust",

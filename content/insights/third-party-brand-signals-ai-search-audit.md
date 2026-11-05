@@ -5,7 +5,7 @@ description: Audit and correct third party business profiles, listings, reviews,
 intro: Build one approved business record, find the public sources that contradict it, and correct the signals that matter most to buyers and search platforms.
 author: Lara
 date: 2026-08-06
-updatedDate: 2026-11-04
+updatedDate: 2026-11-06
 readTime: 14 min read
 tags: SEO, AI, Content Strategy, Brand Strategy
 topics: SEO & Search, AI & Automation
@@ -126,6 +126,8 @@ Sources the business cannot edit need an escalation record. Save the request dat
 Once the public facts are approved, update connected owned records. That may include the website, contact details, profile links, and schema. Then schedule a retest. Confirm the change on the published page before closing the correction.
 
 The composite firm's evidence log now shows who approved the Western Australia positioning, when LinkedIn changed, who owns the partner-page request, what happened to the directory claim, and when each source will be checked again. That's a record the team can maintain.
+
+If an external record copies your identity and redirects customers to an unauthorised contact or website, [report suspected identity copying](/insights/business-impersonation-search-maps-response-guide) with surface-specific evidence. Assign that response an owner before continuing routine source corrections.
 
 ## Keep profiles, reviews, and schema accurate
 

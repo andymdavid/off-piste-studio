@@ -5,6 +5,7 @@ description: Identify a wrong Google Knowledge Panel, trace the affected fact an
 intro: A wrong Knowledge Panel is visible in seconds, but the correction route depends on the result type, the affected entity and the source behind the displayed fact. This guide shows you how to diagnose the panel, prepare evidence and use the route Google currently provides.
 author: Lara
 date: 2026-08-31
+updatedDate: 2026-11-06
 readTime: 11 min read
 tags: Google Knowledge Panel, Entity Trust, Brand Signals, Knowledge Graph, Search Visibility, Entity Correction
 topics: SEO & Search, AI & Automation
@@ -56,9 +57,7 @@ Search presentation can vary by query, country, device, account and time. A scre
 ```insight-module
 {
   "type": "practice",
-  "label": "In practice",
   "title": "Build a correction record Google can check",
-  "intro": "Capture the same evidence before correcting a source or submitting feedback so later checks remain comparable.",
   "items": [
     "Record the exact query, country, device and date",
     "Save a screenshot and name the affected panel field",
@@ -118,6 +117,8 @@ A panel that combines two similarly named companies needs more than a wording ed
 Recent name changes, mergers and domain moves often leave two plausible versions in public sources. Use the [business rebrand migration guide](/insights/business-rebrand-entity-search-migration-guide) to align the website, redirects, profiles and outside records around the approved identity. Keep the correction request focused on the panel field rather than repeating the whole migration plan.
 
 Impersonation, disputed ownership, defamation and potentially unlawful content aren't routine SEO corrections. Preserve evidence and use the relevant platform reporting, account recovery or legal-removal route. Seek legal advice when rights, safety or liability are in dispute.
+
+For a copied website or suspicious Maps listing using your identity, [respond to suspected impersonation](/insights/business-impersonation-search-maps-response-guide) through the relevant reporting routes. Keep routine panel corrections separate from that response.
 
 ## Monitor the result and keep a correction log
 

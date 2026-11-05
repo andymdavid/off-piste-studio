@@ -5,7 +5,7 @@ description: Diagnose the evidence gaps that cause search and AI systems to omit
 intro: If search or an AI answer gets your business wrong, the problem may sit in your website, profiles, schema, public references or access controls. A focused audit isolates the layer that needs work and keeps each signal in its proper role.
 author: Lara
 date: 2026-07-16
-updatedDate: 2026-09-26
+updatedDate: 2026-11-06
 readTime: 11 min read
 tags: Entity Trust, AI Search Visibility, Business Representation, Organization Schema, Brand Signals, Knowledge Graph
 topics: SEO & Search, AI & Automation
@@ -32,11 +32,13 @@ Primary platform guidance accessed 26 September 2026:
 -->
 ## Start with the symptom you can see
 
-Your business may be missing from an AI answer, described with an old service, confused with another company or shown with the wrong location. Google may display an unexpected site name. A Knowledge Panel may repeat a stale fact. Each symptom points to a representation problem, but they don't all have the same cause or repair. When two genuine organisations are being merged, use the focused guide to [stop AI search confusing your business with another company](/insights/fix-ai-search-business-name-confusion-guide). When the organisations are legitimately related, use the [parent company, subsidiary and brand architecture guide](/insights/parent-company-subsidiary-brand-entity-search-guide) to preserve their boundaries and state the relationship.
+Your business may be missing from an AI answer, described with an old service, confused with another company or shown with the wrong location. Google may display an unexpected site name. A Knowledge Panel may repeat a stale fact. Each symptom points to a representation problem, but they don't all have the same cause or repair. When two unrelated organisations are being merged, use the focused guide to [stop AI search confusing your business with another company](/insights/fix-ai-search-business-name-confusion-guide). When the organisations are legitimately related, use the [parent company, subsidiary and brand architecture guide](/insights/parent-company-subsidiary-brand-entity-search-guide) to preserve their boundaries and state the relationship.
 
 First separate two questions. Branded representation asks whether a system can identify and describe your named business accurately. Unbranded recommendation visibility asks whether it chooses your business when someone asks for a provider without naming you. A clear business record supports both, but it doesn't guarantee rankings, citations or recommendations.
 
 This distinction protects the commercial decision. If a buyer already knows your name and finds conflicting facts, identity and accuracy come first. If the facts are correct but the business rarely appears in broader research, the next investigation is authority, relevance and proof.
+
+If a website or listing appears to copy your identity and divert customers, [respond to suspected business impersonation](/insights/business-impersonation-search-maps-response-guide) with evidence and a report for each affected surface.
 
 ## Define the business record systems need to resolve
 

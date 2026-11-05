@@ -5,6 +5,7 @@ description: Build a practical monitoring system to keep business information ac
 intro: A correction, rebrand or schema update can settle your business record today. This framework helps you keep it accurate by recording the intended facts, observing the surfaces buyers use, assigning action and connecting persistent errors to commercial risk.
 author: Lara
 date: 2026-10-07
+updatedDate: 2026-11-06
 readTime: 12 min read
 tags: Entity Trust, Business Information Monitoring, Brand Representation, AI Search Visibility, Knowledge Panel Monitoring, Search Measurement, Content Governance
 topics: AI & Automation, SEO & Search
@@ -56,9 +57,7 @@ The register matters only if the team will maintain it. Start with the minimum e
 ```insight-module
 {
   "type": "practice",
-  "label": "In practice",
   "title": "Build the smallest register your team will maintain",
-  "intro": "Start with the facts and surfaces where an error would change a buyer's understanding or action.",
   "items": [
     "Record the canonical fact and its governed source",
     "Save the observed value with a URL or dated capture",
@@ -116,6 +115,8 @@ Route the action by ownership. Correct an owned-page error at its governed sourc
 Keep repair summaries short in the monitoring register. Link to the implementation record, save the submission or publication date and schedule a retest. “Request sent” is a status. It is not evidence that the live result changed.
 
 Watch and retest when the observation is isolated, variable or not commercially material. Escalate when the error creates material harm, spreads, persists through several review cycles or returns after a verified correction. This severity model is a management rule for allocating attention, not a ranking factor.
+
+When an alert reveals a copied website or suspicious Maps listing diverting customers, [build an impersonation report](/insights/business-impersonation-search-maps-response-guide) and assign an owner for each affected surface. Track those reports separately from ordinary factual drift.
 
 ## Make ownership survive the next change
 

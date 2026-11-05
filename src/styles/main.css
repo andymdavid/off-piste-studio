@@ -15077,3 +15077,47 @@ body[data-page-type="resources"] .insights-index__select-icon {
     min-width: min(11rem, 48vw);
   }
 }
+
+/* Solid editorial blocks for the impersonation guide's supporting articles. */
+body:is([data-insight-slug="entity-trust-monitoring-search-ai-framework"], [data-insight-slug="fix-incorrect-google-knowledge-panel-business-guide"]) .insight-module {
+  color: #f5f5f4;
+  background: #292928;
+  border-color: #70706e;
+}
+body:is([data-insight-slug="entity-trust-monitoring-search-ai-framework"], [data-insight-slug="fix-incorrect-google-knowledge-panel-business-guide"])[data-theme="light"] .insight-module {
+  color: #121212;
+  background: #ddddda;
+  border-color: #898985;
+}
+body:is([data-insight-slug="entity-trust-monitoring-search-ai-framework"], [data-insight-slug="fix-incorrect-google-knowledge-panel-business-guide"]) .insight-module > header {
+  display: block;
+}
+body:is([data-insight-slug="entity-trust-monitoring-search-ai-framework"], [data-insight-slug="fix-incorrect-google-knowledge-panel-business-guide"]) .insight-module__body {
+  margin-left: 0;
+}
+body:is([data-insight-slug="entity-trust-monitoring-search-ai-framework"], [data-insight-slug="fix-incorrect-google-knowledge-panel-business-guide"]) .insight-module__list li {
+  color: #f5f5f4;
+  border-color: #70706e;
+}
+body:is([data-insight-slug="entity-trust-monitoring-search-ai-framework"], [data-insight-slug="fix-incorrect-google-knowledge-panel-business-guide"])[data-theme="light"] .insight-module__list li {
+  color: #121212;
+  border-color: #898985;
+}
+body[data-insight-slug="third-party-brand-signals-ai-search-audit"] .insight-visual {
+  --visual-text: #f5f5f4;
+  --visual-muted: #ababab;
+  --visual-soft: #ababab;
+  --visual-rule: #70706e;
+}
+body[data-insight-slug="third-party-brand-signals-ai-search-audit"][data-theme="light"] .insight-visual {
+  --visual-text: #121212;
+  --visual-muted: #484846;
+  --visual-soft: #484846;
+  --visual-rule: #898985;
+}
+body[data-insight-slug="third-party-brand-signals-ai-search-audit"] .insight-visual__quadrant:not([data-quadrant="1"]) {
+  background: #292928;
+}
+body[data-insight-slug="third-party-brand-signals-ai-search-audit"][data-theme="light"] .insight-visual__quadrant:not([data-quadrant="1"]) {
+  background: #ddddda;
+}
