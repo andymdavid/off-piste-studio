@@ -3450,3 +3450,9 @@ body[data-page-type="about"] .about-spacer::before {
   pointer-events: none !important;
   z-index: 2 !important;
 }
+
+/* The discovery label needs extra space with Geist, including its arrow. */
+.booking-cta {
+  --site-button-width: 17rem;
+  white-space: nowrap;
+}
