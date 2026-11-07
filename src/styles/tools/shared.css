@@ -812,3 +812,185 @@ body[data-page-type="tool"][data-theme="light"] .tool-related__link:hover .tool-
 #favicon-results[hidden] {
   display: none;
 }
+
+
+
+.tool-glyph-status {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto 1.25rem;
+  color: currentColor;
+}
+
+.tool-glyph-status__mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: currentColor;
+}
+
+.tool-glyph-status__mark rect {
+  transform-box: view-box;
+  transform-origin: 0 0;
+  will-change: transform, opacity;
+}
+
+.tool-glyph-status[data-state="loading"] .tool-glyph-status__mark {
+  animation: triptychGlyphLoading 1.2s steps(8, end) infinite;
+}
+
+.tool-glyph-status[data-state="sparkle"].is-activated .tool-glyph-status__mark {
+  animation: toolGlyphSparkle 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.tool-glyph-status__label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.tool-glyph-status-row {
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+}
+
+.tool-glyph-status-row .tool-glyph-status {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.tool-glyph-processing {
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.tool-glyph-processing[hidden] {
+  display: none;
+}
+
+.tool-glyph-processing .tool-glyph-status {
+  margin-bottom: 0.75rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-glyph-status__mark,
+  .tool-glyph-status__mark rect {
+    animation: none !important;
+    transition: none;
+    will-change: auto;
+  }
+}
+
+.contrast-checker__status {
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.contrast-checker__status .tool-glyph-status {
+  grid-template-columns: 2.25rem minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+.contrast-checker__status .tool-glyph-status__mark {
+  width: 2.25rem;
+  height: 2.25rem;
+}
+
+.color-converter__status {
+  justify-content: center;
+  margin-top: var(--space-sm);
+}
+
+.brand-extractor__loading .tool-glyph-status {
+  margin-bottom: 0.75rem;
+}
+
+.brand-extractor__results-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: var(--space-lg);
+}
+
+.brand-extractor__results-heading .tool-glyph-status {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.gradient-tool__status {
+  margin: calc(var(--space-lg) * -1) 0 var(--space-lg);
+}
+
+.color-palette-tool__status .tool-glyph-status,
+.palette-preview-tool__status .tool-glyph-status {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  flex: 0 0 auto;
+  color: var(--color-text);
+}
+
+.favicon-generator__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: var(--space-xl) 0 var(--space-lg);
+}
+
+.favicon-generator__heading .tool-glyph-status {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.svg-converter__status {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.5rem;
+  padding: 0.65rem 0;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.svg-converter__status .tool-glyph-status {
+  width: 2.25rem;
+  height: 2.25rem;
+  margin: 0;
+  flex: 0 0 auto;
+  color: var(--color-text);
+}
+
+.svg-converter__status p {
+  margin: 0;
+}
+
+.fp-glyph-status {
+  margin: calc(var(--space-lg) * -1) 0 var(--space-md);
+}
+
+@keyframes triptychGlyphLoading {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes toolGlyphSparkle {
+  0%, 100% { transform: scale(1); }
+  45% { transform: scale(1.12); }
+}

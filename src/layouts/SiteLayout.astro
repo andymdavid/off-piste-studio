@@ -1,4 +1,10 @@
 ---
+import geistFont from '../assets/fonts/Geist-Variable.woff2?url';
+import serifFont from '../assets/fonts/GeistSerif-Regular.woff2?url';
+import logoFont from '../assets/fonts/BebasNeue-Regular.woff2?url';
+import homeSharedStyles from '../styles/site/shared.css?inline';
+import homePageStyles from '../styles/site/home.css?inline';
+import navigationStyles from '../styles/site/navigation.css?inline';
 import sharedStyles from '../styles/site/shared.css?url';
 const siteStyles = import.meta.glob('../styles/site/*.css', { eager: true, query: '?url', import: 'default' });
 const toolStyles = import.meta.glob('../styles/tools/*.css', { eager: true, query: '?url', import: 'default' });
@@ -12,11 +18,18 @@ const toolPageStyles = pageType === 'tool' ? toolStyles[`../styles/tools/${bodyA
 <!doctype html>
 <html lang="en">
   <head>
+    <link rel="preload" href={geistFont} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={logoFont} as="font" type="font/woff2" crossorigin />
+    {pageType === "duplicate-home" && <link rel="preload" href={serifFont} as="font" type="font/woff2" crossorigin />}
     <slot name="head" />
-    <link rel="stylesheet" href={sharedStyles} />
-    {pageStyles && <link rel="stylesheet" href={pageStyles} />}
+    {/* Inline the bounded homepage styles to avoid a blocking CSS round trip and any deferred-style flash. Other routes retain cacheable bundles. */}
+    {pageType === "duplicate-home" ? <style is:inline set:html={homeSharedStyles + homePageStyles} /> : <Fragment>
+      <link rel="stylesheet" href={sharedStyles} />
+      {pageStyles && <link rel="stylesheet" href={pageStyles} />}
+    </Fragment>}
     {pageType === 'tool' && <link rel="stylesheet" href={toolStyles['../styles/tools/shared.css']} />}
     {toolPageStyles && <link rel="stylesheet" href={toolPageStyles} />}
+    <style is:inline set:html={navigationStyles} />
   </head>
   <body {...bodyAttributes}>
     <script is:inline>

@@ -2,6 +2,7 @@ import { parseColor, rgbToHex, rgbToHsl, hslToRgb } from './color-utils.js';
 import { contrastRatio, checkWcag } from './wcag-utils.js';
 import { copyToClipboard } from './export-utils.js';
 import { attachColorPicker } from './color-picker.js';
+import { createGlyphStatus } from '../glyph-status.js';
 
 function init() {
   const textInput = document.getElementById('text-color');
@@ -19,6 +20,11 @@ function init() {
   const fixHex = document.getElementById('fix-hex');
   const fixApply = document.getElementById('fix-apply');
   const copyRatio = document.getElementById('copy-ratio');
+  const glyphStatus = createGlyphStatus({
+    container: document.getElementById('contrast-glyph-status'),
+    svg: document.getElementById('contrast-glyph-mark'),
+    label: document.getElementById('contrast-glyph-label'),
+  });
 
   function update() {
     const text = parseColor(textInput.value);
@@ -26,6 +32,8 @@ function init() {
 
     if (!text || !bg) {
       ratioDisplay.textContent = '--';
+      glyphStatus?.setState('focus', 'Enter two valid colours to calculate contrast');
+      fixSuggestion.hidden = true;
       results.forEach(r => {
         r.classList.remove('pass', 'fail');
         r.querySelector('.wcag-result__status').textContent = '--';
@@ -39,8 +47,15 @@ function init() {
 
     const ratio = contrastRatio(text.r, text.g, text.b, bg.r, bg.g, bg.b);
     const wcag = checkWcag(ratio);
+    const ratioLabel = `${ratio.toFixed(2)}:1`;
 
-    ratioDisplay.textContent = ratio.toFixed(2) + ':1';
+    ratioDisplay.textContent = ratioLabel;
+    glyphStatus?.setState(
+      wcag.aa.normal ? 'check' : 'error',
+      wcag.aa.normal
+        ? `Passes WCAG AA for normal text at ${ratioLabel}`
+        : `Fails WCAG AA for normal text at ${ratioLabel}`,
+    );
 
     // Update pass/fail indicators
     const checks = [

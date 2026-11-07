@@ -1,12 +1,21 @@
 import { parseColor, rgbToHex, rgbToHsl, hslToRgb } from './color-utils.js';
 import { copyToClipboard } from './export-utils.js';
 import { attachColorPicker } from './color-picker.js';
+import { createGlyphStatus } from '../glyph-status.js';
 
 function init() {
   const previewFrame = document.getElementById('preview-frame');
   const templateBtns = document.querySelectorAll('[data-template]');
   const colorInputs = document.querySelectorAll('.preview-color-input');
   const resetBtn = document.getElementById('preview-reset');
+  const glyphStatus = document.getElementById('preview-glyph-status');
+  const glyphLabel = document.getElementById('preview-glyph-label');
+  const statusCopy = document.getElementById('preview-status-copy');
+  const glyphController = createGlyphStatus({
+    container: glyphStatus,
+    svg: glyphStatus.querySelector('svg'),
+    label: glyphLabel,
+  });
 
   const roles = ['primary', 'secondary', 'accent', 'bg', 'text', 'muted'];
 
@@ -22,6 +31,13 @@ function init() {
 
   let colors = { ...defaults };
   let activeTemplate = 'services';
+  let hasImportedPalette = false;
+
+  function setPreviewStatus(state, label, copy, animate = false) {
+    if (animate) glyphController?.activateState(state, label);
+    else glyphController?.setState(state, label);
+    statusCopy.textContent = copy;
+  }
 
   function loadFromParams() {
     const params = new URLSearchParams(window.location.search);
@@ -29,6 +45,7 @@ function init() {
     const templateParam = params.get('template');
 
     if (colorsParam) {
+      hasImportedPalette = true;
       const hexes = colorsParam.split(',').map(h => '#' + h.replace(/^#/, ''));
       const assignments = ['primary', 'secondary', 'accent', 'bg', 'text', 'muted'];
       hexes.forEach((hex, i) => {
@@ -120,6 +137,7 @@ function init() {
         colors[role] = hex;
         text.value = hex;
         updatePreview();
+        setPreviewStatus('sparkle', 'Preview updated', `Preview updated with the new ${role} colour.`, true);
       },
     });
 
@@ -131,6 +149,7 @@ function init() {
         picker.value = hex;
         text.value = hex;
         updatePreview();
+        setPreviewStatus('sparkle', 'Preview updated', `Preview updated with the new ${role} colour.`, true);
       }
     });
   });
@@ -140,6 +159,7 @@ function init() {
     btn.addEventListener('click', () => {
       activeTemplate = btn.dataset.template;
       updatePreview();
+      setPreviewStatus('sparkle', 'Template changed', `${btn.textContent.trim()} preview selected.`, true);
     });
   });
 
@@ -148,12 +168,18 @@ function init() {
     colors = { ...defaults };
     syncInputs();
     updatePreview();
+    setPreviewStatus('sparkle', 'Preview reset', 'Default palette restored.', true);
   });
 
   // Init
   loadFromParams();
   syncInputs();
   updatePreview();
+  if (hasImportedPalette) {
+    setPreviewStatus('sparkle', 'Imported palette applied', 'Imported palette applied to the preview.', true);
+  } else {
+    setPreviewStatus('focus', 'Preview ready', 'Adjust a colour to update the preview.');
+  }
 }
 
 document.addEventListener('DOMContentLoaded', init);

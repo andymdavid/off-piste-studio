@@ -122,7 +122,7 @@ import Footer from '../../components/Footer.astro';
       </div>
     </section>
 
-    <section class="tool-app">
+    <section class="tool-app" id="svg-to-png-tool">
       <div class="container">
         <div class="svg-converter">
           <!-- Input mode tabs -->
@@ -131,11 +131,19 @@ import Footer from '../../components/Footer.astro';
             <button class="svg-converter__tab" id="tab-paste" type="button">Paste Code</button>
           </div>
 
+          <div class="svg-converter__status" id="svg-converter-status">
+            <div class="tool-glyph-status" id="svg-glyph-status" role="status" aria-live="polite">
+              <svg class="tool-glyph-status__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"></svg>
+              <span class="tool-glyph-status__label" id="svg-glyph-label">Ready for an SVG</span>
+            </div>
+            <p id="svg-status-copy">Ready for an SVG file or pasted markup.</p>
+          </div>
+
           <!-- File upload dropzone -->
           <div class="brand-extractor__dropzone" id="dropzone">
-            <input type="file" id="file-input" accept=".svg,image/svg+xml" hidden="">
+            <input type="file" id="file-input" accept=".svg,image/svg+xml" hidden>
             <div class="brand-extractor__dropzone-content">
-              <svg class="brand-extractor__dropzone-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+              <svg class="brand-extractor__dropzone-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
               <p class="brand-extractor__dropzone-text">Drag and drop your SVG file here</p>
               <p class="brand-extractor__dropzone-subtext">SVG files only</p>
               <button class="brand-extractor__browse" id="browse-btn" type="button">Browse Files</button>
@@ -143,23 +151,19 @@ import Footer from '../../components/Footer.astro';
           </div>
 
           <!-- SVG code textarea -->
-          <div class="svg-converter__paste" id="paste-area" hidden="">
+          <div class="svg-converter__paste" id="paste-area" hidden>
             <label class="tool-label" for="svg-code">SVG Code</label>
-            <textarea class="svg-converter__textarea" id="svg-code" placeholder="Paste your SVG code here
-
-<svg viewBox=&quot;0 0 100 100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;>
-  ...
-</svg>" spellcheck="false"></textarea>
+            <textarea class="svg-converter__textarea" id="svg-code" placeholder="Paste your SVG code here&#10;&#10;&lt;svg viewBox=&quot;0 0 100 100&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&#10;  ...&#10;&lt;/svg&gt;" spellcheck="false"></textarea>
             <button class="svg-converter__load-btn" id="load-svg-btn" type="button">Load SVG</button>
           </div>
 
           <!-- Settings + Preview (shown after SVG is loaded) -->
-          <div class="svg-converter__workspace" id="workspace" hidden="">
+          <div class="svg-converter__workspace" id="workspace" hidden>
             <!-- Reset button -->
             <div class="svg-converter__toolbar">
               <span class="svg-converter__filename" id="svg-filename"></span>
               <button class="brand-extractor__reset" id="reset-btn" type="button">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
                 New File
               </button>
             </div>
@@ -170,14 +174,14 @@ import Footer from '../../components/Footer.astro';
                 <label class="tool-label" for="output-width">Width (px)</label>
                 <input class="tool-text-input tool-text-input--small" type="number" id="output-width" min="1" max="8192" step="1">
               </div>
-              <span class="svg-converter__dim-x" aria-hidden="true">×</span>
+              <span class="svg-converter__dim-x" aria-hidden="true">&times;</span>
               <div class="svg-converter__dim-group">
                 <label class="tool-label" for="output-height">Height (px)</label>
                 <input class="tool-text-input tool-text-input--small" type="number" id="output-height" min="1" max="8192" step="1">
               </div>
               <div class="svg-converter__dim-group svg-converter__dim-group--lock">
                 <button class="svg-converter__lock-btn is-locked" id="lock-ratio" type="button" title="Lock aspect ratio" aria-label="Lock aspect ratio" aria-pressed="true">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0110 0v4"></path></svg>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
                 </button>
               </div>
             </div>

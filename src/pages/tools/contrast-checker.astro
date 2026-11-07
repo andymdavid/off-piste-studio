@@ -122,7 +122,7 @@ import Footer from '../../components/Footer.astro';
       </div>
     </section>
 
-    <section class="tool-app">
+    <section class="tool-app" id="contrast-checker-tool">
       <div class="container">
         <div class="contrast-checker">
           <!-- Color inputs -->
@@ -136,7 +136,7 @@ import Footer from '../../components/Footer.astro';
             </div>
 
             <button id="swap-colors" class="contrast-checker__swap" type="button" aria-label="Swap text and background colours">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"></path></svg>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg>
             </button>
 
             <div class="contrast-checker__input-group">
@@ -145,6 +145,13 @@ import Footer from '../../components/Footer.astro';
                 <input type="color" id="bg-picker" value="#f5f5f5" class="tool-color-input__picker" aria-label="Background colour picker">
                 <input type="text" id="bg-color" value="#f5f5f5" class="tool-color-input__text" placeholder="#ffffff" spellcheck="false" autocomplete="off">
               </div>
+            </div>
+          </div>
+
+          <div class="contrast-checker__status">
+            <div class="tool-glyph-status" id="contrast-glyph-status" role="status" aria-live="polite">
+              <svg class="tool-glyph-status__mark" id="contrast-glyph-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"></svg>
+              <span class="tool-glyph-status__label" id="contrast-glyph-label">Checking colour contrast</span>
             </div>
           </div>
 
@@ -190,7 +197,7 @@ import Footer from '../../components/Footer.astro';
           </div>
 
           <!-- Fix suggestion -->
-          <div class="contrast-checker__fix" id="fix-suggestion" hidden="">
+          <div class="contrast-checker__fix" id="fix-suggestion" hidden>
             <span class="contrast-checker__fix-label">Suggested accessible alternative:</span>
             <div class="contrast-checker__fix-color">
               <span class="contrast-checker__fix-swatch" id="fix-swatch"></span>

@@ -3,12 +3,14 @@ import { test, expect } from '@playwright/test';
 test('both themes persist across navigation and reload', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('body')).toHaveAttribute('data-theme', 'dark');
+  await page.locator('[data-duplicate-nav-toggle]').click();
   await page.locator('[data-theme-toggle]').click();
   await expect(page.locator('body')).toHaveAttribute('data-theme', 'light');
   await page.reload();
   await expect(page.locator('body')).toHaveAttribute('data-theme', 'light');
   await page.goto('/about');
   await expect(page.locator('body')).toHaveAttribute('data-theme', 'light');
+  await page.locator('[data-duplicate-nav-toggle]').click();
   await page.locator('[data-theme-toggle]').click();
   await expect(page.locator('body')).toHaveAttribute('data-theme', 'dark');
   await page.goto('/');
@@ -22,7 +24,7 @@ test('representative routes and all tools load without JS errors or missing loca
   for (const route of ['/', '/about', '/pricing', '/work', '/resources', '/services/website-design', '/locations', '/industries/electricians', '/locations/perth', '/contact', '/insights/website-redesign-checklist', ...['color-palette','color-converter','contrast-checker','brand-color-extractor','favicon-generator','font-pairing','gradient-generator','palette-preview','svg-to-png'].map(tool => `/tools/${tool}`)]) {
     await page.goto(route);
     await expect(page.locator('main')).toBeVisible();
-    await expect(page.locator('[data-theme-toggle]')).toBeVisible();
+    await expect(page.locator('[data-duplicate-nav-toggle]')).toBeVisible();
   }
   expect(errors).toEqual([]);
 });
@@ -75,7 +77,7 @@ test('header and site footer preserve the original logo font on all page familie
       await page.goto(route);
       await page.evaluate(() => document.fonts.ready);
       await expect(page.locator('footer.footer--current')).toHaveCount(1);
-      for (const selector of ['.duplicate-header__brand-text', '.footer__brand-text']) {
+      for (const selector of ['.duplicate-header__wordmark-link', '.footer__brand-text']) {
         await expect(page.locator(selector)).toBeVisible();
         expect(await page.locator(selector).evaluate(el => getComputedStyle(el).fontFamily)).toContain('Bebas Neue');
       }
@@ -133,4 +135,57 @@ test('archived contact modal remains usable', async ({ page }) => {
   await expect(page.locator('.lead-modal')).toBeVisible();
   await page.locator('.lead-modal__close').click();
   await expect(page.locator('.lead-modal')).toBeHidden();
+});
+
+test('restored glyph navigation supports keyboard, studio summary and both themes', async ({ page }) => {
+  for (const theme of ['dark', 'light']) {
+    await page.addInitScript(theme => localStorage.setItem('off-piste-duplicate-theme', theme), theme);
+    await page.goto('/');
+    const toggle = page.locator('[data-duplicate-nav-toggle]');
+    const menu = page.locator('#duplicate-site-menu');
+    await expect(menu).toHaveJSProperty('inert', true);
+    await toggle.click();
+    await expect(menu).toHaveJSProperty('inert', false);
+    await expect(menu.locator('a').first()).toBeFocused();
+    const info = page.getByRole('button', { name:'Open studio information', exact:true });
+    await info.click();
+    const summary = page.locator('[data-info-overlay]');
+    await expect(summary).toHaveAttribute('aria-hidden','false');
+    await expect(summary).toHaveJSProperty('inert',false);
+    expect(await summary.evaluate(element => getComputedStyle(element).backgroundColor)).not.toBe('rgba(0, 0, 0, 0)');
+    await expect(toggle).toHaveAttribute('aria-expanded','false');
+    await page.keyboard.press('Escape');
+    await expect(summary).toHaveJSProperty('inert',true);
+    await expect(toggle).toBeFocused();
+    await toggle.click();
+    await page.keyboard.press('Escape');
+    await expect(toggle).toBeFocused();
+    await expect(page.locator('[data-brand-glyph] rect')).toHaveCount(5);
+  }
+});
+
+test('homepage CSS is available without requests and responsive logos reserve their geometry', async ({ page }) => {
+  const css = [];
+  page.on('request', request => { if (request.resourceType() === 'stylesheet') css.push(request.url()); });
+  await page.goto('/');
+  expect(css).toEqual([]);
+  await expect(page.locator('.duplicate-header img')).toHaveCount(0);
+  const logos = await page.locator('.client-bar__logo').evaluateAll(elements => elements.map(image => ({srcset:image.srcset,width:image.width,height:image.height})));
+  expect(logos.length).toBeGreaterThan(0);
+  for (const logo of logos) { expect(logo.srcset).toContain('360w'); expect(logo.width).toBeGreaterThan(0); expect(logo.height).toBeGreaterThan(0); }
+  expect(await page.locator('.testimonials__logo').evaluateAll(elements => elements.every(image => image.hasAttribute('width') && image.hasAttribute('height')))).toBe(true);
+});
+
+test('glyph feedback handles invalid tool input and respects reduced motion', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion:'reduce' });
+  await page.goto('/tools/color-converter');
+  await page.locator('#hex-input').fill('invalid');
+  await expect(page.locator('#converter-glyph-status')).toHaveAttribute('data-state','error');
+  await expect(page.locator('#converter-glyph-label')).toHaveText('Enter a valid colour value');
+  await page.locator('#hex-input').fill('#ff0000');
+  await expect(page.locator('#converter-glyph-status')).toHaveAttribute('data-state','check');
+  expect(await page.locator('.tool-glyph-status__mark').evaluate(element => element.getAnimations({subtree:true}).length)).toBe(0);
+  await page.goto('/');
+  await page.locator('[data-brand-glyph]').hover();
+  await expect(page.locator('[data-brand-glyph]')).toHaveAttribute('data-glyph-state','base');
 });

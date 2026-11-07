@@ -1,3 +1,5 @@
+import { GLYPH_STATES } from './glyph-states.js';
+import { animateGlyphRects } from './glyph-animator.js';
 // Off Piste Studio - Main JavaScript
 
 
@@ -35,47 +37,161 @@ function initCurrentHeader() {
 
   const toggle = header.querySelector('[data-duplicate-nav-toggle]');
   const overlay = document.querySelector('[data-duplicate-nav-overlay]');
+  const menu = header.querySelector('#duplicate-site-menu');
   const closeTargets = header.querySelectorAll('[data-duplicate-nav-close]');
 
   const syncHeaderState = () => {
     header.classList.toggle('is-scrolled', window.scrollY > 24);
   };
 
-  const setMenuOpen = (isOpen) => {
+  const menuFocusable = () => [...header.querySelectorAll('a[href], button:not([disabled])')]
+    .filter(element => element.offsetParent !== null && getComputedStyle(element).visibility !== 'hidden');
+
+  const setMenuOpen = (isOpen, { restoreFocus = false } = {}) => {
     header.classList.toggle('is-open', isOpen);
     header.dataset.navigationStatus = isOpen ? 'active' : 'not-active';
     document.body.dataset.duplicateNavOpen = isOpen ? 'true' : 'false';
+    overlay?.setAttribute('aria-hidden', String(!isOpen));
+
+    if (menu) {
+      menu.inert = !isOpen;
+      menu.setAttribute('aria-hidden', String(!isOpen));
+    }
 
     if (toggle) {
       toggle.setAttribute('aria-expanded', String(isOpen));
       toggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
     }
+
+    if (isOpen) {
+      window.requestAnimationFrame(() => menu?.querySelector('a[href]')?.focus());
+    } else if (restoreFocus) {
+      toggle?.focus();
+    }
   };
 
-  const closeMenu = () => {
-    setMenuOpen(false);
+  const closeMenu = (restoreFocus = false) => {
+    setMenuOpen(false, { restoreFocus });
   };
 
   const toggleMenu = () => {
-    setMenuOpen(!header.classList.contains('is-open'));
+    const isOpen = header.classList.contains('is-open');
+    setMenuOpen(!isOpen, { restoreFocus: isOpen });
   };
 
   syncHeaderState();
+  setMenuOpen(false);
   window.addEventListener('scroll', syncHeaderState, { passive: true });
 
   if (toggle) {
     toggle.addEventListener('click', toggleMenu);
   }
 
-  overlay?.addEventListener('click', closeMenu);
+  overlay?.addEventListener('click', () => closeMenu(true));
+  header.addEventListener('duplicate-nav:close', () => closeMenu(false));
 
   closeTargets.forEach(target => {
-    target.addEventListener('click', closeMenu);
+    target.addEventListener('click', () => closeMenu(false));
   });
 
   document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') closeMenu();
+    if (event.key === 'Escape' && header.classList.contains('is-open')) {
+      event.preventDefault();
+      closeMenu(true);
+      return;
+    }
+
+    if (event.key !== 'Tab' || !header.classList.contains('is-open')) return;
+    const focusable = menuFocusable();
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
+}
+
+function initBrandGlyph() {
+  const glyph = document.querySelector('[data-brand-glyph]');
+  if (!glyph) return;
+
+  const brand = glyph.closest('.duplicate-header__brand');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const rects = [...glyph.querySelectorAll('rect')];
+  let idleTimer = 0;
+  let winkTimer = 0;
+  let isWinking = false;
+
+  if (rects.length !== GLYPH_STATES.base.blocks.length) return;
+
+  const setGlyphState = (stateId, animate = true) => {
+    animateGlyphRects(rects, GLYPH_STATES[stateId].blocks, {
+      duration: 180,
+      reducedMotion: reducedMotion.matches || !animate,
+    });
+    glyph.dataset.glyphState = stateId;
+  };
+
+  const clearIdleTimer = () => {
+    window.clearTimeout(idleTimer);
+    idleTimer = 0;
+  };
+
+  const clearWinkTimer = () => {
+    window.clearTimeout(winkTimer);
+    winkTimer = 0;
+  };
+
+  const scheduleIdleWink = () => {
+    clearIdleTimer();
+    if (reducedMotion.matches || document.hidden) return;
+    const delay = 10000 + Math.random() * 8000;
+    idleTimer = window.setTimeout(() => wink(), delay);
+  };
+
+  const wink = () => {
+    if (isWinking || reducedMotion.matches || document.hidden) {
+      scheduleIdleWink();
+      return;
+    }
+
+    isWinking = true;
+    setGlyphState('wink');
+    winkTimer = window.setTimeout(() => {
+      setGlyphState('base');
+      isWinking = false;
+      scheduleIdleWink();
+    }, 480);
+  };
+
+  brand?.addEventListener('pointerenter', wink);
+  brand?.addEventListener('focusin', wink);
+
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      clearIdleTimer();
+      clearWinkTimer();
+      setGlyphState('base', false);
+      isWinking = false;
+      return;
+    }
+    scheduleIdleWink();
+  });
+
+  reducedMotion.addEventListener?.('change', () => {
+    clearWinkTimer();
+    setGlyphState('base', false);
+    isWinking = false;
+    scheduleIdleWink();
+  });
+
+  setGlyphState('base', false);
+  scheduleIdleWink();
 }
 
 function initThemeToggle() {
@@ -124,6 +240,152 @@ function initThemeToggle() {
       setTheme(nextTheme);
       storeTheme(nextTheme);
     });
+  });
+}
+
+function initInfoOverlay() {
+  const actions = document.querySelector('.duplicate-header__actions');
+  const themeToggle = actions?.querySelector('[data-theme-toggle]');
+  if (!actions || !themeToggle || document.querySelector('[data-info-overlay]')) return;
+
+  const toggle = document.createElement('button');
+  toggle.className = 'duplicate-info-toggle duplicate-theme-toggle';
+  toggle.type = 'button';
+  toggle.setAttribute('aria-label', 'Open studio information');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.setAttribute('aria-controls', 'studio-info-overlay');
+  toggle.innerHTML = `
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="8.5"></circle>
+      <path d="M9 9l6 6M15 9l-6 6"></path>
+    </svg>`;
+  actions.insertBefore(toggle, themeToggle);
+
+  const overlay = document.createElement('section');
+  overlay.className = 'studio-info-overlay';
+  overlay.id = 'studio-info-overlay';
+  overlay.dataset.infoOverlay = '';
+  overlay.setAttribute('role', 'dialog');
+  overlay.setAttribute('aria-modal', 'true');
+  overlay.setAttribute('aria-labelledby', 'studio-info-title');
+  overlay.setAttribute('aria-hidden', 'true');
+  overlay.inert = true;
+  overlay.innerHTML = `
+    <div class="studio-info-overlay__inner">
+      <div class="studio-info-overlay__grid">
+        <div class="studio-info-overlay__contact">
+          <p class="studio-info-overlay__label">Get in touch</p>
+          <p><a href="mailto:hello@offpistestudio.com">hello@offpistestudio.com</a></p>
+          <p><a href="https://www.linkedin.com/company/off-piste-studio" target="_blank" rel="noopener">LinkedIn</a></p>
+          <p class="studio-info-overlay__label studio-info-overlay__label--spaced">Based in</p>
+          <p>Leederville, WA<br>Australia, 6007</p>
+          <p>Available worldwide</p>
+        </div>
+
+        <div class="studio-info-overlay__about">
+          <p class="studio-info-overlay__label">About</p>
+          <h2 id="studio-info-title">Off Piste Studio is a strategic design and technology partner for growing businesses.</h2>
+          <p>We bring brand, websites, search, content and practical AI together to turn expertise into a clearer signal—and that signal into growth.</p>
+          <p>Our work combines taste, judgement and technology to help ambitious companies look sharper, explain their value faster and convert more of the right attention.</p>
+        </div>
+
+        <div class="studio-info-overlay__services">
+          <p class="studio-info-overlay__label">What we do</p>
+          <ul>
+            <li>Brand strategy + identity</li>
+            <li>Website design + development</li>
+            <li>UX/UI product design</li>
+            <li>Search + content systems</li>
+            <li>AI-enabled workflows</li>
+            <li>Ongoing growth support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="studio-info-overlay__footer" aria-hidden="true">
+        <span class="studio-info-overlay__wordmark">Off Piste Studio</span>
+      </div>
+    </div>`;
+  document.body.appendChild(overlay);
+
+  const wordmark = overlay.querySelector('.studio-info-overlay__wordmark');
+  if (wordmark) {
+    wordmark.innerHTML = Array.from(wordmark.textContent || '').map((character, index) => {
+      const className = character === ' '
+        ? 'studio-info-overlay__wordmark-letter studio-info-overlay__wordmark-letter--space'
+        : 'studio-info-overlay__wordmark-letter';
+      const glyph = character === ' ' ? '&nbsp;' : character;
+      return `<span class="${className}" style="--wordmark-letter-index: ${index}"><span class="studio-info-overlay__wordmark-glyph">${glyph}</span></span>`;
+    }).join('');
+  }
+
+  const scaleWordmark = () => {
+    if (!wordmark) return;
+    wordmark.style.setProperty('--studio-info-wordmark-scale', '1');
+    const availableWidth = wordmark.parentElement?.clientWidth || 0;
+    const textWidth = wordmark.scrollWidth;
+    if (availableWidth > 0 && textWidth > 0) {
+      wordmark.style.setProperty('--studio-info-wordmark-scale', String(availableWidth / textWidth));
+    }
+  };
+
+  if (document.fonts) document.fonts.ready.then(scaleWordmark);
+  window.addEventListener('resize', scaleWordmark, { passive: true });
+
+  let previouslyFocused = null;
+
+  const setOpen = isOpen => {
+    if (isOpen) {
+      actions.closest('[data-duplicate-header]')?.dispatchEvent(new CustomEvent('duplicate-nav:close'));
+    }
+
+    document.body.dataset.infoOpen = String(isOpen);
+    toggle.setAttribute('aria-expanded', String(isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Close studio information' : 'Open studio information');
+    overlay.setAttribute('aria-hidden', String(!isOpen));
+    overlay.inert = !isOpen;
+
+    if (isOpen) {
+      previouslyFocused = document.activeElement;
+      requestAnimationFrame(() => {
+        scaleWordmark();
+        overlay.querySelector('a')?.focus({ preventScroll: true });
+      });
+    } else if (previouslyFocused instanceof HTMLElement) {
+      if (previouslyFocused.offsetParent !== null && getComputedStyle(previouslyFocused).visibility !== 'hidden') previouslyFocused.focus({ preventScroll: true });
+      else actions.querySelector('[data-duplicate-nav-toggle]')?.focus({ preventScroll: true });
+    }
+  };
+
+  toggle.addEventListener('click', () => {
+    setOpen(document.body.dataset.infoOpen !== 'true');
+  });
+
+  overlay.addEventListener('click', event => {
+    if (event.target === overlay) setOpen(false);
+  });
+
+  document.addEventListener('keydown', event => {
+    if (document.body.dataset.infoOpen !== 'true') return;
+
+    if (event.key === 'Escape') {
+      setOpen(false);
+      return;
+    }
+
+    if (event.key === 'Tab') {
+      const focusable = [toggle, ...overlay.querySelectorAll('a[href], button:not([disabled])')];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    }
   });
 }
 
@@ -1187,6 +1449,8 @@ function initEstimator() {
 
 function initSite() {
   initCurrentHeader();
+  initBrandGlyph();
+  initInfoOverlay();
   initThemeToggle();
   initMobileMenu();
   initHeaderDropdowns();

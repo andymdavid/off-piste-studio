@@ -2,6 +2,7 @@ import { parseColor, rgbToHex, rgbToHsl, hslToRgb, nearestColorName } from './co
 import { copyToClipboard } from './export-utils.js';
 import { attachColorPicker } from './color-picker.js';
 import { nearestTailwind } from './tailwind-colors.js';
+import { createGlyphStatus } from '../glyph-status.js';
 
 function init() {
   const hexInput = document.getElementById('hex-input');
@@ -18,6 +19,11 @@ function init() {
   const twClass = document.getElementById('tw-class');
   const twSwatch = document.getElementById('tw-swatch');
   const twExact = document.getElementById('tw-exact');
+  const glyphStatus = createGlyphStatus({
+    container: document.getElementById('converter-glyph-status'),
+    svg: document.getElementById('converter-glyph-mark'),
+    label: document.getElementById('converter-glyph-label'),
+  });
 
   let updating = false;
 
@@ -42,6 +48,7 @@ function init() {
     twClass.textContent = `bg-${tw.name}`;
     twSwatch.style.backgroundColor = tw.hex;
     twExact.textContent = tw.distance === 0 ? 'exact match' : `nearest (${tw.hex})`;
+    glyphStatus?.setState('check', `${hex} converted successfully`);
 
     // Update URL without reload
     const url = new URL(window.location);
@@ -54,7 +61,11 @@ function init() {
   // Hex input
   hexInput.addEventListener('input', () => {
     const color = parseColor(hexInput.value);
-    if (color) updateFromRgb(color.r, color.g, color.b, 'hex');
+    if (color) {
+      updateFromRgb(color.r, color.g, color.b, 'hex');
+    } else {
+      glyphStatus?.setState('error', 'Enter a valid colour value');
+    }
   });
 
   // RGB inputs

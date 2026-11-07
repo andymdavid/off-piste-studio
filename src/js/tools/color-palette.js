@@ -1,6 +1,7 @@
 import { parseColor, rgbToHex, rgbToHsl, hslToRgb } from './color-utils.js';
 import { generateHarmony, randomColor } from './palette-utils.js';
 import { copyToClipboard } from './export-utils.js';
+import { createGlyphStatus } from '../glyph-status.js';
 
 function init() {
   const slotsContainer = document.getElementById('palette-slots');
@@ -11,6 +12,19 @@ function init() {
   const exportHex = document.getElementById('palette-export-hex');
   const copyCssBtn = document.getElementById('palette-copy-css');
   const copyHexBtn = document.getElementById('palette-copy-hex');
+  const glyphStatus = document.getElementById('palette-glyph-status');
+  const glyphLabel = document.getElementById('palette-glyph-label');
+  const statusCopy = document.getElementById('palette-status-copy');
+  const glyphController = createGlyphStatus({
+    container: glyphStatus,
+    svg: glyphStatus.querySelector('svg'),
+    label: glyphLabel,
+  });
+
+  function showGeneratedStatus(copy = 'Palette generated. Lock any colours you want to keep.') {
+    glyphController?.activateState('sparkle', 'Palette generated');
+    statusCopy.textContent = copy;
+  }
 
   // State: 5 colour slots, each with {h, s, l, locked}
   let slots = [];
@@ -55,6 +69,7 @@ function init() {
     }
 
     render();
+    showGeneratedStatus('Palette ready. Lock any colours you want to keep, then generate again.');
   }
 
   function generateNewPalette() {
@@ -165,6 +180,7 @@ function init() {
   generateBtn.addEventListener('click', () => {
     generateNewPalette();
     render();
+    showGeneratedStatus();
   });
 
   randomBtn.addEventListener('click', () => {
@@ -173,11 +189,13 @@ function init() {
     slots = [];
     generateNewPalette();
     render();
+    showGeneratedStatus('Fresh palette generated. Lock any colours you want to keep.');
   });
 
   modeSelect.addEventListener('change', () => {
     generateNewPalette();
     render();
+    showGeneratedStatus(`Palette updated using ${modeSelect.options[modeSelect.selectedIndex].text}.`);
   });
 
   // Spacebar to regenerate
@@ -186,6 +204,7 @@ function init() {
       e.preventDefault();
       generateNewPalette();
       render();
+      showGeneratedStatus();
     }
   });
 

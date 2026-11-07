@@ -1,3 +1,7 @@
+import { createGlyphStatus } from '../glyph-status.js';
+
+const LOADING_DELAY = 150;
+
 function init() {
   const tabUpload = document.getElementById('tab-upload');
   const tabPaste = document.getElementById('tab-paste');
@@ -17,6 +21,9 @@ function init() {
   const previewCanvas = document.getElementById('preview-canvas');
   const outputFilesize = document.getElementById('output-filesize');
   const downloadBtn = document.getElementById('download-btn');
+  const glyphStatus = document.getElementById('svg-glyph-status');
+  const glyphLabel = document.getElementById('svg-glyph-label');
+  const statusCopy = document.getElementById('svg-status-copy');
 
   let svgBlobUrl = null;
   let originalWidth = 0;
@@ -25,20 +32,48 @@ function init() {
   let ratioLocked = true;
   let currentScale = 1;
   let loadedImg = null;
+  let isProcessing = false;
+  let loadingTimer = 0;
+  const glyphController = createGlyphStatus({
+    container: glyphStatus,
+    svg: glyphStatus.querySelector('svg'),
+    label: glyphLabel,
+  });
+  const setGlyphState = (state, label) => glyphController?.setState(state, label);
+  const clearLoadingTimer = () => {
+    window.clearTimeout(loadingTimer);
+    loadingTimer = 0;
+  };
+
+  function setStatus(state, label, copy) {
+    setGlyphState(state, label);
+    statusCopy.textContent = copy;
+  }
+
+  function setProcessing(processing) {
+    isProcessing = processing;
+    browseBtn.disabled = processing;
+    loadSvgBtn.disabled = processing;
+    resetBtn.disabled = processing;
+  }
 
   // Tab switching
   tabUpload.addEventListener('click', () => {
+    if (isProcessing) return;
     tabUpload.classList.add('is-active');
     tabPaste.classList.remove('is-active');
     dropzone.hidden = false;
     pasteArea.hidden = true;
+    setStatus('focus', 'Ready for an SVG', 'Ready for an SVG file.');
   });
 
   tabPaste.addEventListener('click', () => {
+    if (isProcessing) return;
     tabPaste.classList.add('is-active');
     tabUpload.classList.remove('is-active');
     dropzone.hidden = true;
     pasteArea.hidden = false;
+    setStatus('focus', 'Ready for SVG markup', 'Paste valid SVG markup to continue.');
   });
 
   // Drag and drop
@@ -70,7 +105,7 @@ function init() {
     const code = svgCodeInput.value.trim();
     if (!code) return;
     if (!code.includes('<svg')) {
-      alert('No valid SVG element found. Please paste SVG markup starting with <svg>.');
+      setStatus('error', 'SVG markup is invalid', 'Paste SVG markup beginning with an <svg> element.');
       return;
     }
     const blob = new Blob([code], { type: 'image/svg+xml;charset=utf-8' });
@@ -79,12 +114,13 @@ function init() {
   });
 
   function handleFile(file) {
+    if (!file || isProcessing) return;
     if (!file.name.toLowerCase().endsWith('.svg') && file.type !== 'image/svg+xml') {
-      alert('Please upload an SVG file.');
+      setStatus('error', 'That file is not an SVG', 'Choose an SVG file to continue.');
       return;
     }
     if (file.size > 10 * 1024 * 1024) {
-      alert('File too large. Maximum size is 10 MB.');
+      setStatus('error', 'That SVG is too large', 'Choose an SVG file smaller than 10MB.');
       return;
     }
     const url = URL.createObjectURL(file);
@@ -94,9 +130,16 @@ function init() {
   function loadSvg(url, filename) {
     if (svgBlobUrl) URL.revokeObjectURL(svgBlobUrl);
     svgBlobUrl = url;
+    setProcessing(true);
+    statusCopy.textContent = 'Preparing your SVG preview...';
+    clearLoadingTimer();
+    loadingTimer = window.setTimeout(() => {
+      setGlyphState('loading', 'Preparing SVG preview');
+    }, LOADING_DELAY);
 
     const img = new Image();
     img.onload = () => {
+      clearLoadingTimer();
       loadedImg = img;
 
       // Try to get intrinsic dimensions
@@ -122,9 +165,13 @@ function init() {
       pasteArea.hidden = true;
 
       renderPreview();
+      setStatus('check', 'SVG ready', 'Preview ready. Adjust the dimensions or download the PNG.');
+      setProcessing(false);
     };
     img.onerror = () => {
-      alert('Failed to load SVG. Please check the file is valid.');
+      clearLoadingTimer();
+      setStatus('error', 'SVG could not be loaded', 'Check that the SVG markup is valid and try again.');
+      setProcessing(false);
     };
     img.src = url;
   }
@@ -244,7 +291,13 @@ function init() {
     }
     currentScale = 1;
     setActiveScale(1);
+    clearLoadingTimer();
+    setProcessing(false);
+    setStatus('focus', 'Ready for an SVG', 'Ready for an SVG file or pasted markup.');
   });
+
+  window.addEventListener('pagehide', clearLoadingTimer, { once: true });
+  setStatus('focus', 'Ready for an SVG', 'Ready for an SVG file or pasted markup.');
 }
 
 document.addEventListener('DOMContentLoaded', init);
