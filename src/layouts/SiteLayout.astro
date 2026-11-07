@@ -1,5 +1,5 @@
 ---
-import criticalGeist from '../assets/fonts/critical/Geist-Regular.woff2?inline';
+import criticalGeist from '../assets/fonts/critical/Geist-Variable.woff2?inline';
 import criticalSerif from '../assets/fonts/critical/GeistSerif-Regular.woff2?inline';
 import criticalLogo from '../assets/fonts/critical/BebasNeue-Regular.woff2?inline';
 import geistFont from '../assets/fonts/Geist-Variable.woff2?url';
@@ -12,11 +12,11 @@ const siteStyles = import.meta.glob('../styles/site/*.css', { eager: true, query
 const toolStyles = import.meta.glob('../styles/tools/*.css', { eager: true, query: '?url', import: 'default' });
 const { bodyAttributes = {} } = Astro.props;
 const pageType = bodyAttributes['data-page-type'];
-// These regular-weight Latin subsets decode without a network round trip. The
-// complete faces above remain available for other weights and characters.
+// These Latin subsets decode without a network round trip. The
+// complete faces above remain available for other styles and characters.
 const criticalFontStyles = [
-  ['Geist', criticalGeist], ['Geist Serif', criticalSerif], ['Bebas Neue', criticalLogo],
-].map(([family, url]) => `@font-face{font-family:'${family}';src:url('${url}') format('woff2');font-style:normal;font-weight:400;font-display:block;unicode-range:U+20-7E,U+A0,U+A9,U+2013-2014,U+2018-2019,U+201C-201D,U+2022,U+2026,U+2192;}`).join('');
+  ['Geist', criticalGeist, '100 900'], ['Geist Serif', criticalSerif, '400'], ['Bebas Neue', criticalLogo, '400'],
+].map(([family, url, weight]) => `@font-face{font-family:'${family}';src:url('${url}') format('woff2');font-style:normal;font-weight:${weight};font-display:block;unicode-range:U+20-7E,U+A0,U+A9,U+2013-2014,U+2018-2019,U+201C-201D,U+2022,U+2026,U+2192,U+2197;}`).join('');
 // The existing homepage body identifier is retained for saved themes and JS.
 const styleName = pageType === 'duplicate-home' ? 'home' : pageType;
 const pageStyles = siteStyles[`../styles/site/${styleName}.css`];
@@ -39,6 +39,12 @@ const toolPageStyles = pageType === 'tool' ? toolStyles[`../styles/tools/${bodyA
     {toolPageStyles && <link rel="stylesheet" href={toolPageStyles} />}
     <style is:inline set:html={navigationStyles} />
     {pageType === "duplicate-home" && <style is:inline data-critical-fonts set:html={criticalFontStyles} />}
+
+    {pageType === "duplicate-home" && <script is:inline>
+      for (const face of document.fonts || []) {
+        if (face.unicodeRange.startsWith('U+20-7E')) face.load().catch(() => {});
+      }
+    </script>}
   </head>
   <body {...bodyAttributes}>
     <script is:inline>

@@ -1,4 +1,4 @@
-"""Generate regular-weight homepage font subsets from the checked-in originals.
+"""Generate homepage font subsets, preserving Geist variable weights from the checked-in originals.
 
 Developer tool only: Python 3, fonttools==4.68.0 and brotli==1.2.1.
 Run from the repository root. No Python dependency is needed to build the site.
@@ -12,15 +12,15 @@ source = Path('src/assets/fonts')
 output = source / 'critical'
 output.mkdir(exist_ok=True)
 characters = list(range(0x20, 0x7F)) + [
-    0xA0, 0xA9, 0x2013, 0x2014, 0x2018, 0x2019, 0x201C, 0x201D, 0x2022, 0x2026, 0x2192,
+    0xA0, 0xA9, 0x2013, 0x2014, 0x2018, 0x2019, 0x201C, 0x201D, 0x2022, 0x2026, 0x2192, 0x2197,
 ]
 for original, target in [
-    ('Geist-Variable', 'Geist-Regular'),
+    ('Geist-Variable', 'Geist-Variable'),
     ('GeistSerif-Regular', 'GeistSerif-Regular'),
     ('BebasNeue-Regular', 'BebasNeue-Regular'),
 ]:
     font = TTFont(source / f'{original}.woff2')
-    if 'fvar' in font:
+    if 'fvar' in font and original != 'Geist-Variable':
         font = instantiateVariableFont(
             font, {axis.axisTag: axis.defaultValue for axis in font['fvar'].axes}, inplace=True,
         )

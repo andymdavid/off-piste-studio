@@ -168,9 +168,13 @@ test('restored glyph navigation supports keyboard, studio summary and both theme
 
 test('homepage CSS is available without requests and responsive logos reserve their geometry', async ({ page }) => {
   const css = [];
+  const externalFonts = [];
+  page.on('request', request => { if (request.resourceType() === 'font' && /^https?:/.test(request.url())) externalFonts.push(request.url()); });
   page.on('request', request => { if (request.resourceType() === 'stylesheet') css.push(request.url()); });
   await page.goto('/');
+  await page.evaluate(() => document.fonts.ready);
   expect(css).toEqual([]);
+  expect(externalFonts).toEqual([]);
   await expect(page.locator('.duplicate-header img')).toHaveCount(0);
   const logos = await page.locator('.client-bar__logo').evaluateAll(elements => elements.map(image => ({srcset:image.srcset,width:image.width,height:image.height})));
   expect(logos.length).toBeGreaterThan(0);
