@@ -1,0 +1,225 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<SiteLayout bodyAttributes={{"data-page-type":"work","data-theme":"dark"}}>
+<Fragment slot="head" is:raw>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="See selected websites, brand systems, and landing pages built for businesses that need clearer positioning, stronger trust, and better digital performance.">
+  <title>Our Work | Websites, Brands &amp; Digital Systems</title>
+  <link rel="canonical" href="https://offpistestudio.com/work">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Work | Websites, Brands &amp; Digital Systems">
+  <meta property="og:description" content="See selected websites, brand systems, and landing pages built for businesses that need clearer positioning, stronger trust, and better digital performance.">
+  <meta property="og:url" content="https://offpistestudio.com/work">
+  <meta property="og:site_name" content="Off Piste Studio">
+  <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Our Work | Websites, Brands &amp; Digital Systems">
+  <meta name="twitter:description" content="See selected websites, brand systems, and landing pages built for businesses that need clearer positioning, stronger trust, and better digital performance.">
+  <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <script type="application/ld+json" is:inline="">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Our Work — Websites, Brands & Digital Systems",
+    "description": "See selected websites, brand systems, and landing pages built for businesses that need clearer positioning, stronger trust, and better digital performance.",
+    "url": "https://offpistestudio.com/work",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Off Piste Studio",
+      "url": "https://offpistestudio.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json" is:inline="">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://offpistestudio.com/work" }
+    ]
+  }
+  </script>
+  
+  <!-- Font preloads -->
+  
+  
+  <!-- Fonts -->
+  
+  
+  
+</Fragment>
+<Fragment is:raw>
+  <!-- Header -->
+  </Fragment><Header /><Fragment is:raw>
+
+  <main>
+    <!-- Work Hero -->
+    <section class="work-hero">
+      <div class="container">
+        <h1 class="work-hero__title">How we help ambitious businesses grow online.</h1>
+        <div class="work-hero__support">
+          <p class="work-hero__text">See how we help expertise-led teams clarify their value, sharpen their digital presence and convert attention into growth.</p>
+          <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="hero-intro__button work-hero__button">Book a Free Discovery Call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section class="projects">
+      <div class="container">
+        <div class="projects__filter-row">
+          <div class="work-hero__filters">
+            <span class="work-hero__filter-label">Filter by</span>
+            <div class="work-hero__filter-tags">
+              <button class="work-hero__filter is-active" data-filter="all">Show All</button>
+              <button class="work-hero__filter" data-filter="Strategy">Strategy</button>
+              <button class="work-hero__filter" data-filter="Brand Design">Brand Design</button>
+              <button class="work-hero__filter" data-filter="Website Design">Website Design</button>
+              <button class="work-hero__filter" data-filter="Pitch Deck">Pitch Deck</button>
+              <button class="work-hero__filter" data-filter="Marketing">Marketing</button>
+            </div>
+          </div>
+        </div>
+        <div class="projects__list">
+          <article class="project-row">
+            <div class="project-row__logo">
+              <img src="/images/logos/FDY Logo Light.webp" alt="Flow Dynamics">
+            </div>
+            <p class="project-row__description">Built Flow Dynamics' brand and web presence from the ground up for their innovative indoor air quality solutions.</p>
+            <div class="project-row__tags">
+              <span>Brand Design</span>
+              <span>Website Design</span>
+              <span>Marketing</span>
+            </div>
+            <div class="project-row__preview" aria-hidden="true">
+              <figure class="project-row__preview-item"><img src="/images/cases/Flow-Dynamics.webp" alt="" loading="lazy"></figure>
+            </div>
+          </article>
+
+          <article class="project-row">
+            <div class="project-row__logo">
+              <img src="/images/logos/PLE Logo Light.webp" alt="Pleiades" loading="lazy">
+            </div>
+            <p class="project-row__description">Positioned Pleiades for capital raising with strategic web design and investor-ready collateral for their net zero tracking platform.</p>
+            <div class="project-row__tags">
+              <span>Website Design</span>
+              <span>Strategy</span>
+              <span>Pitch Deck</span>
+            </div>
+            <div class="project-row__preview project-row__preview--contain" aria-hidden="true">
+              <figure class="project-row__preview-item"><img src="/images/cases/Pleiades-new.webp" alt="" loading="lazy"></figure>
+            </div>
+          </article>
+
+          <article class="project-row">
+            <div class="project-row__logo">
+              <img src="/images/logos/DE Logo Light.webp" alt="Decarbonology" loading="lazy">
+            </div>
+            <p class="project-row__description">Launched Decarbonology's digital presence to accelerate enterprise climate action with a modern website and marketing collateral.</p>
+            <div class="project-row__tags">
+              <span>Website Design</span>
+              <span>Brand Design</span>
+            </div>
+            <div class="project-row__preview" aria-hidden="true">
+              <figure class="project-row__preview-item"><img src="/images/cases/Decarbonology-new-duplicate.webp" alt="" loading="lazy"></figure>
+            </div>
+          </article>
+
+          <article class="project-row">
+            <div class="project-row__logo project-row__logo--cloud-modular">
+              <img src="/images/logos/CM_Logo.webp" alt="Cloud Modular" loading="lazy">
+            </div>
+            <p class="project-row__description">Delivered Cloud Modular's brand, website, marketing assets, and pitch deck to position the modular construction company for growth.</p>
+            <div class="project-row__tags">
+              <span>Brand Design</span>
+              <span>Website Design</span>
+              <span>Marketing</span>
+              <span>Pitch Deck</span>
+            </div>
+            <div class="project-row__preview" aria-hidden="true">
+              <figure class="project-row__preview-item"><img src="/images/cases/Cloud-Modular.webp" alt="" loading="lazy"></figure>
+            </div>
+          </article>
+
+          <article class="project-row">
+            <div class="project-row__logo">
+              <img src="/images/logos/PLI Logo Light.webp" alt="Place Intelligence" loading="lazy">
+            </div>
+            <p class="project-row__description">Partnered with location intelligence startup Place Intelligence to refine their product strategy and capital raising approach.</p>
+            <div class="project-row__tags">
+              <span>Strategy</span>
+              <span>Product</span>
+            </div>
+          </article>
+
+          <article class="project-row">
+            <div class="project-row__logo">
+              <img src="/images/logos/SB Logo Light.webp" alt="Superbeing" loading="lazy">
+            </div>
+            <p class="project-row__description">Created a bold digital identity for Superbeing to stand out in the competitive wellness technology space.</p>
+            <div class="project-row__tags">
+              <span>Brand Design</span>
+              <span>Website Design</span>
+            </div>
+          </article>
+
+          <article class="project-row">
+            <div class="project-row__logo">
+              <img src="/images/logos/FD Logo Light.webp" alt="Future Directors" loading="lazy">
+            </div>
+            <p class="project-row__description">Developed strategy and collateral for Future Directors' investor readiness and capital raising efforts.</p>
+            <div class="project-row__tags">
+              <span>Strategy</span>
+              <span>Investor Readiness</span>
+            </div>
+          </article>
+
+          <article class="project-row">
+            <div class="project-row__logo">
+              <img src="/images/logos/BU Logo Light.webp" alt="Buildsource" loading="lazy">
+            </div>
+            <p class="project-row__description">Crafted Buildsource's brand identity and web presence to streamline construction material sourcing.</p>
+            <div class="project-row__tags">
+              <span>Brand Design</span>
+              <span>Website Design</span>
+            </div>
+            <div class="project-row__preview project-row__preview--contain" aria-hidden="true">
+              <figure class="project-row__preview-item"><img src="/images/cases/Buildsource.webp" alt="" loading="lazy"></figure>
+            </div>
+          </article>
+
+          <article class="project-row">
+            <div class="project-row__logo">
+              <img src="/images/logos/CC Logo Light.webp" alt="Cell Cyber" loading="lazy">
+            </div>
+            <p class="project-row__description">Built Cell Cyber's cybersecurity brand with a focus on trust, expertise, and cutting-edge protection.</p>
+            <div class="project-row__tags">
+              <span>Brand Design</span>
+              <span>Website Design</span>
+            </div>
+          </article>
+        </div>
+        <div class="projects__blank-row" aria-hidden="true"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  </Fragment><Footer /><Fragment is:raw>
+
+  
+
+
+</Fragment>
+
+
+</SiteLayout>

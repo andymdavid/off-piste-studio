@@ -44,7 +44,7 @@ function scanDir(dirName, contentDirName = null) {
 }
 
 // Core pages (in project root)
-const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'pricing.html', 'tools.html', 'locations.html'];
+const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'pricing.html', 'tools.html'];
 
 const entries = [];
 
@@ -81,11 +81,8 @@ function addScannedPages(dirName, pathPrefix, contentDirName, changefreq, priori
   }
 }
 
-// Industry pages - priority 0.8
-addScannedPages('industries', 'industries', 'content/industries', 'weekly', '0.8');
-
-// Location pages - priority 0.8
-addScannedPages('locations', 'locations', 'content/locations', 'weekly', '0.8');
+// Retired industry and location URLs redirect in nginx; publish only service routes.
+addScannedPages('services', 'services', 'content/services', 'weekly', '0.8');
 
 // Tool pages - priority 0.7
 for (const page of scanDir('tools')) {
