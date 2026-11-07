@@ -1,12 +1,22 @@
 ---
-import '../styles/main.css';
-import '../styles/fonts.css';
+import sharedStyles from '../styles/site/shared.css?url';
+const siteStyles = import.meta.glob('../styles/site/*.css', { eager: true, query: '?url', import: 'default' });
+const toolStyles = import.meta.glob('../styles/tools/*.css', { eager: true, query: '?url', import: 'default' });
 const { bodyAttributes = {} } = Astro.props;
+const pageType = bodyAttributes['data-page-type'];
+// The existing homepage body identifier is retained for saved themes and JS.
+const styleName = pageType === 'duplicate-home' ? 'home' : pageType;
+const pageStyles = siteStyles[`../styles/site/${styleName}.css`];
+const toolPageStyles = pageType === 'tool' ? toolStyles[`../styles/tools/${bodyAttributes['data-page-slug']}.css`] : undefined;
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <slot name="head" />
+    <link rel="stylesheet" href={sharedStyles} />
+    {pageStyles && <link rel="stylesheet" href={pageStyles} />}
+    {pageType === 'tool' && <link rel="stylesheet" href={toolStyles['../styles/tools/shared.css']} />}
+    {toolPageStyles && <link rel="stylesheet" href={toolPageStyles} />}
   </head>
   <body {...bodyAttributes}>
     <script is:inline>

@@ -1,0 +1,108 @@
+/* Page styles: favicon-generator. Preserve cascade order within this file. */
+.favicon-generator {
+  max-width: 720px;
+}
+
+.favicon-generator__title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+.favicon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: var(--space-xl);
+}
+
+.favicon-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-md);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.04);
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.favicon-card__preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  background: repeating-conic-gradient(rgba(255, 255, 255, 0.06) 0% 25%, transparent 0% 50%) 0 0 / 16px 16px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.favicon-card__preview canvas {
+  image-rendering: auto;
+}
+
+.favicon-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.favicon-card__size {
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.favicon-card__desc {
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-text-muted);
+}
+
+.favicon-card__download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  padding: 0 1.25rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-radius: 2rem;
+  cursor: pointer;
+  border: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.favicon-card__download:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.favicon-generator__snippet {
+  margin-top: var(--space-md);
+}
+
+@media (max-width: 480px) {
+  .favicon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 360px) {
+  .favicon-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -19,8 +19,6 @@
   font-weight: 400;
   font-display: swap;
 }
-/* Display serif is intentionally limited to large headings. */
-body[data-page-type="duplicate-home"] .hero-intro__title { font-family: 'Geist Serif', Georgia, serif; font-weight: 400; }
 
 /* Brand wordmarks retain their original typeface independently of site typography. */
 @font-face {

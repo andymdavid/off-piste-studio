@@ -1,0 +1,122 @@
+/* Page styles: brand-color-extractor. Preserve cascade order within this file. */
+.brand-extractor {
+  max-width: 720px;
+}
+.brand-extractor__loading {
+  padding: var(--space-xl);
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.brand-extractor__loading[hidden] {
+  display: none;
+}
+.brand-extractor__results[hidden] {
+  display: none;
+}
+
+.brand-extractor__results-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.25rem, 2.4vw, 1.75rem);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-lg);
+}
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: var(--space-xl);
+}
+
+.palette-card {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.palette-card__swatch {
+  height: 80px;
+  width: 100%;
+}
+
+.palette-card__info {
+  padding: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.palette-card__hex {
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.palette-card__name {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.palette-card__values {
+  font-family: "Neue Montreal", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.6875rem;
+  color: var(--color-text-muted);
+}
+
+.palette-card__actions {
+  padding: 0 0.75rem 0.75rem;
+  display: flex;
+  gap: 0.375rem;
+}
+
+.palette-card__actions .tool-copy-btn {
+  font-size: 0.5625rem;
+  padding: 0.3rem 0.625rem;
+  text-decoration: none;
+}
+.brand-extractor__exports {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.brand-extractor__refine {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: var(--space-lg);
+  padding: 0.625rem 1.25rem;
+  background-color: #ffffff;
+  color: #000000;
+  font-family: var(--font-alfabet);
+  font-size: 0.625rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border-radius: 2rem;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+}
+
+.brand-extractor__refine:hover {
+  background-color: #000000;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+
+  .palette-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .palette-grid {
+    grid-template-columns: 1fr;
+  }
+}
