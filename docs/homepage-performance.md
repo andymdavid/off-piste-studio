@@ -30,3 +30,15 @@ Three cold local mobile baseline Lighthouse runs already scored 100, with Speed 
 The automated browser suite covers navigation, utility controls, both themes, responsive geometry, reduced motion, glyph error/success feedback, all nine tools and publishing behaviour. Registry tests cover geometry, cancellation/retargeting, aliases and compiled Astro fallbacks. Static checks retain URL, asset, schema, CSS ownership and payload-budget validation.
 
 Measurements and release evidence are recorded on the originating Flight Deck task; no field Core Web Vitals claim is made from lab measurements.
+
+## Follow-up: late web fonts in the Google mobile report
+
+Google report [bb4rjbi5ei](https://pagespeed.web.dev/analysis/https-offpistestudio-com/bb4rjbi5ei?form_factor=mobile) scored 99 with FCP/LCP 1.1 seconds, TBT 0 ms, Speed Index 2.8 seconds and CLS 0.025. A controlled font-delay test reproduced movement of the centred hero: late Geist changed the copy line count/height. Delaying logos alone did not reproduce it.
+
+The homepage now embeds regular-weight subsets of Geist, Geist Serif and Bebas Neue for ASCII, common punctuation, the copyright symbol and booking arrow. They retain the original glyph outlines, kerning and active default ligatures. Full original faces remain available for other weights, styles and characters. Other page families keep their existing font loading. The embedded faces use `font-display: block` because decoding local font data requires no network round trip; external full faces retain `swap`.
+
+The three font binaries total 28,548 bytes and have a separate 30,000-byte budget. CSS rule budgets continue to exclude binary font data, which is counted separately. The compressed homepage document grows from about 38.6 KB to 68 KB (identical local gzip settings); this trades a larger document for stable initial typography without waiting for three external font downloads. Some full font data can still be requested for other weights/content below the hero.
+
+Reproduce the subsets with `scripts/subset-critical-fonts.py` using Python 3, `fonttools==4.68.0` and `brotli==1.2.1`. These are developer tools only; normal build and CI require no Python dependency. Parent-directory OFL licences and full original fonts are retained.
+
+Validation includes an external-font delay regression check, four viewport widths in both themes, and eight full-page screenshot pairs that are pixel-identical to the previous release. Measured mobile hero CLS changed from approximately 0.018 in the controlled delayed-font baseline to zero after the fix. Lab results and the fresh Google report are recorded on the originating task after release; they do not establish real-user Core Web Vitals.
