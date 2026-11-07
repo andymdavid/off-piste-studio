@@ -33,7 +33,41 @@ body[data-theme="light"] {
 
 body[data-page-type="duplicate-home"] .duplicate-header__mark.brand-glyph,
 body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__mark.brand-glyph,
-body[data-page-type="duplicate-home"][data-theme="light"] 
+body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-scrolled .duplicate-header__mark.brand-glyph,
+body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header.is-open .duplicate-header__mark.brand-glyph,
+body[data-info-open="true"] .duplicate-header__mark.brand-glyph,
+body[data-theme="light"][data-info-open="true"] .duplicate-header__mark.brand-glyph {
+  filter: none !important;
+}
+
+body[data-page-type="duplicate-home"] .duplicate-header__mark.brand-glyph {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+body[data-page-type="duplicate-home"][data-theme="light"] .duplicate-header__mark.brand-glyph {
+  color: #ffffff;
+  fill: #ffffff;
+}
+
+body[data-page-type="duplicate-home"][data-info-open="true"] .duplicate-header__mark.brand-glyph {
+  color: var(--studio-info-foreground);
+  fill: var(--studio-info-foreground);
+}
+
+body[data-page-type="duplicate-home"] .hero-intro__icon.brand-glyph {
+  color: #ffffff;
+  fill: #ffffff;
+  filter: none !important;
+}
+
+body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__icon.brand-glyph {
+  color: #121212;
+  fill: #121212;
+  filter: none !important;
+}
+
+
 .duplicate-info-toggle {
   position: relative;
   display: inline-flex;
@@ -842,4 +876,19 @@ body[data-info-open="true"] .duplicate-header:not(.is-open) .duplicate-header__a
   visibility: visible;
   pointer-events: auto;
   transform: rotate(90deg);
+}
+
+/* Keep utility icons readable on the dark console despite legacy mobile rules. */
+body[data-page-type][data-theme] .duplicate-header[data-duplicate-header] .duplicate-header__actions :is(.duplicate-theme-toggle, .duplicate-header__menu-toggle) {
+  color: rgba(247, 244, 238, 0.85) !important;
+}
+body[data-page-type][data-theme] .duplicate-header[data-duplicate-header] .duplicate-header__menu-lines span {
+  background: rgba(247, 244, 238, 0.85) !important;
+}
+/* Summary mode owns the palette of every control. */
+body[data-page-type][data-theme][data-info-open="true"] .duplicate-header[data-duplicate-header] .duplicate-header__actions :is(.duplicate-theme-toggle, .duplicate-info-toggle, .duplicate-header__menu-toggle) {
+  color: var(--studio-info-foreground) !important;
+}
+body[data-page-type][data-theme][data-info-open="true"] .duplicate-header[data-duplicate-header] .duplicate-header__menu-lines span {
+  background: var(--studio-info-foreground) !important;
 }

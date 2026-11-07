@@ -153,6 +153,8 @@ test('restored glyph navigation supports keyboard, studio summary and both theme
     await expect(summary).toHaveAttribute('aria-hidden','false');
     await expect(summary).toHaveJSProperty('inert',false);
     expect(await summary.evaluate(element => getComputedStyle(element).backgroundColor)).not.toBe('rgba(0, 0, 0, 0)');
+    const summaryColor = await summary.evaluate(element => getComputedStyle(element).color);
+    await expect.poll(() => page.locator('.duplicate-info-toggle').evaluate(element => getComputedStyle(element).color)).toBe(summaryColor);
     await expect(toggle).toHaveAttribute('aria-expanded','false');
     await page.keyboard.press('Escape');
     await expect(summary).toHaveJSProperty('inert',true);
