@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+import { formatDate } from '../lib/content.mjs';
+const posts = (await getCollection('insights')).map(({data}) => data).sort((a,b) => b.date.localeCompare(a.date));
+const rows = Array.from({length:Math.ceil(posts.length/4)},(_,index) => posts.slice(index*4,index*4+4));
+---
+<div class="projects__list insights-index__grid" data-insights-list>
+  {rows.map((row,rowIndex) => <>
+    <div class="insights-index__article-row">{row.map((post,index) => <article class="insight-card" data-topics={JSON.stringify(post.topics)}>
+      <a href={`/insights/${post.slug}`} class="insight-card__link" aria-label={`Read ${post.title}`}>
+        {post.image && <div class="insight-card__media"><img src={post.image} alt={post.imageAlt || post.title} loading="lazy" decoding="async" /></div>}
+        <div class="insight-card__content"><div class="insight-card__top">
+          <div class="insight-card__meta"><span>{String(rowIndex*4+index+1).padStart(2,'0')}</span><span>{formatDate(post.date)}</span><span>{post.readTime}</span></div>
+          <div class="insight-card__tags">{post.topics.map(topic => <span>{topic}</span>)}</div>
+        </div><h3 class="insight-card__title">{post.title}</h3><p class="insight-card__description">{post.description}</p></div>
+      </a>
+    </article>)}</div>
+    <div class="insights-index__row-spacer" aria-hidden="true"></div>
+  </>)}
+</div>

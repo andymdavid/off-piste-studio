@@ -59,7 +59,9 @@ Editorial pass before publishing:
 Then run:
 
 ```bash
-npm run sync:insights
+npm run build
 ```
 
-Or just run `npm run dev` / `npm run build`, which now regenerate insights automatically first.
+Astro reads Markdown directly. `npm run dev` previews source changes; `npm run build` regenerates the deployed pages, homepage/related cards, resources index and sitemap in `dist/`. Do not create or commit generated HTML or catalogue JavaScript. Deleting a Markdown file removes its route and references on the next build.
+
+The old `sync:insights` npm alias calls the same native build for compatibility. Direct generator scripts have been removed. Run `npm run test:publishing` in an isolated checkout to verify creation, edits and deletion across all four content collections.

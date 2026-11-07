@@ -16,7 +16,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
-      - run: node scripts/check-publishing.mjs
+      - run: npm run test:publishing
+      - run: npm run test:publishing:dev
+      - name: Build leaves source tree unchanged
+        run: test -z "$(git status --porcelain)"
       - run: npm run test:insight-visuals
       - run: npx playwright install --with-deps chromium
       - run: npm run test:browser
