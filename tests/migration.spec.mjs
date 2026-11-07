@@ -81,7 +81,7 @@ test('header and site footer preserve the original logo font on all page familie
         await expect(page.locator(selector)).toBeVisible();
         expect(await page.locator(selector).evaluate(el => getComputedStyle(el).fontFamily)).toContain('Bebas Neue');
       }
-      expect(await page.evaluate(() => document.fonts.check('16px "Bebas Neue"'))).toBe(true);
+      expect(await page.evaluate(() => [...document.fonts].some(font => font.family.includes('Bebas Neue') && font.status === 'loaded'))).toBe(true);
     }
   }
   await page.goto('/');
@@ -168,9 +168,13 @@ test('restored glyph navigation supports keyboard, studio summary and both theme
 
 test('homepage CSS is available without requests and responsive logos reserve their geometry', async ({ page }) => {
   const css = [];
+  const externalFonts = [];
+  page.on('request', request => { if (request.resourceType() === 'font' && /^https?:/.test(request.url())) externalFonts.push(request.url()); });
   page.on('request', request => { if (request.resourceType() === 'stylesheet') css.push(request.url()); });
   await page.goto('/');
+  await page.evaluate(() => document.fonts.ready);
   expect(css).toEqual([]);
+  expect(externalFonts).toEqual([]);
   await expect(page.locator('.duplicate-header img')).toHaveCount(0);
   const logos = await page.locator('.client-bar__logo').evaluateAll(elements => elements.map(image => ({srcset:image.srcset,width:image.width,height:image.height})));
   expect(logos.length).toBeGreaterThan(0);
@@ -190,4 +194,30 @@ test('glyph feedback handles invalid tool input and respects reduced motion', as
   await page.goto('/');
   await page.locator('[data-brand-glyph]').hover();
   await expect(page.locator('[data-brand-glyph]')).toHaveAttribute('data-glyph-state','base');
+});
+
+test('homepage hero stays stable while external fonts are delayed', async ({ page }) => {
+  await page.addInitScript(() => {
+    window.heroLayoutShift = 0;
+    new PerformanceObserver(list => {
+      for (const entry of list.getEntries()) {
+        if (!entry.hadRecentInput && entry.sources.some(source => {
+          const element = source.node instanceof Element ? source.node : source.node?.parentElement;
+          return element?.closest('.hero-intro');
+        })) window.heroLayoutShift += entry.value;
+      }
+    }).observe({ type:'layout-shift', buffered:true });
+  });
+  await page.route(/\.woff2(?:\?.*)?$/, async route => {
+    await new Promise(resolve => setTimeout(resolve, 1800));
+    await route.continue();
+  });
+  await page.goto('/', { waitUntil:'domcontentloaded' });
+  const hero = page.locator('.hero-intro__content');
+  const initial = await hero.boundingBox();
+  await page.evaluate(() => document.fonts.ready);
+  const final = await hero.boundingBox();
+  expect(final.y).toBeCloseTo(initial.y, 0);
+  expect(final.height).toBeCloseTo(initial.height, 0);
+  expect(await page.evaluate(() => window.heroLayoutShift)).toBeLessThan(0.001);
 });

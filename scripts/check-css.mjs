@@ -15,8 +15,14 @@ function measure(directory,file) {
     }
     return bytes;
   });
-  const inline = $('style').map((_,element) => $(element).html() || '').get().map(css => Buffer.from(css));
-  return {type:$('body').attr('data-page-type'),slug:$('body').attr('data-page-slug'),paths,externalBytes:external.reduce((total,bytes) => total+bytes.length,0),inlineBytes:inline.reduce((total,bytes) => total+bytes.length,0),gzipBytes:external.reduce((total,bytes) => total+gzipSync(bytes).length,0)};
+  // Font binaries have a separate budget; do not count base64 assets as CSS rules.
+  const fontStyles = $('style[data-critical-fonts]').map((_,element) => $(element).html() || '').get().join('');
+  const embeddedFontBytes = [...fontStyles.matchAll(/base64,([A-Za-z0-9+/=]+)/g)].reduce((total,match) => total+Buffer.from(match[1], 'base64').length, 0);
+  assert.ok(embeddedFontBytes <= 40000, `${file}: embedded font budget exceeded`);
+  if (fontStyles) assert.equal($('body').attr('data-page-type'), 'duplicate-home', `${file}: critical fonts belong only on the homepage`);
+  if (fontStyles) assert.equal([...fontStyles.matchAll(/data:font\/woff2;base64,/g)].length, 3, `${file}: expected three embedded font faces`);
+  const inline = $('style:not([data-critical-fonts])').map((_,element) => $(element).html() || '').get().map(css => Buffer.from(css));
+  return {embeddedFontBytes,type:$('body').attr('data-page-type'),slug:$('body').attr('data-page-slug'),paths,externalBytes:external.reduce((total,bytes) => total+bytes.length,0),inlineBytes:inline.reduce((total,bytes) => total+bytes.length,0),gzipBytes:external.reduce((total,bytes) => total+gzipSync(bytes).length,0)};
 }
 const baseline = process.env.CSS_BASELINE_DIR;
 const report = [];
@@ -39,6 +45,6 @@ for (const path of walk('dist').filter(file => file.endsWith('.html'))) {
 if (process.env.CSS_REPORT_PATH) writeFileSync(process.env.CSS_REPORT_PATH,JSON.stringify(report,null,2)+'\n');
 for (const route of ['/','/about','/work','/pricing','/resources','/insights/how-to-measure-ai-search-visibility','/services/website-design','/tools/color-converter','/tools/font-pairing']) {
   const entry=report.find(page=>page.route===route);
-  console.log(`${route}: ${entry.totalBytes} CSS bytes (${entry.externalBytes} external, ${entry.inlineBytes} inline), ${entry.paths.length} stylesheets${entry.beforeBytes ? `, ${(entry.reduction*100).toFixed(1)}% less than reference` : ''}`);
+  console.log(`${route}: ${entry.totalBytes} CSS bytes (${entry.externalBytes} external, ${entry.inlineBytes} inline), ${entry.paths.length} stylesheets${entry.embeddedFontBytes ? `, ${entry.embeddedFontBytes} embedded font bytes` : ''}${entry.beforeBytes ? `, ${(entry.reduction*100).toFixed(1)}% less than reference` : ''}`);
 }
 console.log(`CSS budgets and route-specific bundles verified for ${report.length} site pages. Gzip figures cover external files; inline CSS compresses with its HTML.`);
