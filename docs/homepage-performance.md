@@ -4,7 +4,7 @@ This pass ports the existing glyph/navigation work from local `main` at `4e344d1
 
 ## Changes
 
-- Header and hero marks use the shared SVG block registry. Header hover/focus and occasional idle winks use cancellable animations, respect reduced motion and suspend while the document is hidden. No raster mark request is required.
+- Header and hero marks use the shared SVG block registry. Header hover/focus and occasional idle winks use cancellable animations, respect reduced motion and suspend while the document is hidden. No raster mark request is required. The controller reuses the server-rendered initial geometry, measures the studio wordmark only when its panel opens, and batches glyph layout reads before writes during morphs.
 - Restored the centred expandable header, wordmark home link, studio-information overlay and glyph feedback in the nine existing tools. Both theme palettes and original Bebas Neue wordmarks are retained; body typography remains Geist/Geist Serif. Closed menus and the information dialog are inert; keyboard focus returns to the menu control when a utility becomes hidden.
 - Client bars use Astro-generated, fingerprinted responsive WebP variants at 120/240/360 pixels. Intrinsic dimensions come from the image metadata instead of approximated dimensions. Full-size originals remain available to other uses.
 - Rotating testimonial logos have intrinsic dimensions from their actual files; source changes update dimensions atomically and failed downloads leave the current logo intact.

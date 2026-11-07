@@ -207,3 +207,25 @@ test('inline header fallbacks match the base registry geometry', () => {
   });
   assert.ok(fallbackCount > 0, 'expected at least one inline header fallback');
 });
+
+test('glyph morphs snapshot layout before writing any block geometry', () => {
+  const previousGetComputedStyle = globalThis.getComputedStyle;
+  const events = [];
+  const rects = GLYPH_STATES.base.blocks.map(block => rectFor(block));
+  rects.forEach(rect => {
+    const setAttribute = rect.setAttribute.bind(rect);
+    rect.setAttribute = (name, value) => { events.push('write'); setAttribute(name, value); };
+  });
+  globalThis.getComputedStyle = () => {
+    events.push('read');
+    return { transform:'none', opacity:'1' };
+  };
+  try {
+    animateGlyphRects(rects, GLYPH_STATES.wink.blocks);
+    const firstWrite = events.indexOf('write');
+    assert.ok(firstWrite > 0, 'expected a visual snapshot before mutation');
+    assert.ok(!events.slice(firstWrite).includes('read'), 'layout reads must not follow geometry writes');
+  } finally {
+    globalThis.getComputedStyle = previousGetComputedStyle;
+  }
+});
