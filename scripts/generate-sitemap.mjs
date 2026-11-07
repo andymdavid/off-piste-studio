@@ -44,7 +44,7 @@ function scanDir(dirName, contentDirName = null) {
 }
 
 // Core pages (in project root)
-const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'pricing.html', 'tools.html'];
+const corePages = ['index.html', 'work.html', 'about.html', 'resources.html', 'pricing.html', 'tools.html', 'locations.html'];
 
 const entries = [];
 
@@ -55,6 +55,9 @@ entries.push({
   changefreq: 'daily',
   priority: '1.0',
 });
+
+// Contact is now a real no-JavaScript fallback in addition to the enquiry modal.
+entries.push({ url: `${BASE_URL}/contact`, lastmod: getLastmod(resolve(rootDir, 'src/pages/contact.astro')), changefreq: 'monthly', priority: '0.6' });
 
 // Other core pages
 for (const file of corePages) {
@@ -81,7 +84,9 @@ function addScannedPages(dirName, pathPrefix, contentDirName, changefreq, priori
   }
 }
 
-// Retired industry and location URLs redirect in nginx; publish only service routes.
+// Preserve published industry and location routes. The industry hub redirects and is excluded.
+addScannedPages('industries', 'industries', 'content/industries', 'weekly', '0.8');
+addScannedPages('locations', 'locations', 'content/locations', 'weekly', '0.8');
 addScannedPages('services', 'services', 'content/services', 'weekly', '0.8');
 
 // Tool pages - priority 0.7

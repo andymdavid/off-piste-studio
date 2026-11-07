@@ -15040,3 +15040,9 @@ body[data-insight-slug="third-party-brand-signals-ai-search-audit"] .insight-vis
 body[data-insight-slug="third-party-brand-signals-ai-search-audit"][data-theme="light"] .insight-visual__quadrant:not([data-quadrant="1"]) {
   background: #ddddda;
 }
+
+/* Keep small helper labels readable in both existing themes. */
+body[data-page-type="duplicate-home"] .hero-intro__scroll,
+body[data-page-type="duplicate-home"] .pathway__meta { color: rgba(255, 255, 255, 0.64); }
+body[data-page-type="duplicate-home"][data-theme="light"] .hero-intro__scroll,
+body[data-page-type="duplicate-home"][data-theme="light"] .pathway__meta { color: rgba(18, 18, 18, 0.65) !important; }

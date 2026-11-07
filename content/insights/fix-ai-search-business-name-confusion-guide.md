@@ -93,7 +93,7 @@ A Knowledge Panel is an entity summary, not the same product as a local Business
 
 A Business Profile holds local operational details such as its category, hours, location and reviews. Check whether the wrong information is actually inside the profile or whether Google is showing a separate panel beside the result.
 
-An organic site name is the label Google shows for a website in search results. Google says [site names are generated automatically](https://developers.google.com/search/docs/appearance/site-names) from homepage content and references on the web. It recommends a unique, consistent name and notes that the same site name generally won’t be used for two global sites. A wrong site label without mixed services, people or reviews belongs in the [site-name repair guide](/insights/fix-wrong-site-name-google-search-guide).
+An organic site name is the label Google shows for a website in search results. Google says [site names are generated automatically](https://developers.google.com/search/docs/appearance/site-names) from homepage content and references on the web. It recommends a unique, consistent name and notes that the same site name generally won’t be used for two global sites. A wrong site label without mixed services, people or reviews belongs in the site-name repair guide.
 
 Third-party directories and review platforms own their own records. A merged listing, wrong domain or misassigned review should be corrected at that source. Don’t assume changing your website will rewrite a record held elsewhere.
 

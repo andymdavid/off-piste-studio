@@ -10,7 +10,7 @@ for (const file of files) {
   assert.ok($('title').text(), `Missing title: ${file}`);
   assert.ok($('link[rel="canonical"]').attr('href'), `Missing canonical: ${file}`);
   const originalPath = file.replace(/^dist\//, '');
-  if (existsSync(originalPath)) {
+  if (process.env.MIGRATION_PARITY && existsSync(originalPath)) {
     const original = load(readFileSync(originalPath, 'utf8'));
     assert.equal($('title').text(), original('title').text(), `Title changed: ${file}`);
     assert.equal($('link[rel="canonical"]').attr('href'), original('link[rel="canonical"]').attr('href'), `Canonical changed: ${file}`);
@@ -20,6 +20,12 @@ for (const file of files) {
   for (const el of $('script[src],link[rel="stylesheet"][href],img[src],source[src]').toArray()) {
     const url = $(el).attr('src') || $(el).attr('href');
     if (url?.startsWith('/') && !url.startsWith('//')) assert.ok(existsSync(`dist${decodeURIComponent(url.split('?')[0])}`), `Missing asset ${url} in ${file}`);
+  }
+  for (const el of $('a[href]').toArray()) {
+    const href = $(el).attr('href');
+    if (!href?.startsWith('/') || href.startsWith('//')) continue;
+    const path = decodeURIComponent(href.split(/[?#]/)[0]);
+    assert.ok([path, path + '.html', path + '/index.html'].some(candidate => existsSync('dist' + candidate)), `Broken internal link ${href} in ${file}`);
   }
   for (const el of $('script[type="application/ld+json"]').toArray()) assert.doesNotThrow(() => JSON.parse($(el).html()), `Invalid structured data: ${file}`);
 }

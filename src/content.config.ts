@@ -37,13 +37,17 @@ const insights = defineCollection({
     markdown: z.string(),
   }),
 });
+const pageSchema = z.object({
+  title: z.string().min(1), slug: z.string().regex(/^[a-z0-9-]+$/),
+  description: z.string().min(1), intro: z.string().min(1), keywords: z.string().default(''),
+  industry: z.string().optional(), location: z.string().optional(), region: z.string().optional(),
+  faqs: z.preprocess(v => typeof v === 'string' ? JSON.parse(v) : [], z.array(z.object({ q: z.string(), a: z.string() }))),
+  markdown: z.string(),
+});
 const services = defineCollection({
   loader: directoryLoader('services'),
-  schema: z.object({
-    title: z.string().min(1), slug: z.string().regex(/^[a-z0-9-]+$/),
-    description: z.string().min(1), intro: z.string().min(1), keywords: z.string().default(''),
-    faqs: z.preprocess(v => typeof v === 'string' ? JSON.parse(v) : [], z.array(z.object({ q: z.string(), a: z.string() }))),
-    markdown: z.string(),
-  }),
+  schema: pageSchema,
 });
-export const collections = { insights, services };
+const industries = defineCollection({ loader: directoryLoader('industries'), schema: pageSchema });
+const locations = defineCollection({ loader: directoryLoader('locations'), schema: pageSchema });
+export const collections = { insights, services, industries, locations };

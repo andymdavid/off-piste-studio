@@ -78,7 +78,7 @@ When external facts conflict, use the [third-party business signals audit](/insi
 
 ### Google displays the wrong site name
 
-Google generates site names automatically from several homepage signals, including `WebSite` structured data, according to its [site name documentation](https://developers.google.com/search/docs/appearance/site-names). Check the homepage title, headings, naming consistency and `WebSite` markup. Then follow the focused guide to [fix a wrong site name](/insights/fix-wrong-site-name-google-search-guide) rather than changing unrelated organisation fields.
+Google generates site names automatically from several homepage signals, including `WebSite` structured data, according to its [site name documentation](https://developers.google.com/search/docs/appearance/site-names). Check the homepage title, headings, naming consistency and `WebSite` markup. Then follow the focused guide to fix a wrong site name rather than changing unrelated organisation fields.
 
 ### A Knowledge Panel contains an incorrect fact
 
