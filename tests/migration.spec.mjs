@@ -110,3 +110,27 @@ test('resources topic filter and show more use pre-rendered cards', async ({ pag
   await expect(cards).toHaveCount(12);
   expect(requests.some(url => /insights-data|catalogue/.test(url))).toBe(false);
 });
+
+test('navigation and homepage FAQ states remain usable', async ({ page }) => {
+  await page.goto('/');
+  await page.evaluate(() => window.scrollTo({ top:500, behavior:'instant' }));
+  await expect(page.locator('.duplicate-header')).toHaveClass(/is-scrolled/);
+  const navigation = page.locator('[data-duplicate-nav-toggle]');
+  await navigation.click();
+  await expect(navigation).toHaveAttribute('aria-expanded','true');
+  await expect(page.locator('.duplicate-header')).toHaveClass(/is-open/);
+  await page.keyboard.press('Escape');
+  await expect(navigation).toHaveAttribute('aria-expanded','false');
+  const question = page.locator('details.faq__item').first();
+  await question.locator('summary').click();
+  await expect(question).toHaveAttribute('open','');
+});
+
+
+test('archived contact modal remains usable', async ({ page }) => {
+  await page.goto('/archived-home');
+  await page.locator('a[href="/contact"]').first().click();
+  await expect(page.locator('.lead-modal')).toBeVisible();
+  await page.locator('.lead-modal__close').click();
+  await expect(page.locator('.lead-modal')).toBeHidden();
+});

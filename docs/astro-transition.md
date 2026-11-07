@@ -40,7 +40,7 @@ Check the linked PR and Flight Deck task for final commit/deployment evidence. T
 - `src/lib/page-links.mjs`: deterministic related-industry/location selection, without HTML document generation.
 - `src/pages/sitemap.xml.ts`: collection-backed sitemap endpoint, prerendered during static builds.
 - `content/{insights,services,industries,locations}/`: publishing sources.
-- `src/js/tools/`, `src/styles/`: existing tools, styles and both complete themes.
+- `src/js/tools/`, `src/styles/`: page and tool CSS modules and both complete themes.
 
 Literal `Fragment is:raw` sections in core pages preserve existing HTML/CSS/inline JSON without changing the design. They are inside actual Astro source files, not loaded from legacy HTML. Article Markdown/custom visuals are rendered as HTML fragments at build time. No React, client framework hydration or WebGL is required.
 
@@ -80,3 +80,7 @@ Field Core Web Vitals need real-user data. Local or Lighthouse lab results do no
 - `check-host` against local Nginx passes actual source digest, 169 routes, 301 scheme/query preservation, unknown 404 and HTML/hashed asset caching.
 
 Legacy HTML removal does not require changing content or chasing a particular GitHub language percentage. Normal HTML generated into `dist/` is the intended output of a static Astro website.
+
+## Subsequent CSS audit
+
+The CSS pass replaces the former monolithic `src/styles/main.css` / `src/styles/tools.css` with shared and page/tool modules, preserving both themes and current layouts. See [CSS audit and optimisation](css-audit.md) for ownership, measured payloads and validation.

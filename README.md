@@ -38,3 +38,5 @@ Publishing changes Markdown sources, then runs `npm run build`. Do not create or
 Open a PR into `main`; GitHub Actions validates the build and publishing/browser tests. The existing CapRover webhook watches GitHub `deployed`, which is fast-forwarded from validated `main`. Check the live `/release.json` source digest and run `node scripts/check-host.mjs https://offpistestudio.com` after deployment.
 
 See [migration audit and completion checklist](docs/astro-transition.md) for implementation details and constraints.
+
+See the [CSS audit](docs/css-audit.md) for stylesheet ownership, measured payload reductions, CSS budgets and before/after comparison commands.

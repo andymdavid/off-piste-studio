@@ -11,13 +11,15 @@
     "sync:sitemap": "npm run build",
     "sync": "npm run build",
     "dev": "astro dev --host 0.0.0.0",
-    "build": "astro build && npm run verify:insight-visuals && node scripts/write-release.mjs && npm run check:site",
+    "build": "astro build && npm run verify:insight-visuals && node scripts/write-release.mjs && npm run check:site && npm run check:css",
     "preview": "astro preview --host 0.0.0.0",
     "start": "npm run dev",
     "check:site": "node scripts/check-built-site.mjs",
     "test:browser": "playwright test",
     "test:publishing": "node scripts/check-publishing.mjs",
-    "test:publishing:dev": "node scripts/check-dev-publishing.mjs"
+    "test:publishing:dev": "node scripts/check-dev-publishing.mjs",
+    "check:css": "node scripts/check-css.mjs",
+    "check:css:parity": "node scripts/check-css-parity.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",
