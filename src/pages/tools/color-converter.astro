@@ -130,7 +130,7 @@ import Footer from '../../components/Footer.astro';
       </div>
     </section>
 
-    <section class="tool-app">
+    <section class="tool-app" id="color-converter-tool">
       <div class="container">
         <div class="color-converter">
           <!-- Large swatch + picker -->
@@ -138,6 +138,12 @@ import Footer from '../../components/Footer.astro';
             <div class="color-converter__swatch" id="color-swatch"></div>
             <input type="color" id="color-picker" value="#F37021" class="color-converter__native-picker" aria-label="Visual colour picker">
             <p class="color-converter__name">Nearest CSS colour: <strong id="color-name">--</strong></p>
+            <div class="tool-glyph-status-row color-converter__status">
+              <div class="tool-glyph-status" id="converter-glyph-status" role="status" aria-live="polite">
+                <svg class="tool-glyph-status__mark" id="converter-glyph-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"></svg>
+                <span class="tool-glyph-status__label" id="converter-glyph-label">Converting colour</span>
+              </div>
+            </div>
           </div>
 
           <!-- Format inputs -->

@@ -1,6 +1,7 @@
 import { parseColor, rgbToHex } from './color-utils.js';
 import { copyToClipboard } from './export-utils.js';
 import { attachColorPicker } from './color-picker.js';
+import { createGlyphStatus } from '../glyph-status.js';
 
 function init() {
   const preview = document.getElementById('gradient-preview');
@@ -12,15 +13,21 @@ function init() {
   const stopsContainer = document.getElementById('gradient-stops');
   const addStopBtn = document.getElementById('add-stop');
   const randomBtn = document.getElementById('gradient-random');
+  const glyphStatus = createGlyphStatus({
+    container: document.getElementById('gradient-glyph-status'),
+    svg: document.getElementById('gradient-glyph-mark'),
+    label: document.getElementById('gradient-glyph-label'),
+  });
 
   let stops = [
     { color: '#F37021', position: 0 },
     { color: '#1a1a2e', position: 100 },
   ];
 
-  function render() {
+  function render(announceUpdate = false) {
     renderStops();
     updatePreview();
+    if (announceUpdate) glyphStatus?.activateState('sparkle', 'Gradient updated');
   }
 
   function renderStops() {
@@ -53,6 +60,7 @@ function init() {
           const hexInput = stopsContainer.querySelector(`.gradient-stop__hex[data-index="${i}"]`);
           if (hexInput) hexInput.value = hex;
           updatePreview();
+          glyphStatus?.setState('focus', 'Adjusting gradient colours');
         },
       });
     });
@@ -64,7 +72,9 @@ function init() {
         const parsed = parseColor(e.target.value);
         if (parsed) {
           stops[i].color = rgbToHex(parsed.r, parsed.g, parsed.b);
-          render();
+          render(true);
+        } else {
+          glyphStatus?.setState('error', 'Enter a valid stop colour');
         }
       });
     });
@@ -75,7 +85,11 @@ function init() {
         const i = parseInt(e.target.dataset.index);
         stops[i].position = parseInt(e.target.value);
         updatePreview();
+        glyphStatus?.setState('focus', 'Adjusting gradient stop position');
         e.target.closest('.gradient-stop').querySelector('.gradient-stop__percent').textContent = stops[i].position + '%';
+      });
+      range.addEventListener('change', () => {
+        glyphStatus?.activateState('sparkle', 'Gradient updated');
       });
     });
 
@@ -84,7 +98,7 @@ function init() {
       btn.addEventListener('click', (e) => {
         const i = parseInt(e.target.dataset.index);
         stops.splice(i, 1);
-        render();
+        render(true);
       });
     });
   }
@@ -136,7 +150,7 @@ function init() {
     stops.splice(stops.length - 1, 0, { color: blended, position: newPos });
     // Re-sort by position
     stops.sort((a, b) => a.position - b.position);
-    render();
+    render(true);
   });
 
   // Random gradient
@@ -151,12 +165,21 @@ function init() {
       });
     }
     angleSlider.value = Math.floor(Math.random() * 360);
-    render();
+    render(true);
   });
 
   // Type and angle
-  typeSelect.addEventListener('change', updatePreview);
-  angleSlider.addEventListener('input', updatePreview);
+  typeSelect.addEventListener('change', () => {
+    updatePreview();
+    glyphStatus?.activateState('sparkle', 'Gradient type updated');
+  });
+  angleSlider.addEventListener('input', () => {
+    updatePreview();
+    glyphStatus?.setState('focus', 'Adjusting gradient angle');
+  });
+  angleSlider.addEventListener('change', () => {
+    glyphStatus?.activateState('sparkle', 'Gradient angle updated');
+  });
 
   // Copy
   copyCssBtn.addEventListener('click', () => {
@@ -224,6 +247,7 @@ function init() {
       a.download = 'gradient.png';
       a.click();
       URL.revokeObjectURL(url);
+      glyphStatus?.setState('check', 'PNG downloaded');
     }, 'image/png');
   });
 
@@ -285,6 +309,7 @@ function init() {
     a.download = 'gradient.svg';
     a.click();
     URL.revokeObjectURL(url);
+    glyphStatus?.setState('check', 'SVG downloaded');
   });
 
   // URL params
@@ -298,6 +323,7 @@ function init() {
   }
 
   render();
+  glyphStatus?.setState('check', 'Gradient ready');
 }
 
 document.addEventListener('DOMContentLoaded', init);

@@ -1,6 +1,9 @@
 import { rgbToHex, rgbToHsl, nearestColorName } from './color-utils.js';
 import { loadImagePixels, extractColors } from './canvas-utils.js';
 import { copyToClipboard } from './export-utils.js';
+import { createGlyphStatus } from '../glyph-status.js';
+
+const LOADING_DELAY = 150;
 
 function init() {
   const dropzone = document.getElementById('dropzone');
@@ -17,15 +20,58 @@ function init() {
   const resetBtn = document.getElementById('reset-btn');
   const refineLink = document.getElementById('refine-link');
   const loadingEl = document.getElementById('extractor-loading');
+  const loadingCopy = document.getElementById('extractor-loading-copy');
+  const glyphStatus = document.getElementById('brand-extractor-glyph-status');
+  const glyphLabel = document.getElementById('brand-extractor-glyph-label');
+  const glyphOutlet = document.getElementById('brand-extractor-glyph-outlet');
+  const dropzoneContent = dropzone.querySelector('.brand-extractor__dropzone-content');
+  const dropTitle = document.getElementById('brand-extractor-drop-title');
+  const dropCopy = document.getElementById('brand-extractor-drop-copy');
 
   let extractedColors = [];
+  let loadingTimer = 0;
+  let isProcessing = false;
+  const glyphController = createGlyphStatus({
+    container: glyphStatus,
+    svg: glyphStatus.querySelector('svg'),
+    label: glyphLabel,
+  });
+
+  const setGlyphState = (state, label) => glyphController?.setState(state, label);
+  const clearLoadingTimer = () => {
+    window.clearTimeout(loadingTimer);
+    loadingTimer = 0;
+  };
+
+  function setDropContent(title, copy) {
+    dropTitle.textContent = title;
+    dropCopy.textContent = copy;
+  }
+
+  function setDropError(title, copy) {
+    setGlyphState('error', title);
+    setDropContent(title, copy);
+  }
 
   function handleFile(file) {
-    if (!file || !file.type.startsWith('image/')) return;
-    if (file.size > 10 * 1024 * 1024) {
-      alert('File too large. Maximum size is 10MB.');
+    if (!file || isProcessing) return;
+    if (!file.type.startsWith('image/')) {
+      setDropError('That file is not an image', 'Choose a PNG, JPG, WebP or SVG file.');
       return;
     }
+    if (file.size > 10 * 1024 * 1024) {
+      setDropError('That image is too large', 'Choose an image smaller than 10MB.');
+      return;
+    }
+
+    isProcessing = true;
+    resetBtn.disabled = true;
+    clearLoadingTimer();
+    loadingEl.prepend(glyphStatus);
+    loadingCopy.textContent = 'Extracting colours...';
+    loadingTimer = window.setTimeout(() => {
+      setGlyphState('loading', 'Extracting colours');
+    }, LOADING_DELAY);
 
     // Show preview
     const reader = new FileReader();
@@ -43,11 +89,18 @@ function init() {
     loadImagePixels(file).then(({ pixels }) => {
       extractedColors = extractColors(pixels, 6);
       renderResults();
+      clearLoadingTimer();
+      setGlyphState('check', 'Colours extracted');
+      glyphOutlet.prepend(glyphStatus);
       loadingEl.hidden = true;
       resultsSection.hidden = false;
     }).catch(() => {
-      loadingEl.hidden = true;
-      alert('Could not process this image. Try another file.');
+      clearLoadingTimer();
+      setGlyphState('error', 'Image could not be processed');
+      loadingCopy.textContent = 'Could not process this image. Try another file.';
+    }).finally(() => {
+      isProcessing = false;
+      resetBtn.disabled = false;
     });
   }
 
@@ -71,7 +124,7 @@ function init() {
         </div>
         <div class="palette-card__actions">
           <button class="tool-copy-btn" data-copy-hex="${hex}" type="button">Copy</button>
-          <a class="tool-copy-btn" href="/tools/contrast-checker.html?text=${hex.slice(1)}&bg=ffffff" title="Check contrast">Check</a>
+          <a class="tool-copy-btn" href="/tools/contrast-checker?text=${hex.slice(1)}&bg=ffffff" title="Check contrast">Check</a>
         </div>
       `;
 
@@ -137,11 +190,18 @@ function init() {
   resetBtn.addEventListener('click', () => {
     preview.hidden = true;
     resultsSection.hidden = true;
+    loadingEl.hidden = true;
     dropzone.hidden = false;
+    dropzoneContent.insertBefore(glyphStatus, dropTitle);
+    setGlyphState('focus', 'Ready for an image');
+    setDropContent('Drag and drop your image here', 'PNG, JPG, WebP, SVG · Max 10MB');
     fileInput.value = '';
     extractedColors = [];
     paletteGrid.innerHTML = '';
   });
+
+  window.addEventListener('pagehide', clearLoadingTimer, { once: true });
+  setGlyphState('focus', 'Ready for an image');
 }
 
 document.addEventListener('DOMContentLoaded', init);

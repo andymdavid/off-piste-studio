@@ -40,3 +40,5 @@ Open a PR into `main`; GitHub Actions validates the build and publishing/browser
 See [migration audit and completion checklist](docs/astro-transition.md) for implementation details and constraints.
 
 See the [CSS audit](docs/css-audit.md) for stylesheet ownership, measured payload reductions, CSS budgets and before/after comparison commands.
+
+The restored glyph/navigation and final homepage delivery changes are described in [the homepage performance notes](docs/homepage-performance.md).

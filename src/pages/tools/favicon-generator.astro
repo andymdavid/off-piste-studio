@@ -122,32 +122,37 @@ import Footer from '../../components/Footer.astro';
       </div>
     </section>
 
-    <section class="tool-app">
+    <section class="tool-app" id="favicon-generator-tool">
       <div class="container">
         <div class="favicon-generator">
           <!-- Dropzone -->
           <div class="brand-extractor__dropzone" id="dropzone">
-            <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden="">
+            <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp,image/svg+xml" hidden>
             <div class="brand-extractor__dropzone-content">
-              <svg class="brand-extractor__dropzone-icon" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
-              <p class="brand-extractor__dropzone-text">Drag and drop your image here</p>
-              <p class="brand-extractor__dropzone-subtext">PNG, JPG, WebP, SVG · Square images work best</p>
+              <div class="tool-glyph-status" id="favicon-glyph-status" role="status" aria-live="polite">
+                <svg class="tool-glyph-status__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"></svg>
+                <span class="tool-glyph-status__label" id="favicon-glyph-label">Ready for an image</span>
+              </div>
+              <p class="brand-extractor__dropzone-text" id="favicon-drop-title">Drag and drop your image here</p>
+              <p class="brand-extractor__dropzone-subtext" id="favicon-drop-copy">PNG, JPG, WebP, SVG &middot; Square images work best</p>
               <button class="brand-extractor__browse" id="browse-btn" type="button">Browse Files</button>
             </div>
           </div>
 
           <!-- Image preview -->
-          <div class="brand-extractor__preview" id="image-preview" hidden="">
+          <div class="brand-extractor__preview" id="image-preview" hidden>
             <img id="preview-image" alt="Uploaded source image">
             <button class="brand-extractor__reset" id="reset-btn" type="button">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
               New Image
             </button>
           </div>
 
+          <div class="tool-glyph-processing" id="favicon-processing" hidden><p id="favicon-processing-copy">Generating favicons...</p></div>
+
           <!-- Results -->
-          <div id="favicon-results" hidden="">
-            <h2 class="favicon-generator__title">Generated Favicons</h2>
+          <div id="favicon-results" hidden>
+            <div class="favicon-generator__heading" id="favicon-glyph-outlet"><h2 class="favicon-generator__title">Generated Favicons</h2></div>
 
             <div class="favicon-grid" id="favicon-grid"></div>
 

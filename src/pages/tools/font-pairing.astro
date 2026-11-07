@@ -114,7 +114,7 @@ import Footer from '../../components/Footer.astro';
       </div>
     </section>
 
-    <section class="tool-app">
+    <section class="tool-app" id="font-pairing-tool">
       <div class="container">
         <div class="font-pairing-tool">
 
@@ -123,7 +123,7 @@ import Footer from '../../components/Footer.astro';
             <div class="fp-search">
               <label class="tool-label" for="font-search">Search heading fonts</label>
               <input type="text" id="font-search" class="tool-text-input fp-search__input" placeholder="Type a font name..." autocomplete="off" spellcheck="false">
-              <div class="fp-search__dropdown" id="font-search-dropdown" hidden=""></div>
+              <div class="fp-search__dropdown" id="font-search-dropdown" hidden></div>
             </div>
             <div class="fp-filters">
               <div class="fp-filter-group">
@@ -150,22 +150,29 @@ import Footer from '../../components/Footer.astro';
             </div>
           </div>
 
+          <div class="tool-glyph-status-row fp-glyph-status">
+            <div class="tool-glyph-status" id="font-pairing-glyph-status" role="status" aria-live="polite">
+              <svg class="tool-glyph-status__mark" id="font-pairing-glyph-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"></svg>
+              <span class="tool-glyph-status__label" id="font-pairing-glyph-label">Choose a heading font to begin</span>
+            </div>
+          </div>
+
           <!-- Empty state -->
           <div class="fp-empty-state" id="fp-empty-state">
             <p class="fp-empty-state__text">Select a heading font above to see curated pairings</p>
           </div>
 
           <!-- Selected heading label -->
-          <div class="fp-selected" hidden="">
+          <div class="fp-selected" hidden>
             <span class="tool-label">Pairings for</span>
             <span class="fp-selected__name" id="selected-heading-font"></span>
           </div>
 
           <!-- Pairing cards -->
-          <div class="pairing-cards" id="pairings-grid" hidden=""></div>
+          <div class="pairing-cards" id="pairings-grid" hidden></div>
 
           <!-- Live preview -->
-          <div class="fp-preview" id="font-preview-area" hidden="">
+          <div class="fp-preview" id="font-preview-area" hidden>
             <div class="fp-preview__header">
               <span class="tool-label">Live Preview</span>
               <span class="fp-preview__active-label"></span>
@@ -189,7 +196,7 @@ import Footer from '../../components/Footer.astro';
           </div>
 
           <!-- Export -->
-          <div class="fp-export" id="font-export-area" hidden="">
+          <div class="fp-export" id="font-export-area" hidden>
             <div class="fp-export__block">
               <div class="fp-export__header">
                 <span class="tool-label">Google Fonts Link Tag</span>

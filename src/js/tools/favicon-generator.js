@@ -1,4 +1,7 @@
 import { copyToClipboard } from './export-utils.js';
+import { createGlyphStatus } from '../glyph-status.js';
+
+const LOADING_DELAY = 150;
 
 const SIZES = [
   { w: 16, h: 16, label: '16x16', desc: 'Browser tab' },
@@ -65,13 +68,51 @@ function init() {
   const previewGrid = document.getElementById('favicon-grid');
   const snippetCode = document.getElementById('snippet-code');
   const copySnippetBtn = document.getElementById('copy-snippet');
+  const processing = document.getElementById('favicon-processing');
+  const processingCopy = document.getElementById('favicon-processing-copy');
+  const glyphStatus = document.getElementById('favicon-glyph-status');
+  const glyphLabel = document.getElementById('favicon-glyph-label');
+  const glyphOutlet = document.getElementById('favicon-glyph-outlet');
+  const dropzoneContent = dropzone.querySelector('.brand-extractor__dropzone-content');
+  const dropTitle = document.getElementById('favicon-drop-title');
+  const dropCopy = document.getElementById('favicon-drop-copy');
+  let isProcessing = false;
+  let loadingTimer = 0;
+  const glyphController = createGlyphStatus({
+    container: glyphStatus,
+    svg: glyphStatus.querySelector('svg'),
+    label: glyphLabel,
+  });
+  const setGlyphState = (state, label) => glyphController?.setState(state, label);
+  const clearLoadingTimer = () => {
+    window.clearTimeout(loadingTimer);
+    loadingTimer = 0;
+  };
+
+  function setDropError(title, copy) {
+    setGlyphState('error', title);
+    dropTitle.textContent = title;
+    dropCopy.textContent = copy;
+  }
 
   function handleFile(file) {
-    if (!file || !file.type.startsWith('image/')) return;
-    if (file.size > 10 * 1024 * 1024) {
-      alert('File too large. Maximum size is 10MB.');
+    if (!file || isProcessing) return;
+    if (!file.type.startsWith('image/')) {
+      setDropError('That file is not an image', 'Choose a PNG, JPG, WebP or SVG file.');
       return;
     }
+    if (file.size > 10 * 1024 * 1024) {
+      setDropError('That image is too large', 'Choose an image smaller than 10MB.');
+      return;
+    }
+
+    isProcessing = true;
+    resetBtn.disabled = true;
+    processing.hidden = false;
+    processingCopy.textContent = 'Generating favicons...';
+    processing.prepend(glyphStatus);
+    clearLoadingTimer();
+    loadingTimer = window.setTimeout(() => setGlyphState('loading', 'Generating favicons'), LOADING_DELAY);
 
     const reader = new FileReader();
     reader.onload = (e) => {
@@ -80,6 +121,13 @@ function init() {
       previewSection.hidden = false;
       dropzone.hidden = true;
       generateFavicons(src);
+    };
+    reader.onerror = () => {
+      clearLoadingTimer();
+      setGlyphState('error', 'Image could not be read');
+      processingCopy.textContent = 'Could not read this image. Try another file.';
+      isProcessing = false;
+      resetBtn.disabled = false;
     };
     reader.readAsDataURL(file);
   }
@@ -152,7 +200,20 @@ function init() {
       });
 
       snippetCode.textContent = snippetLines.join('\n');
+      clearLoadingTimer();
+      setGlyphState('check', 'Favicons generated');
+      glyphOutlet.prepend(glyphStatus);
+      processing.hidden = true;
       resultsSection.hidden = false;
+      isProcessing = false;
+      resetBtn.disabled = false;
+    };
+    img.onerror = () => {
+      clearLoadingTimer();
+      setGlyphState('error', 'Image could not be processed');
+      processingCopy.textContent = 'Could not process this image. Try another file.';
+      isProcessing = false;
+      resetBtn.disabled = false;
     };
     img.src = src;
   }
@@ -190,10 +251,18 @@ function init() {
   resetBtn.addEventListener('click', () => {
     previewSection.hidden = true;
     resultsSection.hidden = true;
+    processing.hidden = true;
     dropzone.hidden = false;
+    dropzoneContent.insertBefore(glyphStatus, dropTitle);
+    setGlyphState('focus', 'Ready for an image');
+    dropTitle.textContent = 'Drag and drop your image here';
+    dropCopy.textContent = 'PNG, JPG, WebP, SVG · Square images work best';
     fileInput.value = '';
     previewGrid.innerHTML = '';
   });
+
+  window.addEventListener('pagehide', clearLoadingTimer, { once: true });
+  setGlyphState('focus', 'Ready for an image');
 }
 
 document.addEventListener('DOMContentLoaded', init);

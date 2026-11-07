@@ -1,0 +1,7 @@
+---
+import { GLYPH_STATES } from '../js/glyph-states.js';
+const { class: className = 'brand-glyph', ...attributes } = Astro.props;
+---
+<svg class={className} viewBox="0 0 64 64" aria-hidden="true" focusable="false" {...attributes}>
+  {GLYPH_STATES.base.blocks.map(block => <rect class="brand-glyph__block" {...block} />)}
+</svg>

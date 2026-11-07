@@ -19,7 +19,8 @@
     "test:publishing": "node scripts/check-publishing.mjs",
     "test:publishing:dev": "node scripts/check-dev-publishing.mjs",
     "check:css": "node scripts/check-css.mjs",
-    "check:css:parity": "node scripts/check-css-parity.mjs"
+    "check:css:parity": "node scripts/check-css-parity.mjs",
+    "test:glyphs": "node --test scripts/glyph-states.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",

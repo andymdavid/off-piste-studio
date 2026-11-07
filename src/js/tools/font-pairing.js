@@ -1,4 +1,5 @@
 import { FONT_PAIRINGS } from './font-pairings-data.js';
+import { createGlyphStatus } from '../glyph-status.js';
 
 const loadedFonts = new Set();
 
@@ -50,6 +51,11 @@ function init() {
   const selectedHeadingEl = document.getElementById('selected-heading-font');
   const selectedWrap = document.querySelector('.fp-selected');
   const emptyState = document.getElementById('fp-empty-state');
+  const glyphStatus = createGlyphStatus({
+    container: document.getElementById('font-pairing-glyph-status'),
+    svg: document.getElementById('font-pairing-glyph-mark'),
+    label: document.getElementById('font-pairing-glyph-label'),
+  });
 
   const headingFonts = Object.keys(FONT_PAIRINGS);
   let activeCategory = 'all';
@@ -109,8 +115,11 @@ function init() {
     if (matches.length === 0) {
       searchDropdown.innerHTML = '<div class="fp-dropdown-empty">No fonts match your search</div>';
       searchDropdown.hidden = false;
+      glyphStatus?.setState('error', 'No heading fonts match the current filters');
       return;
     }
+
+    glyphStatus?.setState('focus', `${matches.length} heading fonts available`);
 
     // Load all visible fonts so they render in their own typeface
     matches.forEach(name => loadGoogleFont(name));
@@ -138,6 +147,7 @@ function init() {
     selectedHeadingEl.textContent = name;
     loadGoogleFont(name);
     renderPairings();
+    glyphStatus?.activateState('sparkle', `Pairings ready for ${name}`);
     emptyState.hidden = true;
     selectedWrap.hidden = false;
     pairingsGrid.hidden = false;
@@ -156,6 +166,7 @@ function init() {
 
     if (pairings.length === 0) {
       pairingsGrid.innerHTML = '<div class="fp-no-pairings">No pairings match this mood filter. Try a different mood.</div>';
+      glyphStatus?.setState('error', 'No pairings match the selected mood');
       return;
     }
 
@@ -178,6 +189,7 @@ function init() {
         </div>
       </div>
     `).join('');
+    glyphStatus?.setState('focus', `${pairings.length} pairings available for ${selectedHeading}`);
 
     pairingsGrid.querySelectorAll('.pairing-card__preview-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -190,6 +202,7 @@ function init() {
     selectedBody = bodyFont;
     loadGoogleFont(bodyFont);
     loadGoogleFont(selectedHeading);
+    glyphStatus?.setState('check', `${selectedHeading} and ${bodyFont} selected`);
 
     // Update preview
     previewArea.hidden = false;
@@ -245,6 +258,7 @@ function init() {
     navigator.clipboard.writeText(exportLink.textContent).then(() => {
       copyLinkBtn.textContent = 'Copied!';
       copyLinkBtn.classList.add('is-copied');
+      glyphStatus?.setState('check', 'Google Fonts link copied');
       setTimeout(() => {
         copyLinkBtn.textContent = 'Copy';
         copyLinkBtn.classList.remove('is-copied');
@@ -256,12 +270,15 @@ function init() {
     navigator.clipboard.writeText(exportCSS.textContent).then(() => {
       copyCSSBtn.textContent = 'Copied!';
       copyCSSBtn.classList.add('is-copied');
+      glyphStatus?.setState('check', 'Font pairing CSS copied');
       setTimeout(() => {
         copyCSSBtn.textContent = 'Copy';
         copyCSSBtn.classList.remove('is-copied');
       }, 2000);
     });
   });
+
+  glyphStatus?.setState('focus', 'Choose a heading font to begin');
 }
 
 if (document.querySelector('.font-pairing-tool')) {

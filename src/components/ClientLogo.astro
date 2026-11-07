@@ -1,0 +1,8 @@
+---
+import { Image } from 'astro:assets';
+const logos = import.meta.glob('../../public/images/logos/*.webp', { eager: true, import: 'default' });
+const { src, ...attributes } = Astro.props;
+const image = logos[`../../public${decodeURIComponent(src)}`];
+if (!image) throw new Error(`Unknown client logo: ${src}`);
+---
+<Image src={image} widths={[120, 240, 360]} sizes="(max-width: 768px) 96px, 168px" format="webp" quality={80} {...attributes} />
