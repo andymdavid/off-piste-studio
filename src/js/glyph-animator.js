@@ -57,13 +57,20 @@ export function animateGlyphRects(rects, blocks, {
   easing = DEFAULT_EASING,
   reducedMotion = false,
 } = {}) {
-  const assignments = mapGlyphBlocksSpatially(rects, blocks, readVisualGlyphBlock);
+  // Snapshot every visual state before changing geometry. Reading inside the write loop
+  // forces another SVG layout for each block and makes interrupted morphs expensive.
+  const visuals = new Map(rects.map(rect => {
+    const getStyles = rect.ownerDocument?.defaultView?.getComputedStyle || globalThis.getComputedStyle;
+    return [rect, {
+      block: readVisualGlyphBlock(rect),
+      opacity: getStyles ? getStyles(rect).opacity : rect.getAttribute('opacity') || '0',
+    }];
+  }));
+  const assignments = mapGlyphBlocksSpatially(rects, blocks, rect => visuals.get(rect).block);
   const assignedRects = new Set(assignments.map(({ rect }) => rect));
 
   assignments.forEach(({ rect, block }) => {
-    const from = readVisualGlyphBlock(rect);
-    const getStyles = rect.ownerDocument?.defaultView?.getComputedStyle || globalThis.getComputedStyle;
-    const fromOpacity = getStyles ? getStyles(rect).opacity : rect.getAttribute('opacity') || '0';
+    const { block: from, opacity: fromOpacity } = visuals.get(rect);
     stopAnimation(rect);
     applyGlyphBlock(rect, block);
     rect.setAttribute('opacity', '1');
@@ -79,8 +86,7 @@ export function animateGlyphRects(rects, blocks, {
   });
 
   rects.filter((rect) => !assignedRects.has(rect)).forEach((rect) => {
-    const getStyles = rect.ownerDocument?.defaultView?.getComputedStyle || globalThis.getComputedStyle;
-    const fromOpacity = getStyles ? getStyles(rect).opacity : rect.getAttribute('opacity') || '1';
+    const fromOpacity = visuals.get(rect).opacity;
     stopAnimation(rect);
     rect.setAttribute('opacity', '0');
     rect.style.opacity = '0';

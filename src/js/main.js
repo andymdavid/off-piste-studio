@@ -190,7 +190,8 @@ function initBrandGlyph() {
     scheduleIdleWink();
   });
 
-  setGlyphState('base', false);
+  // Astro already renders the registry geometry; avoid reading/writing SVG layout at startup.
+  glyph.dataset.glyphState = 'base';
   scheduleIdleWink();
 }
 
@@ -320,7 +321,7 @@ function initInfoOverlay() {
   }
 
   const scaleWordmark = () => {
-    if (!wordmark) return;
+    if (!wordmark || document.body.dataset.infoOpen !== 'true') return;
     wordmark.style.setProperty('--studio-info-wordmark-scale', '1');
     const availableWidth = wordmark.parentElement?.clientWidth || 0;
     const textWidth = wordmark.scrollWidth;
