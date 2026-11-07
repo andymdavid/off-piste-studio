@@ -1,0 +1,22 @@
+name: Validate website
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.22.1'
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: node scripts/check-publishing.mjs
+      - run: npm run test:insight-visuals
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:browser

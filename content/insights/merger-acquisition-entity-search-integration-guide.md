@@ -145,7 +145,7 @@ Compare the live estate with the baseline. Verification should cover direct impl
 - Review landing-page traffic, referrals, forms, calls and qualified enquiries
 - Test representative AI searches and record inaccurate names, relationships or services
 
-Use the [business representation diagnostic](/insights/how-ai-search-understands-your-business) when sources tell conflicting stories. If systems conflate two businesses, follow the [entity disambiguation guide](/insights/fix-ai-search-business-name-confusion-guide). An incorrect organic label has its own [site name correction route](/insights/fix-wrong-site-name-google-search-guide), while visible panel errors belong in the [Knowledge Panel correction workflow](/insights/fix-incorrect-google-knowledge-panel-business-guide).
+Use the [business representation diagnostic](/insights/how-ai-search-understands-your-business) when sources tell conflicting stories. If systems conflate two businesses, follow the [entity disambiguation guide](/insights/fix-ai-search-business-name-confusion-guide). An incorrect organic label has its own site name correction route, while visible panel errors belong in the [Knowledge Panel correction workflow](/insights/fix-incorrect-google-knowledge-panel-business-guide).
 
 Representation can change at different speeds across sources. Track observations alongside commercial measures with the [AI search visibility measurement guide](/insights/how-to-measure-ai-search-visibility), but don't turn a change in one tool into a causal claim. Rankings, reviews, Knowledge Panels and AI citations aren't guaranteed outcomes of the integration plan.
 

@@ -1,0 +1,105 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<SiteLayout bodyAttributes={{"data-page-type":"resources","data-theme":"dark"}}>
+<Fragment slot="head" is:raw>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <meta name="description" content="Evidence-led insights on websites, brand, SEO, AI search visibility, and digital strategy for businesses that want to become easier to find and trust.">
+  <title>Insights &amp; Resources | Off Piste Studio</title>
+  <link rel="canonical" href="https://offpistestudio.com/resources">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insights &amp; Resources | Off Piste Studio">
+  <meta property="og:description" content="Evidence-led insights on websites, brand, SEO, AI search visibility, and digital strategy for businesses that want to become easier to find and trust.">
+  <meta property="og:url" content="https://offpistestudio.com/resources">
+  <meta property="og:site_name" content="Off Piste Studio">
+  <meta property="og:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Insights &amp; Resources | Off Piste Studio">
+  <meta name="twitter:description" content="Evidence-led insights on websites, brand, SEO, AI search visibility, and digital strategy for businesses that want to become easier to find and trust.">
+  <meta name="twitter:image" content="https://offpistestudio.com/images/Hero-Background.png">
+  <script type="application/ld+json" is:inline="">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Insights & Resources",
+    "description": "Evidence-led insights on websites, brand, SEO, AI search visibility, and digital strategy.",
+    "url": "https://offpistestudio.com/resources",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Off Piste Studio",
+      "url": "https://offpistestudio.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json" is:inline="">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://offpistestudio.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://offpistestudio.com/resources" }
+    ]
+  }
+  </script>
+  
+  <!-- Font preloads -->
+  
+  
+  <!-- Fonts -->
+  
+  
+  
+</Fragment>
+<Fragment is:raw>
+  <!-- Header -->
+  </Fragment><Header /><Fragment is:raw>
+
+  <main>
+    <!-- Insights Hero -->
+    <section class="work-hero">
+      <div class="container">
+        <h1 class="work-hero__title insights-hero__title">Insights for sharper digital growth.</h1>
+        <div class="work-hero__support">
+          <p class="work-hero__text insights-hero__text">From AI to SEO to user experience, we share practical thinking for businesses that want sharper positioning and stronger performance.</p>
+          <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="hero-intro__button work-hero__button">Book a Free Discovery Call</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insights List -->
+    <section class="projects projects--insights">
+      <div class="container">
+        <div class="projects__filter-row insights-index__filter-row">
+          <h1 class="insights-index__label">Insights</h1>
+          <div class="insights-index__filters">
+            <label class="insights-index__filter-control">
+              <span class="insights-index__filter-label">Filter by</span>
+              <span class="insights-index__select-wrap">
+                <select class="insights-index__select" data-insights-filter="" aria-label="Filter insights by topic"></select>
+                <svg class="insights-index__select-icon" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="projects__list" data-insights-list=""></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  </Fragment><Footer /><Fragment is:raw>
+
+  
+
+
+</Fragment>
+
+
+</SiteLayout>

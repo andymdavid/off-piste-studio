@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('insights')).sort((a, b) => b.data.date.localeCompare(a.data.date)).slice(0, 3);
+const formatDate = (date) => new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(new Date(`${date}T00:00:00Z`));
+---
+<div class="insights-row insights-row--cards" id="insights-cards">
+  {posts.map(({ data: post }) => (
+    <article class="insights-card">
+      <div class="insights-card__content">
+        <a href={`/insights/${post.slug}`} class="insight-card__link insights-card__body">
+          <div class="insight-card__content">
+            <div class="insight-card__top"><div class="insight-card__meta">{post.readTime}</div><div class="insight-card__tags">{post.tags.slice(0, 2).map(tag => <span>{tag}</span>)}</div></div>
+            <h3 class="insight-card__title">{post.title}</h3><p class="insight-card__description">{post.description}</p>
+          </div>
+        </a>
+      </div>
+      <div class="insights-card__footer"><span class="insights-card__date">{formatDate(post.date)}</span><a href={`/insights/${post.slug}`} class="insights-card__link">Read article</a></div>
+    </article>
+  ))}
+</div>

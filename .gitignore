@@ -15,3 +15,7 @@ docs/private/runs/*
 !docs/private/runs/templates/**
 public/images/cases/adammonk.png
 public/images/cases/crete.png
+
+.astro/
+/test-results/
+/playwright-report/

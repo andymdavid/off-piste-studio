@@ -71,7 +71,7 @@ An owned-page error is the most controllable case. Your site may still state an 
 
 Third-party conflict appears when a directory, association page, news story or partner profile carries the old fact. Correcting your site alone may leave that conflicting source intact. Ask the publisher for a factual update and give them the current source of truth.
 
-A Business Profile or Knowledge Panel issue belongs to that record. Correct the profile through its management tools or use the relevant feedback process. Our guides cover [incorrect Google Knowledge Panel business facts](/insights/fix-incorrect-google-knowledge-panel-business-guide) and a [wrong site name in Google Search](/insights/fix-wrong-site-name-google-search-guide) when the symptom sits outside an AI Overview.
+A Business Profile or Knowledge Panel issue belongs to that record. Correct the profile through its management tools or use the relevant feedback process. Our guides cover [incorrect Google Knowledge Panel business facts](/insights/fix-incorrect-google-knowledge-panel-business-guide) and a wrong site name in Google Search when the symptom sits outside an AI Overview.
 
 An entity collision occurs when details from two organisations are merged. Route that case to the [business-name confusion diagnostic](/insights/fix-ai-search-business-name-confusion-guide). If the same wrong fact appears across several AI and search products, use the broader guide to [how AI search understands your business](/insights/how-ai-search-understands-your-business).
 

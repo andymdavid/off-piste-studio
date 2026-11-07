@@ -1,0 +1,21 @@
+---
+import '../styles/main.css';
+import '../styles/fonts.css';
+const { bodyAttributes = {} } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <slot name="head" />
+  </head>
+  <body {...bodyAttributes}>
+    <script is:inline>
+      try {
+        const theme = localStorage.getItem('off-piste-duplicate-theme');
+        if (theme === 'light' || theme === 'dark') document.body.dataset.theme = theme;
+      } catch {}
+    </script>
+    <slot />
+    <script src="../js/main.js"></script>
+  </body>
+</html>

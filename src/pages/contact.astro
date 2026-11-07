@@ -1,0 +1,22 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+<SiteLayout bodyAttributes={{ 'data-page-type': 'contact', 'data-theme': 'dark' }}>
+  <Fragment slot="head">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Off Piste Studio</title>
+    <meta name="description" content="Discuss your website, brand or design project with Off Piste Studio." />
+    <link rel="canonical" href="https://offpistestudio.com/contact" />
+  </Fragment>
+  <Header />
+  <main class="section"><div class="container">
+    <h1>Let’s discuss your project.</h1>
+    <p>Tell us what you’re building, your timeline and your goals.</p>
+    <p><a href="mailto:hello@offpistestudio.com">hello@offpistestudio.com</a></p>
+    <p><a href="https://cal.com/off-piste-studio/discovery">Book a discovery call</a></p>
+  </div></main>
+  <Footer />
+</SiteLayout>

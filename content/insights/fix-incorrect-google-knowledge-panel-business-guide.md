@@ -46,7 +46,7 @@ A Google Business Profile is different. It represents a local business that serv
 
 If you own or manage that local profile, Google says you can [edit a verified Business Profile directly on Search or Maps](https://support.google.com/business/answer/3039617?hl=en-GB). Use the [Google Business Profile guide](/insights/google-business-profile-guide) for the local management route. Don't submit a Knowledge Panel correction for information you can manage in the profile.
 
-An ordinary result is usually a blue link, a site name, a URL and a snippet drawn from or related to a web page. If the label above that organic result is wrong, use the focused guide to [fix the site name in Google Search](/insights/fix-wrong-site-name-google-search-guide). Correct other page metadata or indexing issues rather than looking for a panel claim flow.
+An ordinary result is usually a blue link, a site name, a URL and a snippet drawn from or related to a web page. If the label above that organic result is wrong, use the focused guide to fix the site name in Google Search. Correct other page metadata or indexing issues rather than looking for a panel claim flow.
 
 Person panels need the same initial diagnosis, but the official source is usually the person's maintained profile page rather than an organisation About page. For a founder, author or expert, use the [expert profile and Person schema guide](/insights/person-schema-expert-profile-page-guide) after confirming which identity is mixed or incomplete.
 

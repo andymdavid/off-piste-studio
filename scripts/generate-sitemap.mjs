@@ -56,6 +56,9 @@ entries.push({
   priority: '1.0',
 });
 
+// Contact is now a real no-JavaScript fallback in addition to the enquiry modal.
+entries.push({ url: `${BASE_URL}/contact`, lastmod: getLastmod(resolve(rootDir, 'src/pages/contact.astro')), changefreq: 'monthly', priority: '0.6' });
+
 // Other core pages
 for (const file of corePages) {
   if (file === 'index.html') continue;
@@ -81,11 +84,10 @@ function addScannedPages(dirName, pathPrefix, contentDirName, changefreq, priori
   }
 }
 
-// Industry pages - priority 0.8
+// Preserve published industry and location routes. The industry hub redirects and is excluded.
 addScannedPages('industries', 'industries', 'content/industries', 'weekly', '0.8');
-
-// Location pages - priority 0.8
 addScannedPages('locations', 'locations', 'content/locations', 'weekly', '0.8');
+addScannedPages('services', 'services', 'content/services', 'weekly', '0.8');
 
 // Tool pages - priority 0.7
 for (const page of scanDir('tools')) {
