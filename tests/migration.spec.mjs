@@ -67,3 +67,21 @@ test('contact fallback and booking links are usable without JavaScript', async (
   await expect(page.getByRole('link', { name: 'Book a discovery call', exact: true })).toHaveAttribute('href', 'https://cal.com/off-piste-studio/discovery');
   await context.close();
 });
+
+test('header and site footer preserve the original logo font on all page families', async ({ page }) => {
+  for (const theme of ['dark', 'light']) {
+    await page.addInitScript(theme => localStorage.setItem('off-piste-duplicate-theme', theme), theme);
+    for (const route of ['/', '/about', '/work', '/pricing', '/resources', '/tools', '/tools/color-converter', '/locations', '/locations/perth', '/industries/electricians', '/services/website-design', '/insights/website-redesign-checklist', '/contact']) {
+      await page.goto(route);
+      await page.evaluate(() => document.fonts.ready);
+      await expect(page.locator('footer.footer--current')).toHaveCount(1);
+      for (const selector of ['.duplicate-header__brand-text', '.footer__brand-text']) {
+        await expect(page.locator(selector)).toBeVisible();
+        expect(await page.locator(selector).evaluate(el => getComputedStyle(el).fontFamily)).toContain('Bebas Neue');
+      }
+      expect(await page.evaluate(() => document.fonts.check('16px "Bebas Neue"'))).toBe(true);
+    }
+  }
+  await page.goto('/');
+  await expect(page.locator('.testimonial-feature__author')).toHaveCount(3);
+});
