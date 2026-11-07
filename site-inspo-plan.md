@@ -1,3 +1,5 @@
+> Historical planning document. Off Piste Studio now uses Astro; use [README](README.md) and [current migration documentation](docs/astro-transition.md) for build, source and publishing instructions. References below to Vite, legacy HTML or removed generators describe the earlier implementation.
+
 # Site Inspo — Small Business Website Gallery
 
 ## What this is

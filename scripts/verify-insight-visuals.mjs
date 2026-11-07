@@ -3,7 +3,7 @@ import { basename, resolve } from 'node:path';
 
 const rootDir = resolve('.');
 const contentDir = resolve(rootDir, 'content/insights');
-const outputDir = resolve(rootDir, 'insights');
+const outputDir = resolve(rootDir, 'dist/insights');
 const failures = [];
 
 for (const filename of readdirSync(contentDir).filter(name => name.endsWith('.md'))) {
@@ -12,7 +12,7 @@ for (const filename of readdirSync(contentDir).filter(name => name.endsWith('.md
   const expectedModules = (markdown.match(/^```insight-module\s*$/gm) || []).length;
   if (expectedVisuals === 0 && expectedModules === 0) continue;
 
-  const slug = basename(filename, '.md');
+  const slug = markdown.match(/^slug:\s*(.+)$/m)?.[1]?.trim() || basename(filename, '.md');
   const outputPath = resolve(outputDir, `${slug}.html`);
   let html;
 

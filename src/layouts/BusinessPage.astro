@@ -1,0 +1,55 @@
+---
+import { getCollection } from 'astro:content';
+import SiteLayout from './SiteLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import ContentHead from '../components/ContentHead.astro';
+import ProjectSlideshow from '../components/ProjectSlideshow.astro';
+import ClientBar from '../components/ClientBar.astro';
+import { renderMarkdown } from '../lib/page-markdown.mjs';
+import { getPageLinks } from '../lib/page-links.mjs';
+const { page, type } = Astro.props;
+const section = {industry:'industries',service:'services',location:'locations'}[type];
+const canonical = new URL(`/${section}/${page.slug}`,Astro.site).href;
+const industries = (await getCollection('industries')).map(({data}) => data);
+const locations = (await getCollection('locations')).map(({data}) => data);
+const groups = getPageLinks(page,type,industries,locations);
+const faqHeading = type === 'industry' ? `Common questions about ${page.industry.toLowerCase()} websites` : type === 'location' ? `Common questions about web design in ${page.location}` : 'Common questions';
+const ctaHeading = type === 'industry' ? `Ready to get more leads for your ${page.industry.toLowerCase()} business?` : type === 'location' ? `Need a website for your ${page.location} business?` : 'Ready to get started?';
+const ctaText = type === 'industry' ? "Get in touch to discuss your project. We'll show you what a high-performing website looks like for your industry." : type === 'location' ? `We build websites for local businesses in ${page.location} and across ${page.region || 'Perth'}. Get in touch to discuss your project.` : "Get in touch and we'll walk you through how it works.";
+const entity = type === 'location' ? {'@type':'LocalBusiness',name:'Off Piste Studio',description:page.description,url:Astro.site.origin,address:{'@type':'PostalAddress',addressLocality:'City Beach',addressRegion:'WA',addressCountry:'AU'},areaServed:{'@type':'City',name:page.location}} : {'@type':'Service',name:page.title,description:page.description,provider:{'@type':'LocalBusiness',name:'Off Piste Studio',url:Astro.site.origin},...(type === 'industry' ? {serviceType:'Website Design'}:{}),areaServed:[{'@type':'City',name:'Perth'},{'@type':'Country',name:'Australia'}]};
+const schema = {'@context':'https://schema.org','@graph':[
+  entity,
+  ...(page.faqs.length ? [{'@type':'FAQPage',mainEntity:page.faqs.map(faq => ({'@type':'Question',name:faq.q,acceptedAnswer:{'@type':'Answer',text:faq.a}}))}]:[]),
+  {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:Astro.site.href},{'@type':'ListItem',position:2,name:section[0].toUpperCase()+section.slice(1),item:new URL(`/${section}`,Astro.site).href},{'@type':'ListItem',position:3,name:page.title,item:canonical}]}
+]};
+---
+<SiteLayout bodyAttributes={{'data-page-type':type,'data-page-slug':page.slug,'data-theme':'dark'}}>
+  <ContentHead slot="head" title={`${page.title} | Off Piste Studio`} description={page.description} canonical={canonical} schema={schema} noindex={type === 'service'} />
+  <Header />
+  <main>
+    <section class="work-hero"><div class="container">
+      <h1 class="page-hero__title">{page.title}</h1>
+      <p class="page-hero__intro">{page.intro}</p>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="page-hero__button">Book a Discovery Call</a>
+      <ProjectSlideshow />
+    </div></section>
+    <ClientBar />
+    <section class="page-body"><div class="container"><div class="page-body__content" set:html={renderMarkdown(page.markdown)} /></div></section>
+    {type !== 'location' && <section class="page-trust"><div class="container"><div class="page-trust__content">
+      <div class="page-trust__item"><span class="page-trust__number">50+</span><span class="page-trust__label">Websites built for small businesses</span></div>
+      <div class="page-trust__item"><span class="page-trust__number">2–4</span><span class="page-trust__label">Weeks typical delivery</span></div>
+      <div class="page-trust__item"><span class="page-trust__number">100%</span><span class="page-trust__label">Client satisfaction — no refund ever requested</span></div>
+    </div></div></section>}
+    <section class="page-cta"><div class="container"><div class="page-cta__content">
+      <h2 class="page-cta__heading">{ctaHeading}</h2><p class="page-cta__text">{ctaText}</p>
+      <a href="https://cal.com/off-piste-studio/discovery" target="_blank" rel="noopener" class="page-cta__button">Book a Discovery Call</a>
+    </div></div></section>
+    {page.faqs.length > 0 && <section class="faq section page-faq"><div class="container"><div class="faq__layout">
+      <div class="faq__intro"><h2 class="faq__heading">{faqHeading}</h2></div>
+      <div class="faq__list">{page.faqs.map(faq => <details class="faq__item"><summary class="faq__question">{faq.q}</summary><p class="faq__answer">{faq.a}</p></details>)}</div>
+    </div></div></section>}
+    {groups.length > 0 && <section class="page-links"><div class="container">{groups.map(group => <div class="page-links__group"><h3 class="page-links__label">{group.title}</h3><div class="page-links__list">{group.labels.map(label => <span class="page-links__link">{label}</span>)}</div></div>)}</div></section>}
+  </main>
+  <Footer />
+</SiteLayout>

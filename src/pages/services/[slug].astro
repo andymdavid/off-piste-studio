@@ -1,23 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
-import { load } from 'cheerio';
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { createServiceHtml, renderMarkdown, parseContentDir } from '../../lib/services-renderer.mjs';
+import BusinessPage from '../../layouts/BusinessPage.astro';
 export async function getStaticPaths() {
-  const services = (await getCollection('services')).map(({ data }) => ({ ...data, html: renderMarkdown(data.markdown) }));
-  const industries = parseContentDir('content/industries', ['industry']);
-  const locations = parseContentDir('content/locations', ['location', 'region']);
-  return services.map(page => ({ params: { slug: page.slug }, props: { page, services, industries, locations } }));
+  return (await getCollection('services')).map(({data:page}) => ({params:{slug:page.slug},props:{page}}));
 }
-const { page, services, industries, locations } = Astro.props;
-const $ = load(createServiceHtml(page, industries, services, locations));
-$('head link[rel="stylesheet"], head link[rel="preload"], head link[rel="preconnect"]').remove();
+const { page } = Astro.props;
 ---
-<SiteLayout bodyAttributes={{ 'data-page-type': 'service', 'data-page-slug': page.slug, 'data-theme': 'dark' }}>
-  <Fragment slot="head" set:html={$('head').html()} />
-  <Header />
-  <Fragment set:html={$('body main').toString()} />
-  <Footer />
-</SiteLayout>
+<BusinessPage page={page} type="service" />

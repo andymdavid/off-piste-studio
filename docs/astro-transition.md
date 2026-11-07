@@ -1,86 +1,82 @@
-# Astro transition and local design handoff
+# Astro migration audit and completion
 
-This branch migrates the site to static Astro while preserving the existing page layouts, content and both themes. Hero and work-overview redesigns are optional future work and do not block this release. Dark remains the existing default until the final design decision.
+The production build uses native Astro pages and layouts, validated Markdown collections and shared components. There are no tracked HTML pages, duplicate document generators or committed generated catalogues. The source of truth is `src/` plus `content/`; generated release files exist only in ignored `dist/`.
 
-## Local development
+## Audit findings, 7 November 2026
 
-Use Node >=22.23.4 (the existing Docker build uses Node 24), then:
+The first release used Astro to produce all 171 pages, but retained 173 tracked legacy HTML files. Every build still ran three legacy generators to create duplicate HTML, catalogue JavaScript and a sitemap. Articles and business pages generated full HTML strings in JavaScript, parsed them with Cheerio, then injected extracted sections into Astro. Services bypassed collection validation when reading related industries and locations. The resources index was empty until its generated JavaScript catalogue loaded. Location hub links and schema were hard-coded. The article-visual check read the legacy HTML rather than deployed output. Publishing verification covered only article creation/deletion, and metadata parity relied on the retained legacy files. A redundant Vite 6 peer dependency also remained in the lockfile; deduplication now uses Astro’s existing Vite 8 dependency and npm audit reports zero vulnerabilities. Old OTF font families remained in public output although the site used WOFF2.
 
-```sh
-npm ci
-npm run dev
-```
+These were real maintenance and publishing gaps. GitHub language percentages counted the duplicate source; they did not measure how much of the live site used Astro. No Linguist overrides were added.
 
-Development runs on port 5173. Build and validate with:
+## Completion checklist
 
-```sh
-npm run build
-npm run check:site
-npm run test:insight-visuals
-node scripts/check-publishing.mjs
-npx playwright install chromium
-npm run test:browser
-```
+- [x] Audit tracked source, imports, generators, npm commands, content validation, public assets, browser behaviour, CI and deployment.
+- [x] Replace article HTML generation/parsing with `src/pages/insights/[slug].astro`, `ContentHead` and `RelatedPost`.
+- [x] Replace industry/service/location HTML generation with `BusinessPage.astro`, shared client/slideshow components and collection-backed routes.
+- [x] Keep Markdown rendering and custom insight visuals in focused rendering helpers; remove full-document renderers and duplicate frontmatter parsers.
+- [x] Render all resources cards in Astro; progressively enhance filtering and Show More without a catalogue download.
+- [x] Generate sitemap from Astro static routes and validated collections; derive location links and schema from collections.
+- [x] Remove legacy tracked HTML, generator scripts, generated catalogues, committed sitemap and unused OTF fonts and the unused former WebGL texture.
+- [x] Verify custom visuals against `dist/insights`, following frontmatter slugs rather than assuming filenames match.
+- [x] Reject duplicate content slugs and validate required industry/location labels.
+- [x] Watch content changes in local development, including additions, edits, slug changes and deletion.
+- [x] Update publishing commands and repository documentation.
+- [x] Validate clean install/build, semantic output parity and publishing create/edit/delete in all collections.
+- [x] Validate mobile/desktop browser behaviour, themes, original logo typography, resources filtering and all tools.
 
-Playwright needs Chromium's operating-system libraries installed. In this managed workspace the browser checks were run with the existing UI Atlas library directory in `LD_LIBRARY_PATH`; that workaround is environment-specific and is not needed on a normally configured local machine.
+Release gate: pass PR CI, merge, deploy and verify the actual live release. Final rollout evidence and release status are tracked in Flight Deck task `103978e7-5452-4818-82a0-7357bff29b1c`, rather than pre-claiming deployment in this source document.
 
-## Where to edit
+Check the linked PR and Flight Deck task for final commit/deployment evidence. The implementation checks above passed before PR creation.
 
-- `src/pages/index.astro`: homepage, including its simple static hero. Work overview markup remains here for the operator's redesign.
-- `src/pages/{about,work,pricing,resources,tools}.astro`: editable core pages.
-- `src/components/{Header,Footer}.astro`: shared site chrome.
-- `src/layouts/SiteLayout.astro`: shared document, early saved-theme restoration and common behaviour.
-- `src/styles/main.css`: existing design and complete theme variants.
-- `src/styles/fonts.css`: self-hosted Geist Sans and Geist Serif from geist 1.9.2 (license included); Serif is limited to large display text. The Next.js font wrapper is not installed.
-- `src/pages/tools/*.astro` and `src/js/tools/`: individual tool pages and behaviour. Tool CSS loads only on tool pages.
-- `content/{insights,services,industries,locations}/*.md`: publishing sources; validated by `src/content.config.ts` and rendered through dynamic static routes.
-- `src/lib/*-renderer.mjs`: preserved content rendering, including custom article visuals and service, industry and location FAQ markup. These keep the established markup stable during migration.
-- `src/components/LatestInsights.astro`: homepage cards computed at build time from the content collection.
+## Source structure
 
-`Fragment is:raw` protects inherited literal HTML from Astro expression parsing; close/reopen that fragment when inserting a component or expression. Astro components and processed scripts belong outside raw fragments.
+- `src/pages/`: editable core pages, tools and static dynamic routes.
+- `src/layouts/SiteLayout.astro`: shared document, self-hosted fonts, saved-theme restoration and common behaviour.
+- `src/layouts/BusinessPage.astro`: service/industry/location content, FAQ, schema and layout.
+- `src/components/`: header/footer, metadata, latest/related/resource article cards, client bar and project slideshow.
+- `src/content.config.ts` and `src/lib/markdown-loader.ts`: validated collections with development file watching; preserves established line-based frontmatter used by publishing.
+- `src/lib/insights.mjs`: Markdown/custom visual rendering and related-post selection.
+- `src/lib/page-markdown.mjs`: established business-page Markdown rendering.
+- `src/lib/page-links.mjs`: deterministic related-industry/location selection, without HTML document generation.
+- `src/pages/sitemap.xml.ts`: collection-backed sitemap endpoint, prerendered during static builds.
+- `content/{insights,services,industries,locations}/`: publishing sources.
+- `src/js/tools/`, `src/styles/`: existing tools, styles and both complete themes.
 
-The old root HTML files and HTML generators remain as compatibility references for publishing scripts and validation. They are **not** the source for the editable core Astro pages. Do not edit root `index.html` for the redesign. The build still runs the existing sync commands to maintain catalogue and sitemap compatibility; Astro renders articles and services directly from their content collections. `dist/` is generated and is no longer tracked.
+Literal `Fragment is:raw` sections in core pages preserve existing HTML/CSS/inline JSON without changing the design. They are inside actual Astro source files, not loaded from legacy HTML. Article Markdown/custom visuals are rendered as HTML fragments at build time. No React, client framework hydration or WebGL is required.
 
-## Branch coordination
+## Publishing contract
 
-Start the design branch from `feat/astro-transition` after fetching it:
+Add/edit/delete Markdown under the appropriate collection. `slug` determines the URL and must be unique within that collection. Required fields are validated at build time. Articles require a published date, one or two supported topics and read time; business pages use JSON FAQ arrays. The existing frontmatter syntax is intentionally retained; this migration does not silently reinterpret it as YAML.
 
-```sh
- git fetch origin
- git switch -c feat/homepage-design origin/feat/astro-transition
- npm ci
- npm run dev
-```
+Run `npm run build`. Astro regenerates routes, latest/related cards, the resources index, location hub and sitemap. A deleted document disappears from output on the next build. Do not run removed `scripts/generate-*.mjs` files or commit generated files.
 
-Design changes are optional. The migration PR can be merged once release checks pass. Bring subsequent migration changes into the design branch through normal Git merges; avoid rewriting shared branch history. The original workspace's uncommitted changes were not included. Reconcile any intended unpublished content separately before release.
+The old npm aliases `sync`, `sync:insights`, `sync:pages` and `sync:sitemap` remain as compatibility entry points to the same native build. They write only `dist/`; there is no separate legacy pipeline. External automation must publish Markdown and consume `dist/`, rather than stage root-level HTML. Repository CI exercises this contract; external scheduled runs have not been triggered as part of this migration.
 
-## Performance changes
+`npm run test:publishing` exercises creation, edit and deletion across all four content families, including a slug different from the filename, special characters in metadata/schema, homepage/resources/location-hub updates, last-modified dates, sitemap cleanup and duplicate-slug rejection. Fixtures are removed in `finally` and a final release rebuild follows. Do not run it concurrently with another build.
 
-- Removed the homepage WebGL loop and its 5.8 MB texture request.
-- Replaced external font stylesheets and OTF preloads with bundled WOFF2 assets.
-- Added responsive, build-optimised homepage case-study imagery.
-- Rendered latest and related article cards at build time.
-- Lazy-loaded the article catalogue only where client filtering needs it.
-- Preserved .html output, all published industry/location routes, the industry hub redirect and extensionless nginx routing.
-- Removed unsupported robots directives and the redirected industry hub from the sitemap; included service and contact routes.
+## Behaviour preserved
 
-## Release validation
+The migration retains current layouts, content, 171 HTML pages, 169 sitemap URLs, extensionless and existing HTML-file access, tool query-string redirects, dark default, full light mode and saved preference. Header/footer logos use self-hosted Bebas Neue independently of Geist Sans/Geist Serif site typography. Optional hero/work-overview redesigns are separate work. The homepage hero remains simple and has no WebGL or large texture request.
 
-Release is independent of a redesign. Validate against the current published site and keep dark as the current default. Production deploy follows the existing GitHub `deployed` branch webhook, after PR checks and merge. The old dirty checkout remains untouched; its unpublished changes are outside this release. Do not reset or switch that checkout.
+The archived homepage and industry hub retain their existing URLs and indexability/redirect behaviour. Existing service-page `noindex` directives are preserved rather than silently changing an editorial/search decision. Their presence deserves a separate SEO decision; it is not caused by Astro. Native JSON serialization corrects the old HTML entity encoding inside the website-maintenance service schema.
 
-Local Nginx validation exercises the actual site configuration, including status codes, query-preserving redirects, gzip, HTML revalidation and cache policies. The test wrapper changes only the listening port, document root and temporary paths. CapRover tracking tools returned HTTP 403 in this session; direct version-record verification is unavailable. `/release.json` exposes a deterministic source digest so the actual public deployment can be matched to this release without claiming an unavailable CapRover version.
+## Deployment and coordination
 
-Field Core Web Vitals need real-user data after release. Legacy HTML generator commands remain intentionally available for existing publishing automation; the production renderer uses Astro collections and shared templates. Removing every compatibility file or restyling the whole CSS file is not a requirement for a completed migration.
+Use a branch from current `origin/main` for design work. Do not reset/switch the original dirty `/workspace/off-piste-studio` checkout or include its unpublished changes. This migration uses the isolated `/workspace/lara/mycode/off-piste-astro` working copy.
 
-## Recorded validation (7 November 2026)
+GitHub Actions validates PRs/main. Merge validated source, fast-forward GitHub `deployed`, then verify the live site. Nginx serves only `dist/`, with HTML revalidation, one-year immutable hashed Astro assets, seven-day unhashed image caching and relative query-preserving redirects behind the TLS proxy. `/release.json` identifies the deployed source digest. CapRover's tracking API denies this session access, so do not claim a CapRover version from unavailable records. Actual public routes and release digest provide deployment evidence.
 
-- Release candidate: 171 static pages, 169 sitemap URLs; all existing industry and location pages restored. The industry hub retains its existing noindex/meta-refresh behaviour.
-- Output audit covers local assets, valid JSON-LD and internal links. `MIGRATION_PARITY=1 npm run check:site` also checks original titles, descriptions, canonical URLs and primary headings against the legacy references.
-- Five article-visual unit tests and build-time article visual verification pass.
-- 28 browser checks pass on mobile and desktop through Nginx: both themes and layout widths, every tool loading, colour conversion, locked palettes and clipboard output, template selection, font preview and snippets, SVG/gradient/favicon downloads with PNG dimension checks, image colour extraction, contact fallback and booking links without JavaScript.
-- Publishing smoke test creates a temporary article, checks its rendered page, homepage card and sitemap entry, removes it, rebuilds, and confirms removal from all three outputs. No fixture is released.
-- Cache validation: HTML revalidates; hashed Astro assets are immutable for a year; unhashed public images use seven-day caching. The colour-palette HTML alias retains its query string through a 301. Unknown paths return 404.
-- Source content changes remove five links to an already-missing article while retaining their text. A real `/contact` page now backs the existing JavaScript enquiry modal links.
-- GitHub Actions runs build/output validation, publishing round trip, article-visual tests and browser checks on PRs and main.
+Field Core Web Vitals need real-user data. Local or Lighthouse lab results do not prove field performance or conversions.
 
-Initial measurements from the first foundation were local lab results, not production evidence. Production source digest, HTTP checks and final performance measurements are recorded in the release report/PR after rollout. CapRover version data is unavailable because its tracking API denies this session access.
+## Validation evidence before PR
+
+- `npm ci`: clean install, zero audit vulnerabilities after deduplicating the redundant Vite peer.
+- `npm run build`: 171 HTML pages, 169 sitemap URLs, final-output visuals, metadata, assets, internal links and schema checks pass.
+- Previous-release comparison: all 169 sitemap URLs preserved exactly. Across all 171 pages, titles/descriptions/canonicals/robots/H1s, main headings/links/images and schema preserved, except the deliberately added server-rendered resources catalogue and corrected literal ampersand in one service schema. Main text was compared with insignificant HTML whitespace normalised.
+- `npm run test:publishing`: all four collections create/edit/delete correctly; special-character schema, frontmatter slugs, cards, location hub, sitemap/lastmod and duplicate-slug rejection pass.
+- `npm run test:publishing:dev`: add/edit/slug-rename/delete updates without restarting Astro; fixture and temporary server removed.
+- Five custom article-visual unit tests pass.
+- 34 mobile/desktop Playwright tests pass through the production Nginx configuration, including all nine tools, both themes, brand fonts, no-JS resources and resources filter/Show More.
+- `check-host` against local Nginx passes actual source digest, 169 routes, 301 scheme/query preservation, unknown 404 and HTML/hashed asset caching.
+
+Legacy HTML removal does not require changing content or chasing a particular GitHub language percentage. Normal HTML generated into `dist/` is the intended output of a static Astro website.

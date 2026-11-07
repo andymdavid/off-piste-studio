@@ -1,0 +1,11 @@
+---
+const { post } = Astro.props;
+---
+<article class="related-posts__card insight-card">
+  <a href={`/insights/${post.slug}`} class="insight-card__link" aria-label={`Read ${post.title}`}>
+    <div class="insight-card__content"><div class="insight-card__top">
+      <div class="insight-card__meta"><span>{post.readTime}</span></div>
+      <div class="insight-card__tags">{post.topics.map(topic => <span>{topic}</span>)}</div>
+    </div><h3 class="insight-card__title">{post.title}</h3><p class="insight-card__description">{post.description}</p></div>
+  </a>
+</article>

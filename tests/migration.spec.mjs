@@ -85,3 +85,28 @@ test('header and site footer preserve the original logo font on all page familie
   await page.goto('/');
   await expect(page.locator('.testimonial-feature__author')).toHaveCount(3);
 });
+
+test('resources renders articles without JavaScript', async ({ browser }) => {
+  const context = await browser.newContext({ javaScriptEnabled:false });
+  const page = await context.newPage();
+  await page.goto((process.env.TEST_BASE_URL || 'http://localhost:4321') + '/resources');
+  expect(await page.locator('[data-insights-list] article').count()).toBeGreaterThan(12);
+  await expect(page.locator('[data-insights-list] a').first()).toHaveAttribute('href', /^\/insights\//);
+  await context.close();
+});
+
+test('resources topic filter and show more use pre-rendered cards', async ({ page }) => {
+  const requests = [];
+  page.on('request', request => requests.push(request.url()));
+  await page.goto('/resources');
+  const cards = page.locator('[data-insights-list] article');
+  await expect(cards).toHaveCount(12);
+  await page.getByRole('button',{name:/^Show More/}).click();
+  expect(await cards.count()).toBeGreaterThan(12);
+  await page.locator('[data-insights-filter]').selectOption('Websites & UX');
+  expect(await cards.count()).toBeGreaterThan(0);
+  for (const data of await cards.evaluateAll(elements => elements.map(el => el.dataset.topics))) expect(JSON.parse(data)).toContain('Websites & UX');
+  await page.locator('[data-insights-filter]').selectOption('all');
+  await expect(cards).toHaveCount(12);
+  expect(requests.some(url => /insights-data|catalogue/.test(url))).toBe(false);
+});

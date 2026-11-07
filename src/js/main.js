@@ -1,6 +1,5 @@
 // Off Piste Studio - Main JavaScript
-let INSIGHT_POSTS = [];
-let INSIGHT_TOPICS = [];
+
 
 // Scale footer brand to fill the horizontal space available to it.
 function scaleFooterBrand() {
@@ -361,7 +360,6 @@ function initProjectSlideshow() {
 function initProjectFilter() {
   const filterButtons = document.querySelectorAll('.work-hero__filter');
   const filterRows = document.querySelectorAll('.project-row, .insight-row, .insight-card');
-  const resourcesInsightsList = document.querySelector('body[data-page-type="resources"] [data-insights-list]');
 
   if (!filterButtons.length || !filterRows.length) return;
 
@@ -373,13 +371,6 @@ function initProjectFilter() {
       filterButtons.forEach(btn => btn.classList.remove('is-active'));
       button.classList.add('is-active');
 
-      if (resourcesInsightsList) {
-        const posts = filter === 'all'
-          ? INSIGHT_POSTS
-          : INSIGHT_POSTS.filter(post => post.tags.includes(filter));
-        renderInsightsGrid(resourcesInsightsList, posts, { limitRows: filter === 'all' });
-        return;
-      }
 
       // Filter rows
       filterRows.forEach(row => {
@@ -937,185 +928,40 @@ function initCustomCursor() {
   });
 }
 
-function createInsightRow(post) {
-  const article = document.createElement('article');
-  article.className = 'insight-row';
-  article.innerHTML = `
-    <div class="insight-row__title-group">
-      <p class="insight-row__eyebrow">${post.readTime}</p>
-      <h3 class="insight-row__title"><a href="${post.url}" class="insight-row__link">${post.title}</a></h3>
-    </div>
-    <p class="insight-row__description">${post.description}</p>
-    <div class="insight-row__tags">
-      ${post.tags.map(tag => `<span>${tag}</span>`).join('')}
-    </div>
-  `;
-
-  return article;
-}
-
-function createInsightCard(post, index = 0) {
-  const article = document.createElement('article');
-  article.className = 'insight-card';
-
-  const imageHtml = post.image
-    ? `<div class="insight-card__media"><img src="${post.image}" alt="${post.imageAlt || post.title}" loading="lazy" decoding="async"></div>`
-    : '';
-
-  article.innerHTML = `
-    <a href="${post.url}" class="insight-card__link" aria-label="Read ${post.title}">
-      ${imageHtml}
-      <div class="insight-card__content">
-        <div class="insight-card__top">
-          <div class="insight-card__meta">
-            <span>${String(index + 1).padStart(2, '0')}</span>
-            <span>${post.displayDate}</span>
-            <span>${post.readTime}</span>
-          </div>
-          <div class="insight-card__tags">
-            ${post.topics.map(topic => `<span>${topic}</span>`).join('')}
-          </div>
-        </div>
-        <h3 class="insight-card__title">${post.title}</h3>
-        <p class="insight-card__description">${post.description}</p>
-      </div>
-    </a>
-  `;
-
-  return article;
-}
-
-function renderInsightsGrid(insightsList, posts, options = {}) {
-  insightsList.innerHTML = '';
-
-  const cardsPerRow = 4;
-  const initialRows = 3;
-  const initialPostCount = cardsPerRow * initialRows;
-  const shouldLimit = options.limitRows && posts.length > initialPostCount;
-  const visiblePosts = shouldLimit ? posts.slice(0, initialPostCount) : posts;
-
-  for (let index = 0; index < visiblePosts.length; index += cardsPerRow) {
-    const row = document.createElement('div');
-    row.className = 'insights-index__article-row';
-
-    visiblePosts.slice(index, index + cardsPerRow).forEach((post, offset) => {
-      row.appendChild(createInsightCard(post, index + offset));
-    });
-
-    insightsList.appendChild(row);
-
-    const spacer = document.createElement('div');
-    spacer.className = 'insights-index__row-spacer';
-
-    const isLimitedFinalRow = shouldLimit && index + cardsPerRow >= visiblePosts.length;
-    if (isLimitedFinalRow) {
-      spacer.classList.add('insights-index__row-spacer--action');
-      const showMoreButton = document.createElement('button');
-      showMoreButton.type = 'button';
-      showMoreButton.className = 'button insights-index__show-more';
-      showMoreButton.textContent = 'Show More';
-      showMoreButton.addEventListener('click', () => {
-        renderInsightsGrid(insightsList, posts);
-      });
-      spacer.appendChild(showMoreButton);
-    } else {
-      spacer.setAttribute('aria-hidden', 'true');
-    }
-
-    insightsList.appendChild(spacer);
-  }
-}
-
 function initInsightsList() {
-  const insightsList = document.querySelector('[data-insights-list]');
-  const filterSelect = document.querySelector('[data-insights-filter]');
-
-  if (!insightsList) return;
-
-  insightsList.classList.add('insights-index__grid');
-  renderInsightsGrid(insightsList, INSIGHT_POSTS, { limitRows: true });
-
-  if (!filterSelect) return;
-
-  const filters = [
-    { value: 'all', label: 'All insights' },
-    ...INSIGHT_TOPICS.map(topic => ({ value: topic, label: topic }))
-  ];
-
-  filters.forEach(filter => {
-    const option = document.createElement('option');
-    option.value = filter.value;
-    option.textContent = filter.label;
-    filterSelect.appendChild(option);
-  });
-
-  filterSelect.addEventListener('change', () => {
-    const selectedFilter = filters.find(filter => filter.value === filterSelect.value) || filters[0];
-    const posts = selectedFilter.value === 'all'
-      ? INSIGHT_POSTS
-      : INSIGHT_POSTS.filter(post => post.topics.includes(selectedFilter.value));
-
-    renderInsightsGrid(insightsList, posts, { limitRows: selectedFilter.value === 'all' });
-  });
-}
-
-function initRelatedPosts() {
-  const relatedPostsRoot = document.querySelector('[data-related-posts]');
-  const currentSlug = document.body.dataset.insightSlug;
-
-  if (!relatedPostsRoot || !currentSlug) return;
-  if (relatedPostsRoot.children.length) return;
-
-  const availablePosts = INSIGHT_POSTS.filter(post => post.slug !== currentSlug);
-
-  if (!availablePosts.length) return;
-
-  const currentPost = INSIGHT_POSTS.find(post => post.slug === currentSlug);
-  const currentTags = new Set(currentPost?.tags || []);
-  const relatedSlugs = new Set(currentPost?.relatedPosts || []);
-
-  const relatedPosts = [...availablePosts]
-    .sort((a, b) => {
-      const aManual = relatedSlugs.has(a.slug) ? 1 : 0;
-      const bManual = relatedSlugs.has(b.slug) ? 1 : 0;
-      const aSameCluster = currentPost?.cluster && a.cluster === currentPost.cluster ? 1 : 0;
-      const bSameCluster = currentPost?.cluster && b.cluster === currentPost.cluster ? 1 : 0;
-      const aSharedTags = a.tags.filter(tag => currentTags.has(tag)).length;
-      const bSharedTags = b.tags.filter(tag => currentTags.has(tag)).length;
-      const aScore = aManual * 1000 + aSameCluster * 100 + aSharedTags * 10;
-      const bScore = bManual * 1000 + bSameCluster * 100 + bSharedTags * 10;
-
-      if (bScore !== aScore) return bScore - aScore;
-      return new Date(b.date) - new Date(a.date);
-    })
-    .slice(0, 3);
-
-  relatedPosts.forEach(post => {
-    relatedPostsRoot.appendChild(createRelatedPostCard(post));
-  });
-}
-
-function createRelatedPostCard(post) {
-  const article = document.createElement('article');
-  article.className = 'related-posts__card insight-card';
-  article.innerHTML = `
-    <a href="${post.url}" class="insight-card__link" aria-label="Read ${post.title}">
-      <div class="insight-card__content">
-        <div class="insight-card__top">
-          <div class="insight-card__meta">
-            <span>${post.readTime}</span>
-          </div>
-          <div class="insight-card__tags">
-            ${post.tags.map(tag => `<span>${tag}</span>`).join('')}
-          </div>
-        </div>
-        <h3 class="insight-card__title">${post.title}</h3>
-        <p class="insight-card__description">${post.description}</p>
-      </div>
-    </a>
-  `;
-
-  return article;
+  const list = document.querySelector('[data-insights-list]');
+  const filter = document.querySelector('[data-insights-filter]');
+  if (!list || !filter) return;
+  const cards = [...list.querySelectorAll('.insight-card')];
+  const topics = card => JSON.parse(card.dataset.topics);
+  let expanded = false;
+  const render = () => {
+    const selected = filter.value || 'all';
+    const matches = cards.filter(card => selected === 'all' || topics(card).includes(selected));
+    const limited = selected === 'all' && !expanded && matches.length > 12;
+    const visible = limited ? matches.slice(0,12) : matches;
+    list.replaceChildren();
+    for (let index = 0; index < visible.length; index += 4) {
+      const row = document.createElement('div');
+      row.className = 'insights-index__article-row';
+      row.append(...visible.slice(index,index+4));
+      list.append(row);
+      const spacer = document.createElement('div');
+      spacer.className = 'insights-index__row-spacer';
+      if (limited && index+4 >= visible.length) {
+        spacer.classList.add('insights-index__row-spacer--action');
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'button insights-index__show-more';
+        button.textContent = 'Show More';
+        button.addEventListener('click', () => { expanded = true; render(); });
+        spacer.append(button);
+      } else spacer.setAttribute('aria-hidden','true');
+      list.append(spacer);
+    }
+  };
+  filter.addEventListener('change', () => { expanded = false; render(); });
+  render();
 }
 
 function createLeadModal() {
@@ -1339,10 +1185,7 @@ function initEstimator() {
   update();
 }
 
-async function initSite() {
-  if (document.querySelector('[data-insights-list], [data-related-posts]')) {
-    ({ INSIGHT_POSTS, INSIGHT_TOPICS } = await import('../generated/insights-data.js'));
-  }
+function initSite() {
   initCurrentHeader();
   initThemeToggle();
   initMobileMenu();
@@ -1362,7 +1205,6 @@ async function initSite() {
   initAboutLogoSwap();
   initButtonScramble();
   initFooterLinkScramble();
-  initRelatedPosts();
   initLeadModal();
   initEstimator();
   initLlmsDemos();

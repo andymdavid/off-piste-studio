@@ -1,27 +1,52 @@
 ---
 import { getCollection } from 'astro:content';
-import { load } from 'cheerio';
 import SiteLayout from '../../layouts/SiteLayout.astro';
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
-import { renderMarkdown, createArticleHtml } from '../../lib/insights-renderer.mjs';
+import ContentHead from '../../components/ContentHead.astro';
+import RelatedPost from '../../components/RelatedPost.astro';
+import { renderMarkdown, getRelatedPosts } from '../../lib/insights.mjs';
+import { formatDate } from '../../lib/content.mjs';
 export async function getStaticPaths() {
-  const format = (date) => new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric' }).format(new Date(`${date}T00:00:00Z`));
-  const posts = (await getCollection('insights')).map(({ data }) => ({
-    ...data, html: renderMarkdown(data.markdown), displayDate: format(data.date),
-    displayUpdatedDate: data.updatedDate ? format(data.updatedDate) : undefined,
-  })).sort((a, b) => b.date.localeCompare(a.date));
-  return posts.map(post => ({ params: { slug: post.slug }, props: { post, posts } }));
+  const posts = (await getCollection('insights')).map(({ data }) => data).sort((a,b) => b.date.localeCompare(a.date));
+  return posts.map(post => ({ params: {slug:post.slug}, props: {post, related:getRelatedPosts(post,posts)} }));
 }
-const { post, posts } = Astro.props;
-const $ = load(createArticleHtml(post, posts));
-$('head link[rel="stylesheet"], head link[rel="preload"], head link[rel="preconnect"]').remove();
-// Related cards already render at build time; no catalogue or client replacement needed.
-$('[data-related-posts]').removeAttr('data-related-posts');
+const { post, related } = Astro.props;
+const canonical = new URL(`/insights/${post.slug}`, Astro.site).href;
+const schema = {'@context':'https://schema.org', '@graph':[
+  {'@type':'Article', headline:post.title, description:post.description, ...(post.image ? {image:new URL(post.image,Astro.site).href}:{}),datePublished:post.date,dateModified:post.updatedDate || post.date,author:{'@type':'Person',name:'Lara'},publisher:{'@type':'Organization',name:'Off Piste Studio',logo:{'@type':'ImageObject',url:new URL('/images/off-piste-mark-transparent.png',Astro.site).href}},url:canonical},
+  {'@type':'BreadcrumbList',itemListElement:[{'@type':'ListItem',position:1,name:'Home',item:Astro.site.href},{'@type':'ListItem',position:2,name:'Insights',item:new URL('/resources',Astro.site).href},{'@type':'ListItem',position:3,name:post.title,item:canonical}]}
+]};
 ---
-<SiteLayout bodyAttributes={{ 'data-page-type': 'insight', 'data-insight-slug': post.slug, 'data-theme': 'dark' }}>
-  <Fragment slot="head" set:html={$('head').html()} />
+<SiteLayout bodyAttributes={{'data-page-type':'insight','data-insight-slug':post.slug,'data-theme':'dark'}}>
+  <ContentHead slot="head" title={`${post.title} | Off Piste Studio`} description={post.description} canonical={canonical} schema={schema} social={false} />
   <Header />
-  <Fragment set:html={$('body main').toString()} />
+  <main>
+    <article class="insight-article">
+      <div class="insight-article__frame">
+        <section class="insight-article__hero"><div class="insight-article__hero-inner">
+          <div class="insight-article__meta"><div class="insight-row__tags">{post.topics.map(topic => <span>{topic}</span>)}</div><p class="insight-article__read-time">{post.readTime}</p></div>
+          <h1 class="insight-article__title">{post.title}</h1>
+          <p class="insight-article__intro">{post.intro}</p>
+        </div></section>
+        <section class="insight-article__byline"><div class="insight-article__byline-inner">
+          <div class="insight-article__author"><img src="/images/Lara.webp" alt="Lara" loading="lazy"><div><p class="insight-article__author-name">Lara at Off Piste Studio</p><p class="insight-article__author-date">{formatDate(post.date)}{post.updatedDate && <span class="insight-article__updated-date"> (Updated {formatDate(post.updatedDate)})</span>}</p></div></div>
+          <div class="insight-article__share">
+            <p class="insight-article__share-label">Share</p>
+            <div class="insight-article__share-buttons">
+              <a href={`https://www.linkedin.com/sharing/share-offsite/?url=https://offpistestudio.com/insights/${post.slug}`} target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+              <a href={`https://twitter.com/intent/tweet?url=https://offpistestudio.com/insights/${post.slug}&text=${encodeURIComponent(post.title)}`} target="_blank" rel="noopener" aria-label="Share on X" class="insight-article__share-btn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <button type="button" aria-label="Copy link" class="insight-article__share-btn" data-copy-url={canonical}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg></button>
+            </div>
+          </div>
+        </div></section>
+        <section class="insight-article__body"><div class="insight-article__body-inner">
+          <Fragment set:html={renderMarkdown(post.markdown)} />
+        </div></section>
+      </div>
+    </article>
+    <section class="related-posts"><div class="container"><h2 class="related-posts__heading">Related posts</h2><div class="related-posts__grid">{related.map(post => <RelatedPost post={post} />)}</div><div class="related-posts__blank" aria-hidden="true"></div></div></section>
+  </main>
+
   <Footer />
 </SiteLayout>

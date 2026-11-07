@@ -1,27 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
-import { load } from 'cheerio';
-import SiteLayout from '../../layouts/SiteLayout.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
-import { createIndustryHtml, createLocationHtml, renderMarkdown } from '../../lib/pages-renderer.mjs';
+import BusinessPage from '../../layouts/BusinessPage.astro';
 export async function getStaticPaths() {
-  const pages = {};
-  for (const section of ['industries', 'locations', 'services']) {
-    pages[section] = (await getCollection(section)).map(({ data }) => ({ ...data, html: renderMarkdown(data.markdown) }));
+  const routes = [];
+  for (const section of ['industries', 'locations']) {
+    for (const {data:page} of await getCollection(section)) routes.push({params:{section,slug:page.slug},props:{page,type:section === 'industries' ? 'industry' : 'location'}});
   }
-  return ['industries', 'locations'].flatMap(section => pages[section].map(page => ({
-    params: { section, slug: page.slug }, props: { page, pages, section },
-  })));
+  return routes;
 }
-const { page, pages, section } = Astro.props;
-const renderer = section === 'industries' ? createIndustryHtml : createLocationHtml;
-const $ = load(renderer(page, pages.industries, pages.services, pages.locations));
-$('head link[rel="stylesheet"], head link[rel="preload"], head link[rel="preconnect"]').remove();
+const { page, type } = Astro.props;
 ---
-<SiteLayout bodyAttributes={{ 'data-page-type': section === 'industries' ? 'industry' : 'location', 'data-page-slug': page.slug, 'data-theme': 'dark' }}>
-  <Fragment slot="head" set:html={$('head').html()} />
-  <Header />
-  <Fragment set:html={$('body main').toString()} />
-  <Footer />
-</SiteLayout>
+<BusinessPage page={page} type={type} />

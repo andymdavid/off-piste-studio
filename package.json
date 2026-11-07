@@ -6,16 +6,18 @@
   "scripts": {
     "test:insight-visuals": "node --test scripts/render-insight-visual.test.mjs",
     "verify:insight-visuals": "node scripts/verify-insight-visuals.mjs",
-    "sync:insights": "node scripts/generate-insights.mjs",
-    "sync:pages": "node scripts/generate-pages.mjs",
-    "sync:sitemap": "node scripts/generate-sitemap.mjs",
-    "sync": "npm run sync:insights && npm run sync:pages && npm run sync:sitemap",
-    "dev": "npm run sync && astro dev --host 0.0.0.0",
-    "build": "npm run sync && npm run verify:insight-visuals && astro build && node scripts/write-release.mjs && npm run check:site",
+    "sync:insights": "npm run build",
+    "sync:pages": "npm run build",
+    "sync:sitemap": "npm run build",
+    "sync": "npm run build",
+    "dev": "astro dev --host 0.0.0.0",
+    "build": "astro build && npm run verify:insight-visuals && node scripts/write-release.mjs && npm run check:site",
     "preview": "astro preview --host 0.0.0.0",
     "start": "npm run dev",
     "check:site": "node scripts/check-built-site.mjs",
-    "test:browser": "playwright test"
+    "test:browser": "playwright test",
+    "test:publishing": "node scripts/check-publishing.mjs",
+    "test:publishing:dev": "node scripts/check-dev-publishing.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",
