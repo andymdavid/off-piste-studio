@@ -20,7 +20,8 @@
     "test:publishing:dev": "node scripts/check-dev-publishing.mjs",
     "check:css": "node scripts/check-css.mjs",
     "check:css:parity": "node scripts/check-css-parity.mjs",
-    "test:glyphs": "node --test scripts/glyph-states.test.mjs"
+    "test:glyphs": "node --test scripts/glyph-states.test.mjs",
+    "test:styles": "node --test scripts/home-styles.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",
@@ -29,6 +30,7 @@
   "dependencies": {
     "astro": "^7.4.7",
     "cheerio": "^1.2.0",
+    "css-tree": "3.2.1",
     "marked": "^17.0.4",
     "sharp": "^0.35.5"
   },
