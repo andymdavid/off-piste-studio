@@ -36,7 +36,7 @@ for (const path of walk('dist').filter(file => file.endsWith('.html'))) {
   for (const asset of current.paths) assert.ok(allowed.has(basename(asset).split('.')[0]),`${file} loads unrelated stylesheet ${asset}`);
   const total = current.externalBytes+current.inlineBytes;
   // Includes the restored shared navigation and studio-information panel.
-  const budget = family === 'home' ? 205000 : family === 'tool' ? 145000 : family === 'insight' ? 140000 : 135000;
+  const budget = family === 'home' ? 185000 : family === 'tool' ? 145000 : family === 'insight' ? 140000 : 135000;
   assert.ok(total <= budget,`${file}: CSS ${total} exceeds ${budget} byte budget`);
   assert.ok(current.paths.length <= (family === 'tool' ? 4 : 2),`${file}: unexpected stylesheet requests`);
   const previous = baseline && existsSync(`${baseline}/${file}`) ? measure(baseline,file) : undefined;

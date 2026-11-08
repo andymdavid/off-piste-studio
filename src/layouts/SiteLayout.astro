@@ -1,4 +1,5 @@
 ---
+import { homeStyles } from '../lib/home-styles.mjs';
 import criticalGeist from '../assets/fonts/critical/Geist-Variable.woff2?inline';
 import criticalSerif from '../assets/fonts/critical/GeistSerif-Regular.woff2?inline';
 import criticalLogo from '../assets/fonts/critical/BebasNeue-Regular.woff2?inline';
@@ -31,7 +32,7 @@ const toolPageStyles = pageType === 'tool' ? toolStyles[`../styles/tools/${bodyA
     </Fragment>}
     <slot name="head" />
     {/* Inline the bounded homepage styles to avoid a blocking CSS round trip and any deferred-style flash. Other routes retain cacheable bundles. */}
-    {pageType === "duplicate-home" ? <style is:inline set:html={homeSharedStyles + homePageStyles} /> : <Fragment>
+    {pageType === "duplicate-home" ? <style is:inline set:html={homeStyles(homeSharedStyles) + homePageStyles} /> : <Fragment>
       <link rel="stylesheet" href={sharedStyles} />
       {pageStyles && <link rel="stylesheet" href={pageStyles} />}
     </Fragment>}
