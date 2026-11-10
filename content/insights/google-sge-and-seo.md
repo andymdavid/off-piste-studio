@@ -5,7 +5,6 @@ description: Learn what Google AI Overviews and AI Mode mean for SEO, source vis
 intro: Google AI Overviews and AI Mode have moved the search question beyond rankings alone. Google SGE was the earlier name, but the practical issue is current: can Google understand, trust and surface your business while a buyer researches a service?
 author: Lara
 date: 2026-03-06
-updatedDate: 2026-10-25
 checkedOn: 2026-10-22
 readTime: 12 min read
 tags: SEO, AI, Google Search, AI Overviews, AI Mode, Google SGE, Content Strategy
@@ -13,6 +12,7 @@ topics: SEO & Search, AI & Automation
 cluster: AI Search Visibility
 subcluster: Google Search and AI Overviews
 relatedPosts: google-search-console-generative-ai-report-guide, google-ai-overviews-not-citing-website-diagnostic, google-ai-mode-query-fan-out-content-planning
+updatedDate: 2026-11-10
 ---
 <!-- Sources checked 21 October 2026 in Australia/Perth. Google Search layouts and feature availability can vary by query, device, country and rollout state. Recheck this article when Google materially changes source presentation, eligibility, reporting dimensions or generative AI controls. -->
 ## AI Overviews and AI Mode changed the search journey
@@ -88,6 +88,8 @@ Google is extending Search from answering questions toward completing some tasks
 Availability matters. Google's May announcement said local-services booking and calling capabilities were rolling out in the United States, while custom Antigravity experiences were due to start with US Google AI Pro and Ultra subscribers. The announcement didn't establish those capabilities as generally available to Australian service businesses. It described the conversational handoff from AI Overviews to AI Mode as worldwide.
 
 Australian operators should watch agentic Search as an emerging product direction. Clear service data, accessible interfaces, current availability and well-structured proof are useful website investments today. A feature-specific playbook can wait until the buyer use case and Australian availability are clear.
+
+If Search Console reports an unexpected representative URL, use the [Google-selected canonical diagnostic](/insights/google-selected-canonical-url-diagnostic-repair-guide). For a service page reported as crawled but excluded, follow the [crawled currently not indexed investigation](/insights/crawled-currently-not-indexed-service-pages-guide) before choosing a repair.
 
 ## Choose the next job from the evidence
 

@@ -5,13 +5,13 @@ description: A practical, evidence-led guide to Google Business Profile eligibil
 intro: A useful Google Business Profile makes your business easier to understand and easier to choose. This guide shows local businesses what to fix first, what Google documents, and how to measure the profile through customer actions.
 author: Lara
 date: 2026-03-16
-updatedDate: 2026-10-15
 readTime: 13 min read
 tags: SEO, Local SEO, Google Business Profile, Local Business
 topics: SEO & Search, Small Business
 cluster: Local Search Visibility
 subcluster: Local Search and Google Business Profile
 relatedPosts: how-to-get-on-first-page-of-google, third-party-brand-signals-ai-search-audit, organization-schema-service-business-guide
+updatedDate: 2026-11-10
 ---
 <!--
 Source check record, 9 August 2026 AWST:
@@ -147,6 +147,8 @@ The useful operating rhythm separates urgent factual maintenance from slower per
 ```
 
 Look for patterns across several periods rather than reacting to one movement. Compare the search themes with the services you want to sell. Check whether calls and website visits are producing qualified enquiries in your own CRM or enquiry records. Note major profile, website, staffing, seasonality, or campaign changes so a later shift has context.
+
+When Google offers recorded video verification, use our [verification video preparation guide](/insights/google-business-profile-video-verification-guide) to plan location evidence, proof of operation and a privacy check before opening the recording flow.
 
 ## Prioritise the next action the evidence supports
 
