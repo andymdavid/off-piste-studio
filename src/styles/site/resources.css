@@ -434,8 +434,7 @@ body[data-page-type="resources"] .insights-index__filter-row {
   gap: 1rem !important;
   min-height: 4.75rem !important;
   padding: 0 1rem !important;
-  border-left: 1px solid var(--resources-divider) !important;
-  border-right: 1px solid var(--resources-divider) !important;
+  /* The outer container owns the continuous vertical rails. */
 }
 
 body[data-page-type="resources"] .insights-index__filter-row::after {
