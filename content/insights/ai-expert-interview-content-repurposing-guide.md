@@ -32,15 +32,15 @@ An AI-generated post turns that into “Shorter forms always improve lead qualit
 
 When you repurpose expert interviews with AI, keep every published derivative connected to a recoverable source and the limits of the original statement. An editor can then check each article, newsletter extract or social post against the recording.
 
-This guide starts with an existing recording and follows it through to approved assets. Topic selection and the rest of production belong in [the wider AI-assisted content workflow](/insights/ai-assisted-content-workflow-expertise-guide).
+Start with an existing recording and work towards assets you can approve for publication. Topic selection and the rest of production belong in [the wider AI-assisted content workflow](/insights/ai-assisted-content-workflow-expertise-guide).
 
 ## Confirm what the recording can be used for
 
 Before uploading a transcript, check what was agreed with the speaker and anyone else whose information appears in it. Permission to record a conversation doesn't by itself settle how your team may publish, attribute or process it.
 
-Record the intended public channels, whether the speaker can be named, any excluded subjects and the person who can resolve uncertainty. Check client references and confidential details separately. Confirm that the proposed AI tool and its handling of the material are approved for this use.
+Record where the material may be published, whether the speaker can be named, any excluded subjects and who can resolve uncertainty. Check client references and confidential details separately. Confirm that the proposed AI tool and its handling of the material are approved for this use.
 
-The [OAIC's guidance on commercially available AI products](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products) calls for due diligence, minimising personal information and accuracy controls with human oversight where Privacy Act obligations apply. Apply that to the actual transcript and tool. Remove unnecessary identifying details before processing and check who can access the inputs and outputs.
+The [OAIC's guidance on commercially available AI products](https://www.oaic.gov.au/privacy/privacy-guidance-for-organisations-and-government-agencies/guidance-on-privacy-and-the-use-of-commercially-available-ai-products) calls for due diligence, minimising personal information and accuracy controls with human oversight where Privacy Act obligations apply. Check how those requirements apply to your transcript and chosen tool. Remove unnecessary identifying details before processing and check who can access the inputs and outputs.
 
 Recording-consent requirements vary across Australia. These editorial checks cover recording rights, public use and tool processing. If the legal position is uncertain, obtain advice for the relevant jurisdiction and use. Hold the material while permission or data handling remains unresolved.
 
@@ -50,7 +50,7 @@ Keep the original recording unchanged. Save transcript corrections in a separate
 
 Listen to the passages you intend to publish, including the surrounding question and answer. Check speaker identity, names, negation, figures, dates and uncertain words. A missing “don't” can reverse the recommendation. If you can't resolve a word from the audio, mark it uncertain and exclude it from a direct quote until clarified.
 
-[NIST's Generative Artificial Intelligence Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) describes confabulation as confidently presented false content, including output that diverges from supplied input. It also recommends reviewing generated sources and citations. For interview reuse, Off Piste applies that concern by checking important extracts against the recording and retaining their source locations. The record below is our practical method, rather than a NIST-prescribed template.
+[NIST's Generative Artificial Intelligence Profile](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) describes confabulation as confidently presented false content, including output that diverges from supplied input. It also recommends reviewing generated sources and citations. For interview reuse, Off Piste applies that concern by checking important extracts against the recording and retaining their source locations. The record below is Off Piste's own method for doing this.
 
 Transcript verification establishes what the person said. Their claim about a market, regulation or product may still need independent evidence. [Evaluate supporting sources](/insights/evaluate-sources-website-content-guide) before publishing those assertions as facts. Keep an unsupported professional judgement attributed and within its original scope.
 
@@ -78,7 +78,7 @@ Then distinguish the wording mode in each derivative.
 
 [Reuters' quotation standards](https://reutersagency.com/about/standards-values/) emphasise context and using paraphrase where appropriate. Off Piste adapts that principle by moving substantial rewrites into attributed paraphrase. A polished sentence shouldn't silently become something the expert supposedly said verbatim. Our expert-approval process is a separate business editorial choice.
 
-Once verified, these records can feed [an approved content brief and source pack](/insights/ai-content-brief-source-pack-template). That handoff defines the writing assignment without making the writer reconstruct the interview evidence.
+Once verified, these records can feed [an approved content brief and source pack](/insights/ai-content-brief-source-pack-template). The writer then has a defined assignment and the interview evidence to work from.
 
 ## Carry one qualified statement into three useful assets
 
@@ -130,7 +130,7 @@ Specify what the reviewer needs back.
 
 > Using only the approved extracts supplied, draft one newsletter paragraph for a service-business owner reviewing their enquiry form. Return the candidate wording with its source ID, wording mode and retained qualification. Copy direct quotes exactly. Put editorial interpretation outside quotation marks and identify it separately. Flag any unsupported claim or missing permission. Keep uncertainty visible and limit claims to the supplied evidence.
 
-Treat the result as a candidate. [AP's standards around generative AI](https://www.ap.org/the-definitive-source/behind-the-news/standards-around-generative-ai/) treat generated output as material requiring editorial scrutiny. AP also sets its own stricter limits on creating publishable content with AI. The business practice here draws on its verification principle, without presenting AP's publishing policy as a rule for every organisation.
+Treat the result as a draft for review. [AP's standards around generative AI](https://www.ap.org/the-definitive-source/behind-the-news/standards-around-generative-ai/) treat generated output as material requiring editorial scrutiny. AP also sets its own stricter limits on creating publishable content with AI. The business practice here draws on AP's verification principle. Its publishing policy applies to AP.
 
 Check the returned source IDs too. A plausible identifier is useful only if the linked passage actually supports the sentence.
 
@@ -155,7 +155,7 @@ Record the source version and affected derivative IDs with each approval. If Ale
 
 ## Publish only the formats that serve a reader
 
-An article can explain a decision in depth. A newsletter can bring one relevant point to an existing audience. A social post can offer a useful check in a small space. Choose the format because it serves that reader's task and can carry the necessary context.
+Choose a format that serves the reader's task and has room for the necessary context. An article can explain a decision in depth, while a newsletter can bring one relevant point to an existing audience. A social post may need to focus on a useful check that fits in a small space.
 
 [Google's guidance on generative AI content](https://developers.google.com/search/docs/fundamentals/using-gen-ai-content) warns that generating many pages without adding user value may violate its scaled-content-abuse policy. Each asset needs a useful purpose and an accurate argument.
 
