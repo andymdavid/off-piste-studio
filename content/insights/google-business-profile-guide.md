@@ -11,7 +11,7 @@ topics: SEO & Search, Small Business
 cluster: Local Search Visibility
 subcluster: Local Search and Google Business Profile
 relatedPosts: how-to-get-on-first-page-of-google, third-party-brand-signals-ai-search-audit, organization-schema-service-business-guide
-updatedDate: 2026-11-10
+updatedDate: 2026-11-15
 ---
 <!--
 Source check record, 9 August 2026 AWST:
@@ -69,7 +69,7 @@ For a business with several real branches, assess each location against Google's
 
 A complete profile should answer the practical questions a customer has before making contact. Is the business open? Does it offer the required service? Does it work in the customer's area? Is there a suitable way to call, book, or visit? Do the photos and reviews show a credible operation?
 
-Keep regular and special hours current. Select relevant attributes that accurately describe access, ownership, facilities, or service options where Google makes them available. Check that the phone number and website reach the right destination.
+Keep regular and special hours current. Use the dedicated guide to [manage holiday hours and temporary closures](/insights/google-business-profile-special-holiday-hours-guide) when availability changes for specific dates. Select relevant attributes that accurately describe access, ownership, facilities, or service options where Google makes them available. Check that the phone number and website reach the right destination.
 
 Use real photos that reduce uncertainty. Depending on the business, that might include the premises, team, completed work, vehicles, equipment, or the customer environment. Photos can help someone assess the business, and Google's [local ranking guidance](https://support.google.com/business/answer/7091) recommends adding them. Google doesn't state that frequent uploads create a direct ranking boost, so add an image when it makes the profile more useful, not to simulate activity.
 
