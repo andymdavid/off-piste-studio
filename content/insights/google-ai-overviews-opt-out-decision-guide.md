@@ -5,6 +5,7 @@ description: A practical guide to Google's generative AI control, its traffic tr
 intro: Google now gives some Search Console owners a direct choice about whether their site can appear in AI Overviews, AI Mode and covered generative features in Discover. Before you exclude your content, measure the visibility at stake, identify the risk you're trying to solve and choose the control that actually matches it.
 author: Lara
 date: 2026-08-03
+updatedDate: 2026-11-24
 readTime: 13 min read
 tags: SEO, AI, Content Strategy, Technical SEO
 topics: SEO & Search, AI & Automation
@@ -70,6 +71,8 @@ A broad opt-out is a poor substitute for naming the problem. Is the concern gene
 | `noindex` | Removes the page from Search and its AI features after processing | Removes the page from Google Search | No complete training policy by itself | Page | Gives up ordinary and generative Search visibility |
 
 Google's [snippet control documentation](https://developers.google.com/search/docs/appearance/snippet) defines `nosnippet`, `max-snippet` and `data-nosnippet`. These are preview controls, not clean equivalents to the new property setting. Googlebot access in robots.txt, Google-Extended and user-triggered crawlers also serve different purposes. Our [AI crawler access and robots.txt guide](/insights/ai-crawler-access-robots-txt-guide) explains those boundaries in more detail.
+
+For the technical work after choosing a policy, use our [snippet controls implementation guide](/insights/google-search-snippet-controls-implementation-guide) to scope, test and roll back the change.
 
 Treat the table as a starting taxonomy, then verify the current documentation before implementation. A directive that solves one use case may create a larger visibility loss elsewhere.
 
